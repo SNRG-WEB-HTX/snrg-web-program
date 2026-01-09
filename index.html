@@ -117,6 +117,99 @@ body::after{
   overflow-x:hidden;
 }
 
+/* Language Toggle */
+.lang-toggle{
+  position:fixed;
+  top:20px;
+  right:20px;
+  z-index:1000;
+  background:rgba(10,17,32,0.9);
+  backdrop-filter:blur(30px);
+  border:2px solid rgba(0,240,255,0.4);
+  border-radius:999px;
+  padding:6px 8px;
+  display:flex;
+  gap:4px;
+  box-shadow:0 10px 40px rgba(0,0,0,0.6),0 0 30px rgba(0,240,255,0.2);
+  transition:all 0.3s ease;
+}
+
+.lang-toggle:hover{
+  border-color:rgba(0,240,255,0.7);
+  box-shadow:0 10px 40px rgba(0,0,0,0.7),0 0 40px rgba(0,240,255,0.4);
+}
+
+.lang-btn{
+  background:transparent;
+  border:none;
+  color:#A0AEC0;
+  font-weight:700;
+  font-size:13px;
+  padding:8px 16px;
+  border-radius:999px;
+  cursor:pointer;
+  transition:all 0.3s ease;
+  font-family:var(--font-display);
+  letter-spacing:0.05em;
+}
+
+.lang-btn.active{
+  background:linear-gradient(135deg,var(--accent-primary),var(--accent-secondary));
+  color:#030711;
+  box-shadow:0 0 20px rgba(0,240,255,0.6);
+}
+
+.lang-btn:hover:not(.active){
+  color:#FFFFFF;
+  background:rgba(255,255,255,0.1);
+}
+
+/* Language visibility control - MUST BE SPECIFIC */
+[lang="es"]{
+  display:none !important;
+}
+
+body.spanish [lang="en"]{
+  display:none !important;
+}
+
+body.spanish [lang="es"]{
+  display:block;
+}
+
+/* Flex display for specific Spanish elements when Spanish mode active */
+body.spanish .hero-value-prop[lang="es"]{
+  display:flex !important;
+}
+
+body.spanish .hero-stats-preview[lang="es"]{
+  display:flex !important;
+}
+
+body.spanish .hero-cta-primary[lang="es"],
+body.spanish .hero-cta-secondary[lang="es"]{
+  display:inline-flex !important;
+}
+
+body.spanish .hero-cta-primary[lang="en"],
+body.spanish .hero-cta-secondary[lang="en"]{
+  display:none !important;
+}
+
+/* Default English state - hide Spanish, show English */
+.hero-cta-primary[lang="en"],
+.hero-cta-secondary[lang="en"]{
+  display:inline-flex !important;
+}
+
+.hero-value-prop[lang="en"]{
+  display:flex !important;
+}
+
+.hero-stats-preview[lang="en"]{
+  display:flex !important;
+}
+
 /* Hero Section */
 .hero{
   min-height:85vh;
@@ -225,13 +318,30 @@ h1{
   position:relative;
   z-index:1;
   text-shadow:0 0 80px rgba(0,240,255,0.5);
-  animation:titleEntrance 1.4s cubic-bezier(0.16,1,0.3,1) 0.3s both;
+  animation:dramaticTitleEntrance 2s cubic-bezier(0.16,1,0.3,1) 0.3s both;
   filter:drop-shadow(0 0 40px rgba(123,97,255,0.4));
 }
 
-@keyframes titleEntrance{
-  from{opacity:0;transform:translateY(40px) scale(0.9);filter:blur(20px)}
-  to{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}
+@keyframes dramaticTitleEntrance{
+  0%{
+    opacity:0;
+    transform:translateY(60px) scale(0.3) rotateX(90deg);
+    filter:blur(40px) brightness(3);
+  }
+  40%{
+    opacity:0.8;
+    transform:translateY(-10px) scale(1.1) rotateX(-5deg);
+    filter:blur(5px) brightness(1.5);
+  }
+  70%{
+    transform:translateY(5px) scale(0.98) rotateX(2deg);
+    filter:blur(2px) brightness(1.2);
+  }
+  100%{
+    opacity:1;
+    transform:translateY(0) scale(1) rotateX(0deg);
+    filter:blur(0) brightness(1);
+  }
 }
 
 .hero-value-prop{
@@ -1013,6 +1123,18 @@ h1{
 }
 
 @media(max-width:480px){
+  .lang-toggle{
+    top:15px;
+    right:10px;
+    padding:4px 6px;
+    gap:2px;
+  }
+  
+  .lang-btn{
+    font-size:11px;
+    padding:6px 12px;
+  }
+  
   .container{
     padding:0 0.625rem;
   }
@@ -1054,12 +1176,21 @@ h1{
 </style>
 </head>
 <body>
+  <!-- Language Toggle -->
+  <div class="lang-toggle">
+    <button class="lang-btn active" onclick="switchLang('en')">EN</button>
+    <button class="lang-btn" onclick="switchLang('es')">ES</button>
+  </div>
+
   <div class="container">
     <!-- Hero -->
     <div class="hero">
-      <div class="badge">Houston Small Business Websites</div>
+      <div class="badge" lang="en">Houston Small Business Websites</div>
+      <div class="badge" lang="es">Sitios Web Para Pequeñas Empresas de Houston</div>
+      
       <h1>SNRG WEB</h1>
-      <div class="hero-value-prop">
+      
+      <div class="hero-value-prop" lang="en">
         <span class="value-text">AGENCY QUALITY</span>
         <span class="value-separator"></span>
         <span class="value-text">LOCAL PRICING</span>
@@ -1067,12 +1198,23 @@ h1{
         <span class="value-text">ZERO HASSLE</span>
       </div>
       
-      <div class="hero-cta-group">
-        <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" target="_blank" rel="noopener noreferrer" class="hero-cta-primary">View Pricing</a>
-        <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" target="_blank" rel="noopener noreferrer" class="hero-cta-secondary">Schedule a Call</a>
+      <div class="hero-value-prop" lang="es">
+        <span class="value-text">CALIDAD PROFESIONAL</span>
+        <span class="value-separator"></span>
+        <span class="value-text">PRECIOS LOCALES</span>
+        <span class="value-separator"></span>
+        <span class="value-text">SIN COMPLICACIONES</span>
       </div>
       
-      <div class="hero-stats-preview">
+      <div class="hero-cta-group">
+        <a href="#top" onclick="scrollToTop(event)" class="hero-cta-primary" lang="en">View Pricing</a>
+        <a href="#top" onclick="scrollToTop(event)" class="hero-cta-primary" lang="es">Ver Precios</a>
+        
+        <a href="#top" onclick="scrollToTop(event)" class="hero-cta-secondary" lang="en">Schedule a Call</a>
+        <a href="#top" onclick="scrollToTop(event)" class="hero-cta-secondary" lang="es">Agendar Llamada</a>
+      </div>
+      
+      <div class="hero-stats-preview" lang="en">
         <div class="hero-stat">
           <div class="hero-stat-value">2-3</div>
           <div class="hero-stat-label">Days to Launch</div>
@@ -1086,14 +1228,40 @@ h1{
           <div class="hero-stat-label">Updates/Month</div>
         </div>
       </div>
+      
+      <div class="hero-stats-preview" lang="es">
+        <div class="hero-stat">
+          <div class="hero-stat-value">2-3</div>
+          <div class="hero-stat-label">Días Al Lanzamiento</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-value">$0</div>
+          <div class="hero-stat-label">Costo Inicial</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-value">5</div>
+          <div class="hero-stat-label">Actualizaciones/Mes</div>
+        </div>
+      </div>
+    </div>
+        <div class="hero-stat">
+          <div class="hero-stat-value">5</div>
+          <div class="hero-stat-label">Updates/Month</div>
+        </div>
+      </div>
     </div>
 
     <!-- Portfolio -->
     <div class="portfolio fade-in-slow">
       <div class="section-header">
-        <div class="section-kicker">Recent Work</div>
-        <h2 class="section-title">Current Projects</h2>
-        <p class="section-subtitle">Live sites we've built for Houston businesses</p>
+        <div class="section-kicker" lang="en">Recent Work</div>
+        <div class="section-kicker" lang="es">Trabajos Recientes</div>
+        
+        <h2 class="section-title" lang="en">Current Projects</h2>
+        <h2 class="section-title" lang="es">Proyectos Actuales</h2>
+        
+        <p class="section-subtitle" lang="en">Live sites we've built for Houston businesses</p>
+        <p class="section-subtitle" lang="es">Sitios activos que hemos creado para negocios de Houston</p>
       </div>
       
       <div class="portfolio-grid">
@@ -1181,9 +1349,14 @@ h1{
     <div class="pricing fade-in-slow">
       <div class="pricing-content">
         <div class="section-header">
-          <div class="section-kicker">Pricing Options</div>
-          <h2 class="section-title">Choose Your Path</h2>
-          <p class="section-subtitle">Flexible options designed for every business model</p>
+          <div class="section-kicker" lang="en">Pricing Options</div>
+          <div class="section-kicker" lang="es">Opciones de Precio</div>
+          
+          <h2 class="section-title" lang="en">Choose Your Path</h2>
+          <h2 class="section-title" lang="es">Elige Tu Camino</h2>
+          
+          <p class="section-subtitle" lang="en">Flexible options designed for every business model</p>
+          <p class="section-subtitle" lang="es">Opciones flexibles diseñadas para cada modelo de negocio</p>
         </div>
         
         <div class="pricing-options">
@@ -1315,6 +1488,25 @@ h1{
     threshold: 0.3,
     rootMargin: '0px'
   });
+
+  // Language toggle
+  function switchLang(lang) {
+    if (lang === 'es') {
+      document.body.classList.add('spanish');
+      document.querySelectorAll('.lang-btn')[0].classList.remove('active');
+      document.querySelectorAll('.lang-btn')[1].classList.add('active');
+    } else {
+      document.body.classList.remove('spanish');
+      document.querySelectorAll('.lang-btn')[0].classList.add('active');
+      document.querySelectorAll('.lang-btn')[1].classList.remove('active');
+    }
+  }
+  
+  // Scroll to top
+  function scrollToTop(e) {
+    e.preventDefault();
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  }
 
   // Initialize
   document.addEventListener('DOMContentLoaded', () => {
