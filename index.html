@@ -177,6 +177,11 @@ body.spanish [lang="es"]{
   display:block;
 }
 
+/* Badge needs inline-flex in Spanish mode */
+body.spanish .badge[lang="es"]{
+  display:inline-flex !important;
+}
+
 /* Flex display for specific Spanish elements when Spanish mode active */
 body.spanish .hero-value-prop[lang="es"]{
   display:flex !important;
@@ -193,6 +198,25 @@ body.spanish .hero-cta-secondary[lang="es"]{
 
 body.spanish .hero-cta-primary[lang="en"],
 body.spanish .hero-cta-secondary[lang="en"]{
+  display:none !important;
+}
+
+/* Pricing cards, CTAs, and footer links for both languages */
+.pricing-card[lang="es"],
+.cta[lang="es"],
+.footer-link[lang="es"]{
+  display:none !important;
+}
+
+body.spanish .pricing-card[lang="es"],
+body.spanish .cta[lang="es"],
+body.spanish .footer-link[lang="es"]{
+  display:block !important;
+}
+
+body.spanish .pricing-card[lang="en"],
+body.spanish .cta[lang="en"],
+body.spanish .footer-link[lang="en"]{
   display:none !important;
 }
 
@@ -1354,8 +1378,8 @@ h1{
         </div>
         
         <div class="pricing-options">
-          <!-- MONTHLY $100 -->
-          <div class="pricing-card">
+          <!-- ENGLISH PRICING -->
+          <div class="pricing-card" lang="en">
             <div class="card-label">Recommended</div>
             <div class="card-price">$100<span> /mo</span></div>
             <div class="card-purpose">Fully Managed Service</div>
@@ -1373,8 +1397,7 @@ h1{
             <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" target="_blank" rel="noopener noreferrer" class="cta">Book Consultation</a>
           </div>
 
-          <!-- ONE-TIME $285 -->
-          <div class="pricing-card">
+          <div class="pricing-card" lang="en">
             <div class="card-label">One-Time</div>
             <div class="card-price">$285<span> flat</span></div>
             <div class="card-purpose">Website Ownership · No Hosting</div>
@@ -1389,9 +1412,44 @@ h1{
             </ul>
             <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" target="_blank" rel="noopener noreferrer" class="cta">Order on Upwork</a>
           </div>
+          
+          <!-- SPANISH PRICING -->
+          <div class="pricing-card" lang="es">
+            <div class="card-label">Recomendado</div>
+            <div class="card-price">$100<span> /mes</span></div>
+            <div class="card-purpose">Servicio Totalmente Administrado</div>
+            <p class="card-desc">Administración completa del sitio web con alojamiento, mantenimiento y actualizaciones. Nosotros manejamos todo para que usted no tenga que hacerlo. Baja a $50/mes después del primer año.</p>
+            <ul class="card-features">
+              <li>Diseño y construcción personalizado</li>
+              <li>Adaptable a móviles</li>
+              <li>Alojamiento incluido</li>
+              <li>5 actualizaciones/mes</li>
+              <li>Mantenimiento continuo</li>
+              <li>Optimización SEO</li>
+              <li>Optimización de velocidad</li>
+              <li>Configuración de analíticas</li>
+            </ul>
+            <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" target="_blank" rel="noopener noreferrer" class="cta">Agendar Consulta</a>
+          </div>
+
+          <div class="pricing-card" lang="es">
+            <div class="card-label">Pago Único</div>
+            <div class="card-price">$285<span> fijo</span></div>
+            <div class="card-purpose">Propiedad Del Sitio · Sin Alojamiento</div>
+            <p class="card-desc">Propiedad completa de su sitio web con todos los archivos fuente. Sin tarifas mensuales. Sin alojamiento incluido—usted maneja su propio alojamiento y mantenimiento.</p>
+            <ul class="card-features">
+              <li>Diseño y construcción personalizado</li>
+              <li>Adaptable a móviles</li>
+              <li>SEO optimizado</li>
+              <li>Todos los archivos fuente</li>
+              <li>30 días de soporte</li>
+              <li>Documentación</li>
+            </ul>
+            <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" target="_blank" rel="noopener noreferrer" class="cta">Ordenar en Upwork</a>
+          </div>
         </div>
 
-        <div class="features-list">
+        <div class="features-list" lang="en">
           <div class="feature-item">Custom Design</div>
           <div class="feature-item">No Templates</div>
           <div class="feature-item">Houston-Based</div>
@@ -1399,26 +1457,47 @@ h1{
           <div class="feature-item">SEO Ready</div>
           <div class="feature-item">Analytics</div>
         </div>
+        
+        <div class="features-list" lang="es">
+          <div class="feature-item">Diseño Personalizado</div>
+          <div class="feature-item">Sin Plantillas</div>
+          <div class="feature-item">Basado en Houston</div>
+          <div class="feature-item">Soporte Rápido</div>
+          <div class="feature-item">SEO Listo</div>
+          <div class="feature-item">Analíticas</div>
+        </div>
       </div>
     </div>
 
     <!-- Final CTA -->
     <div class="final-cta fade-in-slow">
-      <h2>Stop paying agency prices.<br/>Start getting agency results.</h2>
+      <h2 lang="en">Stop paying agency prices.<br/>Start getting agency results.</h2>
+      <h2 lang="es">Deja de pagar precios de agencia.<br/>Comienza a obtener resultados de agencia.</h2>
+      
       <div class="cta-group">
-        <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" target="_blank" rel="noopener noreferrer" class="cta">Schedule a Call</a>
-        <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" target="_blank" rel="noopener noreferrer" class="cta">Order on Upwork</a>
+        <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" target="_blank" rel="noopener noreferrer" class="cta" lang="en">Schedule a Call</a>
+        <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" target="_blank" rel="noopener noreferrer" class="cta" lang="en">Order on Upwork</a>
+        
+        <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" target="_blank" rel="noopener noreferrer" class="cta" lang="es">Agendar Llamada</a>
+        <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" target="_blank" rel="noopener noreferrer" class="cta" lang="es">Ordenar en Upwork</a>
       </div>
     </div>
 
     <!-- Footer -->
     <div class="footer">
       <div class="footer-brand">SNRG WEB</div>
-      <p class="footer-tagline">Custom websites for Houston small businesses</p>
+      
+      <p class="footer-tagline" lang="en">Custom websites for Houston small businesses</p>
+      <p class="footer-tagline" lang="es">Sitios web personalizados para pequeñas empresas de Houston</p>
+      
       <div class="footer-links">
-        <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" target="_blank" rel="noopener noreferrer" class="footer-link">Schedule Call</a>
-        <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" target="_blank" rel="noopener noreferrer" class="footer-link">Upwork Service</a>
+        <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" target="_blank" rel="noopener noreferrer" class="footer-link" lang="en">Schedule Call</a>
+        <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" target="_blank" rel="noopener noreferrer" class="footer-link" lang="en">Upwork Service</a>
+        
+        <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" target="_blank" rel="noopener noreferrer" class="footer-link" lang="es">Agendar Llamada</a>
+        <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" target="_blank" rel="noopener noreferrer" class="footer-link" lang="es">Servicio Upwork</a>
       </div>
+      
       <p class="footer-copyright">© 2026 SNRG Web · Houston, Texas</p>
     </div>
   </div>
@@ -1453,29 +1532,35 @@ h1{
   }, observerOptions);
 
   // Elegant spinning stats animation
-  let statsAnimationTriggered = false;
+  let statsAnimationTriggered = {en: false, es: false};
+  
+  function stopStatsAnimation(lang) {
+    // Select only visible hero-stat elements
+    const visibleStats = document.querySelectorAll(`.hero-stats-preview[lang="${lang}"] .hero-stat`);
+    
+    // Stop them in sequence
+    setTimeout(() => {
+      if (visibleStats[0]) visibleStats[0].classList.add('stopped');
+    }, 1200);
+    
+    setTimeout(() => {
+      if (visibleStats[1]) visibleStats[1].classList.add('stopped');
+    }, 1600);
+    
+    setTimeout(() => {
+      if (visibleStats[2]) visibleStats[2].classList.add('stopped');
+    }, 2000);
+  }
   
   const statsObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      if (entry.isIntersecting && !statsAnimationTriggered) {
-        statsAnimationTriggered = true;
-        
-        const stats = document.querySelectorAll('.hero-stat');
-        
-        // Let them spin for 1.2 seconds, then stop left to right elegantly
-        setTimeout(() => {
-          stats[0].classList.add('stopped');
-        }, 1200);
-        
-        setTimeout(() => {
-          stats[1].classList.add('stopped');
-        }, 1600);
-        
-        setTimeout(() => {
-          stats[2].classList.add('stopped');
-        }, 2000);
-        
-        statsObserver.unobserve(entry.target);
+      if (entry.isIntersecting) {
+        const lang = entry.target.getAttribute('lang');
+        if (!statsAnimationTriggered[lang]) {
+          statsAnimationTriggered[lang] = true;
+          stopStatsAnimation(lang);
+          statsObserver.unobserve(entry.target);
+        }
       }
     });
   }, {
@@ -1489,10 +1574,22 @@ h1{
       document.body.classList.add('spanish');
       document.querySelectorAll('.lang-btn')[0].classList.remove('active');
       document.querySelectorAll('.lang-btn')[1].classList.add('active');
+      
+      // Trigger Spanish stats animation if not already triggered
+      const spanishStats = document.querySelector('.hero-stats-preview[lang="es"]');
+      if (spanishStats && !statsAnimationTriggered.es) {
+        statsObserver.observe(spanishStats);
+      }
     } else {
       document.body.classList.remove('spanish');
       document.querySelectorAll('.lang-btn')[0].classList.add('active');
       document.querySelectorAll('.lang-btn')[1].classList.remove('active');
+      
+      // Trigger English stats animation if not already triggered
+      const englishStats = document.querySelector('.hero-stats-preview[lang="en"]');
+      if (englishStats && !statsAnimationTriggered.en) {
+        statsObserver.observe(englishStats);
+      }
     }
   }
   
@@ -1513,10 +1610,15 @@ h1{
       observer.observe(el);
     });
     
-    // Observe stats section
-    const statsSection = document.querySelector('.hero-stats-preview');
-    if (statsSection) {
-      statsObserver.observe(statsSection);
+    // Observe both English and Spanish stats sections
+    const englishStats = document.querySelector('.hero-stats-preview[lang="en"]');
+    const spanishStats = document.querySelector('.hero-stats-preview[lang="es"]');
+    
+    if (englishStats) {
+      statsObserver.observe(englishStats);
+    }
+    if (spanishStats) {
+      statsObserver.observe(spanishStats);
     }
   });
   </script>
