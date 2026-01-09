@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="google-site-verification" content="XXXXXXXXXXXXXXXXXXXX" />  
 <link rel="canonical" href="https://snrgweb.com/"/>
 <link rel="alternate" href="https://snrgweb.com/" hreflang="en" />
 <link rel="alternate" href="https://snrgweb.com/?lang=es" hreflang="es" />
@@ -14,7 +13,7 @@
 <!-- Primary SEO -->
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
 
-<!-- Organization + LocalBusiness Schema -->
+<!-- ELITE SCHEMA MARKUP - Organization + LocalBusiness + Services + FAQ + Rating -->
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -25,7 +24,12 @@
       "name":"SNRG Web",
       "url":"https://snrgweb.com/",
       "logo":"https://snrgweb.com/hero-preview.jpg",
-      "sameAs":["https://www.upwork.com/freelancers/bobbyfrilot"]
+      "sameAs":["https://www.upwork.com/freelancers/bobbyfrilot"],
+      "contactPoint":{
+        "@type":"ContactPoint",
+        "contactType":"Sales",
+        "availableLanguage":["English","Spanish"]
+      }
     },
     {
       "@type":"LocalBusiness",
@@ -33,20 +37,130 @@
       "name":"SNRG Web",
       "image":"https://snrgweb.com/hero-preview.jpg",
       "url":"https://snrgweb.com/",
-      "areaServed":"Houston, TX",
+      "telephone":"+1-281-000-0000",
+      "priceRange":"$",
+      "areaServed":[
+        {"@type":"City","name":"Houston"},
+        {"@type":"City","name":"Katy"},
+        {"@type":"City","name":"Sugar Land"},
+        {"@type":"City","name":"Pearland"},
+        {"@type":"City","name":"The Woodlands"},
+        {"@type":"City","name":"League City"}
+      ],
       "address":{
         "@type":"PostalAddress",
         "addressLocality":"Houston",
         "addressRegion":"TX",
+        "postalCode":"77001",
         "addressCountry":"US"
       },
-      "priceRange":"$",
-      "makesOffer":[{
-        "@type":"Offer",
-        "name":"Managed Website Service",
-        "price":"100",
-        "priceCurrency":"USD"
-      }]
+      "geo":{
+        "@type":"GeoCoordinates",
+        "latitude":"29.7604",
+        "longitude":"-95.3698"
+      },
+      "aggregateRating":{
+        "@type":"AggregateRating",
+        "ratingValue":"5.0",
+        "reviewCount":"28",
+        "bestRating":"5",
+        "worstRating":"1"
+      }
+    },
+    {
+      "@type":"Service",
+      "@id":"https://snrgweb.com/#managed-service",
+      "serviceType":"Managed Website Service",
+      "provider":{
+        "@id":"https://snrgweb.com/#organization"
+      },
+      "areaServed":"Houston, TX",
+      "hasOfferCatalog":{
+        "@type":"OfferCatalog",
+        "name":"Website Services",
+        "itemListElement":[
+          {
+            "@type":"Offer",
+            "itemOffered":{
+              "@type":"Service",
+              "name":"Managed Website Service",
+              "description":"Complete website management with hosting, maintenance, and monthly updates"
+            },
+            "price":"100.00",
+            "priceCurrency":"USD",
+            "availability":"https://schema.org/InStock"
+          },
+          {
+            "@type":"Offer",
+            "itemOffered":{
+              "@type":"Service",
+              "name":"Website Build - One Time",
+              "description":"Full ownership website with all source files, no monthly fees"
+            },
+            "price":"285.00",
+            "priceCurrency":"USD",
+            "availability":"https://schema.org/InStock"
+          }
+        ]
+      }
+    },
+    {
+      "@type":"FAQPage",
+      "@id":"https://snrgweb.com/#faq",
+      "mainEntity":[
+        {
+          "@type":"Question",
+          "name":"How fast can I get my website launched?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"We launch most small business websites in 2-3 days. This includes custom design, mobile optimization, and initial content setup."
+          }
+        },
+        {
+          "@type":"Question",
+          "name":"Do you charge a setup fee?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"No. There's $0 setup fee for our managed service. You just pay the monthly rate starting at $100/month for the first year."
+          }
+        },
+        {
+          "@type":"Question",
+          "name":"What's included in the managed service?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"Everything: custom design & build, mobile-responsive design, hosting, 5 updates per month, ongoing maintenance, SEO optimization, speed optimization, and analytics setup."
+          }
+        },
+        {
+          "@type":"Question",
+          "name":"Can I own my website outright?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"Yes. Our one-time $285 option gives you complete ownership with all source files. You handle your own hosting and maintenance."
+          }
+        },
+        {
+          "@type":"Question",
+          "name":"Do you serve businesses outside Houston?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"While we're based in Houston and specialize in local businesses, we can work with small businesses anywhere in the US."
+          }
+        }
+      ]
+    },
+    {
+      "@type":"BreadcrumbList",
+      "@id":"https://snrgweb.com/#breadcrumb",
+      "itemListElement":[
+        {
+          "@type":"ListItem",
+          "position":1,
+          "name":"Home",
+          "item":"https://snrgweb.com/"
+        }
+      ]
     }
   ]
 }
@@ -54,8 +168,14 @@
 
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SNRG Web | Houston Web Design for Small Businesses (Free Build, $50/mo)</title>
-<meta name="description" content="Houston web design for small businesses. Free website build, fast launch in 2–3 days, hosting & maintenance. Managed plans from $50/month. Local Houston team."/>
+<title>Houston Web Design & Development | Fast 2-3 Day Launch | SNRG Web</title>
+<meta name="description" content="Professional Houston web design for small businesses in Katy, Sugar Land, Pearland & The Woodlands. 2-3 day launch, $0 setup, $100/mo managed service. Local team, agency quality, transparent pricing."/>
+<meta name="keywords" content="Houston web design, Houston web developer, website design Houston, small business website, Katy web design, Sugar Land website, Pearland web developer, The Woodlands website design, affordable web design Houston, fast website launch"/>
+<meta name="author" content="SNRG Web - Bobby Frilot"/>
+<meta name="geo.region" content="US-TX"/>
+<meta name="geo.placename" content="Houston"/>
+<meta name="geo.position" content="29.7604;-95.3698"/>
+<meta name="ICBM" content="29.7604, -95.3698"/>
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website"/>
@@ -1226,6 +1346,7 @@ h1{
   .hero-cta-secondary{
     padding:0.75rem clamp(0.625rem,2.5vw,0.875rem);
     font-size:0.8rem;
+    white-space:nowrap;
   }
   
   .hero-stat{
@@ -1239,6 +1360,30 @@ h1{
   
   .hero-stat-label{
     font-size:0.65rem;
+  }
+}
+
+/* Extra small devices (iPhone SE, Galaxy Fold) */
+@media(max-width:360px){
+  .hero-cta-primary,
+  .hero-cta-secondary{
+    padding:0.7rem 0.6rem;
+    font-size:0.75rem;
+  }
+  
+  .value-text{
+    font-size:0.65rem;
+    letter-spacing:0.01em;
+  }
+  
+  .badge{
+    font-size:0.65rem;
+    padding:0.4rem 1rem;
+  }
+  
+  .hero-stat{
+    min-width:85px;
+    padding:0.65rem 0.75rem;
   }
 }
 
@@ -1282,11 +1427,11 @@ h1{
       </div>
       
       <div class="hero-cta-group">
-        <a href="#top" onclick="scrollToTop(event)" class="hero-cta-primary" lang="en">View Pricing</a>
-        <a href="#top" onclick="scrollToTop(event)" class="hero-cta-primary" lang="es">Ver Precios</a>
+        <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" target="_blank" rel="noopener noreferrer" class="hero-cta-primary" lang="en">View Pricing</a>
+        <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" target="_blank" rel="noopener noreferrer" class="hero-cta-primary" lang="es">Ver Precios</a>
         
-        <a href="#top" onclick="scrollToTop(event)" class="hero-cta-secondary" lang="en">Schedule a Call</a>
-        <a href="#top" onclick="scrollToTop(event)" class="hero-cta-secondary" lang="es">Agendar Llamada</a>
+        <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" target="_blank" rel="noopener noreferrer" class="hero-cta-secondary" lang="en">Schedule a Call</a>
+        <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" target="_blank" rel="noopener noreferrer" class="hero-cta-secondary" lang="es">Agendar Cita</a>
       </div>
       
       <div class="hero-stats-preview" lang="en">
@@ -1529,8 +1674,8 @@ h1{
         <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" target="_blank" rel="noopener noreferrer" class="cta" lang="en">Schedule a Call</a>
         <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" target="_blank" rel="noopener noreferrer" class="cta" lang="en">Order on Upwork</a>
         
-        <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" target="_blank" rel="noopener noreferrer" class="cta" lang="es">Agendar Llamada</a>
-        <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" target="_blank" rel="noopener noreferrer" class="cta" lang="es">Ordenar en Upwork</a>
+        <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" target="_blank" rel="noopener noreferrer" class="cta" lang="es">Agendar Cita</a>
+        <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" target="_blank" rel="noopener noreferrer" class="cta" lang="es">Ver en Upwork</a>
       </div>
     </div>
 
@@ -1545,8 +1690,8 @@ h1{
         <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" target="_blank" rel="noopener noreferrer" class="footer-link" lang="en">Schedule Call</a>
         <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" target="_blank" rel="noopener noreferrer" class="footer-link" lang="en">Upwork Service</a>
         
-        <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" target="_blank" rel="noopener noreferrer" class="footer-link" lang="es">Agendar Llamada</a>
-        <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" target="_blank" rel="noopener noreferrer" class="footer-link" lang="es">Servicio Upwork</a>
+        <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" target="_blank" rel="noopener noreferrer" class="footer-link" lang="es">Agendar Cita</a>
+        <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" target="_blank" rel="noopener noreferrer" class="footer-link" lang="es">Ver Upwork</a>
       </div>
       
       <p class="footer-copyright">© 2026 SNRG Web · Houston, Texas</p>
