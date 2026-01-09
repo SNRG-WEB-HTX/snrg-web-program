@@ -1,0 +1,1227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SNRG Web — Houston Small Business Websites</title>
+<style>
+:root{
+  --midnight:#050814;
+  --navy:#0A0F1E;
+  --slate:#0F172A;
+  --blue:#1E40AF;
+  --blue-light:#3B82F6;
+  --neon-blue:#0284C7;
+  --neon-blue-light:#0EA5E9;
+  --neon-blue-dark:#075985;
+  --cyan:#0891B2;
+  --cyan-light:#06B6D4;
+  --muted:#64748B;
+  --muted-light:#94A3B8;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','Inter',system-ui,sans-serif;
+  color:#0F172A;
+  background:#050814;
+  background-image:
+    radial-gradient(at 20% 30%, rgba(14,165,233,0.15) 0px, transparent 50%),
+    radial-gradient(at 80% 70%, rgba(30,64,175,0.15) 0px, transparent 50%),
+    radial-gradient(at 50% 50%, rgba(8,145,178,0.1) 0px, transparent 50%);
+  background-attachment:fixed;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  overflow-x:hidden;
+}
+
+body::before{
+  content:'';
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-image:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230EA5E9' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity:0.4;
+  pointer-events:none;
+  z-index:0;
+}
+
+.container{
+  max-width:1200px;
+  margin:0 auto;
+  padding:clamp(40px,8vw,80px) clamp(20px,5vw,40px);
+  position:relative;
+  z-index:1;
+}
+
+/* INCREASED Fade-Rise Animations */
+.fade-in{
+  opacity:0;
+  transform:translateY(120px) scale(0.9);
+  transition:opacity 1.3s cubic-bezier(0.16,1,0.3,1),transform 1.3s cubic-bezier(0.16,1,0.3,1);
+}
+
+.fade-in.visible{
+  opacity:1;
+  transform:translateY(0) scale(1);
+}
+
+.fade-in-slow{
+  opacity:0;
+  transform:translateY(150px) scale(0.88);
+  transition:opacity 1.5s cubic-bezier(0.16,1,0.3,1),transform 1.5s cubic-bezier(0.16,1,0.3,1);
+}
+
+.fade-in-slow.visible{
+  opacity:1;
+  transform:translateY(0) scale(1);
+}
+
+/* Hero */
+.hero{
+  text-align:center;
+  padding:clamp(40px,8vw,80px) 0;
+  position:relative;
+}
+
+.hero::before{
+  content:'';
+  position:absolute;
+  top:-50%;
+  left:50%;
+  transform:translateX(-50%);
+  width:800px;
+  height:800px;
+  background:radial-gradient(circle,rgba(14,165,233,0.25) 0%,transparent 70%);
+  pointer-events:none;
+  animation:pulse 8s ease-in-out infinite;
+  filter:blur(40px);
+}
+
+@keyframes pulse{
+  0%,100%{transform:translateX(-50%) scale(1);opacity:0.5}
+  50%{transform:translateX(-50%) scale(1.15);opacity:0.3}
+}
+
+.badge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:10px 20px;
+  border-radius:999px;
+  background:linear-gradient(135deg,var(--neon-blue-dark),var(--neon-blue));
+  color:white;
+  font-weight:700;
+  font-size:13px;
+  letter-spacing:0.5px;
+  margin-bottom:24px;
+  box-shadow:0 4px 20px rgba(14,165,233,0.5),0 0 40px rgba(14,165,233,0.3);
+  position:relative;
+  z-index:1;
+  border:1px solid rgba(255,255,255,0.1);
+}
+
+.badge::before{
+  content:'';
+  width:8px;
+  height:8px;
+  background:white;
+  border-radius:50%;
+  box-shadow:0 0 12px rgba(255,255,255,0.9);
+  animation:glow 2s ease-in-out infinite;
+}
+
+@keyframes glow{
+  0%,100%{opacity:1;transform:scale(1)}
+  50%{opacity:0.6;transform:scale(0.9)}
+}
+
+/* SNRG WEB Animated Entrance */
+h1{
+  font-size:clamp(48px,10vw,84px);
+  font-weight:800;
+  line-height:0.95;
+  margin:0 0 24px;
+  background:linear-gradient(135deg,var(--blue-light) 0%,var(--neon-blue-light) 50%,var(--cyan-light) 100%);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  letter-spacing:-0.03em;
+  position:relative;
+  z-index:1;
+  opacity:0;
+  transform:scale(0.75) translateY(40px);
+  animation:snrgEntrance 1.4s cubic-bezier(0.16,1,0.3,1) 0.3s forwards;
+}
+
+@keyframes snrgEntrance{
+  0%{
+    opacity:0;
+    transform:scale(0.75) translateY(40px);
+    filter:blur(15px);
+  }
+  100%{
+    opacity:1;
+    transform:scale(1) translateY(0);
+    filter:blur(0);
+  }
+}
+
+.subtitle{
+  font-size:clamp(20px,3vw,28px);
+  font-weight:600;
+  color:white;
+  margin:0 auto 16px;
+  max-width:700px;
+  line-height:1.4;
+  letter-spacing:-0.01em;
+}
+
+.description{
+  font-size:clamp(16px,2.5vw,18px);
+  color:var(--muted-light);
+  max-width:600px;
+  margin:0 auto 40px;
+}
+
+/* Stats - REDUCED timing from 2s to 1s */
+.stats{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:24px;
+  margin:60px 0;
+  perspective:1000px;
+}
+
+.stat{
+  background:linear-gradient(135deg,rgba(14,165,233,0.08),rgba(30,64,175,0.08));
+  border:1px solid rgba(14,165,233,0.3);
+  border-radius:20px;
+  padding:32px;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+  transform-style:preserve-3d;
+  animation:spinFast 0.8s cubic-bezier(0.68,-0.55,0.265,1.55) infinite;
+  backdrop-filter:blur(10px);
+}
+
+@keyframes spinFast{
+  0%{transform:rotateY(0deg)}
+  100%{transform:rotateY(360deg)}
+}
+
+.stat.stopped{
+  animation:none;
+  transform:rotateY(0deg);
+  transition:transform 0.6s cubic-bezier(0.16,1,0.3,1);
+}
+
+.stat-value{
+  font-size:clamp(36px,5vw,52px);
+  font-weight:800;
+  background:linear-gradient(135deg,var(--neon-blue-light),var(--cyan-light));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  line-height:1;
+  margin-bottom:12px;
+  filter:drop-shadow(0 0 20px rgba(14,165,233,0.5));
+}
+
+.stat-label{
+  font-size:15px;
+  color:rgba(255,255,255,0.7);
+  font-weight:600;
+  letter-spacing:0.3px;
+}
+
+/* Click-to-Flip Cards */
+.value-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:24px;
+  margin:60px 0;
+}
+
+.flip-card{
+  height:320px;
+  perspective:1500px;
+}
+
+.flip-card-inner{
+  position:relative;
+  width:100%;
+  height:100%;
+  transition:transform 0.8s cubic-bezier(0.68,-0.55,0.265,1.55);
+  transform-style:preserve-3d;
+}
+
+.flip-card.flipped .flip-card-inner{
+  transform:rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back{
+  position:absolute;
+  width:100%;
+  height:100%;
+  backface-visibility:hidden;
+  border-radius:24px;
+  padding:36px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+
+.flip-card-front{
+  background:linear-gradient(135deg,rgba(14,165,233,0.1),rgba(30,64,175,0.08));
+  border:1px solid rgba(14,165,233,0.3);
+  backdrop-filter:blur(20px);
+  box-shadow:0 8px 32px rgba(0,0,0,0.3);
+  cursor:pointer;
+  position:relative;
+}
+
+/* Click Indicator */
+.flip-indicator{
+  position:absolute;
+  top:16px;
+  right:16px;
+  width:36px;
+  height:36px;
+  background:rgba(14,165,233,0.25);
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:18px;
+  color:var(--neon-blue-light);
+  border:2px solid rgba(14,165,233,0.5);
+  transition:all 0.3s ease;
+  animation:flipPulse 2.5s ease-in-out infinite;
+  font-weight:700;
+}
+
+@keyframes flipPulse{
+  0%,100%{transform:scale(1);opacity:0.8;box-shadow:0 0 0 0 rgba(14,165,233,0.4)}
+  50%{transform:scale(1.15);opacity:1;box-shadow:0 0 0 8px rgba(14,165,233,0)}
+}
+
+.flip-card-front:hover .flip-indicator{
+  background:rgba(14,165,233,0.5);
+  transform:rotate(180deg) scale(1.1);
+}
+
+.flip-card-back{
+  background:linear-gradient(135deg,rgba(14,165,233,0.15),rgba(8,145,178,0.12));
+  border:2px solid var(--neon-blue);
+  backdrop-filter:blur(20px);
+  transform:rotateY(180deg);
+  box-shadow:0 8px 32px rgba(0,0,0,0.3),0 0 60px rgba(14,165,233,0.4);
+  text-align:center;
+  cursor:pointer;
+}
+
+.flip-icon{
+  width:80px;
+  height:80px;
+  background:linear-gradient(135deg,var(--neon-blue),var(--cyan));
+  border-radius:20px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:40px;
+  margin-bottom:24px;
+  box-shadow:0 8px 24px rgba(14,165,233,0.4);
+  position:relative;
+}
+
+.flip-title{
+  font-size:24px;
+  font-weight:700;
+  color:white;
+  margin-bottom:12px;
+  letter-spacing:-0.01em;
+}
+
+.flip-text{
+  font-size:15px;
+  color:rgba(255,255,255,0.7);
+  line-height:1.6;
+}
+
+.flip-back-content{
+  width:100%;
+}
+
+.flip-back-title{
+  font-size:22px;
+  font-weight:700;
+  color:var(--neon-blue-light);
+  margin-bottom:20px;
+  text-transform:uppercase;
+  letter-spacing:0.5px;
+}
+
+.flip-back-list{
+  list-style:none;
+  text-align:left;
+  margin-bottom:0;
+}
+
+.flip-back-list li{
+  color:rgba(255,255,255,0.9);
+  font-size:14px;
+  padding:10px 0;
+  border-bottom:1px solid rgba(255,255,255,0.1);
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.flip-back-list li:last-child{
+  border-bottom:none;
+}
+
+.flip-back-list li::before{
+  content:'◆';
+  color:var(--neon-blue-light);
+  font-size:12px;
+  flex-shrink:0;
+}
+
+/* Portfolio */
+.portfolio{
+  margin:80px 0;
+}
+
+.portfolio-header{
+  text-align:center;
+  margin-bottom:48px;
+}
+
+.portfolio-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:28px;
+}
+
+.project-card{
+  text-decoration:none;
+  display:block;
+  transition:all 0.4s cubic-bezier(0.16,1,0.3,1);
+  border-radius:20px;
+  overflow:hidden;
+  background:linear-gradient(135deg,rgba(14,165,233,0.08),rgba(30,64,175,0.08));
+  border:1px solid rgba(14,165,233,0.25);
+  backdrop-filter:blur(10px);
+}
+
+.project-card:hover{
+  transform:translateY(-8px) scale(1.02);
+  box-shadow:0 20px 40px rgba(0,0,0,0.4),0 0 60px rgba(14,165,233,0.3);
+  border-color:var(--neon-blue);
+}
+
+.project-thumbnail{
+  height:260px;
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.project-thumbnail > div:first-child{
+  transition:transform 0.4s cubic-bezier(0.16,1,0.3,1);
+}
+
+.project-card:hover .project-thumbnail > div:first-child{
+  transform:scale(1.15) rotate(-8deg);
+}
+
+.project-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(135deg,rgba(0,0,0,0.7),rgba(0,0,0,0.5));
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  opacity:0;
+  transition:opacity 0.4s ease;
+}
+
+.project-card:hover .project-overlay{
+  opacity:1;
+}
+
+.view-project{
+  color:white;
+  font-size:18px;
+  font-weight:700;
+  letter-spacing:0.5px;
+}
+
+.project-info{
+  padding:24px;
+  background:rgba(5,8,20,0.7);
+  backdrop-filter:blur(10px);
+}
+
+.project-title{
+  font-size:18px;
+  font-weight:700;
+  color:white;
+  margin-bottom:4px;
+  letter-spacing:0.5px;
+}
+
+.project-type{
+  font-size:14px;
+  color:rgba(255,255,255,0.6);
+  font-weight:500;
+}
+
+/* Pricing */
+.pricing{
+  background:linear-gradient(135deg,rgba(5,8,20,0.8),rgba(10,15,30,0.9));
+  border-radius:28px;
+  padding:clamp(40px,6vw,60px);
+  margin:60px 0;
+  position:relative;
+  overflow:hidden;
+  border:1px solid rgba(14,165,233,0.2);
+  backdrop-filter:blur(20px);
+}
+
+.pricing::before{
+  content:'';
+  position:absolute;
+  top:-50%;
+  right:-30%;
+  width:600px;
+  height:600px;
+  background:radial-gradient(circle,rgba(14,165,233,0.4) 0%,transparent 70%);
+  animation:float 10s ease-in-out infinite;
+  filter:blur(60px);
+}
+
+@keyframes float{
+  0%,100%{transform:translate(0,0)}
+  50%{transform:translate(-40px,40px)}
+}
+
+.pricing-content{
+  position:relative;
+  z-index:1;
+  text-align:center;
+}
+
+.pricing-kicker{
+  color:var(--neon-blue-light);
+  font-weight:700;
+  font-size:14px;
+  letter-spacing:0.15em;
+  text-transform:uppercase;
+  margin-bottom:16px;
+}
+
+.pricing-title{
+  font-size:clamp(32px,5vw,48px);
+  font-weight:800;
+  color:white;
+  margin-bottom:16px;
+  line-height:1.2;
+}
+
+.pricing-subtitle{
+  font-size:18px;
+  color:rgba(255,255,255,0.7);
+  margin-bottom:48px;
+  max-width:600px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.pricing-options{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:24px;
+  margin-bottom:40px;
+}
+
+.pricing-card{
+  background:linear-gradient(135deg,rgba(14,165,233,0.12),rgba(30,64,175,0.08));
+  backdrop-filter:blur(20px);
+  border:2px solid rgba(14,165,233,0.4);
+  border-radius:24px;
+  padding:40px;
+  text-align:left;
+  transition:all 0.4s cubic-bezier(0.16,1,0.3,1);
+  position:relative;
+  box-shadow:0 8px 32px rgba(0,0,0,0.3),0 0 40px rgba(14,165,233,0.2);
+  display:flex;
+  flex-direction:column;
+}
+
+.pricing-card::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  border-radius:24px;
+  padding:2px;
+  background:linear-gradient(135deg,var(--neon-blue-light),var(--cyan-light));
+  -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+  -webkit-mask-composite:xor;
+  mask-composite:exclude;
+  opacity:0;
+  transition:opacity 0.4s ease;
+}
+
+.pricing-card:hover{
+  transform:translateY(-12px) scale(1.02);
+  box-shadow:0 20px 40px rgba(0,0,0,0.4),0 0 60px rgba(14,165,233,0.4);
+  border-color:var(--neon-blue);
+}
+
+.pricing-card:hover::before{
+  opacity:1;
+}
+
+.card-label{
+  color:var(--neon-blue-light);
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  margin-bottom:20px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.card-label::before{
+  content:'';
+  width:10px;
+  height:10px;
+  background:var(--neon-blue-light);
+  border-radius:50%;
+  box-shadow:0 0 15px var(--neon-blue-light);
+  animation:glow 2s ease-in-out infinite;
+}
+
+.card-price{
+  font-size:72px;
+  font-weight:800;
+  color:white;
+  line-height:1;
+  margin-bottom:8px;
+  filter:drop-shadow(0 0 30px rgba(14,165,233,0.6));
+}
+
+.card-price span{
+  font-size:22px;
+  font-weight:600;
+  color:rgba(255,255,255,0.6);
+}
+
+.card-purpose{
+  font-size:19px;
+  font-weight:700;
+  color:var(--neon-blue-light);
+  margin-bottom:12px;
+  text-transform:uppercase;
+  letter-spacing:0.5px;
+}
+
+.card-desc{
+  color:rgba(255,255,255,0.85);
+  font-size:15px;
+  margin-bottom:28px;
+  line-height:1.7;
+  padding-bottom:28px;
+  border-bottom:1px solid rgba(255,255,255,0.15);
+}
+
+.card-features{
+  list-style:none;
+  margin-bottom:auto;
+  padding-bottom:28px;
+}
+
+.card-features li{
+  color:rgba(255,255,255,0.9);
+  font-size:15px;
+  padding:12px 0;
+  border-top:1px solid rgba(255,255,255,0.08);
+  transition:all 0.3s ease;
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.card-features li:first-child{
+  border-top:none;
+}
+
+.card-features li:hover{
+  padding-left:12px;
+  color:var(--neon-blue-light);
+}
+
+.card-features li::before{
+  content:'✓';
+  color:var(--neon-blue-light);
+  font-weight:700;
+  font-size:18px;
+  flex-shrink:0;
+}
+
+/* CENTERED CTA at bottom of card */
+.cta{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  padding:18px 40px;
+  border-radius:14px;
+  text-decoration:none;
+  font-weight:700;
+  font-size:16px;
+  transition:all 0.4s cubic-bezier(0.16,1,0.3,1);
+  white-space:nowrap;
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(135deg,var(--neon-blue),var(--cyan));
+  color:white;
+  border:1px solid rgba(255,255,255,0.2);
+  box-shadow:0 10px 30px rgba(14,165,233,0.5),0 0 40px rgba(14,165,233,0.3);
+  width:100%;
+  margin-top:auto;
+}
+
+.cta::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(135deg,rgba(255,255,255,0.2),transparent);
+  opacity:0;
+  transition:opacity 0.4s ease;
+}
+
+.cta:hover{
+  transform:translateY(-4px) scale(1.03);
+  box-shadow:0 15px 40px rgba(14,165,233,0.6),0 0 60px rgba(14,165,233,0.4);
+}
+
+.cta:hover::before{
+  opacity:1;
+}
+
+.cta::after{
+  content:'→';
+  font-size:22px;
+  transition:transform 0.4s cubic-bezier(0.16,1,0.3,1);
+}
+
+.cta:hover::after{
+  transform:translateX(6px);
+}
+
+/* Features */
+.features-list{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:16px;
+}
+
+.feature-item{
+  background:rgba(14,165,233,0.08);
+  border:1px solid rgba(14,165,233,0.3);
+  border-radius:14px;
+  padding:14px 20px;
+  font-size:14px;
+  color:rgba(255,255,255,0.9);
+  font-weight:600;
+  text-align:center;
+  transition:all 0.3s ease;
+  backdrop-filter:blur(10px);
+}
+
+.feature-item:hover{
+  background:rgba(14,165,233,0.15);
+  border-color:var(--neon-blue);
+  transform:translateY(-4px);
+  box-shadow:0 8px 24px rgba(14,165,233,0.3);
+}
+
+/* Final CTA */
+.final-cta{
+  text-align:center;
+  padding:80px 0 60px;
+}
+
+.final-cta h2{
+  font-size:clamp(28px,4vw,40px);
+  font-weight:700;
+  margin-bottom:32px;
+  color:white;
+  line-height:1.4;
+}
+
+.cta-group{
+  display:flex;
+  gap:20px;
+  justify-content:center;
+  flex-wrap:wrap;
+  max-width:700px;
+  margin:0 auto;
+}
+
+.cta-group .cta{
+  flex:1;
+  min-width:250px;
+}
+
+/* Footer */
+.footer{
+  text-align:center;
+  padding:60px 0 40px;
+  border-top:1px solid rgba(14,165,233,0.2);
+  margin-top:60px;
+  position:relative;
+}
+
+.footer::before{
+  content:'';
+  position:absolute;
+  top:-1px;
+  left:50%;
+  transform:translateX(-50%);
+  width:200px;
+  height:2px;
+  background:linear-gradient(90deg,transparent,var(--neon-blue),transparent);
+  box-shadow:0 0 20px var(--neon-blue);
+}
+
+.footer-brand{
+  font-size:24px;
+  font-weight:800;
+  background:linear-gradient(135deg,var(--neon-blue-light),var(--cyan-light));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  margin-bottom:16px;
+}
+
+.footer-tagline{
+  font-size:16px;
+  color:rgba(255,255,255,0.7);
+  margin-bottom:24px;
+}
+
+.footer-links{
+  display:flex;
+  gap:32px;
+  justify-content:center;
+  margin-bottom:24px;
+}
+
+.footer-link{
+  color:rgba(255,255,255,0.6);
+  text-decoration:none;
+  font-size:15px;
+  font-weight:600;
+  transition:all 0.3s ease;
+  position:relative;
+}
+
+.footer-link::after{
+  content:'';
+  position:absolute;
+  bottom:-4px;
+  left:0;
+  width:0;
+  height:2px;
+  background:var(--neon-blue-light);
+  transition:width 0.3s ease;
+}
+
+.footer-link:hover{
+  color:var(--neon-blue-light);
+  transform:translateY(-2px);
+}
+
+.footer-link:hover::after{
+  width:100%;
+}
+
+.footer-copyright{
+  font-size:13px;
+  color:rgba(255,255,255,0.4);
+}
+
+/* Responsive */
+@media(max-width:768px){
+  .value-grid,
+  .stats,
+  .portfolio-grid,
+  .pricing-options{
+    grid-template-columns:1fr;
+  }
+  
+  .cta-group{
+    flex-direction:column;
+  }
+  
+  .cta-group .cta{
+    width:100%;
+  }
+  
+  .flip-card{
+    height:280px;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  *{
+    animation-duration:0.01ms !important;
+    transition-duration:0.01ms !important;
+  }
+}
+</style>
+</head>
+<body>
+  <div class="container">
+    <!-- Hero -->
+    <div class="hero fade-in">
+      <div class="badge">Houston Small Business Websites</div>
+      <h1>SNRG WEB</h1>
+      <p class="subtitle">Done-for-you websites without the agency price tag</p>
+      <p class="description">We build it. Host it. Maintain it. Keep it fast. You focus on your business.</p>
+    </div>
+
+    <!-- Stats - Stops after 1 second (reduced from 2) -->
+    <div class="stats" id="stats-section">
+      <div class="stat" data-index="0">
+        <div class="stat-value">2-3</div>
+        <div class="stat-label">Days to Launch</div>
+      </div>
+      <div class="stat" data-index="1">
+        <div class="stat-value">$0</div>
+        <div class="stat-label">Setup Fee</div>
+      </div>
+      <div class="stat" data-index="2">
+        <div class="stat-value">5</div>
+        <div class="stat-label">Updates/Month</div>
+      </div>
+    </div>
+
+    <!-- Click-to-Flip Cards -->
+    <div class="value-grid">
+      <div class="flip-card fade-in-slow" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="flip-indicator">↻</div>
+            <div class="flip-icon">⚡</div>
+            <h3 class="flip-title">Lightning Fast</h3>
+            <p class="flip-text">Performance-optimized infrastructure</p>
+          </div>
+          <div class="flip-card-back">
+            <div class="flip-back-content">
+              <h4 class="flip-back-title">Speed Details</h4>
+              <ul class="flip-back-list">
+                <li>Sub-second load times</li>
+                <li>CDN-powered delivery</li>
+                <li>Optimized images & assets</li>
+                <li>Minimal HTTP requests</li>
+                <li>Browser caching enabled</li>
+                <li>95+ PageSpeed scores</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card fade-in-slow" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="flip-indicator">↻</div>
+            <div class="flip-icon">📱</div>
+            <h3 class="flip-title">Mobile-First</h3>
+            <p class="flip-text">Perfect on every device</p>
+          </div>
+          <div class="flip-card-back">
+            <div class="flip-back-content">
+              <h4 class="flip-back-title">Design Details</h4>
+              <ul class="flip-back-list">
+                <li>Responsive breakpoints</li>
+                <li>Touch-optimized UI</li>
+                <li>Fluid typography</li>
+                <li>Adaptive layouts</li>
+                <li>Cross-browser tested</li>
+                <li>Retina-ready graphics</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card fade-in-slow" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="flip-indicator">↻</div>
+            <div class="flip-icon">🛠️</div>
+            <h3 class="flip-title">Fully Managed</h3>
+            <p class="flip-text">We handle everything</p>
+          </div>
+          <div class="flip-card-back">
+            <div class="flip-back-content">
+              <h4 class="flip-back-title">Service Details</h4>
+              <ul class="flip-back-list">
+                <li>99.9% uptime guarantee</li>
+                <li>SSL certificates included</li>
+                <li>Automatic backups</li>
+                <li>Security monitoring</li>
+                <li>Content updates</li>
+                <li>Technical support</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio with Real Images -->
+    <div class="portfolio fade-in-slow">
+      <div class="portfolio-header">
+        <div class="pricing-kicker">Recent Work</div>
+        <h2 class="pricing-title">Current Projects</h2>
+        <p class="pricing-subtitle">Live sites we've built for Houston businesses</p>
+      </div>
+      
+      <div class="portfolio-grid">
+        <a href="https://parking-htx-61fb2a.webflow.io/" target="_blank" class="project-card">
+          <div class="project-thumbnail" style="background:linear-gradient(135deg,#1e40af,#3b82f6);display:flex;align-items:center;justify-content:center">
+            <div style="font-size:90px;filter:drop-shadow(0 10px 30px rgba(0,0,0,0.5))">🅿️</div>
+            <div class="project-overlay">
+              <span class="view-project">View Live Site →</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h4 class="project-title">PARKING HTX</h4>
+            <p class="project-type">Parking Operations Platform</p>
+          </div>
+        </a>
+
+        <a href="https://tortas-gigantes.webflow.io/" target="_blank" class="project-card">
+          <div class="project-thumbnail" style="background:linear-gradient(135deg,#dc2626,#f97316);display:flex;align-items:center;justify-content:center">
+            <div style="font-size:90px;filter:drop-shadow(0 10px 30px rgba(0,0,0,0.5))">🌮</div>
+            <div class="project-overlay">
+              <span class="view-project">View Live Site →</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h4 class="project-title">TORTAS GIGANTES</h4>
+            <p class="project-type">Mexican Restaurant</p>
+          </div>
+        </a>
+
+        <a href="https://attorney-arnold-lopez.webflow.io/" target="_blank" class="project-card">
+          <div class="project-thumbnail" style="background:linear-gradient(135deg,#0f172a,#334155);display:flex;align-items:center;justify-content:center">
+            <div style="font-size:90px;filter:drop-shadow(0 10px 30px rgba(0,0,0,0.5))">⚖️</div>
+            <div class="project-overlay">
+              <span class="view-project">View Live Site →</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h4 class="project-title">ARNOLD LOPEZ</h4>
+            <p class="project-type">Attorney At Law</p>
+          </div>
+        </a>
+
+        <a href="https://mr-donuts-kolache.webflow.io/" target="_blank" class="project-card">
+          <div class="project-thumbnail" style="background:linear-gradient(135deg,#f59e0b,#fbbf24);display:flex;align-items:center;justify-content:center">
+            <div style="font-size:90px;filter:drop-shadow(0 10px 30px rgba(0,0,0,0.5))">🍩</div>
+            <div class="project-overlay">
+              <span class="view-project">View Live Site →</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h4 class="project-title">MR. DONUTS & KOLACHE</h4>
+            <p class="project-type">Local Restaurant</p>
+          </div>
+        </a>
+
+        <a href="https://con-net-graphics.webflow.io/" target="_blank" class="project-card">
+          <div class="project-thumbnail" style="background:linear-gradient(135deg,#059669,#10b981);display:flex;align-items:center;justify-content:center">
+            <div style="font-size:90px;filter:drop-shadow(0 10px 30px rgba(0,0,0,0.5))">🎨</div>
+            <div class="project-overlay">
+              <span class="view-project">View Live Site →</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h4 class="project-title">CON-NET GRAPHICS</h4>
+            <p class="project-type">Print & Design Services</p>
+          </div>
+        </a>
+
+        <a href="https://kiblers-kollectibles.webflow.io/" target="_blank" class="project-card">
+          <div class="project-thumbnail" style="background:linear-gradient(135deg,#7c3aed,#a78bfa);display:flex;align-items:center;justify-content:center">
+            <div style="font-size:90px;filter:drop-shadow(0 10px 30px rgba(0,0,0,0.5))">🎮</div>
+            <div class="project-overlay">
+              <span class="view-project">View Live Site →</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h4 class="project-title">KIBLER'S KOLLECTIBLES</h4>
+            <p class="project-type">Collectibles Store</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Pricing with Centered CTAs -->
+    <div class="pricing fade-in-slow">
+      <div class="pricing-content">
+        <div class="pricing-kicker">Pricing Options</div>
+        <h2 class="pricing-title">Choose Your Path</h2>
+        <p class="pricing-subtitle">Flexible options designed for every business model</p>
+        
+        <div class="pricing-options">
+          <!-- MONTHLY $100 -->
+          <div class="pricing-card">
+            <div class="card-label">Recommended</div>
+            <div class="card-price">$100<span> /mo</span></div>
+            <div class="card-purpose">Fully Managed Service</div>
+            <p class="card-desc">Complete website management with hosting, maintenance, and updates. We handle everything so you don't have to. Drops to $50/mo after year one.</p>
+            <ul class="card-features">
+              <li>Custom design & build</li>
+              <li>Mobile-responsive</li>
+              <li>Hosting included</li>
+              <li>5 updates/month</li>
+              <li>Ongoing maintenance</li>
+              <li>SEO optimization</li>
+              <li>Speed optimization</li>
+              <li>Analytics setup</li>
+            </ul>
+            <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" target="_blank" class="cta">Book Consultation</a>
+          </div>
+
+          <!-- ONE-TIME $285 -->
+          <div class="pricing-card">
+            <div class="card-label">One-Time</div>
+            <div class="card-price">$285<span> flat</span></div>
+            <div class="card-purpose">Website Ownership · No Hosting</div>
+            <p class="card-desc">Full ownership of your website with all source files. No monthly fees. No hosting included—you handle your own hosting and maintenance.</p>
+            <ul class="card-features">
+              <li>Custom design & build</li>
+              <li>Mobile-responsive</li>
+              <li>SEO optimized</li>
+              <li>All source files</li>
+              <li>30 days support</li>
+              <li>Documentation</li>
+            </ul>
+            <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" target="_blank" class="cta">Order on Upwork</a>
+          </div>
+        </div>
+
+        <div class="features-list">
+          <div class="feature-item">Custom Design</div>
+          <div class="feature-item">No Templates</div>
+          <div class="feature-item">Houston-Based</div>
+          <div class="feature-item">Fast Support</div>
+          <div class="feature-item">SEO Ready</div>
+          <div class="feature-item">Analytics</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Final CTA -->
+    <div class="final-cta fade-in-slow">
+      <h2>Stop paying agency prices.<br/>Start getting agency results.</h2>
+      <div class="cta-group">
+        <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" target="_blank" class="cta">Schedule a Call</a>
+        <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" target="_blank" class="cta">Order on Upwork</a>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <div class="footer-brand">SNRG WEB</div>
+      <p class="footer-tagline">Custom websites for Houston small businesses</p>
+      <div class="footer-links">
+        <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" target="_blank" class="footer-link">Schedule Call</a>
+        <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" target="_blank" class="footer-link">Upwork Service</a>
+      </div>
+      <p class="footer-copyright">© 2026 SNRG Web · Houston, Texas</p>
+    </div>
+  </div>
+
+  <script>
+  // Intersection Observer
+  const observerOptions = {
+    threshold: 0.15,
+    rootMargin: '0px 0px -80px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, index * 150);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  // Stats - FASTER spinning stops
+  let statsAnimationTriggered = false;
+  let statsStopTimeout = null;
+
+  const statsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !statsAnimationTriggered) {
+        statsAnimationTriggered = true;
+        
+        if (statsStopTimeout) {
+          clearTimeout(statsStopTimeout);
+        }
+        
+        // Wait 0.5s, then stop left to right quickly
+        statsStopTimeout = setTimeout(() => {
+          const stats = document.querySelectorAll('.stat');
+          
+          setTimeout(() => stats[0].classList.add('stopped'), 0);
+          setTimeout(() => stats[1].classList.add('stopped'), 800);
+          setTimeout(() => stats[2].classList.add('stopped'), 1600);
+          
+        }, 500); // Reduced from 1000 to 500ms
+        
+        statsObserver.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.3,
+    rootMargin: '0px'
+  });
+
+  // Initialize
+  document.addEventListener('DOMContentLoaded', () => {
+    const fadeElements = document.querySelectorAll('.fade-in, .fade-in-slow');
+    fadeElements.forEach(el => observer.observe(el));
+    
+    const statsSection = document.getElementById('stats-section');
+    if (statsSection) {
+      statsObserver.observe(statsSection);
+    }
+  });
+  </script>
+</body>
+</html>
