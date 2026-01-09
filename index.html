@@ -35,6 +35,11 @@
 
 *{box-sizing:border-box;margin:0;padding:0}
 
+html{
+  overflow-x:hidden;
+  max-width:100vw;
+}
+
 body{
   font-family:var(--font-display);
   color:var(--text-primary);
@@ -43,6 +48,7 @@ body{
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
   overflow-x:hidden;
+  max-width:100vw;
   position:relative;
 }
 
@@ -85,9 +91,12 @@ body::after{
 .container{
   max-width:1280px;
   margin:0 auto;
-  padding:0 clamp(1rem,3vw,3rem);
+  padding:0 clamp(0.75rem,2.5vw,3rem);
   position:relative;
   z-index:2;
+  width:100%;
+  max-width:100%;
+  overflow-x:hidden;
 }
 
 /* Hero Section */
@@ -101,6 +110,9 @@ body::after{
   position:relative;
   padding:var(--space-2xl) 0 0 0;
   margin-bottom:0;
+  width:100%;
+  max-width:100%;
+  overflow:hidden;
 }
 
 .hero::before{
@@ -208,24 +220,28 @@ h1{
   display:flex;
   align-items:center;
   justify-content:center;
-  gap:clamp(1rem,3vw,2rem);
-  flex-wrap:wrap;
+  gap:clamp(0.5rem,1.5vw,2rem);
+  flex-wrap:nowrap;
   margin:0 auto var(--space-xl);
   animation:fadeUp 1s cubic-bezier(0.16,1,0.3,1) 0.5s both;
+  width:100%;
+  max-width:100%;
+  overflow:hidden;
 }
 
 .value-text{
-  font-size:clamp(1rem,2.5vw,1.5rem);
+  font-size:clamp(0.75rem,2vw,1.5rem);
   font-weight:800;
   color:#FFFFFF;
-  letter-spacing:0.05em;
+  letter-spacing:0.03em;
   text-shadow:0 2px 20px rgba(0,0,0,0.8);
   white-space:nowrap;
+  flex-shrink:1;
 }
 
 .value-separator{
-  width:clamp(6px,1.5vw,10px);
-  height:clamp(6px,1.5vw,10px);
+  width:clamp(5px,1vw,10px);
+  height:clamp(5px,1vw,10px);
   background:linear-gradient(135deg,var(--accent-primary),var(--accent-secondary));
   border-radius:50%;
   box-shadow:0 0 20px rgba(0,240,255,0.6),0 0 40px rgba(123,97,255,0.4);
@@ -645,12 +661,13 @@ h1{
 }
 
 .card-purpose{
-  font-size:var(--fs-body-lg);
+  font-size:clamp(0.75rem,1.8vw,1.5rem);
   font-weight:700;
   color:var(--accent-primary);
   margin-bottom:var(--space-md);
   text-transform:uppercase;
-  letter-spacing:0.02em;
+  letter-spacing:0.01em;
+  white-space:nowrap;
 }
 
 .card-desc{
@@ -889,57 +906,67 @@ h1{
 /* Responsive */
 @media(max-width:768px){
   .container{
-    padding:0 1rem;
+    padding:0 0.75rem;
+    max-width:100vw;
   }
   
   .hero{
     min-height:80vh;
+    max-width:100%;
+    overflow:hidden;
   }
   
   .hero-value-prop{
-    gap:clamp(0.75rem,2vw,1rem);
+    gap:clamp(0.4rem,1.5vw,0.75rem);
+    padding:0 0.5rem;
   }
   
   .value-text{
-    font-size:clamp(0.875rem,2vw,1rem);
+    font-size:clamp(0.7rem,1.8vw,0.875rem);
+    letter-spacing:0.02em;
   }
   
   .value-separator{
-    width:6px;
-    height:6px;
+    width:5px;
+    height:5px;
   }
   
   .hero-cta-group{
     flex-direction:row;
-    gap:clamp(0.75rem,2vw,1rem);
+    gap:clamp(0.5rem,1.5vw,1rem);
     width:100%;
+    max-width:100%;
     justify-content:center;
+    padding:0;
   }
   
   .hero-cta-primary,
   .hero-cta-secondary{
     flex:1;
     min-width:0;
-    padding:1rem clamp(1rem,3vw,1.5rem);
-    font-size:clamp(0.875rem,2vw,1rem);
+    max-width:50%;
+    padding:0.875rem clamp(0.75rem,2.5vw,1.25rem);
+    font-size:clamp(0.8rem,1.8vw,0.95rem);
   }
   
   .hero-stats-preview{
-    gap:clamp(0.75rem,3vw,1.5rem);
+    gap:clamp(0.5rem,2.5vw,1rem);
     padding:var(--space-md) 0 var(--space-xl);
+    max-width:100%;
   }
   
   .hero-stat{
-    min-width:clamp(110px,28vw,140px);
-    padding:clamp(1rem,3vw,1.5rem) clamp(1.25rem,4vw,2rem);
+    min-width:clamp(100px,27vw,130px);
+    max-width:32%;
+    padding:clamp(0.875rem,2.5vw,1.25rem) clamp(1rem,3vw,1.5rem);
   }
   
   .hero-stat-value{
-    font-size:clamp(2rem,5vw,2.5rem);
+    font-size:clamp(1.75rem,4.5vw,2.25rem);
   }
   
   .hero-stat-label{
-    font-size:clamp(0.75rem,1.5vw,0.875rem);
+    font-size:clamp(0.7rem,1.4vw,0.8rem);
   }
   
   .portfolio-grid,
@@ -957,10 +984,35 @@ h1{
 }
 
 @media(max-width:480px){
+  .container{
+    padding:0 0.625rem;
+  }
+  
+  .hero-value-prop{
+    gap:0.4rem;
+  }
+  
+  .value-text{
+    font-size:0.7rem;
+  }
+  
   .hero-cta-primary,
   .hero-cta-secondary{
-    padding:0.875rem clamp(0.75rem,3vw,1rem);
-    font-size:0.875rem;
+    padding:0.75rem clamp(0.625rem,2.5vw,0.875rem);
+    font-size:0.8rem;
+  }
+  
+  .hero-stat{
+    min-width:95px;
+    padding:0.75rem 0.875rem;
+  }
+  
+  .hero-stat-value{
+    font-size:1.6rem;
+  }
+  
+  .hero-stat-label{
+    font-size:0.65rem;
   }
 }
 
