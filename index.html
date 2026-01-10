@@ -13,7 +13,7 @@
 <!-- Primary SEO -->
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
 
-<!-- ELITE SCHEMA MARKUP - Organization + LocalBusiness + Services + FAQ + Rating -->
+<!-- Organization + LocalBusiness Schema -->
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -24,12 +24,7 @@
       "name":"SNRG Web",
       "url":"https://snrgweb.com/",
       "logo":"https://snrgweb.com/hero-preview.jpg",
-      "sameAs":["https://www.upwork.com/freelancers/bobbyfrilot"],
-      "contactPoint":{
-        "@type":"ContactPoint",
-        "contactType":"Sales",
-        "availableLanguage":["English","Spanish"]
-      }
+      "sameAs":["https://www.upwork.com/freelancers/bobbyfrilot"]
     },
     {
       "@type":"LocalBusiness",
@@ -37,130 +32,20 @@
       "name":"SNRG Web",
       "image":"https://snrgweb.com/hero-preview.jpg",
       "url":"https://snrgweb.com/",
-      "telephone":"+1-281-000-0000",
-      "priceRange":"$",
-      "areaServed":[
-        {"@type":"City","name":"Houston"},
-        {"@type":"City","name":"Katy"},
-        {"@type":"City","name":"Sugar Land"},
-        {"@type":"City","name":"Pearland"},
-        {"@type":"City","name":"The Woodlands"},
-        {"@type":"City","name":"League City"}
-      ],
+      "areaServed":"Houston, TX",
       "address":{
         "@type":"PostalAddress",
         "addressLocality":"Houston",
         "addressRegion":"TX",
-        "postalCode":"77001",
         "addressCountry":"US"
       },
-      "geo":{
-        "@type":"GeoCoordinates",
-        "latitude":"29.7604",
-        "longitude":"-95.3698"
-      },
-      "aggregateRating":{
-        "@type":"AggregateRating",
-        "ratingValue":"5.0",
-        "reviewCount":"28",
-        "bestRating":"5",
-        "worstRating":"1"
-      }
-    },
-    {
-      "@type":"Service",
-      "@id":"https://snrgweb.com/#managed-service",
-      "serviceType":"Managed Website Service",
-      "provider":{
-        "@id":"https://snrgweb.com/#organization"
-      },
-      "areaServed":"Houston, TX",
-      "hasOfferCatalog":{
-        "@type":"OfferCatalog",
-        "name":"Website Services",
-        "itemListElement":[
-          {
-            "@type":"Offer",
-            "itemOffered":{
-              "@type":"Service",
-              "name":"Managed Website Service",
-              "description":"Complete website management with hosting, maintenance, and monthly updates"
-            },
-            "price":"100.00",
-            "priceCurrency":"USD",
-            "availability":"https://schema.org/InStock"
-          },
-          {
-            "@type":"Offer",
-            "itemOffered":{
-              "@type":"Service",
-              "name":"Website Build - One Time",
-              "description":"Full ownership website with all source files, no monthly fees"
-            },
-            "price":"285.00",
-            "priceCurrency":"USD",
-            "availability":"https://schema.org/InStock"
-          }
-        ]
-      }
-    },
-    {
-      "@type":"FAQPage",
-      "@id":"https://snrgweb.com/#faq",
-      "mainEntity":[
-        {
-          "@type":"Question",
-          "name":"How fast can I get my website launched?",
-          "acceptedAnswer":{
-            "@type":"Answer",
-            "text":"We launch most small business websites in 2-3 days. This includes custom design, mobile optimization, and initial content setup."
-          }
-        },
-        {
-          "@type":"Question",
-          "name":"Do you charge a setup fee?",
-          "acceptedAnswer":{
-            "@type":"Answer",
-            "text":"No. There's $0 setup fee for our managed service. You just pay the monthly rate starting at $100/month for the first year."
-          }
-        },
-        {
-          "@type":"Question",
-          "name":"What's included in the managed service?",
-          "acceptedAnswer":{
-            "@type":"Answer",
-            "text":"Everything: custom design & build, mobile-responsive design, hosting, 5 updates per month, ongoing maintenance, SEO optimization, speed optimization, and analytics setup."
-          }
-        },
-        {
-          "@type":"Question",
-          "name":"Can I own my website outright?",
-          "acceptedAnswer":{
-            "@type":"Answer",
-            "text":"Yes. Our one-time $285 option gives you complete ownership with all source files. You handle your own hosting and maintenance."
-          }
-        },
-        {
-          "@type":"Question",
-          "name":"Do you serve businesses outside Houston?",
-          "acceptedAnswer":{
-            "@type":"Answer",
-            "text":"While we're based in Houston and specialize in local businesses, we can work with small businesses anywhere in the US."
-          }
-        }
-      ]
-    },
-    {
-      "@type":"BreadcrumbList",
-      "@id":"https://snrgweb.com/#breadcrumb",
-      "itemListElement":[
-        {
-          "@type":"ListItem",
-          "position":1,
-          "name":"Home",
-          "item":"https://snrgweb.com/"
-        }
-      ]
+      "priceRange":"$",
+      "makesOffer":[{
+        "@type":"Offer",
+        "name":"Managed Website Service",
+        "price":"100",
+        "priceCurrency":"USD"
+      }]
     }
   ]
 }
@@ -168,14 +53,8 @@
 
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Houston Web Design & Development | Fast 2-3 Day Launch | SNRG Web</title>
-<meta name="description" content="Professional Houston web design for small businesses in Katy, Sugar Land, Pearland & The Woodlands. 2-3 day launch, $0 setup, $100/mo managed service. Local team, agency quality, transparent pricing."/>
-<meta name="keywords" content="Houston web design, Houston web developer, website design Houston, small business website, Katy web design, Sugar Land website, Pearland web developer, The Woodlands website design, affordable web design Houston, fast website launch"/>
-<meta name="author" content="SNRG Web - Bobby Frilot"/>
-<meta name="geo.region" content="US-TX"/>
-<meta name="geo.placename" content="Houston"/>
-<meta name="geo.position" content="29.7604;-95.3698"/>
-<meta name="ICBM" content="29.7604, -95.3698"/>
+<title>SNRG Web | Houston Web Design for Small Businesses (Free Build, $50/mo)</title>
+<meta name="description" content="Houston web design for small businesses. Free website build, fast launch in 2–3 days, hosting & maintenance. Managed plans from $50/month. Local Houston team."/>
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website"/>
@@ -275,6 +154,89 @@ body::after{
   pointer-events:none;
   z-index:1;
   opacity:0.5;
+}
+
+/* HIGH-TECH ANIMATED GRID */
+.tech-grid{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-image:
+    linear-gradient(rgba(0,240,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,240,255,0.03) 1px, transparent 1px);
+  background-size:50px 50px;
+  pointer-events:none;
+  z-index:1;
+  animation:gridMove 20s linear infinite;
+}
+
+@keyframes gridMove{
+  0%{background-position:0 0}
+  100%{background-position:50px 50px}
+}
+
+/* FLOATING DATA PARTICLES */
+.particles{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+  z-index:1;
+  overflow:hidden;
+}
+
+.particle{
+  position:absolute;
+  width:2px;
+  height:2px;
+  background:rgba(0,240,255,0.6);
+  border-radius:50%;
+  box-shadow:0 0 10px rgba(0,240,255,0.8);
+  animation:particleFloat 15s linear infinite;
+}
+
+@keyframes particleFloat{
+  0%{
+    transform:translateY(100vh) translateX(0);
+    opacity:0;
+  }
+  10%{opacity:1}
+  90%{opacity:1}
+  100%{
+    transform:translateY(-100px) translateX(100px);
+    opacity:0;
+  }
+}
+
+/* SCANNING BEAM */
+.scan-line{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:2px;
+  background:linear-gradient(90deg, transparent, rgba(0,240,255,0.8), transparent);
+  pointer-events:none;
+  z-index:1;
+  animation:scan 8s ease-in-out infinite;
+  box-shadow:0 0 20px rgba(0,240,255,0.6);
+}
+
+@keyframes scan{
+  0%, 100%{
+    transform:translateY(0);
+    opacity:0;
+  }
+  10%{opacity:1}
+  50%{
+    transform:translateY(100vh);
+    opacity:1;
+  }
+  60%{opacity:0}
 }
 
 .container{
@@ -504,7 +466,7 @@ h1{
   font-size:var(--fs-hero);
   font-weight:900;
   line-height:0.9;
-  letter-spacing:-0.04em;
+  letter-spacing:-0.03em;
   margin-bottom:var(--space-md);
   background:linear-gradient(135deg,#FFFFFF 0%,#00F0FF 40%,#7B61FF 100%);
   -webkit-background-clip:text;
@@ -512,31 +474,12 @@ h1{
   background-clip:text;
   position:relative;
   z-index:1;
-  text-shadow:0 0 80px rgba(0,240,255,0.5);
-  animation:dramaticTitleEntrance 2s cubic-bezier(0.16,1,0.3,1) 0.3s both;
-  filter:drop-shadow(0 0 40px rgba(123,97,255,0.4));
+  animation:simpleFadeUp 0.8s ease 0.2s both;
 }
 
-@keyframes dramaticTitleEntrance{
-  0%{
-    opacity:0;
-    transform:translateY(60px) scale(0.3) rotateX(90deg);
-    filter:blur(40px) brightness(3);
-  }
-  40%{
-    opacity:0.8;
-    transform:translateY(-10px) scale(1.1) rotateX(-5deg);
-    filter:blur(5px) brightness(1.5);
-  }
-  70%{
-    transform:translateY(5px) scale(0.98) rotateX(2deg);
-    filter:blur(2px) brightness(1.2);
-  }
-  100%{
-    opacity:1;
-    transform:translateY(0) scale(1) rotateX(0deg);
-    filter:blur(0) brightness(1);
-  }
+@keyframes simpleFadeUp{
+  from{opacity:0;transform:translateY(20px)}
+  to{opacity:1;transform:translateY(0)}
 }
 
 .hero-value-prop{
@@ -592,46 +535,21 @@ h1{
   justify-content:center;
   gap:0.5rem;
   padding:1.125rem 2.5rem;
-  border-radius:0.875rem;
+  border-radius:0.75rem;
   text-decoration:none;
   font-weight:700;
   font-size:var(--fs-body);
-  transition:all 0.4s cubic-bezier(0.16,1,0.3,1);
+  transition:all 0.3s ease;
   position:relative;
-  overflow:hidden;
   background:linear-gradient(135deg,var(--accent-primary),var(--accent-secondary));
-  color:#030711;
+  color:#FFFFFF;
   border:none;
-  box-shadow:0 15px 50px rgba(0,240,255,0.5),0 0 60px rgba(123,97,255,0.3);
-  animation:ctaPulseGlow 3s ease-in-out infinite;
-}
-
-@keyframes ctaPulseGlow{
-  0%,100%{
-    box-shadow:0 15px 50px rgba(0,240,255,0.5),0 0 60px rgba(123,97,255,0.3);
-  }
-  50%{
-    box-shadow:0 15px 50px rgba(0,240,255,0.7),0 0 80px rgba(123,97,255,0.5),0 0 100px rgba(0,240,255,0.2);
-  }
-}
-
-.hero-cta-primary::before{
-  content:'';
-  position:absolute;
-  inset:0;
-  background:linear-gradient(135deg,rgba(255,255,255,0.3),transparent);
-  opacity:0;
-  transition:opacity 0.3s ease;
-}
-
-.hero-cta-primary:hover::before{
-  opacity:1;
+  box-shadow:0 4px 16px rgba(0,240,255,0.3);
 }
 
 .hero-cta-primary:hover{
-  transform:translateY(-4px) scale(1.02);
-  box-shadow:0 20px 60px rgba(0,240,255,0.6),0 0 80px rgba(123,97,255,0.5);
-  animation:none;
+  transform:translateY(-2px);
+  box-shadow:0 8px 24px rgba(0,240,255,0.4);
 }
 
 .hero-cta-secondary{
@@ -640,106 +558,147 @@ h1{
   justify-content:center;
   gap:0.5rem;
   padding:1.125rem 2.5rem;
-  border-radius:0.875rem;
+  border-radius:0.75rem;
   text-decoration:none;
   font-weight:700;
   font-size:var(--fs-body);
-  transition:all 0.4s cubic-bezier(0.16,1,0.3,1);
+  transition:all 0.3s ease;
   position:relative;
-  overflow:hidden;
-  background:rgba(10,17,32,0.8);
+  background:rgba(255,255,255,0.08);
   backdrop-filter:blur(20px);
   color:#FFFFFF;
-  border:2px solid rgba(0,240,255,0.4);
-  box-shadow:0 10px 40px rgba(0,0,0,0.4);
+  border:1px solid rgba(255,255,255,0.15);
+  box-shadow:0 4px 16px rgba(0,0,0,0.2);
 }
 
 .hero-cta-secondary:hover{
-  transform:translateY(-4px) scale(1.02);
-  border-color:var(--accent-primary);
-  background:rgba(10,17,32,0.95);
+  transform:translateY(-2px);
+  border-color:rgba(0,240,255,0.4);
+  background:rgba(255,255,255,0.12);
   box-shadow:0 15px 50px rgba(0,0,0,0.5),0 0 40px rgba(0,240,255,0.3);
 }
 
 .hero-stats-preview{
   display:flex;
-  gap:clamp(1.5rem,4vw,3rem);
+  gap:clamp(1.25rem,3vw,2rem);
   justify-content:center;
-  flex-wrap:wrap;
-  margin-top:var(--space-xl);
-  padding:var(--space-xl) 0 var(--space-2xl);
-  border-top:1px solid rgba(255,255,255,0.08);
-  animation:fadeUp 1s cubic-bezier(0.16,1,0.3,1) 0.8s both;
-  perspective:1500px;
+  flex-wrap:nowrap;
+  margin-top:clamp(2rem,5vw,3rem);
+  padding:clamp(2rem,5vw,3rem) 0;
+  border-top:1px solid rgba(255,255,255,0.1);
+  width:100%;
+  max-width:100%;
 }
 
 .hero-stat{
-  background:rgba(10,17,32,0.7);
-  backdrop-filter:blur(30px);
-  border:2px solid rgba(0,240,255,0.3);
-  border-radius:1.5rem;
-  padding:clamp(1.5rem,4vw,2.5rem) clamp(2rem,5vw,3.5rem);
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(20px);
+  border:1px solid rgba(0,240,255,0.3);
+  border-radius:1.25rem;
+  padding:clamp(2rem,5vw,3rem) clamp(1.5rem,4vw,2.5rem);
   text-align:center;
   position:relative;
-  transform-style:preserve-3d;
-  animation:statSpinElegant 0.8s cubic-bezier(0.68,-0.55,0.265,1.55) infinite;
-  transition:all 0.6s cubic-bezier(0.16,1,0.3,1);
-  box-shadow:0 10px 40px rgba(0,0,0,0.4),0 0 30px rgba(0,240,255,0.15);
-  min-width:clamp(140px,20vw,200px);
+  transition:all 0.3s ease;
+  box-shadow:
+    0 4px 24px rgba(0,0,0,0.3),
+    0 0 20px rgba(0,240,255,0.1),
+    inset 0 0 40px rgba(0,240,255,0.03);
+  min-width:clamp(150px,22vw,220px);
+  flex:1;
+  max-width:280px;
+  overflow:hidden;
+  animation:statGlow 4s ease-in-out infinite;
 }
 
-@keyframes statSpinElegant{
-  0%{transform:rotateY(0deg)}
-  100%{transform:rotateY(360deg)}
+@keyframes statGlow{
+  0%, 100%{
+    box-shadow:
+      0 4px 24px rgba(0,0,0,0.3),
+      0 0 20px rgba(0,240,255,0.1),
+      inset 0 0 40px rgba(0,240,255,0.03);
+  }
+  50%{
+    box-shadow:
+      0 4px 24px rgba(0,0,0,0.3),
+      0 0 30px rgba(0,240,255,0.2),
+      inset 0 0 60px rgba(0,240,255,0.06);
+  }
 }
 
-.hero-stat.stopped{
-  animation:none;
-  transform:rotateY(0deg);
-}
-
+/* ANIMATED CORNER ACCENTS */
 .hero-stat::before{
   content:'';
   position:absolute;
-  inset:-2px;
-  border-radius:1.5rem;
-  padding:2px;
-  background:linear-gradient(135deg,rgba(0,240,255,0.5),rgba(123,97,255,0.4));
-  -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
-  -webkit-mask-composite:xor;
-  mask-composite:exclude;
-  opacity:0;
-  transition:opacity 0.6s ease;
+  top:0;
+  left:0;
+  width:20px;
+  height:20px;
+  border-top:2px solid rgba(0,240,255,0.6);
+  border-left:2px solid rgba(0,240,255,0.6);
+  border-radius:1.25rem 0 0 0;
+  animation:cornerPulse 3s ease-in-out infinite;
 }
 
-.hero-stat:hover::before{
-  opacity:1;
+.hero-stat::after{
+  content:'';
+  position:absolute;
+  bottom:0;
+  right:0;
+  width:20px;
+  height:20px;
+  border-bottom:2px solid rgba(123,97,255,0.6);
+  border-right:2px solid rgba(123,97,255,0.6);
+  border-radius:0 0 1.25rem 0;
+  animation:cornerPulse 3s ease-in-out infinite 1.5s;
+}
+
+@keyframes cornerPulse{
+  0%, 100%{opacity:0.4}
+  50%{opacity:1}
+}
+
+/* SCANNING LINE INSIDE CARD */
+.hero-stat > *{
+  position:relative;
+  z-index:2;
+}
+
+.hero-stat.stopped{
+  /* No animation needed */
 }
 
 .hero-stat:hover{
-  transform:translateY(-8px) scale(1.05);
+  transform:translateY(-3px);
   border-color:rgba(0,240,255,0.6);
-  box-shadow:0 20px 60px rgba(0,0,0,0.5),0 0 60px rgba(0,240,255,0.4);
+  box-shadow:
+    0 8px 32px rgba(0,0,0,0.4),
+    0 0 40px rgba(0,240,255,0.3),
+    inset 0 0 60px rgba(0,240,255,0.08);
+  background:rgba(255,255,255,0.12);
+  animation:none;
 }
 
 .hero-stat-value{
-  font-size:clamp(2.5rem,6vw,4.5rem);
+  font-size:clamp(3rem,7vw,5rem);
   font-weight:900;
-  background:linear-gradient(135deg,var(--accent-primary),var(--accent-secondary));
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  background-clip:text;
+  color:#FFFFFF;
   line-height:1;
-  margin-bottom:clamp(0.5rem,2vw,0.75rem);
-  filter:drop-shadow(0 0 30px rgba(0,240,255,0.5));
+  margin-bottom:clamp(0.75rem,2.5vw,1rem);
   letter-spacing:-0.02em;
+  text-shadow:0 0 20px rgba(0,240,255,0.5);
+  animation:valueGlow 3s ease-in-out infinite;
+}
+
+@keyframes valueGlow{
+  0%, 100%{text-shadow:0 0 20px rgba(0,240,255,0.5)}
+  50%{text-shadow:0 0 30px rgba(0,240,255,0.8)}
 }
 
 .hero-stat-label{
-  font-size:clamp(0.875rem,1.5vw,1.125rem);
-  color:#A0AEC0;
-  font-weight:700;
-  letter-spacing:0.05em;
+  font-size:clamp(1rem,1.75vw,1.25rem);
+  color:#CBD5E0;
+  font-weight:600;
+  letter-spacing:0.03em;
   text-transform:uppercase;
   line-height:1.3;
 }
@@ -785,6 +744,16 @@ h1{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));
   gap:var(--space-lg);
+  max-width:1200px;
+  margin:0 auto;
+}
+
+/* DESKTOP: 3 COLUMNS (3x2 GRID) */
+@media(min-width:1024px){
+  .portfolio-grid{
+    grid-template-columns:repeat(3,1fr);
+    gap:var(--space-xl);
+  }
 }
 
 .project-card{
@@ -792,11 +761,12 @@ h1{
   display:block;
   background:rgba(10,17,32,0.5);
   backdrop-filter:blur(20px);
-  border:1px solid var(--border);
+  border:1px solid rgba(0,240,255,0.2);
   border-radius:1.25rem;
   overflow:hidden;
   transition:all 0.4s cubic-bezier(0.16,1,0.3,1);
   position:relative;
+  box-shadow:0 4px 16px rgba(0,0,0,0.3), inset 0 0 30px rgba(0,240,255,0.02);
 }
 
 .project-card::before{
@@ -819,7 +789,8 @@ h1{
 
 .project-card:hover{
   transform:translateY(-8px);
-  box-shadow:0 20px 60px rgba(0,0,0,0.5),0 0 80px rgba(0,240,255,0.2);
+  box-shadow:0 20px 60px rgba(0,0,0,0.5),0 0 80px rgba(0,240,255,0.3);
+  border-color:rgba(0,240,255,0.5);
 }
 
 .project-thumbnail{
@@ -925,13 +896,30 @@ h1{
 .pricing-card{
   background:rgba(10,17,32,0.6);
   backdrop-filter:blur(20px);
-  border:2px solid rgba(0,240,255,0.25);
+  border:2px solid rgba(0,240,255,0.3);
   border-radius:1.5rem;
   padding:var(--space-xl);
   transition:all 0.4s cubic-bezier(0.16,1,0.3,1);
   position:relative;
   display:flex;
   flex-direction:column;
+  box-shadow:
+    0 4px 24px rgba(0,0,0,0.3),
+    inset 0 0 40px rgba(0,240,255,0.03);
+  animation:pricingGlow 5s ease-in-out infinite;
+}
+
+@keyframes pricingGlow{
+  0%, 100%{
+    box-shadow:
+      0 4px 24px rgba(0,0,0,0.3),
+      inset 0 0 40px rgba(0,240,255,0.03);
+  }
+  50%{
+    box-shadow:
+      0 4px 24px rgba(0,0,0,0.3),
+      inset 0 0 60px rgba(0,240,255,0.06);
+  }
 }
 
 .pricing-card::before{
@@ -954,7 +942,9 @@ h1{
 
 .pricing-card:hover{
   transform:translateY(-8px);
-  box-shadow:0 20px 60px rgba(0,0,0,0.5),0 0 80px rgba(0,240,255,0.25);
+  box-shadow:0 20px 60px rgba(0,0,0,0.5),0 0 80px rgba(0,240,255,0.35);
+  border-color:rgba(0,240,255,0.6);
+  animation:none;
 }
 
 .card-label{
@@ -1346,7 +1336,6 @@ h1{
   .hero-cta-secondary{
     padding:0.75rem clamp(0.625rem,2.5vw,0.875rem);
     font-size:0.8rem;
-    white-space:nowrap;
   }
   
   .hero-stat{
@@ -1363,30 +1352,6 @@ h1{
   }
 }
 
-/* Extra small devices (iPhone SE, Galaxy Fold) */
-@media(max-width:360px){
-  .hero-cta-primary,
-  .hero-cta-secondary{
-    padding:0.7rem 0.6rem;
-    font-size:0.75rem;
-  }
-  
-  .value-text{
-    font-size:0.65rem;
-    letter-spacing:0.01em;
-  }
-  
-  .badge{
-    font-size:0.65rem;
-    padding:0.4rem 1rem;
-  }
-  
-  .hero-stat{
-    min-width:85px;
-    padding:0.65rem 0.75rem;
-  }
-}
-
 @media(prefers-reduced-motion:reduce){
   *{
     animation-duration:0.01ms !important;
@@ -1396,6 +1361,22 @@ h1{
 </style>
 </head>
 <body>
+  <!-- HIGH-TECH ANIMATED BACKGROUNDS -->
+  <div class="tech-grid"></div>
+  <div class="scan-line"></div>
+  <div class="particles">
+    <div class="particle" style="left:10%;animation-delay:0s;"></div>
+    <div class="particle" style="left:25%;animation-delay:3s;"></div>
+    <div class="particle" style="left:40%;animation-delay:6s;"></div>
+    <div class="particle" style="left:55%;animation-delay:2s;"></div>
+    <div class="particle" style="left:70%;animation-delay:5s;"></div>
+    <div class="particle" style="left:85%;animation-delay:8s;"></div>
+    <div class="particle" style="left:15%;animation-delay:4s;"></div>
+    <div class="particle" style="left:60%;animation-delay:7s;"></div>
+    <div class="particle" style="left:90%;animation-delay:1s;"></div>
+    <div class="particle" style="left:35%;animation-delay:9s;"></div>
+  </div>
+  
   <!-- Language Toggle -->
   <div class="lang-toggle">
     <button class="lang-btn active" onclick="switchLang('en')">EN</button>
@@ -1427,11 +1408,11 @@ h1{
       </div>
       
       <div class="hero-cta-group">
-        <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" target="_blank" rel="noopener noreferrer" class="hero-cta-primary" lang="en">View Pricing</a>
-        <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" target="_blank" rel="noopener noreferrer" class="hero-cta-primary" lang="es">Ver Precios</a>
+        <a href="#top" onclick="scrollToTop(event)" class="hero-cta-primary" lang="en">View Pricing</a>
+        <a href="#top" onclick="scrollToTop(event)" class="hero-cta-primary" lang="es">Ver Precios</a>
         
-        <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" target="_blank" rel="noopener noreferrer" class="hero-cta-secondary" lang="en">Schedule a Call</a>
-        <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" target="_blank" rel="noopener noreferrer" class="hero-cta-secondary" lang="es">Agendar Cita</a>
+        <a href="#top" onclick="scrollToTop(event)" class="hero-cta-secondary" lang="en">Schedule a Call</a>
+        <a href="#top" onclick="scrollToTop(event)" class="hero-cta-secondary" lang="es">Agendar Llamada</a>
       </div>
       
       <div class="hero-stats-preview" lang="en">
@@ -1479,7 +1460,7 @@ h1{
       </div>
       
       <div class="portfolio-grid">
-        <a href="https://parking-htx-61fb2a.webflow.io/" target="_blank" rel="noopener noreferrer" class="project-card">
+        <a href="https://parking-htx-61fb2a.webflow.io/" rel="noopener noreferrer" class="project-card">
           <div class="project-thumbnail" style="background:linear-gradient(135deg,#1e40af,#3b82f6);display:flex;align-items:center;justify-content:center">
             <div style="font-size:90px;filter:drop-shadow(0 10px 30px rgba(0,0,0,0.5))">🅿️</div>
             <div class="project-overlay">
@@ -1492,7 +1473,7 @@ h1{
           </div>
         </a>
 
-        <a href="https://tortas-gigantes.webflow.io/" target="_blank" rel="noopener noreferrer" class="project-card">
+        <a href="https://tortas-gigantes.webflow.io/" rel="noopener noreferrer" class="project-card">
           <div class="project-thumbnail" style="background:linear-gradient(135deg,#dc2626,#f97316);display:flex;align-items:center;justify-content:center">
             <div style="font-size:90px;filter:drop-shadow(0 10px 30px rgba(0,0,0,0.5))">🌮</div>
             <div class="project-overlay">
@@ -1505,7 +1486,7 @@ h1{
           </div>
         </a>
 
-        <a href="https://attorney-arnold-lopez.webflow.io/" target="_blank" rel="noopener noreferrer" class="project-card">
+        <a href="https://attorney-arnold-lopez.webflow.io/" rel="noopener noreferrer" class="project-card">
           <div class="project-thumbnail" style="background:linear-gradient(135deg,#0f172a,#334155);display:flex;align-items:center;justify-content:center">
             <div style="font-size:90px;filter:drop-shadow(0 10px 30px rgba(0,0,0,0.5))">⚖️</div>
             <div class="project-overlay">
@@ -1518,7 +1499,7 @@ h1{
           </div>
         </a>
 
-        <a href="https://mr-donuts-kolache.webflow.io/" target="_blank" rel="noopener noreferrer" class="project-card">
+        <a href="https://mr-donuts-kolache.webflow.io/" rel="noopener noreferrer" class="project-card">
           <div class="project-thumbnail" style="background:linear-gradient(135deg,#f59e0b,#fbbf24);display:flex;align-items:center;justify-content:center">
             <div style="font-size:90px;filter:drop-shadow(0 10px 30px rgba(0,0,0,0.5))">🍩</div>
             <div class="project-overlay">
@@ -1531,7 +1512,7 @@ h1{
           </div>
         </a>
 
-        <a href="https://con-net-graphics.webflow.io/" target="_blank" rel="noopener noreferrer" class="project-card">
+        <a href="https://con-net-graphics.webflow.io/" rel="noopener noreferrer" class="project-card">
           <div class="project-thumbnail" style="background:linear-gradient(135deg,#059669,#10b981);display:flex;align-items:center;justify-content:center">
             <div style="font-size:90px;filter:drop-shadow(0 10px 30px rgba(0,0,0,0.5))">🎨</div>
             <div class="project-overlay">
@@ -1544,7 +1525,7 @@ h1{
           </div>
         </a>
 
-        <a href="https://kiblers-kollectibles.webflow.io/" target="_blank" rel="noopener noreferrer" class="project-card">
+        <a href="https://kiblers-kollectibles.webflow.io/" rel="noopener noreferrer" class="project-card">
           <div class="project-thumbnail" style="background:linear-gradient(135deg,#7c3aed,#a78bfa);display:flex;align-items:center;justify-content:center">
             <div style="font-size:90px;filter:drop-shadow(0 10px 30px rgba(0,0,0,0.5))">🎮</div>
             <div class="project-overlay">
@@ -1590,7 +1571,7 @@ h1{
               <li>Speed optimization</li>
               <li>Analytics setup</li>
             </ul>
-            <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" target="_blank" rel="noopener noreferrer" class="cta">Book Consultation</a>
+            <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" rel="noopener noreferrer" class="cta">Book Consultation</a>
           </div>
 
           <div class="pricing-card" lang="en">
@@ -1606,7 +1587,7 @@ h1{
               <li>30 days support</li>
               <li>Documentation</li>
             </ul>
-            <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" target="_blank" rel="noopener noreferrer" class="cta">Order on Upwork</a>
+            <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" rel="noopener noreferrer" class="cta">Order on Upwork</a>
           </div>
           
           <!-- SPANISH PRICING -->
@@ -1625,7 +1606,7 @@ h1{
               <li>Optimización de velocidad</li>
               <li>Configuración de analíticas</li>
             </ul>
-            <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" target="_blank" rel="noopener noreferrer" class="cta">Agendar Consulta</a>
+            <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" rel="noopener noreferrer" class="cta">Agendar Consulta</a>
           </div>
 
           <div class="pricing-card" lang="es">
@@ -1641,7 +1622,7 @@ h1{
               <li>30 días de soporte</li>
               <li>Documentación</li>
             </ul>
-            <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" target="_blank" rel="noopener noreferrer" class="cta">Ordenar en Upwork</a>
+            <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" rel="noopener noreferrer" class="cta">Ordenar en Upwork</a>
           </div>
         </div>
 
@@ -1671,11 +1652,11 @@ h1{
       <h2 lang="es">Deja de pagar precios de agencia.<br/>Comienza a obtener resultados de agencia.</h2>
       
       <div class="cta-group">
-        <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" target="_blank" rel="noopener noreferrer" class="cta" lang="en">Schedule a Call</a>
-        <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" target="_blank" rel="noopener noreferrer" class="cta" lang="en">Order on Upwork</a>
+        <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" rel="noopener noreferrer" class="cta" lang="en">Schedule a Call</a>
+        <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" rel="noopener noreferrer" class="cta" lang="en">Order on Upwork</a>
         
-        <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" target="_blank" rel="noopener noreferrer" class="cta" lang="es">Agendar Cita</a>
-        <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" target="_blank" rel="noopener noreferrer" class="cta" lang="es">Ver en Upwork</a>
+        <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" rel="noopener noreferrer" class="cta" lang="es">Agendar Llamada</a>
+        <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" rel="noopener noreferrer" class="cta" lang="es">Ordenar en Upwork</a>
       </div>
     </div>
 
@@ -1687,11 +1668,11 @@ h1{
       <p class="footer-tagline" lang="es">Sitios web personalizados para pequeñas empresas de Houston</p>
       
       <div class="footer-links">
-        <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" target="_blank" rel="noopener noreferrer" class="footer-link" lang="en">Schedule Call</a>
-        <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" target="_blank" rel="noopener noreferrer" class="footer-link" lang="en">Upwork Service</a>
+        <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" rel="noopener noreferrer" class="footer-link" lang="en">Schedule Call</a>
+        <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" rel="noopener noreferrer" class="footer-link" lang="en">Upwork Service</a>
         
-        <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" target="_blank" rel="noopener noreferrer" class="footer-link" lang="es">Agendar Cita</a>
-        <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" target="_blank" rel="noopener noreferrer" class="footer-link" lang="es">Ver Upwork</a>
+        <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" rel="noopener noreferrer" class="footer-link" lang="es">Agendar Llamada</a>
+        <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" rel="noopener noreferrer" class="footer-link" lang="es">Servicio Upwork</a>
       </div>
       
       <p class="footer-copyright">© 2026 SNRG Web · Houston, Texas</p>
