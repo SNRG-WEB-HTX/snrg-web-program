@@ -2,18 +2,12 @@
 <html lang="en">
 <head>
 <link rel="canonical" href="https://snrgweb.com/"/>
-<link rel="alternate" href="https://snrgweb.com/" hreflang="en" />
-<link rel="alternate" href="https://snrgweb.com/?lang=es" hreflang="es" />
-<link rel="alternate" href="https://snrgweb.com/" hreflang="x-default" />
+<link rel="alternate" href="https://snrgweb.com/" hreflang="en"/>
+<link rel="alternate" href="https://snrgweb.com/?lang=es" hreflang="es"/>
+<link rel="alternate" href="https://snrgweb.com/" hreflang="x-default"/>
+<link rel="preconnect" href="https://api.fontshare.com">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"/>
 
-<!-- Preconnect for performance -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<!-- Primary SEO -->
-<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
-
-<!-- Organization + LocalBusiness Schema -->
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -22,1749 +16,1505 @@
       "@type":"Organization",
       "@id":"https://snrgweb.com/#organization",
       "name":"SNRG Web",
+      "alternateName":"PARKING HTX Community Outreach",
       "url":"https://snrgweb.com/",
-      "logo":"https://snrgweb.com/hero-preview.jpg",
-      "sameAs":["https://www.upwork.com/freelancers/bobbyfrilot"]
-    },
-    {
-      "@type":"LocalBusiness",
-      "@id":"https://snrgweb.com/#localbusiness",
-      "name":"SNRG Web",
-      "image":"https://snrgweb.com/hero-preview.jpg",
-      "url":"https://snrgweb.com/",
-      "areaServed":"Houston, TX",
+      "logo":"https://snrgweb.com/snrg-logo.png",
+      "sameAs":["https://www.upwork.com/freelancers/bobbyfrilot"],
       "address":{
         "@type":"PostalAddress",
         "addressLocality":"Houston",
         "addressRegion":"TX",
+        "postalCode":"77001",
         "addressCountry":"US"
-      },
+      }
+    },
+    {
+      "@type":"LocalBusiness",
+      "@id":"https://snrgweb.com/#localbusiness",
+      "name":"SNRG Web - PARKING HTX Community Outreach",
+      "image":"https://snrgweb.com/snrg-logo.png",
+      "url":"https://snrgweb.com/",
+      "description":"Community-driven web development for Houston entrepreneurs and small businesses.",
+      "areaServed":{"@type":"City","name":"Houston","containedIn":{"@type":"State","name":"Texas"}},
+      "address":{"@type":"PostalAddress","addressLocality":"Houston","addressRegion":"TX","postalCode":"77001","addressCountry":"US"},
+      "geo":{"@type":"GeoCoordinates","latitude":"29.7604","longitude":"-95.3698"},
       "priceRange":"$",
-      "makesOffer":[{
-        "@type":"Offer",
-        "name":"Managed Website Service",
-        "price":"100",
-        "priceCurrency":"USD"
-      }]
+      "makesOffer":[
+        {"@type":"Offer","name":"Managed Website Service","price":"75","priceCurrency":"USD"},
+        {"@type":"Offer","name":"Website Ownership","price":"285","priceCurrency":"USD"}
+      ]
     }
   ]
 }
 </script>
 
 <meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SNRG Web | Houston Web Design for Small Businesses (Free Build, $50/mo)</title>
-<meta name="description" content="Houston web design for small businesses. Free website build, fast launch in 2–3 days, hosting & maintenance. Managed plans from $50/month. Local Houston team."/>
-
-<!-- Open Graph / Facebook -->
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Houston Small Business Websites | PARKING HTX Community Outreach | SNRG Web</title>
+<meta name="description" content="PARKING HTX community outreach removes barriers for Houston entrepreneurs with enterprise-grade websites. From $50/mo."/>
+<meta name="keywords" content="Houston small business websites, Houston entrepreneur web design, parking management websites, parking operator websites, real estate website design Houston, computer repair websites"/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://snrgweb.com/"/>
-<meta property="og:title" content="SNRG Web — Houston Small Business Websites"/>
-<meta property="og:description" content="Agency Quality • Local Pricing • Zero Hassle. Custom websites starting at $100/mo."/>
+<meta property="og:title" content="SNRG Web — Enterprise Websites for Houston Entrepreneurs"/>
+<meta property="og:description" content="PARKING HTX community outreach providing professional websites to Houston small businesses."/>
 <meta property="og:image" content="https://snrgweb.com/hero-preview.jpg"/>
-<meta property="og:image:width" content="1200"/>
-<meta property="og:image:height" content="630"/>
 
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:url" content="https://snrgweb.com/"/>
-<meta name="twitter:title" content="SNRG Web — Houston Small Business Websites"/>
-<meta name="twitter:description" content="Agency Quality • Local Pricing • Zero Hassle. Custom websites starting at $100/mo."/>
-<meta name="twitter:image" content="https://snrgweb.com/hero-preview.jpg"/>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,900,500,400,800,600&display=swap" rel="stylesheet">
 
 <style>
 :root{
-  --bg-base:#050A14;
-  --bg-elevated:#0A1120;
-  --text-primary:#FFFFFF;
-  --text-secondary:#A0AEC0;
-  --accent-primary:#00F0FF;
-  --accent-secondary:#7B61FF;
-  --border:#1A2332;
-  
-  /* Typography System */
-  --font-display:-apple-system,BlinkMacSystemFont,'SF Pro Display','Inter',system-ui,sans-serif;
-  --fs-hero:clamp(3rem,8vw,6rem);
-  --fs-h1:clamp(2.5rem,6vw,4rem);
-  --fs-h2:clamp(2rem,4vw,3rem);
-  --fs-h3:clamp(1.5rem,3vw,2rem);
-  --fs-body-lg:clamp(1.125rem,2vw,1.5rem);
-  --fs-body:clamp(1rem,1.5vw,1.125rem);
-  --fs-small:clamp(0.875rem,1.25vw,1rem);
-  
-  /* Spacing System */
-  --space-xs:clamp(0.5rem,2vw,0.75rem);
-  --space-sm:clamp(0.75rem,2.5vw,1rem);
-  --space-md:clamp(1rem,3vw,1.5rem);
-  --space-lg:clamp(1.5rem,4vw,2.5rem);
-  --space-xl:clamp(2rem,6vw,4rem);
-  --space-2xl:clamp(3rem,8vw,6rem);
+  --pearl:#F6F7F8;
+  --white:#FFFFFF;
+  --ink:#0F1115;
+  --slate:#5A5F6A;
+  --slate-light:#7B8290;
+  --red:#FF2A2A;
+  --red-light:#FF5252;
+  --border:#E5E7EB;
+  --space-2xs:4px;
+  --space-xs:8px;
+  --space-sm:12px;
+  --space-md:16px;
+  --space-lg:24px;
+  --space-xl:32px;
+  --space-2xl:48px;
+  --space-3xl:64px;
+  --space-4xl:96px;
 }
 
 *{box-sizing:border-box;margin:0;padding:0}
-
-html{
-  overflow-x:hidden;
-  max-width:100vw;
-}
+html{scroll-behavior:smooth;overflow-x:hidden}
 
 body{
-  font-family:var(--font-display);
-  color:var(--text-primary);
-  background:#030711;
+  font-family:'Satoshi',system-ui,-apple-system,sans-serif;
+  background:var(--pearl);
+  color:var(--ink);
   line-height:1.6;
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
+  text-rendering:optimizeLegibility;
+  font-kerning:normal;
+  font-weight:400;
+  letter-spacing:-0.011em;
   overflow-x:hidden;
-  max-width:100vw;
-  position:relative;
+  font-size:16px;
 }
 
-/* Atmospheric Background */
-body::before{
-  content:'';
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background:
-    radial-gradient(circle at 15% 15%, rgba(123,97,255,0.15) 0%, transparent 35%),
-    radial-gradient(circle at 85% 60%, rgba(0,240,255,0.1) 0%, transparent 40%),
-    radial-gradient(circle at 50% 85%, rgba(14,165,233,0.08) 0%, transparent 35%);
+body:not(.spanish) [lang="es"]{display:none}
+body.spanish [lang="en"]{display:none}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    animation-duration:0.01ms!important;
+    animation-iteration-count:1!important;
+    transition-duration:0.01ms!important;
+    scroll-behavior:auto!important;
+  }
+  .snrg-logo-line,.animated-bg,.animated-bg::before,.animated-bg::after{transform:none!important;animation:none!important}
+}
+
+/* Animated Background System */
+.animated-bg{
+  position:absolute;
+  inset:0;
+  overflow:hidden;
   pointer-events:none;
   z-index:0;
-  animation:atmosphereShift 25s ease-in-out infinite;
 }
 
-@keyframes atmosphereShift{
-  0%,100%{opacity:0.5}
-  50%{opacity:0.8}
-}
-
-/* Grain Texture */
-body::after{
+.animated-bg::before,
+.animated-bg::after{
   content:'';
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
-  pointer-events:none;
-  z-index:1;
-  opacity:0.5;
-}
-
-/* HIGH-TECH ANIMATED GRID */
-.tech-grid{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background-image:
-    linear-gradient(rgba(0,240,255,0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0,240,255,0.03) 1px, transparent 1px);
-  background-size:50px 50px;
-  pointer-events:none;
-  z-index:1;
-  animation:gridMove 20s linear infinite;
-}
-
-@keyframes gridMove{
-  0%{background-position:0 0}
-  100%{background-position:50px 50px}
-}
-
-/* FLOATING DATA PARTICLES */
-.particles{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  pointer-events:none;
-  z-index:1;
-  overflow:hidden;
-}
-
-.particle{
   position:absolute;
-  width:2px;
-  height:2px;
-  background:rgba(0,240,255,0.6);
   border-radius:50%;
-  box-shadow:0 0 10px rgba(0,240,255,0.8);
-  animation:particleFloat 15s linear infinite;
+  filter:blur(80px);
+  opacity:0.08;
+  will-change:transform;
 }
 
-@keyframes particleFloat{
-  0%{
-    transform:translateY(100vh) translateX(0);
-    opacity:0;
-  }
-  10%{opacity:1}
-  90%{opacity:1}
-  100%{
-    transform:translateY(-100px) translateX(100px);
-    opacity:0;
-  }
+.hero .animated-bg::before{
+  width:600px;
+  height:600px;
+  background:radial-gradient(circle,rgba(255,42,42,0.4),transparent);
+  top:-200px;
+  right:-150px;
+  animation:floatSlow 25s ease-in-out infinite;
 }
 
-/* SCANNING BEAM */
-.scan-line{
+.hero .animated-bg::after{
+  width:500px;
+  height:500px;
+  background:radial-gradient(circle,rgba(255,82,82,0.3),transparent);
+  bottom:-150px;
+  left:-100px;
+  animation:floatSlow 30s ease-in-out infinite reverse;
+}
+
+.pricing .animated-bg::before{
+  width:700px;
+  height:700px;
+  background:radial-gradient(circle,rgba(15,17,21,0.03),transparent);
+  top:-250px;
+  left:-200px;
+  animation:floatMedium 20s ease-in-out infinite;
+}
+
+.pricing .animated-bg::after{
+  width:550px;
+  height:550px;
+  background:radial-gradient(circle,rgba(255,42,42,0.04),transparent);
+  bottom:-200px;
+  right:-150px;
+  animation:floatMedium 25s ease-in-out infinite reverse;
+}
+
+.comparison .animated-bg::before{
+  width:650px;
+  height:650px;
+  background:radial-gradient(circle,rgba(255,42,42,0.05),transparent);
+  top:50%;
+  left:-200px;
+  animation:floatSlow 28s ease-in-out infinite;
+}
+
+.comparison .animated-bg::after{
+  width:600px;
+  height:600px;
+  background:radial-gradient(circle,rgba(15,17,21,0.02),transparent);
+  bottom:10%;
+  right:-180px;
+  animation:floatSlow 32s ease-in-out infinite reverse;
+}
+
+.projects .animated-bg::before{
+  width:800px;
+  height:800px;
+  background:radial-gradient(circle,rgba(15,17,21,0.025),transparent);
+  top:-300px;
+  right:-250px;
+  animation:floatMedium 22s ease-in-out infinite;
+}
+
+.projects .animated-bg::after{
+  width:700px;
+  height:700px;
+  background:radial-gradient(circle,rgba(255,42,42,0.03),transparent);
+  bottom:-250px;
+  left:-200px;
+  animation:floatMedium 27s ease-in-out infinite reverse;
+}
+
+.final-cta .animated-bg::before{
+  width:900px;
+  height:900px;
+  background:radial-gradient(circle,rgba(255,42,42,0.06),transparent);
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  animation:pulse 15s ease-in-out infinite;
+}
+
+@keyframes floatSlow{
+  0%,100%{transform:translate(0,0) scale(1)}
+  33%{transform:translate(30px,-30px) scale(1.05)}
+  66%{transform:translate(-20px,20px) scale(0.95)}
+}
+
+@keyframes floatMedium{
+  0%,100%{transform:translate(0,0) rotate(0deg)}
+  50%{transform:translate(40px,30px) rotate(5deg)}
+}
+
+@keyframes pulse{
+  0%,100%{transform:translate(-50%,-50%) scale(1);opacity:0.06}
+  50%{transform:translate(-50%,-50%) scale(1.1);opacity:0.08}
+}
+
+.lang-bar{
   position:fixed;
   top:0;
   left:0;
-  width:100%;
-  height:2px;
-  background:linear-gradient(90deg, transparent, rgba(0,240,255,0.8), transparent);
-  pointer-events:none;
-  z-index:1;
-  animation:scan 8s ease-in-out infinite;
-  box-shadow:0 0 20px rgba(0,240,255,0.6);
-}
-
-@keyframes scan{
-  0%, 100%{
-    transform:translateY(0);
-    opacity:0;
-  }
-  10%{opacity:1}
-  50%{
-    transform:translateY(100vh);
-    opacity:1;
-  }
-  60%{opacity:0}
-}
-
-.container{
-  max-width:1280px;
-  margin:0 auto;
-  padding:0 clamp(0.75rem,2.5vw,3rem);
-  position:relative;
-  z-index:2;
-  width:100%;
-  max-width:100%;
-  overflow-x:hidden;
-}
-
-/* Language Toggle */
-.lang-toggle{
-  position:fixed;
-  top:20px;
-  right:20px;
-  z-index:1000;
-  background:rgba(10,17,32,0.9);
-  backdrop-filter:blur(30px);
-  border:2px solid rgba(0,240,255,0.4);
-  border-radius:999px;
-  padding:6px 8px;
+  right:0;
+  background:rgba(255,255,255,0.92);
+  backdrop-filter:blur(20px) saturate(180%);
+  -webkit-backdrop-filter:blur(20px) saturate(180%);
+  border-bottom:1px solid rgba(0,0,0,0.06);
+  padding:14px 24px;
   display:flex;
-  gap:4px;
-  box-shadow:0 10px 40px rgba(0,0,0,0.6),0 0 30px rgba(0,240,255,0.2);
-  transition:all 0.3s ease;
-}
-
-.lang-toggle:hover{
-  border-color:rgba(0,240,255,0.7);
-  box-shadow:0 10px 40px rgba(0,0,0,0.7),0 0 40px rgba(0,240,255,0.4);
+  justify-content:flex-end;
+  gap:8px;
+  z-index:9999;
 }
 
 .lang-btn{
   background:transparent;
-  border:none;
-  color:#A0AEC0;
-  font-weight:700;
+  border:1.5px solid var(--border);
+  color:var(--slate);
+  padding:6px 18px;
+  border-radius:20px;
   font-size:13px;
-  padding:8px 16px;
-  border-radius:999px;
+  font-weight:600;
   cursor:pointer;
-  transition:all 0.3s ease;
-  font-family:var(--font-display);
-  letter-spacing:0.05em;
+  transition:all 0.2s cubic-bezier(0.4,0,0.2,1);
 }
 
-.lang-btn.active{
-  background:linear-gradient(135deg,var(--accent-primary),var(--accent-secondary));
-  color:#030711;
-  box-shadow:0 0 20px rgba(0,240,255,0.6);
+.lang-btn:hover{border-color:var(--red);color:var(--ink);transform:translateY(-1px)}
+.lang-btn.active{background:var(--red);border-color:var(--red);color:var(--white);box-shadow:0 0 0 4px rgba(255,42,42,0.12)}
+
+.container{
+  max-width:1320px;
+  margin:0 auto;
+  padding:0 clamp(24px,5vw,48px);
+  position:relative;
+  z-index:1;
 }
 
-.lang-btn:hover:not(.active){
-  color:#FFFFFF;
-  background:rgba(255,255,255,0.1);
-}
-
-/* Language visibility control - MUST BE SPECIFIC */
-[lang="es"]{
-  display:none !important;
-}
-
-body.spanish [lang="en"]{
-  display:none !important;
-}
-
-body.spanish [lang="es"]{
-  display:block;
-}
-
-/* Badge needs inline-flex in Spanish mode */
-body.spanish .badge[lang="es"]{
-  display:inline-flex !important;
-}
-
-/* Flex display for specific Spanish elements when Spanish mode active */
-body.spanish .hero-value-prop[lang="es"]{
-  display:flex !important;
-}
-
-body.spanish .hero-stats-preview[lang="es"]{
-  display:flex !important;
-}
-
-body.spanish .hero-cta-primary[lang="es"],
-body.spanish .hero-cta-secondary[lang="es"]{
-  display:inline-flex !important;
-}
-
-body.spanish .hero-cta-primary[lang="en"],
-body.spanish .hero-cta-secondary[lang="en"]{
-  display:none !important;
-}
-
-/* Pricing cards, CTAs, and footer links for both languages */
-.pricing-card[lang="es"],
-.cta[lang="es"],
-.footer-link[lang="es"]{
-  display:none !important;
-}
-
-body.spanish .pricing-card[lang="es"],
-body.spanish .cta[lang="es"],
-body.spanish .footer-link[lang="es"]{
-  display:block !important;
-}
-
-body.spanish .pricing-card[lang="en"],
-body.spanish .cta[lang="en"],
-body.spanish .footer-link[lang="en"]{
-  display:none !important;
-}
-
-/* Default English state - hide Spanish, show English */
-.hero-cta-primary[lang="en"],
-.hero-cta-secondary[lang="en"]{
-  display:inline-flex !important;
-}
-
-.hero-value-prop[lang="en"]{
-  display:flex !important;
-}
-
-.hero-stats-preview[lang="en"]{
-  display:flex !important;
-}
-
-/* Hero Section */
 .hero{
-  min-height:85vh;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:120px 0 80px;
+  position:relative;
+  overflow:hidden;
+}
+
+.hero-wrap{text-align:center}
+
+.hero-content{
+  opacity:0;
+  transform:translateY(60px) scale(0.95);
+  filter:blur(8px);
+  animation:heroContentEntrance 1.4s cubic-bezier(0.16,1,0.3,1) 0.8s forwards;
+}
+
+@keyframes heroContentEntrance{
+  to{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}
+}
+
+.snrg-logo-animated{
+  width:clamp(320px,50vw,520px);
+  aspect-ratio:1/1;
+  margin:0 auto 56px;
+  border-radius:32px;
+  position:relative;
   display:flex;
   flex-direction:column;
-  justify-content:center;
   align-items:center;
-  text-align:center;
-  position:relative;
-  padding:var(--space-2xl) 0 0 0;
-  margin-bottom:0;
-  width:100%;
-  max-width:100%;
-  overflow:hidden;
+  justify-content:center;
+  background:var(--red);
+  box-shadow:0 0 24px rgba(255,42,42,0.6),0 0 48px rgba(255,42,42,0.4),0 8px 32px rgba(255,42,42,0.3);
+  padding:10px;
+  opacity:0;
+  transform:scale(0.3) translateZ(-1000px);
+  animation:tunnelEntrance 1.2s cubic-bezier(0.16,1,0.3,1) forwards;
+  perspective:1000px;
+  transform-style:preserve-3d;
 }
 
-.hero::before{
+@keyframes tunnelEntrance{
+  0%{
+    opacity:0;
+    transform:scale(0.3) translateZ(-1000px) rotateZ(15deg);
+    filter:blur(20px);
+  }
+  60%{
+    opacity:1;
+    transform:scale(1.05) translateZ(0) rotateZ(0deg);
+    filter:blur(0);
+  }
+  100%{
+    opacity:1;
+    transform:scale(1) translateZ(0) rotateZ(0deg);
+    filter:blur(0);
+  }
+}
+
+.snrg-logo-animated::before{
   content:'';
   position:absolute;
-  top:5%;
-  left:50%;
-  transform:translateX(-50%);
-  width:min(1000px,100vw);
-  height:min(1000px,100vw);
-  background:radial-gradient(circle,rgba(123,97,255,0.25) 0%,rgba(0,240,255,0.1) 40%,transparent 70%);
-  filter:blur(120px);
-  animation:heroGlow 12s ease-in-out infinite;
-  pointer-events:none;
+  inset:10px;
+  background:var(--white);
+  border-radius:26px;
+  z-index:0;
 }
 
-@keyframes heroGlow{
-  0%,100%{transform:translateX(-50%) scale(1) rotate(0deg);opacity:0.5}
-  50%{transform:translateX(-50%) scale(1.2) rotate(180deg);opacity:0.7}
-}
-
-/* Animated grid background */
-.hero::after{
+.snrg-logo-animated::after{
   content:'';
+  position:absolute;
+  inset:18px;
+  background:var(--white);
+  border:4px solid var(--ink);
+  border-radius:20px;
+  z-index:1;
+}
+
+.snrg-logo-content{
+  position:relative;
+  z-index:2;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+  height:100%;
+}
+
+.snrg-logo-text{
+  font-family:'Satoshi',system-ui,sans-serif;
+  font-weight:900;
+  color:var(--ink);
+  letter-spacing:-0.05em;
+  line-height:1;
+}
+
+.snrg-logo-top,.snrg-logo-bottom{font-size:clamp(110px,17vw,170px)}
+
+.snrg-logo-line-wrap{
+  width:68%;
+  height:7px;
+  margin:6px 0;
+  position:relative;
+}
+
+.snrg-logo-line{
   position:absolute;
   inset:0;
-  background-image:
-    linear-gradient(rgba(0,240,255,0.03) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(0,240,255,0.03) 1px,transparent 1px);
-  background-size:60px 60px;
-  mask-image:radial-gradient(ellipse 80% 60% at 50% 40%,black 0%,transparent 70%);
-  animation:gridPan 20s linear infinite;
-  pointer-events:none;
-}
-
-@keyframes gridPan{
-  0%{transform:translateY(0)}
-  100%{transform:translateY(60px)}
-}
-
-.badge{
-  display:inline-flex;
-  align-items:center;
-  gap:0.5rem;
-  padding:0.5rem 1.25rem;
+  background:var(--red);
   border-radius:999px;
-  background:linear-gradient(135deg,rgba(123,97,255,0.15),rgba(0,240,255,0.1));
-  backdrop-filter:blur(20px);
-  border:1px solid rgba(123,97,255,0.5);
-  color:var(--accent-primary);
-  font-weight:700;
-  font-size:var(--fs-small);
-  letter-spacing:0.08em;
-  text-transform:uppercase;
-  margin-bottom:var(--space-lg);
-  position:relative;
-  z-index:1;
-  box-shadow:0 0 30px rgba(123,97,255,0.3),inset 0 0 20px rgba(255,255,255,0.05);
-  animation:badgeFadeIn 1s cubic-bezier(0.16,1,0.3,1) 0.2s both;
+  transform:scaleX(0);
+  transform-origin:left center;
+  animation:snrgDrawLine 0.9s cubic-bezier(0.22,1,0.36,1) forwards;
+  animation-delay:0.7s;
 }
 
-@keyframes badgeFadeIn{
-  from{opacity:0;transform:translateY(20px) scale(0.9)}
-  to{opacity:1;transform:translateY(0) scale(1)}
-}
+@keyframes snrgDrawLine{to{transform:scaleX(1)}}
 
-.badge::before{
-  content:'';
-  width:6px;
-  height:6px;
-  background:var(--accent-primary);
-  border-radius:50%;
-  box-shadow:0 0 15px var(--accent-primary);
-  animation:pulse 2s ease-in-out infinite;
-}
-
-@keyframes pulse{
-  0%,100%{opacity:1;transform:scale(1)}
-  50%{opacity:0.6;transform:scale(0.85)}
-}
-
-h1{
-  font-size:var(--fs-hero);
+.hero-title{
+  font-size:clamp(36px,6vw,72px);
   font-weight:900;
-  line-height:0.9;
-  letter-spacing:-0.03em;
-  margin-bottom:var(--space-md);
-  background:linear-gradient(135deg,#FFFFFF 0%,#00F0FF 40%,#7B61FF 100%);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  background-clip:text;
-  position:relative;
-  z-index:1;
-  animation:simpleFadeUp 0.8s ease 0.2s both;
+  letter-spacing:-0.045em;
+  line-height:1.05;
+  margin:0 auto var(--space-lg);
+  max-width:920px;
+  word-wrap:break-word;
+  overflow-wrap:break-word;
+  hyphens:auto;
 }
 
-@keyframes simpleFadeUp{
-  from{opacity:0;transform:translateY(20px)}
-  to{opacity:1;transform:translateY(0)}
-}
-
-.hero-value-prop{
+.hero-subtitle{
+  font-size:clamp(18px,2.2vw,22px);
+  color:var(--slate);
+  font-weight:500;
+  max-width:760px;
+  margin:0 auto var(--space-2xl);
+  line-height:1.55;
+  word-wrap:break-word;
+  overflow-wrap:break-word;
   display:flex;
   align-items:center;
   justify-content:center;
-  gap:clamp(0.5rem,1.5vw,2rem);
-  flex-wrap:nowrap;
-  margin:0 auto var(--space-xl);
-  animation:fadeUp 1s cubic-bezier(0.16,1,0.3,1) 0.5s both;
-  width:100%;
-  max-width:100%;
-  overflow:hidden;
+  flex-wrap:wrap;
+  gap:var(--space-md);
 }
 
-.value-text{
-  font-size:clamp(0.75rem,2vw,1.5rem);
-  font-weight:800;
-  color:#FFFFFF;
-  letter-spacing:0.03em;
-  text-shadow:0 2px 20px rgba(0,0,0,0.8);
-  white-space:nowrap;
-  flex-shrink:1;
-}
+.hero-subtitle span{display:flex;align-items:center;gap:var(--space-md)}
 
-.value-separator{
-  width:clamp(5px,1vw,10px);
-  height:clamp(5px,1vw,10px);
-  background:linear-gradient(135deg,var(--accent-primary),var(--accent-secondary));
+.dot-separator{
+  width:6px;
+  height:6px;
+  background:var(--red);
   border-radius:50%;
-  box-shadow:0 0 20px rgba(0,240,255,0.6),0 0 40px rgba(123,97,255,0.4);
-  animation:pulse 2s ease-in-out infinite;
-  flex-shrink:0;
+  box-shadow:0 0 12px rgba(255,42,42,0.6);
+  animation:dotPulse 2s ease-in-out infinite;
 }
 
-@keyframes fadeUp{
-  from{opacity:0;transform:translateY(20px)}
-  to{opacity:1;transform:translateY(0)}
+@keyframes dotPulse{
+  0%,100%{opacity:1;transform:scale(1)}
+  50%{opacity:0.7;transform:scale(1.2)}
 }
 
 .hero-cta-group{
   display:flex;
-  gap:var(--space-md);
+  gap:20px;
   justify-content:center;
   flex-wrap:wrap;
-  margin-bottom:var(--space-2xl);
-  animation:fadeUp 1s cubic-bezier(0.16,1,0.3,1) 0.7s both;
 }
 
-.hero-cta-primary{
+.cta{
+  position:relative;
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  gap:0.5rem;
-  padding:1.125rem 2.5rem;
-  border-radius:0.75rem;
   text-decoration:none;
+  font-size:16px;
   font-weight:700;
-  font-size:var(--fs-body);
-  transition:all 0.3s ease;
-  position:relative;
-  background:linear-gradient(135deg,var(--accent-primary),var(--accent-secondary));
-  color:#FFFFFF;
-  border:none;
-  box-shadow:0 4px 16px rgba(0,240,255,0.3);
+  padding:16px 40px;
+  border-radius:12px;
+  transition:all 0.25s cubic-bezier(0.4,0,0.2,1);
+  cursor:pointer;
+  border:2px solid transparent;
+  white-space:nowrap;
 }
 
-.hero-cta-primary:hover{
+.cta-primary{
+  background:var(--red);
+  color:var(--white);
+  box-shadow:0 4px 16px rgba(255,42,42,0.25);
+}
+
+.cta-primary:hover{
+  background:var(--red-light);
   transform:translateY(-2px);
-  box-shadow:0 8px 24px rgba(0,240,255,0.4);
+  box-shadow:0 8px 24px rgba(255,42,42,0.35);
 }
 
-.hero-cta-secondary{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap:0.5rem;
-  padding:1.125rem 2.5rem;
-  border-radius:0.75rem;
-  text-decoration:none;
-  font-weight:700;
-  font-size:var(--fs-body);
-  transition:all 0.3s ease;
-  position:relative;
-  background:rgba(255,255,255,0.08);
-  backdrop-filter:blur(20px);
-  color:#FFFFFF;
-  border:1px solid rgba(255,255,255,0.15);
-  box-shadow:0 4px 16px rgba(0,0,0,0.2);
+.cta-secondary{
+  background:transparent;
+  color:var(--ink);
+  border-color:var(--border);
 }
 
-.hero-cta-secondary:hover{
+.cta-secondary:hover{
+  border-color:var(--red);
+  color:var(--red);
   transform:translateY(-2px);
-  border-color:rgba(0,240,255,0.4);
-  background:rgba(255,255,255,0.12);
-  box-shadow:0 15px 50px rgba(0,0,0,0.5),0 0 40px rgba(0,240,255,0.3);
+  box-shadow:0 4px 16px rgba(255,42,42,0.12);
 }
 
-.hero-stats-preview{
-  display:flex;
-  gap:clamp(1.25rem,3vw,2rem);
-  justify-content:center;
-  flex-wrap:nowrap;
-  margin-top:clamp(2rem,5vw,3rem);
-  padding:clamp(2rem,5vw,3rem) 0;
-  border-top:1px solid rgba(255,255,255,0.1);
-  width:100%;
-  max-width:100%;
+.hero-stats{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:var(--space-3xl);
+  max-width:900px;
+  margin:var(--space-3xl) auto 0;
+  padding-top:var(--space-3xl);
+  border-top:2px solid var(--border);
 }
 
-.hero-stat{
-  background:rgba(255,255,255,0.08);
-  backdrop-filter:blur(20px);
-  border:1px solid rgba(0,240,255,0.3);
-  border-radius:1.25rem;
-  padding:clamp(2rem,5vw,3rem) clamp(1.5rem,4vw,2.5rem);
-  text-align:center;
-  position:relative;
-  transition:all 0.3s ease;
-  box-shadow:
-    0 4px 24px rgba(0,0,0,0.3),
-    0 0 20px rgba(0,240,255,0.1),
-    inset 0 0 40px rgba(0,240,255,0.03);
-  min-width:clamp(150px,22vw,220px);
-  flex:1;
-  max-width:280px;
-  overflow:hidden;
-  animation:statGlow 4s ease-in-out infinite;
-}
+.hero-stat{text-align:center}
 
-@keyframes statGlow{
-  0%, 100%{
-    box-shadow:
-      0 4px 24px rgba(0,0,0,0.3),
-      0 0 20px rgba(0,240,255,0.1),
-      inset 0 0 40px rgba(0,240,255,0.03);
-  }
-  50%{
-    box-shadow:
-      0 4px 24px rgba(0,0,0,0.3),
-      0 0 30px rgba(0,240,255,0.2),
-      inset 0 0 60px rgba(0,240,255,0.06);
-  }
-}
-
-/* ANIMATED CORNER ACCENTS */
-.hero-stat::before{
-  content:'';
-  position:absolute;
-  top:0;
-  left:0;
-  width:20px;
-  height:20px;
-  border-top:2px solid rgba(0,240,255,0.6);
-  border-left:2px solid rgba(0,240,255,0.6);
-  border-radius:1.25rem 0 0 0;
-  animation:cornerPulse 3s ease-in-out infinite;
-}
-
-.hero-stat::after{
-  content:'';
-  position:absolute;
-  bottom:0;
-  right:0;
-  width:20px;
-  height:20px;
-  border-bottom:2px solid rgba(123,97,255,0.6);
-  border-right:2px solid rgba(123,97,255,0.6);
-  border-radius:0 0 1.25rem 0;
-  animation:cornerPulse 3s ease-in-out infinite 1.5s;
-}
-
-@keyframes cornerPulse{
-  0%, 100%{opacity:0.4}
-  50%{opacity:1}
-}
-
-/* SCANNING LINE INSIDE CARD */
-.hero-stat > *{
-  position:relative;
-  z-index:2;
-}
-
-.hero-stat.stopped{
-  /* No animation needed */
-}
-
-.hero-stat:hover{
-  transform:translateY(-3px);
-  border-color:rgba(0,240,255,0.6);
-  box-shadow:
-    0 8px 32px rgba(0,0,0,0.4),
-    0 0 40px rgba(0,240,255,0.3),
-    inset 0 0 60px rgba(0,240,255,0.08);
-  background:rgba(255,255,255,0.12);
-  animation:none;
-}
-
-.hero-stat-value{
-  font-size:clamp(3rem,7vw,5rem);
+.stat-value{
+  display:block;
+  font-size:clamp(40px,5vw,56px);
   font-weight:900;
-  color:#FFFFFF;
+  color:var(--red);
+  letter-spacing:-0.045em;
   line-height:1;
-  margin-bottom:clamp(0.75rem,2.5vw,1rem);
-  letter-spacing:-0.02em;
-  text-shadow:0 0 20px rgba(0,240,255,0.5);
-  animation:valueGlow 3s ease-in-out infinite;
-}
-
-@keyframes valueGlow{
-  0%, 100%{text-shadow:0 0 20px rgba(0,240,255,0.5)}
-  50%{text-shadow:0 0 30px rgba(0,240,255,0.8)}
-}
-
-.hero-stat-label{
-  font-size:clamp(1rem,1.75vw,1.25rem);
-  color:#CBD5E0;
-  font-weight:600;
-  letter-spacing:0.03em;
-  text-transform:uppercase;
-  line-height:1.3;
-}
-
-/* Portfolio */
-.portfolio{
-  margin:var(--space-2xl) 0;
-}
-
-.section-header{
-  text-align:center;
-  margin-bottom:var(--space-xl);
-}
-
-.section-kicker{
-  color:var(--accent-primary);
-  font-weight:700;
-  font-size:var(--fs-small);
-  letter-spacing:0.15em;
-  text-transform:uppercase;
   margin-bottom:var(--space-sm);
+  transition:all 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+.stat-value.spinning{animation:spinStat 1.5s cubic-bezier(0.4,0,0.2,1)}
+
+@keyframes spinStat{
+  0%,100%{transform:rotateX(0deg);opacity:1}
+  50%{transform:rotateX(180deg);opacity:0.3}
+}
+
+.stat-label{
+  display:block;
+  font-size:clamp(14px,1.8vw,16px);
+  color:var(--slate);
+  font-weight:500;
+  line-height:1.4;
 }
 
 .section-title{
-  font-size:var(--fs-h2);
-  font-weight:800;
-  margin-bottom:var(--space-sm);
-  letter-spacing:-0.02em;
-  background:linear-gradient(135deg,#FFFFFF 0%,#00F0FF 100%);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  background-clip:text;
+  font-size:clamp(32px,5vw,56px);
+  font-weight:900;
+  letter-spacing:-0.04em;
+  line-height:1.15;
+  text-align:center;
+  margin-bottom:var(--space-3xl);
+  color:var(--ink);
+  opacity:0;
+  transform:translateY(40px) scale(0.95);
+  animation:titleEntrance 1s cubic-bezier(0.16,1,0.3,1) forwards;
+  animation-play-state:paused;
+}
+
+@keyframes titleEntrance{
+  to{opacity:1;transform:translateY(0) scale(1)}
 }
 
 .section-subtitle{
-  font-size:var(--fs-body);
-  color:#CBD5E0;
-  max-width:600px;
-  margin:0 auto;
+  font-size:clamp(16px,2vw,20px);
+  color:var(--slate);
+  text-align:center;
+  max-width:720px;
+  margin:0 auto var(--space-3xl);
+  line-height:1.6;
 }
 
-.portfolio-grid{
+.pricing{
+  padding:var(--space-4xl) 0;
+  background:var(--white);
+  position:relative;
+  overflow:hidden;
+}
+
+.pricing-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));
-  gap:var(--space-lg);
+  grid-template-columns:repeat(2,1fr);
+  gap:var(--space-xl);
+  max-width:1000px;
+  margin:0 auto;
+  align-items:stretch;
+}
+
+.pricing-card{
+  background:var(--pearl);
+  border:3px solid var(--border);
+  border-radius:24px;
+  padding:var(--space-2xl);
+  transition:all 0.3s cubic-bezier(0.4,0,0.2,1);
+  cursor:pointer;
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  min-height:620px;
+}
+
+.pricing-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 16px 48px rgba(0,0,0,0.08);
+}
+
+.pricing-card.selected{
+  border-color:var(--red);
+  box-shadow:0 16px 48px rgba(255,42,42,0.2);
+  transform:translateY(-6px);
+}
+
+.pricing-badge{
+  background:var(--red);
+  color:var(--white);
+  font-size:11px;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:0.08em;
+  padding:6px 12px;
+  border-radius:999px;
+  display:inline-block;
+  margin-bottom:var(--space-md);
+  align-self:flex-start;
+}
+
+.pricing-name{
+  font-size:clamp(22px,3vw,28px);
+  font-weight:800;
+  color:var(--ink);
+  margin-bottom:var(--space-md);
+  letter-spacing:-0.02em;
+  line-height:1.2;
+}
+
+.pricing-price{
+  font-size:clamp(48px,6vw,64px);
+  font-weight:900;
+  color:var(--ink);
+  letter-spacing:-0.045em;
+  line-height:1;
+  margin-bottom:var(--space-xs);
+}
+
+.pricing-term{
+  font-size:16px;
+  color:var(--slate);
+  margin-bottom:var(--space-xl);
+  font-weight:500;
+  line-height:1.5;
+}
+
+.pricing-term .highlight{
+  color:var(--red);
+  font-weight:700;
+}
+
+.pricing-desc{
+  font-size:15px;
+  color:var(--slate-light);
+  margin-bottom:var(--space-xl);
+  line-height:1.6;
+  max-width:100%;
+  word-wrap:break-word;
+  overflow-wrap:break-word;
+  hyphens:auto;
+}
+
+.pricing-features{
+  list-style:none;
+  margin-bottom:var(--space-xl);
+  flex-grow:1;
+}
+
+.pricing-feature{
+  font-size:15px;
+  color:var(--ink);
+  line-height:1.9;
+  padding-left:24px;
+  position:relative;
+  margin-bottom:var(--space-xs);
+  font-weight:500;
+}
+
+.pricing-feature::before{
+  content:'✓';
+  position:absolute;
+  left:0;
+  color:var(--red);
+  font-weight:700;
+  font-size:18px;
+}
+
+.pricing-cta{
+  width:100%;
+  text-align:center;
+  margin-top:auto;
+  padding-top:var(--space-md);
+}
+
+.comparison{
+  padding:var(--space-4xl) 0;
+  background:var(--pearl);
+  position:relative;
+  overflow:hidden;
+}
+
+.comparison-table{
+  max-width:1100px;
+  margin:0 auto;
+  background:var(--white);
+  border-radius:24px;
+  overflow:hidden;
+  border:2px solid var(--border);
+  box-shadow:0 8px 32px rgba(0,0,0,0.04);
+}
+
+.table-row{
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr;
+  border-bottom:1px solid var(--border);
+  transition:background 0.2s cubic-bezier(0.4,0,0.2,1);
+}
+
+.table-row:last-child{border-bottom:none}
+.table-row:not(:first-child):hover{background:rgba(255,42,42,0.02)}
+.table-row:first-child{background:var(--ink)}
+
+.table-row:first-child .table-cell{
+  color:var(--white);
+  font-weight:800;
+  font-size:15px;
+  text-transform:uppercase;
+  letter-spacing:0.06em;
+  padding:var(--space-lg) var(--space-xl);
+}
+
+.table-cell{
+  padding:var(--space-lg) var(--space-xl);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  font-size:16px;
+  color:var(--slate);
+  border-right:1px solid var(--border);
+  font-weight:600;
+}
+
+.table-cell:last-child{border-right:none}
+
+.table-cell:first-child{
+  justify-content:flex-start;
+  font-weight:700;
+  color:var(--ink);
+  font-size:17px;
+  padding-left:var(--space-2xl);
+}
+
+.table-cell.highlight{
+  color:var(--red);
+  font-weight:800;
+  font-size:17px;
+}
+
+.checkmark{
+  color:var(--red);
+  font-size:28px;
+  font-weight:700;
+}
+
+.x{
+  color:var(--slate-light);
+  font-size:24px;
+  opacity:0.35;
+}
+
+.projects{
+  padding:var(--space-4xl) 0;
+  background:var(--white);
+  position:relative;
+  overflow:hidden;
+}
+
+.projects-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:var(--space-xl);
   max-width:1200px;
   margin:0 auto;
 }
 
-/* DESKTOP: 3 COLUMNS (3x2 GRID) */
-@media(min-width:1024px){
-  .portfolio-grid{
-    grid-template-columns:repeat(3,1fr);
-    gap:var(--space-xl);
-  }
-}
-
 .project-card{
+  background:var(--pearl);
+  border:2px solid var(--border);
+  border-radius:20px;
+  padding:var(--space-xl);
+  transition:all 0.25s cubic-bezier(0.4,0,0.2,1);
   text-decoration:none;
   display:flex;
   flex-direction:column;
-  background:rgba(255,255,255,0.05);
-  backdrop-filter:blur(20px);
-  border:1px solid rgba(0,240,255,0.15);
-  border-radius:1.5rem;
-  padding:clamp(2rem,5vw,3rem);
-  transition:all 0.4s cubic-bezier(0.16,1,0.3,1);
-  position:relative;
-  box-shadow:0 4px 24px rgba(0,0,0,0.3), inset 0 0 40px rgba(0,240,255,0.02);
-  min-height:200px;
-  overflow:hidden;
-}
-
-/* Animated gradient background */
-.project-card::before{
-  content:'';
-  position:absolute;
-  inset:0;
-  background:linear-gradient(135deg, rgba(0,240,255,0.03), rgba(123,97,255,0.03));
-  opacity:0;
-  transition:opacity 0.4s ease;
-  z-index:0;
-}
-
-/* Top corner accent */
-.project-card::after{
-  content:'';
-  position:absolute;
-  top:0;
-  right:0;
-  width:60px;
-  height:60px;
-  background:linear-gradient(135deg, rgba(0,240,255,0.2), transparent);
-  border-radius:0 1.5rem 0 100%;
-  opacity:0;
-  transition:opacity 0.4s ease;
-}
-
-.project-card:hover::before{
-  opacity:1;
-}
-
-.project-card:hover::after{
-  opacity:1;
+  color:inherit;
+  text-align:center;
+  cursor:pointer;
 }
 
 .project-card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 20px 60px rgba(0,0,0,0.4),0 0 60px rgba(0,240,255,0.2);
-  border-color:rgba(0,240,255,0.4);
-  background:rgba(255,255,255,0.08);
+  transform:translateY(-4px);
+  border-color:var(--red);
+  box-shadow:0 12px 40px rgba(255,42,42,0.12);
 }
 
 .project-title{
-  font-size:clamp(1.5rem,3vw,2rem);
+  font-size:clamp(20px,3vw,24px);
   font-weight:800;
-  color:#FFFFFF;
-  margin-bottom:clamp(0.5rem,2vw,1rem);
-  letter-spacing:-0.02em;
-  position:relative;
-  z-index:2;
-  text-shadow:0 0 20px rgba(0,240,255,0.3);
-}
-
-.project-type{
-  font-size:clamp(0.875rem,1.5vw,1.125rem);
-  color:#A0AEC0;
-  font-weight:500;
-  margin-bottom:clamp(1rem,3vw,1.5rem);
-  position:relative;
-  z-index:2;
-  letter-spacing:0.03em;
-  text-transform:uppercase;
-}
-
-.project-link{
-  font-size:clamp(0.875rem,1.5vw,1rem);
-  color:var(--accent-primary);
-  font-weight:600;
-  margin-top:auto;
-  display:inline-flex;
-  align-items:center;
-  gap:0.5rem;
-  position:relative;
-  z-index:2;
-  transition:all 0.3s ease;
-}
-
-.project-card:hover .project-link{
-  color:#FFFFFF;
-  transform:translateX(4px);
-}
-
-.project-link::after{
-  content:'→';
-  font-size:1.2em;
-  transition:transform 0.3s ease;
-}
-
-.project-card:hover .project-link::after{
-  transform:translateX(4px);
-}
-
-/* Pricing */
-.pricing{
-  background:rgba(10,17,32,0.5);
-  backdrop-filter:blur(30px);
-  border:1px solid var(--border);
-  border-radius:2rem;
-  padding:var(--space-2xl) var(--space-xl);
-  margin:var(--space-2xl) 0;
-  position:relative;
-  overflow:hidden;
-}
-
-.pricing::before{
-  content:'';
-  position:absolute;
-  top:-50%;
-  right:-20%;
-  width:600px;
-  height:600px;
-  background:radial-gradient(circle,rgba(123,97,255,0.2) 0%,transparent 70%);
-  animation:float 12s ease-in-out infinite;
-  filter:blur(80px);
-}
-
-@keyframes float{
-  0%,100%{transform:translate(0,0) rotate(0deg)}
-  50%{transform:translate(-30px,30px) rotate(180deg)}
-}
-
-.pricing-content{
-  position:relative;
-  z-index:1;
-}
-
-.pricing-options{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));
-  gap:var(--space-lg);
-  margin-top:var(--space-xl);
-}
-
-.pricing-card{
-  background:rgba(10,17,32,0.6);
-  backdrop-filter:blur(20px);
-  border:2px solid rgba(0,240,255,0.3);
-  border-radius:1.5rem;
-  padding:var(--space-xl);
-  transition:all 0.4s cubic-bezier(0.16,1,0.3,1);
-  position:relative;
-  display:flex;
-  flex-direction:column;
-  box-shadow:
-    0 4px 24px rgba(0,0,0,0.3),
-    inset 0 0 40px rgba(0,240,255,0.03);
-  animation:pricingGlow 5s ease-in-out infinite;
-}
-
-@keyframes pricingGlow{
-  0%, 100%{
-    box-shadow:
-      0 4px 24px rgba(0,0,0,0.3),
-      inset 0 0 40px rgba(0,240,255,0.03);
-  }
-  50%{
-    box-shadow:
-      0 4px 24px rgba(0,0,0,0.3),
-      inset 0 0 60px rgba(0,240,255,0.06);
-  }
-}
-
-.pricing-card::before{
-  content:'';
-  position:absolute;
-  inset:-2px;
-  border-radius:1.5rem;
-  padding:2px;
-  background:linear-gradient(135deg,var(--accent-primary),var(--accent-secondary));
-  -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
-  -webkit-mask-composite:xor;
-  mask-composite:exclude;
-  opacity:0;
-  transition:opacity 0.4s ease;
-}
-
-.pricing-card:hover::before{
-  opacity:1;
-}
-
-.pricing-card:hover{
-  transform:translateY(-8px);
-  box-shadow:0 20px 60px rgba(0,0,0,0.5),0 0 80px rgba(0,240,255,0.35);
-  border-color:rgba(0,240,255,0.6);
-  animation:none;
-}
-
-.card-label{
-  color:var(--accent-primary);
-  font-size:var(--fs-small);
-  font-weight:700;
-  letter-spacing:0.1em;
-  text-transform:uppercase;
-  margin-bottom:var(--space-md);
-  display:flex;
-  align-items:center;
-  gap:0.5rem;
-}
-
-.card-label::before{
-  content:'';
-  width:8px;
-  height:8px;
-  background:var(--accent-primary);
-  border-radius:50%;
-  box-shadow:0 0 12px var(--accent-primary);
-  animation:pulse 2s ease-in-out infinite;
-}
-
-.card-price{
-  font-size:clamp(3.5rem,8vw,5rem);
-  font-weight:800;
-  color:var(--text-primary);
-  line-height:1;
+  color:var(--ink);
   margin-bottom:var(--space-sm);
-  filter:drop-shadow(0 0 30px rgba(0,240,255,0.4));
+  letter-spacing:-0.02em;
+  text-align:center;
+  line-height:1.3;
+  word-wrap:break-word;
+  overflow-wrap:break-word;
+  hyphens:auto;
 }
 
-.card-price span{
-  font-size:var(--fs-body-lg);
-  font-weight:600;
-  color:#A0AEC0;
-}
-
-.card-purpose{
-  font-size:clamp(0.75rem,1.8vw,1.5rem);
-  font-weight:700;
-  color:var(--accent-primary);
+.project-desc{
+  font-size:15px;
+  color:var(--slate);
+  line-height:1.6;
   margin-bottom:var(--space-md);
-  text-transform:uppercase;
-  letter-spacing:0.01em;
-  white-space:nowrap;
+  flex-grow:1;
+  text-align:center;
+  max-width:100%;
+  word-wrap:break-word;
+  overflow-wrap:break-word;
+  hyphens:auto;
 }
 
-.card-desc{
-  color:#CBD5E0;
-  font-size:var(--fs-body);
-  margin-bottom:var(--space-lg);
-  line-height:1.7;
-  padding-bottom:var(--space-lg);
-  border-bottom:1px solid rgba(255,255,255,0.1);
-}
-
-.card-features{
-  list-style:none;
-  margin-bottom:auto;
-  padding-bottom:var(--space-lg);
-}
-
-.card-features li{
-  color:rgba(255,255,255,0.9);
-  font-size:var(--fs-body);
-  padding:var(--space-sm) 0;
-  border-top:1px solid rgba(255,255,255,0.05);
-  transition:all 0.3s ease;
+.project-tags{
   display:flex;
-  align-items:center;
-  gap:var(--space-sm);
-}
-
-.card-features li:first-child{
-  border-top:none;
-}
-
-.card-features li:hover{
-  padding-left:var(--space-sm);
-  color:var(--accent-primary);
-}
-
-.card-features li::before{
-  content:'✓';
-  color:var(--accent-primary);
-  font-weight:700;
-  font-size:1.125rem;
-  flex-shrink:0;
-}
-
-.cta{
-  display:flex;
-  align-items:center;
+  gap:var(--space-xs);
+  flex-wrap:wrap;
   justify-content:center;
-  gap:0.5rem;
-  padding:1rem 2rem;
-  border-radius:0.875rem;
-  text-decoration:none;
-  font-weight:700;
-  font-size:var(--fs-body);
-  transition:all 0.3s cubic-bezier(0.16,1,0.3,1);
+  margin-top:auto;
+}
+
+.project-tag{
+  font-size:12px;
+  font-weight:600;
+  color:var(--red);
+  background:rgba(255,42,42,0.08);
+  padding:4px 12px;
+  border-radius:999px;
+  text-transform:uppercase;
+  letter-spacing:0.05em;
+}
+
+.final-cta{
+  padding:var(--space-4xl) 0;
+  background:var(--pearl);
+  text-align:center;
   position:relative;
   overflow:hidden;
-  background:linear-gradient(135deg,var(--accent-primary),var(--accent-secondary));
-  color:#030711;
-  border:none;
-  box-shadow:0 10px 30px rgba(0,240,255,0.4);
-}
-
-.cta::before{
-  content:'';
-  position:absolute;
-  inset:0;
-  background:linear-gradient(135deg,rgba(255,255,255,0.3),transparent);
-  opacity:0;
-  transition:opacity 0.3s ease;
-}
-
-.cta:hover::before{
-  opacity:1;
-}
-
-.cta:hover{
-  transform:translateY(-2px);
-  box-shadow:0 15px 40px rgba(0,240,255,0.5),0 0 60px rgba(123,97,255,0.3);
-}
-
-.features-list{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-  gap:var(--space-md);
-  margin-top:var(--space-xl);
-}
-
-.feature-item{
-  background:rgba(0,240,255,0.08);
-  border:1px solid rgba(0,240,255,0.25);
-  border-radius:0.875rem;
-  padding:var(--space-sm) var(--space-md);
-  font-size:var(--fs-small);
-  color:var(--text-primary);
-  font-weight:600;
-  text-align:center;
-  transition:all 0.3s ease;
-  backdrop-filter:blur(10px);
-}
-
-.feature-item:hover{
-  background:rgba(0,240,255,0.15);
-  border-color:var(--accent-primary);
-  transform:translateY(-2px);
-  box-shadow:0 8px 24px rgba(0,240,255,0.25);
-}
-
-/* Final CTA */
-.final-cta{
-  text-align:center;
-  padding:var(--space-2xl) 0;
 }
 
 .final-cta h2{
-  font-size:var(--fs-h2);
-  font-weight:700;
-  margin-bottom:var(--space-lg);
-  line-height:1.3;
-  letter-spacing:-0.02em;
-  background:linear-gradient(135deg,#FFFFFF 0%,#00F0FF 100%);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  background-clip:text;
+  font-size:clamp(32px,5vw,56px);
+  font-weight:900;
+  letter-spacing:-0.04em;
+  line-height:1.2;
+  margin-bottom:var(--space-2xl);
+  max-width:800px;
+  margin-left:auto;
+  margin-right:auto;
 }
 
-.cta-group{
-  display:flex;
-  gap:var(--space-md);
-  justify-content:center;
-  flex-wrap:wrap;
-  max-width:700px;
-  margin:0 auto;
-}
-
-.cta-group .cta{
-  flex:1;
-  min-width:250px;
-}
-
-/* Footer */
-.footer{
-  text-align:center;
-  padding:var(--space-xl) 0 var(--space-lg);
+.sticky-cta{
+  position:fixed;
+  bottom:-100px;
+  left:0;
+  right:0;
+  background:rgba(255,255,255,0.95);
+  backdrop-filter:blur(20px);
   border-top:1px solid var(--border);
-  margin-top:var(--space-2xl);
+  padding:var(--space-md) var(--space-lg);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:var(--space-lg);
+  z-index:9998;
+  transition:bottom 0.3s cubic-bezier(0.4,0,0.2,1);
+  box-shadow:0 -4px 24px rgba(0,0,0,0.08);
+}
+
+.sticky-cta.visible{bottom:0}
+
+.sticky-text{
+  font-size:17px;
+  font-weight:700;
+  color:var(--ink);
+}
+
+.footer{
+  padding:var(--space-3xl) 0;
+  background:var(--white);
+  border-top:2px solid var(--border);
+  text-align:center;
   position:relative;
 }
 
-.footer::before{
-  content:'';
-  position:absolute;
-  top:-1px;
-  left:50%;
-  transform:translateX(-50%);
-  width:200px;
-  height:2px;
-  background:linear-gradient(90deg,transparent,var(--accent-primary),transparent);
-  box-shadow:0 0 20px var(--accent-primary);
-}
-
-.footer-brand{
-  font-size:var(--fs-h3);
-  font-weight:800;
-  background:linear-gradient(135deg,var(--accent-primary),var(--accent-secondary));
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  background-clip:text;
-  margin-bottom:var(--space-sm);
+.footer-logo{
+  max-width:280px;
+  height:auto;
+  margin:0 auto var(--space-lg);
+  display:block;
 }
 
 .footer-tagline{
-  font-size:var(--fs-body);
-  color:#A0AEC0;
-  margin-bottom:var(--space-md);
+  font-size:17px;
+  color:var(--ink);
+  margin-bottom:var(--space-xl);
+  font-weight:700;
+  letter-spacing:-0.015em;
 }
 
 .footer-links{
   display:flex;
-  gap:var(--space-lg);
+  gap:var(--space-xl);
   justify-content:center;
-  margin-bottom:var(--space-md);
   flex-wrap:wrap;
+  margin-bottom:var(--space-lg);
 }
 
 .footer-link{
-  color:#A0AEC0;
+  color:var(--slate);
   text-decoration:none;
-  font-size:var(--fs-body);
+  font-size:15px;
   font-weight:600;
-  transition:all 0.3s ease;
-  position:relative;
+  transition:color 0.2s cubic-bezier(0.4,0,0.2,1);
 }
 
-.footer-link::after{
-  content:'';
-  position:absolute;
-  bottom:-4px;
-  left:0;
-  width:0;
-  height:2px;
-  background:var(--accent-primary);
-  transition:width 0.3s ease;
-}
-
-.footer-link:hover{
-  color:var(--accent-primary);
-}
-
-.footer-link:hover::after{
-  width:100%;
-}
+.footer-link:hover{color:var(--red)}
 
 .footer-copyright{
-  font-size:var(--fs-small);
-  color:rgba(255,255,255,0.3);
+  font-size:14px;
+  color:var(--slate);
+  font-weight:500;
 }
 
-/* Fade-in Animations */
 .fade-in{
   opacity:0;
-  animation:fadeInUp 1s cubic-bezier(0.16,1,0.3,1) both;
+  transform:translateY(56px);
+  animation:fadeRise 0.9s cubic-bezier(0.16,1,0.3,1) forwards;
+  animation-play-state:paused;
 }
 
-.fade-in-slow{
-  opacity:0;
-  animation:fadeInUp 1.3s cubic-bezier(0.16,1,0.3,1) both;
-}
-
-@keyframes fadeInUp{
-  from{opacity:0;transform:translateY(40px)}
+@keyframes fadeRise{
   to{opacity:1;transform:translateY(0)}
 }
 
-/* Responsive */
-@media(max-width:768px){
-  .container{
-    padding:0 0.75rem;
-    max-width:100vw;
-  }
-  
-  .hero{
-    min-height:80vh;
-    max-width:100%;
-    overflow:hidden;
-  }
-  
-  .hero-value-prop{
-    gap:clamp(0.4rem,1.5vw,0.75rem);
-    padding:0 0.5rem;
-  }
-  
-  .value-text{
-    font-size:clamp(0.7rem,1.8vw,0.875rem);
-    letter-spacing:0.02em;
-  }
-  
-  .value-separator{
-    width:5px;
-    height:5px;
-  }
-  
-  .hero-cta-group{
-    flex-direction:row;
-    gap:clamp(0.5rem,1.5vw,1rem);
-    width:100%;
-    max-width:100%;
-    justify-content:center;
-    padding:0;
-  }
-  
-  .hero-cta-primary,
-  .hero-cta-secondary{
-    flex:1;
-    min-width:0;
-    max-width:50%;
-    padding:0.875rem clamp(0.75rem,2.5vw,1.25rem);
-    font-size:clamp(0.8rem,1.8vw,0.95rem);
-  }
-  
-  .hero-stats-preview{
-    gap:clamp(0.5rem,2.5vw,1rem);
-    padding:var(--space-md) 0 var(--space-xl);
-    max-width:100%;
-  }
-  
-  .hero-stat{
-    min-width:clamp(100px,27vw,130px);
-    max-width:32%;
-    padding:clamp(0.875rem,2.5vw,1.25rem) clamp(1rem,3vw,1.5rem);
-  }
-  
-  .hero-stat-value{
-    font-size:clamp(1.75rem,4.5vw,2.25rem);
-  }
-  
-  .hero-stat-label{
-    font-size:clamp(0.7rem,1.4vw,0.8rem);
-  }
-  
-  .portfolio-grid,
-  .pricing-options{
+@media(max-width:1024px){
+  .hero-stats{
     grid-template-columns:1fr;
+    gap:var(--space-xl);
+    padding-top:var(--space-2xl);
+    margin-top:var(--space-2xl);
   }
-  
-  .cta-group{
+  .pricing-grid{
+    grid-template-columns:1fr;
+    max-width:600px;
+  }
+  .pricing-card{
+    min-height:auto;
+  }
+  .projects-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:768px){
+  .snrg-logo-animated{
+    width:clamp(280px,80vw,400px);
+    margin-bottom:var(--space-2xl);
+  }
+  .hero{padding:100px 0 60px}
+  .hero-subtitle{
     flex-direction:column;
+    gap:var(--space-sm);
   }
-  
-  .cta-group .cta{
+  .projects-grid{grid-template-columns:1fr}
+  .comparison-table{display:block}
+  .table-row{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:var(--space-xs);
+    padding:var(--space-md);
+    margin-bottom:var(--space-md);
+    background:var(--pearl);
+    border:1px solid var(--border);
+    border-radius:16px;
+  }
+  .table-row:first-child{display:none}
+  .table-cell{
+    border:none;
+    padding:var(--space-sm);
+    justify-content:space-between;
+    flex-direction:row;
+  }
+  .table-cell:first-child{
+    font-weight:700;
+    color:var(--red);
+    text-transform:uppercase;
+    border-bottom:1px solid var(--border);
+    padding-bottom:var(--space-sm);
+    margin-bottom:var(--space-xs);
+  }
+  .table-cell::before{
+    content:attr(data-label);
+    font-weight:600;
+    color:var(--slate);
+    font-size:13px;
+  }
+  .table-cell:first-child::before{display:none}
+  .sticky-cta{
+    flex-direction:column;
+    gap:var(--space-sm);
+    padding:var(--space-md);
+  }
+  .sticky-text{font-size:15px}
+  .cta{
     width:100%;
+    font-size:15px;
+    padding:14px 32px;
   }
-}
-
-@media(max-width:480px){
-  .lang-toggle{
-    top:15px;
-    right:10px;
-    padding:4px 6px;
-    gap:2px;
+  .footer-links{
+    flex-direction:column;
+    gap:var(--space-sm);
   }
-  
-  .lang-btn{
-    font-size:11px;
-    padding:6px 12px;
-  }
-  
-  .container{
-    padding:0 0.625rem;
-  }
-  
-  .hero-value-prop{
-    gap:0.4rem;
-  }
-  
-  .value-text{
-    font-size:0.7rem;
-  }
-  
-  .hero-cta-primary,
-  .hero-cta-secondary{
-    padding:0.75rem clamp(0.625rem,2.5vw,0.875rem);
-    font-size:0.8rem;
-  }
-  
-  .hero-stat{
-    min-width:95px;
-    padding:0.75rem 0.875rem;
-  }
-  
-  .hero-stat-value{
-    font-size:1.6rem;
-  }
-  
-  .hero-stat-label{
-    font-size:0.65rem;
-  }
-}
-
-@media(prefers-reduced-motion:reduce){
-  *{
-    animation-duration:0.01ms !important;
-    transition-duration:0.01ms !important;
-  }
+  .footer-logo{max-width:220px}
 }
 </style>
 </head>
+
 <body>
-  <!-- HIGH-TECH ANIMATED BACKGROUNDS -->
-  <div class="tech-grid"></div>
-  <div class="scan-line"></div>
-  <div class="particles">
-    <div class="particle" style="left:10%;animation-delay:0s;"></div>
-    <div class="particle" style="left:25%;animation-delay:3s;"></div>
-    <div class="particle" style="left:40%;animation-delay:6s;"></div>
-    <div class="particle" style="left:55%;animation-delay:2s;"></div>
-    <div class="particle" style="left:70%;animation-delay:5s;"></div>
-    <div class="particle" style="left:85%;animation-delay:8s;"></div>
-    <div class="particle" style="left:15%;animation-delay:4s;"></div>
-    <div class="particle" style="left:60%;animation-delay:7s;"></div>
-    <div class="particle" style="left:90%;animation-delay:1s;"></div>
-    <div class="particle" style="left:35%;animation-delay:9s;"></div>
-  </div>
-  
-  <!-- Language Toggle -->
-  <div class="lang-toggle">
+  <div class="lang-bar">
     <button class="lang-btn active" onclick="switchLang('en')">EN</button>
     <button class="lang-btn" onclick="switchLang('es')">ES</button>
   </div>
 
-  <div class="container">
-    <!-- Hero -->
-    <div class="hero">
-      <div class="badge" lang="en">Houston Small Business Websites</div>
-      <div class="badge" lang="es">Sitios Web Para Pequeñas Empresas de Houston</div>
-      
-      <h1>SNRG WEB</h1>
-      
-      <div class="hero-value-prop" lang="en">
-        <span class="value-text">AGENCY QUALITY</span>
-        <span class="value-separator"></span>
-        <span class="value-text">LOCAL PRICING</span>
-        <span class="value-separator"></span>
-        <span class="value-text">ZERO HASSLE</span>
+  <section class="hero">
+    <div class="animated-bg"></div>
+    <div class="container">
+      <div class="hero-wrap">
+        <div class="snrg-logo-animated" aria-label="SNRG Web Logo">
+          <div class="snrg-logo-content">
+            <div class="snrg-logo-text snrg-logo-top">SNRG</div>
+            <div class="snrg-logo-line-wrap">
+              <div class="snrg-logo-line"></div>
+            </div>
+            <div class="snrg-logo-text snrg-logo-bottom">WEB</div>
+          </div>
+        </div>
+        
+        <div class="hero-content">
+          <h1 class="hero-title" lang="en">Enterprise Websites Built For Houston Entrepreneurs</h1>
+          <h1 class="hero-title" lang="es">Sitios Web Empresariales Para Emprendedores de Houston</h1>
+          
+          <div class="hero-subtitle" lang="en">
+            <span>Professional Results<div class="dot-separator"></div></span>
+            <span>Accessible Pricing<div class="dot-separator"></div></span>
+            <span>Zero Barriers</span>
+          </div>
+          
+          <div class="hero-subtitle" lang="es">
+            <span>Resultados Profesionales<div class="dot-separator"></div></span>
+            <span>Precios Accesibles<div class="dot-separator"></div></span>
+            <span>Sin Barreras</span>
+          </div>
+          
+          <div class="hero-cta-group">
+            <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" class="cta cta-primary" lang="en">View Pricing</a>
+            <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" class="cta cta-secondary" lang="en">Schedule Call</a>
+            
+            <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" class="cta cta-primary" lang="es">Ver Precios</a>
+            <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" class="cta cta-secondary" lang="es">Agendar Cita</a>
+          </div>
+          
+          <div class="hero-stats" lang="en">
+            <div class="hero-stat">
+              <span class="stat-value" data-value="2-3">—</span>
+              <span class="stat-label">Days to Launch</span>
+            </div>
+            <div class="hero-stat">
+              <span class="stat-value" data-value="$0">—</span>
+              <span class="stat-label">Setup Fee</span>
+            </div>
+            <div class="hero-stat">
+              <span class="stat-value" data-value="100%">—</span>
+              <span class="stat-label">Ownership Option</span>
+            </div>
+          </div>
+          
+          <div class="hero-stats" lang="es">
+            <div class="hero-stat">
+              <span class="stat-value" data-value="2-3">—</span>
+              <span class="stat-label">Días Para Lanzar</span>
+            </div>
+            <div class="hero-stat">
+              <span class="stat-value" data-value="$0">—</span>
+              <span class="stat-label">Sin Cargo Inicial</span>
+            </div>
+            <div class="hero-stat">
+              <span class="stat-value" data-value="100%">—</span>
+              <span class="stat-label">Opción de Propiedad</span>
+            </div>
+          </div>
+        </div>
       </div>
+    </div>
+  </section>
+
+  <section class="pricing fade-in">
+    <div class="animated-bg"></div>
+    <div class="container">
+      <h2 class="section-title" lang="en">Built Different. Priced Different.</h2>
+      <h2 class="section-title" lang="es">Construido Diferente. Precio Diferente.</h2>
       
-      <div class="hero-value-prop" lang="es">
-        <span class="value-text">CALIDAD PROFESIONAL</span>
-        <span class="value-separator"></span>
-        <span class="value-text">PRECIOS LOCALES</span>
-        <span class="value-separator"></span>
-        <span class="value-text">SIN COMPLICACIONES</span>
+      <p class="section-subtitle" lang="en">PARKING HTX community outreach removes barriers for Houston entrepreneurs. Professional execution at accessible pricing.</p>
+      <p class="section-subtitle" lang="es">PARKING HTX elimina barreras para emprendedores de Houston. Ejecución profesional a precios accesibles.</p>
+      
+      <div class="pricing-grid">
+        <div class="pricing-card" onclick="selectCard(this)" lang="en">
+          <span class="pricing-badge">Recommended</span>
+          <h3 class="pricing-name">Fully Managed Service</h3>
+          <div class="pricing-price">$75<span style="font-size:20px;font-weight:600;color:var(--slate)">/mo</span></div>
+          <p class="pricing-term">then <span class="highlight">$50/mo</span> after 12 months</p>
+          <p class="pricing-desc">Complete website management with hosting, maintenance, and updates. We handle everything so you don't have to.</p>
+          <ul class="pricing-features">
+            <li class="pricing-feature">Custom design & build</li>
+            <li class="pricing-feature">Mobile-responsive</li>
+            <li class="pricing-feature">Hosting included</li>
+            <li class="pricing-feature">5 updates/month</li>
+            <li class="pricing-feature">Ongoing maintenance</li>
+            <li class="pricing-feature">SEO optimization</li>
+            <li class="pricing-feature">Speed optimization</li>
+            <li class="pricing-feature">Analytics setup</li>
+          </ul>
+          <div class="pricing-cta">
+            <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" class="cta cta-primary">Book Consultation</a>
+          </div>
+        </div>
+        
+        <div class="pricing-card" onclick="selectCard(this)" lang="en">
+          <span class="pricing-badge">One-Time</span>
+          <h3 class="pricing-name">Website Ownership</h3>
+          <div class="pricing-price">$285<span style="font-size:20px;font-weight:600;color:var(--slate)"> flat</span></div>
+          <p class="pricing-term">Option: <span class="highlight">$50/mo</span> fully managed after purchase</p>
+          <p class="pricing-desc">Full ownership of your website with all source files. No monthly fees. No hosting included—you handle your own hosting and maintenance.</p>
+          <ul class="pricing-features">
+            <li class="pricing-feature">Custom design & build</li>
+            <li class="pricing-feature">Mobile-responsive</li>
+            <li class="pricing-feature">SEO optimized</li>
+            <li class="pricing-feature">All source files</li>
+            <li class="pricing-feature">30 days support</li>
+            <li class="pricing-feature">Documentation</li>
+          </ul>
+          <div class="pricing-cta">
+            <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" class="cta cta-secondary">Order on Upwork</a>
+          </div>
+        </div>
+        
+        <div class="pricing-card" onclick="selectCard(this)" lang="es">
+          <span class="pricing-badge">Recomendado</span>
+          <h3 class="pricing-name">Servicio Completamente Administrado</h3>
+          <div class="pricing-price">$75<span style="font-size:20px;font-weight:600;color:var(--slate)">/mes</span></div>
+          <p class="pricing-term">luego <span class="highlight">$50/mes</span> después de 12 meses</p>
+          <p class="pricing-desc">Gestión completa del sitio web con hospedaje, mantenimiento y actualizaciones. Nosotros manejamos todo para que tú no tengas que hacerlo.</p>
+          <ul class="pricing-features">
+            <li class="pricing-feature">Diseño y construcción personalizada</li>
+            <li class="pricing-feature">Diseño responsivo</li>
+            <li class="pricing-feature">Hospedaje incluido</li>
+            <li class="pricing-feature">5 actualizaciones/mes</li>
+            <li class="pricing-feature">Mantenimiento continuo</li>
+            <li class="pricing-feature">Optimización SEO</li>
+            <li class="pricing-feature">Optimización de velocidad</li>
+            <li class="pricing-feature">Configuración de análisis</li>
+          </ul>
+          <div class="pricing-cta">
+            <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" class="cta cta-primary">Reservar Consulta</a>
+          </div>
+        </div>
+        
+        <div class="pricing-card" onclick="selectCard(this)" lang="es">
+          <span class="pricing-badge">Pago Único</span>
+          <h3 class="pricing-name">Propiedad del Sitio Web</h3>
+          <div class="pricing-price">$285<span style="font-size:20px;font-weight:600;color:var(--slate)"> plano</span></div>
+          <p class="pricing-term">Opción: <span class="highlight">$50/mes</span> completamente administrado después de compra</p>
+          <p class="pricing-desc">Propiedad completa de tu sitio web con todos los archivos fuente. Sin tarifas mensuales. Sin hospedaje incluido—tú manejas tu propio hospedaje y mantenimiento.</p>
+          <ul class="pricing-features">
+            <li class="pricing-feature">Diseño y construcción personalizada</li>
+            <li class="pricing-feature">Diseño responsivo</li>
+            <li class="pricing-feature">Optimizado para SEO</li>
+            <li class="pricing-feature">Todos los archivos fuente</li>
+            <li class="pricing-feature">30 días de soporte</li>
+            <li class="pricing-feature">Documentación</li>
+          </ul>
+          <div class="pricing-cta">
+            <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" class="cta cta-secondary">Ordenar en Upwork</a>
+          </div>
+        </div>
       </div>
+    </div>
+  </section>
+
+  <section class="comparison fade-in">
+    <div class="animated-bg"></div>
+    <div class="container">
+      <h2 class="section-title" lang="en">The SNRG Difference</h2>
+      <h2 class="section-title" lang="es">La Diferencia SNRG</h2>
+      
+      <div class="comparison-table">
+        <div class="table-row">
+          <div class="table-cell" lang="en">Feature</div>
+          <div class="table-cell" lang="en">Typical Agency</div>
+          <div class="table-cell highlight" lang="en">SNRG Web</div>
+          
+          <div class="table-cell" lang="es">Característica</div>
+          <div class="table-cell" lang="es">Agencia Típica</div>
+          <div class="table-cell highlight" lang="es">SNRG Web</div>
+        </div>
+        
+        <div class="table-row">
+          <div class="table-cell" data-label="" lang="en">Setup Fee</div>
+          <div class="table-cell" data-label="Typical Agency" lang="en">$1,500+</div>
+          <div class="table-cell highlight" data-label="SNRG Web" lang="en">$0</div>
+          
+          <div class="table-cell" data-label="" lang="es">Cargo Inicial</div>
+          <div class="table-cell" data-label="Agencia Típica" lang="es">$1,500+</div>
+          <div class="table-cell highlight" data-label="SNRG Web" lang="es">$0</div>
+        </div>
+        
+        <div class="table-row">
+          <div class="table-cell" data-label="" lang="en">Monthly Cost</div>
+          <div class="table-cell" data-label="Typical Agency" lang="en">$200-500</div>
+          <div class="table-cell highlight" data-label="SNRG Web" lang="en">$75 → $50</div>
+          
+          <div class="table-cell" data-label="" lang="es">Costo Mensual</div>
+          <div class="table-cell" data-label="Agencia Típica" lang="es">$200-500</div>
+          <div class="table-cell highlight" data-label="SNRG Web" lang="es">$75 → $50</div>
+        </div>
+        
+        <div class="table-row">
+          <div class="table-cell" data-label="" lang="en">Launch Time</div>
+          <div class="table-cell" data-label="Typical Agency" lang="en">2-4 weeks</div>
+          <div class="table-cell highlight" data-label="SNRG Web" lang="en">2-3 days</div>
+          
+          <div class="table-cell" data-label="" lang="es">Tiempo de Lanzamiento</div>
+          <div class="table-cell" data-label="Agencia Típica" lang="es">2-4 semanas</div>
+          <div class="table-cell highlight" data-label="SNRG Web" lang="es">2-3 días</div>
+        </div>
+        
+        <div class="table-row">
+          <div class="table-cell" data-label="" lang="en">Content Updates</div>
+          <div class="table-cell" data-label="Typical Agency" lang="en">$75-150/hr</div>
+          <div class="table-cell highlight" data-label="SNRG Web" lang="en">5/mo included</div>
+          
+          <div class="table-cell" data-label="" lang="es">Actualizaciones</div>
+          <div class="table-cell" data-label="Agencia Típica" lang="es">$75-150/hr</div>
+          <div class="table-cell highlight" data-label="SNRG Web" lang="es">5/mes incluidas</div>
+        </div>
+        
+        <div class="table-row">
+          <div class="table-cell" data-label="" lang="en">Contract Required</div>
+          <div class="table-cell" data-label="Typical Agency" lang="en"><span class="checkmark">✓</span></div>
+          <div class="table-cell highlight" data-label="SNRG Web" lang="en"><span class="x">✗</span></div>
+          
+          <div class="table-cell" data-label="" lang="es">Contrato Requerido</div>
+          <div class="table-cell" data-label="Agencia Típica" lang="es"><span class="checkmark">✓</span></div>
+          <div class="table-cell highlight" data-label="SNRG Web" lang="es"><span class="x">✗</span></div>
+        </div>
+        
+        <div class="table-row">
+          <div class="table-cell" data-label="" lang="en">Ownership Option</div>
+          <div class="table-cell" data-label="Typical Agency" lang="en"><span class="x">✗</span></div>
+          <div class="table-cell highlight" data-label="SNRG Web" lang="en"><span class="checkmark">✓</span></div>
+          
+          <div class="table-cell" data-label="" lang="es">Opción de Propiedad</div>
+          <div class="table-cell" data-label="Agencia Típica" lang="es"><span class="x">✗</span></div>
+          <div class="table-cell highlight" data-label="SNRG Web" lang="es"><span class="checkmark">✓</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="projects fade-in">
+    <div class="animated-bg"></div>
+    <div class="container">
+      <h2 class="section-title" lang="en">Recent Work</h2>
+      <h2 class="section-title" lang="es">Trabajo Reciente</h2>
+      
+      <div class="projects-grid">
+        <a href="https://parking-htx-61fb2a.webflow.io/" class="project-card" lang="en" target="_blank" rel="noopener">
+          <h3 class="project-title">PARKING HTX</h3>
+          <p class="project-desc">QR code parking platform for Houston properties. License plate recognition, digital payments, and event management system.</p>
+          <div class="project-tags">
+            <span class="project-tag">Platform</span>
+            <span class="project-tag">SaaS</span>
+          </div>
+        </a>
+        
+        <a href="https://kiblers-kollectibles.webflow.io/" class="project-card" lang="en" target="_blank" rel="noopener">
+          <h3 class="project-title">Kibler's Kollectibles</h3>
+          <p class="project-desc">E-commerce platform for Houston collectibles dealer specializing in sports cards and vintage items.</p>
+          <div class="project-tags">
+            <span class="project-tag">E-Commerce</span>
+            <span class="project-tag">Inventory</span>
+          </div>
+        </a>
+        
+        <a href="https://con-net-graphics.webflow.io/" class="project-card" lang="en" target="_blank" rel="noopener">
+          <h3 class="project-title">ConNet Graphics</h3>
+          <p class="project-desc">Portfolio site for Houston commercial printing company offering vehicle wraps and large format printing.</p>
+          <div class="project-tags">
+            <span class="project-tag">Portfolio</span>
+            <span class="project-tag">Services</span>
+          </div>
+        </a>
+        
+        <a href="https://tortas-gigantes.webflow.io/" class="project-card" lang="en" target="_blank" rel="noopener">
+          <h3 class="project-title">Tortas Gigantes el Enmascarado</h3>
+          <p class="project-desc">Restaurant website for Houston Mexican food spot known for authentic tortas and traditional dishes.</p>
+          <div class="project-tags">
+            <span class="project-tag">Restaurant</span>
+            <span class="project-tag">Menu</span>
+          </div>
+        </a>
+        
+        <a href="https://mr-donuts-kolache.webflow.io/" class="project-card" lang="en" target="_blank" rel="noopener">
+          <h3 class="project-title">Mr. Donuts & Kolaches</h3>
+          <p class="project-desc">Online ordering platform for Houston donut shop with delivery, pickup, and catering options.</p>
+          <div class="project-tags">
+            <span class="project-tag">Ordering</span>
+            <span class="project-tag">Catering</span>
+          </div>
+        </a>
+        
+        <a href="https://parking-htx-61fb2a.webflow.io/" class="project-card" lang="es" target="_blank" rel="noopener">
+          <h3 class="project-title">PARKING HTX</h3>
+          <p class="project-desc">Plataforma de estacionamiento con códigos QR para propiedades de Houston. Reconocimiento de placas, pagos digitales.</p>
+          <div class="project-tags">
+            <span class="project-tag">Plataforma</span>
+            <span class="project-tag">SaaS</span>
+          </div>
+        </a>
+        
+        <a href="https://kiblers-kollectibles.webflow.io/" class="project-card" lang="es" target="_blank" rel="noopener">
+          <h3 class="project-title">Kibler's Kollectibles</h3>
+          <p class="project-desc">Plataforma de comercio electrónico para distribuidor de coleccionables de Houston especializado en tarjetas deportivas.</p>
+          <div class="project-tags">
+            <span class="project-tag">E-Commerce</span>
+            <span class="project-tag">Inventario</span>
+          </div>
+        </a>
+        
+        <a href="https://con-net-graphics.webflow.io/" class="project-card" lang="es" target="_blank" rel="noopener">
+          <h3 class="project-title">ConNet Graphics</h3>
+          <p class="project-desc">Sitio de portafolio para empresa de impresión comercial de Houston que ofrece rotulación de vehículos.</p>
+          <div class="project-tags">
+            <span class="project-tag">Portafolio</span>
+            <span class="project-tag">Servicios</span>
+          </div>
+        </a>
+        
+        <a href="https://tortas-gigantes.webflow.io/" class="project-card" lang="es" target="_blank" rel="noopener">
+          <h3 class="project-title">Tortas Gigantes el Enmascarado</h3>
+          <p class="project-desc">Sitio web de restaurante para lugar de comida mexicana de Houston conocido por tortas auténticas.</p>
+          <div class="project-tags">
+            <span class="project-tag">Restaurante</span>
+            <span class="project-tag">Menú</span>
+          </div>
+        </a>
+        
+        <a href="https://mr-donuts-kolache.webflow.io/" class="project-card" lang="es" target="_blank" rel="noopener">
+          <h3 class="project-title">Mr. Donuts & Kolaches</h3>
+          <p class="project-desc">Plataforma de pedidos en línea para tienda de donas de Houston con opciones de entrega y catering.</p>
+          <div class="project-tags">
+            <span class="project-tag">Pedidos</span>
+            <span class="project-tag">Catering</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta fade-in">
+    <div class="animated-bg"></div>
+    <div class="container">
+      <h2 lang="en">Focus on your business.<br/>We'll handle your website.</h2>
+      <h2 lang="es">Enfócate en tu negocio.<br/>Nosotros manejamos tu sitio web.</h2>
       
       <div class="hero-cta-group">
-        <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" rel="noopener noreferrer" class="hero-cta-primary" lang="en">View Pricing</a>
-        <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" rel="noopener noreferrer" class="hero-cta-primary" lang="es">Ver Precios</a>
+        <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" class="cta cta-primary" lang="en">Schedule a Call</a>
+        <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" class="cta cta-secondary" lang="en">Order on Upwork</a>
         
-        <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" rel="noopener noreferrer" class="hero-cta-secondary" lang="en">Schedule a Call</a>
-        <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" rel="noopener noreferrer" class="hero-cta-secondary" lang="es">Agendar Cita</a>
-      </div>
-      
-      <div class="hero-stats-preview" lang="en">
-        <div class="hero-stat">
-          <div class="hero-stat-value">2-3</div>
-          <div class="hero-stat-label">Days to Launch</div>
-        </div>
-        <div class="hero-stat">
-          <div class="hero-stat-value">$0</div>
-          <div class="hero-stat-label">Setup Fee</div>
-        </div>
-        <div class="hero-stat">
-          <div class="hero-stat-value">5</div>
-          <div class="hero-stat-label">Updates/Month</div>
-        </div>
-      </div>
-      
-      <div class="hero-stats-preview" lang="es">
-        <div class="hero-stat">
-          <div class="hero-stat-value">2-3</div>
-          <div class="hero-stat-label">Días Al Lanzamiento</div>
-        </div>
-        <div class="hero-stat">
-          <div class="hero-stat-value">$0</div>
-          <div class="hero-stat-label">Costo Inicial</div>
-        </div>
-        <div class="hero-stat">
-          <div class="hero-stat-value">5</div>
-          <div class="hero-stat-label">Actualizaciones/Mes</div>
-        </div>
+        <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" class="cta cta-primary" lang="es">Agendar Llamada</a>
+        <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" class="cta cta-secondary" lang="es">Ordenar en Upwork</a>
       </div>
     </div>
+  </section>
 
-    <!-- Portfolio -->
-    <div class="portfolio fade-in-slow">
-      <div class="section-header">
-        <div class="section-kicker" lang="en">Recent Work</div>
-        <div class="section-kicker" lang="es">Trabajos Recientes</div>
-        
-        <h2 class="section-title" lang="en">Current Projects</h2>
-        <h2 class="section-title" lang="es">Proyectos Actuales</h2>
-        
-        <p class="section-subtitle" lang="en">Live sites we've built for Houston businesses</p>
-        <p class="section-subtitle" lang="es">Sitios activos que hemos creado para negocios de Houston</p>
-      </div>
+  <div class="sticky-cta" id="stickyCTA">
+    <span class="sticky-text" lang="en">Ready to get started?</span>
+    <span class="sticky-text" lang="es">¿Listo para comenzar?</span>
+    
+    <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" class="cta cta-primary" lang="en">Schedule Call</a>
+    <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" class="cta cta-secondary" lang="en">Order on Upwork</a>
+    
+    <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" class="cta cta-primary" lang="es">Agendar Llamada</a>
+    <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" class="cta cta-secondary" lang="es">Ordenar en Upwork</a>
+  </div>
+
+  <footer class="footer fade-in">
+    <div class="container">
+      <img src="snrg_footer_logo.webp" alt="SNRG Web Logo" class="footer-logo">
       
-      <div class="portfolio-grid">
-        <a href="https://parking-htx-61fb2a.webflow.io/" rel="noopener noreferrer" class="project-card">
-          <h4 class="project-title">PARKING HTX</h4>
-          <p class="project-type">Parking Operations Platform</p>
-          <span class="project-link">View Live Site</span>
-        </a>
-
-        <a href="https://tortas-gigantes.webflow.io/" rel="noopener noreferrer" class="project-card">
-          <h4 class="project-title">TORTAS GIGANTES</h4>
-          <p class="project-type">Mexican Restaurant</p>
-          <span class="project-link">View Live Site</span>
-        </a>
-
-        <a href="https://attorney-arnold-lopez.webflow.io/" rel="noopener noreferrer" class="project-card">
-          <h4 class="project-title">ARNOLD LOPEZ</h4>
-          <p class="project-type">Attorney At Law</p>
-          <span class="project-link">View Live Site</span>
-        </a>
-
-        <a href="https://mr-donuts-kolache.webflow.io/" rel="noopener noreferrer" class="project-card">
-          <h4 class="project-title">MR. DONUTS & KOLACHE</h4>
-          <p class="project-type">Local Restaurant</p>
-          <span class="project-link">View Live Site</span>
-        </a>
-
-        <a href="https://con-net-graphics.webflow.io/" rel="noopener noreferrer" class="project-card">
-          <h4 class="project-title">CON-NET GRAPHICS</h4>
-          <p class="project-type">Print & Design Services</p>
-          <span class="project-link">View Live Site</span>
-        </a>
-
-        <a href="https://kiblers-kollectibles.webflow.io/" rel="noopener noreferrer" class="project-card">
-          <h4 class="project-title">KIBLER'S KOLLECTIBLES</h4>
-          <p class="project-type">Collectibles Store</p>
-          <span class="project-link">View Live Site</span>
-        </a>
-      </div>
-    </div>
-
-    <!-- Pricing -->
-    <div class="pricing fade-in-slow">
-      <div class="pricing-content">
-        <div class="section-header">
-          <div class="section-kicker" lang="en">Pricing Options</div>
-          <div class="section-kicker" lang="es">Opciones de Precio</div>
-          
-          <h2 class="section-title" lang="en">Choose Your Path</h2>
-          <h2 class="section-title" lang="es">Elige Tu Camino</h2>
-          
-          <p class="section-subtitle" lang="en">Flexible options designed for every business model</p>
-          <p class="section-subtitle" lang="es">Opciones flexibles diseñadas para cada modelo de negocio</p>
-        </div>
-        
-        <div class="pricing-options">
-          <!-- ENGLISH PRICING -->
-          <div class="pricing-card" lang="en">
-            <div class="card-label">Recommended</div>
-            <div class="card-price">$100<span> /mo</span></div>
-            <div class="card-purpose">Fully Managed Service</div>
-            <p class="card-desc">Complete website management with hosting, maintenance, and updates. We handle everything so you don't have to. Drops to $50/mo after year one.</p>
-            <ul class="card-features">
-              <li>Custom design & build</li>
-              <li>Mobile-responsive</li>
-              <li>Hosting included</li>
-              <li>5 updates/month</li>
-              <li>Ongoing maintenance</li>
-              <li>SEO optimization</li>
-              <li>Speed optimization</li>
-              <li>Analytics setup</li>
-            </ul>
-            <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" rel="noopener noreferrer" class="cta">Book Consultation</a>
-          </div>
-
-          <div class="pricing-card" lang="en">
-            <div class="card-label">One-Time</div>
-            <div class="card-price">$285<span> flat</span></div>
-            <div class="card-purpose">Website Ownership · No Hosting</div>
-            <p class="card-desc">Full ownership of your website with all source files. No monthly fees. No hosting included—you handle your own hosting and maintenance.</p>
-            <ul class="card-features">
-              <li>Custom design & build</li>
-              <li>Mobile-responsive</li>
-              <li>SEO optimized</li>
-              <li>All source files</li>
-              <li>30 days support</li>
-              <li>Documentation</li>
-            </ul>
-            <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" rel="noopener noreferrer" class="cta">Order on Upwork</a>
-          </div>
-          
-          <!-- SPANISH PRICING -->
-          <div class="pricing-card" lang="es">
-            <div class="card-label">Recomendado</div>
-            <div class="card-price">$100<span> /mes</span></div>
-            <div class="card-purpose">Servicio Totalmente Administrado</div>
-            <p class="card-desc">Administración completa del sitio web con alojamiento, mantenimiento y actualizaciones. Nosotros manejamos todo para que usted no tenga que hacerlo. Baja a $50/mes después del primer año.</p>
-            <ul class="card-features">
-              <li>Diseño y construcción personalizado</li>
-              <li>Adaptable a móviles</li>
-              <li>Alojamiento incluido</li>
-              <li>5 actualizaciones/mes</li>
-              <li>Mantenimiento continuo</li>
-              <li>Optimización SEO</li>
-              <li>Optimización de velocidad</li>
-              <li>Configuración de analíticas</li>
-            </ul>
-            <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" rel="noopener noreferrer" class="cta">Agendar Consulta</a>
-          </div>
-
-          <div class="pricing-card" lang="es">
-            <div class="card-label">Pago Único</div>
-            <div class="card-price">$285<span> fijo</span></div>
-            <div class="card-purpose">Propiedad Del Sitio · Sin Alojamiento</div>
-            <p class="card-desc">Propiedad completa de su sitio web con todos los archivos fuente. Sin tarifas mensuales. Sin alojamiento incluido—usted maneja su propio alojamiento y mantenimiento.</p>
-            <ul class="card-features">
-              <li>Diseño y construcción personalizado</li>
-              <li>Adaptable a móviles</li>
-              <li>SEO optimizado</li>
-              <li>Todos los archivos fuente</li>
-              <li>30 días de soporte</li>
-              <li>Documentación</li>
-            </ul>
-            <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" rel="noopener noreferrer" class="cta">Ordenar en Upwork</a>
-          </div>
-        </div>
-
-        <div class="features-list" lang="en">
-          <div class="feature-item">Custom Design</div>
-          <div class="feature-item">No Templates</div>
-          <div class="feature-item">Houston-Based</div>
-          <div class="feature-item">Fast Support</div>
-          <div class="feature-item">SEO Ready</div>
-          <div class="feature-item">Analytics</div>
-        </div>
-        
-        <div class="features-list" lang="es">
-          <div class="feature-item">Diseño Personalizado</div>
-          <div class="feature-item">Sin Plantillas</div>
-          <div class="feature-item">Basado en Houston</div>
-          <div class="feature-item">Soporte Rápido</div>
-          <div class="feature-item">SEO Listo</div>
-          <div class="feature-item">Analíticas</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Final CTA -->
-    <div class="final-cta fade-in-slow">
-      <h2 lang="en">Stop paying agency prices.<br/>Start getting agency results.</h2>
-      <h2 lang="es">Deja de pagar precios de agencia.<br/>Comienza a obtener resultados de agencia.</h2>
-      
-      <div class="cta-group">
-        <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" rel="noopener noreferrer" class="cta" lang="en">Schedule a Call</a>
-        <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" rel="noopener noreferrer" class="cta" lang="en">Order on Upwork</a>
-        
-        <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" rel="noopener noreferrer" class="cta" lang="es">Agendar Llamada</a>
-        <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" rel="noopener noreferrer" class="cta" lang="es">Ordenar en Upwork</a>
-      </div>
-    </div>
-
-    <!-- Footer -->
-    <div class="footer">
-      <div class="footer-brand">SNRG WEB</div>
-      
-      <p class="footer-tagline" lang="en">Custom websites for Houston small businesses</p>
-      <p class="footer-tagline" lang="es">Sitios web personalizados para pequeñas empresas de Houston</p>
+      <p class="footer-tagline" lang="en">PARKING HTX Community Outreach — Removing barriers for Houston entrepreneurs</p>
+      <p class="footer-tagline" lang="es">PARKING HTX Alcance Comunitario — Eliminando barreras para emprendedores de Houston</p>
       
       <div class="footer-links">
-        <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" rel="noopener noreferrer" class="footer-link" lang="en">Schedule Call</a>
-        <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" rel="noopener noreferrer" class="footer-link" lang="en">Upwork Service</a>
+        <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" class="footer-link" lang="en">Schedule Call</a>
+        <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" class="footer-link" lang="en">Upwork Service</a>
         
-        <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" rel="noopener noreferrer" class="footer-link" lang="es">Agendar Llamada</a>
-        <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" rel="noopener noreferrer" class="footer-link" lang="es">Servicio Upwork</a>
+        <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" class="footer-link" lang="es">Agendar Llamada</a>
+        <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" class="footer-link" lang="es">Servicio Upwork</a>
       </div>
       
       <p class="footer-copyright">© 2026 SNRG Web · Houston, Texas</p>
     </div>
-  </div>
+  </footer>
 
   <script>
-  // Force scroll to top on page load/refresh
-  window.addEventListener('beforeunload', () => {
-    window.scrollTo(0, 0);
-  });
+  if(history.scrollRestoration)history.scrollRestoration='manual';
   
-  // Immediate scroll to top
-  if (history.scrollRestoration) {
-    history.scrollRestoration = 'manual';
-  }
-  window.scrollTo(0, 0);
-  
-  // Intersection Observer for fade-in animations
-  const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -100px 0px'
-  };
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, index) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => {
-          entry.target.style.animationPlayState = 'running';
-        }, index * 100);
+  const observerOptions={threshold:0.15,rootMargin:'0px 0px -80px 0px'};
+  const observer=new IntersectionObserver((entries)=>{
+    entries.forEach((entry,index)=>{
+      if(entry.isIntersecting){
+        setTimeout(()=>entry.target.style.animationPlayState='running',index*120);
         observer.unobserve(entry.target);
       }
     });
-  }, observerOptions);
+  },observerOptions);
 
-  // Elegant spinning stats animation
-  let statsAnimationTriggered = {en: false, es: false};
-  
-  function stopStatsAnimation(lang) {
-    // Select only visible hero-stat elements
-    const visibleStats = document.querySelectorAll(`.hero-stats-preview[lang="${lang}"] .hero-stat`);
-    
-    // Stop them in sequence
-    setTimeout(() => {
-      if (visibleStats[0]) visibleStats[0].classList.add('stopped');
-    }, 1200);
-    
-    setTimeout(() => {
-      if (visibleStats[1]) visibleStats[1].classList.add('stopped');
-    }, 1600);
-    
-    setTimeout(() => {
-      if (visibleStats[2]) visibleStats[2].classList.add('stopped');
-    }, 2000);
-  }
-  
-  const statsObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const lang = entry.target.getAttribute('lang');
-        if (!statsAnimationTriggered[lang]) {
-          statsAnimationTriggered[lang] = true;
-          stopStatsAnimation(lang);
-          statsObserver.unobserve(entry.target);
-        }
+  const titleObserver=new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.style.animationPlayState='running';
+        titleObserver.unobserve(entry.target);
       }
     });
-  }, {
-    threshold: 0.3,
-    rootMargin: '0px'
-  });
+  },{threshold:0.2,rootMargin:'0px 0px -100px 0px'});
 
-  // Language toggle
-  function switchLang(lang) {
-    if (lang === 'es') {
+  function switchLang(lang){
+    if(lang==='es'){
       document.body.classList.add('spanish');
       document.querySelectorAll('.lang-btn')[0].classList.remove('active');
       document.querySelectorAll('.lang-btn')[1].classList.add('active');
-      
-      // Trigger Spanish stats animation if not already triggered
-      const spanishStats = document.querySelector('.hero-stats-preview[lang="es"]');
-      if (spanishStats && !statsAnimationTriggered.es) {
-        statsObserver.observe(spanishStats);
-      }
-    } else {
+    }else{
       document.body.classList.remove('spanish');
       document.querySelectorAll('.lang-btn')[0].classList.add('active');
       document.querySelectorAll('.lang-btn')[1].classList.remove('active');
-      
-      // Trigger English stats animation if not already triggered
-      const englishStats = document.querySelector('.hero-stats-preview[lang="en"]');
-      if (englishStats && !statsAnimationTriggered.en) {
-        statsObserver.observe(englishStats);
-      }
     }
   }
-  
-  // Scroll to top
-  function scrollToTop(e) {
-    e.preventDefault();
-    window.scrollTo({top: 0, behavior: 'smooth'});
+
+  function selectCard(card){
+    const allCards=document.querySelectorAll('.pricing-card');
+    const currentLang=document.body.classList.contains('spanish')?'es':'en';
+    
+    allCards.forEach(c=>{
+      if(c.lang===currentLang){
+        c.classList.remove('selected');
+      }
+    });
+    
+    card.classList.add('selected');
   }
 
-  // Initialize
-  document.addEventListener('DOMContentLoaded', () => {
-    // Ensure we're at top
-    window.scrollTo(0, 0);
-    
-    const fadeElements = document.querySelectorAll('.fade-in, .fade-in-slow');
-    fadeElements.forEach(el => {
-      el.style.animationPlayState = 'paused';
+  let scrollTimeout;
+  window.addEventListener('scroll',()=>{
+    clearTimeout(scrollTimeout);
+    scrollTimeout=setTimeout(()=>{
+      const sticky=document.getElementById('stickyCTA');
+      if(window.scrollY>600){
+        sticky.classList.add('visible');
+      }else{
+        sticky.classList.remove('visible');
+      }
+    },50);
+  },{passive:true});
+
+  const statsObserver=new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        const stats=entry.target.querySelectorAll('.stat-value');
+        stats.forEach((stat,index)=>{
+          setTimeout(()=>{
+            stat.classList.add('spinning');
+            setTimeout(()=>{
+              stat.textContent=stat.getAttribute('data-value');
+              stat.classList.remove('spinning');
+            },1500);
+          },index*150);
+        });
+        statsObserver.unobserve(entry.target);
+      }
+    });
+  },{threshold:0.3});
+
+  document.addEventListener('DOMContentLoaded',()=>{
+    const fadeElements=document.querySelectorAll('.fade-in');
+    fadeElements.forEach(el=>{
+      el.style.animationPlayState='paused';
       observer.observe(el);
     });
     
-    // Observe both English and Spanish stats sections
-    const englishStats = document.querySelector('.hero-stats-preview[lang="en"]');
-    const spanishStats = document.querySelector('.hero-stats-preview[lang="es"]');
+    const titles=document.querySelectorAll('.section-title');
+    titles.forEach(title=>{
+      titleObserver.observe(title);
+    });
     
-    if (englishStats) {
-      statsObserver.observe(englishStats);
-    }
-    if (spanishStats) {
-      statsObserver.observe(spanishStats);
-    }
+    const cards=document.querySelectorAll('.pricing-card,.project-card');
+    cards.forEach((card,index)=>{
+      card.style.animationPlayState='paused';
+      card.style.animationDelay=`${index*0.08}s`;
+      observer.observe(card);
+    });
+    
+    document.querySelectorAll('.hero-stats').forEach(stats=>{
+      statsObserver.observe(stats);
+    });
   });
   </script>
 </body>
