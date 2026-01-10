@@ -1413,5 +1413,18 @@ body.spanish [lang="en"]{display:none}
     });
   });
   </script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  const footerLogo = document.querySelector('.footer-logo, .footer .snrg-logo-animated, .footer .logo');
+  if(footerLogo){
+    footerLogo.style.display = 'block';
+    footerLogo.style.opacity = '1';
+    footerLogo.style.visibility = 'visible';
+    footerLogo.style.transform = 'none';
+  }
+});
+</script>
+
 </body>
 </html>
