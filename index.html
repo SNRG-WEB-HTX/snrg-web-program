@@ -2,62 +2,12 @@
 <html lang="en">
 <head>
 <link rel="canonical" href="https://snrgweb.com/"/>
-<link rel="alternate" href="https://snrgweb.com/" hreflang="en"/>
-<link rel="alternate" href="https://snrgweb.com/?lang=es" hreflang="es"/>
-<link rel="alternate" href="https://snrgweb.com/" hreflang="x-default"/>
 <link rel="preconnect" href="https://api.fontshare.com">
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"/>
-
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@graph":[
-    {
-      "@type":"Organization",
-      "@id":"https://snrgweb.com/#organization",
-      "name":"SNRG Web",
-      "alternateName":"PARKING HTX Community Outreach",
-      "url":"https://snrgweb.com/",
-      "logo":"https://snrgweb.com/snrg-logo.png",
-      "sameAs":["https://www.upwork.com/freelancers/bobbyfrilot"],
-      "address":{
-        "@type":"PostalAddress",
-        "addressLocality":"Houston",
-        "addressRegion":"TX",
-        "postalCode":"77001",
-        "addressCountry":"US"
-      }
-    },
-    {
-      "@type":"LocalBusiness",
-      "@id":"https://snrgweb.com/#localbusiness",
-      "name":"SNRG Web - PARKING HTX Community Outreach",
-      "image":"https://snrgweb.com/snrg-logo.png",
-      "url":"https://snrgweb.com/",
-      "description":"Community-driven web development for Houston entrepreneurs and small businesses.",
-      "areaServed":{"@type":"City","name":"Houston","containedIn":{"@type":"State","name":"Texas"}},
-      "address":{"@type":"PostalAddress","addressLocality":"Houston","addressRegion":"TX","postalCode":"77001","addressCountry":"US"},
-      "geo":{"@type":"GeoCoordinates","latitude":"29.7604","longitude":"-95.3698"},
-      "priceRange":"$",
-      "makesOffer":[
-        {"@type":"Offer","name":"Managed Website Service","price":"75","priceCurrency":"USD"},
-        {"@type":"Offer","name":"Website Ownership","price":"285","priceCurrency":"USD"}
-      ]
-    }
-  ]
-}
-</script>
-
 <meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Houston Small Business Websites | PARKING HTX Community Outreach | SNRG Web</title>
-<meta name="description" content="PARKING HTX community outreach removes barriers for Houston entrepreneurs with enterprise-grade websites. From $50/mo."/>
-<meta name="keywords" content="Houston small business websites, Houston entrepreneur web design, parking management websites, parking operator websites, real estate website design Houston, computer repair websites"/>
-<meta property="og:type" content="website"/>
-<meta property="og:url" content="https://snrgweb.com/"/>
-<meta property="og:title" content="SNRG Web — Enterprise Websites for Houston Entrepreneurs"/>
-<meta property="og:description" content="PARKING HTX community outreach providing professional websites to Houston small businesses."/>
-<meta property="og:image" content="https://snrgweb.com/hero-preview.jpg"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5,user-scalable=yes"/>
+<title>Houston Small Business Websites | SNRG Web</title>
+<meta name="description" content="Enterprise websites for Houston entrepreneurs. From $50/mo."/>
 
 <link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,900,500,400,800,600&display=swap" rel="stylesheet">
 
@@ -71,19 +21,10 @@
   --red:#FF2A2A;
   --red-light:#FF5252;
   --border:#E5E7EB;
-  --space-2xs:4px;
-  --space-xs:8px;
-  --space-sm:12px;
-  --space-md:16px;
-  --space-lg:24px;
-  --space-xl:32px;
-  --space-2xl:48px;
-  --space-3xl:64px;
-  --space-4xl:96px;
 }
 
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;overflow-x:hidden}
+html{scroll-behavior:auto;-webkit-overflow-scrolling:touch}
 
 body{
   font-family:'Satoshi',system-ui,-apple-system,sans-serif;
@@ -92,12 +33,12 @@ body{
   line-height:1.6;
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
-  text-rendering:optimizeLegibility;
-  font-kerning:normal;
   font-weight:400;
   letter-spacing:-0.011em;
   overflow-x:hidden;
   font-size:16px;
+  min-height:100vh;
+  position:relative;
 }
 
 body:not(.spanish) [lang="es"]{display:none}
@@ -108,12 +49,9 @@ body.spanish [lang="en"]{display:none}
     animation-duration:0.01ms!important;
     animation-iteration-count:1!important;
     transition-duration:0.01ms!important;
-    scroll-behavior:auto!important;
   }
-  .snrg-logo-line,.animated-bg,.animated-bg::before,.animated-bg::after{transform:none!important;animation:none!important}
 }
 
-/* Animated Background System */
 .animated-bg{
   position:absolute;
   inset:0;
@@ -150,84 +88,10 @@ body.spanish [lang="en"]{display:none}
   animation:floatSlow 30s ease-in-out infinite reverse;
 }
 
-.pricing .animated-bg::before{
-  width:700px;
-  height:700px;
-  background:radial-gradient(circle,rgba(15,17,21,0.03),transparent);
-  top:-250px;
-  left:-200px;
-  animation:floatMedium 20s ease-in-out infinite;
-}
-
-.pricing .animated-bg::after{
-  width:550px;
-  height:550px;
-  background:radial-gradient(circle,rgba(255,42,42,0.04),transparent);
-  bottom:-200px;
-  right:-150px;
-  animation:floatMedium 25s ease-in-out infinite reverse;
-}
-
-.comparison .animated-bg::before{
-  width:650px;
-  height:650px;
-  background:radial-gradient(circle,rgba(255,42,42,0.05),transparent);
-  top:50%;
-  left:-200px;
-  animation:floatSlow 28s ease-in-out infinite;
-}
-
-.comparison .animated-bg::after{
-  width:600px;
-  height:600px;
-  background:radial-gradient(circle,rgba(15,17,21,0.02),transparent);
-  bottom:10%;
-  right:-180px;
-  animation:floatSlow 32s ease-in-out infinite reverse;
-}
-
-.projects .animated-bg::before{
-  width:800px;
-  height:800px;
-  background:radial-gradient(circle,rgba(15,17,21,0.025),transparent);
-  top:-300px;
-  right:-250px;
-  animation:floatMedium 22s ease-in-out infinite;
-}
-
-.projects .animated-bg::after{
-  width:700px;
-  height:700px;
-  background:radial-gradient(circle,rgba(255,42,42,0.03),transparent);
-  bottom:-250px;
-  left:-200px;
-  animation:floatMedium 27s ease-in-out infinite reverse;
-}
-
-.final-cta .animated-bg::before{
-  width:900px;
-  height:900px;
-  background:radial-gradient(circle,rgba(255,42,42,0.06),transparent);
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  animation:pulse 15s ease-in-out infinite;
-}
-
 @keyframes floatSlow{
   0%,100%{transform:translate(0,0) scale(1)}
   33%{transform:translate(30px,-30px) scale(1.05)}
   66%{transform:translate(-20px,20px) scale(0.95)}
-}
-
-@keyframes floatMedium{
-  0%,100%{transform:translate(0,0) rotate(0deg)}
-  50%{transform:translate(40px,30px) rotate(5deg)}
-}
-
-@keyframes pulse{
-  0%,100%{transform:translate(-50%,-50%) scale(1);opacity:0.06}
-  50%{transform:translate(-50%,-50%) scale(1.1);opacity:0.08}
 }
 
 .lang-bar{
@@ -236,10 +100,10 @@ body.spanish [lang="en"]{display:none}
   left:0;
   right:0;
   background:rgba(255,255,255,0.92);
-  backdrop-filter:blur(20px) saturate(180%);
-  -webkit-backdrop-filter:blur(20px) saturate(180%);
+  backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);
   border-bottom:1px solid rgba(0,0,0,0.06);
-  padding:14px 24px;
+  padding:14px 20px;
   display:flex;
   justify-content:flex-end;
   gap:8px;
@@ -255,31 +119,35 @@ body.spanish [lang="en"]{display:none}
   font-size:13px;
   font-weight:600;
   cursor:pointer;
-  transition:all 0.2s cubic-bezier(0.4,0,0.2,1);
+  transition:all 0.2s;
 }
 
-.lang-btn:hover{border-color:var(--red);color:var(--ink);transform:translateY(-1px)}
-.lang-btn.active{background:var(--red);border-color:var(--red);color:var(--white);box-shadow:0 0 0 4px rgba(255,42,42,0.12)}
+.lang-btn:hover{border-color:var(--red);color:var(--ink)}
+.lang-btn.active{background:var(--red);border-color:var(--red);color:var(--white)}
 
 .container{
   max-width:1320px;
   margin:0 auto;
-  padding:0 clamp(24px,5vw,48px);
+  padding:0 clamp(20px,5vw,48px);
   position:relative;
   z-index:1;
 }
 
 .hero{
   min-height:100vh;
+  min-height:100dvh;
   display:flex;
   align-items:center;
   justify-content:center;
-  padding:120px 0 80px;
+  padding:100px 0 60px;
   position:relative;
   overflow:hidden;
 }
 
-.hero-wrap{text-align:center}
+.hero-wrap{
+  text-align:center;
+  width:100%;
+}
 
 .hero-content{
   opacity:0;
@@ -293,10 +161,10 @@ body.spanish [lang="en"]{display:none}
 }
 
 .snrg-logo-animated{
-  width:clamp(320px,50vw,520px);
+  width:clamp(260px,70vw,520px);
   aspect-ratio:1/1;
-  margin:0 auto 56px;
-  border-radius:32px;
+  margin:0 auto clamp(32px,8vw,56px);
+  border-radius:clamp(20px,4vw,32px);
   position:relative;
   display:flex;
   flex-direction:column;
@@ -335,7 +203,7 @@ body.spanish [lang="en"]{display:none}
   position:absolute;
   inset:10px;
   background:var(--white);
-  border-radius:26px;
+  border-radius:clamp(16px,3.5vw,26px);
   z-index:0;
 }
 
@@ -345,7 +213,7 @@ body.spanish [lang="en"]{display:none}
   inset:18px;
   background:var(--white);
   border:4px solid var(--ink);
-  border-radius:20px;
+  border-radius:clamp(12px,3vw,20px);
   z-index:1;
 }
 
@@ -361,19 +229,19 @@ body.spanish [lang="en"]{display:none}
 }
 
 .snrg-logo-text{
-  font-family:'Satoshi',system-ui,sans-serif;
+  font-family:'Satoshi',sans-serif;
   font-weight:900;
   color:var(--ink);
   letter-spacing:-0.05em;
   line-height:1;
 }
 
-.snrg-logo-top,.snrg-logo-bottom{font-size:clamp(110px,17vw,170px)}
+.snrg-logo-top,.snrg-logo-bottom{font-size:clamp(90px,17vw,170px)}
 
 .snrg-logo-line-wrap{
   width:68%;
-  height:7px;
-  margin:6px 0;
+  height:clamp(5px,1.5vw,7px);
+  margin:clamp(4px,1vw,6px) 0;
   position:relative;
 }
 
@@ -391,34 +259,37 @@ body.spanish [lang="en"]{display:none}
 @keyframes snrgDrawLine{to{transform:scaleX(1)}}
 
 .hero-title{
-  font-size:clamp(36px,6vw,72px);
+  font-size:clamp(28px,7vw,72px);
   font-weight:900;
   letter-spacing:-0.045em;
-  line-height:1.05;
-  margin:0 auto var(--space-lg);
+  line-height:1.15;
+  margin:0 auto clamp(16px,3vw,24px);
   max-width:920px;
-  word-wrap:break-word;
-  overflow-wrap:break-word;
-  hyphens:auto;
 }
 
+.hero-title br{display:block}
+
 .hero-subtitle{
-  font-size:clamp(18px,2.2vw,22px);
+  font-size:clamp(14px,3.8vw,22px);
   color:var(--slate);
   font-weight:500;
   max-width:760px;
-  margin:0 auto var(--space-2xl);
+  margin:0 auto clamp(24px,5vw,48px);
   line-height:1.55;
-  word-wrap:break-word;
-  overflow-wrap:break-word;
   display:flex;
   align-items:center;
   justify-content:center;
   flex-wrap:wrap;
-  gap:var(--space-md);
+  gap:clamp(10px,2.5vw,16px);
+  row-gap:clamp(8px,2vw,12px);
 }
 
-.hero-subtitle span{display:flex;align-items:center;gap:var(--space-md)}
+.hero-subtitle span{
+  display:flex;
+  align-items:center;
+  gap:clamp(10px,2.5vw,16px);
+  white-space:nowrap;
+}
 
 .dot-separator{
   width:6px;
@@ -426,17 +297,12 @@ body.spanish [lang="en"]{display:none}
   background:var(--red);
   border-radius:50%;
   box-shadow:0 0 12px rgba(255,42,42,0.6);
-  animation:dotPulse 2s ease-in-out infinite;
-}
-
-@keyframes dotPulse{
-  0%,100%{opacity:1;transform:scale(1)}
-  50%{opacity:0.7;transform:scale(1.2)}
+  flex-shrink:0;
 }
 
 .hero-cta-group{
   display:flex;
-  gap:20px;
+  gap:clamp(12px,3vw,20px);
   justify-content:center;
   flex-wrap:wrap;
 }
@@ -447,11 +313,11 @@ body.spanish [lang="en"]{display:none}
   align-items:center;
   justify-content:center;
   text-decoration:none;
-  font-size:16px;
+  font-size:clamp(14px,3.5vw,16px);
   font-weight:700;
-  padding:16px 40px;
+  padding:clamp(12px,3vw,16px) clamp(24px,6vw,40px);
   border-radius:12px;
-  transition:all 0.25s cubic-bezier(0.4,0,0.2,1);
+  transition:all 0.25s;
   cursor:pointer;
   border:2px solid transparent;
   white-space:nowrap;
@@ -463,10 +329,9 @@ body.spanish [lang="en"]{display:none}
   box-shadow:0 4px 16px rgba(255,42,42,0.25);
 }
 
-.cta-primary:hover{
+.cta-primary:active{
   background:var(--red-light);
   transform:translateY(-2px);
-  box-shadow:0 8px 24px rgba(255,42,42,0.35);
 }
 
 .cta-secondary{
@@ -475,20 +340,19 @@ body.spanish [lang="en"]{display:none}
   border-color:var(--border);
 }
 
-.cta-secondary:hover{
+.cta-secondary:active{
   border-color:var(--red);
   color:var(--red);
   transform:translateY(-2px);
-  box-shadow:0 4px 16px rgba(255,42,42,0.12);
 }
 
 .hero-stats{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:var(--space-3xl);
+  gap:clamp(24px,6vw,64px);
   max-width:900px;
-  margin:var(--space-3xl) auto 0;
-  padding-top:var(--space-3xl);
+  margin:clamp(32px,6vw,64px) auto 0;
+  padding-top:clamp(32px,6vw,64px);
   border-top:2px solid var(--border);
 }
 
@@ -496,37 +360,29 @@ body.spanish [lang="en"]{display:none}
 
 .stat-value{
   display:block;
-  font-size:clamp(40px,5vw,56px);
+  font-size:clamp(32px,8vw,56px);
   font-weight:900;
   color:var(--red);
   letter-spacing:-0.045em;
   line-height:1;
-  margin-bottom:var(--space-sm);
-  transition:all 0.3s cubic-bezier(0.4,0,0.2,1);
-}
-
-.stat-value.spinning{animation:spinStat 1.5s cubic-bezier(0.4,0,0.2,1)}
-
-@keyframes spinStat{
-  0%,100%{transform:rotateX(0deg);opacity:1}
-  50%{transform:rotateX(180deg);opacity:0.3}
+  margin-bottom:8px;
 }
 
 .stat-label{
   display:block;
-  font-size:clamp(14px,1.8vw,16px);
+  font-size:clamp(12px,3vw,16px);
   color:var(--slate);
   font-weight:500;
   line-height:1.4;
 }
 
 .section-title{
-  font-size:clamp(32px,5vw,56px);
+  font-size:clamp(26px,6.5vw,56px);
   font-weight:900;
   letter-spacing:-0.04em;
   line-height:1.15;
   text-align:center;
-  margin-bottom:var(--space-3xl);
+  margin-bottom:clamp(32px,6vw,64px);
   color:var(--ink);
   opacity:0;
   transform:translateY(40px) scale(0.95);
@@ -539,16 +395,16 @@ body.spanish [lang="en"]{display:none}
 }
 
 .section-subtitle{
-  font-size:clamp(16px,2vw,20px);
+  font-size:clamp(14px,3.5vw,20px);
   color:var(--slate);
   text-align:center;
   max-width:720px;
-  margin:0 auto var(--space-3xl);
+  margin:0 auto clamp(32px,6vw,64px);
   line-height:1.6;
 }
 
 .pricing{
-  padding:var(--space-4xl) 0;
+  padding:clamp(48px,10vw,96px) 0;
   background:var(--white);
   position:relative;
   overflow:hidden;
@@ -557,7 +413,7 @@ body.spanish [lang="en"]{display:none}
 .pricing-grid{
   display:grid;
   grid-template-columns:repeat(2,1fr);
-  gap:var(--space-xl);
+  gap:clamp(20px,4vw,32px);
   max-width:1000px;
   margin:0 auto;
   align-items:stretch;
@@ -566,9 +422,9 @@ body.spanish [lang="en"]{display:none}
 .pricing-card{
   background:var(--pearl);
   border:3px solid var(--border);
-  border-radius:24px;
-  padding:var(--space-2xl);
-  transition:all 0.3s cubic-bezier(0.4,0,0.2,1);
+  border-radius:clamp(16px,4vw,24px);
+  padding:clamp(20px,5vw,32px);
+  transition:all 0.3s;
   cursor:pointer;
   position:relative;
   display:flex;
@@ -576,7 +432,7 @@ body.spanish [lang="en"]{display:none}
   min-height:620px;
 }
 
-.pricing-card:hover{
+.pricing-card:active{
   transform:translateY(-6px);
   box-shadow:0 16px 48px rgba(0,0,0,0.08);
 }
@@ -597,32 +453,32 @@ body.spanish [lang="en"]{display:none}
   padding:6px 12px;
   border-radius:999px;
   display:inline-block;
-  margin-bottom:var(--space-md);
+  margin-bottom:16px;
   align-self:flex-start;
 }
 
 .pricing-name{
-  font-size:clamp(22px,3vw,28px);
+  font-size:clamp(20px,4.5vw,28px);
   font-weight:800;
   color:var(--ink);
-  margin-bottom:var(--space-md);
+  margin-bottom:clamp(12px,3vw,16px);
   letter-spacing:-0.02em;
   line-height:1.2;
 }
 
 .pricing-price{
-  font-size:clamp(48px,6vw,64px);
+  font-size:clamp(40px,10vw,64px);
   font-weight:900;
   color:var(--ink);
   letter-spacing:-0.045em;
   line-height:1;
-  margin-bottom:var(--space-xs);
+  margin-bottom:8px;
 }
 
 .pricing-term{
-  font-size:16px;
+  font-size:clamp(14px,3.5vw,16px);
   color:var(--slate);
-  margin-bottom:var(--space-xl);
+  margin-bottom:clamp(16px,4vw,32px);
   font-weight:500;
   line-height:1.5;
 }
@@ -633,11 +489,10 @@ body.spanish [lang="en"]{display:none}
 }
 
 .pricing-desc{
-  font-size:15px;
+  font-size:clamp(13px,3.2vw,15px);
   color:var(--slate-light);
-  margin-bottom:var(--space-xl);
+  margin-bottom:clamp(16px,4vw,32px);
   line-height:1.6;
-  max-width:100%;
   word-wrap:break-word;
   overflow-wrap:break-word;
   hyphens:auto;
@@ -645,17 +500,17 @@ body.spanish [lang="en"]{display:none}
 
 .pricing-features{
   list-style:none;
-  margin-bottom:var(--space-xl);
+  margin-bottom:clamp(16px,4vw,32px);
   flex-grow:1;
 }
 
 .pricing-feature{
-  font-size:15px;
+  font-size:clamp(13px,3.2vw,15px);
   color:var(--ink);
   line-height:1.9;
   padding-left:24px;
   position:relative;
-  margin-bottom:var(--space-xs);
+  margin-bottom:8px;
   font-weight:500;
 }
 
@@ -672,11 +527,11 @@ body.spanish [lang="en"]{display:none}
   width:100%;
   text-align:center;
   margin-top:auto;
-  padding-top:var(--space-md);
+  padding-top:16px;
 }
 
 .comparison{
-  padding:var(--space-4xl) 0;
+  padding:clamp(48px,10vw,96px) 0;
   background:var(--pearl);
   position:relative;
   overflow:hidden;
@@ -686,7 +541,7 @@ body.spanish [lang="en"]{display:none}
   max-width:1100px;
   margin:0 auto;
   background:var(--white);
-  border-radius:24px;
+  border-radius:clamp(16px,4vw,24px);
   overflow:hidden;
   border:2px solid var(--border);
   box-shadow:0 8px 32px rgba(0,0,0,0.04);
@@ -696,7 +551,6 @@ body.spanish [lang="en"]{display:none}
   display:grid;
   grid-template-columns:2fr 1fr 1fr;
   border-bottom:1px solid var(--border);
-  transition:background 0.2s cubic-bezier(0.4,0,0.2,1);
 }
 
 .table-row:last-child{border-bottom:none}
@@ -706,19 +560,19 @@ body.spanish [lang="en"]{display:none}
 .table-row:first-child .table-cell{
   color:var(--white);
   font-weight:800;
-  font-size:15px;
+  font-size:clamp(13px,3vw,15px);
   text-transform:uppercase;
   letter-spacing:0.06em;
-  padding:var(--space-lg) var(--space-xl);
+  padding:clamp(12px,3vw,24px) clamp(16px,4vw,32px);
 }
 
 .table-cell{
-  padding:var(--space-lg) var(--space-xl);
+  padding:clamp(12px,3vw,24px) clamp(16px,4vw,32px);
   display:flex;
   align-items:center;
   justify-content:center;
   text-align:center;
-  font-size:16px;
+  font-size:clamp(14px,3.5vw,16px);
   color:var(--slate);
   border-right:1px solid var(--border);
   font-weight:600;
@@ -730,30 +584,29 @@ body.spanish [lang="en"]{display:none}
   justify-content:flex-start;
   font-weight:700;
   color:var(--ink);
-  font-size:17px;
-  padding-left:var(--space-2xl);
+  font-size:clamp(15px,3.8vw,17px);
 }
 
 .table-cell.highlight{
   color:var(--red);
   font-weight:800;
-  font-size:17px;
+  font-size:clamp(15px,3.8vw,17px);
 }
 
 .checkmark{
   color:var(--red);
-  font-size:28px;
+  font-size:clamp(24px,5vw,28px);
   font-weight:700;
 }
 
 .x{
   color:var(--slate-light);
-  font-size:24px;
+  font-size:clamp(20px,4.5vw,24px);
   opacity:0.35;
 }
 
 .projects{
-  padding:var(--space-4xl) 0;
+  padding:clamp(48px,10vw,96px) 0 clamp(100px,20vw,96px);
   background:var(--white);
   position:relative;
   overflow:hidden;
@@ -762,7 +615,7 @@ body.spanish [lang="en"]{display:none}
 .projects-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:var(--space-xl);
+  gap:clamp(20px,4vw,32px);
   max-width:1200px;
   margin:0 auto;
 }
@@ -770,9 +623,9 @@ body.spanish [lang="en"]{display:none}
 .project-card{
   background:var(--pearl);
   border:2px solid var(--border);
-  border-radius:20px;
-  padding:var(--space-xl);
-  transition:all 0.25s cubic-bezier(0.4,0,0.2,1);
+  border-radius:clamp(16px,3.5vw,20px);
+  padding:clamp(20px,5vw,32px);
+  transition:all 0.25s;
   text-decoration:none;
   display:flex;
   flex-direction:column;
@@ -781,19 +634,18 @@ body.spanish [lang="en"]{display:none}
   cursor:pointer;
 }
 
-.project-card:hover{
+.project-card:active{
   transform:translateY(-4px);
   border-color:var(--red);
   box-shadow:0 12px 40px rgba(255,42,42,0.12);
 }
 
 .project-title{
-  font-size:clamp(20px,3vw,24px);
+  font-size:clamp(17px,4.2vw,24px);
   font-weight:800;
   color:var(--ink);
-  margin-bottom:var(--space-sm);
+  margin-bottom:clamp(8px,2vw,12px);
   letter-spacing:-0.02em;
-  text-align:center;
   line-height:1.3;
   word-wrap:break-word;
   overflow-wrap:break-word;
@@ -801,13 +653,11 @@ body.spanish [lang="en"]{display:none}
 }
 
 .project-desc{
-  font-size:15px;
+  font-size:clamp(13px,3.2vw,15px);
   color:var(--slate);
   line-height:1.6;
-  margin-bottom:var(--space-md);
+  margin-bottom:clamp(12px,3vw,16px);
   flex-grow:1;
-  text-align:center;
-  max-width:100%;
   word-wrap:break-word;
   overflow-wrap:break-word;
   hyphens:auto;
@@ -815,14 +665,14 @@ body.spanish [lang="en"]{display:none}
 
 .project-tags{
   display:flex;
-  gap:var(--space-xs);
+  gap:8px;
   flex-wrap:wrap;
   justify-content:center;
   margin-top:auto;
 }
 
 .project-tag{
-  font-size:12px;
+  font-size:clamp(10px,2.5vw,12px);
   font-weight:600;
   color:var(--red);
   background:rgba(255,42,42,0.08);
@@ -833,7 +683,7 @@ body.spanish [lang="en"]{display:none}
 }
 
 .final-cta{
-  padding:var(--space-4xl) 0;
+  padding:clamp(48px,10vw,96px) 0 clamp(100px,20vw,96px);
   background:var(--pearl);
   text-align:center;
   position:relative;
@@ -841,11 +691,11 @@ body.spanish [lang="en"]{display:none}
 }
 
 .final-cta h2{
-  font-size:clamp(32px,5vw,56px);
+  font-size:clamp(26px,6.5vw,56px);
   font-weight:900;
   letter-spacing:-0.04em;
   line-height:1.2;
-  margin-bottom:var(--space-2xl);
+  margin-bottom:clamp(32px,6vw,48px);
   max-width:800px;
   margin-left:auto;
   margin-right:auto;
@@ -853,32 +703,34 @@ body.spanish [lang="en"]{display:none}
 
 .sticky-cta{
   position:fixed;
-  bottom:-100px;
+  bottom:-200px;
   left:0;
   right:0;
-  background:rgba(255,255,255,0.95);
+  background:rgba(255,255,255,0.98);
   backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);
   border-top:1px solid var(--border);
-  padding:var(--space-md) var(--space-lg);
+  padding:12px 16px;
   display:flex;
   align-items:center;
   justify-content:center;
-  gap:var(--space-lg);
+  gap:12px;
   z-index:9998;
   transition:bottom 0.3s cubic-bezier(0.4,0,0.2,1);
-  box-shadow:0 -4px 24px rgba(0,0,0,0.08);
+  box-shadow:0 -4px 24px rgba(0,0,0,0.1);
 }
 
 .sticky-cta.visible{bottom:0}
 
 .sticky-text{
-  font-size:17px;
+  font-size:clamp(13px,3.2vw,17px);
   font-weight:700;
   color:var(--ink);
+  display:none;
 }
 
 .footer{
-  padding:var(--space-3xl) 0;
+  padding:clamp(32px,6vw,64px) 0 clamp(120px,24vw,80px);
   background:var(--white);
   border-top:2px solid var(--border);
   text-align:center;
@@ -886,47 +738,50 @@ body.spanish [lang="en"]{display:none}
 }
 
 .footer-logo{
-  max-width:280px;
+  max-width:clamp(180px,45vw,280px);
   height:auto;
-  margin:0 auto var(--space-lg);
+  margin:0 auto clamp(16px,4vw,24px);
   display:block;
+  filter:none;
+  box-shadow:none;
+  -webkit-filter:none;
 }
 
 .footer-tagline{
-  font-size:17px;
+  font-size:clamp(13px,3.2vw,17px);
   color:var(--ink);
-  margin-bottom:var(--space-xl);
+  margin-bottom:clamp(20px,5vw,32px);
   font-weight:700;
   letter-spacing:-0.015em;
 }
 
 .footer-links{
   display:flex;
-  gap:var(--space-xl);
+  gap:clamp(16px,4vw,32px);
   justify-content:center;
   flex-wrap:wrap;
-  margin-bottom:var(--space-lg);
+  margin-bottom:clamp(16px,4vw,24px);
 }
 
 .footer-link{
   color:var(--slate);
   text-decoration:none;
-  font-size:15px;
+  font-size:clamp(13px,3.2vw,15px);
   font-weight:600;
-  transition:color 0.2s cubic-bezier(0.4,0,0.2,1);
+  transition:color 0.2s;
 }
 
-.footer-link:hover{color:var(--red)}
+.footer-link:active{color:var(--red)}
 
 .footer-copyright{
-  font-size:14px;
+  font-size:clamp(12px,2.8vw,14px);
   color:var(--slate);
   font-weight:500;
 }
 
 .fade-in{
   opacity:0;
-  transform:translateY(56px);
+  transform:translateY(clamp(32px,8vw,56px));
   animation:fadeRise 0.9s cubic-bezier(0.16,1,0.3,1) forwards;
   animation-play-state:paused;
 }
@@ -935,12 +790,34 @@ body.spanish [lang="en"]{display:none}
   to{opacity:1;transform:translateY(0)}
 }
 
+@media(min-width:769px){
+  .sticky-text{display:block}
+  .cta-primary:hover{
+    background:var(--red-light);
+    transform:translateY(-2px);
+    box-shadow:0 8px 24px rgba(255,42,42,0.35);
+  }
+  .cta-secondary:hover{
+    border-color:var(--red);
+    color:var(--red);
+    transform:translateY(-2px);
+  }
+  .pricing-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 16px 48px rgba(0,0,0,0.08);
+  }
+  .project-card:hover{
+    transform:translateY(-4px);
+    border-color:var(--red);
+    box-shadow:0 12px 40px rgba(255,42,42,0.12);
+  }
+  .footer-link:hover{color:var(--red)}
+}
+
 @media(max-width:1024px){
   .hero-stats{
     grid-template-columns:1fr;
-    gap:var(--space-xl);
-    padding-top:var(--space-2xl);
-    margin-top:var(--space-2xl);
+    gap:clamp(20px,5vw,32px);
   }
   .pricing-grid{
     grid-template-columns:1fr;
@@ -955,65 +832,92 @@ body.spanish [lang="en"]{display:none}
 }
 
 @media(max-width:768px){
-  .snrg-logo-animated{
-    width:clamp(280px,80vw,400px);
-    margin-bottom:var(--space-2xl);
+  .hero{
+    padding:80px 0 40px;
   }
-  .hero{padding:100px 0 60px}
+  
   .hero-subtitle{
-    flex-direction:column;
-    gap:var(--space-sm);
+    flex-direction:row;
+    justify-content:center;
   }
-  .projects-grid{grid-template-columns:1fr}
-  .comparison-table{display:block}
+  
+  .projects-grid{
+    grid-template-columns:1fr;
+  }
+  
+  .comparison-table{
+    display:block;
+  }
+  
   .table-row{
     display:grid;
     grid-template-columns:1fr;
-    gap:var(--space-xs);
-    padding:var(--space-md);
-    margin-bottom:var(--space-md);
+    gap:8px;
+    padding:16px;
+    margin-bottom:16px;
     background:var(--pearl);
     border:1px solid var(--border);
     border-radius:16px;
   }
-  .table-row:first-child{display:none}
+  
+  .table-row:first-child{
+    display:none;
+  }
+  
   .table-cell{
     border:none;
-    padding:var(--space-sm);
+    padding:12px;
     justify-content:space-between;
     flex-direction:row;
   }
+  
   .table-cell:first-child{
     font-weight:700;
     color:var(--red);
     text-transform:uppercase;
     border-bottom:1px solid var(--border);
-    padding-bottom:var(--space-sm);
-    margin-bottom:var(--space-xs);
+    padding-bottom:12px;
+    margin-bottom:8px;
   }
+  
   .table-cell::before{
     content:attr(data-label);
     font-weight:600;
     color:var(--slate);
     font-size:13px;
   }
-  .table-cell:first-child::before{display:none}
+  
+  .table-cell:first-child::before{
+    display:none;
+  }
+  
   .sticky-cta{
     flex-direction:column;
-    gap:var(--space-sm);
-    padding:var(--space-md);
+    gap:10px;
+    padding:14px 16px 18px;
   }
-  .sticky-text{font-size:15px}
-  .cta{
+  
+  .sticky-cta .cta{
     width:100%;
-    font-size:15px;
-    padding:14px 32px;
+    max-width:100%;
+    padding:14px 28px;
   }
+  
   .footer-links{
     flex-direction:column;
-    gap:var(--space-sm);
+    gap:12px;
   }
-  .footer-logo{max-width:220px}
+}
+
+@media(max-width:480px){
+  .hero-subtitle span:not(:last-child) .dot-separator{
+    display:none;
+  }
+  
+  .hero-subtitle span{
+    width:auto;
+    justify-content:center;
+  }
 }
 </style>
 </head>
@@ -1028,7 +932,7 @@ body.spanish [lang="en"]{display:none}
     <div class="animated-bg"></div>
     <div class="container">
       <div class="hero-wrap">
-        <div class="snrg-logo-animated" aria-label="SNRG Web Logo">
+        <div class="snrg-logo-animated">
           <div class="snrg-logo-content">
             <div class="snrg-logo-text snrg-logo-top">SNRG</div>
             <div class="snrg-logo-line-wrap">
@@ -1039,8 +943,8 @@ body.spanish [lang="en"]{display:none}
         </div>
         
         <div class="hero-content">
-          <h1 class="hero-title" lang="en">Enterprise Websites Built For Houston Entrepreneurs</h1>
-          <h1 class="hero-title" lang="es">Sitios Web Empresariales Para Emprendedores de Houston</h1>
+          <h1 class="hero-title" lang="en">Enterprise Websites For<br>Houston Entrepreneurs</h1>
+          <h1 class="hero-title" lang="es">Sitios Web Empresariales Para<br>Emprendedores de Houston</h1>
           
           <div class="hero-subtitle" lang="en">
             <span>Professional Results<div class="dot-separator"></div></span>
@@ -1097,7 +1001,6 @@ body.spanish [lang="en"]{display:none}
   </section>
 
   <section class="pricing fade-in">
-    <div class="animated-bg"></div>
     <div class="container">
       <h2 class="section-title" lang="en">Built Different. Priced Different.</h2>
       <h2 class="section-title" lang="es">Construido Diferente. Precio Diferente.</h2>
@@ -1109,7 +1012,7 @@ body.spanish [lang="en"]{display:none}
         <div class="pricing-card" onclick="selectCard(this)" lang="en">
           <span class="pricing-badge">Recommended</span>
           <h3 class="pricing-name">Fully Managed Service</h3>
-          <div class="pricing-price">$75<span style="font-size:20px;font-weight:600;color:var(--slate)">/mo</span></div>
+          <div class="pricing-price">$75<span style="font-size:clamp(16px,4vw,20px);font-weight:600;color:var(--slate)">/mo</span></div>
           <p class="pricing-term">then <span class="highlight">$50/mo</span> after 12 months</p>
           <p class="pricing-desc">Complete website management with hosting, maintenance, and updates. We handle everything so you don't have to.</p>
           <ul class="pricing-features">
@@ -1130,7 +1033,7 @@ body.spanish [lang="en"]{display:none}
         <div class="pricing-card" onclick="selectCard(this)" lang="en">
           <span class="pricing-badge">One-Time</span>
           <h3 class="pricing-name">Website Ownership</h3>
-          <div class="pricing-price">$285<span style="font-size:20px;font-weight:600;color:var(--slate)"> flat</span></div>
+          <div class="pricing-price">$285<span style="font-size:clamp(16px,4vw,20px);font-weight:600;color:var(--slate)"> flat</span></div>
           <p class="pricing-term">Option: <span class="highlight">$50/mo</span> fully managed after purchase</p>
           <p class="pricing-desc">Full ownership of your website with all source files. No monthly fees. No hosting included—you handle your own hosting and maintenance.</p>
           <ul class="pricing-features">
@@ -1148,19 +1051,19 @@ body.spanish [lang="en"]{display:none}
         
         <div class="pricing-card" onclick="selectCard(this)" lang="es">
           <span class="pricing-badge">Recomendado</span>
-          <h3 class="pricing-name">Servicio Completamente Administrado</h3>
-          <div class="pricing-price">$75<span style="font-size:20px;font-weight:600;color:var(--slate)">/mes</span></div>
+          <h3 class="pricing-name">Servicio Administrado</h3>
+          <div class="pricing-price">$75<span style="font-size:clamp(16px,4vw,20px);font-weight:600;color:var(--slate)">/mes</span></div>
           <p class="pricing-term">luego <span class="highlight">$50/mes</span> después de 12 meses</p>
-          <p class="pricing-desc">Gestión completa del sitio web con hospedaje, mantenimiento y actualizaciones. Nosotros manejamos todo para que tú no tengas que hacerlo.</p>
+          <p class="pricing-desc">Gestión completa del sitio web con hospedaje, mantenimiento y actualizaciones. Nosotros manejamos todo.</p>
           <ul class="pricing-features">
-            <li class="pricing-feature">Diseño y construcción personalizada</li>
+            <li class="pricing-feature">Diseño personalizado</li>
             <li class="pricing-feature">Diseño responsivo</li>
             <li class="pricing-feature">Hospedaje incluido</li>
             <li class="pricing-feature">5 actualizaciones/mes</li>
             <li class="pricing-feature">Mantenimiento continuo</li>
             <li class="pricing-feature">Optimización SEO</li>
             <li class="pricing-feature">Optimización de velocidad</li>
-            <li class="pricing-feature">Configuración de análisis</li>
+            <li class="pricing-feature">Análisis configurado</li>
           </ul>
           <div class="pricing-cta">
             <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" class="cta cta-primary">Reservar Consulta</a>
@@ -1169,12 +1072,12 @@ body.spanish [lang="en"]{display:none}
         
         <div class="pricing-card" onclick="selectCard(this)" lang="es">
           <span class="pricing-badge">Pago Único</span>
-          <h3 class="pricing-name">Propiedad del Sitio Web</h3>
-          <div class="pricing-price">$285<span style="font-size:20px;font-weight:600;color:var(--slate)"> plano</span></div>
-          <p class="pricing-term">Opción: <span class="highlight">$50/mes</span> completamente administrado después de compra</p>
-          <p class="pricing-desc">Propiedad completa de tu sitio web con todos los archivos fuente. Sin tarifas mensuales. Sin hospedaje incluido—tú manejas tu propio hospedaje y mantenimiento.</p>
+          <h3 class="pricing-name">Propiedad del Sitio</h3>
+          <div class="pricing-price">$285<span style="font-size:clamp(16px,4vw,20px);font-weight:600;color:var(--slate)"> plano</span></div>
+          <p class="pricing-term">Opción: <span class="highlight">$50/mes</span> administrado después de compra</p>
+          <p class="pricing-desc">Propiedad completa de tu sitio web con todos los archivos fuente. Sin tarifas mensuales. Sin hospedaje incluido.</p>
           <ul class="pricing-features">
-            <li class="pricing-feature">Diseño y construcción personalizada</li>
+            <li class="pricing-feature">Diseño personalizado</li>
             <li class="pricing-feature">Diseño responsivo</li>
             <li class="pricing-feature">Optimizado para SEO</li>
             <li class="pricing-feature">Todos los archivos fuente</li>
@@ -1190,7 +1093,6 @@ body.spanish [lang="en"]{display:none}
   </section>
 
   <section class="comparison fade-in">
-    <div class="animated-bg"></div>
     <div class="container">
       <h2 class="section-title" lang="en">The SNRG Difference</h2>
       <h2 class="section-title" lang="es">La Diferencia SNRG</h2>
@@ -1270,13 +1172,12 @@ body.spanish [lang="en"]{display:none}
   </section>
 
   <section class="projects fade-in">
-    <div class="animated-bg"></div>
     <div class="container">
       <h2 class="section-title" lang="en">Recent Work</h2>
       <h2 class="section-title" lang="es">Trabajo Reciente</h2>
       
       <div class="projects-grid">
-        <a href="https://parking-htx-61fb2a.webflow.io/" class="project-card" lang="en" target="_blank" rel="noopener">
+        <a href="https://parking-htx-61fb2a.webflow.io/" class="project-card" lang="en">
           <h3 class="project-title">PARKING HTX</h3>
           <p class="project-desc">QR code parking platform for Houston properties. License plate recognition, digital payments, and event management system.</p>
           <div class="project-tags">
@@ -1285,7 +1186,7 @@ body.spanish [lang="en"]{display:none}
           </div>
         </a>
         
-        <a href="https://kiblers-kollectibles.webflow.io/" class="project-card" lang="en" target="_blank" rel="noopener">
+        <a href="https://kiblers-kollectibles.webflow.io/" class="project-card" lang="en">
           <h3 class="project-title">Kibler's Kollectibles</h3>
           <p class="project-desc">E-commerce platform for Houston collectibles dealer specializing in sports cards and vintage items.</p>
           <div class="project-tags">
@@ -1294,7 +1195,7 @@ body.spanish [lang="en"]{display:none}
           </div>
         </a>
         
-        <a href="https://con-net-graphics.webflow.io/" class="project-card" lang="en" target="_blank" rel="noopener">
+        <a href="https://con-net-graphics.webflow.io/" class="project-card" lang="en">
           <h3 class="project-title">ConNet Graphics</h3>
           <p class="project-desc">Portfolio site for Houston commercial printing company offering vehicle wraps and large format printing.</p>
           <div class="project-tags">
@@ -1303,8 +1204,8 @@ body.spanish [lang="en"]{display:none}
           </div>
         </a>
         
-        <a href="https://tortas-gigantes.webflow.io/" class="project-card" lang="en" target="_blank" rel="noopener">
-          <h3 class="project-title">Tortas Gigantes el Enmascarado</h3>
+        <a href="https://tortas-gigantes.webflow.io/" class="project-card" lang="en">
+          <h3 class="project-title">Tortas Gigantes</h3>
           <p class="project-desc">Restaurant website for Houston Mexican food spot known for authentic tortas and traditional dishes.</p>
           <div class="project-tags">
             <span class="project-tag">Restaurant</span>
@@ -1312,7 +1213,7 @@ body.spanish [lang="en"]{display:none}
           </div>
         </a>
         
-        <a href="https://mr-donuts-kolache.webflow.io/" class="project-card" lang="en" target="_blank" rel="noopener">
+        <a href="https://mr-donuts-kolache.webflow.io/" class="project-card" lang="en">
           <h3 class="project-title">Mr. Donuts & Kolaches</h3>
           <p class="project-desc">Online ordering platform for Houston donut shop with delivery, pickup, and catering options.</p>
           <div class="project-tags">
@@ -1321,35 +1222,35 @@ body.spanish [lang="en"]{display:none}
           </div>
         </a>
         
-        <a href="https://parking-htx-61fb2a.webflow.io/" class="project-card" lang="es" target="_blank" rel="noopener">
+        <a href="https://parking-htx-61fb2a.webflow.io/" class="project-card" lang="es">
           <h3 class="project-title">PARKING HTX</h3>
-          <p class="project-desc">Plataforma de estacionamiento con códigos QR para propiedades de Houston. Reconocimiento de placas, pagos digitales.</p>
+          <p class="project-desc">Plataforma de estacionamiento con códigos QR para propiedades de Houston con reconocimiento de placas.</p>
           <div class="project-tags">
             <span class="project-tag">Plataforma</span>
             <span class="project-tag">SaaS</span>
           </div>
         </a>
         
-        <a href="https://kiblers-kollectibles.webflow.io/" class="project-card" lang="es" target="_blank" rel="noopener">
+        <a href="https://kiblers-kollectibles.webflow.io/" class="project-card" lang="es">
           <h3 class="project-title">Kibler's Kollectibles</h3>
-          <p class="project-desc">Plataforma de comercio electrónico para distribuidor de coleccionables de Houston especializado en tarjetas deportivas.</p>
+          <p class="project-desc">Plataforma de comercio electrónico para distribuidor de coleccionables de Houston.</p>
           <div class="project-tags">
             <span class="project-tag">E-Commerce</span>
             <span class="project-tag">Inventario</span>
           </div>
         </a>
         
-        <a href="https://con-net-graphics.webflow.io/" class="project-card" lang="es" target="_blank" rel="noopener">
+        <a href="https://con-net-graphics.webflow.io/" class="project-card" lang="es">
           <h3 class="project-title">ConNet Graphics</h3>
-          <p class="project-desc">Sitio de portafolio para empresa de impresión comercial de Houston que ofrece rotulación de vehículos.</p>
+          <p class="project-desc">Sitio de portafolio para empresa de impresión comercial de Houston que ofrece rotulación.</p>
           <div class="project-tags">
             <span class="project-tag">Portafolio</span>
             <span class="project-tag">Servicios</span>
           </div>
         </a>
         
-        <a href="https://tortas-gigantes.webflow.io/" class="project-card" lang="es" target="_blank" rel="noopener">
-          <h3 class="project-title">Tortas Gigantes el Enmascarado</h3>
+        <a href="https://tortas-gigantes.webflow.io/" class="project-card" lang="es">
+          <h3 class="project-title">Tortas Gigantes</h3>
           <p class="project-desc">Sitio web de restaurante para lugar de comida mexicana de Houston conocido por tortas auténticas.</p>
           <div class="project-tags">
             <span class="project-tag">Restaurante</span>
@@ -1357,9 +1258,9 @@ body.spanish [lang="en"]{display:none}
           </div>
         </a>
         
-        <a href="https://mr-donuts-kolache.webflow.io/" class="project-card" lang="es" target="_blank" rel="noopener">
+        <a href="https://mr-donuts-kolache.webflow.io/" class="project-card" lang="es">
           <h3 class="project-title">Mr. Donuts & Kolaches</h3>
-          <p class="project-desc">Plataforma de pedidos en línea para tienda de donas de Houston con opciones de entrega y catering.</p>
+          <p class="project-desc">Plataforma de pedidos en línea para tienda de donas de Houston con entrega y catering.</p>
           <div class="project-tags">
             <span class="project-tag">Pedidos</span>
             <span class="project-tag">Catering</span>
@@ -1370,10 +1271,9 @@ body.spanish [lang="en"]{display:none}
   </section>
 
   <section class="final-cta fade-in">
-    <div class="animated-bg"></div>
     <div class="container">
-      <h2 lang="en">Focus on your business.<br/>We'll handle your website.</h2>
-      <h2 lang="es">Enfócate en tu negocio.<br/>Nosotros manejamos tu sitio web.</h2>
+      <h2 lang="en">Focus on your business.<br>We'll handle your website.</h2>
+      <h2 lang="es">Enfócate en tu negocio.<br>Nosotros manejamos tu sitio.</h2>
       
       <div class="hero-cta-group">
         <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" class="cta cta-primary" lang="en">Schedule a Call</a>
@@ -1392,8 +1292,8 @@ body.spanish [lang="en"]{display:none}
     <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" class="cta cta-primary" lang="en">Schedule Call</a>
     <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" class="cta cta-secondary" lang="en">Order on Upwork</a>
     
-    <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" class="cta cta-primary" lang="es">Agendar Llamada</a>
-    <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" class="cta cta-secondary" lang="es">Ordenar en Upwork</a>
+    <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" class="cta cta-primary" lang="es">Agendar</a>
+    <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" class="cta cta-secondary" lang="es">Ordenar</a>
   </div>
 
   <footer class="footer fade-in">
@@ -1401,7 +1301,7 @@ body.spanish [lang="en"]{display:none}
       <img src="snrg_footer_logo.webp" alt="SNRG Web Logo" class="footer-logo">
       
       <p class="footer-tagline" lang="en">PARKING HTX Community Outreach — Removing barriers for Houston entrepreneurs</p>
-      <p class="footer-tagline" lang="es">PARKING HTX Alcance Comunitario — Eliminando barreras para emprendedores de Houston</p>
+      <p class="footer-tagline" lang="es">PARKING HTX Alcance Comunitario — Eliminando barreras para emprendedores</p>
       
       <div class="footer-links">
         <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" class="footer-link" lang="en">Schedule Call</a>
@@ -1416,7 +1316,13 @@ body.spanish [lang="en"]{display:none}
   </footer>
 
   <script>
-  if(history.scrollRestoration)history.scrollRestoration='manual';
+  window.addEventListener('load',()=>{
+    setTimeout(()=>window.scrollTo(0,0),10);
+  });
+  
+  window.addEventListener('beforeunload',()=>{
+    window.scrollTo(0,0);
+  });
   
   const observerOptions={threshold:0.15,rootMargin:'0px 0px -80px 0px'};
   const observer=new IntersectionObserver((entries)=>{
@@ -1436,6 +1342,20 @@ body.spanish [lang="en"]{display:none}
       }
     });
   },{threshold:0.2,rootMargin:'0px 0px -100px 0px'});
+
+  const statsObserver=new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        const stats=entry.target.querySelectorAll('.stat-value');
+        stats.forEach((stat,index)=>{
+          setTimeout(()=>{
+            stat.textContent=stat.getAttribute('data-value');
+          },index*150);
+        });
+        statsObserver.unobserve(entry.target);
+      }
+    });
+  },{threshold:0.3});
 
   function switchLang(lang){
     if(lang==='es'){
@@ -1475,24 +1395,6 @@ body.spanish [lang="en"]{display:none}
     },50);
   },{passive:true});
 
-  const statsObserver=new IntersectionObserver((entries)=>{
-    entries.forEach(entry=>{
-      if(entry.isIntersecting){
-        const stats=entry.target.querySelectorAll('.stat-value');
-        stats.forEach((stat,index)=>{
-          setTimeout(()=>{
-            stat.classList.add('spinning');
-            setTimeout(()=>{
-              stat.textContent=stat.getAttribute('data-value');
-              stat.classList.remove('spinning');
-            },1500);
-          },index*150);
-        });
-        statsObserver.unobserve(entry.target);
-      }
-    });
-  },{threshold:0.3});
-
   document.addEventListener('DOMContentLoaded',()=>{
     const fadeElements=document.querySelectorAll('.fade-in');
     fadeElements.forEach(el=>{
@@ -1505,14 +1407,8 @@ body.spanish [lang="en"]{display:none}
       titleObserver.observe(title);
     });
     
-    const cards=document.querySelectorAll('.pricing-card,.project-card');
-    cards.forEach((card,index)=>{
-      card.style.animationPlayState='paused';
-      card.style.animationDelay=`${index*0.08}s`;
-      observer.observe(card);
-    });
-    
-    document.querySelectorAll('.hero-stats').forEach(stats=>{
+    const heroStats=document.querySelectorAll('.hero-stats');
+    heroStats.forEach(stats=>{
       statsObserver.observe(stats);
     });
   });
