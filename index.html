@@ -261,14 +261,15 @@ body.spanish [lang="en"]{display:none}
   font-size:clamp(12px,3.4vw,22px);
   color:var(--slate);
   font-weight:500;
-  max-width:none;
-  margin:0 auto clamp(10px,2.2vw,18px);
+  max-width:100%;
+  margin:0 auto clamp(20px,4.5vw,36px);
   line-height:1.35;
   display:flex;
   align-items:center;
   justify-content:center;
-  gap:clamp(8px,2.2vw,14px);
+  gap:clamp(10px,2.5vw,16px);
   flex-wrap:wrap;
+  padding:0 clamp(16px,4vw,24px);
 }
 
 .hero-subtitle span{
@@ -340,11 +341,13 @@ body.spanish [lang="en"]{display:none}
 
 .hero-stats{
   display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:clamp(12px,2.5vw,20px);
-  max-width:900px;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:clamp(10px,2vw,18px);
+  max-width:100%;
+  width:100%;
   margin:clamp(22px,4.5vw,36px) auto 0;
   position:relative;
+  padding:0 clamp(8px,2vw,0px);
 }
 
 .hero-stat{
@@ -407,10 +410,23 @@ body.spanish [lang="en"]{display:none}
 }
 
 @keyframes statPop{
-  0%{opacity:0;transform:translateY(30px) scale(0.8) rotate(-15deg)}
-  50%{transform:translateY(-8px) scale(1.1) rotate(5deg)}
-  75%{transform:translateY(2px) scale(0.98) rotate(-2deg)}
-  100%{opacity:1;transform:translateY(0) scale(1) rotate(0deg)}
+  0%{
+    opacity:0;
+    transform:translateY(40px) scale(0.7) rotate(-25deg);
+  }
+  40%{
+    transform:translateY(-12px) scale(1.15) rotate(12deg);
+  }
+  65%{
+    transform:translateY(4px) scale(0.96) rotate(-6deg);
+  }
+  85%{
+    transform:translateY(-2px) scale(1.02) rotate(2deg);
+  }
+  100%{
+    opacity:1;
+    transform:translateY(0) scale(1) rotate(0deg);
+  }
 }
 
 .stat-label{
@@ -435,16 +451,35 @@ body.spanish [lang="en"]{display:none}
   letter-spacing:-0.04em;
   line-height:1.15;
   text-align:center;
-  margin-bottom:clamp(32px,6vw,64px);
+  margin-bottom:clamp(16px,3vw,32px);
   color:var(--ink);
   opacity:0;
   transform:translateY(40px) scale(0.95);
-  animation:titleEntrance 1s cubic-bezier(0.16,1,0.3,1) forwards;
+  animation:titleEntrance 1.4s cubic-bezier(0.16,1,0.3,1) forwards;
   animation-play-state:paused;
 }
 
 @keyframes titleEntrance{
-  to{opacity:1;transform:translateY(0) scale(1)}
+  0%{
+    opacity:0;
+    transform:translateY(60px) scale(0.85) rotateX(15deg);
+    filter:blur(10px);
+  }
+  50%{
+    opacity:0.8;
+    transform:translateY(-8px) scale(1.03) rotateX(-3deg);
+    filter:blur(2px);
+  }
+  75%{
+    opacity:0.95;
+    transform:translateY(3px) scale(0.99) rotateX(1deg);
+    filter:blur(0.5px);
+  }
+  100%{
+    opacity:1;
+    transform:translateY(0) scale(1) rotateX(0deg);
+    filter:blur(0);
+  }
 }
 
 .section-subtitle{
@@ -457,7 +492,7 @@ body.spanish [lang="en"]{display:none}
 }
 
 .pricing{
-  padding:clamp(48px,10vw,96px) 0;
+  padding:clamp(24px,4.5vw,40px) 0;
   background:var(--white);
   position:relative;
   overflow:hidden;
@@ -534,8 +569,9 @@ body.spanish [lang="en"]{display:none}
 }
 
 .pricing-term{
-  font-size:clamp(14px,3.5vw,16px);
+  font-size:clamp(15px,3.8vw,18px);
   color:var(--slate);
+  margin-top:clamp(8px,2vw,12px);
   margin-bottom:clamp(16px,4vw,32px);
   font-weight:500;
   line-height:1.5;
@@ -547,13 +583,20 @@ body.spanish [lang="en"]{display:none}
 }
 
 .pricing-desc{
-  font-size:clamp(13px,3.2vw,15px);
-  color:var(--slate-light);
+  font-size:clamp(14px,3.4vw,16px);
+  color:var(--ink);
   margin-bottom:clamp(16px,4vw,32px);
   line-height:1.6;
   word-wrap:break-word;
   overflow-wrap:break-word;
   hyphens:auto;
+  background:rgba(255,255,255,0.95);
+  padding:clamp(16px,4vw,20px) clamp(18px,4.5vw,24px);
+  border-radius:14px;
+  font-weight:500;
+  text-align:left;
+  border:2px solid var(--red);
+  box-shadow:0 0 20px rgba(255,42,42,0.25), inset 0 0 20px rgba(255,42,42,0.05);
 }
 
 .pricing-features{
@@ -597,7 +640,7 @@ body.spanish [lang="en"]{display:none}
 }
 
 .comparison{
-  padding:clamp(48px,10vw,96px) 0;
+  padding:clamp(24px,4.5vw,40px) 0;
   background:var(--pearl);
   position:relative;
   overflow:hidden;
@@ -672,7 +715,7 @@ body.spanish [lang="en"]{display:none}
 }
 
 .projects{
-  padding:clamp(48px,10vw,96px) 0 clamp(100px,20vw,96px);
+  padding:clamp(24px,4.5vw,40px) 0 clamp(32px,7vw,48px);
   background:var(--white);
   position:relative;
   overflow:hidden;
@@ -749,7 +792,7 @@ body.spanish [lang="en"]{display:none}
 }
 
 .final-cta{
-  padding:clamp(48px,10vw,96px) 0 clamp(100px,20vw,96px);
+  padding:clamp(24px,4.5vw,40px) 0 clamp(32px,7vw,48px);
   background:var(--pearl);
   text-align:center;
   position:relative;
@@ -796,7 +839,7 @@ body.spanish [lang="en"]{display:none}
 }
 
 .footer{
-  padding:clamp(32px,6vw,64px) 0 clamp(120px,24vw,80px);
+  padding:clamp(20px,3vw,32px) 0 clamp(24px,4vw,40px);
   background:var(--white);
   border-top:2px solid var(--border);
   text-align:center;
@@ -806,21 +849,13 @@ body.spanish [lang="en"]{display:none}
 .footer-logo{
   max-width:clamp(240px,55vw,360px);
   height:auto;
-  margin:0 auto clamp(16px,4vw,24px);
+  margin:0 auto clamp(8px,1.5vw,12px);
   display:block;
   filter:drop-shadow(0 8px 24px rgba(0,0,0,0.08));
   opacity:1 !important;
   visibility:visible !important;
   background:transparent !important;
   isolation:isolate;
-}
-
-.footer-tagline{
-  font-size:clamp(13px,3.2vw,17px);
-  color:var(--ink);
-  margin-bottom:clamp(20px,5vw,32px);
-  font-weight:700;
-  letter-spacing:-0.015em;
 }
 
 .footer-links{
@@ -1097,7 +1132,7 @@ body.spanish [lang="en"]{display:none}
           <h3 class="pricing-name">Fully Managed Service</h3>
           <div class="pricing-price">$75<span style="font-size:clamp(16px,4vw,20px);font-weight:600;color:var(--slate)">/mo</span></div>
           <p class="pricing-term">then <span class="highlight">$50/mo</span> after 12 months</p>
-          <p class="pricing-desc">Complete website management with hosting, maintenance, and updates. We handle everything so you don't have to.</p>
+          <p class="pricing-desc">Complete management including hosting, maintenance, and all updates. We handle everything from start to finish.</p>
           <ul class="pricing-features">
             <li class="pricing-feature">Custom design & build</li>
             <li class="pricing-feature">Mobile-responsive</li>
@@ -1118,7 +1153,7 @@ body.spanish [lang="en"]{display:none}
           <h3 class="pricing-name">Website Ownership</h3>
           <div class="pricing-price">$285<span style="font-size:clamp(16px,4vw,20px);font-weight:600;color:var(--slate)"> flat</span></div>
           <p class="pricing-term">Option: <span class="highlight">$50/mo</span> fully managed after purchase</p>
-          <p class="pricing-desc">Full ownership of your website with all source files. No monthly fees. No hosting included—you handle your own hosting and maintenance.</p>
+          <p class="pricing-desc">Complete ownership with all source files included. Zero monthly fees. You manage your hosting and maintenance independently.</p>
           <ul class="pricing-features">
             <li class="pricing-feature">Custom design & build</li>
             <li class="pricing-feature">Mobile-responsive</li>
@@ -1137,7 +1172,7 @@ body.spanish [lang="en"]{display:none}
           <h3 class="pricing-name">Servicio Administrado</h3>
           <div class="pricing-price">$75<span style="font-size:clamp(16px,4vw,20px);font-weight:600;color:var(--slate)">/mes</span></div>
           <p class="pricing-term">luego <span class="highlight">$50/mes</span> después de 12 meses</p>
-          <p class="pricing-desc">Gestión completa del sitio web con hospedaje, mantenimiento y actualizaciones. Nosotros manejamos todo.</p>
+          <p class="pricing-desc">Gestión completa incluyendo hospedaje, mantenimiento y actualizaciones. Nosotros manejamos todo de inicio a fin.</p>
           <ul class="pricing-features">
             <li class="pricing-feature">Diseño personalizado</li>
             <li class="pricing-feature">Diseño responsivo</li>
@@ -1158,7 +1193,7 @@ body.spanish [lang="en"]{display:none}
           <h3 class="pricing-name">Propiedad del Sitio</h3>
           <div class="pricing-price">$285<span style="font-size:clamp(16px,4vw,20px);font-weight:600;color:var(--slate)"> plano</span></div>
           <p class="pricing-term">Opción: <span class="highlight">$50/mes</span> administrado después de compra</p>
-          <p class="pricing-desc">Propiedad completa de tu sitio web con todos los archivos fuente. Sin tarifas mensuales. Sin hospedaje incluido.</p>
+          <p class="pricing-desc">Propiedad completa con todos los archivos incluidos. Cero tarifas mensuales. Tú manejas hospedaje y mantenimiento independientemente.</p>
           <ul class="pricing-features">
             <li class="pricing-feature">Diseño personalizado</li>
             <li class="pricing-feature">Diseño responsivo</li>
@@ -1398,10 +1433,6 @@ body.spanish [lang="en"]{display:none}
   <footer class="footer fade-in">
     <div class="container">
       <img src="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png" class="footer-logo" alt="SNRG WEB Logo">
-      
-      <p class="footer-tagline" lang="en">PARKING HTX Community Outreach — Removing barriers for Houston entrepreneurs</p>
-      <p class="footer-tagline" lang="es">PARKING HTX Alcance Comunitario — Eliminando barreras para emprendedores</p>
-      
       
       <p class="footer-copyright">© 2026 SNRG WEB · Houston, Texas</p>
     </div>
