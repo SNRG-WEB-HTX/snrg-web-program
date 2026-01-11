@@ -176,8 +176,8 @@ body.spanish [lang="en"]{display:none}
   display:flex;
   align-items:center;
   justify-content:center;
-  padding:clamp(72px,10vh,120px) 0 clamp(24px,6vh,48px);
-  padding-top:max(clamp(72px,10vh,120px),env(safe-area-inset-top));
+  padding:clamp(48px,6vh,72px) 0 clamp(14px,3vh,24px);
+  padding-top:max(clamp(48px,6vh,72px),env(safe-area-inset-top));
   position:relative;
   overflow:hidden;
   contain:paint;
@@ -197,6 +197,7 @@ body.spanish [lang="en"]{display:none}
   flex-direction:column;
   align-items:center;
   width:100%;
+  gap:0;
 }
 
 @keyframes heroContentEntrance{
@@ -215,10 +216,10 @@ body.spanish [lang="en"]{display:none}
 }
 
 .hero-logo{
-  max-width:clamp(320px,55vw,620px);
+  max-width:clamp(360px,60vw,680px);
   height:auto;
   display:block;
-  margin:0 auto 10px;
+  margin:0 auto 12px;
   filter:drop-shadow(0 16px 48px rgba(0,0,0,0.2));
   opacity:0;
   transform:scale(0.3) translateY(-100px) translateZ(-500px);
@@ -267,48 +268,12 @@ body.spanish [lang="en"]{display:none}
 
 .hero-title br{display:block}
 
-.hero-spec{
-  margin:6px auto 10px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:10px;
-  font-weight:600;
-  letter-spacing:0.04em;
-  font-size:clamp(14px,2.8vw,18px);
-  color:rgba(15,17,21,0.9);
-  opacity:0;
-  transform:translateY(8px);
-  filter:blur(4px);
-  animation:specIn 0.55s cubic-bezier(0.22,1,0.36,1) forwards;
-  animation-delay:1.7s;
-  flex-wrap:wrap;
-  max-width:100%;
-  padding:0 16px;
-}
-
-.spec-dot{
-  width:6px;
-  height:6px;
-  border-radius:50%;
-  background:var(--red);
-  box-shadow:0 0 8px rgba(255,42,42,0.6);
-  flex-shrink:0;
-}
-
-@keyframes specIn{
-  to{
-    opacity:1;
-    transform:translateY(0);
-    filter:blur(0);
-  }
-}
-
 .hero-cta-group{
   display:flex;
   gap:16px;
   justify-content:center;
   flex-wrap:wrap;
+  margin-top:0;
 }
 
 .cta{
@@ -410,6 +375,7 @@ body.spanish [lang="en"]{display:none}
 }
 
 .pricing{
+  margin-top:clamp(18px,3.5vw,28px);
   padding:clamp(14px,3vw,24px) 0;
   background:linear-gradient(135deg, #ffffff 0%, #f8f9fa 25%, #ffffff 50%, #f5f6f7 75%, #ffffff 100%);
   background-size:400% 400%;
@@ -564,6 +530,7 @@ body.spanish [lang="en"]{display:none}
 }
 
 .comparison{
+  margin-top:clamp(18px,3.5vw,28px);
   padding:clamp(14px,2.8vw,25px) 0;
   background:linear-gradient(135deg, #f6f7f8 0%, #f9fafb 25%, #f6f7f8 50%, #f7f8f9 75%, #f6f7f8 100%);
   background-size:400% 400%;
@@ -664,6 +631,7 @@ body.spanish [lang="en"]{display:none}
 }
 
 .projects{
+  margin-top:clamp(18px,3.5vw,28px);
   padding:clamp(14px,2.8vw,25px) 0 clamp(20px,4.3vw,31px);
   background:linear-gradient(135deg, #ffffff 0%, #f9fafb 25%, #ffffff 50%, #f7f8f9 75%, #ffffff 100%);
   background-size:400% 400%;
@@ -765,6 +733,7 @@ body.spanish [lang="en"]{display:none}
 }
 
 .final-cta{
+  margin-top:clamp(18px,3.5vw,28px);
   padding:16px 0 24px;
   background:linear-gradient(135deg, #f6f7f8 0%, #fbfcfd 25%, #f6f7f8 50%, #f9fafb 75%, #f6f7f8 100%);
   background-size:400% 400%;
@@ -956,7 +925,7 @@ body.spanish [lang="en"]{display:none}
   }
   
   .hero-logo{
-    max-width:240px;
+    max-width:300px;
     margin-bottom:8px;
     animation-duration:0.6s;
   }
@@ -966,19 +935,7 @@ body.spanish [lang="en"]{display:none}
     animation-delay:0.15s;
   }
   
-  .hero-spec{
-    margin:6px auto 8px;
-    gap:8px;
-    font-size:13px;
-    padding:0 12px;
-  }
-  
-  .spec-dot{
-    width:5px;
-    height:5px;
-  }
-  
-  .section-title{
+  .hero-content{
     animation-duration:0.7s;
   }
   
@@ -1089,17 +1046,6 @@ body.spanish [lang="en"]{display:none}
     padding:6px 14px;
     font-size:12px;
   }
-  
-  .hero-spec{
-    font-size:12px;
-    gap:6px;
-    padding:0 8px;
-  }
-  
-  .spec-dot{
-    width:4px;
-    height:4px;
-  }
 }
 
 </style>
@@ -1122,9 +1068,6 @@ body.spanish [lang="en"]{display:none}
         </div>
         
         <div class="hero-content">
-          <div class="hero-spec" lang="en">Houston Built <span class="spec-dot"></span> $0 To Start <span class="spec-dot"></span> Fast Service</div>
-          <div class="hero-spec" lang="es">Hecho En Houston <span class="spec-dot"></span> $0 Para Empezar <span class="spec-dot"></span> Servicio Rápido</div>
-          
           <div class="hero-cta-group">
             <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" class="cta cta-primary" lang="en">View Pricing</a>
             <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" class="cta cta-secondary" lang="en">Schedule Call</a>
