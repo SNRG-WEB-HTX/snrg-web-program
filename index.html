@@ -197,16 +197,12 @@ body.spanish [lang="en"]{display:none}
 }
 
 .hero{
-  /* Viewport-perfect hero */
-  min-height: 100svh;
-  height: 100svh;
-  min-height: 100dvh;
-  height: 100dvh;
-  min-height: 100vh; /* fallback */
+  min-height:auto;
   display:flex;
-  align-items:stretch;
+  align-items:center;
   justify-content:center;
-  padding:0; /* no padding-based positioning */
+  padding:clamp(32px,4.5vh,52px) 0 clamp(8px,2vh,16px);
+  padding-top:max(clamp(32px,4.5vh,52px),env(safe-area-inset-top));
   position:relative;
   overflow:hidden;
   contain:paint;
@@ -218,34 +214,19 @@ body.spanish [lang="en"]{display:none}
 }
 
 .hero-stack{
-  min-height:100%;
   display:flex;
   flex-direction:column;
   align-items:center;
-  justify-content:center; /* center the stack as a unit */
   gap:0;
   width:100%;
 }
 
-/* Desktop bias: pull the hero unit slightly DOWN so logo sits closer to CTAs (without breaking mobile viewport) */
-@media (min-width: 769px){
-  .hero-stack{
-    transform: translateY(clamp(18px, 3vh, 40px));
-  }
-}
-
-@media (max-width: 768px){
-  .hero-stack{
-    transform: none;
-  }
-}
-
 .hero-cta-group{
   display:flex;
-  gap:clamp(16px,4vw,36px);
+  gap:36px;
   justify-content:center;
   flex-wrap:wrap;
-  margin-top: clamp(8px, 1.4vh, 16px); /* tight, consistent spacing */
+  margin-top:-24px;
 }
 
 .hero-content{
@@ -1021,12 +1002,11 @@ body.spanish [lang="en"]{display:none}
 
 @media(max-width:768px){
   .hero{
-    padding:0; /* no padding-based layout on mobile */
+    padding:56px 0 16px;
   }
   
   .hero-logo{
-    /* Increase mobile logo ~12–18% and make it hero-dominant */
-    max-width: min(92vw, 420px);
+    max-width:336px;
     animation-duration:0.6s;
   }
   
@@ -1035,8 +1015,8 @@ body.spanish [lang="en"]{display:none}
   }
   
   .hero-cta-group{
-    margin-top: clamp(10px, 1.8vh, 18px);
-    gap: clamp(12px, 4vw, 24px);
+    margin-top:-18px;
+    gap:24px;
   }
   
   .hero-content{
