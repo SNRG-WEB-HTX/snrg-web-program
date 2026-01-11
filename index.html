@@ -181,7 +181,12 @@ body.spanish [lang="en"]{display:none}
   transform:translateY(60px) scale(0.95);
   filter:blur(8px);
   animation:heroContentEntrance 1.4s cubic-bezier(0.16,1,0.3,1) 0.4s forwards;
-  margin-top:clamp(-20px,-3vw,-12px);
+  margin-top:clamp(-95px,-14vw,-58px);
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  width:100%;
 }
 
 @keyframes heroContentEntrance{
@@ -189,7 +194,7 @@ body.spanish [lang="en"]{display:none}
 }
 
 .hero-logo-container{
-  margin:0 auto clamp(4px,0.8vw,6px);
+  margin:0 auto 0;
   position:relative;
   display:flex;
   align-items:center;
@@ -246,7 +251,7 @@ body.spanish [lang="en"]{display:none}
   font-weight:900;
   letter-spacing:-0.03em;
   line-height:1.05;
-  margin:0 auto clamp(6px,1.2vw,10px);
+  margin:0 auto clamp(24px,5vw,48px);
   max-width:920px;
 }
 
@@ -558,7 +563,8 @@ body.spanish [lang="en"]{display:none}
   width:100%;
   display:flex;
   flex-direction:column;
-  align-items:center;
+  align-items:flex-start;
+  padding-left:clamp(12px,3vw,20px);
 }
 
 .pricing-feature{
@@ -569,8 +575,9 @@ body.spanish [lang="en"]{display:none}
   position:relative;
   margin-bottom:8px;
   font-weight:500;
-  text-align:center;
-  display:inline-block;
+  text-align:left;
+  display:block;
+  width:100%;
 }
 
 .pricing-feature::before{
@@ -901,6 +908,11 @@ body.spanish [lang="en"]{display:none}
   
   .projects-grid{
     grid-template-columns:1fr;
+  }
+  
+  /* Hide SNRG Difference section on mobile */
+  .comparison{
+    display:none !important;
   }
   
   .comparison-table{
