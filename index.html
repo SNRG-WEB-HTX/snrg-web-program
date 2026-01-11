@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 <link rel="canonical" href="https://snrgweb.com/"/>
@@ -264,7 +264,7 @@ body.spanish [lang="en"]{display:none}
   font-weight:900;
   letter-spacing:-0.03em;
   line-height:1.05;
-  margin:0 auto clamp(24px,5vw,48px);
+  margin:0 auto clamp(17px,3.5vw,34px);
   max-width:920px;
 }
 
@@ -328,7 +328,7 @@ body.spanish [lang="en"]{display:none}
   letter-spacing:-0.04em;
   line-height:1.15;
   text-align:center;
-  margin-bottom:clamp(14px,2.5vw,26px);
+  margin-bottom:clamp(10px,1.8vw,18px);
   color:var(--ink);
   opacity:0;
   transform:translateY(40px) scale(0.95);
@@ -340,29 +340,29 @@ body.spanish [lang="en"]{display:none}
   font-size:clamp(32px,8vw,68px);
   line-height:1.08;
   margin-top:0;
-  margin-bottom:clamp(12px,3vw,24px);
+  margin-bottom:clamp(8px,2.1vw,17px);
 }
 
 @keyframes titleEntrance{
   0%{
     opacity:0;
-    transform:translateY(60px) scale(0.85) rotateX(15deg);
-    filter:blur(10px);
+    transform:translateY(60px) scale(0.92) rotateX(15deg);
+    filter:blur(10px) brightness(0.9);
   }
   50%{
     opacity:0.8;
-    transform:translateY(-8px) scale(1.03) rotateX(-3deg);
-    filter:blur(2px);
+    transform:translateY(-8px) scale(1.02) rotateX(-3deg);
+    filter:blur(2px) brightness(0.95);
   }
   75%{
     opacity:0.95;
     transform:translateY(3px) scale(0.99) rotateX(1deg);
-    filter:blur(0.5px);
+    filter:blur(0.5px) brightness(0.98);
   }
   100%{
     opacity:1;
     transform:translateY(0) scale(1) rotateX(0deg);
-    filter:blur(0);
+    filter:blur(0) brightness(1);
   }
 }
 
@@ -480,7 +480,7 @@ body.spanish [lang="en"]{display:none}
   font-size:clamp(15px,3.8vw,18px);
   color:var(--slate);
   margin-top:clamp(8px,2vw,12px);
-  margin-bottom:clamp(14px,3.5vw,26px);
+  margin-bottom:clamp(10px,2.5vw,18px);
   font-weight:500;
   line-height:1.5;
 }
@@ -527,6 +527,23 @@ body.spanish [lang="en"]{display:none}
   text-align:center;
   margin-top:auto;
   padding-top:12px;
+}
+
+.pricing-mobile-divider{
+  display:none;
+}
+
+@keyframes dividerEntrance{
+  0%{
+    opacity:0;
+    transform:scale(0.94);
+    filter:brightness(0.92);
+  }
+  100%{
+    opacity:1;
+    transform:scale(1);
+    filter:brightness(1);
+  }
 }
 
 .comparison{
@@ -804,7 +821,7 @@ body.spanish [lang="en"]{display:none}
 }
 
 .footer{
-  padding:16px 0 88px;
+  padding:12px 0 88px;
   background:var(--white);
   border-top:2px solid var(--border);
   text-align:center;
@@ -812,9 +829,9 @@ body.spanish [lang="en"]{display:none}
 }
 
 .footer-logo{
-  max-width:clamp(240px,55vw,360px);
+  max-width:clamp(120px,28vw,180px);
   height:auto;
-  margin:0 auto 8px;
+  margin:0 auto 6px;
   display:block;
   filter:drop-shadow(0 8px 24px rgba(0,0,0,0.08));
   opacity:1 !important;
@@ -854,13 +871,22 @@ body.spanish [lang="en"]{display:none}
 
 .fade-in{
   opacity:0;
-  transform:translateY(clamp(28px,7vw,48px));
-  animation:fadeRise 0.9s cubic-bezier(0.16,1,0.3,1) forwards;
+  transform:translateY(clamp(28px,7vw,48px)) scale(0.96);
+  animation:fadeRise 0.85s cubic-bezier(0.22,1,0.36,1) forwards;
   animation-play-state:paused;
 }
 
 @keyframes fadeRise{
-  to{opacity:1;transform:translateY(0)}
+  0%{
+    opacity:0;
+    transform:translateY(clamp(28px,7vw,48px)) scale(0.96);
+    filter:brightness(0.94);
+  }
+  100%{
+    opacity:1;
+    transform:translateY(0) scale(1);
+    filter:brightness(1);
+  }
 }
 
 @media(min-width:769px){
@@ -904,29 +930,57 @@ body.spanish [lang="en"]{display:none}
 @media(max-width:768px){
   .hero{
     min-height:auto;
-    padding:88px 0 24px;
+    padding:80px 0 20px;
   }
   
   .hero-content{
-    margin-top:-12px;
+    margin-top:-18px;
   }
   
   .hero-logo{
-    max-width:240px;
-    animation-duration:0.8s;
+    max-width:220px;
+    animation-duration:0.6s;
   }
   
   .hero-content{
-    animation-duration:0.8s;
-    animation-delay:0.2s;
+    animation-duration:0.6s;
+    animation-delay:0.15s;
   }
   
   .hero-title{
     letter-spacing:-0.03em;
+    margin-bottom:clamp(14px,3vw,20px);
   }
   
   .section-subtitle{
     display:none;
+  }
+  
+  .section-title.pricing-hero{
+    display:none;
+  }
+  
+  .pricing-mobile-divider{
+    display:block;
+    font-size:clamp(24px,6vw,32px);
+    font-weight:900;
+    letter-spacing:-0.04em;
+    line-height:1.1;
+    text-align:center;
+    color:var(--ink);
+    margin:clamp(20px,5vw,28px) 0;
+    padding:clamp(16px,4vw,20px) 0;
+    opacity:0;
+    transform:scale(0.94);
+    animation:dividerEntrance 0.75s cubic-bezier(0.22,1,0.36,1) 0.4s forwards;
+  }
+  
+  .section-title{
+    animation-duration:0.75s;
+  }
+  
+  .fade-in{
+    animation-duration:0.7s;
   }
   
   .pricing,
@@ -941,8 +995,38 @@ body.spanish [lang="en"]{display:none}
   }
   
   .pricing-card{
-    padding:16px;
+    padding:14px;
     border-radius:10px;
+  }
+  
+  .pricing-badge{
+    margin-bottom:10px;
+  }
+  
+  .pricing-name{
+    margin-bottom:8px;
+  }
+  
+  .pricing-term{
+    margin-bottom:8px;
+  }
+  
+  .pricing-features{
+    margin-bottom:10px;
+    gap:6px 14px;
+  }
+  
+  .final-cta{
+    padding-top:16px;
+  }
+  
+  .final-cta .footer-logo{
+    max-width:160px;
+    margin-bottom:10px;
+  }
+  
+  .final-cta h2{
+    margin-top:0;
   }
   
   .projects-grid{
@@ -1101,6 +1185,8 @@ body.spanish [lang="en"]{display:none}
           </div>
         </div>
         
+        <div class="pricing-mobile-divider" lang="en">Built Different.<br>Priced Different.</div>
+        
         <div class="pricing-card" onclick="selectCard(this)" lang="en">
           <span class="pricing-badge">One-Time</span>
           <h3 class="pricing-name">Website Ownership</h3>
@@ -1138,6 +1224,8 @@ body.spanish [lang="en"]{display:none}
             <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" class="cta cta-primary">Reservar Consulta</a>
           </div>
         </div>
+        
+        <div class="pricing-mobile-divider" lang="es">Construido Diferente.<br>Precio Diferente.</div>
         
         <div class="pricing-card" onclick="selectCard(this)" lang="es">
           <span class="pricing-badge">Pago Único</span>
