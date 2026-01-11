@@ -1,118 +1,991 @@
-I pulled your SNRG_ELITE_FINAL (1).html and reviewed it as-is. 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="canonical" href="https://snrgweb.com/"/>
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+<link rel="dns-prefetch" href="https://api.fontshare.com">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"/>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5,user-scalable=yes,viewport-fit=cover"/>
+<title>Houston Small Business Websites | SNRG WEB</title>
+<meta name="description" content="Enterprise websites for Houston entrepreneurs. From $50/mo."/>
+<meta name="theme-color" content="#FF2A2A"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://snrgweb.com/"/>
+<meta property="og:title" content="Houston Small Business Websites | SNRG WEB"/>
+<meta property="og:description" content="Enterprise websites for Houston entrepreneurs. From $50/mo."/>
 
-SNRG_ELITE_FINAL (1)
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,900,500,400,800,600&display=swap" rel="stylesheet">
 
-Ratings (1–100)
-Desktop: 93 / 100
+<style>
+:root{
+  --pearl:#F6F7F8;
+  --white:#FFFFFF;
+  --ink:#0F1115;
+  --slate:#4A4F5A;
+  --slate-light:#7B8290;
+  --red:#FF2A2A;
+  --red-hover:#E02424;
+  --red-light:#FF5252;
+  --border:#E5E7EB;
+}
 
-What’s elite already
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:auto;-webkit-overflow-scrolling:touch}
 
-Brand system + typography scale is strong
+body{
+  font-family:'Satoshi',system-ui,-apple-system,sans-serif;
+  background:var(--pearl);
+  color:var(--ink);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  font-weight:400;
+  letter-spacing:-0.011em;
+  overflow-x:hidden;
+  font-size:16px;
+  min-height:100vh;
+  position:relative;
+}
 
-Pricing cards + 2-col feature grid read premium
+body:not(.spanish) [lang="es"]{display:none}
+body.spanish [lang="en"]{display:none}
 
-Motion feels intentional (not cheesy)
-
-“Selected Projects” naming is on-point
-
-What’s holding it back
-
-Hero vertical padding still too generous (first fold feels “floaty”)
-
-Final CTA logo → text gap is still looser than it should be (logo needs to “cap” the headline)
-
-Mobile: 86 / 100
-
-What’s strong
-
-Hero is much more compressed than earlier versions
-
-Pricing feature grid stays 2 columns (good)
-
-Sticky CTA spacing is handled by footer padding (good)
-
-What’s holding it back
-
-You’re hiding the subtitle on mobile but you want it visible + tight under the divider (right now .section-subtitle{display:none;} kills it). 
-
-SNRG_ELITE_FINAL (1)
-
-The divider (“Built Different…”) is too small vs hero headline on mobile and the divider block adds extra vertical air.
-
-Still too much space under hero logo + under final CTA logo.
-
-Direct Claude Instructions (tight, exact, no “interpretation”)
-
-Paste this to Claude and tell it: “Do exactly this in this file.”
-
-1) HERO: tighten space under logo + reduce overall hero padding (ALL DEVICES, stronger on mobile)
-Desktop + mobile (global):
-
-Reduce the hero top/bottom padding by ~15%
-
-Reduce the gap between hero logo and hero text by pulling .hero-title upward slightly
-
-Change these existing rules:
-
-In .hero reduce the padding clamp range (it’s currently too tall). 
-
-SNRG_ELITE_FINAL (1)
-
-In .hero-title reduce bottom margin (too much air before CTAs). 
-
-SNRG_ELITE_FINAL (1)
-
-Mobile-only (inside @media(max-width:768px)):
-
-Add/replace with:
-
-@media(max-width:768px){
-  .hero{
-    padding:68px 0 14px; /* tighter than current 80/20 */
-  }
-  .hero-logo{
-    max-width:200px;
-  }
-  .hero-content{
-    margin-top:-28px; /* tighter than current -18 */
-  }
-  .hero-title{
-    margin-top:6px;      /* pulls text closer to logo */
-    margin-bottom:12px;  /* tighter CTA stack */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    animation-duration:0.01ms!important;
+    animation-iteration-count:1!important;
+    transition-duration:0.01ms!important;
   }
 }
 
-2) PRICING: mobile divider must match hero heading size, and subtitle must appear UNDER it (centered, tight, no spill)
-Current issue:
+.animated-bg{
+  position:absolute;
+  inset:0;
+  overflow:hidden;
+  pointer-events:none;
+  z-index:0;
+  contain:paint;
+}
 
-You hide the subtitle on mobile (.section-subtitle{display:none;}) 
+.animated-bg::before,
+.animated-bg::after{
+  content:'';
+  position:absolute;
+  border-radius:50%;
+  filter:blur(40px);
+  opacity:0.12;
+}
 
-SNRG_ELITE_FINAL (1)
+.hero .animated-bg::before{
+  width:600px;
+  height:600px;
+  background:radial-gradient(circle,rgba(255,42,42,0.4),transparent);
+  top:-200px;
+  right:-150px;
+  animation:floatSlow 18s ease-in-out infinite;
+}
 
+.hero .animated-bg::after{
+  width:500px;
+  height:500px;
+  background:radial-gradient(circle,rgba(255,82,82,0.3),transparent);
+  bottom:-150px;
+  left:-100px;
+  animation:floatSlow 18s ease-in-out infinite reverse;
+}
 
-But you want it visible and tight under the divider.
+@keyframes floatSlow{
+  0%,100%{transform:translate(0,0) scale(1)}
+  33%{transform:translate(30px,-30px) scale(1.05)}
+  66%{transform:translate(-20px,20px) scale(0.95)}
+}
 
-Do this (mobile only):
+@keyframes pearlShimmer{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
 
-A) Make the divider headline match hero headline scale on mobile
-B) Show the subtitle on mobile, but only inside pricing
-C) Tighten spacing between pricing cards + divider
+@keyframes pearlFloat{
+  0%,100%{transform:translate(0,0) scale(1)}
+  25%{transform:translate(30px,-20px) scale(1.1)}
+  50%{transform:translate(-20px,30px) scale(0.9)}
+  75%{transform:translate(20px,10px) scale(1.05)}
+}
 
-Add this inside @media(max-width:768px) AFTER the current mobile rules:
+@keyframes pearlPulse{
+  0%,100%{opacity:0.3}
+  50%{opacity:0.6}
+}
+
+.lang-bar{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  background:rgba(255,255,255,0.92);
+  backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);
+  border-bottom:1px solid rgba(0,0,0,0.06);
+  padding:14px 20px;
+  display:flex;
+  justify-content:flex-end;
+  gap:8px;
+  z-index:9999;
+}
+
+.lang-btn{
+  background:transparent;
+  border:1.5px solid var(--border);
+  color:var(--slate);
+  padding:8px 18px;
+  border-radius:12px;
+  font-size:13px;
+  font-weight:600;
+  cursor:pointer;
+  transition:all 0.2s;
+  min-width:44px;
+  min-height:44px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.lang-btn:hover{border-color:var(--red);color:var(--ink)}
+.lang-btn:focus{
+  outline:2px solid var(--red);
+  outline-offset:2px;
+}
+.lang-btn.active{
+  background:var(--red);
+  border-color:var(--red);
+  color:var(--white);
+}
+
+.container{
+  max-width:1320px;
+  margin:0 auto;
+  padding:0 clamp(20px,5vw,48px);
+  position:relative;
+  z-index:1;
+}
+
+.hero{
+  min-height:100vh;
+  min-height:100dvh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:clamp(51px,7vh,72px) 0 clamp(24px,4vh,34px);
+  padding-top:max(clamp(51px,7vh,72px),env(safe-area-inset-top));
+  position:relative;
+  overflow:hidden;
+  contain:paint;
+}
+
+.hero-wrap{
+  text-align:center;
+  width:100%;
+}
+
+.hero-content{
+  opacity:0;
+  transform:translateY(60px) scale(0.95);
+  filter:blur(8px);
+  animation:heroContentEntrance 1.4s cubic-bezier(0.16,1,0.3,1) 0.4s forwards;
+  margin-top:clamp(-95px,-14vw,-58px);
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  width:100%;
+}
+
+@keyframes heroContentEntrance{
+  to{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}
+}
+
+.hero-logo-container{
+  margin:0 auto 0;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+  background:transparent !important;
+  isolation:isolate;
+}
+
+.hero-logo{
+  max-width:clamp(380px,75vw,640px);
+  height:auto;
+  display:block;
+  margin:0 auto;
+  filter:drop-shadow(0 16px 48px rgba(0,0,0,0.2));
+  opacity:0;
+  transform:scale(0.3) translateY(-100px) translateZ(-500px);
+  animation:logoTunnelEntrance 1.6s cubic-bezier(0.16,1,0.3,1) forwards;
+  background:transparent !important;
+  isolation:isolate;
+}
+
+@keyframes logoTunnelEntrance{
+  0%{
+    opacity:0;
+    transform:scale(0.3) translateY(-100px) translateZ(-500px);
+    filter:drop-shadow(0 0 0 rgba(0,0,0,0)) blur(12px) brightness(0.5);
+  }
+  50%{
+    opacity:0.7;
+    transform:scale(0.85) translateY(-20px) translateZ(-100px);
+    filter:drop-shadow(0 8px 24px rgba(0,0,0,0.15)) blur(2px) brightness(0.85);
+  }
+  100%{
+    opacity:1;
+    transform:scale(1) translateY(0) translateZ(0);
+    filter:drop-shadow(0 16px 48px rgba(0,0,0,0.2)) blur(0) brightness(1);
+  }
+}
+
+.logo-mask{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 100%;
+  background:transparent !important;
+  isolation:isolate;
+}
+
+.hero-title{
+  font-size:clamp(28px,7vw,72px);
+  font-weight:900;
+  letter-spacing:-0.03em;
+  line-height:1.05;
+  margin:0 auto clamp(13px,3vw,26px);
+  max-width:920px;
+}
+
+.hero-title br{display:block}
+
+.hero-cta-group{
+  display:flex;
+  gap:16px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.cta{
+  position:relative;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  font-size:clamp(14px,3.5vw,16px);
+  font-weight:700;
+  padding:clamp(12px,3vw,16px) clamp(24px,6vw,40px);
+  border-radius:12px;
+  transition:all 0.25s;
+  cursor:pointer;
+  border:2px solid transparent;
+  white-space:nowrap;
+  min-height:44px;
+}
+
+.cta:focus{
+  outline:2px solid var(--red);
+  outline-offset:2px;
+}
+
+.cta-primary{
+  background:var(--red);
+  color:var(--white);
+  box-shadow:0 4px 16px rgba(255,42,42,0.25);
+}
+
+.cta-primary:active{
+  background:var(--red-light);
+  transform:translateY(-2px);
+}
+
+.cta-secondary{
+  background:transparent;
+  color:var(--ink);
+  border-color:var(--border);
+}
+
+.cta-secondary:active{
+  border-color:var(--red);
+  color:var(--red);
+  transform:translateY(-2px);
+}
+
+.section-title{
+  font-size:clamp(26px,6.5vw,56px);
+  font-weight:900;
+  letter-spacing:-0.04em;
+  line-height:1.15;
+  text-align:center;
+  margin-bottom:clamp(10px,1.8vw,18px);
+  color:var(--ink);
+  opacity:0;
+  transform:translateY(40px) scale(0.95);
+  animation:titleEntrance 1.4s cubic-bezier(0.16,1,0.3,1) forwards;
+  animation-play-state:paused;
+}
+
+.section-title.pricing-hero{
+  font-size:clamp(32px,8vw,68px);
+  line-height:1.08;
+  margin-top:0;
+  margin-bottom:clamp(8px,2.1vw,17px);
+}
+
+@keyframes titleEntrance{
+  0%{
+    opacity:0;
+    transform:translateY(60px) scale(0.92) rotateX(15deg);
+    filter:blur(10px) brightness(0.9);
+  }
+  50%{
+    opacity:0.8;
+    transform:translateY(-8px) scale(1.02) rotateX(-3deg);
+    filter:blur(2px) brightness(0.95);
+  }
+  75%{
+    opacity:0.95;
+    transform:translateY(3px) scale(0.99) rotateX(1deg);
+    filter:blur(0.5px) brightness(0.98);
+  }
+  100%{
+    opacity:1;
+    transform:translateY(0) scale(1) rotateX(0deg);
+    filter:blur(0) brightness(1);
+  }
+}
+
+.section-subtitle{
+  font-size:clamp(14px,3.5vw,20px);
+  color:var(--slate);
+  text-align:center;
+  max-width:720px;
+  margin:0 auto clamp(26px,4.5vw,50px);
+  line-height:1.6;
+}
+
+.pricing{
+  padding:clamp(18px,3.5vw,32px) 0;
+  background:linear-gradient(135deg, #ffffff 0%, #f8f9fa 25%, #ffffff 50%, #f5f6f7 75%, #ffffff 100%);
+  background-size:400% 400%;
+  animation:pearlShimmer 15s ease infinite;
+  position:relative;
+  overflow:hidden;
+}
+
+.pricing::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(255,255,255,0.8) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(248,249,250,0.6) 0%, transparent 50%),
+    radial-gradient(circle at 40% 80%, rgba(245,246,247,0.7) 0%, transparent 50%);
+  animation:pearlFloat 20s ease-in-out infinite;
+  pointer-events:none;
+}
+
+.pricing::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background-image:
+    repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.015) 2px, rgba(0,0,0,0.015) 4px),
+    repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(0,0,0,0.015) 2px, rgba(0,0,0,0.015) 4px);
+  opacity:0.3;
+  pointer-events:none;
+}
+
+.pricing-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:clamp(18px,3.5vw,28px);
+  max-width:1000px;
+  margin:0 auto;
+  align-items:stretch;
+  justify-items:center;
+}
+
+.pricing-card{
+  background:var(--pearl);
+  border:3px solid var(--border);
+  border-radius:12px;
+  padding:clamp(18px,4.5vw,28px);
+  transition:all 0.3s;
+  cursor:pointer;
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  width:100%;
+  max-width:480px;
+}
+
+.pricing-card:active{
+  transform:translateY(-6px);
+  box-shadow:0 16px 48px rgba(0,0,0,0.08);
+}
+
+.pricing-card.selected{
+  border-color:var(--red);
+  box-shadow:0 16px 48px rgba(255,42,42,0.2);
+  transform:translateY(-6px);
+}
+
+.pricing-badge{
+  background:var(--red);
+  color:var(--white);
+  font-size:11px;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:0.08em;
+  padding:6px 12px;
+  border-radius:999px;
+  display:inline-block;
+  margin:0 auto 14px;
+  align-self:center;
+}
+
+.pricing-name{
+  font-size:clamp(20px,4.5vw,28px);
+  font-weight:800;
+  color:var(--ink);
+  margin-bottom:clamp(10px,2.5vw,14px);
+  letter-spacing:-0.02em;
+  line-height:1.2;
+}
+
+.pricing-price{
+  font-size:clamp(40px,10vw,64px);
+  font-weight:900;
+  color:var(--ink);
+  letter-spacing:-0.045em;
+  line-height:1;
+  margin-bottom:8px;
+}
+
+.pricing-term{
+  font-size:clamp(15px,3.8vw,18px);
+  color:var(--slate);
+  margin-top:clamp(8px,2vw,12px);
+  margin-bottom:clamp(10px,2.5vw,18px);
+  font-weight:500;
+  line-height:1.5;
+}
+
+.pricing-term .highlight{
+  color:var(--red);
+  font-weight:700;
+}
+
+.pricing-features{
+  list-style:none;
+  margin-bottom:clamp(14px,3.5vw,26px);
+  flex-grow:1;
+  width:100%;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:clamp(10px,2.5vw,14px) clamp(16px,4vw,24px);
+  padding:0;
+  max-width:100%;
+}
+
+.pricing-feature{
+  font-size:clamp(13px,3.2vw,15px);
+  color:var(--ink);
+  line-height:1.4;
+  padding-left:24px;
+  position:relative;
+  font-weight:500;
+  text-align:left;
+  display:block;
+}
+
+.pricing-feature::before{
+  content:'✓';
+  position:absolute;
+  left:0;
+  color:var(--red);
+  font-weight:700;
+  font-size:16px;
+}
+
+.pricing-cta{
+  width:100%;
+  text-align:center;
+  margin-top:auto;
+  padding-top:12px;
+}
+
+.pricing-mobile-divider{
+  display:none;
+}
+
+@keyframes dividerEntrance{
+  0%{
+    opacity:0;
+    transform:scale(0.94);
+    filter:brightness(0.92);
+  }
+  100%{
+    opacity:1;
+    transform:scale(1);
+    filter:brightness(1);
+  }
+}
+
+.comparison{
+  padding:clamp(18px,3.5vw,32px) 0;
+  background:linear-gradient(135deg, #f6f7f8 0%, #fafbfc 25%, #f6f7f8 50%, #f8f9fa 75%, #f6f7f8 100%);
+  background-size:400% 400%;
+  animation:pearlShimmer 18s ease infinite;
+  position:relative;
+  overflow:hidden;
+}
+
+.comparison::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 70% 20%, rgba(255,255,255,0.5) 0%, transparent 50%),
+    radial-gradient(circle at 30% 60%, rgba(248,249,250,0.4) 0%, transparent 50%),
+    radial-gradient(circle at 60% 90%, rgba(246,247,248,0.6) 0%, transparent 50%);
+  animation:pearlFloat 22s ease-in-out infinite reverse;
+  pointer-events:none;
+}
+
+.comparison::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background-image:
+    repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.012) 2px, rgba(0,0,0,0.012) 4px),
+    repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(0,0,0,0.012) 2px, rgba(0,0,0,0.012) 4px);
+  opacity:0.3;
+  pointer-events:none;
+}
+
+.comparison-table{
+  max-width:1100px;
+  margin:0 auto;
+  background:var(--white);
+  border-radius:clamp(16px,4vw,24px);
+  overflow:hidden;
+  border:2px solid var(--border);
+  box-shadow:0 8px 32px rgba(0,0,0,0.04);
+}
+
+.table-row{
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr;
+  border-bottom:1px solid var(--border);
+}
+
+.table-row:last-child{border-bottom:none}
+.table-row:not(:first-child):hover{background:rgba(255,42,42,0.02)}
+.table-row:first-child{background:var(--ink)}
+
+.table-row:first-child .table-cell{
+  color:var(--white);
+  font-weight:800;
+  font-size:clamp(13px,3vw,15px);
+  text-transform:uppercase;
+  letter-spacing:0.06em;
+  padding:clamp(10px,2.5vw,20px) clamp(14px,3.5vw,28px);
+}
+
+.table-cell{
+  padding:clamp(10px,2.5vw,20px) clamp(14px,3.5vw,28px);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  font-size:clamp(14px,3.5vw,16px);
+  color:var(--slate);
+  border-right:1px solid var(--border);
+  font-weight:600;
+}
+
+.table-cell:last-child{border-right:none}
+
+.table-cell:first-child{
+  justify-content:flex-start;
+  font-weight:700;
+  color:var(--ink);
+  font-size:clamp(15px,3.8vw,17px);
+}
+
+.table-cell.highlight{
+  color:var(--red);
+  font-weight:800;
+  font-size:clamp(15px,3.8vw,17px);
+}
+
+.checkmark{
+  color:var(--red);
+  font-size:clamp(24px,5vw,28px);
+  font-weight:700;
+}
+
+.x{
+  color:var(--slate-light);
+  font-size:clamp(20px,4.5vw,24px);
+  opacity:0.35;
+}
+
+.projects{
+  padding:clamp(18px,3.5vw,32px) 0 clamp(26px,5.5vw,40px);
+  background:linear-gradient(135deg, #ffffff 0%, #f9fafb 25%, #ffffff 50%, #f7f8f9 75%, #ffffff 100%);
+  background-size:400% 400%;
+  animation:pearlShimmer 16s ease infinite;
+  position:relative;
+  overflow:hidden;
+}
+
+.projects::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 50% 10%, rgba(255,255,255,0.7) 0%, transparent 50%),
+    radial-gradient(circle at 10% 50%, rgba(249,250,251,0.5) 0%, transparent 50%),
+    radial-gradient(circle at 90% 80%, rgba(247,248,249,0.6) 0%, transparent 50%);
+  animation:pearlFloat 24s ease-in-out infinite;
+  pointer-events:none;
+}
+
+.projects::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background-image:
+    repeating-linear-gradient(45deg, transparent, transparent 3px, rgba(0,0,0,0.01) 3px, rgba(0,0,0,0.01) 6px);
+  opacity:0.25;
+  pointer-events:none;
+}
+
+.projects-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:clamp(18px,3.5vw,28px);
+  max-width:1200px;
+  margin:0 auto;
+}
+
+.project-card{
+  background:var(--pearl);
+  border:2px solid var(--border);
+  border-radius:clamp(16px,3.5vw,20px);
+  padding:clamp(18px,4.5vw,28px);
+  transition:all 0.25s;
+  text-decoration:none;
+  display:flex;
+  flex-direction:column;
+  color:inherit;
+  text-align:center;
+  cursor:pointer;
+}
+
+.project-card:active{
+  transform:translateY(-4px);
+  border-color:var(--red);
+  box-shadow:0 12px 40px rgba(255,42,42,0.12);
+}
+
+.project-title{
+  font-size:clamp(17px,4.2vw,24px);
+  font-weight:800;
+  color:var(--ink);
+  margin-bottom:clamp(8px,2vw,12px);
+  letter-spacing:-0.02em;
+  line-height:1.3;
+  word-wrap:break-word;
+  overflow-wrap:break-word;
+  hyphens:auto;
+}
+
+.project-desc{
+  font-size:clamp(13px,3.2vw,15px);
+  color:var(--slate);
+  line-height:1.6;
+  margin-bottom:clamp(10px,2.5vw,14px);
+  flex-grow:1;
+  word-wrap:break-word;
+  overflow-wrap:break-word;
+  hyphens:auto;
+}
+
+.project-tags{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  justify-content:center;
+  margin-top:auto;
+}
+
+.project-tag{
+  font-size:clamp(10px,2.5vw,12px);
+  font-weight:600;
+  color:var(--red);
+  background:rgba(255,42,42,0.08);
+  padding:4px 12px;
+  border-radius:999px;
+  text-transform:uppercase;
+  letter-spacing:0.05em;
+}
+
+.final-cta{
+  padding:22px 0 30px;
+  background:linear-gradient(135deg, #f6f7f8 0%, #fbfcfd 25%, #f6f7f8 50%, #f9fafb 75%, #f6f7f8 100%);
+  background-size:400% 400%;
+  animation:pearlShimmer 17s ease infinite;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+
+.final-cta::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 40% 40%, rgba(255,255,255,0.6) 0%, transparent 50%),
+    radial-gradient(circle at 80% 30%, rgba(251,252,253,0.5) 0%, transparent 50%),
+    radial-gradient(circle at 20% 80%, rgba(249,250,251,0.7) 0%, transparent 50%);
+  animation:pearlFloat 19s ease-in-out infinite reverse;
+  pointer-events:none;
+}
+
+.final-cta::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background-image:
+    repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.01) 2px, rgba(0,0,0,0.01) 4px),
+    repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(0,0,0,0.01) 2px, rgba(0,0,0,0.01) 4px);
+  opacity:0.3;
+  animation:pearlPulse 8s ease-in-out infinite;
+  pointer-events:none;
+}
+
+.final-cta .footer-logo{
+  max-width:clamp(90px,16vw,140px);
+  margin:0 auto 4px;
+}
+
+.final-cta h2{
+  font-size:clamp(26px,6.5vw,56px);
+  font-weight:900;
+  letter-spacing:-0.04em;
+  line-height:1.2;
+  margin-top:0;
+  margin-bottom:0;
+  max-width:800px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.sticky-cta{
+  position:fixed;
+  bottom:-200px;
+  left:0;
+  right:0;
+  background:rgba(255,255,255,0.98);
+  backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);
+  border-top:1px solid var(--border);
+  padding:12px 16px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  z-index:9998;
+  transition:bottom 0.3s cubic-bezier(0.4,0,0.2,1);
+  box-shadow:0 -4px 24px rgba(0,0,0,0.1);
+}
+
+.sticky-cta.visible{bottom:0}
+
+.sticky-text{
+  font-size:clamp(13px,3.2vw,17px);
+  font-weight:700;
+  color:var(--ink);
+  display:none;
+}
+
+.footer{
+  padding:12px 0 88px;
+  background:var(--white);
+  border-top:2px solid var(--border);
+  text-align:center;
+  position:relative;
+}
+
+.footer-logo{
+  max-width:clamp(120px,28vw,180px);
+  height:auto;
+  margin:0 auto 6px;
+  display:block;
+  filter:drop-shadow(0 8px 24px rgba(0,0,0,0.08));
+  opacity:1 !important;
+  visibility:visible !important;
+  background:transparent !important;
+  isolation:isolate;
+}
+
+.footer-links{
+  display:flex;
+  gap:clamp(14px,3.5vw,28px);
+  justify-content:center;
+  flex-wrap:wrap;
+  margin-bottom:clamp(14px,3.5vw,20px);
+}
+
+.footer-link{
+  color:var(--slate);
+  text-decoration:none;
+  font-size:clamp(13px,3.2vw,15px);
+  font-weight:600;
+  transition:color 0.2s;
+}
+
+.footer-link:active{color:var(--red)}
+
+.footer-copyright{
+  font-size:clamp(12px,2.8vw,14px);
+  color:var(--slate);
+  font-weight:600;
+  text-align:center;
+  letter-spacing:0.02em;
+  line-height:1.6;
+  margin:0 auto;
+  max-width:100%;
+}
+
+.fade-in{
+  opacity:0;
+  transform:translateY(clamp(28px,7vw,48px)) scale(0.96);
+  animation:fadeRise 0.85s cubic-bezier(0.22,1,0.36,1) forwards;
+  animation-play-state:paused;
+}
+
+@keyframes fadeRise{
+  0%{
+    opacity:0;
+    transform:translateY(clamp(28px,7vw,48px)) scale(0.96);
+    filter:brightness(0.94);
+  }
+  100%{
+    opacity:1;
+    transform:translateY(0) scale(1);
+    filter:brightness(1);
+  }
+}
+
+@media(min-width:769px){
+  .sticky-text{display:block}
+  .cta-primary:hover{
+    background:var(--red-hover);
+    transform:translateY(-2px);
+    box-shadow:0 8px 24px rgba(255,42,42,0.35);
+  }
+  .cta-secondary:hover{
+    border-color:var(--red);
+    color:var(--red);
+    transform:translateY(-2px);
+  }
+  .pricing-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 16px 48px rgba(0,0,0,0.08);
+  }
+  .project-card:hover{
+    transform:translateY(-4px);
+    border-color:var(--red);
+    box-shadow:0 12px 40px rgba(255,42,42,0.12);
+  }
+  .footer-link:hover{color:var(--red)}
+}
+
+@media(max-width:1024px){
+  .pricing-grid{
+    grid-template-columns:1fr;
+    max-width:600px;
+    margin:0 auto;
+  }
+  .pricing-card{
+    margin:0 auto;
+  }
+  .projects-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
 
 @media(max-width:768px){
-  /* tighten the stack between card 1 -> divider -> card 2 */
-  .pricing-grid{ gap:12px; }
-
-  /* BIG divider (match hero headline size) */
-  .pricing-mobile-divider{
-    font-size:clamp(28px,7vw,44px); /* mirrors hero headline feel */
-    margin:12px 0;                  /* was ~20–28 */
-    padding:8px 0;                  /* was ~16–20 */
-    line-height:1.05;
+  .hero{
+    min-height:auto;
+    padding:68px 0 14px;
   }
-
-  /* show pricing subtitle ONLY on mobile, centered + tight */
+  
+  .hero-content{
+    margin-top:-28px;
+  }
+  
+  .hero-logo{
+    max-width:200px;
+    animation-duration:0.6s;
+  }
+  
+  .hero-content{
+    animation-duration:0.6s;
+    animation-delay:0.15s;
+  }
+  
+  .hero-title{
+    margin-top:6px;
+    margin-bottom:12px;
+    letter-spacing:-0.03em;
+  }
+  
+  .section-subtitle{
+    display:none;
+  }
+  
+  .section-title.pricing-hero{
+    display:none;
+  }
+  
+  .pricing-mobile-divider{
+    display:block;
+    font-size:clamp(28px,7vw,44px);
+    font-weight:900;
+    letter-spacing:-0.04em;
+    line-height:1.05;
+    text-align:center;
+    color:var(--ink);
+    margin:12px 0;
+    padding:8px 0;
+    opacity:0;
+    transform:scale(0.94);
+    animation:dividerEntrance 0.75s cubic-bezier(0.22,1,0.36,1) 0.4s forwards;
+  }
+  
+  .pricing-grid{
+    gap:12px;
+  }
+  
   .pricing .section-subtitle{
     display:block;
     margin:10px auto 0;
@@ -121,75 +994,584 @@ Add this inside @media(max-width:768px) AFTER the current mobile rules:
     font-size:15px;
     text-wrap:balance;
   }
+  
+  .section-title{
+    animation-duration:0.75s;
+  }
+  
+  .fade-in{
+    animation-duration:0.7s;
+  }
+  
+  .pricing,
+  .projects,
+  .final-cta{
+    padding-top:20px;
+    padding-bottom:28px;
+  }
+  
+  .pricing{
+    padding-top:12px;
+  }
+  
+  .pricing-card{
+    padding:12px;
+    border-radius:10px;
+  }
+  
+  .pricing-badge{
+    margin-bottom:10px;
+  }
+  
+  .pricing-name{
+    margin-bottom:8px;
+  }
+  
+  .pricing-term{
+    margin-bottom:6px;
+  }
+  
+  .pricing-features{
+    margin-bottom:8px;
+    gap:6px 14px;
+  }
+  
+  .final-cta{
+    padding-top:16px;
+  }
+  
+  .final-cta .footer-logo{
+    max-width:160px;
+    margin-bottom:10px;
+  }
+  
+  .final-cta h2{
+    margin-top:0;
+  }
+  
+  .projects-grid{
+    grid-template-columns:1fr;
+  }
+  
+  .project-card:nth-child(n+4){
+    display:none;
+  }
+  
+  .comparison{
+    display:none !important;
+  }
+  
+  .comparison-table{
+    display:block;
+    max-width:500px;
+    margin:0 auto;
+  }
+  
+  .table-row{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:12px;
+    padding:clamp(18px,4.5vw,20px);
+    margin-bottom:14px;
+    background:rgba(255,255,255,0.7);
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
+    border:1.5px solid rgba(255,42,42,0.15);
+    border-radius:20px;
+    text-align:center;
+  }
+  
+  .table-row:first-child{
+    display:none;
+  }
+  
+  .table-cell{
+    border:none;
+    padding:0;
+    justify-content:center;
+    text-align:center;
+    flex-direction:column;
+  }
+  
+  .table-cell:nth-child(2){
+    display:none !important;
+  }
+  
+  .table-cell:first-child{
+    font-weight:700;
+    color:var(--ink);
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+    font-size:clamp(12px,3.5vw,14px);
+    border-bottom:1px solid rgba(255,42,42,0.2);
+    padding-bottom:10px;
+    margin-bottom:10px;
+  }
+  
+  .table-cell:last-child{
+    font-weight:800;
+    color:var(--red);
+    font-size:clamp(28px,7vw,40px);
+    letter-spacing:-0.02em;
+  }
+  
+  .table-cell::before{
+    display:none;
+  }
+  
+  .pricing-features{
+    grid-template-columns:1fr 1fr;
+    gap:8px 16px;
+  }
+  
+  .pricing-feature{
+    font-size:13px;
+    line-height:1.35;
+  }
 }
 
-Subtitle formatting (NO spill, clean)
-
-Your English subtitle already has a <br> in the HTML. 
-
-SNRG_ELITE_FINAL (1)
-
-
-Keep it. The max-width:34ch + text-wrap:balance makes it look “elite” instead of ragged.
-
-3) FINAL CTA “FOOTER LOGO” + TEXT: reduce logo by half and pull headline tight under it
-
-Right now the final CTA uses .footer-logo and the gap is still too big. 
-
-SNRG_ELITE_FINAL (1)
-
- 
-
-SNRG_ELITE_FINAL (1)
-
-Do this (global):
-.final-cta .footer-logo{
-  max-width:clamp(90px,16vw,140px); /* ~50% reduction */
-  margin:0 auto 4px;               /* tight under logo */
-}
-.final-cta h2{
-  margin-top:0;
+@media(max-width:375px){
+  .lang-bar{
+    padding:12px 16px;
+  }
+  
+  .lang-btn{
+    padding:6px 14px;
+    font-size:12px;
+  }
 }
 
-And tighten final CTA section padding:
-.final-cta{
-  padding:22px 0 30px; /* tighter overall */
-}
+</style>
+</head>
 
-4) “Footer” section: it currently has NO logo, only copyright
+<body>
+  <nav class="lang-bar" role="navigation" aria-label="Language selection">
+    <button class="lang-btn active" onclick="switchLang('en')" aria-label="Switch to English" aria-current="true">EN</button>
+    <button class="lang-btn" onclick="switchLang('es')" aria-label="Cambiar a español">ES</button>
+  </nav>
 
-Your actual <footer> only contains the copyright line. 
+  <header class="hero" role="banner">
+    <div class="animated-bg" aria-hidden="true"></div>
+    <div class="container">
+      <div class="hero-wrap">
+        <div class="hero-logo-container">
+          <div class="logo-mask">
+            <img src="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png" class="hero-logo" alt="SNRG WEB - Professional website design and development" loading="eager" fetchpriority="high">
+          </div>
+        </div>
+        
+        <div class="hero-content">
+          <h1 class="hero-title" lang="en">Enterprise Websites For<br>Houston Entrepreneurs</h1>
+          <h1 class="hero-title" lang="es">Sitios Web Empresariales Para<br>Emprendedores de Houston</h1>
+          
+          <div class="hero-cta-group">
+            <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" class="cta cta-primary" lang="en">View Pricing</a>
+            <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" class="cta cta-secondary" lang="en">Schedule Call</a>
+            
+            <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" class="cta cta-primary" lang="es">Ver Precios</a>
+            <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" class="cta cta-secondary" lang="es">Agendar Cita</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
 
-SNRG_ELITE_FINAL (1)
+  <section class="pricing fade-in">
+    <div class="container">
+      <h2 class="section-title pricing-hero" lang="en">Built Different.<br>Priced Different.</h2>
+      <h2 class="section-title pricing-hero" lang="es">Construido Diferente.<br>Precio Diferente.</h2>
+      
+      <p class="section-subtitle" lang="en">PARKING HTX community outreach removes barriers for Houston entrepreneurs.<br>Professional execution at accessible pricing.</p>
+      <p class="section-subtitle" lang="es">PARKING HTX elimina barreras para emprendedores de Houston.<br>Ejecución profesional a precios accesibles.</p>
+      
+      <div class="pricing-grid">
+        <div class="pricing-card" onclick="selectCard(this)" lang="en">
+          <span class="pricing-badge">Recommended</span>
+          <h3 class="pricing-name">Fully Managed Service</h3>
+          <div class="pricing-price">$75<span style="font-size:clamp(16px,4vw,20px);font-weight:600;color:var(--slate)">/mo</span></div>
+          <p class="pricing-term">then <span class="highlight">$50/mo</span> after 12 months</p>
+          <ul class="pricing-features">
+            <li class="pricing-feature">Custom design</li>
+            <li class="pricing-feature">SEO optimized</li>
+            <li class="pricing-feature">Mobile responsive</li>
+            <li class="pricing-feature">Speed optimized</li>
+            <li class="pricing-feature">Hosting included</li>
+            <li class="pricing-feature">Analytics setup</li>
+            <li class="pricing-feature">5 updates/month</li>
+            <li class="pricing-feature">Ongoing support</li>
+          </ul>
+          <div class="pricing-cta">
+            <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" class="cta cta-primary">Book Consultation</a>
+          </div>
+        </div>
+        
+        <div class="pricing-mobile-divider" lang="en">Built Different.<br>Priced Different.</div>
+        
+        <div class="pricing-card" onclick="selectCard(this)" lang="en">
+          <span class="pricing-badge">One-Time</span>
+          <h3 class="pricing-name">Website Ownership</h3>
+          <div class="pricing-price">$285<span style="font-size:clamp(16px,4vw,20px);font-weight:600;color:var(--slate)"> flat</span></div>
+          <p class="pricing-term">Option: <span class="highlight">$50/mo</span> fully managed after purchase</p>
+          <ul class="pricing-features">
+            <li class="pricing-feature">Custom design</li>
+            <li class="pricing-feature">SEO optimized</li>
+            <li class="pricing-feature">Mobile responsive</li>
+            <li class="pricing-feature">All source files</li>
+            <li class="pricing-feature">30 days support</li>
+            <li class="pricing-feature">Documentation</li>
+          </ul>
+          <div class="pricing-cta">
+            <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" class="cta cta-secondary">Order on Upwork</a>
+          </div>
+        </div>
+        
+        <div class="pricing-card" onclick="selectCard(this)" lang="es">
+          <span class="pricing-badge">Recomendado</span>
+          <h3 class="pricing-name">Servicio Administrado</h3>
+          <div class="pricing-price">$75<span style="font-size:clamp(16px,4vw,20px);font-weight:600;color:var(--slate)">/mes</span></div>
+          <p class="pricing-term">luego <span class="highlight">$50/mes</span> después de 12 meses</p>
+          <ul class="pricing-features">
+            <li class="pricing-feature">Diseño personalizado</li>
+            <li class="pricing-feature">Optimizado para SEO</li>
+            <li class="pricing-feature">Diseño responsivo</li>
+            <li class="pricing-feature">Velocidad optimizada</li>
+            <li class="pricing-feature">Hospedaje incluido</li>
+            <li class="pricing-feature">Análisis configurado</li>
+            <li class="pricing-feature">5 actualizaciones/mes</li>
+            <li class="pricing-feature">Soporte continuo</li>
+          </ul>
+          <div class="pricing-cta">
+            <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" class="cta cta-primary">Reservar Consulta</a>
+          </div>
+        </div>
+        
+        <div class="pricing-mobile-divider" lang="es">Construido Diferente.<br>Precio Diferente.</div>
+        
+        <div class="pricing-card" onclick="selectCard(this)" lang="es">
+          <span class="pricing-badge">Pago Único</span>
+          <h3 class="pricing-name">Propiedad del Sitio</h3>
+          <div class="pricing-price">$285<span style="font-size:clamp(16px,4vw,20px);font-weight:600;color:var(--slate)"> plano</span></div>
+          <p class="pricing-term">Opción: <span class="highlight">$50/mes</span> administrado después de compra</p>
+          <ul class="pricing-features">
+            <li class="pricing-feature">Diseño personalizado</li>
+            <li class="pricing-feature">Optimizado para SEO</li>
+            <li class="pricing-feature">Diseño responsivo</li>
+            <li class="pricing-feature">Todos los archivos</li>
+            <li class="pricing-feature">30 días de soporte</li>
+            <li class="pricing-feature">Documentación</li>
+          </ul>
+          <div class="pricing-cta">
+            <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" class="cta cta-secondary">Ordenar en Upwork</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <section class="comparison fade-in">
+    <div class="container">
+      <h2 class="section-title" lang="en">The SNRG Difference</h2>
+      <h2 class="section-title" lang="es">La Diferencia SNRG</h2>
+      
+      <div class="comparison-table">
+        <div class="table-row">
+          <div class="table-cell" lang="en">Feature</div>
+          <div class="table-cell" lang="en">Typical Agency</div>
+          <div class="table-cell" lang="en">SNRG WEB</div>
+        </div>
+        
+        <div class="table-row">
+          <div class="table-cell" lang="en" data-label="">Launch Time</div>
+          <div class="table-cell" lang="en" data-label="Typical Agency">4-8 weeks</div>
+          <div class="table-cell highlight" lang="en" data-label="SNRG WEB">2-3 days</div>
+        </div>
+        
+        <div class="table-row">
+          <div class="table-cell" lang="en" data-label="">Setup Cost</div>
+          <div class="table-cell" lang="en" data-label="Typical Agency">$2,000+</div>
+          <div class="table-cell highlight" lang="en" data-label="SNRG WEB">$0</div>
+        </div>
+        
+        <div class="table-row">
+          <div class="table-cell" lang="en" data-label="">Monthly Rate</div>
+          <div class="table-cell" lang="en" data-label="Typical Agency">$150-300</div>
+          <div class="table-cell highlight" lang="en" data-label="SNRG WEB">$50-75</div>
+        </div>
+        
+        <div class="table-row">
+          <div class="table-cell" lang="en" data-label="">Updates</div>
+          <div class="table-cell" lang="en" data-label="Typical Agency">3 days</div>
+          <div class="table-cell highlight" lang="en" data-label="SNRG WEB">24 hours</div>
+        </div>
+        
+        <div class="table-row">
+          <div class="table-cell" lang="en" data-label="">Ownership Option</div>
+          <div class="table-cell" lang="en" data-label="Typical Agency"><span class="x">✕</span></div>
+          <div class="table-cell" lang="en" data-label="SNRG WEB"><span class="checkmark">✓</span></div>
+        </div>
+        
+        <div class="table-row">
+          <div class="table-cell" lang="en" data-label="">Local Support</div>
+          <div class="table-cell" lang="en" data-label="Typical Agency"><span class="x">✕</span></div>
+          <div class="table-cell" lang="en" data-label="SNRG WEB"><span class="checkmark">✓</span></div>
+        </div>
+      </div>
+      
+      <div class="comparison-table" lang="es">
+        <div class="table-row">
+          <div class="table-cell">Característica</div>
+          <div class="table-cell">Agencia Típica</div>
+          <div class="table-cell">SNRG WEB</div>
+        </div>
+        
+        <div class="table-row">
+          <div class="table-cell" data-label="">Tiempo de Lanzamiento</div>
+          <div class="table-cell" data-label="Agencia Típica">4-8 semanas</div>
+          <div class="table-cell highlight" data-label="SNRG WEB">2-3 días</div>
+        </div>
+        
+        <div class="table-row">
+          <div class="table-cell" data-label="">Costo Inicial</div>
+          <div class="table-cell" data-label="Agencia Típica">$2,000+</div>
+          <div class="table-cell highlight" data-label="SNRG WEB">$0</div>
+        </div>
+        
+        <div class="table-row">
+          <div class="table-cell" data-label="">Tarifa Mensual</div>
+          <div class="table-cell" data-label="Agencia Típica">$150-300</div>
+          <div class="table-cell highlight" data-label="SNRG WEB">$50-75</div>
+        </div>
+        
+        <div class="table-row">
+          <div class="table-cell" data-label="">Actualizaciones</div>
+          <div class="table-cell" data-label="Agencia Típica">3 días</div>
+          <div class="table-cell highlight" data-label="SNRG WEB">24 horas</div>
+        </div>
+        
+        <div class="table-row">
+          <div class="table-cell" data-label="">Opción de Propiedad</div>
+          <div class="table-cell" data-label="Agencia Típica"><span class="x">✕</span></div>
+          <div class="table-cell" data-label="SNRG WEB"><span class="checkmark">✓</span></div>
+        </div>
+        
+        <div class="table-row">
+          <div class="table-cell" data-label="">Soporte Local</div>
+          <div class="table-cell" data-label="Agencia Típica"><span class="x">✕</span></div>
+          <div class="table-cell" data-label="SNRG WEB"><span class="checkmark">✓</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-So “footer logo” work is really hero logo + final CTA logo (the two logos on-page).
+  <section class="projects fade-in">
+    <div class="container">
+      <h2 class="section-title" lang="en">Selected Projects</h2>
+      <h2 class="section-title" lang="es">Proyectos Seleccionados</h2>
+      
+      <div class="projects-grid">
+        <a href="https://parking-htx-61fb2a.webflow.io/" class="project-card" lang="en">
+          <h3 class="project-title">PARKING HTX</h3>
+          <p class="project-desc">QR-code parking platform for Houston properties with license plate recognition.</p>
+          <div class="project-tags">
+            <span class="project-tag">Platform</span>
+            <span class="project-tag">SaaS</span>
+          </div>
+        </a>
+        
+        <a href="https://kiblers-kollectibles.webflow.io/" class="project-card" lang="en">
+          <h3 class="project-title">Kibler's Kollectibles</h3>
+          <p class="project-desc">E-commerce platform for Houston collectibles dealer with inventory management.</p>
+          <div class="project-tags">
+            <span class="project-tag">E-Commerce</span>
+            <span class="project-tag">Inventory</span>
+          </div>
+        </a>
+        
+        <a href="https://con-net-graphics.webflow.io/" class="project-card" lang="en">
+          <h3 class="project-title">ConNet Graphics</h3>
+          <p class="project-desc">Portfolio site for Houston commercial printing company offering vehicle wraps and large format printing.</p>
+          <div class="project-tags">
+            <span class="project-tag">Portfolio</span>
+            <span class="project-tag">Services</span>
+          </div>
+        </a>
+        
+        <a href="https://tortas-gigantes.webflow.io/" class="project-card" lang="en">
+          <h3 class="project-title">Tortas Gigantes</h3>
+          <p class="project-desc">Restaurant website for Houston Mexican food spot known for authentic tortas and traditional dishes.</p>
+          <div class="project-tags">
+            <span class="project-tag">Restaurant</span>
+            <span class="project-tag">Menu</span>
+          </div>
+        </a>
+        
+        <a href="https://mr-donuts-kolache.webflow.io/" class="project-card" lang="en">
+          <h3 class="project-title">Mr. Donuts & Kolaches</h3>
+          <p class="project-desc">Online ordering platform for Houston donut shop with delivery, pickup, and catering options.</p>
+          <div class="project-tags">
+            <span class="project-tag">Ordering</span>
+            <span class="project-tag">Catering</span>
+          </div>
+        </a>
+        
+        <a href="https://parking-htx-61fb2a.webflow.io/" class="project-card" lang="es">
+          <h3 class="project-title">PARKING HTX</h3>
+          <p class="project-desc">Plataforma de estacionamiento con códigos QR para propiedades de Houston con reconocimiento de placas.</p>
+          <div class="project-tags">
+            <span class="project-tag">Plataforma</span>
+            <span class="project-tag">SaaS</span>
+          </div>
+        </a>
+        
+        <a href="https://kiblers-kollectibles.webflow.io/" class="project-card" lang="es">
+          <h3 class="project-title">Kibler's Kollectibles</h3>
+          <p class="project-desc">Plataforma de comercio electrónico para distribuidor de coleccionables de Houston.</p>
+          <div class="project-tags">
+            <span class="project-tag">E-Commerce</span>
+            <span class="project-tag">Inventario</span>
+          </div>
+        </a>
+        
+        <a href="https://con-net-graphics.webflow.io/" class="project-card" lang="es">
+          <h3 class="project-title">ConNet Graphics</h3>
+          <p class="project-desc">Sitio de portafolio para empresa de impresión comercial de Houston que ofrece rotulación.</p>
+          <div class="project-tags">
+            <span class="project-tag">Portafolio</span>
+            <span class="project-tag">Servicios</span>
+          </div>
+        </a>
+        
+        <a href="https://tortas-gigantes.webflow.io/" class="project-card" lang="es">
+          <h3 class="project-title">Tortas Gigantes</h3>
+          <p class="project-desc">Sitio web de restaurante para lugar de comida mexicana de Houston conocido por tortas auténticas.</p>
+          <div class="project-tags">
+            <span class="project-tag">Restaurante</span>
+            <span class="project-tag">Menú</span>
+          </div>
+        </a>
+        
+        <a href="https://mr-donuts-kolache.webflow.io/" class="project-card" lang="es">
+          <h3 class="project-title">Mr. Donuts & Kolaches</h3>
+          <p class="project-desc">Plataforma de pedidos en línea para tienda de donas de Houston con entrega y catering.</p>
+          <div class="project-tags">
+            <span class="project-tag">Pedidos</span>
+            <span class="project-tag">Catering</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
 
-If you do want a logo above copyright in the footer, Claude should:
+  <section class="final-cta fade-in">
+    <div class="container">
+      <img src="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png" class="footer-logo" alt="SNRG WEB Logo">
+      
+      <h2 lang="en">Focus on your business.<br>We'll handle your website.</h2>
+      <h2 lang="es">Enfócate en tu negocio.<br>Nosotros manejamos tu sitio.</h2>
+    </div>
+  </section>
 
-Add an <img class="footer-logo"> inside the <footer> container
+  <div class="sticky-cta" id="stickyCTA">
+    <span class="sticky-text" lang="en">Ready to get started?</span>
+    <span class="sticky-text" lang="es">¿Listo para comenzar?</span>
+    
+    <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" class="cta cta-primary" lang="en">Schedule Call</a>
+    <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" class="cta cta-secondary" lang="en">Order on Upwork</a>
+    
+    <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" class="cta cta-primary" lang="es">Agendar</a>
+    <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" class="cta cta-secondary" lang="es">Ordenar</a>
+  </div>
 
-Then apply the same “tight stack” rules as final CTA
+  <footer class="footer fade-in">
+    <div class="container">
+      <p class="footer-copyright">© 2026 SNRG WEB — ALL RIGHTS RESERVED</p>
+    </div>
+  </footer>
 
-5) Mobile: tighten spacing between pricing cards even more (your request)
+  <script>
+  window.addEventListener('load',()=>{
+    setTimeout(()=>window.scrollTo(0,0),10);
+  });
+  
+  window.addEventListener('beforeunload',()=>{
+    window.scrollTo(0,0);
+  });
+  
+  const observerOptions={threshold:0.15,rootMargin:'0px 0px -80px 0px'};
+  const observer=new IntersectionObserver((entries)=>{
+    entries.forEach((entry,index)=>{
+      if(entry.isIntersecting){
+        setTimeout(()=>entry.target.style.animationPlayState='running',index*120);
+        observer.unobserve(entry.target);
+      }
+    });
+  },observerOptions);
 
-You already reduced card padding to 14px. 
+  const titleObserver=new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.style.animationPlayState='running';
+        titleObserver.unobserve(entry.target);
+      }
+    });
+  },{threshold:0.2,rootMargin:'0px 0px -100px 0px'});
 
-SNRG_ELITE_FINAL (1)
+  function switchLang(lang){
+    const btns=document.querySelectorAll('.lang-btn');
+    if(lang==='es'){
+      document.body.classList.add('spanish');
+      btns[0].classList.remove('active');
+      btns[0].setAttribute('aria-current','false');
+      btns[1].classList.add('active');
+      btns[1].setAttribute('aria-current','true');
+    }else{
+      document.body.classList.remove('spanish');
+      btns[0].classList.add('active');
+      btns[0].setAttribute('aria-current','true');
+      btns[1].classList.remove('active');
+      btns[1].setAttribute('aria-current','false');
+    }
+  }
 
+  function selectCard(card){
+    const allCards=document.querySelectorAll('.pricing-card');
+    const currentLang=document.body.classList.contains('spanish')?'es':'en';
+    
+    allCards.forEach(c=>{
+      if(c.lang===currentLang){
+        c.classList.remove('selected');
+      }
+    });
+    
+    card.classList.add('selected');
+  }
 
-Do this too:
+  let scrollTimeout;
+  window.addEventListener('scroll',()=>{
+    clearTimeout(scrollTimeout);
+    scrollTimeout=setTimeout(()=>{
+      const sticky=document.getElementById('stickyCTA');
+      if(window.scrollY>600){
+        sticky.classList.add('visible');
+      }else{
+        sticky.classList.remove('visible');
+      }
+    },50);
+  },{passive:true});
 
-@media(max-width:768px){
-  .pricing-card{ padding:12px; }
-  .pricing-term{ margin-bottom:6px; }
-  .pricing-features{ margin-bottom:8px; }
-}
+  document.addEventListener('DOMContentLoaded',()=>{
+    const fadeElements=document.querySelectorAll('.fade-in');
+    fadeElements.forEach(el=>{
+      el.style.animationPlayState='paused';
+      observer.observe(el);
+    });
+    
+    const titles=document.querySelectorAll('.section-title');
+    titles.forEach(title=>{
+      titleObserver.observe(title);
+    });
+  });
+  </script>
 
-If Claude follows this exactly, your scores move to:
-
-Desktop: 95 / 100
-
-Mobile: 92–94 / 100 (the subtitle + divider fix is the big jump)
-
-If you want, paste Claude’s output back here (or upload the revised HTML) and I’ll re-rate it again and call out what’s still leaking spacing.
+</body>
+</html>
