@@ -172,13 +172,12 @@ body.spanish [lang="en"]{display:none}
 }
 
 .hero{
-  min-height:100vh;
-  min-height:100dvh;
+  min-height:auto;
   display:flex;
   align-items:center;
   justify-content:center;
-  padding:clamp(51px,7vh,72px) 0 clamp(24px,4vh,34px);
-  padding-top:max(clamp(51px,7vh,72px),env(safe-area-inset-top));
+  padding:clamp(72px,10vh,120px) 0 clamp(24px,6vh,48px);
+  padding-top:max(clamp(72px,10vh,120px),env(safe-area-inset-top));
   position:relative;
   overflow:hidden;
   contain:paint;
@@ -191,10 +190,8 @@ body.spanish [lang="en"]{display:none}
 
 .hero-content{
   opacity:0;
-  transform:translateY(60px) scale(0.95);
-  filter:blur(8px);
   animation:heroContentEntrance 1.4s cubic-bezier(0.16,1,0.3,1) 0.4s forwards;
-  margin-top:clamp(-95px,-14vw,-58px);
+  margin-top:0;
   text-align:center;
   display:flex;
   flex-direction:column;
@@ -203,7 +200,7 @@ body.spanish [lang="en"]{display:none}
 }
 
 @keyframes heroContentEntrance{
-  to{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}
+  to{opacity:1}
 }
 
 .hero-logo-container{
@@ -218,10 +215,10 @@ body.spanish [lang="en"]{display:none}
 }
 
 .hero-logo{
-  max-width:clamp(380px,75vw,640px);
+  max-width:clamp(320px,55vw,620px);
   height:auto;
   display:block;
-  margin:0 auto;
+  margin:0 auto 10px;
   filter:drop-shadow(0 16px 48px rgba(0,0,0,0.2));
   opacity:0;
   transform:scale(0.3) translateY(-100px) translateZ(-500px);
@@ -264,7 +261,7 @@ body.spanish [lang="en"]{display:none}
   font-weight:900;
   letter-spacing:-0.03em;
   line-height:1.05;
-  margin:0 auto clamp(13px,3vw,26px);
+  margin:0 auto clamp(24px,5vw,48px);
   max-width:920px;
 }
 
@@ -328,11 +325,11 @@ body.spanish [lang="en"]{display:none}
   letter-spacing:-0.04em;
   line-height:1.15;
   text-align:center;
-  margin-bottom:clamp(10px,1.8vw,18px);
+  margin-bottom:clamp(14px,2.5vw,24px);
   color:var(--ink);
   opacity:0;
-  transform:translateY(40px) scale(0.95);
-  animation:titleEntrance 1.4s cubic-bezier(0.16,1,0.3,1) forwards;
+  transform:translateY(40px) scale(0.96);
+  animation:titleEntrance 0.9s cubic-bezier(0.22,1,0.36,1) forwards;
   animation-play-state:paused;
 }
 
@@ -340,7 +337,7 @@ body.spanish [lang="en"]{display:none}
   font-size:clamp(32px,8vw,68px);
   line-height:1.08;
   margin-top:0;
-  margin-bottom:clamp(8px,2.1vw,17px);
+  margin-bottom:clamp(16px,3vw,28px);
 }
 
 @keyframes titleEntrance{
@@ -376,7 +373,7 @@ body.spanish [lang="en"]{display:none}
 }
 
 .pricing{
-  padding:clamp(18px,3.5vw,32px) 0;
+  padding:clamp(14px,3vw,24px) 0;
   background:linear-gradient(135deg, #ffffff 0%, #f8f9fa 25%, #ffffff 50%, #f5f6f7 75%, #ffffff 100%);
   background-size:400% 400%;
   animation:pearlShimmer 15s ease infinite;
@@ -410,7 +407,7 @@ body.spanish [lang="en"]{display:none}
 .pricing-grid{
   display:grid;
   grid-template-columns:repeat(2,1fr);
-  gap:clamp(18px,3.5vw,28px);
+  gap:clamp(14px,3vw,22px);
   max-width:1000px;
   margin:0 auto;
   align-items:stretch;
@@ -480,7 +477,7 @@ body.spanish [lang="en"]{display:none}
   font-size:clamp(15px,3.8vw,18px);
   color:var(--slate);
   margin-top:clamp(8px,2vw,12px);
-  margin-bottom:clamp(10px,2.5vw,18px);
+  margin-bottom:clamp(14px,3.5vw,26px);
   font-weight:500;
   line-height:1.5;
 }
@@ -529,25 +526,8 @@ body.spanish [lang="en"]{display:none}
   padding-top:12px;
 }
 
-.pricing-mobile-divider{
-  display:none;
-}
-
-@keyframes dividerEntrance{
-  0%{
-    opacity:0;
-    transform:scale(0.94);
-    filter:brightness(0.92);
-  }
-  100%{
-    opacity:1;
-    transform:scale(1);
-    filter:brightness(1);
-  }
-}
-
 .comparison{
-  padding:clamp(18px,3.5vw,32px) 0;
+  padding:clamp(15px,3vw,27px) 0;
   background:linear-gradient(135deg, #f6f7f8 0%, #fafbfc 25%, #f6f7f8 50%, #f8f9fa 75%, #f6f7f8 100%);
   background-size:400% 400%;
   animation:pearlShimmer 18s ease infinite;
@@ -647,7 +627,7 @@ body.spanish [lang="en"]{display:none}
 }
 
 .projects{
-  padding:clamp(18px,3.5vw,32px) 0 clamp(26px,5.5vw,40px);
+  padding:clamp(15px,3vw,27px) 0 clamp(22px,4.7vw,34px);
   background:linear-gradient(135deg, #ffffff 0%, #f9fafb 25%, #ffffff 50%, #f7f8f9 75%, #ffffff 100%);
   background-size:400% 400%;
   animation:pearlShimmer 16s ease infinite;
@@ -748,7 +728,7 @@ body.spanish [lang="en"]{display:none}
 }
 
 .final-cta{
-  padding:22px 0 30px;
+  padding:18px 0 26px;
   background:linear-gradient(135deg, #f6f7f8 0%, #fbfcfd 25%, #f6f7f8 50%, #f9fafb 75%, #f6f7f8 100%);
   background-size:400% 400%;
   animation:pearlShimmer 17s ease infinite;
@@ -782,8 +762,8 @@ body.spanish [lang="en"]{display:none}
 }
 
 .final-cta .footer-logo{
-  max-width:clamp(90px,16vw,140px);
-  margin:0 auto 4px;
+  max-width:clamp(90px,14vw,140px);
+  margin:0 auto 2px;
 }
 
 .final-cta h2{
@@ -827,7 +807,7 @@ body.spanish [lang="en"]{display:none}
 }
 
 .footer{
-  padding:12px 0 88px;
+  padding:16px 0 88px;
   background:var(--white);
   border-top:2px solid var(--border);
   text-align:center;
@@ -835,9 +815,9 @@ body.spanish [lang="en"]{display:none}
 }
 
 .footer-logo{
-  max-width:clamp(120px,28vw,180px);
+  max-width:clamp(240px,55vw,360px);
   height:auto;
-  margin:0 auto 6px;
+  margin:0 auto 8px;
   display:block;
   filter:drop-shadow(0 8px 24px rgba(0,0,0,0.08));
   opacity:1 !important;
@@ -935,16 +915,12 @@ body.spanish [lang="en"]{display:none}
 
 @media(max-width:768px){
   .hero{
-    min-height:auto;
-    padding:68px 0 14px;
-  }
-  
-  .hero-content{
-    margin-top:-28px;
+    padding:72px 0 24px;
   }
   
   .hero-logo{
-    max-width:200px;
+    max-width:240px;
+    margin-bottom:8px;
     animation-duration:0.6s;
   }
   
@@ -953,100 +929,29 @@ body.spanish [lang="en"]{display:none}
     animation-delay:0.15s;
   }
   
-  .hero-title{
-    margin-top:6px;
-    margin-bottom:12px;
-    letter-spacing:-0.03em;
-  }
-  
-  .section-subtitle{
-    display:none;
-  }
-  
-  .section-title.pricing-hero{
-    display:none;
-  }
-  
-  .pricing-mobile-divider{
-    display:block;
-    font-size:clamp(28px,7vw,44px);
-    font-weight:900;
-    letter-spacing:-0.04em;
-    line-height:1.05;
-    text-align:center;
-    color:var(--ink);
-    margin:12px 0;
-    padding:8px 0;
-    opacity:0;
-    transform:scale(0.94);
-    animation:dividerEntrance 0.75s cubic-bezier(0.22,1,0.36,1) 0.4s forwards;
-  }
-  
-  .pricing-grid{
-    gap:12px;
-  }
-  
-  .pricing .section-subtitle{
-    display:block;
-    margin:10px auto 0;
-    max-width:34ch;
-    line-height:1.35;
-    font-size:15px;
-    text-wrap:balance;
-  }
-  
   .section-title{
-    animation-duration:0.75s;
+    animation-duration:0.7s;
   }
   
   .fade-in{
     animation-duration:0.7s;
   }
   
-  .pricing,
-  .projects,
-  .final-cta{
-    padding-top:20px;
-    padding-bottom:28px;
-  }
-  
   .pricing{
     padding-top:12px;
+    padding-bottom:24px;
   }
   
   .pricing-card{
     padding:12px;
-    border-radius:10px;
-  }
-  
-  .pricing-badge{
-    margin-bottom:10px;
-  }
-  
-  .pricing-name{
-    margin-bottom:8px;
-  }
-  
-  .pricing-term{
-    margin-bottom:6px;
-  }
-  
-  .pricing-features{
-    margin-bottom:8px;
-    gap:6px 14px;
   }
   
   .final-cta{
-    padding-top:16px;
+    padding:16px 0 22px;
   }
   
   .final-cta .footer-logo{
-    max-width:160px;
-    margin-bottom:10px;
-  }
-  
-  .final-cta h2{
-    margin-top:0;
+    margin-bottom:0;
   }
   
   .projects-grid{
@@ -1161,9 +1066,6 @@ body.spanish [lang="en"]{display:none}
         </div>
         
         <div class="hero-content">
-          <h1 class="hero-title" lang="en">Enterprise Websites For<br>Houston Entrepreneurs</h1>
-          <h1 class="hero-title" lang="es">Sitios Web Empresariales Para<br>Emprendedores de Houston</h1>
-          
           <div class="hero-cta-group">
             <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" class="cta cta-primary" lang="en">View Pricing</a>
             <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" class="cta cta-secondary" lang="en">Schedule Call</a>
@@ -1180,9 +1082,6 @@ body.spanish [lang="en"]{display:none}
     <div class="container">
       <h2 class="section-title pricing-hero" lang="en">Built Different.<br>Priced Different.</h2>
       <h2 class="section-title pricing-hero" lang="es">Construido Diferente.<br>Precio Diferente.</h2>
-      
-      <p class="section-subtitle" lang="en">PARKING HTX community outreach removes barriers for Houston entrepreneurs.<br>Professional execution at accessible pricing.</p>
-      <p class="section-subtitle" lang="es">PARKING HTX elimina barreras para emprendedores de Houston.<br>Ejecución profesional a precios accesibles.</p>
       
       <div class="pricing-grid">
         <div class="pricing-card" onclick="selectCard(this)" lang="en">
@@ -1204,8 +1103,6 @@ body.spanish [lang="en"]{display:none}
             <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" class="cta cta-primary">Book Consultation</a>
           </div>
         </div>
-        
-        <div class="pricing-mobile-divider" lang="en">Built Different.<br>Priced Different.</div>
         
         <div class="pricing-card" onclick="selectCard(this)" lang="en">
           <span class="pricing-badge">One-Time</span>
@@ -1244,8 +1141,6 @@ body.spanish [lang="en"]{display:none}
             <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" class="cta cta-primary">Reservar Consulta</a>
           </div>
         </div>
-        
-        <div class="pricing-mobile-divider" lang="es">Construido Diferente.<br>Precio Diferente.</div>
         
         <div class="pricing-card" onclick="selectCard(this)" lang="es">
           <span class="pricing-badge">Pago Único</span>
