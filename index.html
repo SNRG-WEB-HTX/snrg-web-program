@@ -267,6 +267,43 @@ body.spanish [lang="en"]{display:none}
 
 .hero-title br{display:block}
 
+.hero-spec{
+  margin:6px auto 10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  font-weight:600;
+  letter-spacing:0.04em;
+  font-size:clamp(14px,2.8vw,18px);
+  color:rgba(15,17,21,0.9);
+  opacity:0;
+  transform:translateY(8px);
+  filter:blur(4px);
+  animation:specIn 0.55s cubic-bezier(0.22,1,0.36,1) forwards;
+  animation-delay:1.7s;
+  flex-wrap:wrap;
+  max-width:100%;
+  padding:0 16px;
+}
+
+.spec-dot{
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:var(--red);
+  box-shadow:0 0 8px rgba(255,42,42,0.6);
+  flex-shrink:0;
+}
+
+@keyframes specIn{
+  to{
+    opacity:1;
+    transform:translateY(0);
+    filter:blur(0);
+  }
+}
+
 .hero-cta-group{
   display:flex;
   gap:16px;
@@ -310,7 +347,7 @@ body.spanish [lang="en"]{display:none}
 .cta-secondary{
   background:transparent;
   color:var(--ink);
-  border-color:var(--border);
+  border-color:var(--ink);
 }
 
 .cta-secondary:active{
@@ -322,8 +359,8 @@ body.spanish [lang="en"]{display:none}
 .section-title{
   font-size:clamp(26px,6.5vw,56px);
   font-weight:900;
-  letter-spacing:-0.04em;
-  line-height:1.15;
+  letter-spacing:-0.045em;
+  line-height:1.08;
   text-align:center;
   margin-bottom:clamp(14px,2.5vw,24px);
   color:var(--ink);
@@ -334,7 +371,7 @@ body.spanish [lang="en"]{display:none}
 }
 
 .section-title.pricing-hero{
-  font-size:clamp(32px,8vw,68px);
+  font-size:clamp(30px,7.5vw,64px);
   line-height:1.08;
   margin-top:0;
   margin-bottom:clamp(16px,3vw,28px);
@@ -527,10 +564,10 @@ body.spanish [lang="en"]{display:none}
 }
 
 .comparison{
-  padding:clamp(15px,3vw,27px) 0;
-  background:linear-gradient(135deg, #f6f7f8 0%, #fafbfc 25%, #f6f7f8 50%, #f8f9fa 75%, #f6f7f8 100%);
+  padding:clamp(14px,2.8vw,25px) 0;
+  background:linear-gradient(135deg, #f6f7f8 0%, #f9fafb 25%, #f6f7f8 50%, #f7f8f9 75%, #f6f7f8 100%);
   background-size:400% 400%;
-  animation:pearlShimmer 18s ease infinite;
+  animation:pearlShimmer 22s ease infinite;
   position:relative;
   overflow:hidden;
 }
@@ -627,7 +664,7 @@ body.spanish [lang="en"]{display:none}
 }
 
 .projects{
-  padding:clamp(15px,3vw,27px) 0 clamp(22px,4.7vw,34px);
+  padding:clamp(14px,2.8vw,25px) 0 clamp(20px,4.3vw,31px);
   background:linear-gradient(135deg, #ffffff 0%, #f9fafb 25%, #ffffff 50%, #f7f8f9 75%, #ffffff 100%);
   background-size:400% 400%;
   animation:pearlShimmer 16s ease infinite;
@@ -728,7 +765,7 @@ body.spanish [lang="en"]{display:none}
 }
 
 .final-cta{
-  padding:18px 0 26px;
+  padding:16px 0 24px;
   background:linear-gradient(135deg, #f6f7f8 0%, #fbfcfd 25%, #f6f7f8 50%, #f9fafb 75%, #f6f7f8 100%);
   background-size:400% 400%;
   animation:pearlShimmer 17s ease infinite;
@@ -929,6 +966,18 @@ body.spanish [lang="en"]{display:none}
     animation-delay:0.15s;
   }
   
+  .hero-spec{
+    margin:6px auto 8px;
+    gap:8px;
+    font-size:13px;
+    padding:0 12px;
+  }
+  
+  .spec-dot{
+    width:5px;
+    height:5px;
+  }
+  
   .section-title{
     animation-duration:0.7s;
   }
@@ -1040,6 +1089,17 @@ body.spanish [lang="en"]{display:none}
     padding:6px 14px;
     font-size:12px;
   }
+  
+  .hero-spec{
+    font-size:12px;
+    gap:6px;
+    padding:0 8px;
+  }
+  
+  .spec-dot{
+    width:4px;
+    height:4px;
+  }
 }
 
 </style>
@@ -1062,6 +1122,9 @@ body.spanish [lang="en"]{display:none}
         </div>
         
         <div class="hero-content">
+          <div class="hero-spec" lang="en">Houston Built <span class="spec-dot"></span> $0 To Start <span class="spec-dot"></span> Fast Service</div>
+          <div class="hero-spec" lang="es">Hecho En Houston <span class="spec-dot"></span> $0 Para Empezar <span class="spec-dot"></span> Servicio Rápido</div>
+          
           <div class="hero-cta-group">
             <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" class="cta cta-primary" lang="en">View Pricing</a>
             <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" class="cta cta-secondary" lang="en">Schedule Call</a>
@@ -1380,11 +1443,21 @@ body.spanish [lang="en"]{display:none}
   </footer>
 
   <script>
+  if('scrollRestoration' in history){
+    history.scrollRestoration='manual';
+  }
+  
+  window.scrollTo(0,0);
+  
   window.addEventListener('load',()=>{
     setTimeout(()=>window.scrollTo(0,0),10);
   });
   
   window.addEventListener('beforeunload',()=>{
+    window.scrollTo(0,0);
+  });
+  
+  document.addEventListener('DOMContentLoaded',()=>{
     window.scrollTo(0,0);
   });
   
