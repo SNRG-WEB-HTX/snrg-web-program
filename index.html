@@ -194,6 +194,8 @@ body.spanish [lang="en"]{display:none}
   align-items:center;
   justify-content:center;
   width:100%;
+  background:transparent !important;
+  isolation:isolate;
 }
 
 .hero-logo{
@@ -201,12 +203,13 @@ body.spanish [lang="en"]{display:none}
   height:auto;
   display:block;
   margin:0 auto;
-  filter:drop-shadow(0 12px 32px rgba(0,0,0,0.15)) brightness(1.02) contrast(1.05);
+  filter:drop-shadow(0 12px 32px rgba(0,0,0,0.15));
   opacity:0;
   transform:scale(0.92) translateY(-20px);
   animation:logoEntrance 0.9s cubic-bezier(0.16,1,0.3,1) forwards;
   background:transparent !important;
-  mix-blend-mode:darken;
+  mix-blend-mode:multiply;
+  isolation:isolate;
 }
 
 @keyframes logoEntrance{
@@ -220,6 +223,8 @@ body.spanish [lang="en"]{display:none}
   justify-content: center;
   overflow: hidden;
   width: 100%;
+  background:transparent !important;
+  isolation:isolate;
 }
 
 .hero-title{
@@ -770,11 +775,12 @@ body.spanish [lang="en"]{display:none}
   height:auto;
   margin:0 auto clamp(16px,4vw,24px);
   display:block;
-  filter:drop-shadow(0 6px 20px rgba(0,0,0,0.06)) brightness(1.02) contrast(1.05);
+  filter:drop-shadow(0 6px 20px rgba(0,0,0,0.06));
   opacity:1 !important;
   visibility:visible !important;
   background:transparent !important;
-  mix-blend-mode:darken;
+  mix-blend-mode:multiply;
+  isolation:isolate;
 }
 
 .footer-tagline{
