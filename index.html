@@ -6,13 +6,13 @@
 <link rel="dns-prefetch" href="https://api.fontshare.com">
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"/>
 <meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5,user-scalable=yes"/>
-<title>Houston Small Business Websites | SNRG Web</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5,user-scalable=yes,viewport-fit=cover"/>
+<title>Houston Small Business Websites | SNRG WEB</title>
 <meta name="description" content="Enterprise websites for Houston entrepreneurs. From $50/mo."/>
 <meta name="theme-color" content="#FF2A2A"/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://snrgweb.com/"/>
-<meta property="og:title" content="Houston Small Business Websites | SNRG Web"/>
+<meta property="og:title" content="Houston Small Business Websites | SNRG WEB"/>
 <meta property="og:description" content="Enterprise websites for Houston entrepreneurs. From $50/mo."/>
 
 <link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,900,500,400,800,600&display=swap" rel="stylesheet">
@@ -22,9 +22,10 @@
   --pearl:#F6F7F8;
   --white:#FFFFFF;
   --ink:#0F1115;
-  --slate:#5A5F6A;
+  --slate:#4A4F5A;
   --slate-light:#7B8290;
   --red:#FF2A2A;
+  --red-hover:#E02424;
   --red-light:#FF5252;
   --border:#E5E7EB;
 }
@@ -56,6 +57,11 @@ body.spanish [lang="en"]{display:none}
     animation-iteration-count:1!important;
     transition-duration:0.01ms!important;
   }
+  .stat-value{
+    animation:none!important;
+    opacity:1!important;
+    transform:none!important;
+  }
 }
 
 .animated-bg{
@@ -72,9 +78,8 @@ body.spanish [lang="en"]{display:none}
   content:'';
   position:absolute;
   border-radius:50%;
-  filter:blur(60px);
-  opacity:0.07;
-  will-change:transform;
+  filter:blur(40px);
+  opacity:0.12;
 }
 
 .hero .animated-bg::before{
@@ -83,7 +88,7 @@ body.spanish [lang="en"]{display:none}
   background:radial-gradient(circle,rgba(255,42,42,0.4),transparent);
   top:-200px;
   right:-150px;
-  animation:floatSlow 25s ease-in-out infinite;
+  animation:floatSlow 18s ease-in-out infinite;
 }
 
 .hero .animated-bg::after{
@@ -92,7 +97,7 @@ body.spanish [lang="en"]{display:none}
   background:radial-gradient(circle,rgba(255,82,82,0.3),transparent);
   bottom:-150px;
   left:-100px;
-  animation:floatSlow 30s ease-in-out infinite reverse;
+  animation:floatSlow 18s ease-in-out infinite reverse;
 }
 
 @keyframes floatSlow{
@@ -121,16 +126,29 @@ body.spanish [lang="en"]{display:none}
   background:transparent;
   border:1.5px solid var(--border);
   color:var(--slate);
-  padding:6px 18px;
-  border-radius:20px;
+  padding:8px 18px;
+  border-radius:12px;
   font-size:13px;
   font-weight:600;
   cursor:pointer;
   transition:all 0.2s;
+  min-width:44px;
+  min-height:44px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
 }
 
 .lang-btn:hover{border-color:var(--red);color:var(--ink)}
-.lang-btn.active{background:var(--red);border-color:var(--red);color:var(--white)}
+.lang-btn:focus{
+  outline:2px solid var(--red);
+  outline-offset:2px;
+}
+.lang-btn.active{
+  background:var(--red);
+  border-color:var(--red);
+  color:var(--white);
+}
 
 .container{
   max-width:1320px;
@@ -146,7 +164,8 @@ body.spanish [lang="en"]{display:none}
   display:flex;
   align-items:center;
   justify-content:center;
-  padding:0;
+  padding:140px 0 80px;
+  padding-top:max(140px,env(safe-area-inset-top));
   position:relative;
   overflow:hidden;
   contain:paint;
@@ -161,7 +180,7 @@ body.spanish [lang="en"]{display:none}
   opacity:0;
   transform:translateY(60px) scale(0.95);
   filter:blur(8px);
-  animation:heroContentEntrance 1.4s cubic-bezier(0.16,1,0.3,1) 0.8s forwards;
+  animation:heroContentEntrance 1.4s cubic-bezier(0.16,1,0.3,1) 0.4s forwards;
 }
 
 @keyframes heroContentEntrance{
@@ -169,29 +188,45 @@ body.spanish [lang="en"]{display:none}
 }
 
 .hero-logo-container{
-  margin-bottom:clamp(32px,6vw,64px);
+  margin:0 auto 48px;
   position:relative;
-  display:inline-block;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:100%;
 }
 
 .hero-logo{
-  max-width:clamp(260px,60vw,440px);
+  max-width:clamp(280px,65vw,480px);
   height:auto;
   display:block;
-  filter:drop-shadow(0 8px 24px rgba(0,0,0,0.12));
+  margin:0 auto;
+  filter:drop-shadow(0 12px 32px rgba(0,0,0,0.15)) brightness(1.02) contrast(1.05);
   opacity:0;
-  transform:scale(0.8) translateY(-20px);
+  transform:scale(0.92) translateY(-20px);
   animation:logoEntrance 0.9s cubic-bezier(0.16,1,0.3,1) forwards;
+  background:transparent !important;
+  mix-blend-mode:darken;
 }
 
 @keyframes logoEntrance{
   to{opacity:1;transform:scale(1) translateY(0)}
+}
+
+.logo-mask{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 100%;
+}
 
 .hero-title{
   font-size:clamp(28px,7vw,72px);
   font-weight:900;
-  letter-spacing:-0.045em;
-  line-height:1.15;
+  letter-spacing:-0.03em;
+  line-height:1.2;
   margin:0 auto clamp(16px,3vw,24px);
   max-width:920px;
 }
@@ -209,29 +244,27 @@ body.spanish [lang="en"]{display:none}
   align-items:center;
   justify-content:center;
   gap:clamp(8px,2.2vw,14px);
-  white-space:nowrap;
-  flex-wrap:nowrap;
+  flex-wrap:wrap;
 }
 
 .hero-subtitle span{
   display:flex;
   align-items:center;
   gap:clamp(8px,2.2vw,14px);
-  white-space:nowrap;
 }
 
 .dot-separator{
-  width:6px;
-  height:6px;
+  width:0.375em;
+  height:0.375em;
   background:var(--red);
   border-radius:50%;
-  box-shadow:0 0 12px rgba(255,42,42,0.6);
+  box-shadow:0 0 8px rgba(255,42,42,0.6);
   flex-shrink:0;
 }
 
 .hero-cta-group{
   display:flex;
-  gap:clamp(12px,3vw,20px);
+  gap:16px;
   justify-content:center;
   flex-wrap:wrap;
 }
@@ -250,6 +283,12 @@ body.spanish [lang="en"]{display:none}
   cursor:pointer;
   border:2px solid transparent;
   white-space:nowrap;
+  min-height:44px;
+}
+
+.cta:focus{
+  outline:2px solid var(--red);
+  outline-offset:2px;
 }
 
 .cta-primary{
@@ -278,56 +317,87 @@ body.spanish [lang="en"]{display:none}
 .hero-stats{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:clamp(16px,4vw,48px);
-  max-width:100%;
-  margin:clamp(32px,6vw,64px) auto 0;
-  padding-top:clamp(32px,6vw,64px);
-  border-top:2px solid var(--border);
+  gap:clamp(12px,2.5vw,20px);
+  max-width:900px;
+  margin:clamp(40px,8vw,64px) auto 0;
+  position:relative;
 }
 
 .hero-stat{
+  background:rgba(255,255,255,0.7);
+  backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);
+  border:1.5px solid rgba(255,42,42,0.15);
+  border-radius:20px;
+  padding:clamp(20px,4vw,32px) clamp(16px,3vw,24px);
   text-align:center;
-  min-width:0;
+  position:relative;
+  overflow:hidden;
+  transition:all 0.4s cubic-bezier(0.16,1,0.3,1);
   display:flex;
   flex-direction:column;
   align-items:center;
   justify-content:center;
+  min-width:0;
+}
+
+.hero-stat::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(135deg,rgba(255,42,42,0.08),rgba(255,82,82,0.04));
+  opacity:0;
+  transition:opacity 0.4s cubic-bezier(0.16,1,0.3,1);
+}
+
+.hero-stat:hover::before{
+  opacity:1;
+}
+
+.hero-stat:hover{
+  transform:translateY(-4px);
+  border-color:rgba(255,42,42,0.3);
+  box-shadow:0 12px 40px rgba(255,42,42,0.15);
 }
 
 .stat-value{
   display:block;
-  font-size:clamp(24px,6vw,56px);
+  font-size:clamp(32px,6vw,52px);
   font-weight:900;
+  letter-spacing:-0.03em;
   color:var(--red);
-  letter-spacing:-0.045em;
-  line-height:1.1;
-  margin-bottom:clamp(6px,1.5vw,12px);
+  line-height:1;
+  margin-bottom:clamp(8px,1.5vw,12px);
+  position:relative;
+  z-index:1;
   opacity:0;
-  transform:rotateY(90deg);
-  will-change:transform,opacity;
+  transform:translateY(20px) scale(0.9);
 }
 
-.stat-value.spin-active{
-  animation:spinReveal 0.8s cubic-bezier(0.34,1.56,0.64,1) forwards;
+.stat-value[aria-label]{
+  /* Placeholder state visible to screen readers */
 }
 
-@keyframes spinReveal{
-  0%{
-    opacity:0;
-    transform:rotateY(90deg);
-  }
-  100%{
-    opacity:1;
-    transform:rotateY(0deg);
-  }
+.stat-value.fade-active{
+  animation:statPop 0.6s cubic-bezier(0.34,1.56,0.64,1) forwards;
+}
+
+@keyframes statPop{
+  0%{opacity:0;transform:translateY(20px) scale(0.9)}
+  60%{transform:translateY(-4px) scale(1.05)}
+  100%{opacity:1;transform:translateY(0) scale(1)}
 }
 
 .stat-label{
   display:block;
-  font-size:clamp(11px,2.8vw,16px);
+  font-size:clamp(11px,2.4vw,14px);
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:0.08em;
   color:var(--slate);
-  font-weight:600;
-  line-height:1.3;
+  line-height:1.4;
+  position:relative;
+  z-index:1;
   max-width:100%;
   word-wrap:break-word;
   hyphens:auto;
@@ -380,7 +450,7 @@ body.spanish [lang="en"]{display:none}
 .pricing-card{
   background:var(--pearl);
   border:3px solid var(--border);
-  border-radius:clamp(16px,4vw,24px);
+  border-radius:12px;
   padding:clamp(20px,5vw,32px);
   transition:all 0.3s;
   cursor:pointer;
@@ -696,13 +766,15 @@ body.spanish [lang="en"]{display:none}
 }
 
 .footer-logo{
-  max-width:clamp(180px,45vw,280px);
+  max-width:clamp(200px,50vw,320px);
   height:auto;
   margin:0 auto clamp(16px,4vw,24px);
   display:block;
-  filter:drop-shadow(0 4px 16px rgba(0,0,0,0.08));
-  opacity:1;
-  visibility:visible;
+  filter:drop-shadow(0 6px 20px rgba(0,0,0,0.06)) brightness(1.02) contrast(1.05);
+  opacity:1 !important;
+  visibility:visible !important;
+  background:transparent !important;
+  mix-blend-mode:darken;
 }
 
 .footer-tagline{
@@ -751,7 +823,7 @@ body.spanish [lang="en"]{display:none}
 @media(min-width:769px){
   .sticky-text{display:block}
   .cta-primary:hover{
-    background:var(--red-light);
+    background:var(--red-hover);
     transform:translateY(-2px);
     box-shadow:0 8px 24px rgba(255,42,42,0.35);
   }
@@ -787,23 +859,12 @@ body.spanish [lang="en"]{display:none}
 
 @media(max-width:768px){
   .hero{
-    padding:80px 0 40px;
+    padding:100px 0 40px;
   }
   
-  .hero-subtitle{
-  font-size:clamp(12px,3.4vw,22px);
-  color:var(--slate);
-  font-weight:500;
-  max-width:none;
-  margin:0 auto clamp(20px,4vw,40px);
-  line-height:1.4;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:clamp(8px,2.2vw,14px);
-  white-space:nowrap;
-  flex-wrap:nowrap;
-}
+  .hero-title{
+    letter-spacing:-0.03em;
+  }
   
   .projects-grid{
     grid-template-columns:1fr;
@@ -846,78 +907,79 @@ body.spanish [lang="en"]{display:none}
   
   .table-cell::before{
     content:attr(data-label);
-    font-weight:600;
-    color:var(--slate);
-    font-size:13px;
+    font-weight:700;
+    color:var(--ink);
+    margin-right:8px;
   }
   
   .table-cell:first-child::before{
-    display:none;
-  }
-  
-  .sticky-cta{
-    flex-direction:column;
-    gap:10px;
-    padding:14px 16px 18px;
-  }
-  
-  .sticky-cta .cta{
-    width:100%;
-    max-width:100%;
-    padding:14px 28px;
-  }
-  
-  .footer-links{
-    flex-direction:column;
-    gap:12px;
+    content:'';
   }
 }
 
 @media(max-width:480px){
   .hero-stats{
-    gap:clamp(12px,3vw,20px);
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap:clamp(8px,2vw,12px);
+    grid-template-columns:1fr;
+    max-width:400px;
+  }
+  
+  .hero-stat{
+    padding:clamp(18px,5vw,24px) clamp(16px,4vw,20px);
   }
   
   .stat-value{
-    font-size:clamp(20px,5vw,32px);
+    font-size:clamp(28px,8vw,40px);
   }
   
   .stat-label{
-    font-size:clamp(10px,2.5vw,12px);
+    font-size:clamp(10px,3vw,12px);
   }
 }
 
+@media(max-width:375px){
+  .lang-bar{
+    padding:12px 16px;
+  }
+  
+  .lang-btn{
+    padding:6px 14px;
+    font-size:12px;
+  }
+}
 
 </style>
 </head>
 
 <body>
-  <div class="lang-bar">
-    <button class="lang-btn active" onclick="switchLang('en')">EN</button>
-    <button class="lang-btn" onclick="switchLang('es')">ES</button>
-  </div>
+  <nav class="lang-bar" role="navigation" aria-label="Language selection">
+    <button class="lang-btn active" onclick="switchLang('en')" aria-label="Switch to English" aria-current="true">EN</button>
+    <button class="lang-btn" onclick="switchLang('es')" aria-label="Cambiar a español">ES</button>
+  </nav>
 
-  <section class="hero">
-    <div class="animated-bg"></div>
+  <header class="hero" role="banner">
+    <div class="animated-bg" aria-hidden="true"></div>
     <div class="container">
       <div class="hero-wrap">
         <div class="hero-logo-container">
-          <img src="assets/snrg-logo.webp" alt="SNRG Web" class="hero-logo" width="320" height="320" loading="eager" decoding="async"/>
+          <div class="logo-mask">
+            <img src="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6962ff2351241ea05c72aeca_snrg-logo.png" class="hero-logo" alt="SNRG WEB - Professional website design and development" loading="eager" fetchpriority="high">
+          </div>
+        </div>
         
         <div class="hero-content">
           <h1 class="hero-title" lang="en">Enterprise Websites For<br>Houston Entrepreneurs</h1>
           <h1 class="hero-title" lang="es">Sitios Web Empresariales Para<br>Emprendedores de Houston</h1>
           
           <div class="hero-subtitle" lang="en">
-            <span>Professional Results<div class="dot-separator"></div></span>
-            <span>Accessible Pricing<div class="dot-separator"></div></span>
+            <span>Professional Results<div class="dot-separator" aria-hidden="true"></div></span>
+            <span>Accessible Pricing<div class="dot-separator" aria-hidden="true"></div></span>
             <span>Zero Barriers</span>
           </div>
           
           <div class="hero-subtitle" lang="es">
-            <span>Resultados Profesionales<div class="dot-separator"></div></span>
-            <span>Precios Accesibles<div class="dot-separator"></div></span>
+            <span>Resultados Profesionales<div class="dot-separator" aria-hidden="true"></div></span>
+            <span>Precios Accesibles<div class="dot-separator" aria-hidden="true"></div></span>
             <span>Sin Barreras</span>
           </div>
           
@@ -929,47 +991,47 @@ body.spanish [lang="en"]{display:none}
             <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" class="cta cta-secondary" lang="es">Agendar Cita</a>
           </div>
           
-          <div class="hero-stats" lang="en">
+          <div class="hero-stats" lang="en" role="region" aria-label="Key statistics">
             <div class="hero-stat">
-              <span class="stat-value" data-value="2-3">—</span>
+              <span class="stat-value" data-value="2-3" aria-label="2 to 3 days to launch">—</span>
               <span class="stat-label">Days to Launch</span>
             </div>
             <div class="hero-stat">
-              <span class="stat-value" data-value="$0">—</span>
+              <span class="stat-value" data-value="$0" aria-label="Zero dollar setup fee">—</span>
               <span class="stat-label">Setup Fee</span>
             </div>
             <div class="hero-stat">
-              <span class="stat-value" data-value="100%">—</span>
+              <span class="stat-value" data-value="100%" aria-label="One hundred percent ownership option">—</span>
               <span class="stat-label">Ownership Option</span>
             </div>
           </div>
           
-          <div class="hero-stats" lang="es">
+          <div class="hero-stats" lang="es" role="region" aria-label="Estadísticas clave">
             <div class="hero-stat">
-              <span class="stat-value" data-value="2-3">—</span>
+              <span class="stat-value" data-value="2-3" aria-label="2 a 3 días para lanzar">—</span>
               <span class="stat-label">Días Para Lanzar</span>
             </div>
             <div class="hero-stat">
-              <span class="stat-value" data-value="$0">—</span>
+              <span class="stat-value" data-value="$0" aria-label="Cero cargo inicial">—</span>
               <span class="stat-label">Sin Cargo Inicial</span>
             </div>
             <div class="hero-stat">
-              <span class="stat-value" data-value="100%">—</span>
+              <span class="stat-value" data-value="100%" aria-label="Cien porciento opción de propiedad">—</span>
               <span class="stat-label">Opción de Propiedad</span>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </header>
 
   <section class="pricing fade-in">
     <div class="container">
-      <h2 class="section-title" lang="en">Built Different. Priced Different.</h2>
-      <h2 class="section-title" lang="es">Construido Diferente. Precio Diferente.</h2>
+      <h2 class="section-title" lang="en">Built Different.<br>Priced Different.</h2>
+      <h2 class="section-title" lang="es">Construido Diferente.<br>Precio Diferente.</h2>
       
-      <p class="section-subtitle" lang="en">PARKING HTX community outreach removes barriers for Houston entrepreneurs. Professional execution at accessible pricing.</p>
-      <p class="section-subtitle" lang="es">PARKING HTX elimina barreras para emprendedores de Houston. Ejecución profesional a precios accesibles.</p>
+      <p class="section-subtitle" lang="en">PARKING HTX community outreach removes barriers for Houston entrepreneurs.<br>Professional execution at accessible pricing.</p>
+      <p class="section-subtitle" lang="es">PARKING HTX elimina barreras para emprendedores de Houston.<br>Ejecución profesional a precios accesibles.</p>
       
       <div class="pricing-grid">
         <div class="pricing-card" onclick="selectCard(this)" lang="en">
@@ -1064,71 +1126,87 @@ body.spanish [lang="en"]{display:none}
         <div class="table-row">
           <div class="table-cell" lang="en">Feature</div>
           <div class="table-cell" lang="en">Typical Agency</div>
-          <div class="table-cell highlight" lang="en">SNRG Web</div>
-          
-          <div class="table-cell" lang="es">Característica</div>
-          <div class="table-cell" lang="es">Agencia Típica</div>
-          <div class="table-cell highlight" lang="es">SNRG Web</div>
+          <div class="table-cell" lang="en">SNRG WEB</div>
         </div>
         
         <div class="table-row">
-          <div class="table-cell" data-label="" lang="en">Setup Fee</div>
-          <div class="table-cell" data-label="Typical Agency" lang="en">$1,500+</div>
-          <div class="table-cell highlight" data-label="SNRG Web" lang="en">$0</div>
-          
-          <div class="table-cell" data-label="" lang="es">Cargo Inicial</div>
-          <div class="table-cell" data-label="Agencia Típica" lang="es">$1,500+</div>
-          <div class="table-cell highlight" data-label="SNRG Web" lang="es">$0</div>
+          <div class="table-cell" lang="en" data-label="">Launch Time</div>
+          <div class="table-cell" lang="en" data-label="Typical Agency">4-8 weeks</div>
+          <div class="table-cell highlight" lang="en" data-label="SNRG WEB">2-3 days</div>
         </div>
         
         <div class="table-row">
-          <div class="table-cell" data-label="" lang="en">Monthly Cost</div>
-          <div class="table-cell" data-label="Typical Agency" lang="en">$200-500</div>
-          <div class="table-cell highlight" data-label="SNRG Web" lang="en">$75 → $50</div>
-          
-          <div class="table-cell" data-label="" lang="es">Costo Mensual</div>
-          <div class="table-cell" data-label="Agencia Típica" lang="es">$200-500</div>
-          <div class="table-cell highlight" data-label="SNRG Web" lang="es">$75 → $50</div>
+          <div class="table-cell" lang="en" data-label="">Setup Cost</div>
+          <div class="table-cell" lang="en" data-label="Typical Agency">$2,000+</div>
+          <div class="table-cell highlight" lang="en" data-label="SNRG WEB">$0</div>
         </div>
         
         <div class="table-row">
-          <div class="table-cell" data-label="" lang="en">Launch Time</div>
-          <div class="table-cell" data-label="Typical Agency" lang="en">2-4 weeks</div>
-          <div class="table-cell highlight" data-label="SNRG Web" lang="en">2-3 days</div>
-          
-          <div class="table-cell" data-label="" lang="es">Tiempo de Lanzamiento</div>
-          <div class="table-cell" data-label="Agencia Típica" lang="es">2-4 semanas</div>
-          <div class="table-cell highlight" data-label="SNRG Web" lang="es">2-3 días</div>
+          <div class="table-cell" lang="en" data-label="">Monthly Rate</div>
+          <div class="table-cell" lang="en" data-label="Typical Agency">$150-300</div>
+          <div class="table-cell highlight" lang="en" data-label="SNRG WEB">$50-75</div>
         </div>
         
         <div class="table-row">
-          <div class="table-cell" data-label="" lang="en">Content Updates</div>
-          <div class="table-cell" data-label="Typical Agency" lang="en">$75-150/hr</div>
-          <div class="table-cell highlight" data-label="SNRG Web" lang="en">5/mo included</div>
-          
-          <div class="table-cell" data-label="" lang="es">Actualizaciones</div>
-          <div class="table-cell" data-label="Agencia Típica" lang="es">$75-150/hr</div>
-          <div class="table-cell highlight" data-label="SNRG Web" lang="es">5/mes incluidas</div>
+          <div class="table-cell" lang="en" data-label="">Updates</div>
+          <div class="table-cell" lang="en" data-label="Typical Agency">3 days</div>
+          <div class="table-cell highlight" lang="en" data-label="SNRG WEB">24 hours</div>
         </div>
         
         <div class="table-row">
-          <div class="table-cell" data-label="" lang="en">Contract Required</div>
-          <div class="table-cell" data-label="Typical Agency" lang="en"><span class="checkmark">✓</span></div>
-          <div class="table-cell highlight" data-label="SNRG Web" lang="en"><span class="x">✗</span></div>
-          
-          <div class="table-cell" data-label="" lang="es">Contrato Requerido</div>
-          <div class="table-cell" data-label="Agencia Típica" lang="es"><span class="checkmark">✓</span></div>
-          <div class="table-cell highlight" data-label="SNRG Web" lang="es"><span class="x">✗</span></div>
+          <div class="table-cell" lang="en" data-label="">Ownership Option</div>
+          <div class="table-cell" lang="en" data-label="Typical Agency"><span class="x">✕</span></div>
+          <div class="table-cell" lang="en" data-label="SNRG WEB"><span class="checkmark">✓</span></div>
         </div>
         
         <div class="table-row">
-          <div class="table-cell" data-label="" lang="en">Ownership Option</div>
-          <div class="table-cell" data-label="Typical Agency" lang="en"><span class="x">✗</span></div>
-          <div class="table-cell highlight" data-label="SNRG Web" lang="en"><span class="checkmark">✓</span></div>
-          
-          <div class="table-cell" data-label="" lang="es">Opción de Propiedad</div>
-          <div class="table-cell" data-label="Agencia Típica" lang="es"><span class="x">✗</span></div>
-          <div class="table-cell highlight" data-label="SNRG Web" lang="es"><span class="checkmark">✓</span></div>
+          <div class="table-cell" lang="en" data-label="">Local Support</div>
+          <div class="table-cell" lang="en" data-label="Typical Agency"><span class="x">✕</span></div>
+          <div class="table-cell" lang="en" data-label="SNRG WEB"><span class="checkmark">✓</span></div>
+        </div>
+      </div>
+      
+      <div class="comparison-table" lang="es">
+        <div class="table-row">
+          <div class="table-cell">Característica</div>
+          <div class="table-cell">Agencia Típica</div>
+          <div class="table-cell">SNRG WEB</div>
+        </div>
+        
+        <div class="table-row">
+          <div class="table-cell" data-label="">Tiempo de Lanzamiento</div>
+          <div class="table-cell" data-label="Agencia Típica">4-8 semanas</div>
+          <div class="table-cell highlight" data-label="SNRG WEB">2-3 días</div>
+        </div>
+        
+        <div class="table-row">
+          <div class="table-cell" data-label="">Costo Inicial</div>
+          <div class="table-cell" data-label="Agencia Típica">$2,000+</div>
+          <div class="table-cell highlight" data-label="SNRG WEB">$0</div>
+        </div>
+        
+        <div class="table-row">
+          <div class="table-cell" data-label="">Tarifa Mensual</div>
+          <div class="table-cell" data-label="Agencia Típica">$150-300</div>
+          <div class="table-cell highlight" data-label="SNRG WEB">$50-75</div>
+        </div>
+        
+        <div class="table-row">
+          <div class="table-cell" data-label="">Actualizaciones</div>
+          <div class="table-cell" data-label="Agencia Típica">3 días</div>
+          <div class="table-cell highlight" data-label="SNRG WEB">24 horas</div>
+        </div>
+        
+        <div class="table-row">
+          <div class="table-cell" data-label="">Opción de Propiedad</div>
+          <div class="table-cell" data-label="Agencia Típica"><span class="x">✕</span></div>
+          <div class="table-cell" data-label="SNRG WEB"><span class="checkmark">✓</span></div>
+        </div>
+        
+        <div class="table-row">
+          <div class="table-cell" data-label="">Soporte Local</div>
+          <div class="table-cell" data-label="Agencia Típica"><span class="x">✕</span></div>
+          <div class="table-cell" data-label="SNRG WEB"><span class="checkmark">✓</span></div>
         </div>
       </div>
     </div>
@@ -1142,7 +1220,7 @@ body.spanish [lang="en"]{display:none}
       <div class="projects-grid">
         <a href="https://parking-htx-61fb2a.webflow.io/" class="project-card" lang="en">
           <h3 class="project-title">PARKING HTX</h3>
-          <p class="project-desc">QR code parking platform for Houston properties. License plate recognition, digital payments, and event management system.</p>
+          <p class="project-desc">QR-code parking platform for Houston properties with license plate recognition.</p>
           <div class="project-tags">
             <span class="project-tag">Platform</span>
             <span class="project-tag">SaaS</span>
@@ -1151,7 +1229,7 @@ body.spanish [lang="en"]{display:none}
         
         <a href="https://kiblers-kollectibles.webflow.io/" class="project-card" lang="en">
           <h3 class="project-title">Kibler's Kollectibles</h3>
-          <p class="project-desc">E-commerce platform for Houston collectibles dealer specializing in sports cards and vintage items.</p>
+          <p class="project-desc">E-commerce platform for Houston collectibles dealer with inventory management.</p>
           <div class="project-tags">
             <span class="project-tag">E-Commerce</span>
             <span class="project-tag">Inventory</span>
@@ -1261,20 +1339,13 @@ body.spanish [lang="en"]{display:none}
 
   <footer class="footer fade-in">
     <div class="container">
-      <img src="assets/snrg-logo.webp" alt="SNRG Web Logo" class="footer-logo" width="280" height="280" loading="lazy" decoding="async"/>
+      <img src="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6962ff2351241ea05c72aeca_snrg-logo.png" class="footer-logo" alt="SNRG WEB Logo">
       
       <p class="footer-tagline" lang="en">PARKING HTX Community Outreach — Removing barriers for Houston entrepreneurs</p>
       <p class="footer-tagline" lang="es">PARKING HTX Alcance Comunitario — Eliminando barreras para emprendedores</p>
       
-      <div class="footer-links">
-        <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" class="footer-link" lang="en">Schedule Call</a>
-        <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" class="footer-link" lang="en">Upwork Service</a>
-        
-        <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" class="footer-link" lang="es">Agendar Llamada</a>
-        <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" class="footer-link" lang="es">Servicio Upwork</a>
-      </div>
       
-      <p class="footer-copyright">© 2026 SNRG Web · Houston, Texas</p>
+      <p class="footer-copyright">© 2026 SNRG WEB · Houston, Texas</p>
     </div>
   </footer>
 
@@ -1312,14 +1383,10 @@ body.spanish [lang="en"]{display:none}
         const stats=entry.target.querySelectorAll('.stat-value');
         stats.forEach((stat,index)=>{
           setTimeout(()=>{
-            stat.classList.add('spin-active');
+            stat.classList.add('fade-active');
             stat.textContent=stat.getAttribute('data-value');
-            
-            // Remove spin class after 2 seconds to stop animation
-            setTimeout(()=>{
-              stat.classList.remove('spin-active');
-            },3000);
-          },index*500); // 0.5s stagger between each
+            stat.removeAttribute('aria-label');
+          },index*500);
         });
         statsObserver.unobserve(entry.target);
       }
@@ -1327,14 +1394,19 @@ body.spanish [lang="en"]{display:none}
   },{threshold:0.3});
 
   function switchLang(lang){
+    const btns=document.querySelectorAll('.lang-btn');
     if(lang==='es'){
       document.body.classList.add('spanish');
-      document.querySelectorAll('.lang-btn')[0].classList.remove('active');
-      document.querySelectorAll('.lang-btn')[1].classList.add('active');
+      btns[0].classList.remove('active');
+      btns[0].setAttribute('aria-current','false');
+      btns[1].classList.add('active');
+      btns[1].setAttribute('aria-current','true');
     }else{
       document.body.classList.remove('spanish');
-      document.querySelectorAll('.lang-btn')[0].classList.add('active');
-      document.querySelectorAll('.lang-btn')[1].classList.remove('active');
+      btns[0].classList.add('active');
+      btns[0].setAttribute('aria-current','true');
+      btns[1].classList.remove('active');
+      btns[1].setAttribute('aria-current','false');
     }
   }
 
@@ -1382,27 +1454,6 @@ body.spanish [lang="en"]{display:none}
     });
   });
   </script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function(){
-  const footerLogo = document.querySelector('.footer-logo, .footer .snrg-logo-animated, .footer .logo');
-  if(footerLogo){
-    footerLogo.style.display = 'block';
-    footerLogo.style.opacity = '1';
-    footerLogo.style.visibility = 'visible';
-    footerLogo.style.transform = 'none';
-  }
-});
-
-// Hero underline animation trigger - 1s after logo lands
-window.addEventListener('DOMContentLoaded', () => {
-  const underline = document.querySelector('.hero-underline');
-  if(!underline) return;
-  
-  // logoEntrance is 0.9s, then wait 1.0s = 1900ms total
-  setTimeout(() => underline.classList.add('is-on'), 1900);
-});
-</script>
 
 </body>
 </html>
