@@ -164,8 +164,8 @@ body.spanish [lang="en"]{display:none}
   display:flex;
   align-items:center;
   justify-content:center;
-  padding:140px 0 80px;
-  padding-top:max(140px,env(safe-area-inset-top));
+  padding:clamp(60px,8vh,85px) 0 clamp(28px,5vh,40px);
+  padding-top:max(clamp(60px,8vh,85px),env(safe-area-inset-top));
   position:relative;
   overflow:hidden;
   contain:paint;
@@ -181,6 +181,7 @@ body.spanish [lang="en"]{display:none}
   transform:translateY(60px) scale(0.95);
   filter:blur(8px);
   animation:heroContentEntrance 1.4s cubic-bezier(0.16,1,0.3,1) 0.4s forwards;
+  margin-top:clamp(-20px,-3vw,-12px);
 }
 
 @keyframes heroContentEntrance{
@@ -188,7 +189,7 @@ body.spanish [lang="en"]{display:none}
 }
 
 .hero-logo-container{
-  margin:0 auto 48px;
+  margin:0 auto clamp(4px,0.8vw,6px);
   position:relative;
   display:flex;
   align-items:center;
@@ -199,21 +200,34 @@ body.spanish [lang="en"]{display:none}
 }
 
 .hero-logo{
-  max-width:clamp(280px,65vw,480px);
+  max-width:clamp(380px,75vw,640px);
   height:auto;
   display:block;
   margin:0 auto;
-  filter:drop-shadow(0 12px 32px rgba(0,0,0,0.15));
+  filter:drop-shadow(0 16px 48px rgba(0,0,0,0.2));
   opacity:0;
-  transform:scale(0.92) translateY(-20px);
-  animation:logoEntrance 0.9s cubic-bezier(0.16,1,0.3,1) forwards;
+  transform:scale(0.3) translateY(-100px) translateZ(-500px);
+  animation:logoTunnelEntrance 1.6s cubic-bezier(0.16,1,0.3,1) forwards;
   background:transparent !important;
-  mix-blend-mode:multiply;
   isolation:isolate;
 }
 
-@keyframes logoEntrance{
-  to{opacity:1;transform:scale(1) translateY(0)}
+@keyframes logoTunnelEntrance{
+  0%{
+    opacity:0;
+    transform:scale(0.3) translateY(-100px) translateZ(-500px);
+    filter:drop-shadow(0 0 0 rgba(0,0,0,0)) blur(12px) brightness(0.5);
+  }
+  50%{
+    opacity:0.7;
+    transform:scale(0.85) translateY(-20px) translateZ(-100px);
+    filter:drop-shadow(0 8px 24px rgba(0,0,0,0.15)) blur(2px) brightness(0.85);
+  }
+  100%{
+    opacity:1;
+    transform:scale(1) translateY(0) translateZ(0);
+    filter:drop-shadow(0 16px 48px rgba(0,0,0,0.2)) blur(0) brightness(1);
+  }
 }
 
 .logo-mask{
@@ -231,8 +245,8 @@ body.spanish [lang="en"]{display:none}
   font-size:clamp(28px,7vw,72px);
   font-weight:900;
   letter-spacing:-0.03em;
-  line-height:1.2;
-  margin:0 auto clamp(16px,3vw,24px);
+  line-height:1.05;
+  margin:0 auto clamp(6px,1.2vw,10px);
   max-width:920px;
 }
 
@@ -243,8 +257,8 @@ body.spanish [lang="en"]{display:none}
   color:var(--slate);
   font-weight:500;
   max-width:none;
-  margin:0 auto clamp(20px,4vw,40px);
-  line-height:1.4;
+  margin:0 auto clamp(10px,2.2vw,18px);
+  line-height:1.35;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -324,7 +338,7 @@ body.spanish [lang="en"]{display:none}
   grid-template-columns:repeat(3,1fr);
   gap:clamp(12px,2.5vw,20px);
   max-width:900px;
-  margin:clamp(40px,8vw,64px) auto 0;
+  margin:clamp(22px,4.5vw,36px) auto 0;
   position:relative;
 }
 
@@ -384,13 +398,14 @@ body.spanish [lang="en"]{display:none}
 }
 
 .stat-value.fade-active{
-  animation:statPop 0.6s cubic-bezier(0.34,1.56,0.64,1) forwards;
+  animation:statPop 1.2s cubic-bezier(0.34,1.56,0.64,1) forwards;
 }
 
 @keyframes statPop{
-  0%{opacity:0;transform:translateY(20px) scale(0.9)}
-  60%{transform:translateY(-4px) scale(1.05)}
-  100%{opacity:1;transform:translateY(0) scale(1)}
+  0%{opacity:0;transform:translateY(30px) scale(0.8) rotate(-15deg)}
+  50%{transform:translateY(-8px) scale(1.1) rotate(5deg)}
+  75%{transform:translateY(2px) scale(0.98) rotate(-2deg)}
+  100%{opacity:1;transform:translateY(0) scale(1) rotate(0deg)}
 }
 
 .stat-label{
@@ -450,6 +465,7 @@ body.spanish [lang="en"]{display:none}
   max-width:1000px;
   margin:0 auto;
   align-items:stretch;
+  justify-items:center;
 }
 
 .pricing-card{
@@ -462,7 +478,11 @@ body.spanish [lang="en"]{display:none}
   position:relative;
   display:flex;
   flex-direction:column;
+  align-items:center;
+  text-align:center;
   min-height:620px;
+  width:100%;
+  max-width:480px;
 }
 
 .pricing-card:active{
@@ -486,8 +506,8 @@ body.spanish [lang="en"]{display:none}
   padding:6px 12px;
   border-radius:999px;
   display:inline-block;
-  margin-bottom:16px;
-  align-self:flex-start;
+  margin:0 auto 16px;
+  align-self:center;
 }
 
 .pricing-name{
@@ -535,6 +555,10 @@ body.spanish [lang="en"]{display:none}
   list-style:none;
   margin-bottom:clamp(16px,4vw,32px);
   flex-grow:1;
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
 }
 
 .pricing-feature{
@@ -545,6 +569,8 @@ body.spanish [lang="en"]{display:none}
   position:relative;
   margin-bottom:8px;
   font-weight:500;
+  text-align:center;
+  display:inline-block;
 }
 
 .pricing-feature::before{
@@ -771,15 +797,14 @@ body.spanish [lang="en"]{display:none}
 }
 
 .footer-logo{
-  max-width:clamp(200px,50vw,320px);
+  max-width:clamp(240px,55vw,360px);
   height:auto;
   margin:0 auto clamp(16px,4vw,24px);
   display:block;
-  filter:drop-shadow(0 6px 20px rgba(0,0,0,0.06));
+  filter:drop-shadow(0 8px 24px rgba(0,0,0,0.08));
   opacity:1 !important;
   visibility:visible !important;
   background:transparent !important;
-  mix-blend-mode:multiply;
   isolation:isolate;
 }
 
@@ -854,9 +879,11 @@ body.spanish [lang="en"]{display:none}
   .pricing-grid{
     grid-template-columns:1fr;
     max-width:600px;
+    margin:0 auto;
   }
   .pricing-card{
     min-height:auto;
+    margin:0 auto;
   }
   .projects-grid{
     grid-template-columns:repeat(2,1fr);
@@ -865,7 +892,7 @@ body.spanish [lang="en"]{display:none}
 
 @media(max-width:768px){
   .hero{
-    padding:100px 0 40px;
+    padding:clamp(55px,7vh,70px) 0 clamp(20px,3.5vh,32px);
   }
   
   .hero-title{
@@ -878,17 +905,22 @@ body.spanish [lang="en"]{display:none}
   
   .comparison-table{
     display:block;
+    max-width:500px;
+    margin:0 auto;
   }
   
   .table-row{
     display:grid;
     grid-template-columns:1fr;
-    gap:8px;
-    padding:16px;
+    gap:12px;
+    padding:clamp(20px,5vw,24px);
     margin-bottom:16px;
-    background:var(--pearl);
-    border:1px solid var(--border);
-    border-radius:16px;
+    background:rgba(255,255,255,0.7);
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
+    border:1.5px solid rgba(255,42,42,0.15);
+    border-radius:20px;
+    text-align:center;
   }
   
   .table-row:first-child{
@@ -897,29 +929,37 @@ body.spanish [lang="en"]{display:none}
   
   .table-cell{
     border:none;
-    padding:12px;
-    justify-content:space-between;
-    flex-direction:row;
+    padding:0;
+    justify-content:center;
+    text-align:center;
+    flex-direction:column;
+  }
+  
+  /* Hide Typical Agency column on mobile */
+  .table-cell:nth-child(2){
+    display:none !important;
   }
   
   .table-cell:first-child{
     font-weight:700;
-    color:var(--red);
+    color:var(--ink);
     text-transform:uppercase;
-    border-bottom:1px solid var(--border);
+    letter-spacing:0.05em;
+    font-size:clamp(12px,3.5vw,14px);
+    border-bottom:1px solid rgba(255,42,42,0.2);
     padding-bottom:12px;
-    margin-bottom:8px;
+    margin-bottom:12px;
+  }
+  
+  .table-cell:last-child{
+    font-weight:800;
+    color:var(--red);
+    font-size:clamp(28px,7vw,40px);
+    letter-spacing:-0.02em;
   }
   
   .table-cell::before{
-    content:attr(data-label);
-    font-weight:700;
-    color:var(--ink);
-    margin-right:8px;
-  }
-  
-  .table-cell:first-child::before{
-    content:'';
+    display:none;
   }
 }
 
@@ -969,7 +1009,7 @@ body.spanish [lang="en"]{display:none}
       <div class="hero-wrap">
         <div class="hero-logo-container">
           <div class="logo-mask">
-            <img src="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6962ff2351241ea05c72aeca_snrg-logo.png" class="hero-logo" alt="SNRG WEB - Professional website design and development" loading="eager" fetchpriority="high">
+            <img src="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png" class="hero-logo" alt="SNRG WEB - Professional website design and development" loading="eager" fetchpriority="high">
           </div>
         </div>
         
@@ -1345,7 +1385,7 @@ body.spanish [lang="en"]{display:none}
 
   <footer class="footer fade-in">
     <div class="container">
-      <img src="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6962ff2351241ea05c72aeca_snrg-logo.png" class="footer-logo" alt="SNRG WEB Logo">
+      <img src="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png" class="footer-logo" alt="SNRG WEB Logo">
       
       <p class="footer-tagline" lang="en">PARKING HTX Community Outreach — Removing barriers for Houston entrepreneurs</p>
       <p class="footer-tagline" lang="es">PARKING HTX Alcance Comunitario — Eliminando barreras para emprendedores</p>
