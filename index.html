@@ -90,7 +90,7 @@ body.spanish [lang="en"]{display:none}
   );
   top:-20%;
   left:-20%;
-  filter:blur(80px);
+  filter:blur(60px);
   animation:infraGlowSlow 35s ease-in-out infinite;
 }
 
@@ -107,7 +107,7 @@ body.spanish [lang="en"]{display:none}
   );
   bottom:-20%;
   right:-20%;
-  filter:blur(90px);
+  filter:blur(70px);
   animation:infraGlowSlow 40s ease-in-out infinite reverse;
 }
 
@@ -229,6 +229,38 @@ body.spanish [lang="en"]{display:none}
   justify-content:center;
   flex-wrap:wrap;
   margin-top:clamp(12px,1.8vh,24px);
+}
+
+.hero-headline{
+  font-size:clamp(28px,4.5vw,42px);
+  font-weight:700;
+  letter-spacing:-0.025em;
+  line-height:1.15;
+  color:var(--ink);
+  margin:0 auto;
+  max-width:680px;
+  opacity:0;
+  transform:translateY(10px);
+  animation:heroTextEntrance 0.8s cubic-bezier(0.22,1,0.36,1) 1.2s forwards;
+}
+
+.hero-subhead{
+  font-size:clamp(15px,3.2vw,18px);
+  font-weight:400;
+  line-height:1.6;
+  color:var(--slate);
+  margin:0 auto;
+  max-width:560px;
+  opacity:0;
+  transform:translateY(10px);
+  animation:heroTextEntrance 0.8s cubic-bezier(0.22,1,0.36,1) 1.4s forwards;
+}
+
+@keyframes heroTextEntrance{
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
 }
 
 .hero-content{
@@ -424,8 +456,8 @@ body.spanish [lang="en"]{display:none}
 }
 
 .pricing{
-  margin-top:clamp(18px,3.5vw,28px);
-  padding:clamp(14px,3vw,24px) 0;
+  margin-top:0;
+  padding:clamp(64px,10vw,96px) 0;
   background:linear-gradient(135deg, #ffffff 0%, #f8f9fa 25%, #ffffff 50%, #f5f6f7 75%, #ffffff 100%);
   background-size:400% 400%;
   animation:pearlShimmer 15s ease infinite;
@@ -613,8 +645,8 @@ body.spanish [lang="en"]{display:none}
 }
 
 .comparison{
-  margin-top:clamp(18px,3.5vw,28px);
-  padding:clamp(14px,2.8vw,25px) 0;
+  margin-top:0;
+  padding:clamp(64px,10vw,96px) 0;
   background:linear-gradient(135deg, #f6f7f8 0%, #f9fafb 25%, #f6f7f8 50%, #f7f8f9 75%, #f6f7f8 100%);
   background-size:400% 400%;
   animation:pearlShimmer 22s ease infinite;
@@ -714,8 +746,8 @@ body.spanish [lang="en"]{display:none}
 }
 
 .projects{
-  margin-top:clamp(18px,3.5vw,28px);
-  padding:clamp(14px,2.8vw,25px) 0 clamp(20px,4.3vw,31px);
+  margin-top:0;
+  padding:clamp(64px,10vw,96px) 0;
   background:linear-gradient(135deg, #ffffff 0%, #f9fafb 25%, #ffffff 50%, #f7f8f9 75%, #ffffff 100%);
   background-size:400% 400%;
   animation:pearlShimmer 16s ease infinite;
@@ -762,7 +794,7 @@ body.spanish [lang="en"]{display:none}
   text-decoration:none;
   display:flex;
   flex-direction:column;
-  color:inherit;
+  color:var(--ink);
   text-align:center;
   cursor:pointer;
 }
@@ -816,8 +848,8 @@ body.spanish [lang="en"]{display:none}
 }
 
 .final-cta{
-  margin-top:clamp(18px,3.5vw,28px);
-  padding:16px 0 24px;
+  margin-top:0;
+  padding:clamp(64px,10vw,96px) 0;
   background:linear-gradient(135deg, #f6f7f8 0%, #fbfcfd 25%, #f6f7f8 50%, #f9fafb 75%, #f6f7f8 100%);
   background-size:400% 400%;
   animation:pearlShimmer 17s ease infinite;
@@ -877,13 +909,20 @@ body.spanish [lang="en"]{display:none}
   -webkit-backdrop-filter:blur(20px);
   border-top:1px solid var(--border);
   padding:12px 16px;
-  display:flex;
+  display:grid;
+  grid-template-columns:1fr auto 1fr;
   align-items:center;
-  justify-content:center;
   gap:12px;
   z-index:9998;
   transition:bottom 0.3s cubic-bezier(0.4,0,0.2,1);
   box-shadow:0 -4px 24px rgba(0,0,0,0.1);
+}
+
+.sticky-cta-buttons{
+  display:flex;
+  gap:12px;
+  justify-content:center;
+  align-items:center;
 }
 
 .sticky-cta.visible{bottom:0}
@@ -1051,6 +1090,23 @@ body.spanish [lang="en"]{display:none}
     grid-template-columns:1fr;
   }
   
+  .sticky-cta{
+    display:flex;
+    flex-wrap:wrap;
+  }
+  
+  .sticky-cta-buttons{
+    flex:1 1 100%;
+    order:2;
+  }
+  
+  .sticky-text{
+    order:1;
+    flex:1 1 100%;
+    text-align:center;
+    margin-bottom:8px;
+  }
+  
   .comparison{
     display:none !important;
   }
@@ -1177,7 +1233,7 @@ body.spanish [lang="en"]{display:none}
           <span class="pricing-badge">Recommended</span>
           <h3 class="pricing-name">Fully Managed Service</h3>
           <div class="pricing-price">$75<span style="font-size:clamp(16px,4vw,20px);font-weight:600;color:var(--slate)">/mo</span></div>
-          <p class="pricing-term">then <span class="highlight">$50/mo</span> after 12 months</p>
+          <p class="pricing-term">After 12 months: price drops to <span class="highlight">$50/mo</span></p>
           <ul class="pricing-features">
             <li class="pricing-feature">Custom design</li>
             <li class="pricing-feature">SEO optimized</li>
@@ -1196,7 +1252,7 @@ body.spanish [lang="en"]{display:none}
         <div class="pricing-card" onclick="selectCard(this)" lang="en">
           <span class="pricing-badge">One-Time</span>
           <h3 class="pricing-name">Website Ownership</h3>
-          <div class="pricing-price">$285<span style="font-size:clamp(16px,4vw,20px);font-weight:600;color:var(--slate)"> flat</span></div>
+          <div class="pricing-price">$285<span style="font-size:clamp(18px,4.5vw,24px);font-weight:700;color:var(--ink);margin-left:8px;"> flat</span></div>
           <p class="pricing-term">Option: <span class="highlight">$50/mo</span> fully managed after purchase</p>
           <ul class="pricing-features">
             <li class="pricing-feature">Custom design</li>
@@ -1215,7 +1271,7 @@ body.spanish [lang="en"]{display:none}
           <span class="pricing-badge">Recomendado</span>
           <h3 class="pricing-name">Servicio Administrado</h3>
           <div class="pricing-price">$75<span style="font-size:clamp(16px,4vw,20px);font-weight:600;color:var(--slate)">/mes</span></div>
-          <p class="pricing-term">luego <span class="highlight">$50/mes</span> después de 12 meses</p>
+          <p class="pricing-term">Después de 12 meses: precio baja a <span class="highlight">$50/mes</span></p>
           <ul class="pricing-features">
             <li class="pricing-feature">Diseño personalizado</li>
             <li class="pricing-feature">Optimizado para SEO</li>
@@ -1234,7 +1290,7 @@ body.spanish [lang="en"]{display:none}
         <div class="pricing-card" onclick="selectCard(this)" lang="es">
           <span class="pricing-badge">Pago Único</span>
           <h3 class="pricing-name">Propiedad del Sitio</h3>
-          <div class="pricing-price">$285<span style="font-size:clamp(16px,4vw,20px);font-weight:600;color:var(--slate)"> plano</span></div>
+          <div class="pricing-price">$285<span style="font-size:clamp(18px,4.5vw,24px);font-weight:700;color:var(--ink);margin-left:8px;"> plano</span></div>
           <p class="pricing-term">Opción: <span class="highlight">$50/mes</span> administrado después de compra</p>
           <ul class="pricing-features">
             <li class="pricing-feature">Diseño personalizado</li>
@@ -1456,14 +1512,16 @@ body.spanish [lang="en"]{display:none}
   </section>
 
   <div class="sticky-cta" id="stickyCTA">
-    <span class="sticky-text" lang="en">Ready to get started?</span>
-    <span class="sticky-text" lang="es">¿Listo para comenzar?</span>
     
-    <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" class="cta cta-primary" lang="en">Schedule Call</a>
-    <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" class="cta cta-secondary" lang="en">Order on Upwork</a>
+    <div class="sticky-cta-buttons">
+      <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" class="cta cta-primary" lang="en">Schedule Call</a>
+      <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" class="cta cta-secondary" lang="en">Order on Upwork</a>
+      
+      <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" class="cta cta-primary" lang="es">Agendar</a>
+      <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" class="cta cta-secondary" lang="es">Ordenar</a>
+    </div>
     
-    <a href="https://calendly.com/bobby-parking-htx/introduction-parking-htx" class="cta cta-primary" lang="es">Agendar</a>
-    <a href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" class="cta cta-secondary" lang="es">Ordenar</a>
+    <span></span>
   </div>
 
   <footer class="footer fade-in">
