@@ -198,6 +198,19 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:auto;-webkit-overflow-scrolling:touch}
 
+/* Visually Hidden Utility - WCAG 2.2 Compliant */
+.visually-hidden{
+  position:absolute !important;
+  width:1px;
+  height:1px;
+  padding:0;
+  margin:-1px;
+  overflow:hidden;
+  clip:rect(0,0,0,0);
+  white-space:nowrap;
+  border:0;
+}
+
 body{
   font-family:'Satoshi',system-ui,-apple-system,sans-serif;
   background:var(--pearl);
@@ -206,7 +219,7 @@ body{
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
   font-weight:400;
-  letter-spacing:-0.011em;
+  letter-spacing:-0.01em;
   overflow-x:hidden;
   font-size:16px;
   min-height:100vh;
@@ -239,7 +252,7 @@ body.spanish [lang="en"]{display:none}
   position:absolute;
   border-radius:50%;
   filter:blur(40px);
-  opacity:0.12;
+  opacity:0.06;
 }
 
 .hero .animated-bg::before{
@@ -568,12 +581,12 @@ body.spanish [lang="en"]{display:none}
 }
 
 .section-title{
-  font-size:clamp(26px,6.5vw,56px);
+  font-size:clamp(26px,6.5vw,48px);
   font-weight:900;
-  letter-spacing:-0.045em;
-  line-height:1.08;
+  letter-spacing:-0.04em;
+  line-height:1.1;
   text-align:center;
-  margin-bottom:16px;
+  margin-bottom:24px;
   color:var(--ink);
   opacity:0;
   transform:translateY(40px) scale(0.96);
@@ -582,10 +595,10 @@ body.spanish [lang="en"]{display:none}
 }
 
 .section-title.pricing-hero{
-  font-size:clamp(30px,7.5vw,64px);
-  line-height:1.08;
+  font-size:clamp(30px,7.5vw,48px);
+  line-height:1.1;
   margin-top:0;
-  margin-bottom:24px;
+  margin-bottom:32px;
 }
 
 @keyframes titleEntrance{
@@ -622,7 +635,7 @@ body.spanish [lang="en"]{display:none}
 
 .pricing{
   margin-top:0;
-  padding:80px 0;
+  padding:96px 0;
   background:linear-gradient(135deg, #ffffff 0%, #f8f9fa 25%, #ffffff 50%, #f5f6f7 75%, #ffffff 100%);
   background-size:400% 400%;
   animation:pearlShimmer 15s ease infinite;
@@ -739,12 +752,12 @@ body.spanish [lang="en"]{display:none}
 }
 
 .pricing-name{
-  font-size:clamp(20px,4.5vw,28px);
+  font-size:clamp(18px,4.5vw,22px);
   font-weight:800;
   color:var(--ink);
   margin-bottom:clamp(10px,2.5vw,14px);
   letter-spacing:-0.02em;
-  line-height:1.2;
+  line-height:1.25;
 }
 
 .pricing-price{
@@ -811,7 +824,7 @@ body.spanish [lang="en"]{display:none}
 
 .comparison{
   margin-top:0;
-  padding:80px 0;
+  padding:96px 0;
   background:linear-gradient(135deg, #f6f7f8 0%, #f9fafb 25%, #f6f7f8 50%, #f7f8f9 75%, #f6f7f8 100%);
   background-size:400% 400%;
   animation:pearlShimmer 22s ease infinite;
@@ -912,7 +925,7 @@ body.spanish [lang="en"]{display:none}
 
 .projects{
   margin-top:0;
-  padding:80px 0;
+  padding:96px 0;
   background:linear-gradient(135deg, #ffffff 0%, #f9fafb 25%, #ffffff 50%, #f7f8f9 75%, #ffffff 100%);
   background-size:400% 400%;
   animation:pearlShimmer 16s ease infinite;
@@ -971,7 +984,7 @@ body.spanish [lang="en"]{display:none}
 }
 
 .project-title{
-  font-size:clamp(17px,4.2vw,24px);
+  font-size:clamp(18px,4.2vw,22px);
   font-weight:800;
   color:var(--ink);
   margin-bottom:clamp(8px,2vw,12px);
@@ -983,7 +996,7 @@ body.spanish [lang="en"]{display:none}
 }
 
 .project-desc{
-  font-size:clamp(13px,3.2vw,15px);
+  font-size:clamp(14px,3.2vw,16px);
   color:var(--slate);
   line-height:1.6;
   margin-bottom:clamp(10px,2.5vw,14px);
@@ -1014,7 +1027,7 @@ body.spanish [lang="en"]{display:none}
 
 .final-cta{
   margin-top:0;
-  padding:80px 0;
+  padding:96px 0;
   background:linear-gradient(135deg, #f6f7f8 0%, #fbfcfd 25%, #f6f7f8 50%, #f9fafb 75%, #f6f7f8 100%);
   background-size:400% 400%;
   animation:pearlShimmer 17s ease infinite;
@@ -1215,15 +1228,16 @@ body.spanish [lang="en"]{display:none}
   
   .hero-headline,
   .hero h1{
-    font-size:clamp(48px,4vw,56px);
-    line-height:1.1;
+    font-size:clamp(52px,4vw,60px);
+    line-height:1.05;
     letter-spacing:-0.04em;
+    font-weight:900;
   }
   
   .section-title{
-    font-size:clamp(40px,3.5vw,48px);
-    line-height:1.15;
-    letter-spacing:-0.03em;
+    font-size:clamp(42px,3.5vw,48px);
+    line-height:1.1;
+    letter-spacing:-0.04em;
   }
   
   .pricing{
@@ -1295,26 +1309,36 @@ body.spanish [lang="en"]{display:none}
     line-height:1.6;
   }
   
+  .pricing,
+  .comparison,
+  .projects,
+  .final-cta{
+    padding:64px 0;
+  }
+  
   .hero-headline,
   .hero h1{
-    font-size:clamp(28px,8vw,34px);
+    font-size:clamp(30px,8vw,34px);
     line-height:1.1;
-    letter-spacing:-0.03em;
+    letter-spacing:-0.04em;
+    font-weight:900;
   }
   
   .section-title{
     font-size:clamp(26px,7vw,32px);
     line-height:1.15;
-    letter-spacing:-0.03em;
+    letter-spacing:-0.04em;
   }
   
   .pricing-name,
   .project-title{
     font-size:18px;
     letter-spacing:-0.02em;
+    line-height:1.25;
   }
   
-  .hero-subhead{
+  .hero-subhead,
+  .project-desc{
     font-size:15px;
     line-height:1.6;
   }
@@ -1451,6 +1475,10 @@ body.spanish [lang="en"]{display:none}
 </head>
 
 <body>
+  <!-- SEO/A11Y H1 - Hidden from visual layout -->
+  <h1 class="visually-hidden" lang="en">Affordable High-Performance Websites for Houston Small Businesses — Built Fast, Managed for You</h1>
+  <h1 class="visually-hidden" lang="es">Sitios Web de Alto Rendimiento y Asequibles para Pequeñas Empresas en Houston — Construidos Rápido, Administrados para Usted</h1>
+
   <nav class="lang-bar" role="navigation" aria-label="Language selection">
     <button class="lang-btn active" onclick="switchLang('en')" aria-label="Switch to English" aria-current="true">EN</button>
     <button class="lang-btn" onclick="switchLang('es')" aria-label="Cambiar a español">ES</button>
