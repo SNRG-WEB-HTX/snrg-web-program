@@ -1471,6 +1471,130 @@ body.spanish [lang="en"]{display:none}
   }
 }
 
+
+/* === HARD FIX: Laptop hero logo size + position (only 769px–1440px) === */
+@media (min-width: 769px) and (max-width: 1440px){
+  .hero-logo{
+    max-width: 420px !important;            /* slightly bigger */
+    width: 100% !important;
+    transform: translateY(-28px) scale(1) !important; /* raise it + kill zoom */
+  }
+}
+
+
+/* === HARD FIX: Desktop hero logo (>=1441px) === */
+@media (min-width: 1441px){
+  .hero-logo{
+    max-width: 620px !important;            /* slightly bigger than laptop */
+    width: 100% !important;
+    transform: translateY(-36px) scale(1) !important; /* raise it a bit + kill zoom */
+  }
+}
+
+
+/* Signature logo unfold (slow transformation) */
+.logo-mask{
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  width:100%;
+  background:transparent !important;
+  isolation:isolate;
+}
+
+/* Soft “curtain” reveal that matches the hero background */
+.logo-mask::after{
+  content:'';
+  position:absolute;
+  inset:-2px;
+  background:var(--pearl);
+  transform:translateY(0);
+  z-index:2;
+  animation:snrgCurtainReveal 2.6s cubic-bezier(0.16,1,0.3,1) 0.05s forwards;
+}
+
+/* Subtle highlight sweep for a memorable signature move */
+.logo-mask::before{
+  content:'';
+  position:absolute;
+  inset:-12%;
+  background:linear-gradient(110deg,
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.0) 38%,
+    rgba(255,255,255,0.55) 50%,
+    rgba(255,255,255,0.0) 62%,
+    rgba(255,255,255,0) 100%
+  );
+  transform:translateX(-140%) skewX(-18deg);
+  opacity:0.0;
+  z-index:3;
+  animation:snrgShineSweep 2.8s cubic-bezier(0.22,1,0.36,1) 1.35s forwards;
+  pointer-events:none;
+}
+
+@keyframes snrgCurtainReveal{
+  0%{transform:translateY(0)}
+  45%{transform:translateY(0)}
+  100%{transform:translateY(105%)}
+}
+
+@keyframes snrgShineSweep{
+  0%{opacity:0;transform:translateX(-140%) skewX(-18deg)}
+  15%{opacity:0.28}
+  100%{opacity:0;transform:translateX(140%) skewX(-18deg)}
+}
+
+.hero-logo{
+  width:100%;
+  max-width:640px; /* desktop default */
+  height:auto;
+  display:block;
+  margin:0 auto;
+  filter:drop-shadow(0 16px 48px rgba(0,0,0,0.2));
+  opacity:0;
+  transform:translateY(18px) scale(0.86) rotateX(16deg);
+  transform-origin:center;
+  will-change:transform,opacity,filter;
+  animation:snrgLogoTransform 2.6s cubic-bezier(0.16,1,0.3,1) 0.05s forwards;
+  background:transparent !important;
+  isolation:isolate;
+}
+
+@keyframes snrgLogoTransform{
+  0%{
+    opacity:0;
+    transform:translateY(28px) scale(0.82) rotateX(18deg);
+    filter:drop-shadow(0 0 0 rgba(0,0,0,0)) blur(10px) brightness(0.88);
+  }
+  55%{
+    opacity:1;
+    transform:translateY(-6px) scale(1.03) rotateX(-2deg);
+    filter:drop-shadow(0 10px 28px rgba(0,0,0,0.14)) blur(1px) brightness(0.98);
+  }
+  100%{
+    opacity:1;
+    transform:translateY(0) scale(1) rotateX(0);
+    filter:drop-shadow(0 16px 48px rgba(0,0,0,0.2)) blur(0) brightness(1);
+  }
+}
+
+
+@media (prefers-reduced-motion: reduce){
+  .hero-logo{
+    animation: none !important;
+    clip-path: none !important;
+    filter: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .hero-logo-container::after{
+    animation: none !important;
+    opacity: 0 !important;
+  }
+}
+
 </style>
 </head>
 
