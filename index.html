@@ -467,30 +467,9 @@ body.spanish [lang="en"]{display:none}
   background:transparent !important;
   isolation:isolate;
 }
-  .hero-logo-container{
-  max-width: 520px;
-  margin: 0 auto;
-}
-@media (min-width: 769px) and (max-width: 1440px){
-  .hero-logo-container{
-    max-width: 460px;
-  }
-}
-  @media (min-width: 769px) and (max-width: 1440px){
-  .hero-logo{
-    transform: scale(0.9) !important;
-  }
-}
-
-@media (max-width: 768px){
-  .hero-logo-container{
-    max-width: min(88vw, 380px);
-  }
-}
 
 .hero-logo{
-  width:100%;
-  max-width: 640px;   /* desktop default */
+  max-width:clamp(414px,65vw,780px);
   height:auto;
   display:block;
   margin:0 auto;
@@ -501,7 +480,6 @@ body.spanish [lang="en"]{display:none}
   background:transparent !important;
   isolation:isolate;
 }
-
 
 @keyframes logoTunnelEntrance{
   0%{
@@ -514,15 +492,10 @@ body.spanish [lang="en"]{display:none}
     transform:scale(0.85) translateY(-20px) translateZ(-100px);
     filter:drop-shadow(0 8px 24px rgba(0,0,0,0.15)) blur(2px) brightness(0.85);
   }
-  @keyframes logoTunnelEntrance{
-  ...
   100%{
     opacity:1;
-    transform:scale(0.9) translateY(0) translateZ(0);
+    transform:scale(1) translateY(0) translateZ(0);
     filter:drop-shadow(0 16px 48px rgba(0,0,0,0.2)) blur(0) brightness(1);
-  }
-}
-
   }
 }
 
@@ -544,12 +517,6 @@ body.spanish [lang="en"]{display:none}
   line-height:1.05;
   margin:0 auto clamp(24px,5vw,48px);
   max-width:920px;
-}
-/* LAPTOP + SMALL DESKTOP FIX */
-@media (min-width: 769px) and (max-width: 1440px){
-  .hero-logo{
-    max-width: 220px !important;
-  }
 }
 
 .hero-title br{display:block}
@@ -1185,9 +1152,9 @@ body.spanish [lang="en"]{display:none}
 .footer-link:active{color:var(--red)}
 
 .footer-copyright{
-  font-size:clamp(12px,2.8vw,14px);
-  color:var(--slate);
-  font-weight:600;
+  font-size:clamp(13px,3vw,14px);
+  color:var(--slate-light);
+  font-weight:500;
   text-align:center;
   letter-spacing:0.02em;
   line-height:1.6;
@@ -1284,7 +1251,7 @@ body.spanish [lang="en"]{display:none}
   }
   
   .hero-cta-group{
-    margin-top:-40px;
+    margin-top:-60px;
   }
   
   body{
@@ -1503,14 +1470,7 @@ body.spanish [lang="en"]{display:none}
     font-size:12px;
   }
 }
-/* === HARD FIX: Laptop hero logo size (OVERRIDES ALL OTHER RULES) === */
-@media (min-width: 769px) and (max-width: 1440px){
-  .hero-logo{
-    max-width: 300px !important;
-    width: 100% !important;
-    transform: scale(1) !important;  /* kills the zoom from animation end state */
-  }
-}
+
 </style>
 </head>
 
@@ -1845,22 +1805,9 @@ body.spanish [lang="en"]{display:none}
     </div>
   </div>
 
-  <!-- SEO Content -->
-  <div style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;" aria-hidden="true">
-    <h1>Affordable Website Design Houston TX - Professional Web Development Services</h1>
-    <p>SNRG WEB provides affordable website design in Houston, Texas for small businesses, restaurants, retail stores, professional services, contractors, and entrepreneurs. Our custom website design services start at just $50/mo with no setup fees, no contracts, and no hidden costs.</p>
-    <h2>Houston Web Design Services</h2>
-    <p>Custom website design Houston, responsive web design, mobile-friendly websites, SEO-optimized websites, e-commerce development, restaurant website design, retail website design, professional service websites, contractor websites, small business web design, startup website design, landing page design, WordPress development, website redesign, website maintenance, web hosting, domain registration, SSL certificates, Google Analytics setup, local SEO Houston, Houston digital marketing.</p>
-    <h2>Areas We Serve</h2>
-    <p>Downtown Houston, Midtown Houston, Montrose, Heights, Memorial, Galleria, Energy Corridor, Medical Center, Museum District, Rice Village, West University, Bellaire, Pearland, Sugar Land, Katy, Spring, Woodlands, Cypress, Humble, Kingwood, Clear Lake, League City, Friendswood, Missouri City, Stafford, Richmond, Rosenberg, Tomball, Magnolia, Conroe, and all Greater Houston area.</p>
-    <h2>Industries We Serve</h2>
-    <p>Restaurants, food trucks, catering services, retail stores, boutiques, professional services, law firms, medical practices, dental offices, real estate agents, insurance agents, financial advisors, accountants, consultants, contractors, plumbers, electricians, HVAC, landscaping, cleaning services, auto repair, beauty salons, barber shops, fitness studios, gyms, yoga studios, photographers, artists, musicians, event planners, wedding planners, nonprofits, churches, schools, and all Houston small businesses.</p>
-  </div>
-
   <footer class="footer fade-in">
     <div class="container">
-      <p class="footer-copyright">© 2026 SNRG WEB — Professional Website Design Houston, TX — ALL RIGHTS RESERVED</p>
-      <p style="font-size:11px;color:var(--slate-light);margin-top:8px;line-height:1.4;">Affordable website design services for Houston small businesses | Custom web development | SEO optimization | Mobile responsive design</p>
+      <p class="footer-copyright">© 2026 SNRG WEB — HTX</p>
     </div>
   </footer>
 
