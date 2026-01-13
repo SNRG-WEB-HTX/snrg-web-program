@@ -469,23 +469,23 @@ body.spanish [lang="en"]{display:none}
   background:transparent !important;
   isolation:isolate;
 }
-
-
+/* Default (tablet / small laptop) */
 .hero-logo{
-  max-width:clamp(414px,65vw,780px);
+  max-width: 520px;
   height:auto;
-  display:block;
-  margin:0 auto;
-  filter:drop-shadow(0 16px 48px rgba(0,0,0,0.2));
-  opacity:0;
-  transform:scale(0.3) translateY(-100px) translateZ(-500px);
-  animation:logoTunnelEntrance 1.6s cubic-bezier(0.16,1,0.3,1) forwards;
-  background:transparent !important;
-  isolation:isolate;
 }
-@media (min-width: 1025px){
+
+/* Mobile */
+@media (max-width: 768px){
   .hero-logo{
-    max-width: 360px !important;
+    max-width: min(88vw, 400px);
+  }
+}
+
+/* Desktop */
+@media (min-width: 1200px){
+  .hero-logo{
+    max-width: 620px;
   }
 }
 
