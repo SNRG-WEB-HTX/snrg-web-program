@@ -1503,7 +1503,14 @@ body.spanish [lang="en"]{display:none}
     font-size:12px;
   }
 }
-
+/* === HARD FIX: Laptop hero logo size (OVERRIDES ALL OTHER RULES) === */
+@media (min-width: 769px) and (max-width: 1440px){
+  .hero-logo{
+    max-width: 300px !important;
+    width: 100% !important;
+    transform: scale(1) !important;  /* kills the zoom from animation end state */
+  }
+}
 </style>
 </head>
 
