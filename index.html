@@ -467,9 +467,30 @@ body.spanish [lang="en"]{display:none}
   background:transparent !important;
   isolation:isolate;
 }
+  .hero-logo-container{
+  max-width: 520px;
+  margin: 0 auto;
+}
+@media (min-width: 769px) and (max-width: 1440px){
+  .hero-logo-container{
+    max-width: 460px;
+  }
+}
+  @media (min-width: 769px) and (max-width: 1440px){
+  .hero-logo{
+    transform: scale(0.9) !important;
+  }
+}
+
+@media (max-width: 768px){
+  .hero-logo-container{
+    max-width: min(88vw, 380px);
+  }
+}
 
 .hero-logo{
-  max-width:clamp(414px,65vw,780px);
+  width:100%;
+  max-width: 640px;   /* desktop default */
   height:auto;
   display:block;
   margin:0 auto;
@@ -480,6 +501,7 @@ body.spanish [lang="en"]{display:none}
   background:transparent !important;
   isolation:isolate;
 }
+
 
 @keyframes logoTunnelEntrance{
   0%{
@@ -492,10 +514,15 @@ body.spanish [lang="en"]{display:none}
     transform:scale(0.85) translateY(-20px) translateZ(-100px);
     filter:drop-shadow(0 8px 24px rgba(0,0,0,0.15)) blur(2px) brightness(0.85);
   }
+  @keyframes logoTunnelEntrance{
+  ...
   100%{
     opacity:1;
-    transform:scale(1) translateY(0) translateZ(0);
+    transform:scale(0.9) translateY(0) translateZ(0);
     filter:drop-shadow(0 16px 48px rgba(0,0,0,0.2)) blur(0) brightness(1);
+  }
+}
+
   }
 }
 
