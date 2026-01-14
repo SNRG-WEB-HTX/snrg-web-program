@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+
+<!-- Favicon / Site Icon -->
+<link rel="icon" type="image/png" sizes="32x32" href="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png"/>
+<link rel="icon" type="image/png" sizes="16x16" href="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png"/>
+<link rel="apple-touch-icon" href="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png"/>
 <link rel="shortcut icon" href="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png"/>
 
 <link rel="canonical" href="https://snrgweb.com/"/>
@@ -28,13 +35,6 @@
 <meta property="og:image:height" content="1024"/>
 <meta property="og:locale" content="en_US"/>
 
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
-
-<!-- Favicon / Site Icon -->
-<link rel="icon" type="image/png" sizes="32x32" href="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png"/>
-<link rel="icon" type="image/png" sizes="16x16" href="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png"/>
-<link rel="apple-touch-icon" href="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png"/>
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:url" content="https://snrgweb.com/"/>
@@ -1468,6 +1468,131 @@ body.spanish [lang="en"]{display:none}
   .lang-btn{
     padding:6px 14px;
     font-size:12px;
+  }
+}
+
+
+/* === HARD FIX: Laptop hero logo size + position (only 769px–1440px) === */
+@media (min-width: 769px) and (max-width: 1440px){
+  .hero-logo{
+    max-width: 420px !important;            /* slightly bigger */
+    width: 100% !important;
+    transform: translateY(-28px) scale(1) !important; /* raise it + kill zoom */
+  }
+}
+
+
+/* === HARD FIX: Desktop hero logo (>=1441px) === */
+@media (min-width: 1441px){
+  .hero-logo{
+    max-width: 620px !important;            /* slightly bigger than laptop */
+    width: 100% !important;
+    transform: translateY(-36px) scale(1) !important; /* raise it a bit + kill zoom */
+  }
+}
+
+
+/* removed /* === Premium Hero Logo Entrance */ (All Devices) === */
+/* Subtle cinematic: fade + micro-zoom + lift, with ease-out. Keeps final scale at 1. */
+/* removed @keyframes /* removed snrgLogoReveal */ */ {
+  0% {
+    opacity: 0;
+    transform: translateY(24px) scale(0.94);
+    filter: blur(6px) saturate(0.9);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-4px) scale(1.02);
+    filter: blur(1.5px) saturate(1);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0) saturate(1);
+  }
+}
+
+/* Apply animation to the hero logo (does not affect sizing rules) */
+.hero-logo {
+  animation: /* removed snrgLogoReveal */ 900ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  will-change: transform, opacity, filter;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .hero-logo {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+}
+
+
+/* Neutralize any legacy transform end-states so the animation lands cleanly */
+.hero-logo { transform-origin: center center; }
+
+
+/* === SIGNATURE HERO LOGO ENTRANCE (All Devices) === */
+/* Dramatic but premium: depth-tunnel in + light sweep + settle */
+@keyframes snrgLogoTunnel {
+  0% {
+    opacity: 0;
+    transform: perspective(1200px) translateZ(-600px) translateY(80px) scale(0.6) rotateX(12deg);
+    filter: blur(18px) brightness(0.7);
+  }
+  55% {
+    opacity: 1;
+    transform: perspective(1200px) translateZ(40px) translateY(-8px) scale(1.04) rotateX(0deg);
+    filter: blur(2px) brightness(1.05);
+  }
+  75% {
+    transform: perspective(1200px) translateZ(0) translateY(4px) scale(0.985);
+    filter: blur(0.5px) brightness(1);
+  }
+  100% {
+    opacity: 1;
+    transform: perspective(1200px) translateZ(0) translateY(0) scale(1);
+    filter: blur(0) brightness(1);
+  }
+}
+
+/* Subtle light sweep overlay */
+.hero-logo-container::after{
+  content:'';
+  position:absolute;
+  inset:-10%;
+  background: linear-gradient(110deg, transparent 20%, rgba(255,255,255,0.55) 40%, transparent 60%);
+  transform: translateX(-120%);
+  opacity: 0;
+  pointer-events:none;
+  mix-blend-mode: screen;
+  animation: snrgSweep 1200ms cubic-bezier(0.16,1,0.3,1) 300ms both;
+}
+
+@keyframes snrgSweep{
+  0%{ transform: translateX(-120%); opacity: 0; }
+  20%{ opacity: .25; }
+  60%{ opacity: .18; }
+  100%{ transform: translateX(120%); opacity: 0; }
+}
+
+/* Apply the tunnel animation */
+.hero-logo{
+  animation: snrgLogoTunnel 1100ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  will-change: transform, opacity, filter;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .hero-logo,
+  .hero-logo-container::after{
+    animation: none !important;
+  }
+  .hero-logo{
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
   }
 }
 
