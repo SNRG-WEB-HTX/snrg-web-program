@@ -1,121 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
-<title>Contact SNRG WEB | Get Your Website Started</title>
-<meta name="description" content="Contact SNRG WEB to get your small business website started. Fast, affordable, high-performance websites for Houston businesses."/>
-
-<link rel="icon" type="image/png" sizes="32x32" href="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png"/>
-
-<link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,900,500,400,800,600&display=swap" rel="stylesheet">
-
+<meta charset="UTF-8">
+<title>SNRG WEB — Contact</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-:root{
-  --pearl:#F6F7F8;
-  --white:#FFFFFF;
-  --ink:#0F1115;
-  --slate:#4A4F5A;
-  --red:#FF2A2A;
-  --border:#E5E7EB;
-}
-
-*{box-sizing:border-box;margin:0;padding:0}
-
 body{
-  font-family:'Satoshi',system-ui,-apple-system,sans-serif;
-  background:var(--pearl);
-  color:var(--ink);
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:24px;
+  font-family:system-ui,-apple-system,sans-serif;
+  background:#f6f7f8;
+  margin:0;
+  padding:40px;
 }
-
-.card{
-  background:var(--white);
-  max-width:560px;
-  width:100%;
-  border-radius:20px;
-  border:2px solid var(--border);
+.form-wrap{
+  max-width:520px;
+  margin:0 auto;
+  background:#fff;
   padding:32px;
-  box-shadow:0 12px 40px rgba(0,0,0,0.06);
-  text-align:center;
+  border-radius:16px;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
 }
-
-.logo{
-  max-width:220px;
-  margin:0 auto 16px;
-  display:block;
-}
-
-h1{
-  font-size:32px;
-  font-weight:900;
-  letter-spacing:-0.03em;
-  margin-bottom:12px;
-}
-
-p{
-  color:var(--slate);
-  margin-bottom:24px;
-  line-height:1.6;
-}
-
-form{
-  display:flex;
-  flex-direction:column;
-  gap:14px;
-}
-
-input, textarea{
-  font-family:inherit;
+h1{margin-bottom:8px}
+input,textarea,button{
+  width:100%;
+  padding:14px;
+  margin-top:12px;
+  border-radius:10px;
+  border:1px solid #ddd;
   font-size:16px;
-  padding:14px 16px;
-  border-radius:12px;
-  border:2px solid var(--border);
 }
-
-input:focus, textarea:focus{
-  outline:none;
-  border-color:var(--red);
-}
-
 button{
-  margin-top:8px;
-  background:var(--red);
-  color:white;
+  background:#ff2a2a;
+  color:#fff;
+  font-weight:700;
   border:none;
-  border-radius:12px;
-  padding:16px;
-  font-size:16px;
-  font-weight:800;
   cursor:pointer;
-}
-
-button:active{
-  transform:translateY(-1px);
 }
 </style>
 </head>
-
 <body>
-  <div class="card">
-    <img class="logo" src="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png" alt="SNRG WEB">
 
-    <h1>Get Your Website Started</h1>
-    <p>Tell us a little about your business and we’ll reach out with a simple plan and pricing.</p>
+<div class="form-wrap">
+  <h1>Request Free Consultation</h1>
+  <p>We’ll contact you shortly.</p>
 
-    <!-- BASIC FORM (no backend yet, but works for Google Ads flow) -->
-    <form action="thank-you.html" method="GET">
-      <input type="text" name="name" placeholder="Your name" required>
-      <input type="text" name="business" placeholder="Business name">
-      <input type="email" name="email" placeholder="Email address" required>
-      <input type="tel" name="phone" placeholder="Phone number">
-      <textarea name="message" rows="4" placeholder="What do you need?"></textarea>
-      <button type="submit">Request Free Consultation</button>
-    </form>
-  </div>
+  <form action="https://formspree.io/f/mzddzeak" method="POST">
+    <input type="text" name="name" placeholder="Your name" required>
+    <input type="email" name="email" placeholder="Your email" required>
+    <input type="text" name="business" placeholder="Business name">
+    <textarea name="message" placeholder="What do you need?" required></textarea>
+
+    <input type="hidden" name="_redirect" value="https://snrgweb.com/thank-you.html">
+
+    <button type="submit">Request Free Consultation</button>
+  </form>
+</div>
+
 </body>
 </html>
