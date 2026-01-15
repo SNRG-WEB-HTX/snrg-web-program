@@ -1,106 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
-<title>Book Your Free Website Demo | SNRG WEB</title>
+  <meta charset="UTF-8" />
+  <title>Book Your Free Website Demo Call | SNRG WEB</title>
+  <meta name="description" content="Book your free website demo call with SNRG WEB. Takes less than 30 seconds. No pressure, no obligation." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<link rel="icon" type="image/png" href="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png"/>
+  <link rel="canonical" href="https://snrgweb.com/bookings.html" />
 
-<link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,900,500,400,800,600&display=swap" rel="stylesheet">
+  <!-- Fonts -->
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
 
-<style>
-:root{
-  --pearl:#F6F7F8;
-  --white:#FFFFFF;
-  --ink:#0F1115;
-  --slate:#4A4F5A;
-  --red:#FF2A2A;
-  --border:#E5E7EB;
-}
+  <style>
+    :root{
+      --bg:#0b0b0c;
+      --card:#111113;
+      --text:#ffffff;
+      --muted:#b5b5b5;
+      --accent:#ff2b2b;
+      --border:rgba(255,255,255,0.08);
+    }
 
-*{box-sizing:border-box;margin:0;padding:0}
+    *{box-sizing:border-box}
 
-body{
-  font-family:'Satoshi',system-ui,-apple-system,sans-serif;
-  background:var(--pearl);
-  color:var(--ink);
-  min-height:100vh;
-}
+    body{
+      margin:0;
+      font-family:Satoshi,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      background:
+        radial-gradient(1200px 600px at 50% -10%, rgba(255,43,43,0.08), transparent 40%),
+        var(--bg);
+      color:var(--text);
+      min-height:100vh;
+    }
 
-.container{
-  max-width:1100px;
-  margin:0 auto;
-  padding:clamp(20px,5vw,48px);
-}
+    .wrap{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:48px 20px;
+    }
 
-.hero{
-  min-height:100vh;
-  display:flex;
-  align-items:flex-start;
-  justify-content:center;
-}
+    .container{
+      width:100%;
+      max-width:980px;
+      text-align:center;
+    }
 
-.card{
-  width:100%;
-  background:white;
-  border-radius:18px;
-  border:1px solid var(--border);
-  box-shadow:0 10px 40px rgba(0,0,0,0.06);
-  overflow:hidden;
-}
+    h1{
+      font-size:clamp(28px,4vw,48px);
+      margin:0 0 10px;
+      letter-spacing:-0.02em;
+    }
 
-.header{
-  text-align:center;
-  padding:clamp(24px,5vw,48px);
-  border-bottom:1px solid var(--border);
-}
+    .sub{
+      color:var(--muted);
+      margin-bottom:28px;
+      font-size:clamp(15px,1.6vw,18px);
+    }
 
-.header h1{
-  font-size:clamp(26px,5vw,42px);
-  font-weight:900;
-  letter-spacing:-0.03em;
-}
+    .card{
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01)),
+        var(--card);
+      border:1px solid var(--border);
+      border-radius:20px;
+      box-shadow:0 30px 80px rgba(0,0,0,0.5);
+      overflow:hidden;
+    }
 
-.header p{
-  margin-top:12px;
-  color:var(--slate);
-  font-size:clamp(14px,3vw,18px);
-}
+    .iframe-wrap{
+      position:relative;
+      width:100%;
+      min-height:720px;
+      background:#0e0e10;
+    }
 
-.iframe-wrap{
-  width:100%;
-  height:80vh;
-  min-height:700px;
-}
+    iframe{
+      width:100%;
+      height:100%;
+      border:0;
+    }
 
-iframe{
-  width:100%;
-  height:100%;
-  border:none;
-}
-</style>
+    .fallback{
+      position:absolute;
+      inset:0;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:24px;
+      color:var(--muted);
+      pointer-events:none;
+    }
+
+    .fallback a{
+      color:var(--accent);
+      text-decoration:none;
+      font-weight:600;
+    }
+
+    /* Animations */
+    .fade-rise{
+      opacity:0;
+      transform:translateY(24px);
+      animation:rise 1s cubic-bezier(.16,1,.3,1) forwards;
+    }
+
+    .delay-1{ animation-delay:.1s }
+    .delay-2{ animation-delay:.25s }
+    .delay-3{ animation-delay:.4s }
+
+    @keyframes rise{
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    footer{
+      margin-top:28px;
+      color:#777;
+      font-size:13px;
+    }
+
+    footer a{
+      color:#aaa;
+      text-decoration:none;
+    }
+  </style>
 </head>
-
 <body>
 
-<div class="hero">
-  <div class="container">
-    <div class="card">
-      <div class="header">
-        <h1>Book Your Free Website Demo Call</h1>
-        <p>Pick a time that works for you. Takes less than 30 seconds.</p>
+  <div class="wrap">
+    <div class="container">
+
+      <h1 class="fade-rise delay-1">Book Your Free Website Demo Call</h1>
+      <p class="sub fade-rise delay-2">
+        Pick a time that works for you. Takes less than 30 seconds. No pressure. No obligation.
+      </p>
+
+      <div class="card fade-rise delay-3">
+        <div class="iframe-wrap">
+
+          <!-- 🔴 ZOHO EMBED -->
+          <iframe
+            src="https://snrgweb.zohobookings.com/#/4755699000000047054"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+
+          <!-- Fallback if Zoho blocks -->
+          <div class="fallback">
+            <p>If the booking calendar does not load,</p>
+            <p>
+              <a href="https://snrgweb.zohobookings.com/#/4755699000000047054" target="_blank" rel="noopener">
+                Click here to book your call
+              </a>
+            </p>
+          </div>
+
+        </div>
       </div>
-      <div class="iframe-wrap">
-        <iframe 
-          src="https://snrgweb.zohobookings.com/#/4755699000000047054"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
-      </div>
+
+      <footer>
+        © <span id="year"></span> SNRG WEB ·
+        <a href="https://snrgweb.com">Back to site</a>
+      </footer>
+
     </div>
   </div>
-</div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 
 </body>
 </html>
