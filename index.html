@@ -388,6 +388,20 @@ body.spanish [lang="en"]{display:none}
   gap:8px;
 }
 
+.header-nav{
+  display:flex;
+  gap:8px;
+}
+
+.header-nav-pill{
+  display:flex;
+  gap:8px;
+  border-radius:999px;
+  background:var(--pearl);
+  padding:4px;
+  border:1px solid var(--border);
+}
+
 .lang-btn{
   background:transparent;
   border:1.5px solid var(--border);
@@ -417,7 +431,7 @@ body.spanish [lang="en"]{display:none}
 }
 
 .header-contact-btn{
-  background:transparent;
+  background:var(--pearl);
   border:1.5px solid var(--border);
   color:var(--slate);
   padding:8px 18px;
@@ -441,6 +455,34 @@ body.spanish [lang="en"]{display:none}
 .header-contact-btn:active{
   background:var(--red);
   border-color:var(--red);
+  color:var(--white);
+}
+
+.header-nav-btn{
+  background:transparent;
+  border:none;
+  color:var(--slate);
+  padding:8px 18px;
+  border-radius:999px;
+  font-size:13px;
+  font-weight:600;
+  text-decoration:none;
+  transition:all 0.2s;
+  min-width:44px;
+  min-height:44px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  text-transform:uppercase;
+  letter-spacing:0.05em;
+}
+
+.header-nav-btn:hover{
+  color:var(--ink);
+}
+
+.header-nav-btn:active{
+  background:var(--red);
   color:var(--white);
 }
 
@@ -1687,8 +1729,12 @@ body.spanish [lang="en"]{display:none}
       <button class="lang-btn active" onclick="switchLang('en')" aria-label="Switch to English" aria-current="true">EN</button>
       <button class="lang-btn" onclick="switchLang('es')" aria-label="Cambiar a español">ES</button>
     </div>
-    <a href="contact.html" class="header-contact-btn" lang="en">Contact</a>
-    <a href="contact.html" class="header-contact-btn" lang="es">Contacto</a>
+    <div class="header-nav-pill">
+      <a href="contact.html" class="header-nav-btn" lang="en">Contact</a>
+      <a href="contact.html" class="header-nav-btn" lang="es">Contacto</a>
+      <a href="faq.html" class="header-nav-btn" lang="en">FAQ</a>
+      <a href="faq.html" class="header-nav-btn" lang="es">FAQ</a>
+    </div>
   </nav>
 
   <header class="hero" role="banner">
