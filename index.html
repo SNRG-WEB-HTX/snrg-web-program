@@ -339,7 +339,7 @@ body.spanish [lang="en"]{display:none}
   }
 }
 
-.animated-bg{
+.animated-bg{ pointer-events:none; 
   position:absolute;
   inset:0;
   overflow:hidden;
@@ -522,7 +522,7 @@ body.spanish [lang="en"]{display:none}
   color:var(--white);
 }
 
-.header-nav-btn{
+.header-nav-btn{ pointer-events:auto; 
   background:transparent;
   border:none;
   color:var(--slate);
@@ -1780,6 +1780,36 @@ body.spanish [lang="en"]{display:none}
   }
 }
 
+
+/* === TYPOGRAPHY SAFETY NET (No spills, no ugly widows) === */
+h1, h2, h3, h4, h5, h6, p, li, .project-title, .project-desc, .pricing-name, .pricing-term, .hero-headline, .section-title {
+  overflow-wrap: anywhere;
+  word-break: normal;
+  hyphens: auto;
+  text-wrap: balance;
+}
+
+p, li, .project-desc, .pricing-term {
+  text-wrap: pretty;
+}
+
+/* Avoid single-word last lines on large headings by constraining measure */
+.hero-headline, .section-title, .final-cta h2 {
+  max-width: 22ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Body copy measure */
+.container p, .project-desc, .pricing-feature, .section-subtitle {
+  max-width: 60ch;
+}
+
+/* Ensure clamps never cause overflow */
+* {
+  min-width: 0;
+}
+
 </style>
 </head>
 
@@ -1788,14 +1818,14 @@ body.spanish [lang="en"]{display:none}
   <h1 class="visually-hidden" lang="en">Affordable High-Performance Websites for Houston Small Businesses — Built Fast, Managed for You</h1>
   <h1 class="visually-hidden" lang="es">Sitios Web de Alto Rendimiento y Asequibles para Pequeñas Empresas en Houston — Construidos Rápido, Administrados para Usted</h1>
 
-  <nav class="lang-bar" role="navigation" aria-label="Language selection">
+  <nav class="lang-bar" role="navigation" aria-label="Language selection" style="pointer-events:auto; z-index:10000;">
     <div class="lang-toggle">
       <button class="lang-btn active" onclick="switchLang('en')" aria-label="Switch to English" aria-current="true">EN</button>
       <button class="lang-btn" onclick="switchLang('es')" aria-label="Cambiar a español">ES</button>
     </div>
     <div class="header-nav-pill">
-      <a href="contact.html" class="header-nav-btn" lang="en">Contact</a>
-      <a href="contact.html" class="header-nav-btn" lang="es">Contacto</a>
+      <a href="contact.html" class="header-nav-btn" lang="en" onclick="window.location.href='contact.html'; return true;">Contact</a>
+      <a href="contact.html" class="header-nav-btn" lang="es" onclick="window.location.href='contact.html'; return true;">Contacto</a>
       <a href="faq.html" class="header-nav-btn" lang="en">FAQ</a>
       <a href="faq.html" class="header-nav-btn" lang="es">FAQ</a>
     </div>
