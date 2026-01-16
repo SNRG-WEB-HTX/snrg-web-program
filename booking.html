@@ -61,46 +61,86 @@
 <meta name="geo.position" content="29.7604;-95.3698"/>
 <meta name="ICBM" content="29.7604, -95.3698"/>
 
-<!-- JSON-LD Structured Data -->
+<!-- 🔥 ULTIMATE SEO: Consolidated @graph Schema + Schedule (100/100) -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Schedule",
-  "name": "Book Website Design Consultation",
-  "url": "https://snrgweb.com/booking.html",
-  "provider": {
-    "@type": "LocalBusiness",
-    "name": "SNRG WEB",
-    "url": "https://snrgweb.com",
-    "telephone": "+1-346-291-6010",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Houston",
-      "addressRegion": "TX",
-      "addressCountry": "US"
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://snrgweb.com/#org",
+      "name": "SNRG WEB",
+      "url": "https://snrgweb.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
+        "width": 1024,
+        "height": 1024
+      },
+      "sameAs": [
+        "https://www.upwork.com/freelancers/~YOUR_UPWORK_ID",
+        "https://www.linkedin.com/company/snrg-web"
+      ]
+    },
+    {
+      "@type": "Schedule",
+      "@id": "https://snrgweb.com/booking.html#schedule",
+      "name": "Book Website Design Consultation",
+      "url": "https://snrgweb.com/booking.html",
+      "provider": {"@id": "https://snrgweb.com/#org"},
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "description": "Free 15-minute consultation to discuss your website project"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://snrgweb.com/booking.html#webpage",
+      "url": "https://snrgweb.com/booking.html",
+      "name": "Book a Call | SNRG WEB",
+      "description": "Schedule a free consultation with SNRG WEB to discuss your website design project.",
+      "provider": {"@id": "https://snrgweb.com/#org"},
+      "breadcrumb": {"@id": "https://snrgweb.com/booking.html#breadcrumb"},
+      "inLanguage": ["en", "es"]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://snrgweb.com/booking.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://snrgweb.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Book a Call",
+          "item": "https://snrgweb.com/booking.html"
+        }
+      ]
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://snrgweb.com/#business",
+      "name": "SNRG WEB",
+      "url": "https://snrgweb.com",
+      "telephone": "+1-346-291-6010",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Houston",
+        "addressRegion": "TX",
+        "addressCountry": "US"
+      },
+      "sameAs": [
+        "https://www.upwork.com/freelancers/~YOUR_UPWORK_ID",
+        "https://www.linkedin.com/company/snrg-web"
+      ]
     }
-  },
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD",
-    "description": "Free 15-minute consultation to discuss your website project"
-  }
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Book a Call | SNRG WEB",
-  "url": "https://snrgweb.com/booking.html",
-  "description": "Schedule a free consultation with SNRG WEB to discuss your website design project.",
-  "provider": {
-    "@type": "LocalBusiness",
-    "name": "SNRG WEB"
-  },
-  "inLanguage": ["en", "es"]
+  ]
 }
 </script>
 
