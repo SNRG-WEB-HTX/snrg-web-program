@@ -179,6 +179,20 @@ body:not(.spanish) [lang="es"]{display:none}
   border:1px solid var(--border);
 }
 
+.header-nav{
+  display:flex;
+  gap:8px;
+}
+
+.header-nav-pill{
+  display:flex;
+  gap:8px;
+  border-radius:999px;
+  background:var(--pearl);
+  padding:4px;
+  border:1px solid var(--border);
+}
+
 .lang-btn{
   background:transparent;
   border:none;
@@ -201,13 +215,13 @@ body:not(.spanish) [lang="es"]{display:none}
 }
 
 .header-contact-btn{
-  background:transparent;
+  background:var(--pearl);
   border:1px solid var(--border);
   padding:8px 18px;
   border-radius:999px;
   font-size:clamp(12px,3vw,14px);
   font-weight:700;
-  color:var(--ink);
+  color:var(--slate);
   cursor:pointer;
   transition:all 0.2s;
   font-family:'Cabinet Grotesk',sans-serif;
@@ -221,6 +235,33 @@ body:not(.spanish) [lang="es"]{display:none}
   background:var(--red);
   color:var(--white);
   border-color:var(--red);
+}
+
+.header-nav-btn{
+  background:transparent;
+  border:none;
+  color:var(--slate);
+  padding:8px 18px;
+  border-radius:999px;
+  font-size:clamp(12px,3vw,14px);
+  font-weight:700;
+  text-decoration:none;
+  transition:all 0.2s;
+  font-family:'Cabinet Grotesk',sans-serif;
+  text-transform:uppercase;
+  letter-spacing:0.05em;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.header-nav-btn:hover{
+  color:var(--ink);
+}
+
+.header-nav-btn:active{
+  background:var(--red);
+  color:var(--white);
 }
 
 .booking-section{
@@ -372,8 +413,14 @@ body:not(.spanish) [lang="es"]{display:none}
       <button class="lang-btn active" onclick="switchLang('en')" aria-label="Switch to English" aria-current="true">EN</button>
       <button class="lang-btn" onclick="switchLang('es')" aria-label="Cambiar a Español" aria-current="false">ES</button>
     </div>
-    <a href="index.html" class="header-contact-btn" lang="en">Home</a>
-    <a href="index.html" class="header-contact-btn" lang="es">Inicio</a>
+    <div class="header-nav-pill">
+      <a href="contact.html" class="header-nav-btn" lang="en">Contact</a>
+      <a href="contact.html" class="header-nav-btn" lang="es">Contacto</a>
+      <a href="faq.html" class="header-nav-btn" lang="en">FAQ</a>
+      <a href="faq.html" class="header-nav-btn" lang="es">FAQ</a>
+      <a href="index.html" class="header-nav-btn" lang="en">Home</a>
+      <a href="index.html" class="header-nav-btn" lang="es">Inicio</a>
+    </div>
   </div>
 
   <section class="booking-section">
