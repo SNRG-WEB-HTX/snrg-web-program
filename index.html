@@ -19,7 +19,6 @@
 
 <!-- Hreflang (single-URL language toggle) -->
 <link rel="alternate" hreflang="en" href="https://snrgweb.com/"/>
-<link rel="alternate" hreflang="es" href="https://snrgweb.com/"/>
 <link rel="alternate" hreflang="x-default" href="https://snrgweb.com/"/>
 
 <meta property="og:locale:alternate" content="es_US"/>
@@ -30,11 +29,7 @@
 I have triple-checked this: every Product and Service entry now has the required image link pointing to your logo.
 
 The Final Corrected Code
-Delete your existing <script type="application/ld+json"> section in index.html and replace it with this:
-
-JSON
-
-<script type="application/ld+json">
+Delete your existing <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
@@ -59,15 +54,6 @@ JSON
       "inLanguage": "en"
     },
     {
-      "@type": "WebPage",
-      "@id": "https://snrgweb.com/#webpage",
-      "url": "https://snrgweb.com/",
-      "name": "Affordable Website Design Houston | $50/mo Small Business Websites | SNRG WEB",
-      "isPartOf": {"@id": "https://snrgweb.com/#website"},
-      "about": {"@id": "https://snrgweb.com/#org"},
-      "inLanguage": "en"
-    },
-    {
       "@type": "LocalBusiness",
       "@id": "https://snrgweb.com/#business",
       "name": "SNRG WEB",
@@ -88,10 +74,7 @@ JSON
       "name": "Fully Managed Website Service",
       "image": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
       "description": "Professional custom website design with ongoing support, hosting, and unlimited updates. Launch in 2-3 days.",
-      "brand": {
-        "@type": "Brand",
-        "name": "SNRG WEB"
-      },
+      "brand": { "@type": "Brand", "name": "SNRG WEB" },
       "offers": {
         "@type": "Offer",
         "url": "https://snrgweb.com",
@@ -108,10 +91,7 @@ JSON
       "name": "Website Ownership - One-Time Purchase",
       "image": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
       "description": "One-time purchase with full ownership of custom designed website. All source files included. Launch in 2-3 days.",
-      "brand": {
-        "@type": "Brand",
-        "name": "SNRG WEB"
-      },
+      "brand": { "@type": "Brand", "name": "SNRG WEB" },
       "offers": {
         "@type": "Offer",
         "url": "https://snrgweb.com",
