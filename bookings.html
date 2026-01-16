@@ -1,152 +1,386 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Book Your Free Website Demo | SNRG WEB</title>
-<meta name="description" content="Book your free website demo call with SNRG WEB. Pick a time that works for you. No pressure, no obligation.">
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
 
-<link rel="canonical" href="https://snrgweb.com/bookings.html">
+<!-- Favicon / Site Icon -->
+<link rel="icon" type="image/png" sizes="32x32" href="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png"/>
+<link rel="icon" type="image/png" sizes="16x16" href="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png"/>
+<link rel="apple-touch-icon" href="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png"/>
+<link rel="shortcut icon" href="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png"/>
+
+<link rel="canonical" href="https://snrgweb.com/booking.html"/>
+
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+<link rel="dns-prefetch" href="https://api.fontshare.com">
+
+<!-- Primary Meta Tags -->
+<title>Book a Call | SNRG WEB | Houston Website Design</title>
+<meta name="title" content="Book a Call | SNRG WEB | Houston Website Design"/>
+<meta name="description" content="Schedule a free 15-minute consultation with SNRG WEB. Discuss your website project and get started today."/>
+<meta name="robots" content="index,follow"/>
+<meta name="theme-color" content="#FF2A2A"/>
 
 <style>
+@import url('https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700,800,900&display=swap');
+
 :root{
-  --bg:#F6F7F8;
-  --card:#FFFFFF;
-  --text:#0F1115;
-  --muted:#6B7280;
-  --accent:#FF2A2A;
+  --red:#FF2A2A;
+  --red-hover:#E62424;
+  --ink:#0A0A0A;
+  --slate:#4A5568;
+  --slate-light:#A0AEC0;
+  --border:#E2E8F0;
+  --pearl:#FAFBFC;
+  --white:#FFFFFF;
 }
 
-*{box-sizing:border-box}
-body{
+*{
   margin:0;
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  background:var(--bg);
-  color:var(--text);
-}
-
-.page{
-  min-height:100vh;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:flex-start;
-  padding:clamp(32px,5vw,64px) 20px;
-}
-
-h1{
-  font-size:clamp(32px,4vw,48px);
-  margin:0 0 12px 0;
-  text-align:center;
-}
-
-.sub{
-  color:var(--muted);
-  text-align:center;
-  max-width:720px;
-  margin-bottom:36px;
-}
-
-.card{
-  width:100%;
-  max-width:1100px;
-  background:var(--card);
-  border-radius:20px;
-  box-shadow:0 30px 80px rgba(0,0,0,.08);
-  overflow:hidden;
   padding:0;
+  box-sizing:border-box;
 }
 
-/* Animations */
-.fade{
-  opacity:0;
-  transform:translateY(48px) scale(.96);
-  animation:fadeRise .9s cubic-bezier(.22,1,.36,1) forwards;
+html{
+  scroll-behavior:smooth;
+  -webkit-text-size-adjust:100%;
+  text-rendering:optimizeLegibility;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
 }
-.delay1{animation-delay:.1s}
-.delay2{animation-delay:.25s}
-.delay3{animation-delay:.4s}
+
+body{
+  font-family:'Cabinet Grotesk',system-ui,-apple-system,sans-serif;
+  font-size:clamp(15px,3.8vw,16px);
+  line-height:1.6;
+  color:var(--ink);
+  background:var(--white);
+  overflow-x:hidden;
+  position:relative;
+}
+
+body.spanish [lang="en"]{display:none}
+body:not(.spanish) [lang="es"]{display:none}
+
+.container{
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 clamp(16px,4vw,32px);
+  position:relative;
+  z-index:1;
+}
+
+.lang-bar{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  background:rgba(255,255,255,0.98);
+  backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border);
+  padding:14px 16px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  z-index:9999;
+  box-shadow:0 2px 16px rgba(0,0,0,0.04);
+}
+
+.lang-toggle{
+  display:flex;
+  gap:8px;
+  border-radius:999px;
+  background:var(--pearl);
+  padding:4px;
+  border:1px solid var(--border);
+}
+
+.lang-btn{
+  background:transparent;
+  border:none;
+  padding:8px 18px;
+  border-radius:999px;
+  font-size:clamp(12px,3vw,14px);
+  font-weight:700;
+  color:var(--slate);
+  cursor:pointer;
+  transition:all 0.2s;
+  font-family:'Cabinet Grotesk',sans-serif;
+  text-transform:uppercase;
+  letter-spacing:0.05em;
+}
+
+.lang-btn.active{
+  background:var(--red);
+  color:var(--white);
+  box-shadow:0 2px 8px rgba(255,42,42,0.2);
+}
+
+.header-contact-btn{
+  background:transparent;
+  border:1px solid var(--border);
+  padding:8px 18px;
+  border-radius:999px;
+  font-size:clamp(12px,3vw,14px);
+  font-weight:700;
+  color:var(--ink);
+  cursor:pointer;
+  transition:all 0.2s;
+  font-family:'Cabinet Grotesk',sans-serif;
+  text-transform:uppercase;
+  letter-spacing:0.05em;
+  text-decoration:none;
+  display:inline-block;
+}
+
+.header-contact-btn:active{
+  background:var(--red);
+  color:var(--white);
+  border-color:var(--red);
+}
+
+.booking-section{
+  min-height:100vh;
+  padding:clamp(100px,15vw,140px) 0 clamp(60px,10vw,96px);
+  background:linear-gradient(135deg, #ffffff 0%, #f9fafb 25%, #ffffff 50%, #f7f8f9 75%, #ffffff 100%);
+  background-size:400% 400%;
+  animation:pearlShimmer 18s ease infinite;
+  position:relative;
+  overflow:hidden;
+}
+
+.booking-section::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 50% 10%, rgba(255,255,255,0.7) 0%, transparent 50%),
+    radial-gradient(circle at 10% 50%, rgba(249,250,251,0.5) 0%, transparent 50%),
+    radial-gradient(circle at 90% 80%, rgba(247,248,249,0.6) 0%, transparent 50%);
+  animation:pearlFloat 24s ease-in-out infinite;
+  pointer-events:none;
+}
+
+@keyframes pearlShimmer{
+  0%,100%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+}
+
+@keyframes pearlFloat{
+  0%,100%{transform:translate(0,0) scale(1)}
+  33%{transform:translate(20px,-30px) scale(1.05)}
+  66%{transform:translate(-25px,20px) scale(0.95)}
+}
+
+.booking-wrapper{
+  max-width:980px;
+  margin:0 auto;
+  position:relative;
+  z-index:1;
+}
+
+.booking-header{
+  text-align:center;
+  margin-bottom:clamp(32px,8vw,48px);
+}
+
+.booking-logo{
+  max-width:clamp(180px,35vw,260px);
+  margin:0 auto 32px;
+  display:block;
+  filter:drop-shadow(0 8px 24px rgba(0,0,0,0.08));
+}
+
+.booking-title{
+  font-size:clamp(28px,7vw,42px);
+  font-weight:900;
+  color:var(--ink);
+  margin-bottom:clamp(12px,3vw,16px);
+  letter-spacing:-0.03em;
+  line-height:1.1;
+}
+
+.booking-subtitle{
+  font-size:clamp(15px,3.8vw,17px);
+  color:var(--slate);
+  line-height:1.6;
+  max-width:600px;
+  margin:0 auto;
+}
+
+.cal-embed-wrapper{
+  background:var(--white);
+  border-radius:clamp(20px,5vw,32px);
+  padding:0;
+  box-shadow:0 20px 60px rgba(0,0,0,0.08);
+  border:2px solid var(--border);
+  overflow:hidden;
+}
+
+.cal-inline{
+  width:100%;
+  min-height:700px;
+}
+
+.back-link{
+  text-align:center;
+  margin-top:clamp(24px,6vw,32px);
+}
+
+.back-link a{
+  color:var(--slate);
+  text-decoration:none;
+  font-size:clamp(14px,3.5vw,15px);
+  font-weight:600;
+  transition:color 0.2s;
+}
+
+.back-link a:active{
+  color:var(--red);
+}
+
+.fade-in{
+  opacity:0;
+  transform:translateY(40px) scale(0.96);
+  animation:fadeRise 0.85s cubic-bezier(0.22,1,0.36,1) forwards;
+  animation-delay:0.1s;
+}
 
 @keyframes fadeRise{
-  to{opacity:1;transform:none}
+  0%{
+    opacity:0;
+    transform:translateY(40px) scale(0.96);
+  }
+  100%{
+    opacity:1;
+    transform:translateY(0) scale(1);
+  }
 }
 
-.embed-wrap{
-  position:relative;
-  width:100%;
-  min-height:780px;
+@media(min-width:769px){
+  .back-link a:hover{
+    color:var(--red);
+  }
+  .header-contact-btn:hover{
+    background:var(--red);
+    color:var(--white);
+    border-color:var(--red);
+  }
 }
 
-.embed-wrap iframe{
-  width:100%;
-  height:780px;
-  border:0;
-}
-
-.fallback{
-  text-align:center;
-  padding:40px 20px;
-  font-size:16px;
-}
-
-.fallback a{
-  color:var(--accent);
-  font-weight:700;
-  text-decoration:none;
-}
-
-.topbar{
-  width:100%;
-  max-width:1100px;
-  display:flex;
-  justify-content:flex-start;
-  margin-bottom:24px;
-}
-
-.back{
-  text-decoration:none;
-  color:var(--text);
-  font-weight:600;
+@media(max-width:768px){
+  .cal-inline{
+    min-height:600px;
+  }
 }
 </style>
 </head>
 
 <body>
-  <div class="page">
-    <div class="topbar fade delay1">
-      <a class="back" href="/">← Back to SNRG WEB</a>
+  <div class="lang-bar">
+    <div class="lang-toggle">
+      <button class="lang-btn active" onclick="switchLang('en')" aria-label="Switch to English" aria-current="true">EN</button>
+      <button class="lang-btn" onclick="switchLang('es')" aria-label="Cambiar a Español" aria-current="false">ES</button>
     </div>
-
-    <h1 class="fade delay1">Book Your Free Website Demo Call</h1>
-    <div class="sub fade delay2">
-      Pick a time that works for you. Takes less than 30 seconds. No pressure. No obligation.
-    </div>
-
-    <div class="card fade delay3">
-      <div class="embed-wrap">
-        <iframe 
-          src="https://snrgweb.zohobookings.com/portal-embed#/customer/4755699000000047054"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-
-        <noscript>
-          <div class="fallback">
-            JavaScript is required to load the booking calendar.<br>
-            <a href="https://snrgweb.zohobookings.com/#/4755699000000047054" target="_blank">
-              Click here to book your call
-            </a>
-          </div>
-        </noscript>
-      </div>
-
-      <div class="fallback">
-        If the booking calendar does not load,<br>
-        <a href="https://snrgweb.zohobookings.com/#/4755699000000047054" target="_blank">
-          click here to book your call
-        </a>
-      </div>
-    </div>
+    <a href="https://snrgweb.com/" class="header-contact-btn" lang="en">Home</a>
+    <a href="https://snrgweb.com/" class="header-contact-btn" lang="es">Inicio</a>
   </div>
+
+  <section class="booking-section">
+    <div class="container">
+      <div class="booking-wrapper fade-in">
+        <div class="booking-header">
+          <img src="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png" class="booking-logo" alt="SNRG WEB Logo" loading="eager">
+          
+          <h1 class="booking-title" lang="en">Schedule Your Free Consultation</h1>
+          <h1 class="booking-title" lang="es">Agenda Tu Consulta Gratis</h1>
+          
+          <p class="booking-subtitle" lang="en">Pick a time that works for you. We'll discuss your project and how we can help.</p>
+          <p class="booking-subtitle" lang="es">Elige un horario que te funcione. Hablaremos de tu proyecto y cómo podemos ayudarte.</p>
+        </div>
+        
+        <div class="cal-embed-wrapper">
+          <div class="cal-inline"></div>
+        </div>
+        
+        <div class="back-link">
+          <a href="https://snrgweb.com/" lang="en">← Back to Home</a>
+          <a href="https://snrgweb.com/" lang="es">← Volver al Inicio</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cal.com Inline Embed Script -->
+  <script>
+  (function (C, A, L) { 
+    let p = function (a, ar) { 
+      a.q.push(ar); 
+    }; 
+    let d = C.document; 
+    C.Cal = C.Cal || function () { 
+      let cal = C.Cal; 
+      let ar = arguments; 
+      if (!cal.loaded) { 
+        cal.ns = {}; 
+        cal.q = cal.q || []; 
+        d.head.appendChild(d.createElement("script")).src = A; 
+        cal.loaded = true; 
+      } 
+      if (ar[0] === L) { 
+        const api = function () { 
+          p(api, arguments); 
+        }; 
+        const namespace = ar[1]; 
+        api.q = api.q || []; 
+        typeof namespace === "string" ? (cal.ns[namespace] = api) && p(api, ar) : p(cal, ar); 
+        return; 
+      } 
+      p(cal, ar); 
+    }; 
+  })(window, "https://app.cal.com/embed/embed.js", "init");
+
+  Cal("init", {origin:"https://cal.com"});
+
+  Cal("inline", {
+    elementOrSelector:".cal-inline",
+    calLink: "bobby-frilot-gszco6/15min",
+    layout: "month_view",
+    config: {
+      theme: "light"
+    }
+  });
+
+  Cal("ui", {
+    "styles": {
+      "branding": {
+        "brandColor": "#FF2A2A"
+      }
+    },
+    "hideEventTypeDetails": false,
+    "layout": "month_view"
+  });
+  </script>
+
+  <script>
+  function switchLang(lang){
+    const btns=document.querySelectorAll('.lang-btn');
+    if(lang==='es'){
+      document.body.classList.add('spanish');
+      btns[0].classList.remove('active');
+      btns[0].setAttribute('aria-current','false');
+      btns[1].classList.add('active');
+      btns[1].setAttribute('aria-current','true');
+    }else{
+      document.body.classList.remove('spanish');
+      btns[0].classList.add('active');
+      btns[0].setAttribute('aria-current','true');
+      btns[1].classList.remove('active');
+      btns[1].setAttribute('aria-current','false');
+    }
+  }
+  </script>
 </body>
 </html>
