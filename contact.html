@@ -590,6 +590,11 @@ body:not(.spanish) [lang="es"]{display:none}
             <textarea id="message" name="message" class="form-textarea" required placeholder="Tell us about your project..."></textarea>
           </div>
           
+          <!-- Formspree redirect to thank-you page -->
+          <input type="hidden" name="_next" value="https://snrgweb.com/thank-you.html">
+          <input type="hidden" name="_subject" value="New Contact Form Submission - SNRG WEB">
+          <input type="hidden" name="_cc" value="">
+          
           <button type="submit" class="form-submit" lang="en">Send Message</button>
           <button type="submit" class="form-submit" lang="es">Enviar Mensaje</button>
         </form>
