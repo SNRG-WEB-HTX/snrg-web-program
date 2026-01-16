@@ -12,15 +12,97 @@
 
 <link rel="canonical" href="https://snrgweb.com/booking.html"/>
 
+<!-- Enhanced SEO / AEO -->
+<meta name="application-name" content="SNRG WEB"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta name="referrer" content="strict-origin-when-cross-origin"/>
+
+<!-- Hreflang -->
+<link rel="alternate" hreflang="en" href="https://snrgweb.com/booking.html"/>
+<link rel="alternate" hreflang="es" href="https://snrgweb.com/booking.html"/>
+<link rel="alternate" hreflang="x-default" href="https://snrgweb.com/booking.html"/>
+
 <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
 <link rel="dns-prefetch" href="https://api.fontshare.com">
+<link rel="preconnect" href="https://app.cal.com" crossorigin>
+<link rel="dns-prefetch" href="https://app.cal.com">
 
 <!-- Primary Meta Tags -->
-<title>Book a Call | SNRG WEB | Houston Website Design</title>
-<meta name="title" content="Book a Call | SNRG WEB | Houston Website Design"/>
-<meta name="description" content="Schedule a free 15-minute consultation with SNRG WEB. Discuss your website project and get started today."/>
-<meta name="robots" content="index,follow"/>
+<title>Book a Call | Free Consultation | SNRG WEB Houston</title>
+<meta name="title" content="Book a Call | Free Consultation | SNRG WEB Houston"/>
+<meta name="description" content="Schedule a free 15-minute consultation with SNRG WEB. Houston website design expert ready to discuss your project. Fast response, no pressure sales."/>
+<meta name="keywords" content="book consultation, schedule call, website consultation Houston, free consultation, SNRG WEB booking, web design consultation, Houston web designer meeting"/>
+<meta name="author" content="SNRG WEB"/>
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"/>
 <meta name="theme-color" content="#FF2A2A"/>
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://snrgweb.com/booking.html"/>
+<meta property="og:site_name" content="SNRG WEB"/>
+<meta property="og:title" content="Book a Free Website Consultation | SNRG WEB Houston"/>
+<meta property="og:description" content="Schedule your free 15-minute consultation. Let's discuss your website project and how we can help your Houston business grow."/>
+<meta property="og:image" content="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png"/>
+<meta property="og:image:width" content="1024"/>
+<meta property="og:image:height" content="1024"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:locale:alternate" content="es_US"/>
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:url" content="https://snrgweb.com/booking.html"/>
+<meta name="twitter:title" content="Book a Free Website Consultation | SNRG WEB"/>
+<meta name="twitter:description" content="Schedule your free 15-minute consultation with Houston's premier small business website designer."/>
+<meta name="twitter:image" content="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png"/>
+
+<!-- Geo Tags -->
+<meta name="geo.region" content="US-TX"/>
+<meta name="geo.placename" content="Houston"/>
+<meta name="geo.position" content="29.7604;-95.3698"/>
+<meta name="ICBM" content="29.7604, -95.3698"/>
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Schedule",
+  "name": "Book Website Design Consultation",
+  "url": "https://snrgweb.com/booking.html",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "SNRG WEB",
+    "url": "https://snrgweb.com",
+    "telephone": "+1-346-291-6010",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Houston",
+      "addressRegion": "TX",
+      "addressCountry": "US"
+    }
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "description": "Free 15-minute consultation to discuss your website project"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Book a Call | SNRG WEB",
+  "url": "https://snrgweb.com/booking.html",
+  "description": "Schedule a free consultation with SNRG WEB to discuss your website design project.",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "SNRG WEB"
+  },
+  "inLanguage": ["en", "es"]
+}
+</script>
 
 <style>
 @import url('https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700,800,900&display=swap');
@@ -191,6 +273,12 @@ body:not(.spanish) [lang="es"]{display:none}
   margin:0 auto 32px;
   display:block;
   filter:drop-shadow(0 8px 24px rgba(0,0,0,0.08));
+  cursor:pointer;
+  transition:transform 0.2s;
+}
+
+.booking-logo:hover{
+  transform:translateY(-2px);
 }
 
 .booking-title{
@@ -284,15 +372,17 @@ body:not(.spanish) [lang="es"]{display:none}
       <button class="lang-btn active" onclick="switchLang('en')" aria-label="Switch to English" aria-current="true">EN</button>
       <button class="lang-btn" onclick="switchLang('es')" aria-label="Cambiar a Español" aria-current="false">ES</button>
     </div>
-    <a href="https://snrgweb.com/" class="header-contact-btn" lang="en">Home</a>
-    <a href="https://snrgweb.com/" class="header-contact-btn" lang="es">Inicio</a>
+    <a href="index.html" class="header-contact-btn" lang="en">Home</a>
+    <a href="index.html" class="header-contact-btn" lang="es">Inicio</a>
   </div>
 
   <section class="booking-section">
     <div class="container">
       <div class="booking-wrapper fade-in">
         <div class="booking-header">
-          <img src="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png" class="booking-logo" alt="SNRG WEB Logo" loading="eager">
+          <a href="index.html" aria-label="Back to SNRG WEB Home">
+            <img src="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png" class="booking-logo" alt="SNRG WEB Logo" loading="eager">
+          </a>
           
           <h1 class="booking-title" lang="en">Schedule Your Free Consultation</h1>
           <h1 class="booking-title" lang="es">Agenda Tu Consulta Gratis</h1>
@@ -306,8 +396,8 @@ body:not(.spanish) [lang="es"]{display:none}
         </div>
         
         <div class="back-link">
-          <a href="https://snrgweb.com/" lang="en">← Back to Home</a>
-          <a href="https://snrgweb.com/" lang="es">← Volver al Inicio</a>
+          <a href="index.html" lang="en">← Back to Home</a>
+          <a href="index.html" lang="es">← Volver al Inicio</a>
         </div>
       </div>
     </div>
