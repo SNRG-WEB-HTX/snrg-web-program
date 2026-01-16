@@ -351,6 +351,7 @@ body:not(.spanish) [lang="es"]{display:none}
 
 .booking-logo{
   max-width:clamp(180px,35vw,260px);
+  height:auto;
   margin:0 auto 32px;
   display:block;
   filter:drop-shadow(0 8px 24px rgba(0,0,0,0.08));
@@ -468,7 +469,7 @@ body:not(.spanish) [lang="es"]{display:none}
       <div class="booking-wrapper fade-in">
         <div class="booking-header">
           <a href="index.html" aria-label="Back to SNRG WEB Home">
-            <img src="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png" class="booking-logo" alt="SNRG WEB Logo" loading="eager">
+            <img src="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png" class="booking-logo" alt="SNRG WEB Logo" loading="eager" fetchpriority="high" decoding="async" width="1024" height="1024">
           </a>
           
           <h1 class="booking-title" lang="en">Schedule Your Free Consultation</h1>
@@ -490,7 +491,7 @@ body:not(.spanish) [lang="es"]{display:none}
     </div>
   </section>
 
-  <!-- Cal.com Inline Embed Script -->
+  <!-- Cal.com Inline Embed Script - Optimized for Performance -->
   <script>
   (function (C, A, L) { 
     let p = function (a, ar) { 
@@ -503,7 +504,10 @@ body:not(.spanish) [lang="es"]{display:none}
       if (!cal.loaded) { 
         cal.ns = {}; 
         cal.q = cal.q || []; 
-        d.head.appendChild(d.createElement("script")).src = A; 
+        let s = d.createElement("script");
+        s.src = A;
+        s.async = true;
+        d.head.appendChild(s);
         cal.loaded = true; 
       } 
       if (ar[0] === L) { 
