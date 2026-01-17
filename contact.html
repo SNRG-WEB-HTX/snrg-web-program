@@ -47,7 +47,7 @@
 <meta name="twitter:description" content="Get a quote for your professional small business website today."/>
 <meta name="twitter:image" content="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png"/>
 
-<!-- NATIONAL SCHEMA: Multi-City Service Area -->
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
@@ -73,7 +73,7 @@
       "image": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
       "url": "https://snrgweb.com",
       "telephone": "+1-346-291-6010",
-      "email": "bobby@snrgweb.com",
+      "email": "contact@snrgweb.com",
       "priceRange": "$75-$3500",
       "address": {
         "@type": "PostalAddress",
@@ -272,104 +272,61 @@ body:not(.spanish) [lang="es"]{display:none}
 .contact-section{
   min-height:100vh;
   padding:clamp(100px,15vw,140px) 0 clamp(60px,10vw,96px);
-  background:var(--white);
   position:relative;
+  background:var(--white);
   overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 
-.contact-section::before{
-  content:'';
+.animated-bg{
   position:absolute;
   inset:0;
-  background:
-    radial-gradient(circle at 50% 10%, rgba(255,255,255,0.7) 0%, transparent 50%),
-    radial-gradient(circle at 10% 50%, rgba(249,250,251,0.5) 0%, transparent 50%),
-    radial-gradient(circle at 90% 80%, rgba(247,248,249,0.6) 0%, transparent 50%);
-  pointer-events:none;
-}
-
-.contact-section .animated-bg{
-  position:absolute;
-  inset:-20%;
-  pointer-events:none;
+  background:linear-gradient(135deg,#ffffff 0%,#f9fafb 25%,#ffffff 50%,#f7f8f9 75%,#ffffff 100%);
+  background-size:400% 400%;
+  animation:gradientShift 18s ease infinite;
   z-index:0;
 }
 
-.contact-section .animated-bg::before{
+.animated-bg::before{
   content:'';
   position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  width:130%;
-  height:130%;
-  background:radial-gradient(
-    circle at center,
-    rgba(247,248,250,0.12) 0%,
-    rgba(250,251,252,0.08) 35%,
-    transparent 70%
-  );
-  animation:infraGlowSlow 35s ease-in-out infinite;
+  inset:0;
+  background:radial-gradient(circle at 50% 10%,rgba(255,255,255,0.7) 0%,transparent 50%),radial-gradient(circle at 10% 50%,rgba(249,250,251,0.5) 0%,transparent 50%),radial-gradient(circle at 90% 80%,rgba(247,248,249,0.6) 0%,transparent 50%);
+  animation:floatOrbs 24s ease-in-out infinite;
+  pointer-events:none;
 }
 
-.contact-section .animated-bg::after{
-  content:'';
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  width:140%;
-  height:140%;
-  background:linear-gradient(
-    225deg,
-    transparent 0%,
-    rgba(248,249,251,0.06) 25%,
-    rgba(242,244,247,0.10) 40%,
-    rgba(255,255,255,0.08) 60%,
-    transparent 100%
-  );
-  animation:infraGlowSlow 40s ease-in-out infinite reverse;
+@keyframes gradientShift{
+  0%,100%{background-position:0% 50%}
+  50%{background-position:100% 50%}
 }
 
-@keyframes infraGlowSlow{
-  0%, 100%{
-    transform:translate(-50%,-50%) rotate(0deg);
-    opacity:0.6;
-  }
-  33%{
-    transform:translate(-42%,-55%) rotate(2deg);
-    opacity:0.8;
-  }
-  66%{
-    transform:translate(-56%,-46%) rotate(-2deg);
-    opacity:0.7;
-  }
+@keyframes floatOrbs{
+  0%,100%{transform:translate(0,0) scale(1)}
+  33%{transform:translate(20px,-30px) scale(1.05)}
+  66%{transform:translate(-25px,20px) scale(0.95)}
 }
 
 .contact-wrapper{
-  max-width:680px;
-  margin:0 auto;
   background:var(--white);
-  border-radius:clamp(20px,5vw,32px);
+  border-radius:clamp(24px,6vw,32px);
   padding:clamp(32px,8vw,56px);
   box-shadow:0 20px 60px rgba(0,0,0,0.08);
   border:2px solid var(--border);
+  max-width:640px;
+  width:100%;
   position:relative;
   z-index:1;
 }
 
 .contact-logo{
-  max-width:clamp(180px,35vw,260px);
+  max-width:clamp(120px,25vw,160px);
   height:auto;
-  margin:0 auto 32px;
+  margin:0 auto clamp(24px,6vw,32px);
   display:block;
   filter:drop-shadow(0 8px 24px rgba(0,0,0,0.08));
-  cursor:pointer;
-  transition:transform 0.2s;
-}
-
-.contact-logo:hover{
-  transform:translateY(-2px);
 }
 
 .contact-title{
@@ -377,7 +334,7 @@ body:not(.spanish) [lang="es"]{display:none}
   font-weight:900;
   color:var(--ink);
   text-align:center;
-  margin-bottom:clamp(12px,3vw,16px);
+  margin-bottom:clamp(8px,2vw,12px);
   letter-spacing:-0.03em;
   line-height:1.1;
 }
@@ -386,20 +343,20 @@ body:not(.spanish) [lang="es"]{display:none}
   font-size:clamp(15px,3.8vw,17px);
   color:var(--slate);
   text-align:center;
-  margin-bottom:clamp(32px,8vw,48px);
-  line-height:1.6;
+  margin-bottom:clamp(32px,8vw,40px);
+  line-height:1.5;
 }
 
 .contact-form{
   display:flex;
   flex-direction:column;
-  gap:clamp(18px,4.5vw,24px);
+  gap:clamp(20px,5vw,24px);
 }
 
 .form-group{
   display:flex;
   flex-direction:column;
-  gap:10px;
+  gap:clamp(6px,1.5vw,8px);
 }
 
 .form-label{
@@ -409,9 +366,7 @@ body:not(.spanish) [lang="es"]{display:none}
   letter-spacing:-0.01em;
 }
 
-.form-input,
-.form-textarea,
-.form-select{
+.form-input,.form-select,.form-textarea{
   width:100%;
   padding:clamp(14px,3.5vw,16px);
   border:2px solid var(--border);
@@ -419,28 +374,24 @@ body:not(.spanish) [lang="es"]{display:none}
   font-size:clamp(15px,3.8vw,16px);
   font-family:'Cabinet Grotesk',sans-serif;
   color:var(--ink);
-  background:var(--pearl);
+  background:var(--white);
   transition:all 0.2s;
-  appearance:none;
-  -webkit-appearance:none;
+  outline:none;
 }
 
-.form-input:focus,
-.form-textarea:focus,
-.form-select:focus{
-  outline:none;
+.form-input:focus,.form-select:focus,.form-textarea:focus{
   border-color:var(--red);
-  background:var(--white);
-  box-shadow:0 4px 16px rgba(255,42,42,0.1);
+  box-shadow:0 0 0 3px rgba(255,42,42,0.1);
 }
 
 .form-textarea{
-  min-height:140px;
+  min-height:clamp(120px,30vw,160px);
   resize:vertical;
 }
 
 .form-select{
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath fill='%230A0A0A' d='M0 0l6 8 6-8z'/%3E%3C/svg%3E");
+  appearance:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%234A5568' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
   background-repeat:no-repeat;
   background-position:right 16px center;
   padding-right:44px;
