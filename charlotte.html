@@ -4,7 +4,6 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
 
-<!-- Favicon / Site Icon -->
 <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png"/>
 <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png"/>
 <link rel="apple-touch-icon" href="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png"/>
@@ -12,18 +11,17 @@
 
 <link rel="canonical" href="https://snrgweb.com/charlotte"/>
 
-<!-- Enhanced SEO / AEO -->
 <meta name="application-name" content="SNRG WEB"/>
 <meta name="format-detection" content="telephone=no"/>
-<meta name="referrer" content="strict-origin-when-cross-origin"/>
+<meta name="referrer" content="no-referrer-when-downgrade"/>
+<meta http-equiv="X-Content-Type-Options" content="nosniff"/>
 
-<!-- Hreflang (single-URL language toggle) -->
 <link rel="alternate" hreflang="en" href="https://snrgweb.com/charlotte"/>
+<link rel="alternate" hreflang="es" href="https://snrgweb.com/charlotte"/>
 <link rel="alternate" hreflang="x-default" href="https://snrgweb.com/charlotte"/>
 
 <meta property="og:locale:alternate" content="es_US"/>
 
-<!--  ULTIMATE SEO: Consolidated @graph Schema (100/100) -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -38,7 +36,11 @@
         "url": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
         "width": 1024,
         "height": 1024
-      }
+      },
+      "founder": {"@id": "https://snrgweb.com/#owner"},
+      "sameAs": [
+        "https://www.linkedin.com/company/snrg-web"
+      ]
     },
     {
       "@type": "WebSite",
@@ -46,7 +48,81 @@
       "url": "https://snrgweb.com/charlotte",
       "name": "SNRG WEB Charlotte",
       "publisher": {"@id": "https://snrgweb.com/#org"},
-      "inLanguage": "en"
+      "inLanguage": ["en", "es"]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://snrgweb.com/charlotte#webpage",
+      "url": "https://snrgweb.com/charlotte",
+      "name": "Web Design Charlotte NC | SNRG WEB",
+      "about": {"@id": "https://snrgweb.com/charlotte#business"},
+      "description": "Professional web design and managed hosting services for small businesses in Charlotte.",
+      "isPartOf": {"@id": "https://snrgweb.com/charlotte#website"},
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://snrgweb.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Charlotte",
+            "item": "https://snrgweb.com/charlotte"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://snrgweb.com/#owner",
+      "name": "Bobby Frilot",
+      "jobTitle": "Founder & Lead Web Strategist",
+      "worksFor": {"@id": "https://snrgweb.com/#org"},
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Houston",
+        "addressRegion": "TX",
+        "addressCountry": "US"
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://snrgweb.com/charlotte#localbusiness",
+      "name": "SNRG WEB Charlotte",
+      "image": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
+      "url": "https://snrgweb.com/charlotte",
+      "telephone": "+1-346-291-6010",
+      "email": "bobby@snrgweb.com",
+      "priceRange": "$75-$3500",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Charlotte",
+        "addressRegion": "NC",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "35.2271",
+        "longitude": "-80.8431"
+      },
+      "hasMap": "https://www.google.com/maps/place/Charlotte,+NC",
+      "parentOrganization": {"@id": "https://snrgweb.com/#org"},
+      "employee": {"@id": "https://snrgweb.com/#owner"},
+      "areaServed": [
+        {"@type": "City", "name": "Charlotte", "@id": "https://en.wikipedia.org/wiki/Charlotte,_North_Carolina"},
+        {"@type": "Place", "name": "Uptown Charlotte"},
+        {"@type": "Place", "name": "South End"},
+        {"@type": "Place", "name": "NoDa"},
+        {"@type": "Place", "name": "Dilworth"},
+        {"@type": "Place", "name": "Plaza Midwood"},
+        {"@type": "Place", "name": "Myers Park"},
+        {"@type": "Place", "name": "Ballantyne"},
+        {"@type": "Place", "name": "University City"}
+      ]
     },
     {
       "@type": "ProfessionalService",
@@ -63,29 +139,51 @@
         "addressRegion": "NC",
         "addressCountry": "US"
       },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "35.2271",
+        "longitude": "-80.8431"
+      },
+      "parentOrganization": {"@id": "https://snrgweb.com/#org"},
+      "employee": {"@id": "https://snrgweb.com/#owner"},
+      "makesOffer": [
+        {"@id": "https://snrgweb.com/charlotte#service"},
+        {"@id": "https://snrgweb.com/charlotte#product-managed"},
+        {"@id": "https://snrgweb.com/charlotte#product-ownership"}
+      ],
+      "areaServed": [
+        {"@type": "City", "name": "Charlotte", "@id": "https://en.wikipedia.org/wiki/Charlotte,_North_Carolina"}
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://snrgweb.com/charlotte#service",
+      "serviceType": "Web Design and Management",
+      "provider": {"@id": "https://snrgweb.com/charlotte#localbusiness"},
       "areaServed": [
         {"@type": "City", "name": "Charlotte", "@id": "https://en.wikipedia.org/wiki/Charlotte,_North_Carolina"},
-        {"@type": "City", "name": "Houston", "@id": "https://en.wikipedia.org/wiki/Houston"},
-        {"@type": "City", "name": "New Orleans", "@id": "https://en.wikipedia.org/wiki/New_Orleans"},
-        {"@type": "City", "name": "Atlanta", "@id": "https://en.wikipedia.org/wiki/Atlanta"},
-        {"@type": "City", "name": "Louisville", "@id": "https://en.wikipedia.org/wiki/Louisville,_Kentucky"},
-        {"@type": "City", "name": "Austin", "@id": "https://en.wikipedia.org/wiki/Austin,_Texas"},
-        {"@type": "City", "name": "Dallas", "@id": "https://en.wikipedia.org/wiki/Dallas"},
-        {"@type": "City", "name": "Phoenix", "@id": "https://en.wikipedia.org/wiki/Phoenix,_Arizona"},
-        {"@type": "City", "name": "Miami", "@id": "https://en.wikipedia.org/wiki/Miami"},
-        {"@type": "City", "name": "Denver", "@id": "https://en.wikipedia.org/wiki/Denver"},
-        {"@type": "City", "name": "Nashville", "@id": "https://en.wikipedia.org/wiki/Nashville,_Tennessee"},
-        {"@type": "City", "name": "Raleigh", "@id": "https://en.wikipedia.org/wiki/Raleigh,_North_Carolina"},
-        {"@type": "City", "name": "Indianapolis", "@id": "https://en.wikipedia.org/wiki/Indianapolis"}
+        {"@type": "Place", "name": "Uptown Charlotte"},
+        {"@type": "Place", "name": "South End"},
+        {"@type": "Place", "name": "NoDa"},
+        {"@type": "Place", "name": "Dilworth"},
+        {"@type": "Place", "name": "Plaza Midwood"},
+        {"@type": "Place", "name": "Myers Park"},
+        {"@type": "Place", "name": "Ballantyne"},
+        {"@type": "Place", "name": "University City"}
+      ],
+      "offers": [
+        {"@id": "https://snrgweb.com/charlotte#product-managed"},
+        {"@id": "https://snrgweb.com/charlotte#product-ownership"}
       ]
     },
     {
       "@type": "Product",
-      "@id": "https://snrgweb.com/#product-managed",
+      "@id": "https://snrgweb.com/charlotte#product-managed",
       "name": "Fully Managed Website Service",
       "image": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
       "description": "Professional custom website design with ongoing support, hosting, and unlimited updates. Launch in 2-3 days.",
       "brand": { "@type": "Brand", "name": "SNRG WEB" },
+      "manufacturer": {"@id": "https://snrgweb.com/#org"},
       "offers": {
         "@type": "Offer",
         "url": "https://snrgweb.com/charlotte",
@@ -93,16 +191,18 @@
         "price": "75.00",
         "availability": "https://schema.org/InStock",
         "itemCondition": "https://schema.org/NewCondition",
-        "priceValidUntil": "2026-12-31"
+        "priceValidUntil": "2026-12-31",
+        "seller": {"@id": "https://snrgweb.com/charlotte#business"}
       }
     },
     {
       "@type": "Product",
-      "@id": "https://snrgweb.com/#product-ownership",
+      "@id": "https://snrgweb.com/charlotte#product-ownership",
       "name": "Website Ownership - One-Time Purchase",
       "image": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
       "description": "One-time purchase with full ownership of custom designed website. All source files included. Launch in 2-3 days.",
       "brand": { "@type": "Brand", "name": "SNRG WEB" },
+      "manufacturer": {"@id": "https://snrgweb.com/#org"},
       "offers": {
         "@type": "Offer",
         "url": "https://snrgweb.com/charlotte",
@@ -110,41 +210,46 @@
         "price": "285.00",
         "availability": "https://schema.org/InStock",
         "itemCondition": "https://schema.org/NewCondition",
-        "priceValidUntil": "2026-12-31"
+        "priceValidUntil": "2026-12-31",
+        "seller": {"@id": "https://snrgweb.com/charlotte#business"}
       }
     }
   ]
 }
 </script>
 
+<link rel="preload" href="https://api.fontshare.com/v2/css?f[]=satoshi@700,900,400&display=swap" as="style">
 <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
 <link rel="dns-prefetch" href="https://api.fontshare.com">
 
-<!-- Primary Meta Tags -->
 <title>Web Design Charlotte NC | $75/mo Managed Websites | SNRG WEB</title>
 <meta name="title" content="Web Design Charlotte NC | $75/mo Managed Websites | SNRG WEB"/>
-<meta name="description" content="Pro-grade web design for Charlotte small businesses. Serving Uptown, South End, NoDa, and Plaza Midwood. Launch in 2-3 days. $285 flat or $75/mo."/>
-<meta name="keywords" content="web design Charlotte, Charlotte website design, small business websites Charlotte NC, web developer Charlotte, custom website Charlotte, Uptown web design, South End website design, NoDa business websites, Charlotte web services, responsive web design North Carolina"/>
-<meta name="author" content="SNRG WEB"/>
+<meta name="description" content="Pro-grade web design for Charlotte small businesses. Serving Uptown, South End, NoDa, Dilworth & Ballantyne. Launch in 2-3 days. $285 flat or $75/mo."/>
+<meta name="keywords" content="web design Charlotte, Charlotte website design, small business websites Charlotte NC, web developer Charlotte, custom website Charlotte, South End web design, NoDa website design, Uptown business websites, Charlotte web services, North Carolina web design"/>
+<meta name="author" content="Bobby Frilot - SNRG WEB"/>
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"/>
 <meta name="theme-color" content="#FF2A2A"/>
-<!-- Open Graph / Facebook -->
+
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://snrgweb.com/charlotte"/>
 <meta property="og:site_name" content="SNRG WEB"/>
 <meta property="og:title" content="Web Design Charlotte NC | $75/mo Managed Websites"/>
-<meta property="og:description" content="Charlotte web design for small businesses. Serving Uptown, South End, and NoDa. Fast launch in 2-3 days, hosting & maintenance included."/>
+<meta property="og:description" content="Charlotte web design for small businesses. Serving Uptown, South End, NoDa & all CLT neighborhoods. Fast launch in 2-3 days, hosting included."/>
 <meta property="og:image" content="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png"/>
 <meta property="og:image:width" content="1024"/>
 <meta property="og:image:height" content="1024"/>
 <meta property="og:locale" content="en_US"/>
 
-<!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:url" content="https://snrgweb.com/charlotte"/>
 <meta name="twitter:title" content="Web Design Charlotte NC | $75/mo Managed Websites"/>
-<meta name="twitter:description" content="Charlotte web design for small businesses. Serving Uptown, South End, and NoDa. Fast launch, professional quality."/>
+<meta name="twitter:description" content="Charlotte web design for small businesses. Serving Uptown, South End, NoDa. Fast launch, pro quality."/>
 <meta name="twitter:image" content="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png"/>
+
+<meta name="geo.region" content="US-NC"/>
+<meta name="geo.placename" content="Charlotte"/>
+<meta name="geo.position" content="35.2271;-80.8431"/>
+<meta name="ICBM" content="35.2271, -80.8431"/>
 
 <link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,900,500,400,800,600&display=swap" rel="stylesheet">
 
@@ -1990,7 +2095,7 @@ body.spanish [lang="en"]{display:none}
 
   <footer class="footer fade-in">
     <div class="container">
-      <p class="footer-copyright">© 2026 SNRG WEB — HTX</p>
+      <p class="footer-copyright">© 2026 SNRG WEB — QC</p>
     </div>
   </footer>
 
