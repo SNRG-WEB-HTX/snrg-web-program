@@ -604,29 +604,12 @@ body.spanish [lang="en"]{display:none}
   margin:0 auto;
   filter:drop-shadow(0 16px 48px rgba(0,0,0,0.2));
   opacity:0;
-  transform:scale(0.3) translateY(-100px) translateZ(-500px);
-  animation:logoTunnelEntrance 1.6s cubic-bezier(0.16,1,0.3,1) forwards;
+  animation:snrgLogoTunnel 1100ms cubic-bezier(0.16,1,0.3,1) both;
   background:transparent !important;
   isolation:isolate;
+  will-change:transform, opacity, filter;
 }
 
-@keyframes logoTunnelEntrance{
-  0%{
-    opacity:0;
-    transform:scale(0.3) translateY(-100px) translateZ(-500px);
-    filter:drop-shadow(0 0 0 rgba(0,0,0,0)) blur(12px) brightness(0.5);
-  }
-  50%{
-    opacity:0.7;
-    transform:scale(0.85) translateY(-20px) translateZ(-100px);
-    filter:drop-shadow(0 8px 24px rgba(0,0,0,0.15)) blur(2px) brightness(0.85);
-  }
-  100%{
-    opacity:1;
-    transform:scale(1) translateY(0) translateZ(0);
-    filter:drop-shadow(0 16px 48px rgba(0,0,0,0.2)) blur(0) brightness(1);
-  }
-}
 
 .logo-mask{
   position: relative;
@@ -1621,47 +1604,6 @@ body.spanish [lang="en"]{display:none}
 }
 
 
-/* removed /* === Premium Hero Logo Entrance */ (All Devices) === */
-/* Subtle cinematic: fade + micro-zoom + lift, with ease-out. Keeps final scale at 1. */
-/* removed @keyframes /* removed snrgLogoReveal */ */ {
-  0% {
-    opacity: 0;
-    transform: translateY(24px) scale(0.94);
-    filter: blur(6px) saturate(0.9);
-  }
-  60% {
-    opacity: 1;
-    transform: translateY(-4px) scale(1.02);
-    filter: blur(1.5px) saturate(1);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-    filter: blur(0) saturate(1);
-  }
-}
-
-/* Apply animation to the hero logo (does not affect sizing rules) */
-.hero-logo {
-  animation: /* removed snrgLogoReveal */ 900ms cubic-bezier(0.16, 1, 0.3, 1) both;
-  will-change: transform, opacity, filter;
-}
-
-/* Respect reduced motion */
-@media (prefers-reduced-motion: reduce){
-  .hero-logo {
-    animation: none !important;
-    opacity: 1 !important;
-    transform: none !important;
-    filter: none !important;
-  }
-}
-
-
-/* Neutralize any legacy transform end-states so the animation lands cleanly */
-.hero-logo { transform-origin: center center; }
-
-
 /* === SIGNATURE HERO LOGO ENTRANCE (All Devices) === */
 /* Dramatic but premium: depth-tunnel in + light sweep + settle */
 @keyframes snrgLogoTunnel {
@@ -1707,10 +1649,6 @@ body.spanish [lang="en"]{display:none}
 }
 
 /* Apply the tunnel animation */
-.hero-logo{
-  animation: snrgLogoTunnel 1100ms cubic-bezier(0.16, 1, 0.3, 1) both;
-  will-change: transform, opacity, filter;
-}
 
 /* Respect reduced motion */
 @media (prefers-reduced-motion: reduce){
