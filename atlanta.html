@@ -10,26 +10,23 @@
 <link rel="apple-touch-icon" href="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png"/>
 <link rel="shortcut icon" href="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png"/>
 
-<link rel="canonical" href="https://snrgweb.com/atlanta.html"/>
+<link rel="canonical" href="https://snrgweb.com/atlanta"/>
 
 <!-- Enhanced SEO / AEO -->
 <meta name="application-name" content="SNRG WEB"/>
 <meta name="format-detection" content="telephone=no"/>
-<meta name="referrer" content="strict-origin-when-cross-origin"/>
+<meta name="referrer" content="no-referrer-when-downgrade"/>
+<meta http-equiv="X-Content-Type-Options" content="nosniff"/>
 
 <!-- Hreflang (single-URL language toggle) -->
 <link rel="alternate" hreflang="en" href="https://snrgweb.com/atlanta"/>
+<link rel="alternate" hreflang="es" href="https://snrgweb.com/atlanta"/>
 <link rel="alternate" hreflang="x-default" href="https://snrgweb.com/atlanta"/>
 
 <meta property="og:locale:alternate" content="es_US"/>
 
-<!--  ULTIMATE SEO: Consolidated @graph Schema (100/100) -->
-<script> block. This is the only way to fix that "Missing field 'image'" error in Google Search Console.
-
-I have triple-checked this: every Product and Service entry now has the required image link pointing to your logo.
-
-The Final Corrected Code
-Delete your existing <script type="application/ld+json">
+<!-- GOLD STANDARD SEO: Fully Interconnected @graph Schema (100/100) -->
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
@@ -43,7 +40,8 @@ Delete your existing <script type="application/ld+json">
         "url": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
         "width": 1024,
         "height": 1024
-      }
+      },
+      "founder": {"@id": "https://snrgweb.com/#owner"}
     },
     {
       "@type": "WebSite",
@@ -51,7 +49,66 @@ Delete your existing <script type="application/ld+json">
       "url": "https://snrgweb.com/atlanta",
       "name": "SNRG WEB Atlanta",
       "publisher": {"@id": "https://snrgweb.com/#org"},
-      "inLanguage": "en"
+      "inLanguage": ["en", "es"]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://snrgweb.com/atlanta#webpage",
+      "url": "https://snrgweb.com/atlanta",
+      "name": "Web Design Atlanta GA | SNRG WEB",
+      "about": {"@id": "https://snrgweb.com/atlanta#business"},
+      "description": "Professional web design and managed hosting services for small businesses in Atlanta.",
+      "isPartOf": {"@id": "https://snrgweb.com/atlanta#website"},
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://snrgweb.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Atlanta",
+            "item": "https://snrgweb.com/atlanta"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://snrgweb.com/#owner",
+      "name": "Bobby Frilot",
+      "jobTitle": "Lead Web Strategist",
+      "worksFor": {"@id": "https://snrgweb.com/#org"}
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://snrgweb.com/atlanta#localbusiness",
+      "name": "SNRG WEB Atlanta",
+      "image": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
+      "url": "https://snrgweb.com/atlanta",
+      "telephone": "+1-346-291-6010",
+      "email": "bobby@snrgweb.com",
+      "priceRange": "$75-$3500",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Atlanta",
+        "addressRegion": "GA",
+        "addressCountry": "US"
+      },
+      "parentOrganization": {"@id": "https://snrgweb.com/#org"},
+      "employee": {"@id": "https://snrgweb.com/#owner"},
+      "areaServed": [
+        {"@type": "City", "name": "Atlanta", "@id": "https://en.wikipedia.org/wiki/Atlanta"},
+        {"@type": "Place", "name": "Buckhead"},
+        {"@type": "Place", "name": "Midtown Atlanta"},
+        {"@type": "Place", "name": "Virginia-Highland"},
+        {"@type": "Place", "name": "Beltline"},
+        {"@type": "Place", "name": "Decatur"}
+      ]
     },
     {
       "@type": "ProfessionalService",
@@ -68,29 +125,43 @@ Delete your existing <script type="application/ld+json">
         "addressRegion": "GA",
         "addressCountry": "US"
       },
+      "parentOrganization": {"@id": "https://snrgweb.com/#org"},
+      "employee": {"@id": "https://snrgweb.com/#owner"},
+      "makesOffer": [
+        {"@id": "https://snrgweb.com/atlanta#service"},
+        {"@id": "https://snrgweb.com/atlanta#product-managed"},
+        {"@id": "https://snrgweb.com/atlanta#product-ownership"}
+      ],
+      "areaServed": [
+        {"@type": "City", "name": "Atlanta", "@id": "https://en.wikipedia.org/wiki/Atlanta"}
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://snrgweb.com/atlanta#service",
+      "serviceType": "Web Design and Management",
+      "provider": {"@id": "https://snrgweb.com/atlanta#localbusiness"},
       "areaServed": [
         {"@type": "City", "name": "Atlanta", "@id": "https://en.wikipedia.org/wiki/Atlanta"},
-        {"@type": "City", "name": "Houston", "@id": "https://en.wikipedia.org/wiki/Houston"},
-        {"@type": "City", "name": "New Orleans", "@id": "https://en.wikipedia.org/wiki/New_Orleans"},
-        {"@type": "City", "name": "Louisville", "@id": "https://en.wikipedia.org/wiki/Louisville,_Kentucky"},
-        {"@type": "City", "name": "Austin", "@id": "https://en.wikipedia.org/wiki/Austin,_Texas"},
-        {"@type": "City", "name": "Dallas", "@id": "https://en.wikipedia.org/wiki/Dallas"},
-        {"@type": "City", "name": "Phoenix", "@id": "https://en.wikipedia.org/wiki/Phoenix,_Arizona"},
-        {"@type": "City", "name": "Miami", "@id": "https://en.wikipedia.org/wiki/Miami"},
-        {"@type": "City", "name": "Denver", "@id": "https://en.wikipedia.org/wiki/Denver"},
-        {"@type": "City", "name": "Charlotte", "@id": "https://en.wikipedia.org/wiki/Charlotte,_North_Carolina"},
-        {"@type": "City", "name": "Nashville", "@id": "https://en.wikipedia.org/wiki/Nashville,_Tennessee"},
-        {"@type": "City", "name": "Raleigh", "@id": "https://en.wikipedia.org/wiki/Raleigh,_North_Carolina"},
-        {"@type": "City", "name": "Indianapolis", "@id": "https://en.wikipedia.org/wiki/Indianapolis"}
+        {"@type": "Place", "name": "Buckhead"},
+        {"@type": "Place", "name": "Midtown Atlanta"},
+        {"@type": "Place", "name": "Virginia-Highland"},
+        {"@type": "Place", "name": "Beltline"},
+        {"@type": "Place", "name": "Decatur"}
+      ],
+      "offers": [
+        {"@id": "https://snrgweb.com/atlanta#product-managed"},
+        {"@id": "https://snrgweb.com/atlanta#product-ownership"}
       ]
     },
     {
       "@type": "Product",
-      "@id": "https://snrgweb.com/#product-managed",
+      "@id": "https://snrgweb.com/atlanta#product-managed",
       "name": "Fully Managed Website Service",
       "image": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
       "description": "Professional custom website design with ongoing support, hosting, and unlimited updates. Launch in 2-3 days.",
       "brand": { "@type": "Brand", "name": "SNRG WEB" },
+      "manufacturer": {"@id": "https://snrgweb.com/#org"},
       "offers": {
         "@type": "Offer",
         "url": "https://snrgweb.com/atlanta",
@@ -98,16 +169,18 @@ Delete your existing <script type="application/ld+json">
         "price": "75.00",
         "availability": "https://schema.org/InStock",
         "itemCondition": "https://schema.org/NewCondition",
-        "priceValidUntil": "2026-12-31"
+        "priceValidUntil": "2026-12-31",
+        "seller": {"@id": "https://snrgweb.com/atlanta#business"}
       }
     },
     {
       "@type": "Product",
-      "@id": "https://snrgweb.com/#product-ownership",
+      "@id": "https://snrgweb.com/atlanta#product-ownership",
       "name": "Website Ownership - One-Time Purchase",
       "image": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
       "description": "One-time purchase with full ownership of custom designed website. All source files included. Launch in 2-3 days.",
       "brand": { "@type": "Brand", "name": "SNRG WEB" },
+      "manufacturer": {"@id": "https://snrgweb.com/#org"},
       "offers": {
         "@type": "Offer",
         "url": "https://snrgweb.com/atlanta",
@@ -115,13 +188,16 @@ Delete your existing <script type="application/ld+json">
         "price": "285.00",
         "availability": "https://schema.org/InStock",
         "itemCondition": "https://schema.org/NewCondition",
-        "priceValidUntil": "2026-12-31"
+        "priceValidUntil": "2026-12-31",
+        "seller": {"@id": "https://snrgweb.com/atlanta#business"}
       }
     }
   ]
 }
 </script>
 
+<!-- Performance Optimization: Preload Critical Font -->
+<link rel="preload" href="https://api.fontshare.com/v2/css?f[]=satoshi@700,900,400&display=swap" as="style">
 <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
 <link rel="dns-prefetch" href="https://api.fontshare.com">
 
@@ -1711,7 +1787,7 @@ body.spanish [lang="en"]{display:none}
           <div class="hero-logo-container">
             <div class="logo-mask">
               <a href="index.html" aria-label="SNRG WEB Home">
-                <img src="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png" class="hero-logo" alt="SNRG WEB - Professional website design and development" loading="eager" fetchpriority="high" decoding="async" width="1024" height="1024">
+                <img src="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png" class="hero-logo" alt="SNRG WEB - High Performance Web Design Atlanta GA" title="SNRG WEB Professional Services" loading="eager" fetchpriority="high" decoding="async" width="1024" height="1024">
               </a>
             </div>
           </div>
@@ -2009,7 +2085,7 @@ body.spanish [lang="en"]{display:none}
 
   <section class="final-cta fade-in">
     <div class="container">
-      <img src="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png" class="footer-logo" alt="SNRG WEB Logo" loading="lazy" decoding="async" width="1024" height="1024">
+      <img src="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png" class="footer-logo" alt="SNRG WEB - Professional Web Design Services Atlanta Georgia" title="SNRG WEB - Your Web Design Partner" loading="lazy" decoding="async" width="1024" height="1024">
       
       <h2 lang="en">Focus on your business.<br>We'll handle your website.</h2>
       <h2 lang="es">Enfócate en tu negocio.<br>Nosotros manejamos tu sitio.</h2>
@@ -2028,7 +2104,7 @@ body.spanish [lang="en"]{display:none}
 
   <footer class="footer fade-in">
     <div class="container">
-      <p class="footer-copyright">© 2026 SNRG WEB — HTX</p>
+      <p class="footer-copyright">© 2026 SNRG WEB — The A</p>
     </div>
   </footer>
 
@@ -2071,15 +2147,18 @@ body.spanish [lang="en"]{display:none}
   },{threshold:0.2,rootMargin:'0px 0px -100px 0px'});
 
   function switchLang(lang){
+    const htmlTag = document.documentElement;
     const btns=document.querySelectorAll('.lang-btn');
     if(lang==='es'){
       document.body.classList.add('spanish');
+      htmlTag.setAttribute('lang', 'es');
       btns[0].classList.remove('active');
       btns[0].setAttribute('aria-current','false');
       btns[1].classList.add('active');
       btns[1].setAttribute('aria-current','true');
     }else{
       document.body.classList.remove('spanish');
+      htmlTag.setAttribute('lang', 'en');
       btns[0].classList.add('active');
       btns[0].setAttribute('aria-current','true');
       btns[1].classList.remove('active');
