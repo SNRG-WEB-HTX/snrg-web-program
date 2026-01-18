@@ -4,46 +4,43 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
 
-<!-- Favicon / Site Icon -->
 <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png"/>
 <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png"/>
 <link rel="apple-touch-icon" href="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png"/>
 <link rel="shortcut icon" href="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png"/>
 
-<link rel="canonical" href="https://snrgweb.com/austin.html"/>
+<link rel="canonical" href="https://snrgweb.com/austin"/>
 
-<!-- Enhanced SEO / AEO -->
 <meta name="application-name" content="SNRG WEB"/>
 <meta name="format-detection" content="telephone=no"/>
-<meta name="referrer" content="strict-origin-when-cross-origin"/>
+<meta name="referrer" content="no-referrer-when-downgrade"/>
+<meta http-equiv="X-Content-Type-Options" content="nosniff"/>
 
-<!-- Hreflang (single-URL language toggle) -->
 <link rel="alternate" hreflang="en" href="https://snrgweb.com/austin"/>
+<link rel="alternate" hreflang="es" href="https://snrgweb.com/austin"/>
 <link rel="alternate" hreflang="x-default" href="https://snrgweb.com/austin"/>
 
 <meta property="og:locale:alternate" content="es_US"/>
 
-<!--  ULTIMATE SEO: Consolidated @graph Schema (100/100) -->
-<script> block. This is the only way to fix that "Missing field 'image'" error in Google Search Console.
-
-I have triple-checked this: every Product and Service entry now has the required image link pointing to your logo.
-
-The Final Corrected Code
-Delete your existing <script type="application/ld+json">
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "Organization",
       "@id": "https://snrgweb.com/#org",
-      "name": "SNRG WEB - Austin",
+      "name": "SNRG WEB",
       "url": "https://snrgweb.com/",
       "logo": {
         "@type": "ImageObject",
         "url": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
         "width": 1024,
         "height": 1024
-      }
+      },
+      "founder": {"@id": "https://snrgweb.com/#owner"},
+      "sameAs": [
+        "https://www.linkedin.com/company/snrg-web"
+      ]
     },
     {
       "@type": "WebSite",
@@ -51,7 +48,81 @@ Delete your existing <script type="application/ld+json">
       "url": "https://snrgweb.com/austin",
       "name": "SNRG WEB Austin",
       "publisher": {"@id": "https://snrgweb.com/#org"},
-      "inLanguage": "en"
+      "inLanguage": ["en", "es"]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://snrgweb.com/austin#webpage",
+      "url": "https://snrgweb.com/austin",
+      "name": "Web Design Austin TX | SNRG WEB",
+      "about": {"@id": "https://snrgweb.com/austin#business"},
+      "description": "Professional web design and managed hosting services for small businesses in Austin.",
+      "isPartOf": {"@id": "https://snrgweb.com/austin#website"},
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://snrgweb.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Austin",
+            "item": "https://snrgweb.com/austin"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://snrgweb.com/#owner",
+      "name": "Bobby Frilot",
+      "jobTitle": "Founder & Lead Web Strategist",
+      "worksFor": {"@id": "https://snrgweb.com/#org"},
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Houston",
+        "addressRegion": "TX",
+        "addressCountry": "US"
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://snrgweb.com/austin#localbusiness",
+      "name": "SNRG WEB Austin",
+      "image": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
+      "url": "https://snrgweb.com/austin",
+      "telephone": "+1-346-291-6010",
+      "email": "bobby@snrgweb.com",
+      "priceRange": "$75-$3500",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Austin",
+        "addressRegion": "TX",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "30.2672",
+        "longitude": "-97.7431"
+      },
+      "hasMap": "https://www.google.com/maps/place/Austin,+TX",
+      "parentOrganization": {"@id": "https://snrgweb.com/#org"},
+      "employee": {"@id": "https://snrgweb.com/#owner"},
+      "areaServed": [
+        {"@type": "City", "name": "Austin", "@id": "https://en.wikipedia.org/wiki/Austin,_Texas"},
+        {"@type": "Place", "name": "Downtown Austin"},
+        {"@type": "Place", "name": "South Congress"},
+        {"@type": "Place", "name": "East Austin"},
+        {"@type": "Place", "name": "West Lake Hills"},
+        {"@type": "Place", "name": "Hyde Park"},
+        {"@type": "Place", "name": "Zilker"},
+        {"@type": "Place", "name": "The Domain"},
+        {"@type": "Place", "name": "Barton Hills"}
+      ]
     },
     {
       "@type": "ProfessionalService",
@@ -68,28 +139,51 @@ Delete your existing <script type="application/ld+json">
         "addressRegion": "TX",
         "addressCountry": "US"
       },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "30.2672",
+        "longitude": "-97.7431"
+      },
+      "parentOrganization": {"@id": "https://snrgweb.com/#org"},
+      "employee": {"@id": "https://snrgweb.com/#owner"},
+      "makesOffer": [
+        {"@id": "https://snrgweb.com/austin#service"},
+        {"@id": "https://snrgweb.com/austin#product-managed"},
+        {"@id": "https://snrgweb.com/austin#product-ownership"}
+      ],
       "areaServed": [
-        {"@type": "City", "name": "Houston", "@id": "https://en.wikipedia.org/wiki/Houston"},
-        {"@type": "City", "name": "New Orleans", "@id": "https://en.wikipedia.org/wiki/New_Orleans"},
-        {"@type": "City", "name": "Atlanta", "@id": "https://en.wikipedia.org/wiki/Atlanta"},
-        {"@type": "City", "name": "Louisville", "@id": "https://en.wikipedia.org/wiki/Louisville,_Kentucky"},
-        {"@type": "City", "name": "Dallas", "@id": "https://en.wikipedia.org/wiki/Dallas"},
-        {"@type": "City", "name": "Phoenix", "@id": "https://en.wikipedia.org/wiki/Phoenix,_Arizona"},
-        {"@type": "City", "name": "Miami", "@id": "https://en.wikipedia.org/wiki/Miami"},
-        {"@type": "City", "name": "Denver", "@id": "https://en.wikipedia.org/wiki/Denver"},
-        {"@type": "City", "name": "Charlotte", "@id": "https://en.wikipedia.org/wiki/Charlotte,_North_Carolina"},
-        {"@type": "City", "name": "Nashville", "@id": "https://en.wikipedia.org/wiki/Nashville,_Tennessee"},
-        {"@type": "City", "name": "Raleigh", "@id": "https://en.wikipedia.org/wiki/Raleigh,_North_Carolina"},
-        {"@type": "City", "name": "Indianapolis", "@id": "https://en.wikipedia.org/wiki/Indianapolis"}
+        {"@type": "City", "name": "Austin", "@id": "https://en.wikipedia.org/wiki/Austin,_Texas"}
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://snrgweb.com/austin#service",
+      "serviceType": "Web Design and Management",
+      "provider": {"@id": "https://snrgweb.com/austin#localbusiness"},
+      "areaServed": [
+        {"@type": "City", "name": "Austin", "@id": "https://en.wikipedia.org/wiki/Austin,_Texas"},
+        {"@type": "Place", "name": "Downtown Austin"},
+        {"@type": "Place", "name": "South Congress"},
+        {"@type": "Place", "name": "East Austin"},
+        {"@type": "Place", "name": "West Lake Hills"},
+        {"@type": "Place", "name": "Hyde Park"},
+        {"@type": "Place", "name": "Zilker"},
+        {"@type": "Place", "name": "The Domain"},
+        {"@type": "Place", "name": "Barton Hills"}
+      ],
+      "offers": [
+        {"@id": "https://snrgweb.com/austin#product-managed"},
+        {"@id": "https://snrgweb.com/austin#product-ownership"}
       ]
     },
     {
       "@type": "Product",
-      "@id": "https://snrgweb.com/#product-managed",
+      "@id": "https://snrgweb.com/austin#product-managed",
       "name": "Fully Managed Website Service",
       "image": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
       "description": "Professional custom website design with ongoing support, hosting, and unlimited updates. Launch in 2-3 days.",
       "brand": { "@type": "Brand", "name": "SNRG WEB" },
+      "manufacturer": {"@id": "https://snrgweb.com/#org"},
       "offers": {
         "@type": "Offer",
         "url": "https://snrgweb.com/austin",
@@ -97,16 +191,18 @@ Delete your existing <script type="application/ld+json">
         "price": "75.00",
         "availability": "https://schema.org/InStock",
         "itemCondition": "https://schema.org/NewCondition",
-        "priceValidUntil": "2026-12-31"
+        "priceValidUntil": "2026-12-31",
+        "seller": {"@id": "https://snrgweb.com/austin#business"}
       }
     },
     {
       "@type": "Product",
-      "@id": "https://snrgweb.com/#product-ownership",
+      "@id": "https://snrgweb.com/austin#product-ownership",
       "name": "Website Ownership - One-Time Purchase",
       "image": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
       "description": "One-time purchase with full ownership of custom designed website. All source files included. Launch in 2-3 days.",
       "brand": { "@type": "Brand", "name": "SNRG WEB" },
+      "manufacturer": {"@id": "https://snrgweb.com/#org"},
       "offers": {
         "@type": "Offer",
         "url": "https://snrgweb.com/austin",
@@ -114,41 +210,46 @@ Delete your existing <script type="application/ld+json">
         "price": "285.00",
         "availability": "https://schema.org/InStock",
         "itemCondition": "https://schema.org/NewCondition",
-        "priceValidUntil": "2026-12-31"
+        "priceValidUntil": "2026-12-31",
+        "seller": {"@id": "https://snrgweb.com/austin#business"}
       }
     }
   ]
 }
 </script>
 
+<link rel="preload" href="https://api.fontshare.com/v2/css?f[]=satoshi@700,900,400&display=swap" as="style">
 <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
 <link rel="dns-prefetch" href="https://api.fontshare.com">
 
-<!-- Primary Meta Tags -->
 <title>Web Design Austin TX | $75/mo Managed Websites | SNRG WEB</title>
 <meta name="title" content="Web Design Austin TX | $75/mo Managed Websites | SNRG WEB"/>
-<meta name="description" content="Pro-grade web design for Austin startups and small businesses. Serving Downtown, East Austin, South Congress, and the Domain. Launch in 2-3 days. $285 flat or $75/mo."/>
+<meta name="description" content="Pro-grade web design for Austin startups and small businesses. Serving Downtown, South Congress, East Austin, Domain & Zilker. Launch in 2-3 days. $285 flat or $75/mo."/>
 <meta name="keywords" content="web design Austin, Austin website design, small business websites Austin TX, web developer Austin, custom website Austin, East Austin web design, South Congress website design, Domain business websites, Austin web services, startup websites Texas"/>
-<meta name="author" content="SNRG WEB"/>
+<meta name="author" content="Bobby Frilot - SNRG WEB"/>
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"/>
 <meta name="theme-color" content="#FF2A2A"/>
-<!-- Open Graph / Facebook -->
+
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://snrgweb.com/austin"/>
 <meta property="og:site_name" content="SNRG WEB"/>
 <meta property="og:title" content="Web Design Austin TX | $75/mo Managed Websites"/>
-<meta property="og:description" content="Austin web design for startups and small businesses. Serving Downtown, East Austin, and South Congress. Fast launch in 2-3 days."/>
+<meta property="og:description" content="Austin web design for startups and small businesses. Serving Downtown, East Austin, South Congress & all ATX neighborhoods. Fast launch in 2-3 days, hosting included."/>
 <meta property="og:image" content="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png"/>
 <meta property="og:image:width" content="1024"/>
 <meta property="og:image:height" content="1024"/>
 <meta property="og:locale" content="en_US"/>
 
-<!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:url" content="https://snrgweb.com/austin"/>
 <meta name="twitter:title" content="Web Design Austin TX | $75/mo Managed Websites"/>
-<meta name="twitter:description" content="Austin web design for startups and small businesses. Serving Downtown, East Austin, and SoCo. Fast launch, pro quality."/>
+<meta name="twitter:description" content="Austin web design for startups and small businesses. Serving Downtown, SoCo, East Austin. Fast launch, pro quality."/>
 <meta name="twitter:image" content="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png"/>
+
+<meta name="geo.region" content="US-TX"/>
+<meta name="geo.placename" content="Austin"/>
+<meta name="geo.position" content="30.2672;-97.7431"/>
+<meta name="ICBM" content="30.2672, -97.7431"/>
 
 <link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,900,500,400,800,600&display=swap" rel="stylesheet">
 
@@ -2027,7 +2128,7 @@ body.spanish [lang="en"]{display:none}
 
   <footer class="footer fade-in">
     <div class="container">
-      <p class="footer-copyright">© 2026 SNRG WEB — HTX</p>
+      <p class="footer-copyright">© 2026 SNRG WEB — ATX</p>
     </div>
   </footer>
 
