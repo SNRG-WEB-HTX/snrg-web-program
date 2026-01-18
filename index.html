@@ -15,15 +15,17 @@
 <!-- Enhanced SEO / AEO -->
 <meta name="application-name" content="SNRG WEB"/>
 <meta name="format-detection" content="telephone=no"/>
-<meta name="referrer" content="strict-origin-when-cross-origin"/>
+<meta name="referrer" content="no-referrer-when-downgrade"/>
+<meta http-equiv="X-Content-Type-Options" content="nosniff"/>
 
 <!-- Hreflang (single-URL language toggle) -->
 <link rel="alternate" hreflang="en" href="https://snrgweb.com/"/>
+<link rel="alternate" hreflang="es" href="https://snrgweb.com/"/>
 <link rel="alternate" hreflang="x-default" href="https://snrgweb.com/"/>
 
 <meta property="og:locale:alternate" content="es_US"/>
 
-<!-- 🔥 ULTIMATE SEO: Consolidated @graph Schema (100/100) -->
+<!-- 🔥 GOLD STANDARD SEO: Fully Interconnected @graph Schema (100/100) -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -38,7 +40,8 @@
         "url": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
         "width": 1024,
         "height": 1024
-      }
+      },
+      "founder": {"@id": "https://snrgweb.com/#owner"}
     },
     {
       "@type": "WebSite",
@@ -46,7 +49,32 @@
       "url": "https://snrgweb.com/",
       "name": "SNRG WEB",
       "publisher": {"@id": "https://snrgweb.com/#org"},
-      "inLanguage": "en"
+      "inLanguage": ["en", "es"]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://snrgweb.com/#webpage",
+      "url": "https://snrgweb.com/",
+      "name": "High-Performance Web Design | SNRG WEB",
+      "about": {"@id": "https://snrgweb.com/#org"},
+      "description": "Professional web design and managed hosting services for small businesses.",
+      "isPartOf": {"@id": "https://snrgweb.com/#website"},
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://snrgweb.com/"
+        }]
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://snrgweb.com/#owner",
+      "name": "Bobby",
+      "jobTitle": "Lead Web Strategist",
+      "worksFor": {"@id": "https://snrgweb.com/#org"}
     },
     {
       "@type": "ProfessionalService",
@@ -63,6 +91,12 @@
         "addressRegion": "TX",
         "addressCountry": "US"
       },
+      "employee": {"@id": "https://snrgweb.com/#owner"},
+      "makesOffer": [
+        {"@id": "https://snrgweb.com/#service"},
+        {"@id": "https://snrgweb.com/#product-managed"},
+        {"@id": "https://snrgweb.com/#product-ownership"}
+      ],
       "areaServed": [
         {"@type": "City", "name": "Houston", "@id": "https://en.wikipedia.org/wiki/Houston"},
         {"@type": "City", "name": "New Orleans", "@id": "https://en.wikipedia.org/wiki/New_Orleans"},
@@ -79,12 +113,24 @@
       ]
     },
     {
+      "@type": "Service",
+      "@id": "https://snrgweb.com/#service",
+      "serviceType": "Web Design and Management",
+      "provider": {"@id": "https://snrgweb.com/#org"},
+      "areaServed": {"@id": "https://snrgweb.com/#business"},
+      "offers": [
+        {"@id": "https://snrgweb.com/#product-managed"},
+        {"@id": "https://snrgweb.com/#product-ownership"}
+      ]
+    },
+    {
       "@type": "Product",
       "@id": "https://snrgweb.com/#product-managed",
       "name": "Fully Managed Website Service",
       "image": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
       "description": "Professional custom website design with ongoing support, hosting, and unlimited updates. Launch in 2-3 days.",
       "brand": { "@type": "Brand", "name": "SNRG WEB" },
+      "manufacturer": {"@id": "https://snrgweb.com/#org"},
       "offers": {
         "@type": "Offer",
         "url": "https://snrgweb.com",
@@ -92,7 +138,8 @@
         "price": "75.00",
         "availability": "https://schema.org/InStock",
         "itemCondition": "https://schema.org/NewCondition",
-        "priceValidUntil": "2026-12-31"
+        "priceValidUntil": "2026-12-31",
+        "seller": {"@id": "https://snrgweb.com/#business"}
       }
     },
     {
@@ -102,6 +149,7 @@
       "image": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
       "description": "One-time purchase with full ownership of custom designed website. All source files included. Launch in 2-3 days.",
       "brand": { "@type": "Brand", "name": "SNRG WEB" },
+      "manufacturer": {"@id": "https://snrgweb.com/#org"},
       "offers": {
         "@type": "Offer",
         "url": "https://snrgweb.com",
@@ -109,13 +157,16 @@
         "price": "285.00",
         "availability": "https://schema.org/InStock",
         "itemCondition": "https://schema.org/NewCondition",
-        "priceValidUntil": "2026-12-31"
+        "priceValidUntil": "2026-12-31",
+        "seller": {"@id": "https://snrgweb.com/#business"}
       }
     }
   ]
 }
 </script>
 
+<!-- Performance Optimization: Preload Critical Font -->
+<link rel="preload" href="https://api.fontshare.com/v2/css?f[]=satoshi@700,900,400&display=swap" as="style">
 <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
 <link rel="dns-prefetch" href="https://api.fontshare.com">
 
@@ -1539,47 +1590,6 @@ body.spanish [lang="en"]{display:none}
 }
 
 
-/* removed /* === Premium Hero Logo Entrance */ (All Devices) === */
-/* Subtle cinematic: fade + micro-zoom + lift, with ease-out. Keeps final scale at 1. */
-/* removed @keyframes /* removed snrgLogoReveal */ */ {
-  0% {
-    opacity: 0;
-    transform: translateY(24px) scale(0.94);
-    filter: blur(6px) saturate(0.9);
-  }
-  60% {
-    opacity: 1;
-    transform: translateY(-4px) scale(1.02);
-    filter: blur(1.5px) saturate(1);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-    filter: blur(0) saturate(1);
-  }
-}
-
-/* Apply animation to the hero logo (does not affect sizing rules) */
-.hero-logo {
-  animation: /* removed snrgLogoReveal */ 900ms cubic-bezier(0.16, 1, 0.3, 1) both;
-  will-change: transform, opacity, filter;
-}
-
-/* Respect reduced motion */
-@media (prefers-reduced-motion: reduce){
-  .hero-logo {
-    animation: none !important;
-    opacity: 1 !important;
-    transform: none !important;
-    filter: none !important;
-  }
-}
-
-
-/* Neutralize any legacy transform end-states so the animation lands cleanly */
-.hero-logo { transform-origin: center center; }
-
-
 /* === SIGNATURE HERO LOGO ENTRANCE (All Devices) === */
 /* Dramatic but premium: depth-tunnel in + light sweep + settle */
 @keyframes snrgLogoTunnel {
@@ -1705,7 +1715,7 @@ body.spanish [lang="en"]{display:none}
           <div class="hero-logo-container">
             <div class="logo-mask">
               <a href="index.html" aria-label="SNRG WEB Home">
-                <img src="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png" class="hero-logo" alt="SNRG WEB - Professional website design and development" loading="eager" fetchpriority="high" decoding="async" width="1024" height="1024">
+                <img src="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png" class="hero-logo" alt="SNRG WEB - High Performance Web Design Houston" title="SNRG WEB Professional Services" loading="eager" fetchpriority="high" decoding="async" width="1024" height="1024">
               </a>
             </div>
           </div>
@@ -2003,7 +2013,7 @@ body.spanish [lang="en"]{display:none}
 
   <section class="final-cta fade-in">
     <div class="container">
-      <img src="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png" class="footer-logo" alt="SNRG WEB Logo" loading="lazy" decoding="async" width="1024" height="1024">
+      <img src="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png" class="footer-logo" alt="SNRG WEB - Professional Web Design Services Houston Texas" title="SNRG WEB - Your Web Design Partner" loading="lazy" decoding="async" width="1024" height="1024">
       
       <h2 lang="en">Focus on your business.<br>We'll handle your website.</h2>
       <h2 lang="es">Enfócate en tu negocio.<br>Nosotros manejamos tu sitio.</h2>
@@ -2065,15 +2075,18 @@ body.spanish [lang="en"]{display:none}
   },{threshold:0.2,rootMargin:'0px 0px -100px 0px'});
 
   function switchLang(lang){
+    const htmlTag = document.documentElement;
     const btns=document.querySelectorAll('.lang-btn');
     if(lang==='es'){
       document.body.classList.add('spanish');
+      htmlTag.setAttribute('lang', 'es');
       btns[0].classList.remove('active');
       btns[0].setAttribute('aria-current','false');
       btns[1].classList.add('active');
       btns[1].setAttribute('aria-current','true');
     }else{
       document.body.classList.remove('spanish');
+      htmlTag.setAttribute('lang', 'en');
       btns[0].classList.add('active');
       btns[0].setAttribute('aria-current','true');
       btns[1].classList.remove('active');
