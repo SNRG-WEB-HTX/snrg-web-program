@@ -10,7 +10,7 @@
 <link rel="apple-touch-icon" href="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png"/>
 <link rel="shortcut icon" href="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png"/>
 
-<link rel="canonical" href="https://snrgweb.com/booking.html"/>
+<link rel="canonical" href="https://snrgweb.com/booking"/>
 
 <!-- Enhanced SEO / AEO -->
 <meta name="application-name" content="SNRG WEB"/>
@@ -18,9 +18,9 @@
 <meta name="referrer" content="strict-origin-when-cross-origin"/>
 
 <!-- Hreflang -->
-<link rel="alternate" hreflang="en" href="https://snrgweb.com/booking.html"/>
-<link rel="alternate" hreflang="es" href="https://snrgweb.com/booking.html"/>
-<link rel="alternate" hreflang="x-default" href="https://snrgweb.com/booking.html"/>
+<link rel="alternate" hreflang="en" href="https://snrgweb.com/booking"/>
+<link rel="alternate" hreflang="es" href="https://snrgweb.com/booking"/>
+<link rel="alternate" hreflang="x-default" href="https://snrgweb.com/booking"/>
 
 <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
 <link rel="dns-prefetch" href="https://api.fontshare.com">
@@ -38,7 +38,7 @@
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website"/>
-<meta property="og:url" content="https://snrgweb.com/booking.html"/>
+<meta property="og:url" content="https://snrgweb.com/booking"/>
 <meta property="og:site_name" content="SNRG WEB"/>
 <meta property="og:title" content="Book a Free Website Consultation | SNRG WEB"/>
 <meta property="og:description" content="Schedule your free 15-minute consultation. Let's discuss your website project and how we can help your business grow."/>
@@ -50,7 +50,7 @@
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:url" content="https://snrgweb.com/booking.html"/>
+<meta name="twitter:url" content="https://snrgweb.com/booking"/>
 <meta name="twitter:title" content="Book a Free Website Consultation | SNRG WEB"/>
 <meta name="twitter:description" content="Schedule your free 15-minute consultation with a pro-grade small business website designer."/>
 <meta name="twitter:image" content="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png"/>
@@ -71,9 +71,23 @@
         "width": 1024,
         "height": 1024
       },
+      "founder": {"@id": "https://snrgweb.com/#owner"},
       "sameAs": [
         "https://www.linkedin.com/company/snrg-web"
       ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://snrgweb.com/#owner",
+      "name": "Bobby Frilot",
+      "jobTitle": "Founder & Lead Web Strategist",
+      "worksFor": {"@id": "https://snrgweb.com/#org"},
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Houston",
+        "addressRegion": "TX",
+        "addressCountry": "US"
+      }
     },
     {
       "@type": "ProfessionalService",
@@ -102,34 +116,46 @@
         {"@type": "City", "name": "Nashville", "@id": "https://en.wikipedia.org/wiki/Nashville,_Tennessee"},
         {"@type": "City", "name": "Raleigh", "@id": "https://en.wikipedia.org/wiki/Raleigh,_North_Carolina"},
         {"@type": "City", "name": "Indianapolis", "@id": "https://en.wikipedia.org/wiki/Indianapolis"}
-      ]
-    },
-    {
-      "@type": "Schedule",
-      "@id": "https://snrgweb.com/booking.html#schedule",
-      "name": "Book Website Design Consultation",
-      "url": "https://snrgweb.com/booking.html",
-      "provider": {"@id": "https://snrgweb.com/#org"},
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD",
-        "description": "Free 15-minute consultation to discuss your website project"
+      ],
+      "potentialAction": {
+        "@type": "ScheduleAction",
+        "@id": "https://snrgweb.com/booking#scheduleaction",
+        "name": "Schedule Free Consultation",
+        "description": "Book a free 15-minute consultation to discuss your website project",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://snrgweb.com/booking",
+          "actionPlatform": [
+            "http://schema.org/DesktopWebPlatform",
+            "http://schema.org/MobileWebPlatform"
+          ]
+        },
+        "agent": {"@id": "https://snrgweb.com/#owner"}
       }
     },
     {
+      "@type": "ContactPage",
+      "@id": "https://snrgweb.com/booking#contactpage",
+      "url": "https://snrgweb.com/booking",
+      "name": "Book a Call with SNRG WEB",
+      "description": "Schedule a free consultation with Bobby Frilot to discuss your website design project.",
+      "provider": {"@id": "https://snrgweb.com/#org"},
+      "about": {"@id": "https://snrgweb.com/#business"},
+      "inLanguage": ["en", "es"]
+    },
+    {
       "@type": "WebPage",
-      "@id": "https://snrgweb.com/booking.html#webpage",
-      "url": "https://snrgweb.com/booking.html",
+      "@id": "https://snrgweb.com/booking#webpage",
+      "url": "https://snrgweb.com/booking",
       "name": "Book a Call | SNRG WEB",
       "description": "Schedule a free consultation with SNRG WEB to discuss your website design project.",
       "provider": {"@id": "https://snrgweb.com/#org"},
-      "breadcrumb": {"@id": "https://snrgweb.com/booking.html#breadcrumb"},
+      "breadcrumb": {"@id": "https://snrgweb.com/booking#breadcrumb"},
       "inLanguage": ["en", "es"]
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://snrgweb.com/booking.html#breadcrumb",
+      "@id": "https://snrgweb.com/booking#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -141,7 +167,7 @@
           "@type": "ListItem",
           "position": 2,
           "name": "Book a Call",
-          "item": "https://snrgweb.com/booking.html"
+          "item": "https://snrgweb.com/booking"
         }
       ]
     }
