@@ -43,7 +43,8 @@
       },
       "founder": {"@id": "https://snrgweb.com/#owner"},
       "sameAs": [
-        "https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share"
+        "https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share",
+        "https://github.com/SNRG-WEB-HTX"
       ]
     },
     {
@@ -576,29 +577,12 @@ body.spanish [lang="en"]{display:none}
   margin:0 auto;
   filter:drop-shadow(0 16px 48px rgba(0,0,0,0.2));
   opacity:0;
-  transform:scale(0.3) translateY(-100px) translateZ(-500px);
-  animation:logoTunnelEntrance 1.6s cubic-bezier(0.16,1,0.3,1) forwards;
+  animation:snrgLogoTunnel 1100ms cubic-bezier(0.16,1,0.3,1) both;
   background:transparent !important;
   isolation:isolate;
+  will-change:transform, opacity, filter;
 }
 
-@keyframes logoTunnelEntrance{
-  0%{
-    opacity:0;
-    transform:scale(0.3) translateY(-100px) translateZ(-500px);
-    filter:drop-shadow(0 0 0 rgba(0,0,0,0)) blur(12px) brightness(0.5);
-  }
-  50%{
-    opacity:0.7;
-    transform:scale(0.85) translateY(-20px) translateZ(-100px);
-    filter:drop-shadow(0 8px 24px rgba(0,0,0,0.15)) blur(2px) brightness(0.85);
-  }
-  100%{
-    opacity:1;
-    transform:scale(1) translateY(0) translateZ(0);
-    filter:drop-shadow(0 16px 48px rgba(0,0,0,0.2)) blur(0) brightness(1);
-  }
-}
 
 .logo-mask{
   position: relative;
