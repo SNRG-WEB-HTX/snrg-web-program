@@ -63,7 +63,6 @@
         "addressCountry": "US"
       },
       "areaServed": [
-        {"@type": "City", "name": "Philadelphia", "@id": "https://en.wikipedia.org/wiki/Philadelphia"},
         {"@type": "City", "name": "Houston", "@id": "https://en.wikipedia.org/wiki/Houston"},
         {"@type": "City", "name": "New Orleans", "@id": "https://en.wikipedia.org/wiki/New_Orleans"},
         {"@type": "City", "name": "Atlanta", "@id": "https://en.wikipedia.org/wiki/Atlanta"},
@@ -1650,12 +1649,45 @@ body.spanish [lang="en"]{display:none}
 }
 
 </style>
+
+
+<script>
+/* === SNRG ULTRA-SAFE PERSISTENCE ENGINE (HEAD-ONLY, RELOAD-BASED) === */
+(function() {
+  const KEY = "snrg_lang";
+  const saved = localStorage.getItem(KEY) || "en";
+
+  function apply(l){
+    document.documentElement.lang = (l === "es") ? "es" : "en";
+    const tick = () => {
+      if (document.body) {
+        document.body.classList.toggle("spanish", l === "es");
+        document.querySelectorAll(".lang-btn").forEach(b => {
+          const oc = (b.getAttribute("onclick") || "").toLowerCase();
+          const isEs = oc.includes("'es'") || oc.includes('"es"') || oc.includes("es");
+          b.classList.toggle("active", (l === "es" && isEs) || (l === "en" && !isEs));
+        });
+      } else {
+        requestAnimationFrame(tick);
+      }
+    };
+    tick();
+  }
+
+  apply(saved);
+
+  window.switchLang = function(l) {
+    localStorage.setItem(KEY, (l === "es") ? "es" : "en");
+    location.reload(); // animation-safe
+  };
+})();
+</script>
 </head>
 
 <body>
   <!-- SEO/A11Y H1 - Hidden from visual layout -->
-  <h1 class="visually-hidden" lang="en">Affordable High-Performance Websites for Houston Small Businesses — Built Fast, Managed for You</h1>
-  <h1 class="visually-hidden" lang="es">Sitios Web de Alto Rendimiento y Asequibles para Pequeñas Empresas en Houston — Construidos Rápido, Administrados para Usted</h1>
+  <h1 lang="es" cPhiladelphiass="visually-hidden" Philadelphiang="en">Affordable High-Performance Websites for Philadelphia Small Businesses — Built Fast, Managed for You</h1>
+  <h1 lang="es" cPhiladelphiass="visually-hidden" Philadelphiang="es">Sitios Web de Alto Rendimiento y Asequibles para Pequeñas Empresas en Philadelphia — Construidos Rápido, Administrados para Usted</h1>
 
   <nav class="lang-bar" role="navigation" aria-label="Language selection">
     <div class="lang-toggle">
