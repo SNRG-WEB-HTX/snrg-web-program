@@ -30,31 +30,76 @@
     {
       "@type": "Organization",
       "@id": "https://snrgweb.com/#org",
-      "name": "SNRG WEB Los Angeles",
-      "url": "https://snrgweb.com/los-angeles.html",
+      "name": "SNRG WEB",
+      "legalName": "SNRG WEB",
+      "url": "https://snrgweb.com/",
       "logo": {
         "@type": "ImageObject",
+        "@id": "https://snrgweb.com/#logo",
         "url": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
         "width": 1024,
         "height": 1024
+      },
+      "sameAs": [
+        "https://github.com/SNRG-WEB-HTX",
+        "https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172"
+      ],
+      "founder": {
+        "@id": "https://snrgweb.com/#owner"
       }
     },
     {
-      "@type": "WebSite",
-      "@id": "https://snrgweb.com/los-angeles.html#website",
+      "@type": "Person",
+      "@id": "https://snrgweb.com/#owner",
+      "name": "Bobby Frilot",
       "url": "https://snrgweb.com/",
-      "name": "SNRG WEB",
-      "publisher": {"@id": "https://snrgweb.com/#org"},
-      "inLanguage": "en"
+      "image": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
+      "sameAs": [
+        "https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172",
+        "https://github.com/SNRG-WEB-HTX"
+      ]
     },
     {
-      "@type": "ProfessionalService",
-      "@id": "https://snrgweb.com/los-angeles.html#business",
-      "name": "SNRG WEB - Los Angeles",
+      "@type": "WebSite",
+      "@id": "https://snrgweb.com/#website",
+      "url": "https://snrgweb.com/",
+      "name": "SNRG WEB"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://snrgweb.com/los-angeles#webpage",
+      "url": "https://snrgweb.com/los-angeles",
+      "name": "Web Design Los Angeles CA | SNRG WEB",
+      "description": "Professional web design and managed hosting services for small businesses in Los Angeles.",
+      "inLanguage": ["en","es"],
+      "isPartOf": {"@id": "https://snrgweb.com/#website"},
+      "provider": {"@id": "https://snrgweb.com/#org"},
+      "breadcrumb": {"@id": "https://snrgweb.com/los-angeles#breadcrumb"}
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://snrgweb.com/los-angeles#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://snrgweb.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Los Angeles",
+          "item": "https://snrgweb.com/los-angeles"
+        }
+      ]
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://snrgweb.com/los-angeles#business",
+      "name": "SNRG WEB Los Angeles",
       "image": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
-      "url": "https://snrgweb.com/los-angeles.html",
-      "telephone": "+1-346-291-6010",
-      "email": "bobby@snrgweb.com",
+      "telephone": "+1-213-800-4500",
       "priceRange": "$75-$3500",
       "address": {
         "@type": "PostalAddress",
@@ -62,54 +107,68 @@
         "addressRegion": "CA",
         "addressCountry": "US"
       },
+      "parentOrganization": {"@id": "https://snrgweb.com/#org"},
       "areaServed": [
         {"@type": "City", "name": "Los Angeles", "@id": "https://en.wikipedia.org/wiki/Los_Angeles"},
-        {"@type": "City", "name": "Houston", "@id": "https://en.wikipedia.org/wiki/Houston"},
-        {"@type": "City", "name": "New Orleans", "@id": "https://en.wikipedia.org/wiki/New_Orleans"},
-        {"@type": "City", "name": "Atlanta", "@id": "https://en.wikipedia.org/wiki/Atlanta"},
-        {"@type": "City", "name": "Austin", "@id": "https://en.wikipedia.org/wiki/Austin,_Texas"},
-        {"@type": "City", "name": "Dallas", "@id": "https://en.wikipedia.org/wiki/Dallas"},
-        {"@type": "City", "name": "Phoenix", "@id": "https://en.wikipedia.org/wiki/Phoenix,_Arizona"},
-        {"@type": "City", "name": "Miami", "@id": "https://en.wikipedia.org/wiki/Miami"},
-        {"@type": "City", "name": "Denver", "@id": "https://en.wikipedia.org/wiki/Denver"},
-        {"@type": "City", "name": "Charlotte", "@id": "https://en.wikipedia.org/wiki/Charlotte,_North_Carolina"},
-        {"@type": "City", "name": "Nashville", "@id": "https://en.wikipedia.org/wiki/Nashville,_Tennessee"},
-        {"@type": "City", "name": "Raleigh", "@id": "https://en.wikipedia.org/wiki/Raleigh,_North_Carolina"},
-        {"@type": "City", "name": "Indianapolis", "@id": "https://en.wikipedia.org/wiki/Indianapolis"}
+        {"@type": "Place", "name": "Downtown LA"},
+        {"@type": "Place", "name": "Santa Monica"},
+        {"@type": "Place", "name": "Venice"},
+        {"@type": "Place", "name": "Hollywood"},
+        {"@type": "Place", "name": "Silver Lake"},
+        {"@type": "City", "name": "Beverly Hills", "@id": "https://en.wikipedia.org/wiki/Beverly_Hills,_California"},
+        {"@type": "City", "name": "Pasadena", "@id": "https://en.wikipedia.org/wiki/Pasadena,_California"},
+        {"@type": "City", "name": "Long Beach", "@id": "https://en.wikipedia.org/wiki/Long_Beach,_California"},
+        {"@type": "City", "name": "Glendale", "@id": "https://en.wikipedia.org/wiki/Glendale,_California"}
+      ]
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://snrgweb.com/los-angeles#service",
+      "serviceType": "Managed Web Design Service",
+      "provider": {"@id": "https://snrgweb.com/los-angeles#business"},
+      "areaServed": [
+        {"@type": "City", "name": "Los Angeles", "@id": "https://en.wikipedia.org/wiki/Los_Angeles"}
+      ],
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://snrgweb.com/los-angeles"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://snrgweb.com/los-angeles#offeredService",
+      "name": "Professional Web Design in Los Angeles, CA",
+      "provider": {"@id": "https://snrgweb.com/los-angeles#business"},
+      "areaServed": [
+        {"@type": "City", "name": "Los Angeles", "@id": "https://en.wikipedia.org/wiki/Los_Angeles"}
       ]
     },
     {
       "@type": "Product",
-      "@id": "https://snrgweb.com/#product-managed",
-      "name": "Fully Managed Website Service",
-      "image": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
-      "description": "Professional custom website design with ongoing support, hosting, and unlimited updates. Launch in 2-3 days.",
-      "brand": { "@type": "Brand", "name": "SNRG WEB" },
+      "@id": "https://snrgweb.com/los-angeles#product-managed",
+      "name": "Los Angeles Managed Web Design – Monthly",
+      "description": "Monthly managed web design services in Los Angeles, CA.",
+      "brand": {"@id": "https://snrgweb.com/#org"},
       "offers": {
         "@type": "Offer",
-        "url": "https://snrgweb.com/los-angeles.html",
+        "url": "https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172",
         "priceCurrency": "USD",
-        "price": "75.00",
-        "availability": "https://schema.org/InStock",
-        "itemCondition": "https://schema.org/NewCondition",
-        "priceValidUntil": "2026-12-31"
+        "price": "75",
+        "availability": "https://schema.org/InStock"
       }
     },
     {
       "@type": "Product",
-      "@id": "https://snrgweb.com/#product-ownership",
-      "name": "Website Ownership - One-Time Purchase",
-      "image": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
-      "description": "One-time purchase with full ownership of custom designed website. All source files included. Launch in 2-3 days.",
-      "brand": { "@type": "Brand", "name": "SNRG WEB" },
+      "@id": "https://snrgweb.com/los-angeles#product-ownership",
+      "name": "Los Angeles Site Ownership Build",
+      "description": "One-time site build and ownership transfer in Los Angeles, CA.",
+      "brand": {"@id": "https://snrgweb.com/#org"},
       "offers": {
         "@type": "Offer",
-        "url": "https://snrgweb.com/los-angeles.html",
+        "url": "https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172",
         "priceCurrency": "USD",
-        "price": "285.00",
-        "availability": "https://schema.org/InStock",
-        "itemCondition": "https://schema.org/NewCondition",
-        "priceValidUntil": "2026-12-31"
+        "price": "285",
+        "availability": "https://schema.org/InStock"
       }
     }
   ]
@@ -1621,12 +1680,6 @@ body.spanish [lang="en"]{display:none}
   100%{ transform: translateX(120%); opacity: 0; }
 }
 
-/* Apply the tunnel animation */
-.hero-logo{
-  animation: snrgLogoTunnel 1100ms cubic-bezier(0.16, 1, 0.3, 1) both;
-  will-change: transform, opacity, filter;
-}
-
 /* Respect reduced motion */
 @media (prefers-reduced-motion: reduce){
   .hero-logo,
@@ -2009,7 +2062,7 @@ body.spanish [lang="en"]{display:none}
 
   <footer class="footer fade-in">
     <div class="container">
-      <p class="footer-copyright">© 2026 SNRG WEB — HTX</p>
+      <p class="footer-copyright">© 2026 SNRG WEB — LA</p>
     </div>
   </footer>
 
