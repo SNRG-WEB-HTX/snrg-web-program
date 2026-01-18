@@ -23,13 +23,8 @@
 
 <meta property="og:locale:alternate" content="es_US"/>
 
-<!--  ULTIMATE SEO: Consolidated @graph Schema (100/100) -->
-<script> block. This is the only way to fix that "Missing field 'image'" error in Google Search Console.
-
-I have triple-checked this: every Product and Service entry now has the required image link pointing to your logo.
-
-The Final Corrected Code
-Delete your existing <script type="application/ld+json">
+<!-- Consolidated @graph Schema (validated) -->
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
@@ -1650,6 +1645,40 @@ body.spanish [lang="en"]{display:none}
 }
 
 </style>
+
+
+<script>
+/* === SNRG ULTRA-SAFE PERSISTENCE ENGINE (HEAD-ONLY, RELOAD-BASED) === */
+(function() {
+  const KEY = "snrg_lang";
+  const saved = localStorage.getItem(KEY) || "en";
+
+  function apply(l){
+    document.documentElement.lang = (l === "es") ? "es" : "en";
+    const tick = () => {
+      if (document.body) {
+        document.body.classList.toggle("spanish", l === "es");
+        document.querySelectorAll(".lang-btn").forEach(b => {
+          const oc = (b.getAttribute("onclick") || "").toLowerCase();
+          const isEs = oc.includes("'es'") || oc.includes('"es"') || oc.includes("es");
+          b.classList.toggle("active", (l === "es" && isEs) || (l === "en" && !isEs));
+        });
+      } else {
+        requestAnimationFrame(tick);
+      }
+    };
+    tick();
+  }
+
+  apply(saved);
+
+  // Override global toggle to persist + reload (animation-safe)
+  window.switchLang = function(l) {
+    localStorage.setItem(KEY, (l === "es") ? "es" : "en");
+    location.reload();
+  };
+})();
+</script>
 </head>
 
 <body>
@@ -2038,20 +2067,9 @@ body.spanish [lang="en"]{display:none}
   },{threshold:0.2,rootMargin:'0px 0px -100px 0px'});
 
   function switchLang(lang){
-    const btns=document.querySelectorAll('.lang-btn');
-    if(lang==='es'){
-      document.body.classList.add('spanish');
-      btns[0].classList.remove('active');
-      btns[0].setAttribute('aria-current','false');
-      btns[1].classList.add('active');
-      btns[1].setAttribute('aria-current','true');
-    }else{
-      document.body.classList.remove('spanish');
-      btns[0].classList.add('active');
-      btns[0].setAttribute('aria-current','true');
-      btns[1].classList.remove('active');
-      btns[1].setAttribute('aria-current','false');
-    }
+    const l = (lang === 'es') ? 'es' : 'en';
+    try{ localStorage.setItem('snrg_lang', l); }catch(e){}
+    location.reload();
   }
 
   function selectCard(card){
