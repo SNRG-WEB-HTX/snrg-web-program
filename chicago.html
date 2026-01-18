@@ -10,7 +10,7 @@
 <link rel="apple-touch-icon" href="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png"/>
 <link rel="shortcut icon" href="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png"/>
 
-<link rel="canonical" href="https://snrgweb.com/chicago"/>
+<link rel="canonical" href="https://snrgweb.com/chicago.html"/>
 
 <!-- Enhanced SEO / AEO -->
 <meta name="application-name" content="SNRG WEB"/>
@@ -69,7 +69,6 @@ Delete your existing <script type="application/ld+json">
         "addressCountry": "US"
       },
       "areaServed": [
-        {"@type": "City", "name": "Chicago", "@id": "https://en.wikipedia.org/wiki/Chicago"},
         {"@type": "City", "name": "Houston", "@id": "https://en.wikipedia.org/wiki/Houston"},
         {"@type": "City", "name": "New Orleans", "@id": "https://en.wikipedia.org/wiki/New_Orleans"},
         {"@type": "City", "name": "Atlanta", "@id": "https://en.wikipedia.org/wiki/Atlanta"},
@@ -1650,12 +1649,45 @@ body.spanish [lang="en"]{display:none}
 }
 
 </style>
+
+
+<script>
+/* === SNRG ULTRA-SAFE PERSISTENCE ENGINE (HEAD-ONLY, RELOAD-BASED) === */
+(function() {
+  const KEY = "snrg_lang";
+  const saved = localStorage.getItem(KEY) || "en";
+
+  function apply(l){
+    document.documentElement.lang = (l === "es") ? "es" : "en";
+    const tick = () => {
+      if (document.body) {
+        document.body.classList.toggle("spanish", l === "es");
+        document.querySelectorAll(".lang-btn").forEach(b => {
+          const oc = (b.getAttribute("onclick") || "").toLowerCase();
+          const isEs = oc.includes("'es'") || oc.includes('"es"') || oc.includes("es");
+          b.classList.toggle("active", (l === "es" && isEs) || (l === "en" && !isEs));
+        });
+      } else {
+        requestAnimationFrame(tick);
+      }
+    };
+    tick();
+  }
+
+  apply(saved);
+
+  window.switchLang = function(l) {
+    localStorage.setItem(KEY, (l === "es") ? "es" : "en");
+    location.reload(); // animation-safe
+  };
+})();
+</script>
 </head>
 
 <body>
   <!-- SEO/A11Y H1 - Hidden from visual layout -->
-  <h1 class="visually-hidden" lang="en">Professional Web Design for Chicago IL Small Businesses — Serving the Loop, River North, Wicker Park, and Lincoln Park</h1>
-  <h1 class="visually-hidden" lang="es">Diseño Web Profesional para Pequeñas Empresas en Chicago IL — Sirviendo Loop, River North, Wicker Park, y Lincoln Park</h1>
+  <h1 lang="es" cChicagoss="visually-hidden" Chicagong="en">Professional Web Design for Chicago IL Small Businesses — Serving the Loop, River North, Wicker Park, and Lincoln Park</h1>
+  <h1 lang="es" cChicagoss="visually-hidden" Chicagong="es">Diseño Web Profesional para Pequeñas Empresas en Chicago IL — Sirviendo Loop, River North, Wicker Park, y Lincoln Park</h1>
 
   <nav class="lang-bar" role="navigation" aria-label="Language selection">
     <div class="lang-toggle">
