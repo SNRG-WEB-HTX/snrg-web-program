@@ -4,54 +4,125 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
 
-<!-- Favicon / Site Icon -->
 <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png"/>
 <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png"/>
 <link rel="apple-touch-icon" href="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png"/>
 <link rel="shortcut icon" href="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png"/>
 
-<link rel="canonical" href="https://snrgweb.com/chicago.html"/>
+<link rel="canonical" href="https://snrgweb.com/chicago"/>
 
-<!-- Enhanced SEO / AEO -->
 <meta name="application-name" content="SNRG WEB"/>
 <meta name="format-detection" content="telephone=no"/>
-<meta name="referrer" content="strict-origin-when-cross-origin"/>
+<meta name="referrer" content="no-referrer-when-downgrade"/>
+<meta http-equiv="X-Content-Type-Options" content="nosniff"/>
 
-<!-- Hreflang (single-URL language toggle) -->
 <link rel="alternate" hreflang="en" href="https://snrgweb.com/chicago"/>
+<link rel="alternate" hreflang="es" href="https://snrgweb.com/chicago"/>
 <link rel="alternate" hreflang="x-default" href="https://snrgweb.com/chicago"/>
 
 <meta property="og:locale:alternate" content="es_US"/>
 
-<!--  ULTIMATE SEO: Consolidated @graph Schema (100/100) -->
-<script> block. This is the only way to fix that "Missing field 'image'" error in Google Search Console.
-
-I have triple-checked this: every Product and Service entry now has the required image link pointing to your logo.
-
-The Final Corrected Code
-Delete your existing <script type="application/ld+json">
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "Organization",
       "@id": "https://snrgweb.com/#org",
-      "name": "SNRG WEB Chicago",
-      "url": "https://snrgweb.com/chicago",
+      "name": "SNRG WEB",
+      "url": "https://snrgweb.com/",
       "logo": {
         "@type": "ImageObject",
         "url": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
         "width": 1024,
         "height": 1024
-      }
+      },
+      "founder": {"@id": "https://snrgweb.com/#owner"},
+      "sameAs": [
+        "https://www.linkedin.com/company/snrg-web"
+      ]
     },
     {
       "@type": "WebSite",
       "@id": "https://snrgweb.com/chicago#website",
-      "url": "https://snrgweb.com/",
-      "name": "SNRG WEB",
+      "url": "https://snrgweb.com/chicago",
+      "name": "SNRG WEB Chicago",
       "publisher": {"@id": "https://snrgweb.com/#org"},
-      "inLanguage": "en"
+      "inLanguage": ["en", "es"]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://snrgweb.com/chicago#webpage",
+      "url": "https://snrgweb.com/chicago",
+      "name": "Web Design Chicago IL | SNRG WEB",
+      "about": {"@id": "https://snrgweb.com/chicago#business"},
+      "description": "Professional web design and managed hosting services for small businesses in Chicago.",
+      "isPartOf": {"@id": "https://snrgweb.com/chicago#website"},
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://snrgweb.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Chicago",
+            "item": "https://snrgweb.com/chicago"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://snrgweb.com/#owner",
+      "name": "Bobby Frilot",
+      "jobTitle": "Founder & Lead Web Strategist",
+      "worksFor": {"@id": "https://snrgweb.com/#org"},
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Houston",
+        "addressRegion": "TX",
+        "addressCountry": "US"
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://snrgweb.com/chicago#localbusiness",
+      "name": "SNRG WEB Chicago",
+      "image": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
+      "url": "https://snrgweb.com/chicago",
+      "telephone": "+1-346-291-6010",
+      "email": "bobby@snrgweb.com",
+      "priceRange": "$75-$3500",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Chicago",
+        "addressRegion": "IL",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "41.8781",
+        "longitude": "-87.6298"
+      },
+      "hasMap": "https://www.google.com/maps/place/Chicago,+IL",
+      "parentOrganization": {"@id": "https://snrgweb.com/#org"},
+      "employee": {"@id": "https://snrgweb.com/#owner"},
+      "areaServed": [
+        {"@type": "City", "name": "Chicago", "@id": "https://en.wikipedia.org/wiki/Chicago"},
+        {"@type": "Place", "name": "The Loop"},
+        {"@type": "Place", "name": "River North"},
+        {"@type": "Place", "name": "Wicker Park"},
+        {"@type": "Place", "name": "Lincoln Park"},
+        {"@type": "Place", "name": "West Loop"},
+        {"@type": "Place", "name": "Logan Square"},
+        {"@type": "Place", "name": "Lakeview"},
+        {"@type": "Place", "name": "Gold Coast"}
+      ]
     },
     {
       "@type": "ProfessionalService",
@@ -68,28 +139,51 @@ Delete your existing <script type="application/ld+json">
         "addressRegion": "IL",
         "addressCountry": "US"
       },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "41.8781",
+        "longitude": "-87.6298"
+      },
+      "parentOrganization": {"@id": "https://snrgweb.com/#org"},
+      "employee": {"@id": "https://snrgweb.com/#owner"},
+      "makesOffer": [
+        {"@id": "https://snrgweb.com/chicago#service"},
+        {"@id": "https://snrgweb.com/chicago#product-managed"},
+        {"@id": "https://snrgweb.com/chicago#product-ownership"}
+      ],
       "areaServed": [
-        {"@type": "City", "name": "Houston", "@id": "https://en.wikipedia.org/wiki/Houston"},
-        {"@type": "City", "name": "New Orleans", "@id": "https://en.wikipedia.org/wiki/New_Orleans"},
-        {"@type": "City", "name": "Atlanta", "@id": "https://en.wikipedia.org/wiki/Atlanta"},
-        {"@type": "City", "name": "Louisville", "@id": "https://en.wikipedia.org/wiki/Louisville,_Kentucky"},
-        {"@type": "City", "name": "Austin", "@id": "https://en.wikipedia.org/wiki/Austin,_Texas"},
-        {"@type": "City", "name": "Dallas", "@id": "https://en.wikipedia.org/wiki/Dallas"},
-        {"@type": "City", "name": "Phoenix", "@id": "https://en.wikipedia.org/wiki/Phoenix,_Arizona"},
-        {"@type": "City", "name": "Miami", "@id": "https://en.wikipedia.org/wiki/Miami"},
-        {"@type": "City", "name": "Denver", "@id": "https://en.wikipedia.org/wiki/Denver"},
-        {"@type": "City", "name": "Charlotte", "@id": "https://en.wikipedia.org/wiki/Charlotte,_North_Carolina"},
-        {"@type": "City", "name": "Nashville", "@id": "https://en.wikipedia.org/wiki/Nashville,_Tennessee"},
-        {"@type": "City", "name": "Indianapolis", "@id": "https://en.wikipedia.org/wiki/Indianapolis"}
+        {"@type": "City", "name": "Chicago", "@id": "https://en.wikipedia.org/wiki/Chicago"}
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://snrgweb.com/chicago#service",
+      "serviceType": "Web Design and Management",
+      "provider": {"@id": "https://snrgweb.com/chicago#localbusiness"},
+      "areaServed": [
+        {"@type": "City", "name": "Chicago", "@id": "https://en.wikipedia.org/wiki/Chicago"},
+        {"@type": "Place", "name": "The Loop"},
+        {"@type": "Place", "name": "River North"},
+        {"@type": "Place", "name": "Wicker Park"},
+        {"@type": "Place", "name": "Lincoln Park"},
+        {"@type": "Place", "name": "West Loop"},
+        {"@type": "Place", "name": "Logan Square"},
+        {"@type": "Place", "name": "Lakeview"},
+        {"@type": "Place", "name": "Gold Coast"}
+      ],
+      "offers": [
+        {"@id": "https://snrgweb.com/chicago#product-managed"},
+        {"@id": "https://snrgweb.com/chicago#product-ownership"}
       ]
     },
     {
       "@type": "Product",
-      "@id": "https://snrgweb.com/#product-managed",
+      "@id": "https://snrgweb.com/chicago#product-managed",
       "name": "Fully Managed Website Service",
       "image": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
       "description": "Professional custom website design with ongoing support, hosting, and unlimited updates. Launch in 2-3 days.",
       "brand": { "@type": "Brand", "name": "SNRG WEB" },
+      "manufacturer": {"@id": "https://snrgweb.com/#org"},
       "offers": {
         "@type": "Offer",
         "url": "https://snrgweb.com/chicago",
@@ -97,16 +191,18 @@ Delete your existing <script type="application/ld+json">
         "price": "75.00",
         "availability": "https://schema.org/InStock",
         "itemCondition": "https://schema.org/NewCondition",
-        "priceValidUntil": "2026-12-31"
+        "priceValidUntil": "2026-12-31",
+        "seller": {"@id": "https://snrgweb.com/chicago#business"}
       }
     },
     {
       "@type": "Product",
-      "@id": "https://snrgweb.com/#product-ownership",
+      "@id": "https://snrgweb.com/chicago#product-ownership",
       "name": "Website Ownership - One-Time Purchase",
       "image": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
       "description": "One-time purchase with full ownership of custom designed website. All source files included. Launch in 2-3 days.",
       "brand": { "@type": "Brand", "name": "SNRG WEB" },
+      "manufacturer": {"@id": "https://snrgweb.com/#org"},
       "offers": {
         "@type": "Offer",
         "url": "https://snrgweb.com/chicago",
@@ -114,41 +210,46 @@ Delete your existing <script type="application/ld+json">
         "price": "285.00",
         "availability": "https://schema.org/InStock",
         "itemCondition": "https://schema.org/NewCondition",
-        "priceValidUntil": "2026-12-31"
+        "priceValidUntil": "2026-12-31",
+        "seller": {"@id": "https://snrgweb.com/chicago#business"}
       }
     }
   ]
 }
 </script>
 
+<link rel="preload" href="https://api.fontshare.com/v2/css?f[]=satoshi@700,900,400&display=swap" as="style">
 <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
 <link rel="dns-prefetch" href="https://api.fontshare.com">
 
-<!-- Primary Meta Tags -->
 <title>Web Design Chicago IL | $75/mo Managed Websites | SNRG WEB</title>
 <meta name="title" content="Web Design Chicago IL | $75/mo Managed Websites | SNRG WEB"/>
-<meta name="description" content="Pro-grade web design for Chicago small businesses. Serving the Loop, River North, Wicker Park, and Lincoln Park. Launch in 2-3 days. $285 flat or $75/mo."/>
-<meta name="keywords" content="web design Chicago, Chicago website design, small business websites Chicago IL, web developer Chicago, custom website Chicago, Loop web design, River North website design, Wicker Park business websites, Chicago web services, Illinois web design"/>
-<meta name="author" content="SNRG WEB"/>
+<meta name="description" content="Pro-grade web design for Chicago small businesses. Serving The Loop, River North, Wicker Park, Lincoln Park & West Loop. Launch in 2-3 days. $285 flat or $75/mo."/>
+<meta name="keywords" content="web design Chicago, Chicago website design, small business websites Chicago IL, web developer Chicago, custom website Chicago, River North web design, Wicker Park website design, Loop business websites, Chicago web services, Illinois web design"/>
+<meta name="author" content="Bobby Frilot - SNRG WEB"/>
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"/>
 <meta name="theme-color" content="#FF2A2A"/>
-<!-- Open Graph / Facebook -->
+
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://snrgweb.com/chicago"/>
 <meta property="og:site_name" content="SNRG WEB"/>
 <meta property="og:title" content="Web Design Chicago IL | $75/mo Managed Websites"/>
-<meta property="og:description" content="Chicago web design for small businesses. Serving the Loop, River North, and Wicker Park. Fast launch in 2-3 days, hosting & maintenance included."/>
+<meta property="og:description" content="Chicago web design for small businesses. Serving The Loop, River North, Wicker Park & all Chicago neighborhoods. Fast launch in 2-3 days, hosting included."/>
 <meta property="og:image" content="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png"/>
 <meta property="og:image:width" content="1024"/>
 <meta property="og:image:height" content="1024"/>
 <meta property="og:locale" content="en_US"/>
 
-<!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:url" content="https://snrgweb.com/chicago"/>
 <meta name="twitter:title" content="Web Design Chicago IL | $75/mo Managed Websites"/>
-<meta name="twitter:description" content="Chicago web design for small businesses. Serving the Loop, River North, and Wicker Park. Fast launch, professional quality."/>
+<meta name="twitter:description" content="Chicago web design for small businesses. Serving The Loop, River North, Wicker Park. Fast launch, pro quality."/>
 <meta name="twitter:image" content="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png"/>
+
+<meta name="geo.region" content="US-IL"/>
+<meta name="geo.placename" content="Chicago"/>
+<meta name="geo.position" content="41.8781;-87.6298"/>
+<meta name="ICBM" content="41.8781, -87.6298"/>
 
 <link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,900,500,400,800,600&display=swap" rel="stylesheet">
 
@@ -2027,7 +2128,7 @@ body.spanish [lang="en"]{display:none}
 
   <footer class="footer fade-in">
     <div class="container">
-      <p class="footer-copyright">© 2026 SNRG WEB — HTX</p>
+      <p class="footer-copyright">© 2026 SNRG WEB — Go Cubs Go!</p>
     </div>
   </footer>
 
