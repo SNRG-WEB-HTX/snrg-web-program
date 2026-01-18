@@ -30,73 +30,75 @@
       "@type": "Organization",
       "@id": "https://snrgweb.com/#org",
       "name": "SNRG WEB",
+      "legalName": "SNRG WEB",
       "url": "https://snrgweb.com/",
       "logo": {
         "@type": "ImageObject",
+        "@id": "https://snrgweb.com/#logo",
         "url": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
         "width": 1024,
         "height": 1024
       },
-      "founder": {"@id": "https://snrgweb.com/#owner"},
       "sameAs": [
-        "https://www.linkedin.com/company/snrg-web"
-      ]
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://snrgweb.com/dallas#website",
-      "url": "https://snrgweb.com/dallas",
-      "name": "SNRG WEB Dallas",
-      "publisher": {"@id": "https://snrgweb.com/#org"},
-      "inLanguage": ["en", "es"]
-    },
-    {
-      "@type": "WebPage",
-      "@id": "https://snrgweb.com/dallas#webpage",
-      "url": "https://snrgweb.com/dallas",
-      "name": "Web Design Dallas TX | SNRG WEB",
-      "about": {"@id": "https://snrgweb.com/dallas#business"},
-      "description": "Professional web design and managed hosting services for small businesses in Dallas.",
-      "isPartOf": {"@id": "https://snrgweb.com/dallas#website"},
-      "breadcrumb": {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://snrgweb.com/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Dallas",
-            "item": "https://snrgweb.com/dallas"
-          }
-        ]
+        "https://github.com/SNRG-WEB-HTX",
+        "https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172"
+      ],
+      "founder": {
+        "@id": "https://snrgweb.com/#owner"
       }
     },
     {
       "@type": "Person",
       "@id": "https://snrgweb.com/#owner",
       "name": "Bobby Frilot",
-      "jobTitle": "Founder & Lead Web Strategist",
-      "worksFor": {"@id": "https://snrgweb.com/#org"},
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Houston",
-        "addressRegion": "TX",
-        "addressCountry": "US"
-      }
+      "url": "https://snrgweb.com/",
+      "image": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
+      "sameAs": [
+        "https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172",
+        "https://github.com/SNRG-WEB-HTX"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://snrgweb.com/#website",
+      "url": "https://snrgweb.com/",
+      "name": "SNRG WEB"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://snrgweb.com/dallas#webpage",
+      "url": "https://snrgweb.com/dallas",
+      "name": "Web Design Dallas TX | SNRG WEB",
+      "description": "Professional web design and managed hosting services for small businesses in Dallas.",
+      "inLanguage": ["en","es"],
+      "isPartOf": {"@id": "https://snrgweb.com/#website"},
+      "provider": {"@id": "https://snrgweb.com/#org"},
+      "breadcrumb": {"@id": "https://snrgweb.com/dallas#breadcrumb"}
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://snrgweb.com/dallas#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://snrgweb.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Dallas",
+          "item": "https://snrgweb.com/dallas"
+        }
+      ]
     },
     {
       "@type": "LocalBusiness",
-      "@id": "https://snrgweb.com/dallas#localbusiness",
+      "@id": "https://snrgweb.com/dallas#business",
       "name": "SNRG WEB Dallas",
       "image": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
-      "url": "https://snrgweb.com/dallas",
       "telephone": "+1-346-291-6010",
-      "email": "bobby@snrgweb.com",
       "priceRange": "$75-$3500",
       "address": {
         "@type": "PostalAddress",
@@ -104,114 +106,69 @@
         "addressRegion": "TX",
         "addressCountry": "US"
       },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "32.7767",
-        "longitude": "-96.7970"
-      },
-      "hasMap": "https://www.google.com/maps/place/Dallas,+TX",
       "parentOrganization": {"@id": "https://snrgweb.com/#org"},
-      "employee": {"@id": "https://snrgweb.com/#owner"},
       "areaServed": [
         {"@type": "City", "name": "Dallas", "@id": "https://en.wikipedia.org/wiki/Dallas"},
         {"@type": "Place", "name": "Downtown Dallas"},
         {"@type": "Place", "name": "Uptown Dallas"},
         {"@type": "Place", "name": "Deep Ellum"},
         {"@type": "Place", "name": "Bishop Arts District"},
-        {"@type": "Place", "name": "Knox-Henderson"},
-        {"@type": "Place", "name": "Oak Lawn"},
-        {"@type": "Place", "name": "Lakewood"},
-        {"@type": "Place", "name": "Victory Park"}
+        {"@type": "Place", "name": "Highland Park"},
+        {"@type": "City", "name": "Plano", "@id": "https://en.wikipedia.org/wiki/Plano,_Texas"},
+        {"@type": "City", "name": "Frisco", "@id": "https://en.wikipedia.org/wiki/Frisco,_Texas"},
+        {"@type": "City", "name": "Irving", "@id": "https://en.wikipedia.org/wiki/Irving,_Texas"},
+        {"@type": "City", "name": "Arlington", "@id": "https://en.wikipedia.org/wiki/Arlington,_Texas"},
+        {"@type": "City", "name": "McKinney", "@id": "https://en.wikipedia.org/wiki/McKinney,_Texas"}
       ]
     },
     {
       "@type": "ProfessionalService",
-      "@id": "https://snrgweb.com/dallas#business",
-      "name": "SNRG WEB - Dallas",
-      "image": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
-      "url": "https://snrgweb.com/dallas",
-      "telephone": "+1-346-291-6010",
-      "email": "bobby@snrgweb.com",
-      "priceRange": "$75-$3500",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Dallas",
-        "addressRegion": "TX",
-        "addressCountry": "US"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "32.7767",
-        "longitude": "-96.7970"
-      },
-      "parentOrganization": {"@id": "https://snrgweb.com/#org"},
-      "employee": {"@id": "https://snrgweb.com/#owner"},
-      "makesOffer": [
-        {"@id": "https://snrgweb.com/dallas#service"},
-        {"@id": "https://snrgweb.com/dallas#product-managed"},
-        {"@id": "https://snrgweb.com/dallas#product-ownership"}
+      "@id": "https://snrgweb.com/dallas#service",
+      "serviceType": "Managed Web Design Service",
+      "provider": {"@id": "https://snrgweb.com/dallas#business"},
+      "areaServed": [
+        {"@type": "City", "name": "Dallas", "@id": "https://en.wikipedia.org/wiki/Dallas"}
       ],
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://snrgweb.com/dallas"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://snrgweb.com/dallas#offeredService",
+      "name": "Professional Web Design in Dallas, TX",
+      "provider": {"@id": "https://snrgweb.com/dallas#business"},
       "areaServed": [
         {"@type": "City", "name": "Dallas", "@id": "https://en.wikipedia.org/wiki/Dallas"}
       ]
     },
     {
-      "@type": "Service",
-      "@id": "https://snrgweb.com/dallas#service",
-      "serviceType": "Web Design and Management",
-      "provider": {"@id": "https://snrgweb.com/dallas#localbusiness"},
-      "areaServed": [
-        {"@type": "City", "name": "Dallas", "@id": "https://en.wikipedia.org/wiki/Dallas"},
-        {"@type": "Place", "name": "Downtown Dallas"},
-        {"@type": "Place", "name": "Uptown Dallas"},
-        {"@type": "Place", "name": "Deep Ellum"},
-        {"@type": "Place", "name": "Bishop Arts District"},
-        {"@type": "Place", "name": "Knox-Henderson"},
-        {"@type": "Place", "name": "Oak Lawn"},
-        {"@type": "Place", "name": "Lakewood"},
-        {"@type": "Place", "name": "Victory Park"}
-      ],
-      "offers": [
-        {"@id": "https://snrgweb.com/dallas#product-managed"},
-        {"@id": "https://snrgweb.com/dallas#product-ownership"}
-      ]
-    },
-    {
       "@type": "Product",
       "@id": "https://snrgweb.com/dallas#product-managed",
-      "name": "Fully Managed Website Service",
-      "image": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
-      "description": "Professional custom website design with ongoing support, hosting, and unlimited updates. Launch in 2-3 days.",
-      "brand": { "@type": "Brand", "name": "SNRG WEB" },
-      "manufacturer": {"@id": "https://snrgweb.com/#org"},
+      "name": "Dallas Managed Web Design – Monthly",
+      "description": "Monthly managed web design services in Dallas, TX.",
+      "brand": {"@id": "https://snrgweb.com/#org"},
       "offers": {
         "@type": "Offer",
-        "url": "https://snrgweb.com/dallas",
+        "url": "https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172",
         "priceCurrency": "USD",
-        "price": "75.00",
-        "availability": "https://schema.org/InStock",
-        "itemCondition": "https://schema.org/NewCondition",
-        "priceValidUntil": "2026-12-31",
-        "seller": {"@id": "https://snrgweb.com/dallas#business"}
+        "price": "75",
+        "availability": "https://schema.org/InStock"
       }
     },
     {
       "@type": "Product",
       "@id": "https://snrgweb.com/dallas#product-ownership",
-      "name": "Website Ownership - One-Time Purchase",
-      "image": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
-      "description": "One-time purchase with full ownership of custom designed website. All source files included. Launch in 2-3 days.",
-      "brand": { "@type": "Brand", "name": "SNRG WEB" },
-      "manufacturer": {"@id": "https://snrgweb.com/#org"},
+      "name": "Dallas Site Ownership Build",
+      "description": "One-time site build and ownership transfer in Dallas, TX.",
+      "brand": {"@id": "https://snrgweb.com/#org"},
       "offers": {
         "@type": "Offer",
-        "url": "https://snrgweb.com/dallas",
+        "url": "https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172",
         "priceCurrency": "USD",
-        "price": "285.00",
-        "availability": "https://schema.org/InStock",
-        "itemCondition": "https://schema.org/NewCondition",
-        "priceValidUntil": "2026-12-31",
-        "seller": {"@id": "https://snrgweb.com/dallas#business"}
+        "price": "285",
+        "availability": "https://schema.org/InStock"
       }
     }
   ]
