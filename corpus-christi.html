@@ -10,7 +10,7 @@
 <link rel="apple-touch-icon" href="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png"/>
 <link rel="shortcut icon" href="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png"/>
 
-<link rel="canonical" href="https://snrgweb.com/corpus-christi"/>
+<link rel="canonical" href="https://snrgweb.com/corpus-christi.html"/>
 
 <!-- Enhanced SEO / AEO -->
 <meta name="application-name" content="SNRG WEB"/>
@@ -1650,12 +1650,45 @@ body.spanish [lang="en"]{display:none}
 }
 
 </style>
+
+
+<script>
+/* === SNRG ULTRA-SAFE PERSISTENCE ENGINE (HEAD-ONLY, RELOAD-BASED) === */
+(function() {
+  const KEY = "snrg_lang";
+  const saved = localStorage.getItem(KEY) || "en";
+
+  function apply(l){
+    document.documentElement.lang = (l === "es") ? "es" : "en";
+    const tick = () => {
+      if (document.body) {
+        document.body.classList.toggle("spanish", l === "es");
+        document.querySelectorAll(".lang-btn").forEach(b => {
+          const oc = (b.getAttribute("onclick") || "").toLowerCase();
+          const isEs = oc.includes("'es'") || oc.includes('"es"') || oc.includes("es");
+          b.classList.toggle("active", (l === "es" && isEs) || (l === "en" && !isEs));
+        });
+      } else {
+        requestAnimationFrame(tick);
+      }
+    };
+    tick();
+  }
+
+  apply(saved);
+
+  window.switchLang = function(l) {
+    localStorage.setItem(KEY, (l === "es") ? "es" : "en");
+    location.reload(); // animation-safe
+  };
+})();
+</script>
 </head>
 
 <body>
   <!-- SEO/A11Y H1 - Hidden from visual layout -->
-  <h1 class="visually-hidden" lang="en">Professional Web Design for Corpus Christi TX Small Businesses — Serving Southside, Bay Area, Padre Island, and Downtown</h1>
-  <h1 class="visually-hidden" lang="es">Diseño Web Profesional para Pequeñas Empresas en Corpus Christi TX — Sirviendo Southside, Bay Area, Padre Island, y Downtown</h1>
+  <h1 lang="es" cCorpus Christiss="visually-hidden" Corpus Christing="en">Professional Web Design for Corpus Christi TX Small Businesses — Serving Southside, Bay Area, Padre IsCorpus Christind, and Downtown</h1>
+  <h1 lang="es" cCorpus Christiss="visually-hidden" Corpus Christing="es">Diseño Web Profesional para Pequeñas Empresas en Corpus Christi TX — Sirviendo Southside, Bay Area, Padre IsCorpus Christind, y Downtown</h1>
 
   <nav class="lang-bar" role="navigation" aria-label="Language selection">
     <div class="lang-toggle">
