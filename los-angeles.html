@@ -1539,9 +1539,7 @@ body.spanish [lang="en"]{display:none}
 }
 
 
-/* removed /* === Premium Hero Logo Entrance */ (All Devices) === */
 /* Subtle cinematic: fade + micro-zoom + lift, with ease-out. Keeps final scale at 1. */
-/* removed @keyframes /* removed snrgLogoReveal */ */ {
   0% {
     opacity: 0;
     transform: translateY(24px) scale(0.94);
@@ -1561,7 +1559,6 @@ body.spanish [lang="en"]{display:none}
 
 /* Apply animation to the hero logo (does not affect sizing rules) */
 .hero-logo {
-  animation: /* removed snrgLogoReveal */ 900ms cubic-bezier(0.16, 1, 0.3, 1) both;
   will-change: transform, opacity, filter;
 }
 
@@ -1644,36 +1641,26 @@ body.spanish [lang="en"]{display:none}
 }
 
 </style>
-
-
 <script>
-/* === SNRG ULTRA-SAFE PERSISTENCE ENGINE (HEAD-ONLY, RELOAD-BASED) === */
-(function() {
-  const KEY = "snrg_lang";
-  const saved = localStorage.getItem(KEY) || "en";
-
+/* ULTRA-SAFE bilingual persistence (no layout changes) */
+(function(){
+  const KEY="snrg_lang";
+  const saved=localStorage.getItem(KEY) || "en";
   function apply(l){
-    document.documentElement.lang = (l === "es") ? "es" : "en";
-    const tick = () => {
-      if (document.body) {
-        document.body.classList.toggle("spanish", l === "es");
-        document.querySelectorAll(".lang-btn").forEach(b => {
-          const oc = (b.getAttribute("onclick") || "").toLowerCase();
-          const isEs = oc.includes("'es'") || oc.includes('"es"') || oc.includes("es");
-          b.classList.toggle("active", (l === "es" && isEs) || (l === "en" && !isEs));
-        });
-      } else {
-        requestAnimationFrame(tick);
-      }
-    };
-    tick();
+    document.documentElement.lang = (l==="es") ? "es" : "en";
+    if(document.body){ document.body.classList.toggle("spanish", l==="es"); }
   }
-
-  apply(saved);
-
-  window.switchLang = function(l) {
-    localStorage.setItem(KEY, (l === "es") ? "es" : "en");
-    location.reload(); // animation-safe
+  // apply as early as possible
+  const obs=new MutationObserver(()=>{
+    if(document.body){
+      apply(saved);
+      obs.disconnect();
+    }
+  });
+  obs.observe(document.documentElement,{childList:true,subtree:true});
+  window.switchLang=function(l){
+    localStorage.setItem(KEY, l==="es" ? "es" : "en");
+    location.reload(); // preserves animation integrity
   };
 })();
 </script>
