@@ -9,16 +9,19 @@
 <link rel="apple-touch-icon" href="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png"/>
 <link rel="shortcut icon" href="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png"/>
 
-<link rel="canonical" href="https://snrgweb.com/contact.html"/>
+<link rel="canonical" href="https://snrgweb.com/contact"/>
 
 <meta name="application-name" content="SNRG WEB"/>
 <meta name="format-detection" content="telephone=no"/>
-<meta name="referrer" content="strict-origin-when-cross-origin"/>
+<meta name="referrer" content="no-referrer-when-downgrade"/>
+<meta http-equiv="X-Content-Type-Options" content="nosniff"/>
 
-<link rel="alternate" hreflang="en" href="https://snrgweb.com/contact.html"/>
-<link rel="alternate" hreflang="es" href="https://snrgweb.com/contact.html"/>
-<link rel="alternate" hreflang="x-default" href="https://snrgweb.com/contact.html"/>
+<link rel="alternate" hreflang="en" href="https://snrgweb.com/contact"/>
+<link rel="alternate" hreflang="es" href="https://snrgweb.com/contact"/>
+<link rel="alternate" hreflang="x-default" href="https://snrgweb.com/contact"/>
 
+<!-- Performance Optimization: Preload Critical Font -->
+<link rel="preload" href="https://api.fontshare.com/v2/css?f[]=satoshi@700,900,400&display=swap" as="style">
 <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
 <link rel="dns-prefetch" href="https://api.fontshare.com">
 
@@ -31,7 +34,7 @@
 <meta name="theme-color" content="#FF2A2A"/>
 
 <meta property="og:type" content="website"/>
-<meta property="og:url" content="https://snrgweb.com/contact.html"/>
+<meta property="og:url" content="https://snrgweb.com/contact"/>
 <meta property="og:site_name" content="SNRG WEB"/>
 <meta property="og:title" content="Contact SNRG WEB | High-Performance Web Design"/>
 <meta property="og:description" content="Get a quote for your pro-grade small business website. Fast turnaround, transparent pricing, exceptional quality."/>
@@ -42,7 +45,7 @@
 <meta property="og:locale:alternate" content="es_US"/>
 
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:url" content="https://snrgweb.com/contact.html"/>
+<meta name="twitter:url" content="https://snrgweb.com/contact"/>
 <meta name="twitter:title" content="Contact SNRG WEB | High-Performance Web Design"/>
 <meta name="twitter:description" content="Get a quote for your professional small business website today."/>
 <meta name="twitter:image" content="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png"/>
@@ -62,6 +65,7 @@
         "width": 1024,
         "height": 1024
       },
+      "founder": {"@id": "https://snrgweb.com/#owner"},
       "sameAs": [
         "https://www.linkedin.com/company/snrg-web"
       ]
@@ -98,8 +102,8 @@
     },
     {
       "@type": "ContactPage",
-      "@id": "https://snrgweb.com/contact.html#page",
-      "url": "https://snrgweb.com/contact.html",
+      "@id": "https://snrgweb.com/contact#page",
+      "url": "https://snrgweb.com/contact",
       "name": "Contact SNRG WEB",
       "description": "Get in touch with SNRG WEB to discuss your website project.",
       "provider": {"@id": "https://snrgweb.com/#org"},
@@ -107,17 +111,17 @@
     },
     {
       "@type": "WebPage",
-      "@id": "https://snrgweb.com/contact.html#webpage",
-      "url": "https://snrgweb.com/contact.html",
+      "@id": "https://snrgweb.com/contact#webpage",
+      "url": "https://snrgweb.com/contact",
       "name": "Contact SNRG WEB | High-Performance Web Design",
       "description": "Contact SNRG WEB for professional website design services.",
       "provider": {"@id": "https://snrgweb.com/#org"},
-      "breadcrumb": {"@id": "https://snrgweb.com/contact.html#breadcrumb"},
+      "breadcrumb": {"@id": "https://snrgweb.com/contact#breadcrumb"},
       "inLanguage": ["en", "es"]
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://snrgweb.com/contact.html#breadcrumb",
+      "@id": "https://snrgweb.com/contact#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -129,9 +133,31 @@
           "@type": "ListItem",
           "position": 2,
           "name": "Contact",
-          "item": "https://snrgweb.com/contact.html"
+          "item": "https://snrgweb.com/contact"
         }
       ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://snrgweb.com/#owner",
+      "name": "Bobby Frilot",
+      "jobTitle": "Founder & Lead Web Strategist",
+      "worksFor": {"@id": "https://snrgweb.com/#org"},
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Houston",
+        "addressRegion": "TX",
+        "addressCountry": "US"
+      }
+    },
+    {
+      "@type": "ContactPoint",
+      "@id": "https://snrgweb.com/contact#contactpoint",
+      "telephone": "+1-346-291-6010",
+      "contactType": "customer service",
+      "email": "bobby@snrgweb.com",
+      "areaServed": "US",
+      "availableLanguage": ["English", "Spanish"]
     }
   ]
 }
@@ -609,25 +635,6 @@ body:not(.spanish) [lang="es"]{display:none}
     });
   },{threshold:0.15});
   document.querySelectorAll('.fade-rise-element').forEach(el=>observer.observe(el));
-  </script>
-
-  <script>
-  function switchLang(lang){
-    const btns=document.querySelectorAll('.lang-btn');
-    if(lang==='es'){
-      document.body.classList.add('spanish');
-      btns[0].classList.remove('active');
-      btns[0].setAttribute('aria-current','false');
-      btns[1].classList.add('active');
-      btns[1].setAttribute('aria-current','true');
-    }else{
-      document.body.classList.remove('spanish');
-      btns[0].classList.add('active');
-      btns[0].setAttribute('aria-current','true');
-      btns[1].classList.remove('active');
-      btns[1].setAttribute('aria-current','false');
-    }
-  }
   </script>
 </body>
 </html>
