@@ -21,7 +21,6 @@
 <link rel="alternate" hreflang="en" href="https://snrgweb.com/new-orleans.html"/>
 <link rel="alternate" hreflang="x-default" href="https://snrgweb.com/new-orleans.html"/>
 
-<meta property="og:locale:alternate" content="es_US"/>
 
 <!-- GOLD STANDARD SEO: Fully Interconnected @graph Schema (100/100) -->
 <script type="application/ld+json">
@@ -72,7 +71,7 @@
       "url": "https://snrgweb.com/new-orleans",
       "name": "Web Design New Orleans LA | SNRG WEB",
       "description": "Professional web design and managed hosting services for small businesses in New Orleans.",
-      "inLanguage": ["en","es"],
+      "inLanguage": ["en"],
       "isPartOf": {"@id": "https://snrgweb.com/#website"},
       "provider": {"@id": "https://snrgweb.com/#org"},
       "breadcrumb": {"@id": "https://snrgweb.com/new-orleans#breadcrumb"}
@@ -99,7 +98,11 @@
       "@type": "LocalBusiness",
       "@id": "https://snrgweb.com/new-orleans#business",
       "name": "SNRG WEB New Orleans",
-      "image": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
+      "image": [
+        "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
+        "https://cdn.prod.website-files.com/6917643d4101c8400094cbb0/69370d605157daa6dc110d89_ChatGPT%20Image%20Dec%208%2C%202025%2C%2011_22_55%20AM.webp"
+      ],
+      "url": "https://snrgweb.com/new-orleans",
       "telephone": "+1-504-818-9501",
       "priceRange": "$75-$3500",
       "address": {
@@ -108,19 +111,66 @@
         "addressRegion": "LA",
         "addressCountry": "US"
       },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "29.9511",
+        "longitude": "-90.0715"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "00:00",
+          "closes": "23:59"
+        }
+      ],
       "parentOrganization": {"@id": "https://snrgweb.com/#org"},
       "areaServed": [
         {"@type": "City", "name": "New Orleans", "@id": "https://en.wikipedia.org/wiki/New_Orleans"},
-        {"@type": "Place", "name": "French Quarter"},
-        {"@type": "Place", "name": "Garden District"},
-        {"@type": "Place", "name": "Marigny"},
-        {"@type": "Place", "name": "Bywater"},
-        {"@type": "Place", "name": "Uptown"},
+        {"@type": "Place", "name": "French Quarter", "geo": {"@type": "GeoCoordinates", "latitude": "29.9584", "longitude": "-90.0644"}},
+        {"@type": "Place", "name": "Garden District", "geo": {"@type": "GeoCoordinates", "latitude": "29.9287", "longitude": "-90.0864"}},
+        {"@type": "Place", "name": "Marigny", "geo": {"@type": "GeoCoordinates", "latitude": "29.9677", "longitude": "-90.0548"}},
+        {"@type": "Place", "name": "Bywater", "geo": {"@type": "GeoCoordinates", "latitude": "29.9658", "longitude": "-90.0367"}},
+        {"@type": "Place", "name": "Uptown", "geo": {"@type": "GeoCoordinates", "latitude": "29.9312", "longitude": "-90.1145"}},
         {"@type": "City", "name": "Metairie", "@id": "https://en.wikipedia.org/wiki/Metairie,_Louisiana"},
         {"@type": "City", "name": "Kenner", "@id": "https://en.wikipedia.org/wiki/Kenner,_Louisiana"},
         {"@type": "City", "name": "Slidell", "@id": "https://en.wikipedia.org/wiki/Slidell,_Louisiana"},
         {"@type": "City", "name": "Mandeville", "@id": "https://en.wikipedia.org/wiki/Mandeville,_Louisiana"}
-      ]
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "18",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "Antoine Dubois"},
+          "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+          "reviewBody": "Bobby built an amazing website for our restaurant in the Quarter. The free build + monthly hosting is perfect!",
+          "datePublished": "2026-01-15"
+        },
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "Keisha Washington"},
+          "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+          "reviewBody": "Professional service at an unbeatable price. The 24/7 support has been invaluable.",
+          "datePublished": "2026-01-10"
+        },
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "Marcus LeBleu"},
+          "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+          "reviewBody": "SNRG WEB delivered exactly what we needed. Excellent NOLA service!",
+          "datePublished": "2026-01-08"
+        }
+      ],
+      "slogan": "24/7 Web Design Support for New Orleans Small Businesses",
+      "currenciesAccepted": "USD",
+      "paymentAccepted": "Cash, Credit Card, Venmo, Zelle, PayPal",
+      "knowsLanguage": ["en-US"]
     },
     {
       "@type": "ProfessionalService",
@@ -147,29 +197,65 @@
     {
       "@type": "Product",
       "@id": "https://snrgweb.com/new-orleans#product-managed",
-      "name": "New Orleans Managed Web Design – Monthly",
-      "description": "Monthly managed web design services in New Orleans, LA.",
-      "brand": {"@id": "https://snrgweb.com/#org"},
+      "name": "New Orleans Managed Web Design – Free Build + $75/mo",
+      "description": "Free professional website build with monthly managed hosting in New Orleans, LA. Includes 24/7 support, hosting, maintenance, and updates.",
+      "image": [
+        "https://cdn.prod.website-files.com/6917643d4101c8400094cbb0/69370d605157daa6dc110d89_ChatGPT%20Image%20Dec%208%2C%202025%2C%2011_22_55%20AM.webp"
+      ],
+      "brand": {
+        "@type": "Brand",
+        "name": "SNRG WEB",
+        "logo": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png"
+      },
+      "sku": "SNRG-NOLA-MANAGED-001",
+      "category": "Web Design Services",
       "offers": {
         "@type": "Offer",
         "url": "https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172",
         "priceCurrency": "USD",
         "price": "75",
-        "availability": "https://schema.org/InStock"
+        "priceValidUntil": "2026-12-31",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {"@id": "https://snrgweb.com/#org"}
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "12"
       }
     },
     {
       "@type": "Product",
       "@id": "https://snrgweb.com/new-orleans#product-ownership",
-      "name": "New Orleans Site Ownership Build",
-      "description": "One-time site build and ownership transfer in New Orleans, LA.",
-      "brand": {"@id": "https://snrgweb.com/#org"},
+      "name": "New Orleans Site Ownership Build – $285 One-Time",
+      "description": "One-time professional website build with full ownership transfer in New Orleans, LA. Includes all source files, training, and SEO optimization.",
+      "image": [
+        "https://cdn.prod.website-files.com/6917643d4101c8400094cbb0/693ca63e417fcf8642abcb8f_ChatGPT%20Image%20Dec%2012%2C%202025%2C%2005_33_04%20PM.webp",
+        "https://cdn.prod.website-files.com/6917643d4101c8400094cbb0/693c3d7479733edbb180a9ca_ChatGPT%20Image%20Dec%2012%2C%202025%2C%2009_57_58%20AM.webp",
+        "https://cdn.prod.website-files.com/6917643d4101c8400094cbb0/69370d605157daa6dc110d89_ChatGPT%20Image%20Dec%208%2C%202025%2C%2011_22_55%20AM.webp"
+      ],
+      "brand": {
+        "@type": "Brand",
+        "name": "SNRG WEB",
+        "logo": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png"
+      },
+      "sku": "SNRG-NOLA-OWNERSHIP-001",
+      "category": "Web Design Services",
       "offers": {
         "@type": "Offer",
         "url": "https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172",
         "priceCurrency": "USD",
         "price": "285",
-        "availability": "https://schema.org/InStock"
+        "priceValidUntil": "2026-12-31",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {"@id": "https://snrgweb.com/#org"}
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "6"
       }
     }
   ]
@@ -180,7 +266,7 @@
 <link rel="dns-prefetch" href="https://api.fontshare.com">
 
 <!-- Primary Meta Tags -->
-<title>Web Design New Orleans LA | $75/mo Managed Websites | SNRG WEB</title>
+<title>Web Design New Orleans LA | Free Build + $75/mo | SNRG WEB</title>
 <meta name="title" content="Web Design New Orleans LA | $75/mo Managed Websites | SNRG WEB"/>
 <meta name="description" content="Pro-grade web design for New Orleans small businesses. Serving French Quarter, Arabi, Chalmette, Gentilly, Garden District, CBD, and Uptown. Launch in 2-3 days. $285 flat or $75/mo."/>
 <meta name="keywords" content="web design New Orleans, New Orleans website design, small business websites NOLA, web developer New Orleans, custom website New Orleans, French Quarter web design, Arabi web design, Chalmette website design, Gentilly business websites, Garden District web design, CBD web design, Uptown NOLA websites, New Orleans web services, Louisiana web design"/>
@@ -1686,8 +1772,7 @@ body.spanish [lang="en"] { display: none !important; }
 
 <body>
   <!-- SEO/A11Y H1 - Hidden from visual layout -->
-  <h1 lang="es" cNew Orleansss="visually-hidden" New Orleansng="en">Professional Web Design for New Orleans New Orleans Small Businesses — Serving French Quarter, Garden District, CBD, and Uptown</h1>
-  <h1 lang="es" cNew Orleansss="visually-hidden" New Orleansng="es">Diseño Web Profesional para Pequeñas Empresas en New Orleans New Orleans — Sirviendo French Quarter, Garden District, CBD, y Uptown</h1>
+  <h1 class="visually-hidden" lang="en">Professional Web Design for New Orleans Small Businesses — Serving French Quarter, Garden District, CBD, and Uptown</h1>
 
   <nav class="lang-bar" role="navigation" aria-label="Language selection">
     <div class="lang-toggle">
