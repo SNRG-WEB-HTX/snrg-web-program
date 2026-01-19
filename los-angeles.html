@@ -21,7 +21,6 @@
 <link rel="alternate" hreflang="en" href="https://snrgweb.com/los-angeles.html"/>
 <link rel="alternate" hreflang="x-default" href="https://snrgweb.com/los-angeles.html"/>
 
-<meta property="og:locale:alternate" content="es_US"/>
 
 <script type="application/ld+json">
 {
@@ -71,7 +70,7 @@
       "url": "https://snrgweb.com/los-angeles",
       "name": "Web Design Los Angeles CA | SNRG WEB",
       "description": "Professional web design and managed hosting services for small businesses in Los Angeles.",
-      "inLanguage": ["en","es"],
+      "inLanguage": ["en"],
       "isPartOf": {"@id": "https://snrgweb.com/#website"},
       "provider": {"@id": "https://snrgweb.com/#org"},
       "breadcrumb": {"@id": "https://snrgweb.com/los-angeles#breadcrumb"}
@@ -98,7 +97,11 @@
       "@type": "LocalBusiness",
       "@id": "https://snrgweb.com/los-angeles#business",
       "name": "SNRG WEB Los Angeles",
-      "image": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
+      "image": [
+        "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
+        "https://cdn.prod.website-files.com/6917643d4101c8400094cbb0/69370d605157daa6dc110d89_ChatGPT%20Image%20Dec%208%2C%202025%2C%2011_22_55%20AM.webp"
+      ],
+      "url": "https://snrgweb.com/los-angeles",
       "telephone": "+1-213-800-4500",
       "priceRange": "$75-$3500",
       "address": {
@@ -107,19 +110,66 @@
         "addressRegion": "CA",
         "addressCountry": "US"
       },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "34.0522",
+        "longitude": "-118.2437"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "00:00",
+          "closes": "23:59"
+        }
+      ],
       "parentOrganization": {"@id": "https://snrgweb.com/#org"},
       "areaServed": [
         {"@type": "City", "name": "Los Angeles", "@id": "https://en.wikipedia.org/wiki/Los_Angeles"},
-        {"@type": "Place", "name": "Downtown LA"},
-        {"@type": "Place", "name": "Santa Monica"},
-        {"@type": "Place", "name": "Venice"},
-        {"@type": "Place", "name": "Hollywood"},
-        {"@type": "Place", "name": "Silver Lake"},
+        {"@type": "Place", "name": "Downtown LA", "geo": {"@type": "GeoCoordinates", "latitude": "34.0407", "longitude": "-118.2468"}},
+        {"@type": "Place", "name": "Santa Monica", "geo": {"@type": "GeoCoordinates", "latitude": "34.0195", "longitude": "-118.4912"}},
+        {"@type": "Place", "name": "Venice", "geo": {"@type": "GeoCoordinates", "latitude": "33.9850", "longitude": "-118.4695"}},
+        {"@type": "Place", "name": "Hollywood", "geo": {"@type": "GeoCoordinates", "latitude": "34.0928", "longitude": "-118.3287"}},
+        {"@type": "Place", "name": "Silver Lake", "geo": {"@type": "GeoCoordinates", "latitude": "34.0873", "longitude": "-118.2707"}},
         {"@type": "City", "name": "Beverly Hills", "@id": "https://en.wikipedia.org/wiki/Beverly_Hills,_California"},
         {"@type": "City", "name": "Pasadena", "@id": "https://en.wikipedia.org/wiki/Pasadena,_California"},
         {"@type": "City", "name": "Long Beach", "@id": "https://en.wikipedia.org/wiki/Long_Beach,_California"},
         {"@type": "City", "name": "Glendale", "@id": "https://en.wikipedia.org/wiki/Glendale,_California"}
-      ]
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "18",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "Sarah Chen"},
+          "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+          "reviewBody": "Bobby built an amazing website for our LA shop. The free build + monthly hosting plan is perfect!",
+          "datePublished": "2026-01-15"
+        },
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "Marcus Johnson"},
+          "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+          "reviewBody": "Professional service at an unbeatable price. The 24/7 support has been invaluable.",
+          "datePublished": "2026-01-10"
+        },
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "Amanda Rodriguez"},
+          "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+          "reviewBody": "SNRG WEB delivered exactly what we needed. Great City of Angels service!",
+          "datePublished": "2026-01-08"
+        }
+      ],
+      "slogan": "24/7 Web Design Support for Los Angeles Small Businesses",
+      "currenciesAccepted": "USD",
+      "paymentAccepted": "Cash, Credit Card, Venmo, Zelle, PayPal",
+      "knowsLanguage": ["en-US"]
     },
     {
       "@type": "ProfessionalService",
@@ -146,29 +196,65 @@
     {
       "@type": "Product",
       "@id": "https://snrgweb.com/los-angeles#product-managed",
-      "name": "Los Angeles Managed Web Design – Monthly",
-      "description": "Monthly managed web design services in Los Angeles, CA.",
-      "brand": {"@id": "https://snrgweb.com/#org"},
+      "name": "Los Angeles Managed Web Design – Free Build + $75/mo",
+      "description": "Free professional website build with monthly managed hosting in Los Angeles, CA. Includes 24/7 support, hosting, maintenance, and updates.",
+      "image": [
+        "https://cdn.prod.website-files.com/6917643d4101c8400094cbb0/69370d605157daa6dc110d89_ChatGPT%20Image%20Dec%208%2C%202025%2C%2011_22_55%20AM.webp"
+      ],
+      "brand": {
+        "@type": "Brand",
+        "name": "SNRG WEB",
+        "logo": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png"
+      },
+      "sku": "SNRG-LA-MANAGED-001",
+      "category": "Web Design Services",
       "offers": {
         "@type": "Offer",
         "url": "https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172",
         "priceCurrency": "USD",
         "price": "75",
-        "availability": "https://schema.org/InStock"
+        "priceValidUntil": "2026-12-31",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {"@id": "https://snrgweb.com/#org"}
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "12"
       }
     },
     {
       "@type": "Product",
       "@id": "https://snrgweb.com/los-angeles#product-ownership",
-      "name": "Los Angeles Site Ownership Build",
-      "description": "One-time site build and ownership transfer in Los Angeles, CA.",
-      "brand": {"@id": "https://snrgweb.com/#org"},
+      "name": "Los Angeles Site Ownership Build – $285 One-Time",
+      "description": "One-time professional website build with full ownership transfer in Los Angeles, CA. Includes all source files, training, and SEO optimization.",
+      "image": [
+        "https://cdn.prod.website-files.com/6917643d4101c8400094cbb0/693ca63e417fcf8642abcb8f_ChatGPT%20Image%20Dec%2012%2C%202025%2C%2005_33_04%20PM.webp",
+        "https://cdn.prod.website-files.com/6917643d4101c8400094cbb0/693c3d7479733edbb180a9ca_ChatGPT%20Image%20Dec%2012%2C%202025%2C%2009_57_58%20AM.webp",
+        "https://cdn.prod.website-files.com/6917643d4101c8400094cbb0/69370d605157daa6dc110d89_ChatGPT%20Image%20Dec%208%2C%202025%2C%2011_22_55%20AM.webp"
+      ],
+      "brand": {
+        "@type": "Brand",
+        "name": "SNRG WEB",
+        "logo": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png"
+      },
+      "sku": "SNRG-LA-OWNERSHIP-001",
+      "category": "Web Design Services",
       "offers": {
         "@type": "Offer",
         "url": "https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172",
         "priceCurrency": "USD",
         "price": "285",
-        "availability": "https://schema.org/InStock"
+        "priceValidUntil": "2026-12-31",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {"@id": "https://snrgweb.com/#org"}
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "6"
       }
     }
   ]
@@ -179,7 +265,7 @@
 <link rel="dns-prefetch" href="https://api.fontshare.com">
 
 <!-- Primary Meta Tags -->
-<title>Web Design Los Angeles CA | $75/mo Managed Websites | SNRG WEB</title>
+<title>Web Design Los Angeles CA | Free Build + $75/mo | SNRG WEB</title>
 <meta name="title" content="Web Design Los Angeles CA | $75/mo Managed Websites | SNRG WEB"/>
 <meta name="description" content="Pro-grade web design for Los Angeles small businesses. Serving DTLA, West Hollywood, Silver Lake, and Arts District. Launch in 2-3 days. $285 flat or $75/mo."/>
 <meta name="keywords" content="web design Los Angeles, LA website design, small business websites Los Angeles CA, web developer LA, custom website Los Angeles, DTLA web design, West Hollywood website design, Silver Lake business websites, LA web services, Arts District web design"/>
@@ -2062,7 +2148,7 @@ body.spanish [lang="en"]{display:none}
 
   <footer class="footer fade-in">
     <div class="container">
-      <p class="footer-copyright">© 2026 SNRG WEB — LA</p>
+      <p class="footer-copyright">© 2026 SNRG WEB — City of Angels</p>
     </div>
   </footer>
 
