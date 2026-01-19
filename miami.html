@@ -2210,5 +2210,65 @@ body.spanish [lang="en"]{display:none}
   else{ initNeonUnderline(); }
 })();
 </script>
+<script>
+/* SNRG UNDERLINE OBSERVER */
+(function(){
+  function onReady(fn){
+    if(document.readyState === "loading") document.addEventListener("DOMContentLoaded", fn);
+    else fn();
+  }
+
+  onReady(function(){
+    var el = document.getElementById("pricedDifferent");
+    if(!el) return;
+
+    // Reduced motion: show instantly (no scroll timing surprises)
+    try{
+      if(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches){
+        el.classList.add("animate");
+        return;
+      }
+    }catch(e){}
+
+    var triggered = false;
+    function trigger(){
+      if(triggered) return;
+      triggered = true;
+      requestAnimationFrame(function(){
+        setTimeout(function(){ el.classList.add("animate"); }, 120);
+      });
+    }
+
+    var section = document.getElementById("pricing") || (el.closest && el.closest("section")) || el;
+
+    if("IntersectionObserver" in window){
+      var io = new IntersectionObserver(function(entries){
+        for(var i=0;i<entries.length;i++){
+          if(entries[i].isIntersecting){
+            trigger();
+            io.disconnect();
+            break;
+          }
+        }
+      }, { root: null, rootMargin: "0px 0px -25% 0px", threshold: 0.18 });
+      io.observe(section);
+    } else {
+      function check(){
+        if(triggered) return;
+        var r = section.getBoundingClientRect();
+        if(r.top < (window.innerHeight * 0.78) && r.bottom > 0){
+          trigger();
+          window.removeEventListener("scroll", check);
+          window.removeEventListener("resize", check);
+        }
+      }
+      window.addEventListener("scroll", check, {passive:true});
+      window.addEventListener("resize", check);
+      check();
+    }
+  });
+})();
+/* END SNRG UNDERLINE OBSERVER */
+</script>
 </body>
 </html>
