@@ -45,11 +45,9 @@
     },
     {
       "@type": "WebSite",
-      "@id": "https://snrgweb.com/atlanta#website",
-      "url": "https://snrgweb.com/atlanta",
-      "name": "SNRG WEB Atlanta",
-      "publisher": {"@id": "https://snrgweb.com/#org"},
-      "inLanguage": ["en", "es"]
+      "@id": "https://snrgweb.com/#website",
+      "url": "https://snrgweb.com/",
+      "name": "SNRG WEB"
     },
     {
       "@type": "WebPage",
@@ -58,24 +56,26 @@
       "name": "Web Design Atlanta GA | SNRG WEB",
       "about": {"@id": "https://snrgweb.com/atlanta#business"},
       "description": "Professional web design and managed hosting services for small businesses in Atlanta.",
-      "isPartOf": {"@id": "https://snrgweb.com/atlanta#website"},
-      "breadcrumb": {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://snrgweb.com/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Atlanta",
-            "item": "https://snrgweb.com/atlanta"
-          }
-        ]
-      }
+      "isPartOf": {"@id": "https://snrgweb.com/#website"},
+      "breadcrumb": {"@id": "https://snrgweb.com/atlanta#breadcrumb"}
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://snrgweb.com/atlanta#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://snrgweb.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Atlanta",
+          "item": "https://snrgweb.com/atlanta"
+        }
+      ]
     },
     {
       "@type": "Person",
@@ -1682,6 +1682,39 @@ body.spanish [lang="en"]{display:none}
   }
 }
 
+
+/* === NEON RED UNDERLINE ANIMATION === */
+.priced-different {
+  position: relative;
+  display: inline-block;
+}
+.priced-different::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #FF0033, #FF1744);
+  box-shadow: 
+    0 0 8px #FF0033, 
+    0 0 16px #FF0033, 
+    0 0 24px #FF1744,
+    0 0 32px #FF1744;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0s;
+  border-radius: 2px;
+}
+.priced-different.animate::after {
+  animation: neonUnderline 2.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+@keyframes neonUnderline {
+  0% { transform: scaleX(0); opacity: 0; }
+  10% { opacity: 1; }
+  100% { transform: scaleX(1); opacity: 1; }
+}
+
 </style>
 
 
@@ -1763,7 +1796,7 @@ body.spanish [lang="en"]{display:none}
 
   <section class="pricing fade-in" id="pricing">
     <div class="container">
-      <h2 class="section-title pricing-hero" lang="en">Built Different.<br>Priced Different.</h2>
+      <h2 class="section-title pricing-hero" lang="en">Built Different.<br><span class="priced-different" id="pricedDifferent">Priced Different.</span></h2>
       <h2 class="section-title pricing-hero" lang="es">Construido Diferente.<br>Precio Diferente.</h2>
       
       <div class="pricing-grid">
@@ -2061,7 +2094,7 @@ body.spanish [lang="en"]{display:none}
 
   <footer class="footer fade-in">
     <div class="container">
-      <p class="footer-copyright">© 2026 SNRG WEB — The A</p>
+      <p class="footer-copyright">© 2026 SNRG WEB — The City Too Busy to Hate</p>
     </div>
   </footer>
 
@@ -2163,5 +2196,64 @@ body.spanish [lang="en"]{display:none}
   });
   </script>
 
+
+<script>
+(function(){
+  function initNeonUnderline(){
+    var el = document.getElementById("pricedDifferent");
+    if(!el) return;
+
+    // Respect reduced motion
+    var reduce = false;
+    try {
+      reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    } catch(e) {}
+    if(reduce){
+      el.classList.add("animate");
+      return;
+    }
+
+    // Trigger on scroll into view (once)
+    var triggered = false;
+    function trigger(){
+      if(triggered) return;
+      triggered = true;
+      el.classList.add("animate");
+    }
+
+    if('IntersectionObserver' in window){
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          if(entry.isIntersecting){
+            trigger();
+            io.disconnect();
+          }
+        });
+      }, { root: null, rootMargin: '0px 0px -20% 0px', threshold: 0.15 });
+      io.observe(el);
+    } else {
+      // Fallback: simple scroll check
+      function onScroll(){
+        if(triggered) return;
+        var r = el.getBoundingClientRect();
+        if(r.top < (window.innerHeight * 0.8) && r.bottom > 0){
+          trigger();
+          window.removeEventListener('scroll', onScroll);
+          window.removeEventListener('resize', onScroll);
+        }
+      }
+      window.addEventListener('scroll', onScroll, {passive:true});
+      window.addEventListener('resize', onScroll);
+      onScroll();
+    }
+  }
+
+  if(document.readyState === "loading"){
+    document.addEventListener("DOMContentLoaded", initNeonUnderline);
+  } else {
+    initNeonUnderline();
+  }
+})();
+</script>
 </body>
 </html>
