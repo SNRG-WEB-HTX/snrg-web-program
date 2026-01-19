@@ -41,7 +41,9 @@
         "width": 1024,
         "height": 1024
       },
-      "founder": {"@id": "https://snrgweb.com/#owner"},
+      "founder": {
+        "@id": "https://snrgweb.com/#owner"
+      },
       "sameAs": [
         "https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share",
         "https://github.com/SNRG-WEB-HTX"
@@ -52,25 +54,44 @@
       "@id": "https://snrgweb.com/#website",
       "url": "https://snrgweb.com/",
       "name": "SNRG WEB",
-      "publisher": {"@id": "https://snrgweb.com/#org"},
-      "inLanguage": ["en", "es"]
+      "publisher": {
+        "@id": "https://snrgweb.com/#org"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://snrgweb.com/?s={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      },
+      "inLanguage": [
+        "en",
+        "es"
+      ]
     },
     {
       "@type": "WebPage",
       "@id": "https://snrgweb.com/#webpage",
       "url": "https://snrgweb.com/",
       "name": "High-Performance Web Design | SNRG WEB",
-      "about": {"@id": "https://snrgweb.com/#org"},
+      "about": {
+        "@id": "https://snrgweb.com/#org"
+      },
       "description": "Professional web design and managed hosting services for small businesses.",
-      "isPartOf": {"@id": "https://snrgweb.com/#website"},
+      "isPartOf": {
+        "@id": "https://snrgweb.com/#website"
+      },
       "breadcrumb": {
         "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://snrgweb.com/"
-        }]
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://snrgweb.com/"
+          }
+        ]
       }
     },
     {
@@ -78,7 +99,9 @@
       "@id": "https://snrgweb.com/#owner",
       "name": "Bobby Frilot",
       "jobTitle": "Lead Web Strategist",
-      "worksFor": {"@id": "https://snrgweb.com/#org"},
+      "worksFor": {
+        "@id": "https://snrgweb.com/#org"
+      },
       "sameAs": [
         "https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172",
         "https://github.com/SNRG-WEB-HTX"
@@ -99,36 +122,100 @@
         "addressRegion": "TX",
         "addressCountry": "US"
       },
-      "employee": {"@id": "https://snrgweb.com/#owner"},
+      "employee": {
+        "@id": "https://snrgweb.com/#owner"
+      },
       "makesOffer": [
-        {"@id": "https://snrgweb.com/#service"},
-        {"@id": "https://snrgweb.com/#product-managed"},
-        {"@id": "https://snrgweb.com/#product-ownership"}
+        {
+          "@id": "https://snrgweb.com/#service"
+        },
+        {
+          "@id": "https://snrgweb.com/#product-managed"
+        },
+        {
+          "@id": "https://snrgweb.com/#product-ownership"
+        }
       ],
       "areaServed": [
-        {"@type": "City", "name": "Houston", "@id": "https://en.wikipedia.org/wiki/Houston"},
-        {"@type": "City", "name": "New Orleans", "@id": "https://en.wikipedia.org/wiki/New_Orleans"},
-        {"@type": "City", "name": "Atlanta", "@id": "https://en.wikipedia.org/wiki/Atlanta"},
-        {"@type": "City", "name": "Austin", "@id": "https://en.wikipedia.org/wiki/Austin,_Texas"},
-        {"@type": "City", "name": "Dallas", "@id": "https://en.wikipedia.org/wiki/Dallas"},
-        {"@type": "City", "name": "Phoenix", "@id": "https://en.wikipedia.org/wiki/Phoenix,_Arizona"},
-        {"@type": "City", "name": "Miami", "@id": "https://en.wikipedia.org/wiki/Miami"},
-        {"@type": "City", "name": "Denver", "@id": "https://en.wikipedia.org/wiki/Denver"},
-        {"@type": "City", "name": "Charlotte", "@id": "https://en.wikipedia.org/wiki/Charlotte,_North_Carolina"},
-        {"@type": "City", "name": "Nashville", "@id": "https://en.wikipedia.org/wiki/Nashville,_Tennessee"},
-        {"@type": "City", "name": "Raleigh", "@id": "https://en.wikipedia.org/wiki/Raleigh,_North_Carolina"},
-        {"@type": "City", "name": "Indianapolis", "@id": "https://en.wikipedia.org/wiki/Indianapolis"}
+        {
+          "@type": "City",
+          "name": "Houston",
+          "@id": "https://en.wikipedia.org/wiki/Houston"
+        },
+        {
+          "@type": "City",
+          "name": "New Orleans",
+          "@id": "https://en.wikipedia.org/wiki/New_Orleans"
+        },
+        {
+          "@type": "City",
+          "name": "Atlanta",
+          "@id": "https://en.wikipedia.org/wiki/Atlanta"
+        },
+        {
+          "@type": "City",
+          "name": "Austin",
+          "@id": "https://en.wikipedia.org/wiki/Austin,_Texas"
+        },
+        {
+          "@type": "City",
+          "name": "Dallas",
+          "@id": "https://en.wikipedia.org/wiki/Dallas"
+        },
+        {
+          "@type": "City",
+          "name": "Phoenix",
+          "@id": "https://en.wikipedia.org/wiki/Phoenix,_Arizona"
+        },
+        {
+          "@type": "City",
+          "name": "Miami",
+          "@id": "https://en.wikipedia.org/wiki/Miami"
+        },
+        {
+          "@type": "City",
+          "name": "Denver",
+          "@id": "https://en.wikipedia.org/wiki/Denver"
+        },
+        {
+          "@type": "City",
+          "name": "Charlotte",
+          "@id": "https://en.wikipedia.org/wiki/Charlotte,_North_Carolina"
+        },
+        {
+          "@type": "City",
+          "name": "Nashville",
+          "@id": "https://en.wikipedia.org/wiki/Nashville,_Tennessee"
+        },
+        {
+          "@type": "City",
+          "name": "Raleigh",
+          "@id": "https://en.wikipedia.org/wiki/Raleigh,_North_Carolina"
+        },
+        {
+          "@type": "City",
+          "name": "Indianapolis",
+          "@id": "https://en.wikipedia.org/wiki/Indianapolis"
+        }
       ]
     },
     {
       "@type": "Service",
       "@id": "https://snrgweb.com/#service",
       "serviceType": "Web Design and Management",
-      "provider": {"@id": "https://snrgweb.com/#org"},
-      "areaServed": {"@id": "https://snrgweb.com/#business"},
+      "provider": {
+        "@id": "https://snrgweb.com/#org"
+      },
+      "areaServed": {
+        "@id": "https://snrgweb.com/#business"
+      },
       "offers": [
-        {"@id": "https://snrgweb.com/#product-managed"},
-        {"@id": "https://snrgweb.com/#product-ownership"}
+        {
+          "@id": "https://snrgweb.com/#product-managed"
+        },
+        {
+          "@id": "https://snrgweb.com/#product-ownership"
+        }
       ]
     },
     {
@@ -137,8 +224,13 @@
       "name": "Fully Managed Website Service",
       "image": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
       "description": "Professional custom website design with ongoing support, hosting, and unlimited updates. Launch in 2-3 days.",
-      "brand": { "@type": "Brand", "name": "SNRG WEB" },
-      "manufacturer": {"@id": "https://snrgweb.com/#org"},
+      "brand": {
+        "@type": "Brand",
+        "name": "SNRG WEB"
+      },
+      "manufacturer": {
+        "@id": "https://snrgweb.com/#org"
+      },
       "offers": {
         "@type": "Offer",
         "url": "https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share",
@@ -147,7 +239,9 @@
         "availability": "https://schema.org/InStock",
         "itemCondition": "https://schema.org/NewCondition",
         "priceValidUntil": "2026-12-31",
-        "seller": {"@id": "https://snrgweb.com/#business"}
+        "seller": {
+          "@id": "https://snrgweb.com/#business"
+        }
       }
     },
     {
@@ -156,8 +250,13 @@
       "name": "Website Ownership - One-Time Purchase",
       "image": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
       "description": "One-time purchase with full ownership of custom designed website. All source files included. Launch in 2-3 days.",
-      "brand": { "@type": "Brand", "name": "SNRG WEB" },
-      "manufacturer": {"@id": "https://snrgweb.com/#org"},
+      "brand": {
+        "@type": "Brand",
+        "name": "SNRG WEB"
+      },
+      "manufacturer": {
+        "@id": "https://snrgweb.com/#org"
+      },
       "offers": {
         "@type": "Offer",
         "url": "https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share",
@@ -166,7 +265,9 @@
         "availability": "https://schema.org/InStock",
         "itemCondition": "https://schema.org/NewCondition",
         "priceValidUntil": "2026-12-31",
-        "seller": {"@id": "https://snrgweb.com/#business"}
+        "seller": {
+          "@id": "https://snrgweb.com/#business"
+        }
       }
     }
   ]
@@ -181,8 +282,8 @@
 <!-- Primary Meta Tags -->
 <title>High-Performance Web Design | $75/mo Managed Sites | SNRG WEB</title>
 <meta name="title" content="High-Performance Web Design | $75/mo Managed Sites | SNRG WEB"/>
-<meta name="description" content="Affordable, pro-grade web design for small businesses in Houston, New Orleans, Atlanta, Phoenix, and beyond. Launch in 2-3 days with 10/10 SEO performance."/>
-<meta name="keywords" content="affordable website design, small business web design, professional website, custom website design, website design services, web development, website builder, responsive web design, SEO website design, Houston web design, Atlanta web design, Phoenix web design, New Orleans website design, Nashville web design, managed website services, national web design"/>
+<meta name="description" content="High-performance web design for small businesses nationwide. Free build, fast launch in 2–3 days, managed hosting and updates. Serving Houston, New Orleans, Atlanta, Austin, Dallas, Phoenix, Miami, Denver, Charlotte, Nashville, Raleigh, Indianapolis and more."/>
+<meta name="keywords" content="affordable website design, small business web design, professional website, custom website design, website design services, web development, responsive web design, SEO website design, Houston web design, New Orleans web design, Atlanta web design, Austin web design, Dallas web design, Phoenix web design, Miami web design, Denver web design, Charlotte web design, Nashville web design, Raleigh web design, Indianapolis web design, national web design"/>
 <meta name="author" content="SNRG WEB"/>
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"/>
 <meta name="theme-color" content="#FF2A2A"/>
@@ -191,7 +292,7 @@
 <meta property="og:url" content="https://snrgweb.com/"/>
 <meta property="og:site_name" content="SNRG WEB"/>
 <meta property="og:title" content="High-Performance Web Design | $75/mo Managed Sites"/>
-<meta property="og:description" content="Pro-grade web design for small businesses nationwide. Free website build, fast launch in 2-3 days, hosting & maintenance. Managed plans from $75/month."/>
+<meta property="og:description" content="High-performance web design for small businesses nationwide. Free build, fast launch in 2–3 days, managed hosting and updates."/>
 <meta property="og:image" content="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png"/>
 <meta property="og:image:width" content="1024"/>
 <meta property="og:image:height" content="1024"/>
@@ -201,12 +302,47 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:url" content="https://snrgweb.com/"/>
 <meta name="twitter:title" content="High-Performance Web Design | $75/mo Managed Sites"/>
-<meta name="twitter:description" content="Pro-grade web design for small businesses nationwide. Free website build, fast launch in 2-3 days, hosting & maintenance. Managed plans from $75/month."/>
+<meta name="twitter:description" content="High-performance web design for small businesses nationwide. Free build, fast launch in 2–3 days, managed hosting and updates."/>
 <meta name="twitter:image" content="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png"/>
 
 <link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,900,500,400,800,600&display=swap" rel="stylesheet">
 
+
+
+
+<script>
+/* === SNRG ULTRA-SAFE PERSISTENCE ENGINE (HEAD-ONLY, RELOAD-BASED) === */
+(function() {
+  const KEY = "snrg_lang";
+  const saved = localStorage.getItem(KEY) || "en";
+
+  function apply(l){
+    document.documentElement.lang = (l === "es") ? "es" : "en";
+    const tick = () => {
+      if (document.body) {
+        document.body.classList.toggle("spanish", l === "es");
+        document.querySelectorAll(".lang-btn").forEach(b => {
+          const oc = (b.getAttribute("onclick") || "").toLowerCase();
+          const isEs = oc.includes("'es'") || oc.includes('"es"') || oc.includes("es");
+          b.classList.toggle("active", (l === "es" && isEs) || (l === "en" && !isEs));
+        });
+      } else {
+        requestAnimationFrame(tick);
+      }
+    };
+    tick();
+  }
+
+  apply(saved);
+
+  window.switchLang = function(l) {
+    localStorage.setItem(KEY, (l === "es") ? "es" : "en");
+    location.reload(); // animation-safe
+  };
+})();
+</script>
 <style>
+/* Houston underline injected */
 :root{
   --pearl:#F6F7F8;
   --white:#FFFFFF;
@@ -581,12 +717,29 @@ body.spanish [lang="en"]{display:none}
   margin:0 auto;
   filter:drop-shadow(0 16px 48px rgba(0,0,0,0.2));
   opacity:0;
-  animation:snrgLogoTunnel 1100ms cubic-bezier(0.16,1,0.3,1) both;
+  transform:scale(0.3) translateY(-100px) translateZ(-500px);
+  animation:logoTunnelEntrance 1.6s cubic-bezier(0.16,1,0.3,1) forwards;
   background:transparent !important;
   isolation:isolate;
-  will-change:transform, opacity, filter;
 }
 
+@keyframes logoTunnelEntrance{
+  0%{
+    opacity:0;
+    transform:scale(0.3) translateY(-100px) translateZ(-500px);
+    filter:drop-shadow(0 0 0 rgba(0,0,0,0)) blur(12px) brightness(0.5);
+  }
+  50%{
+    opacity:0.7;
+    transform:scale(0.85) translateY(-20px) translateZ(-100px);
+    filter:drop-shadow(0 8px 24px rgba(0,0,0,0.15)) blur(2px) brightness(0.85);
+  }
+  100%{
+    opacity:1;
+    transform:scale(1) translateY(0) translateZ(0);
+    filter:drop-shadow(0 16px 48px rgba(0,0,0,0.2)) blur(0) brightness(1);
+  }
+}
 
 .logo-mask{
   position: relative;
@@ -1581,6 +1734,44 @@ body.spanish [lang="en"]{display:none}
 }
 
 
+/* Subtle cinematic: fade + micro-zoom + lift, with ease-out. Keeps final scale at 1. */
+  0% {
+    opacity: 0;
+    transform: translateY(24px) scale(0.94);
+    filter: blur(6px) saturate(0.9);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-4px) scale(1.02);
+    filter: blur(1.5px) saturate(1);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0) saturate(1);
+  }
+}
+
+/* Apply animation to the hero logo (does not affect sizing rules) */
+.hero-logo {
+  will-change: transform, opacity, filter;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .hero-logo {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+}
+
+
+/* Neutralize any legacy transform end-states so the animation lands cleanly */
+.hero-logo { transform-origin: center center; }
+
+
 /* === SIGNATURE HERO LOGO ENTRANCE (All Devices) === */
 /* Dramatic but premium: depth-tunnel in + light sweep + settle */
 @keyframes snrgLogoTunnel {
@@ -1638,83 +1829,46 @@ body.spanish [lang="en"]{display:none}
   }
 }
 
-/* === NEON RED UNDERLINE ANIMATION === */
-.priced-different {
+
+
+/* === SNRG SIGNATURE UNDERLINE (BRAND RED, CLASSY, NO LAYOUT SHIFT) === */
+:root{
+  --snrg-underline-red: var(--red, #FF2A2A);
+}
+.snrg-underline{
   position: relative;
-  display: inline-block;
+  display: inline-block;      /* does NOT change heading alignment */
+  vertical-align: baseline;
+  white-space: nowrap;        /* keeps underline locked to the phrase */
 }
-
-.priced-different::after {
-  content: '';
+.snrg-underline::after{
+  content: "";
   position: absolute;
-  bottom: -4px;
   left: 0;
-  width: 100%;
+  right: 0;
+  bottom: -0.14em;            /* tight to baseline without affecting line-height */
   height: 3px;
-  background: linear-gradient(90deg, #FF0033, #FF1744);
-  box-shadow: 
-    0 0 8px #FF0033, 
-    0 0 16px #FF0033, 
-    0 0 24px #FF1744,
-    0 0 32px #FF1744;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0s;
   border-radius: 2px;
+  background: var(--snrg-underline-red);
+  transform-origin: left center;
+  transform: scaleX(0);
+  opacity: 0.98;
+  will-change: transform;
 }
-
-.priced-different.animate::after {
-  animation: neonUnderline 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+.snrg-underline.is-animating::after{
+  animation: snrgUnderlineDraw 2.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
-
-@keyframes neonUnderline {
-  0% {
-    transform: scaleX(0);
-    opacity: 0;
-  }
-  10% {
-    opacity: 1;
-  }
-  100% {
-    transform: scaleX(1);
-    opacity: 1;
-  }
+@keyframes snrgUnderlineDraw{
+  0%{ transform: scaleX(0); }
+  80%{ transform: scaleX(1); }
+  92%{ transform: scaleX(1.03); }
+  100%{ transform: scaleX(1); }
 }
-
+@media (prefers-reduced-motion: reduce){
+  .snrg-underline::after{ transform: scaleX(1); }
+  .snrg-underline.is-animating::after{ animation: none !important; }
+}
 </style>
-
-
-<script>
-/* === SNRG ULTRA-SAFE PERSISTENCE ENGINE (HEAD-ONLY, RELOAD-BASED) === */
-(function() {
-  const KEY = "snrg_lang";
-  const saved = localStorage.getItem(KEY) || "en";
-
-  function apply(l){
-    document.documentElement.lang = (l === "es") ? "es" : "en";
-    const tick = () => {
-      if (document.body) {
-        document.body.classList.toggle("spanish", l === "es");
-        document.querySelectorAll(".lang-btn").forEach(b => {
-          const oc = (b.getAttribute("onclick") || "").toLowerCase();
-          const isEs = oc.includes("'es'") || oc.includes('"es"') || oc.includes("es");
-          b.classList.toggle("active", (l === "es" && isEs) || (l === "en" && !isEs));
-        });
-      } else {
-        requestAnimationFrame(tick);
-      }
-    };
-    tick();
-  }
-
-  apply(saved);
-
-  window.switchLang = function(l) {
-    localStorage.setItem(KEY, (l === "es") ? "es" : "en");
-    location.reload(); // animation-safe
-  };
-})();
-</script>
 </head>
 
 <body>
@@ -1762,7 +1916,7 @@ body.spanish [lang="en"]{display:none}
 
   <section class="pricing fade-in" id="pricing">
     <div class="container">
-      <h2 class="section-title pricing-hero" lang="en">Built Different.<br><span class="priced-different" id="pricedDifferent">Priced Different.</span></h2>
+      <h2 class="section-title pricing-hero" lang="en">Built Different.<br><span class="snrg-underline" data-underline="1">Priced Different.</span></h2>
       <h2 class="section-title pricing-hero" lang="es">Construido Diferente.<br>Precio Diferente.</h2>
       
       <div class="pricing-grid">
@@ -2162,89 +2316,72 @@ body.spanish [lang="en"]{display:none}
   });
   </script>
 
-<script>
-/* === NEON UNDERLINE ANIMATION === */
-document.addEventListener('DOMContentLoaded', function() {
-  const pricedDifferent = document.getElementById('pricedDifferent');
-  
-  if (pricedDifferent) {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            pricedDifferent.classList.add('animate');
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      {
-        threshold: 0.5,
-        rootMargin: '-50px'
-      }
-    );
-    
-    observer.observe(pricedDifferent);
-  }
-});
-</script>
+
+
+
 
 <script>
+/* Houston underline injected */
+/* SNRG UNDERLINE OBSERVER (NO LAYOUT CHANGES) */
 (function(){
-  function initNeonUnderline(){
-    var el = document.getElementById("pricedDifferent");
-    if(!el) return;
+  function onReady(fn){
+    if(document.readyState === "loading") document.addEventListener("DOMContentLoaded", fn);
+    else fn();
+  }
 
-    // Respect reduced motion
-    var reduce = false;
-    try {
-      reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    } catch(e) {}
-    if(reduce){
-      el.classList.add("animate");
-      return;
+  onReady(function(){
+    var pricing = document.getElementById("pricing");
+    if(!pricing) return;
+
+    var targets = pricing.querySelectorAll('.snrg-underline[data-underline="1"]');
+    if(!targets.length) return;
+
+    try{
+      if(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches){
+        targets.forEach(function(t){ t.classList.add("is-animating"); });
+        return;
+      }
+    }catch(e){}
+
+    var fired = false;
+    function fire(){
+      if(fired) return;
+      fired = true;
+      // micro delay so it feels synced to scroll settle
+      requestAnimationFrame(function(){
+        setTimeout(function(){
+          targets.forEach(function(t){ t.classList.add("is-animating"); });
+        }, 140);
+      });
     }
 
-    // Trigger on scroll into view (once)
-    var triggered = false;
-    function trigger(){
-      if(triggered) return;
-      triggered = true;
-      el.classList.add("animate");
-    }
-
-    if('IntersectionObserver' in window){
+    if("IntersectionObserver" in window){
       var io = new IntersectionObserver(function(entries){
-        entries.forEach(function(entry){
-          if(entry.isIntersecting){
-            trigger();
+        for(var i=0;i<entries.length;i++){
+          if(entries[i].isIntersecting){
+            fire();
             io.disconnect();
+            break;
           }
-        });
-      }, { root: null, rootMargin: '0px 0px -20% 0px', threshold: 0.15 });
-      io.observe(el);
+        }
+      }, { root: null, threshold: 0.55, rootMargin: "0px 0px -10% 0px" });
+      io.observe(pricing);
     } else {
-      // Fallback: simple scroll check
-      function onScroll(){
-        if(triggered) return;
-        var r = el.getBoundingClientRect();
-        if(r.top < (window.innerHeight * 0.8) && r.bottom > 0){
-          trigger();
-          window.removeEventListener('scroll', onScroll);
-          window.removeEventListener('resize', onScroll);
+      function check(){
+        var r = pricing.getBoundingClientRect();
+        if(r.top < window.innerHeight * 0.65){
+          window.removeEventListener("scroll", check);
+          window.removeEventListener("resize", check);
+          fire();
         }
       }
-      window.addEventListener('scroll', onScroll, {passive:true});
-      window.addEventListener('resize', onScroll);
-      onScroll();
+      window.addEventListener("scroll", check, {passive:true});
+      window.addEventListener("resize", check);
+      check();
     }
-  }
-
-  if(document.readyState === "loading"){
-    document.addEventListener("DOMContentLoaded", initNeonUnderline);
-  } else {
-    initNeonUnderline();
-  }
+  });
 })();
+/* END SNRG UNDERLINE OBSERVER */
 </script>
 </body>
 </html>
