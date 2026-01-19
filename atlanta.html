@@ -88,7 +88,10 @@
       "@type": "LocalBusiness",
       "@id": "https://snrgweb.com/atlanta#localbusiness",
       "name": "SNRG WEB Atlanta",
-      "image": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
+      "image": [
+        "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
+        "https://cdn.prod.website-files.com/6917643d4101c8400094cbb0/69370d605157daa6dc110d89_ChatGPT%20Image%20Dec%208%2C%202025%2C%2011_22_55%20AM.webp"
+      ],
       "url": "https://snrgweb.com/atlanta",
       "email": "bobby@snrgweb.com",
       "priceRange": "$75-$3500",
@@ -98,16 +101,34 @@
         "addressRegion": "GA",
         "addressCountry": "US"
       },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "33.7490",
+        "longitude": "-84.3880"
+      },
+      "hasMap": "https://www.google.com/maps/place/Atlanta,+GA",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "00:00",
+          "closes": "23:59"
+        }
+      ],
       "parentOrganization": {"@id": "https://snrgweb.com/#org"},
       "employee": {"@id": "https://snrgweb.com/#owner"},
       "areaServed": [
         {"@type": "City", "name": "Atlanta", "@id": "https://en.wikipedia.org/wiki/Atlanta"},
-        {"@type": "Place", "name": "Buckhead"},
-        {"@type": "Place", "name": "Midtown Atlanta"},
-        {"@type": "Place", "name": "Virginia-Highland"},
-        {"@type": "Place", "name": "Beltline"},
-        {"@type": "Place", "name": "Decatur"}
-      ]
+        {"@type": "Place", "name": "Buckhead", "geo": {"@type": "GeoCoordinates", "latitude": "33.8490", "longitude": "-84.3781"}},
+        {"@type": "Place", "name": "Midtown Atlanta", "geo": {"@type": "GeoCoordinates", "latitude": "33.7801", "longitude": "-84.3830"}},
+        {"@type": "Place", "name": "Virginia-Highland", "geo": {"@type": "GeoCoordinates", "latitude": "33.7791", "longitude": "-84.3477"}},
+        {"@type": "Place", "name": "Beltline", "geo": {"@type": "GeoCoordinates", "latitude": "33.7629", "longitude": "-84.3626"}},
+        {"@type": "Place", "name": "Decatur", "geo": {"@type": "GeoCoordinates", "latitude": "33.7748", "longitude": "-84.2963"}}
+      ],
+      "slogan": "24/7 Web Design Support for Atlanta Small Businesses",
+      "currenciesAccepted": "USD",
+      "paymentAccepted": "Cash, Credit Card, Venmo, Zelle, PayPal",
+      "knowsLanguage": ["en-US"]
     },
     {
       "@type": "ProfessionalService",
