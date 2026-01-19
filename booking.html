@@ -35,7 +35,11 @@
         "width": 1024,
         "height": 1024
       },
-      "founder": {"@id": "https://snrgweb.com/#owner"}
+      "founder": {"@id": "https://snrgweb.com/#owner"},
+      "sameAs": [
+        "https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share",
+        "https://github.com/SNRG-WEB-HTX"
+      ]
     },
     {
       "@type": "Person",
@@ -51,6 +55,20 @@
       "name": "SNRG WEB"
     },
     {
+      "@type": "ProfessionalService",
+      "@id": "https://snrgweb.com/#service",
+      "name": "Website Design Consultation",
+      "description": "Free 15-minute consultation for professional website design services",
+      "provider": {"@id": "https://snrgweb.com/#org"},
+      "serviceType": "Website Design Consultation",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "description": "Free 15-minute consultation"
+      }
+    },
+    {
       "@type": "WebPage",
       "@id": "https://snrgweb.com/booking#webpage",
       "url": "https://snrgweb.com/booking",
@@ -58,7 +76,23 @@
       "description": "Schedule a free 15-minute consultation with SNRG WEB. Professional website design for small businesses.",
       "isPartOf": {"@id": "https://snrgweb.com/#website"},
       "about": {"@id": "https://snrgweb.com/#org"},
-      "breadcrumb": {"@id": "https://snrgweb.com/booking#breadcrumb"}
+      "mainEntity": {"@id": "https://snrgweb.com/#service"},
+      "breadcrumb": {"@id": "https://snrgweb.com/booking#breadcrumb"},
+      "potentialAction": {
+        "@type": "ScheduleAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://snrgweb.com/booking",
+          "actionPlatform": [
+            "http://schema.org/DesktopWebPlatform",
+            "http://schema.org/MobileWebPlatform"
+          ]
+        },
+        "result": {
+          "@type": "Reservation",
+          "name": "Website Design Consultation Booking"
+        }
+      }
     },
     {
       "@type": "BreadcrumbList",
