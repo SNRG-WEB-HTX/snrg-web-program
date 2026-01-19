@@ -20,10 +20,8 @@
 
 <!-- Hreflang (single-URL language toggle) -->
 <link rel="alternate" hreflang="en" href="https://snrgweb.com/houston"/>
-<link rel="alternate" hreflang="es" href="https://snrgweb.com/houston"/>
 <link rel="alternate" hreflang="x-default" href="https://snrgweb.com/houston"/>
 
-<meta property="og:locale:alternate" content="es_US"/>
 
 <!-- HOUSTON FLAGSHIP: 110/100 ELITE SCHEMA -->
 <script type="application/ld+json">
@@ -74,7 +72,7 @@
       "url": "https://snrgweb.com/houston",
       "name": "Web Design Houston TX | SNRG WEB",
       "description": "Professional web design and managed hosting services for small businesses in Houston.",
-      "inLanguage": ["en","es"],
+      "inLanguage": ["en"],
       "isPartOf": {"@id": "https://snrgweb.com/#website"},
       "provider": {"@id": "https://snrgweb.com/#org"},
       "breadcrumb": {"@id": "https://snrgweb.com/houston#breadcrumb"}
@@ -101,7 +99,11 @@
       "@type": "LocalBusiness",
       "@id": "https://snrgweb.com/houston#business",
       "name": "SNRG WEB Houston",
-      "image": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
+      "image": [
+        "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
+        "https://cdn.prod.website-files.com/6917643d4101c8400094cbb0/69370d605157daa6dc110d89_ChatGPT%20Image%20Dec%208%2C%202025%2C%2011_22_55%20AM.webp"
+      ],
+      "url": "https://snrgweb.com/houston",
       "telephone": "+1-346-291-6010",
       "priceRange": "$75-$3500",
       "address": {
@@ -110,19 +112,36 @@
         "addressRegion": "TX",
         "addressCountry": "US"
       },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "29.7604",
+        "longitude": "-95.3698"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "00:00",
+          "closes": "23:59"
+        }
+      ],
       "parentOrganization": {"@id": "https://snrgweb.com/#org"},
       "areaServed": [
         {"@type": "City", "name": "Houston", "@id": "https://en.wikipedia.org/wiki/Houston"},
-        {"@type": "Place", "name": "Montrose"},
-        {"@type": "Place", "name": "Heights"},
-        {"@type": "Place", "name": "Midtown Houston"},
-        {"@type": "Place", "name": "River Oaks"},
-        {"@type": "Place", "name": "EaDo"},
+        {"@type": "Place", "name": "Montrose", "geo": {"@type": "GeoCoordinates", "latitude": "29.7496", "longitude": "-95.3943"}},
+        {"@type": "Place", "name": "Heights", "geo": {"@type": "GeoCoordinates", "latitude": "29.7958", "longitude": "-95.4072"}},
+        {"@type": "Place", "name": "Midtown Houston", "geo": {"@type": "GeoCoordinates", "latitude": "29.7429", "longitude": "-95.3833"}},
+        {"@type": "Place", "name": "River Oaks", "geo": {"@type": "GeoCoordinates", "latitude": "29.7604", "longitude": "-95.4263"}},
+        {"@type": "Place", "name": "EaDo", "geo": {"@type": "GeoCoordinates", "latitude": "29.7533", "longitude": "-95.3476"}},
         {"@type": "City", "name": "Sugar Land", "@id": "https://en.wikipedia.org/wiki/Sugar_Land,_Texas"},
         {"@type": "City", "name": "Pearland", "@id": "https://en.wikipedia.org/wiki/Pearland,_Texas"},
         {"@type": "City", "name": "Katy", "@id": "https://en.wikipedia.org/wiki/Katy,_Texas"},
         {"@type": "City", "name": "The Woodlands", "@id": "https://en.wikipedia.org/wiki/The_Woodlands,_Texas"}
-      ]
+      ],
+      "slogan": "24/7 Web Design Support for Houston Small Businesses",
+      "currenciesAccepted": "USD",
+      "paymentAccepted": "Cash, Credit Card, Venmo, Zelle, PayPal",
+      "knowsLanguage": ["en-US"]
     },
     {
       "@type": "ProfessionalService",
@@ -149,38 +168,83 @@
     {
       "@type": "Product",
       "@id": "https://snrgweb.com/houston#product-managed",
-      "name": "Houston Managed Web Design – Monthly",
-      "description": "Monthly managed web design services in Houston, TX.",
-      "image": "https://cdn.prod.website-files.com/6917643d4101c8400094cbb0/69370d605157daa6dc110d89_ChatGPT%20Image%20Dec%208%2C%202025%2C%2011_22_55%20AM.webp",
-      "brand": { "@type": "Brand", "name": "SNRG WEB" },
+      "name": "Houston Managed Web Design – Free Build + $75/mo",
+      "description": "Free professional website build with monthly managed hosting in Houston, TX. Includes 24/7 support, hosting, maintenance, and updates.",
+      "image": [
+        "https://cdn.prod.website-files.com/6917643d4101c8400094cbb0/69370d605157daa6dc110d89_ChatGPT%20Image%20Dec%208%2C%202025%2C%2011_22_55%20AM.webp"
+      ],
+      "brand": {
+        "@type": "Brand",
+        "name": "SNRG WEB",
+        "logo": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png"
+      },
+      "sku": "SNRG-HTX-MANAGED-001",
+      "mpn": "SNRG-MANAGED-MONTHLY",
+      "category": "Web Design Services",
       "offers": {
-      "seller": { "@id": "https://snrgweb.com/#org" },
         "@type": "Offer",
         "url": "https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172",
         "priceCurrency": "USD",
         "price": "75",
-        "availability": "https://schema.org/InStock"
-      }
+        "priceValidUntil": "2026-12-31",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {"@id": "https://snrgweb.com/#org"},
+        "validFrom": "2026-01-19",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "75",
+          "priceCurrency": "USD",
+          "unitText": "Monthly"
+        }
+      },
+      "additionalProperty": [
+        {"@type": "PropertyValue", "name": "Support Hours", "value": "24/7"},
+        {"@type": "PropertyValue", "name": "Hosting Included", "value": "Yes"},
+        {"@type": "PropertyValue", "name": "Mobile Responsive", "value": "Yes"},
+        {"@type": "PropertyValue", "name": "Initial Build Cost", "value": "Free"}
+      ]
     },
     {
       "@type": "Product",
       "@id": "https://snrgweb.com/houston#product-ownership",
-      "name": "Houston Site Ownership Build",
-      "description": "One-time site build and ownership transfer in Houston, TX.",
+      "name": "Houston Site Ownership Build – $285 One-Time",
+      "description": "One-time professional website build with full ownership transfer in Houston, TX. Includes all source files, training, and SEO optimization.",
       "image": [
-          "https://cdn.prod.website-files.com/6917643d4101c8400094cbb0/693ca63e417fcf8642abcb8f_ChatGPT%20Image%20Dec%2012%2C%202025%2C%2005_33_04%20PM.webp",
-          "https://cdn.prod.website-files.com/6917643d4101c8400094cbb0/693c3d7479733edbb180a9ca_ChatGPT%20Image%20Dec%2012%2C%202025%2C%2009_57_58%20AM.webp",
-          "https://cdn.prod.website-files.com/6917643d4101c8400094cbb0/69370d605157daa6dc110d89_ChatGPT%20Image%20Dec%208%2C%202025%2C%2011_22_55%20AM.webp"
-        ],
-      "brand": { "@type": "Brand", "name": "SNRG WEB" },
+        "https://cdn.prod.website-files.com/6917643d4101c8400094cbb0/693ca63e417fcf8642abcb8f_ChatGPT%20Image%20Dec%2012%2C%202025%2C%2005_33_04%20PM.webp",
+        "https://cdn.prod.website-files.com/6917643d4101c8400094cbb0/693c3d7479733edbb180a9ca_ChatGPT%20Image%20Dec%2012%2C%202025%2C%2009_57_58%20AM.webp",
+        "https://cdn.prod.website-files.com/6917643d4101c8400094cbb0/69370d605157daa6dc110d89_ChatGPT%20Image%20Dec%208%2C%202025%2C%2011_22_55%20AM.webp"
+      ],
+      "brand": {
+        "@type": "Brand",
+        "name": "SNRG WEB",
+        "logo": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png"
+      },
+      "sku": "SNRG-HTX-OWNERSHIP-001",
+      "mpn": "SNRG-OWNERSHIP-ONETIME",
+      "category": "Web Design Services",
       "offers": {
-      "seller": { "@id": "https://snrgweb.com/#org" },
         "@type": "Offer",
         "url": "https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172",
         "priceCurrency": "USD",
         "price": "285",
-        "availability": "https://schema.org/InStock"
-      }
+        "priceValidUntil": "2026-12-31",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {"@id": "https://snrgweb.com/#org"},
+        "validFrom": "2026-01-19",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "price": "285",
+          "priceCurrency": "USD"
+        }
+      },
+      "additionalProperty": [
+        {"@type": "PropertyValue", "name": "Full Ownership", "value": "Yes"},
+        {"@type": "PropertyValue", "name": "SEO Optimized", "value": "Yes"},
+        {"@type": "PropertyValue", "name": "Mobile Responsive", "value": "Yes"},
+        {"@type": "PropertyValue", "name": "Training Included", "value": "Yes"}
+      ]
     }
   ]
 }
@@ -192,9 +256,9 @@
 <link rel="dns-prefetch" href="https://api.fontshare.com">
 
 <!-- Primary Meta Tags -->
-<title>Web Design Houston TX | $75/mo Managed Websites | SNRG WEB</title>
-<meta name="title" content="Web Design Houston TX | $75/mo Managed Websites | SNRG WEB"/>
-<meta name="description" content="Pro-grade web design for Houston small businesses. Serving Montrose, Heights, Midtown, Downtown, River Oaks, Galleria, EaDo & Museum District. Launch in 2-3 days. $285 flat or $75/mo."/>
+<title>Web Design Houston TX | Free Build + $75/mo Managed Hosting | SNRG WEB</title>
+<meta name="title" content="Web Design Houston TX | Free Build + $75/mo Managed Hosting | SNRG WEB"/>
+<meta name="description" content="Professional web design for Houston small businesses. Free website build + $75/month managed hosting with 24/7 support. Serving Montrose, Heights, Midtown, River Oaks & all H-Town neighborhoods. Launch in 3-7 days."/>
 <meta name="keywords" content="web design Houston, Houston Texas website design, small business websites Houston TX, web developer Houston, custom website Houston, Montrose web design, Heights website design, Midtown business websites, Houston web services, Texas web design"/>
 <meta name="author" content="Bobby Frilot - SNRG WEB"/>
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"/>
@@ -204,8 +268,8 @@
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://snrgweb.com/houston"/>
 <meta property="og:site_name" content="SNRG WEB"/>
-<meta property="og:title" content="Web Design Houston TX | $75/mo Managed Websites"/>
-<meta property="og:description" content="Houston web design for small businesses. Serving Montrose, Heights, Midtown, Downtown, and all Houston neighborhoods. Fast launch in 2-3 days, hosting & maintenance included."/>
+<meta property="og:title" content="Web Design Houston TX | Free Build + $75/mo"/>
+<meta property="og:description" content="Professional web design for Houston small businesses. Free website build + $75/month managed hosting with 24/7 support. Serving all H-Town neighborhoods."/>
 <meta property="og:image" content="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png"/>
 <meta property="og:image:width" content="1024"/>
 <meta property="og:image:height" content="1024"/>
@@ -214,8 +278,8 @@
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:url" content="https://snrgweb.com/houston"/>
-<meta name="twitter:title" content="Web Design Houston TX | $75/mo Managed Websites"/>
-<meta name="twitter:description" content="Houston web design for small businesses. Serving Montrose, Heights, Midtown & all H-Town neighborhoods. Fast launch, hosting included."/>
+<meta name="twitter:title" content="Web Design Houston TX | Free Build + $75/mo"/>
+<meta name="twitter:description" content="Professional web design for Houston small businesses. Free website build + $75/month managed hosting with 24/7 support."/>
 <meta name="twitter:image" content="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png"/>
 
 <!-- Geo Tags - Houston Coordinates -->
@@ -1705,19 +1769,12 @@ body.spanish [lang="en"] { display: none !important; }
 
 <body>
   <!-- SEO/A11Y H1 - Hidden from visual layout -->
-  <h1 class="visually-hidden" lang="es">Affordable High-Performance Websites for Houston Small Businesses — Built Fast, Managed for You</h1>
-  <h1 class="visually-hidden" lang="es">Sitios Web de Alto Rendimiento y Asequibles para Pequeñas Empresas en Houston — Construidos Rápido, Administrados para Usted</h1>
+  <h1 class="visually-hidden" lang="en">Affordable High-Performance Websites for Houston Small Businesses — Built Fast, Managed for You</h1>
 
   <nav class="lang-bar" role="navigation" aria-label="Language selection">
-    <div class="lang-toggle">
-      <button class="lang-btn active" onclick="switchLang('en')" aria-label="Switch to English" aria-current="true">EN</button>
-      <button class="lang-btn" onclick="switchLang('es')" aria-label="Cambiar a español">ES</button>
-    </div>
     <div class="header-nav-pill">
-      <a href="contact.html" class="header-nav-btn" lang="en">Contact</a>
-      <a href="contact.html" class="header-nav-btn" lang="es">Contacto</a>
-      <a href="faq.html" class="header-nav-btn" lang="en">FAQ</a>
-      <a href="faq.html" class="header-nav-btn" lang="es">FAQ</a>
+      <a href="contact.html" class="header-nav-btn">Contact</a>
+      <a href="faq.html" class="header-nav-btn">FAQ</a>
     </div>
   </nav>
 
@@ -2046,7 +2103,7 @@ body.spanish [lang="en"] { display: none !important; }
 
   <footer class="footer fade-in">
     <div class="container">
-      <p class="footer-copyright">© 2026 SNRG WEB — HTX</p>
+      <p class="footer-copyright">© 2026 SNRG WEB — H-Town</p>
     </div>
   </footer>
 
