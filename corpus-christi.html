@@ -2256,5 +2256,69 @@ body.spanish [lang="en"]{display:none}
   }
 })();
 </script>
+<script>
+/* SNRG UNDERLINE OBSERVER */
+(function(){
+  function ready(fn){
+    if(document.readyState === "loading") document.addEventListener("DOMContentLoaded", fn);
+    else fn();
+  }
+
+  ready(function(){
+    var el = document.getElementById("pricedDifferent");
+    if(!el) return;
+
+    // If user prefers reduced motion, show underline immediately (no animation timing issues)
+    try{
+      if(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches){
+        el.classList.add("animate");
+        return;
+      }
+    }catch(e){}
+
+    var triggered = false;
+    function trigger(){
+      if(triggered) return;
+      triggered = true;
+      // Slight defer so it feels synced with section entrance
+      window.requestAnimationFrame(function(){
+        setTimeout(function(){ el.classList.add("animate"); }, 120);
+      });
+    }
+
+    // Prefer observing the whole PRICING section so timing is consistent even if headline is offscreen by a few px
+    var section = document.getElementById("pricing") || el.closest("section") || el;
+
+    if("IntersectionObserver" in window){
+      var io = new IntersectionObserver(function(entries){
+        for(var i=0;i<entries.length;i++){
+          var entry = entries[i];
+          if(entry.isIntersecting){
+            trigger();
+            io.disconnect();
+            break;
+          }
+        }
+      }, { root: null, rootMargin: "0px 0px -25% 0px", threshold: 0.18 });
+      io.observe(section);
+    } else {
+      // Fallback
+      function onScroll(){
+        if(triggered) return;
+        var r = section.getBoundingClientRect();
+        if(r.top < (window.innerHeight * 0.78) && r.bottom > 0){
+          trigger();
+          window.removeEventListener("scroll", onScroll);
+          window.removeEventListener("resize", onScroll);
+        }
+      }
+      window.addEventListener("scroll", onScroll, {passive:true});
+      window.addEventListener("resize", onScroll);
+      onScroll();
+    }
+  });
+})();
+/* END SNRG UNDERLINE OBSERVER */
+</script>
 </body>
 </html>
