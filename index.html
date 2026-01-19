@@ -1638,6 +1638,49 @@ body.spanish [lang="en"]{display:none}
   }
 }
 
+/* === NEON RED UNDERLINE ANIMATION === */
+.priced-different {
+  position: relative;
+  display: inline-block;
+}
+
+.priced-different::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #FF0033, #FF1744);
+  box-shadow: 
+    0 0 8px #FF0033, 
+    0 0 16px #FF0033, 
+    0 0 24px #FF1744,
+    0 0 32px #FF1744;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0s;
+  border-radius: 2px;
+}
+
+.priced-different.animate::after {
+  animation: neonUnderline 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes neonUnderline {
+  0% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
 </style>
 
 
@@ -1719,7 +1762,7 @@ body.spanish [lang="en"]{display:none}
 
   <section class="pricing fade-in" id="pricing">
     <div class="container">
-      <h2 class="section-title pricing-hero" lang="en">Built Different.<br>Priced Different.</h2>
+      <h2 class="section-title pricing-hero" lang="en">Built Different.<br><span class="priced-different" id="pricedDifferent">Priced Different.</span></h2>
       <h2 class="section-title pricing-hero" lang="es">Construido Diferente.<br>Precio Diferente.</h2>
       
       <div class="pricing-grid">
@@ -2118,6 +2161,32 @@ body.spanish [lang="en"]{display:none}
     });
   });
   </script>
+
+<script>
+/* === NEON UNDERLINE ANIMATION === */
+document.addEventListener('DOMContentLoaded', function() {
+  const pricedDifferent = document.getElementById('pricedDifferent');
+  
+  if (pricedDifferent) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            pricedDifferent.classList.add('animate');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.5,
+        rootMargin: '-50px'
+      }
+    );
+    
+    observer.observe(pricedDifferent);
+  }
+});
+</script>
 
 </body>
 </html>
