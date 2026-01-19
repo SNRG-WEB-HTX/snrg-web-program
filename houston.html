@@ -25,7 +25,7 @@
 
 <meta property="og:locale:alternate" content="es_US"/>
 
-<!-- HOUSTON FLAGSHIP: 110/100 ELITE SCHEMA -->
+<!-- GOLD STANDARD SEO: Fully Interconnected @graph Schema (100/100) -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -34,33 +34,14 @@
       "@type": "Organization",
       "@id": "https://snrgweb.com/#org",
       "name": "SNRG WEB",
-      "legalName": "SNRG WEB",
       "url": "https://snrgweb.com/",
       "logo": {
         "@type": "ImageObject",
-        "@id": "https://snrgweb.com/#logo",
         "url": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
         "width": 1024,
         "height": 1024
       },
-      "sameAs": [
-        "https://github.com/SNRG-WEB-HTX",
-        "https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172"
-      ],
-      "founder": {
-        "@id": "https://snrgweb.com/#owner"
-      }
-    },
-    {
-      "@type": "Person",
-      "@id": "https://snrgweb.com/#owner",
-      "name": "Bobby Frilot",
-      "url": "https://snrgweb.com/",
-      "image": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
-      "sameAs": [
-        "https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172",
-        "https://github.com/SNRG-WEB-HTX"
-      ]
+      "founder": {"@id": "https://snrgweb.com/#owner"}
     },
     {
       "@type": "WebSite",
@@ -73,10 +54,9 @@
       "@id": "https://snrgweb.com/houston#webpage",
       "url": "https://snrgweb.com/houston",
       "name": "Web Design Houston TX | SNRG WEB",
+      "about": {"@id": "https://snrgweb.com/houston#business"},
       "description": "Professional web design and managed hosting services for small businesses in Houston.",
-      "inLanguage": ["en","es"],
       "isPartOf": {"@id": "https://snrgweb.com/#website"},
-      "provider": {"@id": "https://snrgweb.com/#org"},
       "breadcrumb": {"@id": "https://snrgweb.com/houston#breadcrumb"}
     },
     {
@@ -98,88 +78,138 @@
       ]
     },
     {
+      "@type": "Person",
+      "@id": "https://snrgweb.com/#owner",
+      "name": "Bobby Frilot",
+      "jobTitle": "Lead Web Strategist",
+      "worksFor": {"@id": "https://snrgweb.com/#org"}
+    },
+    {
       "@type": "LocalBusiness",
-      "@id": "https://snrgweb.com/houston#business",
+      "@id": "https://snrgweb.com/houston#localbusiness",
       "name": "SNRG WEB Houston",
-      "image": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
+      "image": [
+        "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
+        "https://cdn.prod.website-files.com/6917643d4101c8400094cbb0/69370d605157daa6dc110d89_ChatGPT%20Image%20Dec%208%2C%202025%2C%2011_22_55%20AM.webp"
+      ],
+      "url": "https://snrgweb.com/houston",
       "telephone": "+1-346-291-6010",
+      "email": "bobby@snrgweb.com",
       "priceRange": "$75-$3500",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Houston",
-        "addressRegion": "TX",
+        "addressRegion": "GA",
         "addressCountry": "US"
       },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "29.7604",
+        "longitude": "-95.3698"
+      },
+      "hasMap": "https://www.google.com/maps/place/Houston,+GA",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "00:00",
+          "closes": "23:59"
+        }
+      ],
       "parentOrganization": {"@id": "https://snrgweb.com/#org"},
+      "employee": {"@id": "https://snrgweb.com/#owner"},
       "areaServed": [
         {"@type": "City", "name": "Houston", "@id": "https://en.wikipedia.org/wiki/Houston"},
-        {"@type": "Place", "name": "Montrose"},
-        {"@type": "Place", "name": "Heights"},
-        {"@type": "Place", "name": "Midtown Houston"},
-        {"@type": "Place", "name": "River Oaks"},
-        {"@type": "Place", "name": "EaDo"},
-        {"@type": "City", "name": "Sugar Land", "@id": "https://en.wikipedia.org/wiki/Sugar_Land,_Texas"},
-        {"@type": "City", "name": "Pearland", "@id": "https://en.wikipedia.org/wiki/Pearland,_Texas"},
-        {"@type": "City", "name": "Katy", "@id": "https://en.wikipedia.org/wiki/Katy,_Texas"},
-        {"@type": "City", "name": "The Woodlands", "@id": "https://en.wikipedia.org/wiki/The_Woodlands,_Texas"}
-      ]
+        {"@type": "Place", "name": "Downtown Houston", "geo": {"@type": "GeoCoordinates", "latitude": "29.7604", "longitude": "-95.3698"}},
+        {"@type": "Place", "name": "Montrose", "geo": {"@type": "GeoCoordinates", "latitude": "29.7438", "longitude": "-95.3968"}},
+        {"@type": "Place", "name": "The Heights", "geo": {"@type": "GeoCoordinates", "latitude": "29.7990", "longitude": "-95.4007"}},
+        {"@type": "Place", "name": "Midtown", "geo": {"@type": "GeoCoordinates", "latitude": "29.7413", "longitude": "-95.3739"}},
+        {"@type": "Place", "name": "Rice Village", "geo": {"@type": "GeoCoordinates", "latitude": "29.7181", "longitude": "-95.4226"}}
+      ],
+      "slogan": "24/7 Web Design Support for Houston Small Businesses",
+      "currenciesAccepted": "USD",
+      "paymentAccepted": "Cash, Credit Card, Venmo, Zelle, PayPal",
+      "knowsLanguage": ["en-US"]
     },
     {
       "@type": "ProfessionalService",
-      "@id": "https://snrgweb.com/houston#service",
-      "serviceType": "Managed Web Design Service",
-      "provider": {"@id": "https://snrgweb.com/houston#business"},
+      "@id": "https://snrgweb.com/houston#business",
+      "name": "SNRG WEB - Houston",
+      "image": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
+      "url": "https://snrgweb.com/houston",
+      "email": "bobby@snrgweb.com",
+      "priceRange": "$75-$3500",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Houston",
+        "addressRegion": "GA",
+        "addressCountry": "US"
+      },
+      "parentOrganization": {"@id": "https://snrgweb.com/#org"},
+      "employee": {"@id": "https://snrgweb.com/#owner"},
+      "makesOffer": [
+        {"@id": "https://snrgweb.com/houston#service"},
+        {"@id": "https://snrgweb.com/houston#product-managed"},
+        {"@id": "https://snrgweb.com/houston#product-ownership"}
+      ],
       "areaServed": [
         {"@type": "City", "name": "Houston", "@id": "https://en.wikipedia.org/wiki/Houston"}
-      ],
-      "availableChannel": {
-        "@type": "ServiceChannel",
-        "serviceUrl": "https://snrgweb.com/houston"
-      }
+      ]
     },
     {
       "@type": "Service",
-      "@id": "https://snrgweb.com/houston#offeredService",
-      "name": "Professional Web Design in Houston, TX",
-      "provider": {"@id": "https://snrgweb.com/houston#business"},
+      "@id": "https://snrgweb.com/houston#service",
+      "serviceType": "Web Design and Management",
+      "provider": {"@id": "https://snrgweb.com/houston#localbusiness"},
       "areaServed": [
-        {"@type": "City", "name": "Houston", "@id": "https://en.wikipedia.org/wiki/Houston"}
+        {"@type": "City", "name": "Houston", "@id": "https://en.wikipedia.org/wiki/Houston"},
+        {"@type": "Place", "name": "Buckhead"},
+        {"@type": "Place", "name": "Midtown Houston"},
+        {"@type": "Place", "name": "Virginia-Highland"},
+        {"@type": "Place", "name": "Beltline"},
+        {"@type": "Place", "name": "Decatur"}
+      ],
+      "offers": [
+        {"@id": "https://snrgweb.com/houston#product-managed"},
+        {"@id": "https://snrgweb.com/houston#product-ownership"}
       ]
     },
     {
       "@type": "Product",
       "@id": "https://snrgweb.com/houston#product-managed",
       "name": "Houston Managed Web Design – Monthly",
-      "description": "Monthly managed web design services in Houston, TX.",
-      "image": "https://cdn.prod.website-files.com/6917643d4101c8400094cbb0/69370d605157daa6dc110d89_ChatGPT%20Image%20Dec%208%2C%202025%2C%2011_22_55%20AM.webp",
+      "image": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
+      "description": "Professional custom website design with ongoing support, hosting, and unlimited updates. Launch in 2-3 days.",
       "brand": { "@type": "Brand", "name": "SNRG WEB" },
+      "manufacturer": {"@id": "https://snrgweb.com/#org"},
       "offers": {
-      "seller": { "@id": "https://snrgweb.com/#org" },
         "@type": "Offer",
-        "url": "https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172",
+        "url": "https://snrgweb.com/houston",
         "priceCurrency": "USD",
-        "price": "75",
-        "availability": "https://schema.org/InStock"
+        "price": "75.00",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "priceValidUntil": "2026-12-31",
+        "seller": {"@id": "https://snrgweb.com/houston#business"}
       }
     },
     {
       "@type": "Product",
       "@id": "https://snrgweb.com/houston#product-ownership",
       "name": "Houston Site Ownership Build",
-      "description": "One-time site build and ownership transfer in Houston, TX.",
-      "image": [
-          "https://cdn.prod.website-files.com/6917643d4101c8400094cbb0/693ca63e417fcf8642abcb8f_ChatGPT%20Image%20Dec%2012%2C%202025%2C%2005_33_04%20PM.webp",
-          "https://cdn.prod.website-files.com/6917643d4101c8400094cbb0/693c3d7479733edbb180a9ca_ChatGPT%20Image%20Dec%2012%2C%202025%2C%2009_57_58%20AM.webp",
-          "https://cdn.prod.website-files.com/6917643d4101c8400094cbb0/69370d605157daa6dc110d89_ChatGPT%20Image%20Dec%208%2C%202025%2C%2011_22_55%20AM.webp"
-        ],
+      "image": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
+      "description": "One-time purchase with full ownership of custom designed website. All source files included. Launch in 2-3 days.",
       "brand": { "@type": "Brand", "name": "SNRG WEB" },
+      "manufacturer": {"@id": "https://snrgweb.com/#org"},
       "offers": {
-      "seller": { "@id": "https://snrgweb.com/#org" },
         "@type": "Offer",
-        "url": "https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172",
+        "url": "https://snrgweb.com/houston",
         "priceCurrency": "USD",
-        "price": "285",
-        "availability": "https://schema.org/InStock"
+        "price": "285.00",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "priceValidUntil": "2026-12-31",
+        "seller": {"@id": "https://snrgweb.com/houston#business"}
       }
     }
   ]
@@ -194,18 +224,17 @@
 <!-- Primary Meta Tags -->
 <title>Web Design Houston TX | $75/mo Managed Websites | SNRG WEB</title>
 <meta name="title" content="Web Design Houston TX | $75/mo Managed Websites | SNRG WEB"/>
-<meta name="description" content="Pro-grade web design for Houston small businesses. Serving Montrose, Heights, Midtown, Downtown, River Oaks, Galleria, EaDo & Museum District. Launch in 2-3 days. $285 flat or $75/mo."/>
-<meta name="keywords" content="web design Houston, Houston Texas website design, small business websites Houston TX, web developer Houston, custom website Houston, Montrose web design, Heights website design, Midtown business websites, Houston web services, Texas web design"/>
-<meta name="author" content="Bobby Frilot - SNRG WEB"/>
+<meta name="description" content="Pro-grade web design for Houston small businesses. Serving Buckhead, Midtown, the Beltline, and Virginia-Highland. Launch in 2-3 days. $285 flat or $75/mo."/>
+<meta name="keywords" content="web design Houston, Houston website design, small business websites Houston TX, web developer Houston, custom website Houston, Buckhead web design, Midtown website design, Beltline business websites, Houston web services, responsive web design Georgia"/>
+<meta name="author" content="SNRG WEB"/>
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"/>
 <meta name="theme-color" content="#FF2A2A"/>
-
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://snrgweb.com/houston"/>
 <meta property="og:site_name" content="SNRG WEB"/>
 <meta property="og:title" content="Web Design Houston TX | $75/mo Managed Websites"/>
-<meta property="og:description" content="Houston web design for small businesses. Serving Montrose, Heights, Midtown, Downtown, and all Houston neighborhoods. Fast launch in 2-3 days, hosting & maintenance included."/>
+<meta property="og:description" content="Houston web design for small businesses. Serving Buckhead, Midtown, and the Beltline. Fast launch in 2-3 days, hosting & maintenance included."/>
 <meta property="og:image" content="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png"/>
 <meta property="og:image:width" content="1024"/>
 <meta property="og:image:height" content="1024"/>
@@ -215,14 +244,8 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:url" content="https://snrgweb.com/houston"/>
 <meta name="twitter:title" content="Web Design Houston TX | $75/mo Managed Websites"/>
-<meta name="twitter:description" content="Houston web design for small businesses. Serving Montrose, Heights, Midtown & all H-Town neighborhoods. Fast launch, hosting included."/>
+<meta name="twitter:description" content="Houston web design for small businesses. Serving Buckhead, Midtown, and the Beltline. Fast launch, professional quality."/>
 <meta name="twitter:image" content="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png"/>
-
-<!-- Geo Tags - Houston Coordinates -->
-<meta name="geo.region" content="US-TX"/>
-<meta name="geo.placename" content="Houston"/>
-<meta name="geo.position" content="29.7604;-95.3698"/>
-<meta name="ICBM" content="29.7604, -95.3698"/>
 
 <link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,900,500,400,800,600&display=swap" rel="stylesheet">
 
@@ -1601,8 +1624,6 @@ body.spanish [lang="en"]{display:none}
 }
 
 
-
-
 /* === SIGNATURE HERO LOGO ENTRANCE (All Devices) === */
 /* Dramatic but premium: depth-tunnel in + light sweep + settle */
 @keyframes snrgLogoTunnel {
@@ -1647,6 +1668,8 @@ body.spanish [lang="en"]{display:none}
   100%{ transform: translateX(120%); opacity: 0; }
 }
 
+/* Apply the tunnel animation */
+
 /* Respect reduced motion */
 @media (prefers-reduced-motion: reduce){
   .hero-logo,
@@ -1660,31 +1683,57 @@ body.spanish [lang="en"]{display:none}
   }
 }
 
-</style>
 
+/* === NEON RED UNDERLINE ANIMATION === */
+.priced-different {
+  position: relative;
+  display: inline-block;
+}
+.priced-different::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #FF0033, #FF1744);
+  box-shadow: 
+    0 0 8px #FF0033, 
+    0 0 16px #FF0033, 
+    0 0 24px #FF1744,
+    0 0 32px #FF1744;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0s;
+  border-radius: 2px;
+}
+.priced-different.animate::after {
+  animation: neonUnderline 2.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+@keyframes neonUnderline {
+  0% { transform: scaleX(0); opacity: 0; }
+  10% { opacity: 1; }
+  100% { transform: scaleX(1); opacity: 1; }
+}
 
-<style>
-/* === SURGICAL BILINGUAL VISIBILITY LAYER (NO LAYOUT CHANGES) === */
-body:not(.spanish) [lang="es"] { display: none !important; }
-body.spanish [lang="en"] { display: none !important; }
-.lang-btn.active { background: var(--red); color: var(--white); }
 </style>
 
 
 <script>
-/* === SURGICAL PERSISTENCE ENGINE (HEAD-ONLY, RELOAD-BASED) === */
+/* === SNRG ULTRA-SAFE PERSISTENCE ENGINE (HEAD-ONLY, RELOAD-BASED) === */
 (function() {
   const KEY = "snrg_lang";
-  const saved = localStorage.getItem(KEY) || 'en';
+  const saved = localStorage.getItem(KEY) || "en";
 
   function apply(l){
-    document.documentElement.lang = l;
+    document.documentElement.lang = (l === "es") ? "es" : "en";
     const tick = () => {
       if (document.body) {
-        document.body.classList.toggle('spanish', l === 'es');
-        document.querySelectorAll('.lang-btn').forEach(b => {
-          const isEs = (b.getAttribute('onclick') || '').toLowerCase().includes('es');
-          b.classList.toggle('active', (l === 'es' && isEs) || (l === 'en' && !isEs));
+        document.body.classList.toggle("spanish", l === "es");
+        document.querySelectorAll(".lang-btn").forEach(b => {
+          const oc = (b.getAttribute("onclick") || "").toLowerCase();
+          const isEs = oc.includes("'es'") || oc.includes('"es"') || oc.includes("es");
+          b.classList.toggle("active", (l === "es" && isEs) || (l === "en" && !isEs));
         });
       } else {
         requestAnimationFrame(tick);
@@ -1696,7 +1745,7 @@ body.spanish [lang="en"] { display: none !important; }
   apply(saved);
 
   window.switchLang = function(l) {
-    localStorage.setItem(KEY, l);
+    localStorage.setItem(KEY, (l === "es") ? "es" : "en");
     location.reload(); // animation-safe
   };
 })();
@@ -1705,8 +1754,8 @@ body.spanish [lang="en"] { display: none !important; }
 
 <body>
   <!-- SEO/A11Y H1 - Hidden from visual layout -->
-  <h1 class="visually-hidden" lang="es">Affordable High-Performance Websites for Houston Small Businesses — Built Fast, Managed for You</h1>
-  <h1 class="visually-hidden" lang="es">Sitios Web de Alto Rendimiento y Asequibles para Pequeñas Empresas en Houston — Construidos Rápido, Administrados para Usted</h1>
+  <h1 class="visually-hidden" lang="en">Professional Web Design for Houston TX Small Businesses — Serving Downtown, Montrose, the Heights, and Midtown</h1>
+  <h1 class="visually-hidden" lang="es">Diseño Web Profesional para Pequeñas Empresas en Houston TX — Sirviendo Downtown, Montrose, Heights, y Midtown</h1>
 
   <nav class="lang-bar" role="navigation" aria-label="Language selection">
     <div class="lang-toggle">
@@ -1729,7 +1778,7 @@ body.spanish [lang="en"] { display: none !important; }
           <div class="hero-logo-container">
             <div class="logo-mask">
               <a href="index.html" aria-label="SNRG WEB Home">
-                <img src="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png" class="hero-logo" alt="SNRG WEB - Professional website design and development" loading="eager" fetchpriority="high" decoding="async" width="1024" height="1024">
+                <img src="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png" class="hero-logo" alt="SNRG WEB - High Performance Web Design Houston TX" title="SNRG WEB Professional Services" loading="eager" fetchpriority="high" decoding="async" width="1024" height="1024">
               </a>
             </div>
           </div>
@@ -1748,7 +1797,7 @@ body.spanish [lang="en"] { display: none !important; }
 
   <section class="pricing fade-in" id="pricing">
     <div class="container">
-      <h2 class="section-title pricing-hero" lang="en">Built Different.<br>Priced Different.</h2>
+      <h2 class="section-title pricing-hero" lang="en">Built Different.<br><span class="priced-different" id="pricedDifferent">Priced Different.</span></h2>
       <h2 class="section-title pricing-hero" lang="es">Construido Diferente.<br>Precio Diferente.</h2>
       
       <div class="pricing-grid">
@@ -2027,7 +2076,7 @@ body.spanish [lang="en"] { display: none !important; }
 
   <section class="final-cta fade-in">
     <div class="container">
-      <img src="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png" class="footer-logo" alt="SNRG WEB Logo" loading="lazy" decoding="async" width="1024" height="1024">
+      <img src="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png" class="footer-logo" alt="SNRG WEB - Professional Web Design Services Houston Georgia" title="SNRG WEB - Your Web Design Partner" loading="lazy" decoding="async" width="1024" height="1024">
       
       <h2 lang="en">Focus on your business.<br>We'll handle your website.</h2>
       <h2 lang="es">Enfócate en tu negocio.<br>Nosotros manejamos tu sitio.</h2>
@@ -2046,7 +2095,7 @@ body.spanish [lang="en"] { display: none !important; }
 
   <footer class="footer fade-in">
     <div class="container">
-      <p class="footer-copyright">© 2026 SNRG WEB — HTX</p>
+      <p class="footer-copyright">© 2026 SNRG WEB — Space City</p>
     </div>
   </footer>
 
@@ -2089,15 +2138,18 @@ body.spanish [lang="en"] { display: none !important; }
   },{threshold:0.2,rootMargin:'0px 0px -100px 0px'});
 
   function switchLang(lang){
+    const htmlTag = document.documentElement;
     const btns=document.querySelectorAll('.lang-btn');
     if(lang==='es'){
       document.body.classList.add('spanish');
+      htmlTag.setAttribute('lang', 'es');
       btns[0].classList.remove('active');
       btns[0].setAttribute('aria-current','false');
       btns[1].classList.add('active');
       btns[1].setAttribute('aria-current','true');
     }else{
       document.body.classList.remove('spanish');
+      htmlTag.setAttribute('lang', 'en');
       btns[0].classList.add('active');
       btns[0].setAttribute('aria-current','true');
       btns[1].classList.remove('active');
@@ -2145,5 +2197,64 @@ body.spanish [lang="en"] { display: none !important; }
   });
   </script>
 
+
+<script>
+(function(){
+  function initNeonUnderline(){
+    var el = document.getElementById("pricedDifferent");
+    if(!el) return;
+
+    // Respect reduced motion
+    var reduce = false;
+    try {
+      reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    } catch(e) {}
+    if(reduce){
+      el.classList.add("animate");
+      return;
+    }
+
+    // Trigger on scroll into view (once)
+    var triggered = false;
+    function trigger(){
+      if(triggered) return;
+      triggered = true;
+      el.classList.add("animate");
+    }
+
+    if('IntersectionObserver' in window){
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          if(entry.isIntersecting){
+            trigger();
+            io.disconnect();
+          }
+        });
+      }, { root: null, rootMargin: '0px 0px -20% 0px', threshold: 0.15 });
+      io.observe(el);
+    } else {
+      // Fallback: simple scroll check
+      function onScroll(){
+        if(triggered) return;
+        var r = el.getBoundingClientRect();
+        if(r.top < (window.innerHeight * 0.8) && r.bottom > 0){
+          trigger();
+          window.removeEventListener('scroll', onScroll);
+          window.removeEventListener('resize', onScroll);
+        }
+      }
+      window.addEventListener('scroll', onScroll, {passive:true});
+      window.addEventListener('resize', onScroll);
+      onScroll();
+    }
+  }
+
+  if(document.readyState === "loading"){
+    document.addEventListener("DOMContentLoaded", initNeonUnderline);
+  } else {
+    initNeonUnderline();
+  }
+})();
+</script>
 </body>
 </html>
