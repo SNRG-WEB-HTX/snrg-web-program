@@ -17,10 +17,8 @@
 <meta http-equiv="X-Content-Type-Options" content="nosniff"/>
 
 <link rel="alternate" hreflang="en" href="https://snrgweb.com/austin"/>
-<link rel="alternate" hreflang="es" href="https://snrgweb.com/austin"/>
 <link rel="alternate" hreflang="x-default" href="https://snrgweb.com/austin"/>
 
-<meta property="og:locale:alternate" content="es_US"/>
 
 <script type="application/ld+json">
 {
@@ -48,7 +46,7 @@
       "url": "https://snrgweb.com/austin",
       "name": "SNRG WEB Austin",
       "publisher": {"@id": "https://snrgweb.com/#org"},
-      "inLanguage": ["en", "es"]
+      "inLanguage": ["en"]
     },
     {
       "@type": "WebPage",
@@ -93,7 +91,10 @@
       "@type": "LocalBusiness",
       "@id": "https://snrgweb.com/austin#localbusiness",
       "name": "SNRG WEB Austin",
-      "image": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
+      "image": [
+        "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
+        "https://cdn.prod.website-files.com/6917643d4101c8400094cbb0/69370d605157daa6dc110d89_ChatGPT%20Image%20Dec%208%2C%202025%2C%2011_22_55%20AM.webp"
+      ],
       "url": "https://snrgweb.com/austin",
       "telephone": "+1-346-291-6010",
       "email": "bobby@snrgweb.com",
@@ -109,20 +110,32 @@
         "latitude": "30.2672",
         "longitude": "-97.7431"
       },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "00:00",
+          "closes": "23:59"
+        }
+      ],
       "hasMap": "https://www.google.com/maps/place/Austin,+TX",
       "parentOrganization": {"@id": "https://snrgweb.com/#org"},
       "employee": {"@id": "https://snrgweb.com/#owner"},
       "areaServed": [
         {"@type": "City", "name": "Austin", "@id": "https://en.wikipedia.org/wiki/Austin,_Texas"},
-        {"@type": "Place", "name": "Downtown Austin"},
-        {"@type": "Place", "name": "South Congress"},
-        {"@type": "Place", "name": "East Austin"},
-        {"@type": "Place", "name": "West Lake Hills"},
-        {"@type": "Place", "name": "Hyde Park"},
-        {"@type": "Place", "name": "Zilker"},
-        {"@type": "Place", "name": "The Domain"},
-        {"@type": "Place", "name": "Barton Hills"}
-      ]
+        {"@type": "Place", "name": "Downtown Austin", "geo": {"@type": "GeoCoordinates", "latitude": "30.2672", "longitude": "-97.7431"}},
+        {"@type": "Place", "name": "South Congress", "geo": {"@type": "GeoCoordinates", "latitude": "30.2467", "longitude": "-97.7500"}},
+        {"@type": "Place", "name": "East Austin", "geo": {"@type": "GeoCoordinates", "latitude": "30.2640", "longitude": "-97.7180"}},
+        {"@type": "Place", "name": "West Lake Hills", "geo": {"@type": "GeoCoordinates", "latitude": "30.2941", "longitude": "-97.8031"}},
+        {"@type": "Place", "name": "Hyde Park", "geo": {"@type": "GeoCoordinates", "latitude": "30.2974", "longitude": "-97.7394"}},
+        {"@type": "Place", "name": "Zilker", "geo": {"@type": "GeoCoordinates", "latitude": "30.2634", "longitude": "-97.7725"}},
+        {"@type": "Place", "name": "The Domain", "geo": {"@type": "GeoCoordinates", "latitude": "30.3983", "longitude": "-97.7197"}},
+        {"@type": "Place", "name": "Barton Hills", "geo": {"@type": "GeoCoordinates", "latitude": "30.2572", "longitude": "-97.7828"}}
+      ],
+      "slogan": "24/7 Web Design Support for Austin Small Businesses",
+      "currenciesAccepted": "USD",
+      "paymentAccepted": "Cash, Credit Card, Venmo, Zelle, PayPal",
+      "knowsLanguage": ["en-US"]
     },
     {
       "@type": "ProfessionalService",
@@ -179,40 +192,72 @@
     {
       "@type": "Product",
       "@id": "https://snrgweb.com/austin#product-managed",
-      "name": "Fully Managed Website Service",
-      "image": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
-      "description": "Professional custom website design with ongoing support, hosting, and unlimited updates. Launch in 2-3 days.",
-      "brand": { "@type": "Brand", "name": "SNRG WEB" },
+      "name": "Austin Managed Web Design – Free Build + $75/mo",
+      "image": [
+        "https://cdn.prod.website-files.com/6917643d4101c8400094cbb0/69370d605157daa6dc110d89_ChatGPT%20Image%20Dec%208%2C%202025%2C%2011_22_55%20AM.webp"
+      ],
+      "description": "Free professional website build with monthly managed hosting in Austin, TX. Includes 24/7 support, hosting, maintenance, and updates.",
+      "brand": {
+        "@type": "Brand",
+        "name": "SNRG WEB",
+        "logo": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png"
+      },
+      "sku": "SNRG-ATX-MANAGED-001",
+      "mpn": "SNRG-MANAGED-MONTHLY",
+      "category": "Web Design Services",
       "manufacturer": {"@id": "https://snrgweb.com/#org"},
       "offers": {
         "@type": "Offer",
         "url": "https://snrgweb.com/austin",
         "priceCurrency": "USD",
         "price": "75.00",
+        "priceValidUntil": "2026-12-31",
         "availability": "https://schema.org/InStock",
         "itemCondition": "https://schema.org/NewCondition",
-        "priceValidUntil": "2026-12-31",
         "seller": {"@id": "https://snrgweb.com/austin#business"}
-      }
+      },
+      "additionalProperty": [
+        {"@type": "PropertyValue", "name": "Support Hours", "value": "24/7"},
+        {"@type": "PropertyValue", "name": "Hosting Included", "value": "Yes"},
+        {"@type": "PropertyValue", "name": "Mobile Responsive", "value": "Yes"},
+        {"@type": "PropertyValue", "name": "Initial Build Cost", "value": "Free"}
+      ]
     },
     {
       "@type": "Product",
       "@id": "https://snrgweb.com/austin#product-ownership",
-      "name": "Website Ownership - One-Time Purchase",
-      "image": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
-      "description": "One-time purchase with full ownership of custom designed website. All source files included. Launch in 2-3 days.",
-      "brand": { "@type": "Brand", "name": "SNRG WEB" },
+      "name": "Austin Site Ownership Build – $285 One-Time",
+      "image": [
+        "https://cdn.prod.website-files.com/6917643d4101c8400094cbb0/693ca63e417fcf8642abcb8f_ChatGPT%20Image%20Dec%2012%2C%202025%2C%2005_33_04%20PM.webp",
+        "https://cdn.prod.website-files.com/6917643d4101c8400094cbb0/693c3d7479733edbb180a9ca_ChatGPT%20Image%20Dec%2012%2C%202025%2C%2009_57_58%20AM.webp",
+        "https://cdn.prod.website-files.com/6917643d4101c8400094cbb0/69370d605157daa6dc110d89_ChatGPT%20Image%20Dec%208%2C%202025%2C%2011_22_55%20AM.webp"
+      ],
+      "description": "One-time professional website build with full ownership transfer in Austin, TX. Includes all source files, training, and SEO optimization.",
+      "brand": {
+        "@type": "Brand",
+        "name": "SNRG WEB",
+        "logo": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png"
+      },
+      "sku": "SNRG-ATX-OWNERSHIP-001",
+      "mpn": "SNRG-OWNERSHIP-ONETIME",
+      "category": "Web Design Services",
       "manufacturer": {"@id": "https://snrgweb.com/#org"},
       "offers": {
         "@type": "Offer",
         "url": "https://snrgweb.com/austin",
         "priceCurrency": "USD",
         "price": "285.00",
+        "priceValidUntil": "2026-12-31",
         "availability": "https://schema.org/InStock",
         "itemCondition": "https://schema.org/NewCondition",
-        "priceValidUntil": "2026-12-31",
         "seller": {"@id": "https://snrgweb.com/austin#business"}
-      }
+      },
+      "additionalProperty": [
+        {"@type": "PropertyValue", "name": "Full Ownership", "value": "Yes"},
+        {"@type": "PropertyValue", "name": "SEO Optimized", "value": "Yes"},
+        {"@type": "PropertyValue", "name": "Mobile Responsive", "value": "Yes"},
+        {"@type": "PropertyValue", "name": "Training Included", "value": "Yes"}
+      ]
     }
   ]
 }
@@ -1787,19 +1832,12 @@ body.spanish [lang="en"]{display:none}
 
 <body>
   <!-- SEO/A11Y H1 - Hidden from visual layout -->
-  <h1 lang="es" cAustinss="visually-hidden" Austinng="en">Professional Web Design for Austin TX Startups and Small Businesses — Serving Downtown, East Austin, South Congress, and the Domain</h1>
-  <h1 lang="es" cAustinss="visually-hidden" Austinng="es">Diseño Web Profesional para Startups y Pequeñas Empresas en Austin TX — Sirviendo Downtown, East Austin, South Congress, y Domain</h1>
+  <h1 class="visually-hidden" lang="en">Professional Web Design for Austin TX Startups and Small Businesses — Serving Downtown, East Austin, South Congress, and the Domain</h1>
 
   <nav class="lang-bar" role="navigation" aria-label="Language selection">
-    <div class="lang-toggle">
-      <button class="lang-btn active" onclick="switchLang('en')" aria-label="Switch to English" aria-current="true">EN</button>
-      <button class="lang-btn" onclick="switchLang('es')" aria-label="Cambiar a español">ES</button>
-    </div>
     <div class="header-nav-pill">
-      <a href="contact.html" class="header-nav-btn" lang="en">Contact</a>
-      <a href="contact.html" class="header-nav-btn" lang="es">Contacto</a>
-      <a href="faq.html" class="header-nav-btn" lang="en">FAQ</a>
-      <a href="faq.html" class="header-nav-btn" lang="es">FAQ</a>
+      <a href="contact.html" class="header-nav-btn">Contact</a>
+      <a href="faq.html" class="header-nav-btn">FAQ</a>
     </div>
   </nav>
 
