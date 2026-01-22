@@ -41,23 +41,54 @@
         "width": 1024,
         "height": 1024
       },
-      "founder": {"@id": "https://snrgweb.com/#owner"}
+      "founder": {
+        "@id": "https://snrgweb.com/#owner"
+      },
+      "sameAs": [
+        "https://github.com/snrg-web-htx",
+        "https://www.upwork.com/freelancers/~01dc1252e413e4b045"
+      ]
     },
     {
       "@type": "WebSite",
       "@id": "https://snrgweb.com/#website",
       "url": "https://snrgweb.com/",
-      "name": "SNRG WEB"
+      "name": "SNRG WEB",
+      "inLanguage": [
+        "en",
+        "es"
+      ],
+      "publisher": {
+        "@id": "https://snrgweb.com/#org"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://snrgweb.com/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
     },
     {
       "@type": "WebPage",
       "@id": "https://snrgweb.com/corpus-christi#webpage",
       "url": "https://snrgweb.com/corpus-christi",
       "name": "Web Design Corpus Christi TX | SNRG WEB",
-      "about": {"@id": "https://snrgweb.com/corpus-christi#business"},
+      "about": {
+        "@id": "https://snrgweb.com/corpus-christi#business"
+      },
       "description": "Professional web design and managed hosting services for small businesses in Corpus Christi.",
-      "isPartOf": {"@id": "https://snrgweb.com/#website"},
-      "breadcrumb": {"@id": "https://snrgweb.com/corpus-christi#breadcrumb"}
+      "isPartOf": {
+        "@id": "https://snrgweb.com/#website"
+      },
+      "breadcrumb": {
+        "@id": "https://snrgweb.com/corpus-christi#breadcrumb"
+      },
+      "publisher": {
+        "@id": "https://snrgweb.com/#org"
+      },
+      "inLanguage": [
+        "en",
+        "es"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -82,7 +113,14 @@
       "@id": "https://snrgweb.com/#owner",
       "name": "Bobby Frilot",
       "jobTitle": "Lead Web Strategist",
-      "worksFor": {"@id": "https://snrgweb.com/#org"}
+      "worksFor": {
+        "@id": "https://snrgweb.com/#org"
+      },
+      "url": "https://snrgweb.com/",
+      "sameAs": [
+        "https://www.upwork.com/freelancers/~01dc1252e413e4b045",
+        "https://github.com/snrg-web-htx"
+      ]
     },
     {
       "@type": "LocalBusiness",
@@ -99,42 +137,100 @@
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Corpus Christi",
-        "addressRegion": "GA",
+        "addressRegion": "TX",
         "addressCountry": "US"
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": "27.8006",
-        "longitude": "-97.3964"
+        "latitude": 27.800583,
+        "longitude": -97.396378
       },
       "hasMap": "https://www.google.com/maps/place/Corpus Christi,+GA",
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
           "opens": "00:00",
           "closes": "23:59"
         }
       ],
-      "parentOrganization": {"@id": "https://snrgweb.com/#org"},
-      "employee": {"@id": "https://snrgweb.com/#owner"},
+      "parentOrganization": {
+        "@id": "https://snrgweb.com/#org"
+      },
+      "employee": {
+        "@id": "https://snrgweb.com/#owner"
+      },
       "areaServed": [
-        {"@type": "City", "name": "Corpus Christi", "@id": "https://en.wikipedia.org/wiki/Corpus_Christi,_Texas"},
-        {"@type": "Place", "name": "Downtown Corpus Christi", "geo": {"@type": "GeoCoordinates", "latitude": "27.8006", "longitude": "-97.3964"}},
-        {"@type": "Place", "name": "Padre Island", "geo": {"@type": "GeoCoordinates", "latitude": "27.6419", "longitude": "-97.2125"}},
-        {"@type": "Place", "name": "Calallen", "geo": {"@type": "GeoCoordinates", "latitude": "27.8778", "longitude": "-97.6139"}},
-        {"@type": "Place", "name": "Flour Bluff", "geo": {"@type": "GeoCoordinates", "latitude": "27.6539", "longitude": "-97.3122"}},
-        {"@type": "Place", "name": "Southside", "geo": {"@type": "GeoCoordinates", "latitude": "27.7564", "longitude": "-97.4367"}}
+        {
+          "@type": "City",
+          "name": "Corpus Christi",
+          "@id": "https://en.wikipedia.org/wiki/Corpus_Christi,_Texas"
+        },
+        {
+          "@type": "Place",
+          "name": "Downtown Corpus Christi",
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "27.8006",
+            "longitude": "-97.3964"
+          }
+        },
+        {
+          "@type": "Place",
+          "name": "Padre Island",
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "27.6419",
+            "longitude": "-97.2125"
+          }
+        },
+        {
+          "@type": "Place",
+          "name": "Calallen",
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "27.8778",
+            "longitude": "-97.6139"
+          }
+        },
+        {
+          "@type": "Place",
+          "name": "Flour Bluff",
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "27.6539",
+            "longitude": "-97.3122"
+          }
+        },
+        {
+          "@type": "Place",
+          "name": "Southside",
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "27.7564",
+            "longitude": "-97.4367"
+          }
+        }
       ],
       "slogan": "24/7 Web Design Support for Corpus Christi Small Businesses",
       "currenciesAccepted": "USD",
       "paymentAccepted": "Cash, Credit Card, Venmo, Zelle, PayPal",
-      "knowsLanguage": ["en-US"]
+      "knowsLanguage": [
+        "en-US"
+      ]
     },
     {
       "@type": "ProfessionalService",
       "@id": "https://snrgweb.com/corpus-christi#business",
-      "name": "SNRG WEB - Corpus Christi",
+      "name": "SNRG WEB – Corpus Christi (CCTX)",
       "image": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
       "url": "https://snrgweb.com/corpus-christi",
       "email": "bobby@snrgweb.com",
@@ -142,36 +238,90 @@
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Corpus Christi",
-        "addressRegion": "GA",
+        "addressRegion": "TX",
         "addressCountry": "US"
       },
-      "parentOrganization": {"@id": "https://snrgweb.com/#org"},
-      "employee": {"@id": "https://snrgweb.com/#owner"},
+      "parentOrganization": {
+        "@id": "https://snrgweb.com/#org"
+      },
+      "employee": {
+        "@id": "https://snrgweb.com/#owner"
+      },
       "makesOffer": [
-        {"@id": "https://snrgweb.com/corpus-christi#service"},
-        {"@id": "https://snrgweb.com/corpus-christi#product-managed"},
-        {"@id": "https://snrgweb.com/corpus-christi#product-ownership"}
+        {
+          "@id": "https://snrgweb.com/corpus-christi#service"
+        },
+        {
+          "@id": "https://snrgweb.com/corpus-christi#product-managed"
+        },
+        {
+          "@id": "https://snrgweb.com/corpus-christi#product-ownership"
+        },
+        {
+          "@id": "https://snrgweb.com/corpus-christi#offer-managed-75"
+        },
+        {
+          "@id": "https://snrgweb.com/corpus-christi#offer-ownership-285"
+        }
       ],
       "areaServed": [
-        {"@type": "City", "name": "Corpus Christi", "@id": "https://en.wikipedia.org/wiki/Corpus Christi"}
+        {
+          "@type": "City",
+          "name": "Corpus Christi",
+          "@id": "https://en.wikipedia.org/wiki/Corpus Christi"
+        }
+      ],
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 27.800583,
+        "longitude": -97.396378
+      },
+      "knowsLanguage": [
+        "en-US",
+        "es-US"
       ]
     },
     {
       "@type": "Service",
       "@id": "https://snrgweb.com/corpus-christi#service",
       "serviceType": "Web Design and Management",
-      "provider": {"@id": "https://snrgweb.com/corpus-christi#localbusiness"},
+      "provider": {
+        "@id": "https://snrgweb.com/corpus-christi#localbusiness"
+      },
       "areaServed": [
-        {"@type": "City", "name": "Corpus Christi", "@id": "https://en.wikipedia.org/wiki/Corpus Christi"},
-        {"@type": "Place", "name": "Buckhead"},
-        {"@type": "Place", "name": "Midtown Corpus Christi"},
-        {"@type": "Place", "name": "Virginia-Highland"},
-        {"@type": "Place", "name": "Beltline"},
-        {"@type": "Place", "name": "Decatur"}
+        {
+          "@type": "City",
+          "name": "Corpus Christi",
+          "@id": "https://en.wikipedia.org/wiki/Corpus Christi"
+        },
+        {
+          "@type": "Place",
+          "name": "Buckhead"
+        },
+        {
+          "@type": "Place",
+          "name": "Midtown Corpus Christi"
+        },
+        {
+          "@type": "Place",
+          "name": "Virginia-Highland"
+        },
+        {
+          "@type": "Place",
+          "name": "Beltline"
+        },
+        {
+          "@type": "Place",
+          "name": "Decatur"
+        }
       ],
       "offers": [
-        {"@id": "https://snrgweb.com/corpus-christi#product-managed"},
-        {"@id": "https://snrgweb.com/corpus-christi#product-ownership"}
+        {
+          "@id": "https://snrgweb.com/corpus-christi#product-managed"
+        },
+        {
+          "@id": "https://snrgweb.com/corpus-christi#product-ownership"
+        }
       ]
     },
     {
@@ -180,17 +330,15 @@
       "name": "Corpus Christi Managed Web Design – Monthly",
       "image": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
       "description": "Professional custom website design with ongoing support, hosting, and unlimited updates. Launch in 2-3 days.",
-      "brand": { "@type": "Brand", "name": "SNRG WEB" },
-      "manufacturer": {"@id": "https://snrgweb.com/#org"},
+      "brand": {
+        "@type": "Brand",
+        "name": "SNRG WEB"
+      },
+      "manufacturer": {
+        "@id": "https://snrgweb.com/#org"
+      },
       "offers": {
-        "@type": "Offer",
-        "url": "https://snrgweb.com/corpus-christi",
-        "priceCurrency": "USD",
-        "price": "75.00",
-        "availability": "https://schema.org/InStock",
-        "itemCondition": "https://schema.org/NewCondition",
-        "priceValidUntil": "2026-12-31",
-        "seller": {"@id": "https://snrgweb.com/corpus-christi#business"}
+        "@id": "https://snrgweb.com/corpus-christi#offer-managed-75"
       }
     },
     {
@@ -199,17 +347,41 @@
       "name": "Corpus Christi Site Ownership Build",
       "image": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
       "description": "One-time purchase with full ownership of custom designed website. All source files included. Launch in 2-3 days.",
-      "brand": { "@type": "Brand", "name": "SNRG WEB" },
-      "manufacturer": {"@id": "https://snrgweb.com/#org"},
+      "brand": {
+        "@type": "Brand",
+        "name": "SNRG WEB"
+      },
+      "manufacturer": {
+        "@id": "https://snrgweb.com/#org"
+      },
       "offers": {
-        "@type": "Offer",
-        "url": "https://snrgweb.com/corpus-christi",
-        "priceCurrency": "USD",
-        "price": "285.00",
-        "availability": "https://schema.org/InStock",
-        "itemCondition": "https://schema.org/NewCondition",
-        "priceValidUntil": "2026-12-31",
-        "seller": {"@id": "https://snrgweb.com/corpus-christi#business"}
+        "@id": "https://snrgweb.com/corpus-christi#offer-ownership-285"
+      }
+    },
+    {
+      "@type": "Offer",
+      "@id": "https://snrgweb.com/corpus-christi#offer-managed-75",
+      "url": "https://snrgweb.com/corpus-christi",
+      "priceCurrency": "USD",
+      "price": "75.00",
+      "availability": "https://schema.org/InStock",
+      "itemCondition": "https://schema.org/NewCondition",
+      "priceValidUntil": "2026-12-31",
+      "seller": {
+        "@id": "https://snrgweb.com/corpus-christi#business"
+      }
+    },
+    {
+      "@type": "Offer",
+      "@id": "https://snrgweb.com/corpus-christi#offer-ownership-285",
+      "url": "https://snrgweb.com/corpus-christi",
+      "priceCurrency": "USD",
+      "price": "285.00",
+      "availability": "https://schema.org/InStock",
+      "itemCondition": "https://schema.org/NewCondition",
+      "priceValidUntil": "2026-12-31",
+      "seller": {
+        "@id": "https://snrgweb.com/corpus-christi#business"
       }
     }
   ]
@@ -1684,35 +1856,32 @@ body.spanish [lang="en"]{display:none}
 }
 
 
-/* === NEON RED UNDERLINE ANIMATION === */
-.priced-different {
-  position: relative;
-  display: inline-block;
+/* === CLEAN SNRG RED UNDERLINE (NON-NEON) === */
+.priced-different{
+  position:relative;
+  display:inline-block;
 }
-.priced-different::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background: linear-gradient(90deg, #FF0033, #FF1744);
-  box-shadow: 
-    0 0 8px #FF0033, 
-    0 0 16px #FF0033, 
-    0 0 24px #FF1744,
-    0 0 32px #FF1744;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0s;
-  border-radius: 2px;
+.priced-different::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-4px;
+  width:100%;
+  height:3px;
+  background:#FF2A2A; /* brand red (logo frame) */
+  transform:scaleX(0);
+  transform-origin:left;
+  will-change:transform;
+  border-radius:2px;
 }
-.priced-different.animate::after {
-  animation: neonUnderline 2.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+.priced-different.animate::after{
+  animation: snrgUnderlineDraw 950ms cubic-bezier(.2,.8,.2,1) forwards;
 }
-@keyframes neonUnderline {
-  0% { transform: scaleX(0); opacity: 0; }
-  10% { opacity: 1; }
+@keyframes snrgUnderlineDraw{
+  from{ transform:scaleX(0); }
+  to{ transform:scaleX(1); }
+}
+10% { opacity: 1; }
   100% { transform: scaleX(1); opacity: 1; }
 }
 
@@ -2198,64 +2367,6 @@ body.spanish [lang="en"]{display:none}
   </script>
 
 
-<script>
-(function(){
-  function initNeonUnderline(){
-    var el = document.getElementById("pricedDifferent");
-    if(!el) return;
-
-    // Respect reduced motion
-    var reduce = false;
-    try {
-      reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    } catch(e) {}
-    if(reduce){
-      el.classList.add("animate");
-      return;
-    }
-
-    // Trigger on scroll into view (once)
-    var triggered = false;
-    function trigger(){
-      if(triggered) return;
-      triggered = true;
-      el.classList.add("animate");
-    }
-
-    if('IntersectionObserver' in window){
-      var io = new IntersectionObserver(function(entries){
-        entries.forEach(function(entry){
-          if(entry.isIntersecting){
-            trigger();
-            io.disconnect();
-          }
-        });
-      }, { root: null, rootMargin: '0px 0px -20% 0px', threshold: 0.15 });
-      io.observe(el);
-    } else {
-      // Fallback: simple scroll check
-      function onScroll(){
-        if(triggered) return;
-        var r = el.getBoundingClientRect();
-        if(r.top < (window.innerHeight * 0.8) && r.bottom > 0){
-          trigger();
-          window.removeEventListener('scroll', onScroll);
-          window.removeEventListener('resize', onScroll);
-        }
-      }
-      window.addEventListener('scroll', onScroll, {passive:true});
-      window.addEventListener('resize', onScroll);
-      onScroll();
-    }
-  }
-
-  if(document.readyState === "loading"){
-    document.addEventListener("DOMContentLoaded", initNeonUnderline);
-  } else {
-    initNeonUnderline();
-  }
-})();
-</script>
 <script>
 /* SNRG UNDERLINE OBSERVER */
 (function(){
