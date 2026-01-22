@@ -19,6 +19,7 @@
 
 <!-- Hreflang (single-URL language toggle) -->
 <link rel="alternate" hreflang="en" href="https://snrgweb.com/houston.html"/>
+<link rel="alternate" hreflang="es" href="https://snrgweb.com/houston.html"/>
 <link rel="alternate" hreflang="x-default" href="https://snrgweb.com/houston.html"/>
 
 
@@ -39,13 +40,32 @@
       },
       "founder": {
         "@id": "https://snrgweb.com/#owner"
-      }
+      },
+      "sameAs": [
+        "https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share",
+        "https://github.com/SNRG-WEB-HTX"
+      ]
     },
     {
       "@type": "WebSite",
       "@id": "https://snrgweb.com/#website",
       "url": "https://snrgweb.com/",
-      "name": "SNRG WEB"
+      "name": "SNRG WEB",
+      "publisher": {
+        "@id": "https://snrgweb.com/#org"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://snrgweb.com/?s={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      },
+      "inLanguage": [
+        "en",
+        "es"
+      ]
     },
     {
       "@type": "WebPage",
@@ -61,7 +81,11 @@
       },
       "breadcrumb": {
         "@id": "https://snrgweb.com/houston.html#breadcrumb"
-      }
+      },
+      "inLanguage": [
+        "en",
+        "es"
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -88,7 +112,12 @@
       "jobTitle": "Lead Web Strategist",
       "worksFor": {
         "@id": "https://snrgweb.com/#org"
-      }
+      },
+      "url": "https://snrgweb.com/",
+      "sameAs": [
+        "https://www.upwork.com/freelancers/bobbyfrilot",
+        "https://github.com/SNRG-WEB-HTX"
+      ]
     },
     {
       "@type": "LocalBusiness",
@@ -145,7 +174,8 @@
       "currenciesAccepted": "USD",
       "paymentAccepted": "Cash, Credit Card, Venmo, Zelle, PayPal",
       "knowsLanguage": [
-        "en-US"
+        "en-US",
+        "es-US"
       ],
       "telephone": "+1-346-291-6010",
       "founder": {
@@ -175,6 +205,12 @@
       "makesOffer": [
         {
           "@id": "https://snrgweb.com/houston.html#service"
+        },
+        {
+          "@id": "https://snrgweb.com/houston.html#offer-managed-75"
+        },
+        {
+          "@id": "https://snrgweb.com/houston.html#offer-ownership-285"
         },
         {
           "@id": "https://snrgweb.com/houston.html#product-managed"
@@ -306,10 +342,10 @@
       ],
       "offers": [
         {
-          "@id": "https://snrgweb.com/houston.html#product-managed"
+          "@id": "https://snrgweb.com/houston.html#offer-managed-75"
         },
         {
-          "@id": "https://snrgweb.com/houston.html#product-ownership"
+          "@id": "https://snrgweb.com/houston.html#offer-ownership-285"
         }
       ],
       "name": "Professional Web Design in Houston, TX"
@@ -328,16 +364,7 @@
         "@id": "https://snrgweb.com/#org"
       },
       "offers": {
-        "@type": "Offer",
-        "url": "https://snrgweb.com/houston.html",
-        "priceCurrency": "USD",
-        "price": "75.00",
-        "availability": "https://schema.org/InStock",
-        "itemCondition": "https://schema.org/NewCondition",
-        "priceValidUntil": "2026-12-31",
-        "seller": {
-          "@id": "https://snrgweb.com/houston.html#localbusiness"
-        }
+        "@id": "https://snrgweb.com/houston.html#offer-managed-75"
       },
       "sku": "SNRG-HOUSTON-MANAGED-001"
     },
@@ -355,18 +382,41 @@
         "@id": "https://snrgweb.com/#org"
       },
       "offers": {
-        "@type": "Offer",
-        "url": "https://snrgweb.com/houston.html",
-        "priceCurrency": "USD",
-        "price": "285.00",
-        "availability": "https://schema.org/InStock",
-        "itemCondition": "https://schema.org/NewCondition",
-        "priceValidUntil": "2026-12-31",
-        "seller": {
-          "@id": "https://snrgweb.com/houston.html#localbusiness"
-        }
+        "@id": "https://snrgweb.com/houston.html#offer-ownership-285"
       },
       "sku": "SNRG-HOUSTON-OWNERSHIP-001"
+    },
+    {
+      "@type": "Offer",
+      "@id": "https://snrgweb.com/houston.html#offer-managed-75",
+      "url": "https://snrgweb.com/houston.html",
+      "priceCurrency": "USD",
+      "price": "75.00",
+      "availability": "https://schema.org/InStock",
+      "itemCondition": "https://schema.org/NewCondition",
+      "priceValidUntil": "2026-12-31",
+      "seller": {
+        "@id": "https://snrgweb.com/houston.html#localbusiness"
+      },
+      "itemOffered": {
+        "@id": "https://snrgweb.com/houston.html#product-managed"
+      }
+    },
+    {
+      "@type": "Offer",
+      "@id": "https://snrgweb.com/houston.html#offer-ownership-285",
+      "url": "https://snrgweb.com/houston.html",
+      "priceCurrency": "USD",
+      "price": "285.00",
+      "availability": "https://schema.org/InStock",
+      "itemCondition": "https://schema.org/NewCondition",
+      "priceValidUntil": "2026-12-31",
+      "seller": {
+        "@id": "https://snrgweb.com/houston.html#localbusiness"
+      },
+      "itemOffered": {
+        "@id": "https://snrgweb.com/houston.html#product-ownership"
+      }
     }
   ]
 }
