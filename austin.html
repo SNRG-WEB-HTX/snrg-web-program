@@ -2513,5 +2513,29 @@ body.spanish [lang="en"]{display:none}
     </div>
   </footer>
 
+
+<script>
+/* === SNRG UNDERLINE SCROLL TRIGGER (Baton Rouge Gold Standard) === */
+(function(){
+  const targets = document.querySelectorAll('.snrg-underline[data-underline]');
+  if(!('IntersectionObserver' in window) || !targets.length){
+    targets.forEach(el => el.classList.add('is-animating'));
+    return;
+  }
+
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        const el = entry.target;
+        setTimeout(()=> el.classList.add('is-animating'), 140);
+        io.unobserve(el);
+      }
+    });
+  }, { threshold: 0.6 });
+
+  targets.forEach(el => io.observe(el));
+})();
+</script>
+
 </body>
 </html>
