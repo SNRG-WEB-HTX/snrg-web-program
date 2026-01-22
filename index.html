@@ -36,10 +36,7 @@
       "name": "SNRG WEB",
       "url": "https://snrgweb.com/",
       "logo": {
-        "@type": "ImageObject",
-        "url": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
-        "width": 1024,
-        "height": 1024
+        "@id": "https://snrgweb.com/#logo"
       },
       "founder": {
         "@id": "https://snrgweb.com/#owner"
@@ -48,6 +45,13 @@
         "https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share",
         "https://github.com/SNRG-WEB-HTX"
       ]
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://snrgweb.com/#logo",
+      "url": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
+      "width": 1024,
+      "height": 1024
     },
     {
       "@type": "WebSite",
@@ -92,6 +96,9 @@
             "item": "https://snrgweb.com/"
           }
         ]
+      },
+      "primaryImageOfPage": {
+        "@id": "https://snrgweb.com/#logo"
       }
     },
     {
@@ -111,7 +118,9 @@
       "@type": "ProfessionalService",
       "@id": "https://snrgweb.com/#business",
       "name": "SNRG WEB",
-      "image": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
+      "image": {
+        "@id": "https://snrgweb.com/#logo"
+      },
       "url": "https://snrgweb.com",
       "telephone": "+1-346-291-6010",
       "email": "bobby@snrgweb.com",
@@ -211,10 +220,10 @@
       },
       "offers": [
         {
-          "@id": "https://snrgweb.com/#product-managed"
+          "@id": "https://snrgweb.com/#offer-managed"
         },
         {
-          "@id": "https://snrgweb.com/#product-ownership"
+          "@id": "https://snrgweb.com/#offer-ownership"
         }
       ]
     },
@@ -222,7 +231,9 @@
       "@type": "Product",
       "@id": "https://snrgweb.com/#product-managed",
       "name": "Fully Managed Website Service",
-      "image": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
+      "image": {
+        "@id": "https://snrgweb.com/#logo"
+      },
       "description": "Professional custom website design with ongoing support, hosting, and unlimited updates. Launch in 2-3 days.",
       "brand": {
         "@type": "Brand",
@@ -232,23 +243,16 @@
         "@id": "https://snrgweb.com/#org"
       },
       "offers": {
-        "@type": "Offer",
-        "url": "https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share",
-        "priceCurrency": "USD",
-        "price": "75.00",
-        "availability": "https://schema.org/InStock",
-        "itemCondition": "https://schema.org/NewCondition",
-        "priceValidUntil": "2026-12-31",
-        "seller": {
-          "@id": "https://snrgweb.com/#business"
-        }
+        "@id": "https://snrgweb.com/#offer-managed"
       }
     },
     {
       "@type": "Product",
       "@id": "https://snrgweb.com/#product-ownership",
       "name": "Website Ownership - One-Time Purchase",
-      "image": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
+      "image": {
+        "@id": "https://snrgweb.com/#logo"
+      },
       "description": "One-time purchase with full ownership of custom designed website. All source files included. Launch in 2-3 days.",
       "brand": {
         "@type": "Brand",
@@ -258,16 +262,33 @@
         "@id": "https://snrgweb.com/#org"
       },
       "offers": {
-        "@type": "Offer",
-        "url": "https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share",
-        "priceCurrency": "USD",
-        "price": "285.00",
-        "availability": "https://schema.org/InStock",
-        "itemCondition": "https://schema.org/NewCondition",
-        "priceValidUntil": "2026-12-31",
-        "seller": {
-          "@id": "https://snrgweb.com/#business"
-        }
+        "@id": "https://snrgweb.com/#offer-ownership"
+      }
+    },
+    {
+      "@type": "Offer",
+      "@id": "https://snrgweb.com/#offer-managed",
+      "url": "https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share",
+      "priceCurrency": "USD",
+      "price": "75.00",
+      "availability": "https://schema.org/InStock",
+      "itemCondition": "https://schema.org/NewCondition",
+      "priceValidUntil": "2026-12-31",
+      "seller": {
+        "@id": "https://snrgweb.com/#business"
+      }
+    },
+    {
+      "@type": "Offer",
+      "@id": "https://snrgweb.com/#offer-ownership",
+      "url": "https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share",
+      "priceCurrency": "USD",
+      "price": "285.00",
+      "availability": "https://schema.org/InStock",
+      "itemCondition": "https://schema.org/NewCondition",
+      "priceValidUntil": "2026-12-31",
+      "seller": {
+        "@id": "https://snrgweb.com/#business"
       }
     }
   ]
