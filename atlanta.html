@@ -18,9 +18,6 @@
 <meta name="referrer" content="strict-origin-when-cross-origin"/>
 
 <!-- Hreflang (single-URL language toggle) -->
-<link rel="alternate" hreflang="en" href="https://snrgweb.com/atlanta.html"/>
-<link rel="alternate" hreflang="x-default" href="https://snrgweb.com/atlanta.html"/>
-
 
 <script type="application/ld+json">
 {
@@ -32,20 +29,31 @@
       "name": "SNRG WEB",
       "url": "https://snrgweb.com/",
       "logo": {
-        "@type": "ImageObject",
-        "url": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
-        "width": 1024,
-        "height": 1024
+        "@id": "https://snrgweb.com/#logo"
       },
       "founder": {
         "@id": "https://snrgweb.com/#owner"
       }
     },
     {
+      "@type": "ImageObject",
+      "@id": "https://snrgweb.com/#logo",
+      "url": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
+      "width": 1024,
+      "height": 1024
+    },
+    {
       "@type": "WebSite",
       "@id": "https://snrgweb.com/#website",
       "url": "https://snrgweb.com/",
-      "name": "SNRG WEB"
+      "name": "SNRG WEB",
+      "publisher": {
+        "@id": "https://snrgweb.com/#org"
+      },
+      "inLanguage": [
+        "en",
+        "es"
+      ]
     },
     {
       "@type": "WebPage",
@@ -61,6 +69,16 @@
       },
       "breadcrumb": {
         "@id": "https://snrgweb.com/atlanta.html#breadcrumb"
+      },
+      "publisher": {
+        "@id": "https://snrgweb.com/#org"
+      },
+      "inLanguage": [
+        "en",
+        "es"
+      ],
+      "primaryImageOfPage": {
+        "@id": "https://snrgweb.com/#logo"
       }
     },
     {
@@ -145,7 +163,8 @@
       "currenciesAccepted": "USD",
       "paymentAccepted": "Cash, Credit Card, Venmo, Zelle, PayPal",
       "knowsLanguage": [
-        "en-US"
+        "en-US",
+        "es-US"
       ],
       "telephone": "+1-346-291-6010",
       "founder": {
@@ -248,7 +267,11 @@
       ],
       "provider": {
         "@id": "https://snrgweb.com/atlanta.html#localbusiness"
-      }
+      },
+      "inLanguage": [
+        "en",
+        "es"
+      ]
     },
     {
       "@type": "Service",
@@ -328,7 +351,11 @@
           "@id": "https://snrgweb.com/atlanta.html#product-ownership"
         }
       ],
-      "name": "Professional Web Design in Atlanta, GA"
+      "name": "Professional Web Design in Atlanta, GA",
+      "inLanguage": [
+        "en",
+        "es"
+      ]
     },
     {
       "@type": "Product",
@@ -1974,6 +2001,14 @@ body.spanish [lang="en"]{display:none}
   font-style:italic;
 }
 
+/* Footer links match Houston Gold */
+footer a{
+  color:inherit !important;
+  text-decoration:none !important;
+}
+footer a:hover{
+  text-decoration:none !important;
+}
 </style>
 <script>
 /* ULTRA-SAFE bilingual persistence (no layout changes) */
@@ -1998,6 +2033,12 @@ body.spanish [lang="en"]{display:none}
   };
 })();
 </script>
+<!-- Hreflang (single-URL language toggle) -->
+<link rel="alternate" hreflang="en" href="https://snrgweb.com/atlanta.html"/>
+<link rel="alternate" hreflang="es" href="https://snrgweb.com/atlanta.html"/>
+<link rel="alternate" hreflang="x-default" href="https://snrgweb.com/atlanta.html"/>
+<meta property="og:locale:alternate" content="es_US"/>
+
 </head>
 
 <body>
@@ -2032,10 +2073,10 @@ body.spanish [lang="en"]{display:none}
           </div>
           
           <div class="hero-cta-group">
-            <a href="booking.html" class="cta cta-primary" lang="en">Book a Call</a>
+            <a href="tel:+13462916010" class="cta cta-primary" lang="en">Call Now</a>
             <a href="https://www.upwork.com/freelancers/bobbyfrilot" class="cta cta-secondary" lang="en" target="_blank" rel="noopener">Order on Upwork</a>
             
-            <a href="booking.html" class="cta cta-primary" lang="es">Agendar Llamada</a>
+            <a href="tel:+13462916010" class="cta cta-primary" lang="es">Llamar Ahora</a>
             <a href="https://www.upwork.com/freelancers/bobbyfrilot" class="cta cta-secondary" lang="es" target="_blank" rel="noopener">Ordenar en Upwork</a>
           </div>
         </div>
@@ -2065,7 +2106,7 @@ body.spanish [lang="en"]{display:none}
             <li class="pricing-feature">Ongoing support</li>
           </ul>
           <div class="pricing-cta">
-            <a href="booking.html" class="cta cta-primary">Book a Call</a>
+            <a href="tel:+13462916010" class="cta cta-primary">Call Now</a>
           </div>
         </div>
         
@@ -2103,7 +2144,7 @@ body.spanish [lang="en"]{display:none}
             <li class="pricing-feature">Soporte continuo</li>
           </ul>
           <div class="pricing-cta">
-            <a href="booking.html" class="cta cta-primary">Agendar Llamada</a>
+            <a href="tel:+13462916010" class="cta cta-primary">Llamar Ahora</a>
           </div>
         </div>
         
@@ -2333,10 +2374,10 @@ body.spanish [lang="en"]{display:none}
 
   <div class="sticky-cta" id="stickyCTA">
     <div class="sticky-cta-buttons">
-      <a href="booking.html" class="cta cta-primary" lang="en">Book a Call</a>
+      <a href="tel:+13462916010" class="cta cta-primary" lang="en">Call Now</a>
       <a href="https://www.upwork.com/freelancers/bobbyfrilot" class="cta cta-secondary" lang="en" target="_blank" rel="noopener">Order on Upwork</a>
       
-      <a href="booking.html" class="cta cta-primary" lang="es">Agendar Llamada</a>
+      <a href="tel:+13462916010" class="cta cta-primary" lang="es">Llamar Ahora</a>
       <a href="https://www.upwork.com/freelancers/bobbyfrilot" class="cta cta-secondary" lang="es" target="_blank" rel="noopener">Ordenar en Upwork</a>
     </div>
   </div>
@@ -2509,9 +2550,31 @@ body.spanish [lang="en"]{display:none}
 
   <footer class="footer fade-in">
     <div class="container">
-      <p class="footer-copyright">© 2026 SNRG WEB — The City in a Forest</p>
+      <p class="footer-copyright">© 2026 SNRG WEB — HOTLANTA</p>
     </div>
-  </footer>
+  
+<!-- Footer Locations -->
+<div class="footer-locations" style="text-align:center;margin-top:24px;">
+  <a href="https://snrgweb.com/houston.html">Houston</a> ·
+  <a href="https://snrgweb.com/new-orleans.html">New Orleans</a> ·
+  <a href="https://snrgweb.com/atlanta.html">Atlanta</a> ·
+  <a href="https://snrgweb.com/austin.html">Austin</a> ·
+  <a href="https://snrgweb.com/dallas.html">Dallas</a> ·
+  <a href="https://snrgweb.com/phoenix.html">Phoenix</a> ·
+  <a href="https://snrgweb.com/miami.html">Miami</a> ·
+  <a href="https://snrgweb.com/denver.html">Denver</a> ·
+  <a href="https://snrgweb.com/charlotte.html">Charlotte</a> ·
+  <a href="https://snrgweb.com/nashville.html">Nashville</a> ·
+  <a href="https://snrgweb.com/raleigh.html">Raleigh</a> ·
+  <a href="https://snrgweb.com/indianapolis.html">Indianapolis</a>
+</div>
+
+
+<style>
+footer a{ color:inherit !important; text-decoration:none !important; }
+footer a:hover{ text-decoration:none !important; }
+</style>
+</footer>
 
 </body>
 </html>
