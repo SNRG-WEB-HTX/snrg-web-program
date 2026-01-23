@@ -450,7 +450,7 @@ body.spanish [lang="en"]{display:none}
   top:-20%;
   left:-20%;
   filter:blur(60px);
-  animation:infraGlowSlow 35s ease-in-out infinite;
+  animation:infraGlowSlow 60s ease-in-out infinite;
 }
 
 .hero .animated-bg::after{
@@ -467,7 +467,7 @@ body.spanish [lang="en"]{display:none}
   bottom:-20%;
   right:-20%;
   filter:blur(70px);
-  animation:infraGlowSlow 40s ease-in-out infinite reverse;
+  animation:infraGlowSlow 72s ease-in-out infinite reverse;
 }
 
 @keyframes infraGlowSlow{
@@ -901,7 +901,7 @@ body.spanish [lang="en"]{display:none}
   padding:96px 0;
   background:linear-gradient(135deg, #ffffff 0%, #f8f9fa 25%, #ffffff 50%, #f5f6f7 75%, #ffffff 100%);
   background-size:400% 400%;
-  animation:pearlShimmer 15s ease infinite;
+  animation:pearlShimmer 28s ease infinite;
   position:relative;
   overflow:hidden;
 }
@@ -914,7 +914,7 @@ body.spanish [lang="en"]{display:none}
     radial-gradient(circle at 20% 30%, rgba(255,255,255,0.8) 0%, transparent 50%),
     radial-gradient(circle at 80% 70%, rgba(248,249,250,0.6) 0%, transparent 50%),
     radial-gradient(circle at 40% 80%, rgba(245,246,247,0.7) 0%, transparent 50%);
-  animation:pearlFloat 20s ease-in-out infinite;
+  animation:pearlFloat 34s ease-in-out infinite;
   pointer-events:none;
 }
 
@@ -1090,7 +1090,7 @@ body.spanish [lang="en"]{display:none}
   padding:96px 0;
   background:linear-gradient(135deg, #f6f7f8 0%, #f9fafb 25%, #f6f7f8 50%, #f7f8f9 75%, #f6f7f8 100%);
   background-size:400% 400%;
-  animation:pearlShimmer 22s ease infinite;
+  animation:pearlShimmer 36s ease infinite;
   position:relative;
   overflow:hidden;
 }
@@ -1103,7 +1103,7 @@ body.spanish [lang="en"]{display:none}
     radial-gradient(circle at 70% 20%, rgba(255,255,255,0.5) 0%, transparent 50%),
     radial-gradient(circle at 30% 60%, rgba(248,249,250,0.4) 0%, transparent 50%),
     radial-gradient(circle at 60% 90%, rgba(246,247,248,0.6) 0%, transparent 50%);
-  animation:pearlFloat 22s ease-in-out infinite reverse;
+  animation:pearlFloat 36s ease-in-out infinite reverse;
   pointer-events:none;
 }
 
@@ -1191,7 +1191,7 @@ body.spanish [lang="en"]{display:none}
   padding:96px 0;
   background:linear-gradient(135deg, #ffffff 0%, #f9fafb 25%, #ffffff 50%, #f7f8f9 75%, #ffffff 100%);
   background-size:400% 400%;
-  animation:pearlShimmer 16s ease infinite;
+  animation:pearlShimmer 30s ease infinite;
   position:relative;
   overflow:hidden;
 }
@@ -1204,7 +1204,7 @@ body.spanish [lang="en"]{display:none}
     radial-gradient(circle at 50% 10%, rgba(255,255,255,0.7) 0%, transparent 50%),
     radial-gradient(circle at 10% 50%, rgba(249,250,251,0.5) 0%, transparent 50%),
     radial-gradient(circle at 90% 80%, rgba(247,248,249,0.6) 0%, transparent 50%);
-  animation:pearlFloat 24s ease-in-out infinite;
+  animation:pearlFloat 38s ease-in-out infinite;
   pointer-events:none;
 }
 
@@ -1293,7 +1293,7 @@ body.spanish [lang="en"]{display:none}
   padding:96px 0;
   background:linear-gradient(135deg, #f6f7f8 0%, #fbfcfd 25%, #f6f7f8 50%, #f9fafb 75%, #f6f7f8 100%);
   background-size:400% 400%;
-  animation:pearlShimmer 17s ease infinite;
+  animation:pearlShimmer 32s ease infinite;
   text-align:center;
   position:relative;
   overflow:hidden;
@@ -1307,7 +1307,7 @@ body.spanish [lang="en"]{display:none}
     radial-gradient(circle at 40% 40%, rgba(255,255,255,0.6) 0%, transparent 50%),
     radial-gradient(circle at 80% 30%, rgba(251,252,253,0.5) 0%, transparent 50%),
     radial-gradient(circle at 20% 80%, rgba(249,250,251,0.7) 0%, transparent 50%);
-  animation:pearlFloat 19s ease-in-out infinite reverse;
+  animation:pearlFloat 30s ease-in-out infinite reverse;
   pointer-events:none;
 }
 
@@ -1755,13 +1755,7 @@ body.spanish [lang="en"]{display:none}
 }
 
 
-/* Subtle cinematic: fade + micro-zoom + lift, with ease-out. Keeps final scale at 1. */
-  0% {
-    opacity: 0;
-    transform: translateY(24px) scale(0.94);
-    filter: blur(6px) saturate(0.9);
-  }
-  60% {
+60% {
     opacity: 1;
     transform: translateY(-4px) scale(1.02);
     filter: blur(1.5px) saturate(1);
@@ -1793,15 +1787,7 @@ body.spanish [lang="en"]{display:none}
 .hero-logo { transform-origin: center center; }
 
 
-/* === SIGNATURE HERO LOGO ENTRANCE (All Devices) === */
-/* Dramatic but premium: depth-tunnel in + light sweep + settle */
-@keyframes snrgLogoTunnel {
-  0% {
-    opacity: 0;
-    transform: perspective(1200px) translateZ(-600px) translateY(80px) scale(0.6) rotateX(12deg);
-    filter: blur(18px) brightness(0.7);
-  }
-  55% {
+55% {
     opacity: 1;
     transform: perspective(1200px) translateZ(40px) translateY(-8px) scale(1.04) rotateX(0deg);
     filter: blur(2px) brightness(1.05);
@@ -1817,22 +1803,7 @@ body.spanish [lang="en"]{display:none}
   }
 }
 
-/* Subtle light sweep overlay */
-.hero-logo-container::after{
-  content:'';
-  position:absolute;
-  inset:-10%;
-  background: linear-gradient(110deg, transparent 20%, rgba(255,255,255,0.55) 40%, transparent 60%);
-  transform: translateX(-120%);
-  opacity: 0;
-  pointer-events:none;
-  mix-blend-mode: screen;
-  animation: snrgSweep 1200ms cubic-bezier(0.16,1,0.3,1) 300ms both;
-}
-
-@keyframes snrgSweep{
-  0%{ transform: translateX(-120%); opacity: 0; }
-  20%{ opacity: .25; }
+20%{ opacity: .25; }
   60%{ opacity: .18; }
   100%{ transform: translateX(120%); opacity: 0; }
 }
@@ -1889,6 +1860,36 @@ body.spanish [lang="en"]{display:none}
   .snrg-underline::after{ transform: scaleX(1); }
   .snrg-underline.is-animating::after{ animation: none !important; }
 }
+
+/* === Enterprise Service Footprint === */
+.footer-footprint{
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+.footer-footprint .label{
+  display:block;
+  font-size:12px;
+  font-weight:700;
+  color: var(--slate);
+  letter-spacing: .04em;
+  margin-bottom: 6px;
+}
+.footer-footprint .cities{
+  font-size:13px;
+  line-height:1.7;
+  color: var(--slate-light);
+}
+.footer-footprint .cities a{
+  color: var(--slate-light);
+  text-decoration:none;
+  border-bottom:1px solid rgba(0,0,0,0.06);
+}
+.footer-footprint .cities a:hover{
+  color: var(--red);
+  border-bottom-color: var(--red);
+}
+
 </style>
 </head>
 
@@ -2235,9 +2236,44 @@ body.spanish [lang="en"]{display:none}
 
   <footer class="footer fade-in">
     <div class="container">
-      <p class="footer-copyright">© 2026 SNRG WEB — HTX</p>
+      
+  
+  
+    <div class="cities" lang="es">
+      <a href="houston.html">Houston</a> · 
+      <a href="los-angeles.html">Los Ángeles</a> · 
+      <a href="chicago.html">Chicago</a> · 
+      <a href="nyc.html">Nueva York</a> · 
+      <a href="miami.html">Miami</a> · 
+      <a href="dallas.html">Dallas</a> · 
+      <a href="austin.html">Austin</a> · 
+      <a href="denver.html">Denver</a> · 
+      <a href="phoenix.html">Phoenix</a> · 
+      <a href="atlanta.html">Atlanta</a> · 
+      <a href="nashville.html">Nashville</a>
     </div>
-  </footer>
+  </div>
+
+</div>
+
+
+    </div>
+  <p class="footer-copyright" style="text-align:center; margin: 0 0 10px 0;">© 2026 SNRG WEB — HTX</p>
+<div class="footer-footprint" style="text-align:center;">
+    <div class="cities" lang="en">
+      <a href="houston.html">Houston</a> · 
+      <a href="los-angeles.html">Los Angeles</a> · 
+      <a href="chicago.html">Chicago</a> · 
+      <a href="nyc.html">New York City</a> · 
+      <a href="miami.html">Miami</a> · 
+      <a href="dallas.html">Dallas</a> · 
+      <a href="austin.html">Austin</a> · 
+      <a href="denver.html">Denver</a> · 
+      <a href="phoenix.html">Phoenix</a> · 
+      <a href="atlanta.html">Atlanta</a> · 
+      <a href="nashville.html">Nashville</a>
+     and more…</div>
+</footer>
 
   <script>
   if('scrollRestoration' in history){
