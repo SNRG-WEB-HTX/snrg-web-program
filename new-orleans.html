@@ -153,8 +153,7 @@
       "speakable": {
         "@type": "SpeakableSpecification",
         "cssSelector": [
-          ".hero-headline",
-          ".section-title"
+          "#speakable-summary"
         ]
       },
       "primaryImageOfPage": {
@@ -277,7 +276,8 @@
         }
       ],
       "sameAs": [
-        "https://en.wikipedia.org/wiki/New_Orleans"
+        "https://en.wikipedia.org/wiki/New_Orleans",
+        "https://www.wikidata.org/wiki/Q34404"
       ],
       "slogan": "24/7 Web Design Support for New Orleans Small Businesses",
       "currenciesAccepted": "USD",
@@ -342,16 +342,15 @@
           "@id": "https://snrgweb.com/new-orleans.html#product-ownership"
         }
       ],
-      "areaServed": [
-        "New Orleans",
-        "French Quarter",
-        "Garden District",
-        "Uptown",
-        "Marigny",
-        "Bywater",
-        "Lakeview",
-        "Metairie"
-      ],
+      "areaServed": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": 29.9511,
+          "longitude": -90.0715
+        },
+        "geoRadius": "25 mi"
+      },
       "provider": {
         "@id": "https://snrgweb.com/new-orleans.html#localbusiness"
       },
@@ -464,7 +463,7 @@
           "name": "How long does it take to launch my website?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Most projects launch in 2–3 days after design approval."
+            "text": "Most projects launch in 2\u20133 days after design approval."
           }
         },
         {
@@ -495,7 +494,6 @@
     }
   ]
 }
-
 </script>
 
 <!-- Performance Optimization: Preload Critical Font -->
@@ -2579,6 +2577,11 @@ body.spanish [lang="en"]{display:none}
 </head>
 
 <body>
+  <!-- AEO Speakable Content -->
+  <div class="visually-hidden" id="speakable-summary">
+    <p>SNRG WEB provides professional, flat-rate web design services for small businesses in New Orleans. We build custom websites in 2-3 days with 24/7 support and offer two pricing options: a fully managed plan at $75 per month, or a one-time purchase for $285 with full ownership.</p>
+  </div>
+
   <!-- SEO/A11Y H1 - Hidden from visual layout -->
   <h1 class="visually-hidden" lang="en">High-Performance Websites for Small Businesses Nationwide — Built Fast, Managed for You</h1>
   <h1 class="visually-hidden" lang="es">Sitios Web de Alto Rendimiento para Pequeñas Empresas — Construidos Rápido, Administrados para Usted</h1>
