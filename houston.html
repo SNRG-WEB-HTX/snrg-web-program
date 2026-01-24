@@ -157,8 +157,7 @@
       "speakable": {
         "@type": "SpeakableSpecification",
         "cssSelector": [
-          ".hero-headline",
-          ".section-title",
+          "#speakable-summary",
           ".hero-title"
         ]
       },
@@ -279,7 +278,8 @@
         }
       ],
       "sameAs": [
-        "https://en.wikipedia.org/wiki/Houston"
+        "https://en.wikipedia.org/wiki/Houston",
+        "https://www.wikidata.org/wiki/Q16555"
       ],
       "slogan": "24/7 Web Design Support for Houston Small Businesses",
       "currenciesAccepted": "USD",
@@ -344,17 +344,15 @@
           "@id": "https://snrgweb.com/houston.html#product-ownership"
         }
       ],
-      "areaServed": [
-        "Houston",
-        "Downtown",
-        "Midtown",
-        "Montrose",
-        "The Heights",
-        "River Oaks",
-        "Galleria",
-        "West University",
-        "Bellaire"
-      ],
+      "areaServed": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": 29.7604,
+          "longitude": -95.3698
+        },
+        "geoRadius": "40 mi"
+      },
       "provider": {
         "@id": "https://snrgweb.com/houston.html#localbusiness"
       },
@@ -2641,6 +2639,11 @@ body.spanish [lang="en"]{display:none}
 </head>
 
 <body>
+  <!-- AEO Speakable Content -->
+  <div class="visually-hidden" id="speakable-summary">
+    <p>SNRG WEB provides professional, flat-rate web design services for small businesses in Houston. We build custom websites in 2-3 days with 24/7 support and offer two pricing options: a fully managed plan at $75 per month, or a one-time purchase for $285 with full ownership.</p>
+  </div>
+
   <!-- SEO/A11Y H1 - Hidden from visual layout -->
   <h1 class="visually-hidden" lang="en">High-Performance Websites for Small Businesses Nationwide — Built Fast, Managed for You</h1>
   <h1 class="visually-hidden" lang="es">Sitios Web de Alto Rendimiento para Pequeñas Empresas — Construidos Rápido, Administrados para Usted</h1>
