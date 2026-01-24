@@ -2341,17 +2341,23 @@ body.spanish [lang="en"]{display:none}
 /* ===== Footer micro alignment ===== */
 
 
-/* === Seamless Auto-Scroll Reviews (Surgical, Isolated) === */
-.reviews-carousel.seamless {
-  overflow: hidden;
+/* === Seamless Reviews Marquee (Isolated) === */
+.reviews-carousel.seamless{
+  display:block !important;         /* override desktop grid */
+  overflow:hidden !important;        /* viewport */
+  scroll-snap-type:none !important;  /* disable snap */
+  scroll-behavior:auto !important;
 }
-.reviews-carousel.seamless .track {
-  display: flex;
-  gap: inherit;
-  will-change: transform;
+.reviews-carousel.seamless .track{
+  display:flex;
+  gap:var(--reviews-gap, 24px);
+  will-change:transform;
+  transform:translate3d(0,0,0);
 }
-.reviews-carousel.seamless .track > * {
-  flex: 0 0 auto;
+.reviews-carousel.seamless .track > .review-card{
+  flex:0 0 auto;
+  width:min(360px, 85vw);
+  margin:0 !important; /* remove any card margin used for snap layout */
 }
 
 </style>
@@ -2890,6 +2896,9 @@ body.spanish [lang="en"]{display:none}
     // GOLD AUTO-SCROLL CAROUSEL - 3 seconds, seamless, perfect
     const carousel = document.getElementById('reviewsCarousel');
     if(carousel){
+      // If seamless marquee is enabled, this legacy scroller must not run.
+      if(carousel.classList && carousel.classList.contains('seamless')){ return; }
+
       let autoScrollInterval;
       let isUserInteracting = false;
       let interactionTimeout;
@@ -3038,43 +3047,91 @@ body.spanish [lang="en"]{display:none}
 
 <script>
 (function(){
-  const car = document.querySelector('.reviews-carousel');
-  if(!car) return;
-
-  if(car.classList.contains('seamless')) return;
-
-  const track = document.createElement('div');
-  track.className = 'track';
-
-  const items = Array.from(car.children);
-  items.forEach(n => track.appendChild(n));
-  items.forEach(n => track.appendChild(n.cloneNode(true)));
-
-  car.innerHTML = '';
-  car.appendChild(track);
-  car.classList.add('seamless');
-
-  let speed = 0.35;
-  let pos = 0;
-  let paused = false;
-
-  function step(){
-    if(paused){ requestAnimationFrame(step); return; }
-    pos += speed;
-    const half = track.scrollWidth / 2;
-    if(pos >= half){
-      pos -= half;
-    }
-    track.style.transform = 'translateX(' + (-pos) + 'px)';
-    requestAnimationFrame(step);
+  function ready(fn){
+    if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', fn);
+    else fn();
   }
 
-  car.addEventListener('mouseenter', ()=> paused = true);
-  car.addEventListener('mouseleave', ()=> paused = false);
-  car.addEventListener('touchstart', ()=> paused = true, {passive:true});
-  car.addEventListener('touchend', ()=> paused = false, {passive:true});
+  ready(function(){
+    const carousel = document.getElementById('reviewsCarousel') || document.querySelector('.reviews-carousel');
+    if(!carousel) return;
 
-  requestAnimationFrame(step);
+    // If already processed, do nothing.
+    if(carousel.classList.contains('seamless')) return;
+
+    // Respect reduced motion (keep layout, no movement).
+    try{
+      if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+        return;
+      }
+    }catch(e){}
+
+    // Capture computed gap from existing styles if available
+    const computedGap = (function(){
+      try{
+        const g = parseFloat(getComputedStyle(carousel).gap);
+        return Number.isFinite(g) ? g : 24;
+      }catch(e){ return 24; }
+    })();
+    carousel.style.setProperty('--reviews-gap', computedGap + 'px');
+
+    // Move existing review cards into a track (preserves order)
+    const track = document.createElement('div');
+    track.className = 'track';
+
+    const items = Array.from(carousel.children).filter(n => n.nodeType === 1);
+    if(items.length < 1) return;
+
+    items.forEach(n => track.appendChild(n));
+    // Duplicate for seamless loop
+    items.forEach(n => track.appendChild(n.cloneNode(true)));
+
+    carousel.innerHTML = '';
+    carousel.appendChild(track);
+    carousel.classList.add('seamless');
+
+    let pos = 0;
+    let half = 0;
+    let speed = 0.45; // px/frame (premium continuous)
+
+    function recalc(){
+      // Track width is double; half is the original set width.
+      half = track.scrollWidth / 2;
+      if(!Number.isFinite(half) || half <= 0){
+        // try again next frame if layout not ready yet
+        requestAnimationFrame(recalc);
+      }
+    }
+
+    // Recalc now + on resize
+    recalc();
+    window.addEventListener('resize', function(){ pos = 0; recalc(); }, {passive:true});
+
+    // Use ResizeObserver for font load/layout shifts (best effort)
+    if('ResizeObserver' in window){
+      try{
+        const ro = new ResizeObserver(function(){
+          pos = pos % (half || 1);
+          recalc();
+        });
+        ro.observe(track);
+      }catch(e){}
+    }
+
+    function step(){
+      if(half > 0){
+        pos += speed;
+        if(pos >= half) pos -= half;
+        track.style.transform = 'translate3d(' + (-pos) + 'px,0,0)';
+      }
+      requestAnimationFrame(step);
+    }
+
+    // Start after layout settles (prevents "not moving" bugs on first paint)
+    requestAnimationFrame(function(){
+      requestAnimationFrame(step);
+    });
+  });
 })();
 </script>
 
