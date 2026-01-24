@@ -273,7 +273,7 @@
       "itemCondition": "https://schema.org/NewCondition",
       "priceValidUntil": "2026-12-31",
       "seller": {
-        "@id": "https://snrgweb.com/#business"
+        "@id": "https://snrgweb.com/#org"
       }
     },
     {
@@ -286,7 +286,7 @@
       "itemCondition": "https://schema.org/NewCondition",
       "priceValidUntil": "2026-12-31",
       "seller": {
-        "@id": "https://snrgweb.com/#business"
+        "@id": "https://snrgweb.com/#org"
       }
     }
   ]
@@ -1299,7 +1299,7 @@ body.spanish [lang="en"]{display:none}
 
 .final-cta{
   margin-top:0;
-  padding:96px 0;
+  padding:clamp(40px,5vh,56px) 0 clamp(20px,2.5vh,28px);
   background:linear-gradient(135deg, #f6f7f8 0%, #fbfcfd 25%, #f6f7f8 50%, #f9fafb 75%, #f6f7f8 100%);
   background-size:400% 400%;
   animation:pearlShimmer 32s ease infinite;
@@ -1332,9 +1332,9 @@ body.spanish [lang="en"]{display:none}
   pointer-events:none;
 }
 
-.final-cta.footer-logo{
+.final-cta .footer-logo{
   max-width:clamp(90px,14vw,140px);
-  margin:0 auto -4px;
+  margin:0 auto clamp(12px,1.5vh,18px);
 }
 
 .final-cta h2{
@@ -2168,6 +2168,129 @@ body.spanish [lang="en"]{display:none}
     min-width: 270px;
   }
 }
+
+/* ===== REVIEWS (Slick Auto-Scroll Carousel) ===== */
+.reviews{
+  max-width:1600px;
+  margin:0 auto;
+  padding:clamp(48px,7vh,64px) 5% clamp(40px,6vh,56px);
+  background:linear-gradient(135deg,#FAFAFA 0%,#FFFFFF 50%,#F9FAFB 100%);
+  position:relative;
+  overflow:hidden;
+}
+
+.reviews-rating{
+  text-align:center;
+  margin:8px auto 16px;
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  align-items:center;
+}
+
+.reviews-track{
+  overflow:hidden;
+  position:relative;
+  margin-top:clamp(24px,3.5vh,32px);
+}
+
+.reviews-carousel{
+  display:flex;
+  gap:clamp(16px,2.5vw,24px);
+  scroll-snap-type:x mandatory;
+  overflow-x:auto;
+  padding:8px 4px 16px;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:none;
+  scroll-behavior:smooth;
+}
+
+.reviews-carousel::-webkit-scrollbar{
+  display:none;
+}
+
+.review-card{
+  scroll-snap-align:center;
+  min-width:min(320px,85vw);
+  max-width:360px;
+  flex:0 0 auto;
+  background:#FFFFFF;
+  border:1px solid rgba(0,0,0,0.06);
+  border-radius:16px;
+  padding:clamp(20px,3vh,24px) clamp(18px,2.8vh,22px);
+  box-shadow:0 4px 16px rgba(0,0,0,0.04);
+  transition:all 0.4s cubic-bezier(0.34,1.56,0.64,1);
+  text-decoration:none;
+  color:inherit;
+  position:relative;
+  overflow:hidden;
+}
+
+.review-card::before{
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  height:3px;
+  background:linear-gradient(90deg,#FF2A2A 0%,#FF5252 100%);
+  opacity:0;
+  transition:opacity 0.3s ease;
+}
+
+.review-card:hover{
+  transform:translateY(-4px) scale(1.01);
+  box-shadow:0 12px 32px rgba(0,0,0,0.08);
+  border-color:rgba(255,42,42,0.12);
+}
+
+.review-card:hover::before{
+  opacity:1;
+}
+
+.review-card-stars{
+  font-size:clamp(15px,2.4vw,17px);
+  color:#FFB800;
+  letter-spacing:2px;
+  margin-bottom:clamp(12px,2vh,16px);
+}
+
+.review-card-text{
+  font-size:clamp(14px,2.5vw,15.5px);
+  line-height:1.65;
+  color:var(--slate);
+  margin:0 0 clamp(16px,2.5vh,20px) 0;
+  font-weight:500;
+}
+
+.review-card-author{
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+  margin-top:auto;
+  padding-top:clamp(12px,1.8vh,16px);
+  border-top:1px solid rgba(0,0,0,0.06);
+}
+
+.review-card-name{
+  font-size:clamp(13px,2.3vw,14.5px);
+  font-weight:700;
+  color:var(--ink);
+  letter-spacing:0.01em;
+}
+
+.review-card-source{
+  font-size:clamp(11.5px,2.1vw,12.5px);
+  color:#FF2A2A;
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:0.08em;
+}
+
+/* ===== Footer micro alignment ===== */
+.final-cta .footer-logo{ margin-bottom:6px !important; }
+.final-cta h2{ margin-top:0 !important; }
+
 </style>
 </head>
 
@@ -2302,74 +2425,47 @@ body.spanish [lang="en"]{display:none}
 
   <!-- ===== ELITE REVIEWS CAROUSEL - WORLD-CLASS DESIGN ===== -->
   <section class="reviews fade-in" id="reviews">
-    <div class="container">
-      <h2 class="section-title" lang="en">What Our Clients Say</h2>
-      <h2 class="section-title" lang="es">Lo Que Dicen Nuestros Clientes</h2>
-      
-      <div class="reviews-rating">
-        <span class="stars">★★★★★</span>
-        <span class="rating-text" lang="en">Google Reviews</span>
-        <span class="rating-text" lang="es">5.0 — 3 Reseñas en Google</span>
-      </div>
-      
-      <div class="reviews-carousel">
-        <!-- Review Card 1: Hilary -->
-        <a href="https://share.google/YqOX9hRFiifwhkKsJ" target="_blank" rel="noopener noreferrer" class="review-card">
-          <div class="review-card-stars">★★★★★</div>
-          <p class="review-card-text" lang="en">
-            WOW! Clean design with no clutter, very responsive so changes happen fast, super easy to understand and use!
-          </p>
-          <p class="review-card-text" lang="es">
-            ¡GUAU! Diseño limpio sin desorden, muy receptivo así que los cambios ocurren rápido, ¡súper fácil de entender y usar!
-          </p>
-          <div class="review-card-author">
-            <span class="review-card-name">Hilary</span>
-            <span class="review-card-source" lang="en">Google Review</span>
-            <span class="review-card-source" lang="es">Reseña de Google</span>
-          </div>
-        </a>
-        
-        <!-- Review Card 2: Alondra Morris -->
-        <a href="https://share.google/YqOX9hRFiifwhkKsJ" target="_blank" rel="noopener noreferrer" class="review-card">
-          <div class="review-card-stars">★★★★★</div>
-          <p class="review-card-text" lang="en">
-            Communication was great and changes were done quickly. Super clean designs and works great overall.
-          </p>
-          <p class="review-card-text" lang="es">
-            La comunicación fue excelente y los cambios se hicieron rápidamente. Diseños súper limpios y funciona genial en general.
-          </p>
-          <div class="review-card-author">
-            <span class="review-card-name">Alondra Morris</span>
-            <span class="review-card-source" lang="en">Google Review</span>
-            <span class="review-card-source" lang="es">Reseña de Google</span>
-          </div>
-        </a>
-        
-        <!-- Review Card 3: Melissa Warren -->
-        <a href="https://share.google/YqOX9hRFiifwhkKsJ" target="_blank" rel="noopener noreferrer" class="review-card">
-          <div class="review-card-stars">★★★★★</div>
-          <p class="review-card-text" lang="en">
-            Other agencies quoted crazy prices. This was affordable and the quality is excellent!
-          </p>
-          <p class="review-card-text" lang="es">
-            Otras agencias cotizaron precios locos. ¡Esto fue asequible y la calidad es excelente!
-          </p>
-          <div class="review-card-author">
-            <span class="review-card-name">Melissa Warren</span>
-            <span class="review-card-source" lang="en">Google Review</span>
-            <span class="review-card-source" lang="es">Reseña de Google</span>
-          </div>
-        </a>
-      </div>
-      
-      <div class="reviews-cta">
-        <a href="https://share.google/YqOX9hRFiifwhkKsJ" class="cta cta-secondary" target="_blank" rel="noopener noreferrer">
-          <span lang="en">Read All Reviews on Google</span>
-          <span lang="es">Ver Todas las Reseñas en Google</span>
-        </a>
-      </div>
+<div class="container">
+  <h2 class="section-title" lang="en">What Our Clients Say</h2>
+  <h2 class="section-title" lang="es">Lo Que Dicen Nuestros Clientes</h2>
+
+  <div class="reviews-rating">
+    <span class="stars">★★★★★</span>
+    <span class="rating-text" lang="en">Google Reviews</span>
+    <span class="rating-text" lang="es">Reseñas de Google</span>
+  </div>
+
+  <div class="reviews-track">
+    <div class="reviews-carousel" id="reviewsCarousel">
+
+      <!-- 1) Melissa Warren -->
+      <a href="https://share.google/YqOX9hRFiifwhkKsJ" target="_blank" rel="noopener noreferrer" class="review-card">
+        <div class="review-card-stars">★★★★★</div>
+        <p class="review-card-text" lang="en">Other agencies quoted crazy prices. This was affordable and the quality is excellent!</p>
+        <p class="review-card-text" lang="es">Otras agencias cotizaron precios locos. ¡Esto fue asequible y la calidad es excelente!</p>
+        <div class="review-card-author"><span class="review-card-name">Melissa Warren</span><span class="review-card-source">Google Review</span></div>
+      </a>
+
+      <!-- 2) Hilary -->
+      <a href="https://share.google/YqOX9hRFiifwhkKsJ" target="_blank" rel="noopener noreferrer" class="review-card">
+        <div class="review-card-stars">★★★★★</div>
+        <p class="review-card-text" lang="en">WOW! Clean design with no clutter, very responsive so changes happen fast, super easy to understand and use!</p>
+        <p class="review-card-text" lang="es">¡GUAU! Diseño limpio sin desorden, muy receptivo así que los cambios ocurren rápido, ¡súper fácil de entender y usar!</p>
+        <div class="review-card-author"><span class="review-card-name">Hilary</span><span class="review-card-source">Google Review</span></div>
+      </a>
+
+      <!-- 3) Alondra Morris -->
+      <a href="https://share.google/YqOX9hRFiifwhkKsJ" target="_blank" rel="noopener noreferrer" class="review-card">
+        <div class="review-card-stars">★★★★★</div>
+        <p class="review-card-text" lang="en">Communication was great and changes were done quickly. Super clean designs and works great overall.</p>
+        <p class="review-card-text" lang="es">La comunicación fue excelente y los cambios se hicieron rápidamente. Diseños súper limpios y funciona genial en general.</p>
+        <div class="review-card-author"><span class="review-card-name">Alondra Morris</span><span class="review-card-source">Google Review</span></div>
+      </a>
+
     </div>
-  </section>
+  </div>
+</div>
+</section>
 
   <section class="comparison fade-in">
     <div class="container">
@@ -2702,6 +2798,73 @@ body.spanish [lang="en"]{display:none}
     titles.forEach(title=>{
       titleObserver.observe(title);
     });
+
+    // Apple-style auto-scroll for reviews carousel
+    const carousel = document.getElementById('reviewsCarousel');
+    if(carousel){
+      let autoScrollInterval;
+      let isUserScrolling = false;
+      let scrollTimeout;
+      
+      const startAutoScroll = () => {
+        autoScrollInterval = setInterval(() => {
+          if(!isUserScrolling){
+            const scrollAmount = carousel.scrollLeft;
+            const cardWidth = carousel.querySelector('.review-card').offsetWidth;
+            const gap = 24;
+            const nextScroll = scrollAmount + cardWidth + gap;
+            
+            // If at end, smoothly go back to start
+            if(nextScroll >= carousel.scrollWidth - carousel.clientWidth){
+              carousel.scrollTo({left: 0, behavior: 'smooth'});
+            } else {
+              carousel.scrollTo({left: nextScroll, behavior: 'smooth'});
+            }
+          }
+        }, 4500); // Scroll every 4.5 seconds (Apple-like timing)
+      };
+      
+      // Pause auto-scroll when user interacts
+      carousel.addEventListener('touchstart', () => {
+        isUserScrolling = true;
+        clearInterval(autoScrollInterval);
+      }, {passive: true});
+      
+      carousel.addEventListener('mousedown', () => {
+        isUserScrolling = true;
+        clearInterval(autoScrollInterval);
+      });
+      
+      // Resume auto-scroll after user stops interacting
+      carousel.addEventListener('touchend', () => {
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => {
+          isUserScrolling = false;
+          startAutoScroll();
+        }, 3000);
+      });
+      
+      carousel.addEventListener('mouseup', () => {
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => {
+          isUserScrolling = false;
+          startAutoScroll();
+        }, 3000);
+      });
+      
+      carousel.addEventListener('scroll', () => {
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => {
+          if(isUserScrolling){
+            isUserScrolling = false;
+            startAutoScroll();
+          }
+        }, 3000);
+      }, {passive: true});
+      
+      // Start auto-scroll
+      startAutoScroll();
+    }
   });
   </script>
 
@@ -2772,5 +2935,33 @@ body.spanish [lang="en"]{display:none}
 })();
 /* END SNRG UNDERLINE OBSERVER */
 </script>
+
+<script>
+(function(){
+  const track = document.getElementById('reviewsCarousel');
+  if(!track) return;
+
+  let isPaused = false;
+  let speed = 0.25; // px per frame (slow, elegant)
+  let rafId;
+
+  function step(){
+    if(!isPaused){
+      track.scrollLeft += speed;
+      if(track.scrollLeft + track.clientWidth >= track.scrollWidth - 1){
+        track.scrollLeft = 0;
+      }
+    }
+    rafId = requestAnimationFrame(step);
+  }
+
+  track.addEventListener('mouseenter', ()=>{ isPaused = true; });
+  track.addEventListener('mouseleave', ()=>{ isPaused = false; });
+
+  // Start
+  rafId = requestAnimationFrame(step);
+})();
+</script>
+
 </body>
 </html>
