@@ -2360,6 +2360,23 @@ body.spanish [lang="en"]{display:none}
   margin:0 !important; /* remove any card margin used for snap layout */
 }
 
+
+/* === Marquee Smoothing Tweaks (Mobile) === */
+.reviews-carousel.seamless .track{
+  backface-visibility: hidden;
+  transform: translate3d(0,0,0);
+}
+.reviews-carousel.seamless .track > .review-card{
+  contain: layout paint;
+}
+
+
+/* === Tighten Reviews Header Spacing === */
+.reviews-header h2,
+#reviews h2{
+  margin-top: 6px !important; /* almost flush with stars, slight breathing room */
+}
+
 </style>
 </head>
 
@@ -3092,7 +3109,7 @@ body.spanish [lang="en"]{display:none}
 
     let pos = 0;
     let half = 0;
-    let speed = 0.45; // px/frame (premium continuous)
+    let speed = 0.25; // px/frame (premium continuous)
 
     function recalc(){
       // Track width is double; half is the original set width.
@@ -3122,7 +3139,7 @@ body.spanish [lang="en"]{display:none}
       if(half > 0){
         pos += speed;
         if(pos >= half) pos -= half;
-        track.style.transform = 'translate3d(' + (-pos) + 'px,0,0)';
+        track.style.transform = 'translate3d(' + (-pos) + 'px, 0, 0)';
       }
       requestAnimationFrame(step);
     }
