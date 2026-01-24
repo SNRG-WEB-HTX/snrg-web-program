@@ -1334,7 +1334,7 @@ body.spanish [lang="en"]{display:none}
 
 .final-cta .footer-logo{
   max-width:clamp(90px,14vw,140px);
-  margin:0 auto clamp(12px,1.5vh,18px);
+  margin:0 auto clamp(3px,0.4vh,4px);
 }
 
 .final-cta h2{
@@ -1663,10 +1663,6 @@ body.spanish [lang="en"]{display:none}
   
  .final-cta{
     padding:16px 0 22px;
-  }
-  
- .final-cta.footer-logo{
-    margin-bottom:0;
   }
   
  .projects-grid{
@@ -2181,22 +2177,22 @@ body.spanish [lang="en"]{display:none}
 
 .reviews-rating{
   text-align:center;
-  margin:8px auto 16px;
+  margin:8px auto 12px;
   display:flex;
   flex-direction:column;
-  gap:6px;
+  gap:4px;
   align-items:center;
 }
 
 .reviews-track{
   overflow:hidden;
   position:relative;
-  margin-top:clamp(24px,3.5vh,32px);
+  margin-top:clamp(20px,3vh,28px);
 }
 
 .reviews-carousel{
   display:flex;
-  gap:clamp(16px,2.5vw,24px);
+  gap:clamp(12px,2vw,18px);
   scroll-snap-type:x mandatory;
   overflow-x:auto;
   padding:8px 4px 16px;
@@ -2211,13 +2207,13 @@ body.spanish [lang="en"]{display:none}
 
 .review-card{
   scroll-snap-align:center;
-  min-width:min(320px,85vw);
+  min-width:clamp(280px,82vw,320px);
   max-width:360px;
   flex:0 0 auto;
   background:#FFFFFF;
   border:1px solid rgba(0,0,0,0.06);
   border-radius:16px;
-  padding:clamp(20px,3vh,24px) clamp(18px,2.8vh,22px);
+  padding:clamp(18px,2.8vh,22px) clamp(16px,2.5vh,20px);
   box-shadow:0 4px 16px rgba(0,0,0,0.04);
   transition:all 0.4s cubic-bezier(0.34,1.56,0.64,1);
   text-decoration:none;
@@ -2252,14 +2248,14 @@ body.spanish [lang="en"]{display:none}
   font-size:clamp(15px,2.4vw,17px);
   color:#FFB800;
   letter-spacing:2px;
-  margin-bottom:clamp(12px,2vh,16px);
+  margin-bottom:clamp(10px,1.8vh,14px);
 }
 
 .review-card-text{
-  font-size:clamp(14px,2.5vw,15.5px);
+  font-size:clamp(13.5px,2.4vw,15px);
   line-height:1.65;
   color:var(--slate);
-  margin:0 0 clamp(16px,2.5vh,20px) 0;
+  margin:0 0 clamp(14px,2.3vh,18px) 0;
   font-weight:500;
 }
 
@@ -2268,19 +2264,19 @@ body.spanish [lang="en"]{display:none}
   flex-direction:column;
   gap:4px;
   margin-top:auto;
-  padding-top:clamp(12px,1.8vh,16px);
+  padding-top:clamp(10px,1.6vh,14px);
   border-top:1px solid rgba(0,0,0,0.06);
 }
 
 .review-card-name{
-  font-size:clamp(13px,2.3vw,14.5px);
+  font-size:clamp(12.5px,2.2vw,14px);
   font-weight:700;
   color:var(--ink);
   letter-spacing:0.01em;
 }
 
 .review-card-source{
-  font-size:clamp(11.5px,2.1vw,12.5px);
+  font-size:clamp(11px,2vw,12px);
   color:#FF2A2A;
   font-weight:600;
   text-transform:uppercase;
@@ -2288,8 +2284,6 @@ body.spanish [lang="en"]{display:none}
 }
 
 /* ===== Footer micro alignment ===== */
-.final-cta .footer-logo{ margin-bottom:6px !important; }
-.final-cta h2{ margin-top:0 !important; }
 
 </style>
 </head>
@@ -2810,12 +2804,16 @@ body.spanish [lang="en"]{display:none}
         autoScrollInterval = setInterval(() => {
           if(!isUserScrolling){
             const scrollAmount = carousel.scrollLeft;
-            const cardWidth = carousel.querySelector('.review-card').offsetWidth;
-            const gap = 24;
+            const firstCard = carousel.querySelector('.review-card');
+            if(!firstCard) return;
+            
+            const cardWidth = firstCard.offsetWidth;
+            const style = window.getComputedStyle(carousel);
+            const gap = parseFloat(style.gap) || 12;
             const nextScroll = scrollAmount + cardWidth + gap;
             
             // If at end, smoothly go back to start
-            if(nextScroll >= carousel.scrollWidth - carousel.clientWidth){
+            if(nextScroll >= carousel.scrollWidth - carousel.clientWidth - 5){
               carousel.scrollTo({left: 0, behavior: 'smooth'});
             } else {
               carousel.scrollTo({left: nextScroll, behavior: 'smooth'});
@@ -2842,7 +2840,7 @@ body.spanish [lang="en"]{display:none}
           isUserScrolling = false;
           startAutoScroll();
         }, 3000);
-      });
+      }, {passive: true});
       
       carousel.addEventListener('mouseup', () => {
         clearTimeout(scrollTimeout);
@@ -2862,8 +2860,8 @@ body.spanish [lang="en"]{display:none}
         }, 3000);
       }, {passive: true});
       
-      // Start auto-scroll
-      startAutoScroll();
+      // Start auto-scroll after a brief delay for better UX
+      setTimeout(() => startAutoScroll(), 1000);
     }
   });
   </script>
