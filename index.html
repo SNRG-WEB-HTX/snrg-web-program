@@ -2177,6 +2177,8 @@ body.spanish [lang="en"]{display:none}
 
 .reviews .container{
   padding:0 5%;
+  max-width:100%;
+  margin:0 auto;
 }
 
 .reviews-rating{
@@ -2191,8 +2193,10 @@ body.spanish [lang="en"]{display:none}
 .reviews-track{
   position:relative;
   margin-top:clamp(20px,3vh,28px);
-  margin-left:-5%;
-  margin-right:-5%;
+  margin-left:0;
+  margin-right:0;
+  width:100%;
+  overflow:hidden;
 }
 
 .reviews-carousel{
@@ -2201,10 +2205,20 @@ body.spanish [lang="en"]{display:none}
   scroll-snap-type:x proximity;
   overflow-x:auto;
   overflow-y:hidden;
-  padding:12px 5% 20px;
+  padding:12px 0 20px;
   -webkit-overflow-scrolling:touch;
   scrollbar-width:none;
   scroll-behavior:smooth;
+  justify-content:flex-start;
+}
+
+/* Desktop: center the middle card */
+@media (min-width: 1024px) {
+  .reviews-carousel{
+    justify-content:center;
+    padding-left:5%;
+    padding-right:5%;
+  }
 }
 
 .reviews-carousel::-webkit-scrollbar{
@@ -2303,13 +2317,138 @@ body.spanish [lang="en"]{display:none}
 }
 
 @media (min-width: 1024px) {
-  .reviews-carousel{
-    gap:20px;
-  }
-  
   .review-card{
     min-width:320px;
   }
+}
+
+/* ===== Navigation Arrows ===== */
+.carousel-nav{
+  display:flex;
+  gap:clamp(24px,5vw,32px);
+  justify-content:center;
+  align-items:center;
+  margin:clamp(28px,4vh,36px) auto clamp(24px,3.5vh,32px);
+  width:100%;
+  padding:0 5%;
+}
+
+.carousel-arrow{
+  width:clamp(48px,10vw,56px);
+  height:clamp(48px,10vw,56px);
+  background:#FF2A2A;
+  border:none;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#FFFFFF;
+  cursor:pointer;
+  transition:all 0.3s ease;
+  box-shadow:0 4px 12px rgba(255,42,42,0.3);
+  -webkit-tap-highlight-color:transparent;
+  flex-shrink:0;
+}
+
+.carousel-arrow:hover{
+  background:#FF5252;
+  box-shadow:0 6px 16px rgba(255,42,42,0.4);
+  transform:scale(1.1);
+}
+
+.carousel-arrow:active{
+  transform:scale(0.95);
+}
+
+.carousel-arrow svg{
+  width:clamp(22px,5vw,26px);
+  height:clamp(22px,5vw,26px);
+  stroke-width:3;
+}
+
+/* ===== Review Button ===== */
+.reviews-cta{
+  text-align:center;
+  width:100%;
+  padding:0 5%;
+  margin:0 auto;
+}
+
+/* ===== Navigation Arrows ===== */
+.carousel-nav{
+  display:flex;
+  gap:16px;
+  justify-content:center;
+  align-items:center;
+  margin-top:20px;
+  margin-bottom:16px;
+}
+
+.carousel-arrow{
+  width:36px;
+  height:36px;
+  background:#FFFFFF;
+  border:1px solid rgba(0,0,0,0.1);
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--ink);
+  cursor:pointer;
+  transition:all 0.25s ease;
+  box-shadow:0 2px 6px rgba(0,0,0,0.06);
+  -webkit-tap-highlight-color:transparent;
+}
+
+.carousel-arrow:hover{
+  background:#FF2A2A;
+  color:#FFFFFF;
+  border-color:#FF2A2A;
+  box-shadow:0 3px 10px rgba(255,42,42,0.2);
+  transform:scale(1.08);
+}
+
+.carousel-arrow:active{
+  transform:scale(0.95);
+}
+
+.carousel-arrow svg{
+  width:18px;
+  height:18px;
+}
+
+/* ===== Review Button ===== */
+.reviews-cta{
+  text-align:center;
+  padding:0 5%;
+}
+
+.reviews-button{
+  display:inline-block;
+  padding:clamp(12px,2vh,15px) clamp(24px,5vw,36px);
+  background:transparent;
+  border:2px solid #FF2A2A;
+  border-radius:clamp(8px,1.5vw,12px);
+  color:#000000;
+  font-size:clamp(12px,2.2vw,14px);
+  font-weight:700;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  text-decoration:none;
+  transition:all 0.3s cubic-bezier(0.25,0.46,0.45,0.94);
+  cursor:pointer;
+  -webkit-tap-highlight-color:transparent;
+}
+
+.reviews-button:hover{
+  background:#FF2A2A;
+  color:#FFFFFF;
+  transform:translateY(-2px);
+  box-shadow:0 4px 12px rgba(255,42,42,0.25);
+}
+
+.reviews-button:active{
+  transform:translateY(0);
 }
 
 /* ===== Footer micro alignment ===== */
@@ -2486,6 +2625,30 @@ body.spanish [lang="en"]{display:none}
       </a>
 
     </div>
+  </div>
+  
+  <!-- Navigation Arrows - Centered Below Carousel -->
+  <div class="carousel-nav">
+    <button class="carousel-arrow" id="prevArrow" aria-label="Previous review">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="15 18 9 12 15 6"></polyline>
+      </svg>
+    </button>
+    <button class="carousel-arrow" id="nextArrow" aria-label="Next review">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </button>
+  </div>
+  
+  <!-- Read All Reviews Button -->
+  <div class="reviews-cta">
+    <a href="https://share.google/YqOX9hRFiifwhkKsJ" target="_blank" rel="noopener noreferrer" class="reviews-button" lang="en">
+      READ ALL REVIEWS ON GOOGLE →
+    </a>
+    <a href="https://share.google/YqOX9hRFiifwhkKsJ" target="_blank" rel="noopener noreferrer" class="reviews-button" lang="es">
+      LEER TODAS LAS RESEÑAS EN GOOGLE →
+    </a>
   </div>
 </div>
 </section>
@@ -2869,6 +3032,45 @@ body.spanish [lang="en"]{display:none}
         carousel.addEventListener('wheel', pauseAutoScroll, {passive: true});
         
         setTimeout(() => startAutoScroll(), 2000);
+      }
+      
+      // Arrow Navigation
+      const prevArrow = document.getElementById('prevArrow');
+      const nextArrow = document.getElementById('nextArrow');
+      
+      const scrollToCard = (direction) => {
+        const scrollAmount = carousel.scrollLeft;
+        const firstCard = carousel.querySelector('.review-card');
+        if(!firstCard) return;
+        
+        const cardWidth = firstCard.offsetWidth;
+        const style = window.getComputedStyle(carousel);
+        const gap = parseFloat(style.gap) || 16;
+        const scrollDistance = cardWidth + gap;
+        
+        if(direction === 'next'){
+          const nextScroll = scrollAmount + scrollDistance;
+          if(nextScroll >= carousel.scrollWidth - carousel.clientWidth - 10){
+            carousel.scrollTo({left: 0, behavior: 'smooth'});
+          } else {
+            carousel.scrollTo({left: nextScroll, behavior: 'smooth'});
+          }
+        } else {
+          const prevScroll = scrollAmount - scrollDistance;
+          if(prevScroll < 0){
+            carousel.scrollTo({left: carousel.scrollWidth, behavior: 'smooth'});
+          } else {
+            carousel.scrollTo({left: prevScroll, behavior: 'smooth'});
+          }
+        }
+      };
+      
+      if(prevArrow){
+        prevArrow.addEventListener('click', () => scrollToCard('prev'));
+      }
+      
+      if(nextArrow){
+        nextArrow.addEventListener('click', () => scrollToCard('next'));
       }
     }
   });
