@@ -2340,6 +2340,20 @@ body.spanish [lang="en"]{display:none}
 
 /* ===== Footer micro alignment ===== */
 
+
+/* === Seamless Auto-Scroll Reviews (Surgical, Isolated) === */
+.reviews-carousel.seamless {
+  overflow: hidden;
+}
+.reviews-carousel.seamless .track {
+  display: flex;
+  gap: inherit;
+  will-change: transform;
+}
+.reviews-carousel.seamless .track > * {
+  flex: 0 0 auto;
+}
+
 </style>
 </head>
 
@@ -3018,6 +3032,49 @@ body.spanish [lang="en"]{display:none}
 
   // Start
   rafId = requestAnimationFrame(step);
+})();
+</script>
+
+
+<script>
+(function(){
+  const car = document.querySelector('.reviews-carousel');
+  if(!car) return;
+
+  if(car.classList.contains('seamless')) return;
+
+  const track = document.createElement('div');
+  track.className = 'track';
+
+  const items = Array.from(car.children);
+  items.forEach(n => track.appendChild(n));
+  items.forEach(n => track.appendChild(n.cloneNode(true)));
+
+  car.innerHTML = '';
+  car.appendChild(track);
+  car.classList.add('seamless');
+
+  let speed = 0.35;
+  let pos = 0;
+  let paused = false;
+
+  function step(){
+    if(paused){ requestAnimationFrame(step); return; }
+    pos += speed;
+    const half = track.scrollWidth / 2;
+    if(pos >= half){
+      pos -= half;
+    }
+    track.style.transform = 'translateX(' + (-pos) + 'px)';
+    requestAnimationFrame(step);
+  }
+
+  car.addEventListener('mouseenter', ()=> paused = true);
+  car.addEventListener('mouseleave', ()=> paused = false);
+  car.addEventListener('touchstart', ()=> paused = true, {passive:true});
+  car.addEventListener('touchend', ()=> paused = false, {passive:true});
+
+  requestAnimationFrame(step);
 })();
 </script>
 
