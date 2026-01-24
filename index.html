@@ -2169,10 +2169,14 @@ body.spanish [lang="en"]{display:none}
 .reviews{
   max-width:1600px;
   margin:0 auto;
-  padding:clamp(48px,7vh,64px) 5% clamp(40px,6vh,56px);
+  padding:clamp(48px,7vh,64px) 0 clamp(40px,6vh,56px);
   background:linear-gradient(135deg,#FAFAFA 0%,#FFFFFF 50%,#F9FAFB 100%);
   position:relative;
   overflow:hidden;
+}
+
+.reviews .container{
+  padding:0 5%;
 }
 
 .reviews-rating{
@@ -2185,17 +2189,19 @@ body.spanish [lang="en"]{display:none}
 }
 
 .reviews-track{
-  overflow:hidden;
   position:relative;
   margin-top:clamp(20px,3vh,28px);
+  margin-left:-5%;
+  margin-right:-5%;
 }
 
 .reviews-carousel{
   display:flex;
-  gap:clamp(12px,2vw,18px);
-  scroll-snap-type:x mandatory;
+  gap:clamp(16px,2.5vw,20px);
+  scroll-snap-type:x proximity;
   overflow-x:auto;
-  padding:8px 4px 16px;
+  overflow-y:hidden;
+  padding:12px 5% 20px;
   -webkit-overflow-scrolling:touch;
   scrollbar-width:none;
   scroll-behavior:smooth;
@@ -2207,19 +2213,21 @@ body.spanish [lang="en"]{display:none}
 
 .review-card{
   scroll-snap-align:center;
-  min-width:clamp(280px,82vw,320px);
-  max-width:360px;
+  scroll-snap-stop:normal;
+  min-width:min(280px,80vw);
+  max-width:340px;
   flex:0 0 auto;
   background:#FFFFFF;
-  border:1px solid rgba(0,0,0,0.06);
+  border:1px solid rgba(0,0,0,0.05);
   border-radius:16px;
-  padding:clamp(18px,2.8vh,22px) clamp(16px,2.5vh,20px);
-  box-shadow:0 4px 16px rgba(0,0,0,0.04);
-  transition:all 0.4s cubic-bezier(0.34,1.56,0.64,1);
+  padding:clamp(18px,2.8vh,22px) clamp(16px,2.6vh,20px);
+  box-shadow:0 2px 8px rgba(0,0,0,0.03),0 1px 2px rgba(0,0,0,0.02);
+  transition:all 0.3s cubic-bezier(0.25,0.46,0.45,0.94);
   text-decoration:none;
   color:inherit;
   position:relative;
   overflow:hidden;
+  will-change:transform;
 }
 
 .review-card::before{
@@ -2228,59 +2236,80 @@ body.spanish [lang="en"]{display:none}
   top:0;
   left:0;
   right:0;
-  height:3px;
+  height:2px;
   background:linear-gradient(90deg,#FF2A2A 0%,#FF5252 100%);
   opacity:0;
-  transition:opacity 0.3s ease;
+  transition:opacity 0.25s ease;
 }
 
-.review-card:hover{
-  transform:translateY(-4px) scale(1.01);
-  box-shadow:0 12px 32px rgba(0,0,0,0.08);
-  border-color:rgba(255,42,42,0.12);
-}
-
-.review-card:hover::before{
-  opacity:1;
+.review-card:active{
+  transform:scale(0.98);
 }
 
 .review-card-stars{
-  font-size:clamp(15px,2.4vw,17px);
+  font-size:clamp(14px,2.3vw,16px);
   color:#FFB800;
-  letter-spacing:2px;
-  margin-bottom:clamp(10px,1.8vh,14px);
+  letter-spacing:1.5px;
+  margin-bottom:clamp(10px,1.7vh,13px);
 }
 
 .review-card-text{
-  font-size:clamp(13.5px,2.4vw,15px);
-  line-height:1.65;
+  font-size:clamp(13px,2.3vw,14.5px);
+  line-height:1.55;
   color:var(--slate);
-  margin:0 0 clamp(14px,2.3vh,18px) 0;
+  margin:0 0 clamp(13px,2.2vh,17px) 0;
   font-weight:500;
 }
 
 .review-card-author{
   display:flex;
   flex-direction:column;
-  gap:4px;
+  gap:3px;
   margin-top:auto;
-  padding-top:clamp(10px,1.6vh,14px);
-  border-top:1px solid rgba(0,0,0,0.06);
+  padding-top:clamp(10px,1.6vh,13px);
+  border-top:1px solid rgba(0,0,0,0.05);
 }
 
 .review-card-name{
-  font-size:clamp(12.5px,2.2vw,14px);
+  font-size:clamp(12px,2.15vw,13.5px);
   font-weight:700;
   color:var(--ink);
   letter-spacing:0.01em;
 }
 
 .review-card-source{
-  font-size:clamp(11px,2vw,12px);
+  font-size:clamp(10.5px,1.95vw,11.5px);
   color:#FF2A2A;
   font-weight:600;
   text-transform:uppercase;
-  letter-spacing:0.08em;
+  letter-spacing:0.05em;
+}
+
+/* Desktop enhancements */
+@media (min-width: 768px) {
+  .review-card{
+    min-width:300px;
+  }
+  
+  .review-card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.06),0 2px 4px rgba(0,0,0,0.03);
+    border-color:rgba(255,42,42,0.08);
+  }
+  
+  .review-card:hover::before{
+    opacity:1;
+  }
+}
+
+@media (min-width: 1024px) {
+  .reviews-carousel{
+    gap:20px;
+  }
+  
+  .review-card{
+    min-width:320px;
+  }
 }
 
 /* ===== Footer micro alignment ===== */
@@ -2793,75 +2822,54 @@ body.spanish [lang="en"]{display:none}
       titleObserver.observe(title);
     });
 
-    // Apple-style auto-scroll for reviews carousel
+    // Apple-style carousel - auto-scroll DESKTOP ONLY
     const carousel = document.getElementById('reviewsCarousel');
     if(carousel){
-      let autoScrollInterval;
-      let isUserScrolling = false;
-      let scrollTimeout;
+      const isMobile = window.innerWidth < 768;
       
-      const startAutoScroll = () => {
-        autoScrollInterval = setInterval(() => {
-          if(!isUserScrolling){
-            const scrollAmount = carousel.scrollLeft;
-            const firstCard = carousel.querySelector('.review-card');
-            if(!firstCard) return;
-            
-            const cardWidth = firstCard.offsetWidth;
-            const style = window.getComputedStyle(carousel);
-            const gap = parseFloat(style.gap) || 12;
-            const nextScroll = scrollAmount + cardWidth + gap;
-            
-            // If at end, smoothly go back to start
-            if(nextScroll >= carousel.scrollWidth - carousel.clientWidth - 5){
-              carousel.scrollTo({left: 0, behavior: 'smooth'});
-            } else {
-              carousel.scrollTo({left: nextScroll, behavior: 'smooth'});
+      if(!isMobile){
+        // Desktop only: subtle auto-scroll
+        let autoScrollInterval;
+        let isUserInteracting = false;
+        let interactionTimeout;
+        
+        const startAutoScroll = () => {
+          autoScrollInterval = setInterval(() => {
+            if(!isUserInteracting){
+              const scrollAmount = carousel.scrollLeft;
+              const firstCard = carousel.querySelector('.review-card');
+              if(!firstCard) return;
+              
+              const cardWidth = firstCard.offsetWidth;
+              const style = window.getComputedStyle(carousel);
+              const gap = parseFloat(style.gap) || 16;
+              const nextScroll = scrollAmount + cardWidth + gap;
+              
+              if(nextScroll >= carousel.scrollWidth - carousel.clientWidth - 10){
+                carousel.scrollTo({left: 0, behavior: 'smooth'});
+              } else {
+                carousel.scrollTo({left: nextScroll, behavior: 'smooth'});
+              }
             }
-          }
-        }, 4500); // Scroll every 4.5 seconds (Apple-like timing)
-      };
-      
-      // Pause auto-scroll when user interacts
-      carousel.addEventListener('touchstart', () => {
-        isUserScrolling = true;
-        clearInterval(autoScrollInterval);
-      }, {passive: true});
-      
-      carousel.addEventListener('mousedown', () => {
-        isUserScrolling = true;
-        clearInterval(autoScrollInterval);
-      });
-      
-      // Resume auto-scroll after user stops interacting
-      carousel.addEventListener('touchend', () => {
-        clearTimeout(scrollTimeout);
-        scrollTimeout = setTimeout(() => {
-          isUserScrolling = false;
-          startAutoScroll();
-        }, 3000);
-      }, {passive: true});
-      
-      carousel.addEventListener('mouseup', () => {
-        clearTimeout(scrollTimeout);
-        scrollTimeout = setTimeout(() => {
-          isUserScrolling = false;
-          startAutoScroll();
-        }, 3000);
-      });
-      
-      carousel.addEventListener('scroll', () => {
-        clearTimeout(scrollTimeout);
-        scrollTimeout = setTimeout(() => {
-          if(isUserScrolling){
-            isUserScrolling = false;
+          }, 5000);
+        };
+        
+        const pauseAutoScroll = () => {
+          isUserInteracting = true;
+          clearInterval(autoScrollInterval);
+          clearTimeout(interactionTimeout);
+          interactionTimeout = setTimeout(() => {
+            isUserInteracting = false;
             startAutoScroll();
-          }
-        }, 3000);
-      }, {passive: true});
-      
-      // Start auto-scroll after a brief delay for better UX
-      setTimeout(() => startAutoScroll(), 1000);
+          }, 4000);
+        };
+        
+        carousel.addEventListener('mousedown', pauseAutoScroll);
+        carousel.addEventListener('touchstart', pauseAutoScroll, {passive: true});
+        carousel.addEventListener('wheel', pauseAutoScroll, {passive: true});
+        
+        setTimeout(() => startAutoScroll(), 2000);
+      }
     }
   });
   </script>
