@@ -2341,40 +2341,32 @@ body.spanish [lang="en"]{display:none}
 /* ===== Footer micro alignment ===== */
 
 
-/* === Seamless Reviews Marquee (Isolated) === */
-.reviews-carousel.seamless{
-  display:block !important;         /* override desktop grid */
-  overflow:hidden !important;        /* viewport */
-  scroll-snap-type:none !important;  /* disable snap */
-  scroll-behavior:auto !important;
-}
-.reviews-carousel.seamless .track{
-  display:flex;
-  gap:var(--reviews-gap, 24px);
-  will-change:transform;
-  transform:translate3d(0,0,0);
-}
-.reviews-carousel.seamless .track > .review-card{
-  flex:0 0 auto;
-  width:min(360px, 85vw);
-  margin:0 !important; /* remove any card margin used for snap layout */
+/* === Robust CSS Marquee Reviews (Always Moving) === */
+#reviewsCarousel, .reviews-carousel {
+  overflow: hidden !important;
+  scroll-snap-type: none !important;
 }
 
-
-/* === Marquee Smoothing Tweaks (Mobile) === */
-.reviews-carousel.seamless .track{
+#reviewsCarousel .track, .reviews-carousel .track{
+  display: flex;
+  gap: var(--reviews-gap, 24px);
+  will-change: transform;
   backface-visibility: hidden;
   transform: translate3d(0,0,0);
+  animation: reviews-marquee var(--marquee-duration, 40s) linear infinite;
 }
-.reviews-carousel.seamless .track > .review-card{
+
+@keyframes reviews-marquee{
+  from{ transform: translate3d(0,0,0); }
+  to{ transform: translate3d(calc(-1 * var(--marquee-half, 0px)), 0, 0); }
+}
+
+#reviewsCarousel .track > .review-card,
+.reviews-carousel .track > .review-card{
+  flex: 0 0 auto;
+  width: min(360px, 85vw);
+  margin: 0 !important;
   contain: layout paint;
-}
-
-
-/* === Tighten Reviews Header Spacing === */
-.reviews-header h2,
-#reviews h2{
-  margin-top: 6px !important; /* almost flush with stars, slight breathing room */
 }
 
 </style>
@@ -2913,9 +2905,6 @@ body.spanish [lang="en"]{display:none}
     // GOLD AUTO-SCROLL CAROUSEL - 3 seconds, seamless, perfect
     const carousel = document.getElementById('reviewsCarousel');
     if(carousel){
-      // If seamless marquee is enabled, this legacy scroller must not run.
-      if(carousel.classList && carousel.classList.contains('seamless')){ return; }
-
       let autoScrollInterval;
       let isUserInteracting = false;
       let interactionTimeout;
@@ -3073,81 +3062,60 @@ body.spanish [lang="en"]{display:none}
     const carousel = document.getElementById('reviewsCarousel') || document.querySelector('.reviews-carousel');
     if(!carousel) return;
 
-    // If already processed, do nothing.
-    if(carousel.classList.contains('seamless')) return;
+    // Build track if not present
+    let track = carousel.querySelector('.track');
+    if(!track){
+      track = document.createElement('div');
+      track.className = 'track';
 
-    // Respect reduced motion (keep layout, no movement).
-    try{
-      if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches){
-        return;
-      }
-    }catch(e){}
+      const items = Array.from(carousel.children).filter(n => n.nodeType === 1);
+      if(items.length === 0) return;
 
-    // Capture computed gap from existing styles if available
-    const computedGap = (function(){
-      try{
-        const g = parseFloat(getComputedStyle(carousel).gap);
-        return Number.isFinite(g) ? g : 24;
-      }catch(e){ return 24; }
-    })();
-    carousel.style.setProperty('--reviews-gap', computedGap + 'px');
+      // Preserve order
+      items.forEach(n => track.appendChild(n));
+      // Duplicate once for seamless loop
+      items.forEach(n => track.appendChild(n.cloneNode(true)));
 
-    // Move existing review cards into a track (preserves order)
-    const track = document.createElement('div');
-    track.className = 'track';
-
-    const items = Array.from(carousel.children).filter(n => n.nodeType === 1);
-    if(items.length < 1) return;
-
-    items.forEach(n => track.appendChild(n));
-    // Duplicate for seamless loop
-    items.forEach(n => track.appendChild(n.cloneNode(true)));
-
-    carousel.innerHTML = '';
-    carousel.appendChild(track);
-    carousel.classList.add('seamless');
-
-    let pos = 0;
-    let half = 0;
-    let speed = 0.25; // px/frame (premium continuous)
-
-    function recalc(){
-      // Track width is double; half is the original set width.
-      half = track.scrollWidth / 2;
-      if(!Number.isFinite(half) || half <= 0){
-        // try again next frame if layout not ready yet
-        requestAnimationFrame(recalc);
-      }
+      carousel.innerHTML = '';
+      carousel.appendChild(track);
     }
 
-    // Recalc now + on resize
-    recalc();
-    window.addEventListener('resize', function(){ pos = 0; recalc(); }, {passive:true});
+    // Compute gap from computed styles if possible
+    let gap = 24;
+    try{
+      const g = parseFloat(getComputedStyle(track).gap || getComputedStyle(carousel).gap);
+      if(Number.isFinite(g)) gap = g;
+    }catch(e){}
+    carousel.style.setProperty('--reviews-gap', gap + 'px');
 
-    // Use ResizeObserver for font load/layout shifts (best effort)
+    function recalc(){
+      const half = track.scrollWidth / 2;
+      if(!half || !isFinite(half)) return;
+
+      carousel.style.setProperty('--marquee-half', half + 'px');
+
+      // Set duration for consistent speed (~80px/s)
+      const pxPerSec = 80;
+      const duration = Math.max(half / pxPerSec, 12);
+      carousel.style.setProperty('--marquee-duration', duration + 's');
+
+      // Force inline animation as a fallback (some mobile engines ignore class CSS on dynamic nodes)
+      track.style.animation = 'reviews-marquee ' + duration + 's linear infinite';
+    }
+
+    // Run after layout settles
+    requestAnimationFrame(function(){
+      requestAnimationFrame(recalc);
+    });
+
+    // Recalc on resize and layout changes
+    window.addEventListener('resize', recalc, {passive:true});
     if('ResizeObserver' in window){
       try{
-        const ro = new ResizeObserver(function(){
-          pos = pos % (half || 1);
-          recalc();
-        });
+        const ro = new ResizeObserver(recalc);
         ro.observe(track);
       }catch(e){}
     }
-
-    function step(){
-      if(half > 0){
-        pos += speed;
-        if(pos >= half) pos -= half;
-        track.style.transform = 'translate3d(' + (-pos) + 'px, 0, 0)';
-      }
-      requestAnimationFrame(step);
-    }
-
-    // Start after layout settles (prevents "not moving" bugs on first paint)
-    requestAnimationFrame(function(){
-      requestAnimationFrame(step);
-    });
   });
 })();
 </script>
