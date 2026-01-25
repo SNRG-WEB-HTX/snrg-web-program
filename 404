@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="32x32" href="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png"/>
+<link rel="icon" type="image/png" sizes="16x16" href="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png"/>
+<link rel="apple-touch-icon" href="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png"/>
+
+<title>404 - Page Not Found | SNRG WEB</title>
+<meta name="robots" content="noindex,nofollow"/>
+<meta name="theme-color" content="#FF2A2A"/>
+
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+<link rel="dns-prefetch" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,900,500,400,800,600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --pearl:#F6F7F8;
+  --white:#FFFFFF;
+  --ink:#0F1115;
+  --slate:#4A4F5A;
+  --slate-light:#7B8290;
+  --red:#FF2A2A;
+  --red-hover:#E02424;
+  --border:#E5E7EB;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-overflow-scrolling:touch}
+
+body{
+  font-family:'Satoshi',system-ui,-apple-system,sans-serif;
+  background:var(--pearl);
+  color:var(--ink);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  font-weight:400;
+  letter-spacing:-0.01em;
+  overflow-x:hidden;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+body.spanish [lang="en"]{display:none}
+body:not(.spanish) [lang="es"]{display:none}
+
+.animated-bg{
+  position:fixed;
+  inset:0;
+  overflow:hidden;
+  pointer-events:none;
+  z-index:0;
+  contain:paint;
+}
+
+.animated-bg::before,
+.animated-bg::after{
+  content:'';
+  position:absolute;
+  border-radius:50%;
+  filter:blur(60px);
+  opacity:0.06;
+}
+
+.animated-bg::before{
+  width:140%;
+  height:140%;
+  background:linear-gradient(135deg,transparent 0%,rgba(246,247,250,0.08) 20%,rgba(240,242,245,0.12) 35%,rgba(246,247,250,0.08) 50%,transparent 70%);
+  top:-20%;
+  left:-20%;
+  animation:infraGlowSlow 35s ease-in-out infinite;
+}
+
+.animated-bg::after{
+  width:140%;
+  height:140%;
+  background:linear-gradient(225deg,transparent 0%,rgba(248,249,251,0.06) 25%,rgba(242,244,247,0.10) 40%,rgba(248,249,251,0.06) 55%,transparent 75%);
+  bottom:-20%;
+  right:-20%;
+  animation:infraGlowSlow 40s ease-in-out infinite reverse;
+}
+
+@keyframes infraGlowSlow{
+  0%,100%{transform:translate(0,0) rotate(0deg);opacity:0.6}
+  33%{transform:translate(8%,-5%) rotate(2deg);opacity:0.8}
+  66%{transform:translate(-6%,4%) rotate(-2deg);opacity:0.7}
+}
+
+.lang-bar{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  background:rgba(255,255,255,0.98);
+  backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border);
+  padding:14px 20px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+  box-shadow:0 2px 16px rgba(0,0,0,0.04);
+}
+
+.lang-toggle{
+  display:flex;
+  gap:8px;
+  border-radius:999px;
+  background:var(--pearl);
+  padding:4px;
+  border:1px solid var(--border);
+}
+
+.lang-btn{
+  background:transparent;
+  border:none;
+  padding:8px 18px;
+  border-radius:999px;
+  font-size:clamp(12px,3vw,14px);
+  font-weight:700;
+  color:var(--slate);
+  cursor:pointer;
+  transition:all 0.2s;
+  font-family:'Satoshi',sans-serif;
+  text-transform:uppercase;
+  letter-spacing:0.05em;
+}
+
+.lang-btn.active{
+  background:var(--red);
+  color:var(--white);
+  box-shadow:0 2px 8px rgba(255,42,42,0.2);
+}
+
+.error-section{
+  position:relative;
+  z-index:1;
+  text-align:center;
+  padding:clamp(80px,15vw,120px) clamp(20px,5vw,40px) clamp(60px,10vw,80px);
+  max-width:800px;
+  margin:0 auto;
+}
+
+.error-logo{
+  width:clamp(100px,16vw,140px);
+  height:auto;
+  margin:0 auto clamp(24px,5vw,32px);
+  display:block;
+  filter:drop-shadow(0 4px 16px rgba(0,0,0,0.04));
+  transition:transform 0.4s cubic-bezier(0.22,1,0.36,1);
+}
+
+.error-logo:hover{
+  transform:translateY(-4px) scale(1.03);
+}
+
+.error-code{
+  font-size:clamp(80px,20vw,140px);
+  font-weight:900;
+  color:var(--red);
+  line-height:1;
+  letter-spacing:-0.05em;
+  margin-bottom:clamp(12px,3vw,16px);
+  opacity:0.9;
+}
+
+.error-title{
+  font-size:clamp(32px,7vw,56px);
+  font-weight:900;
+  color:var(--ink);
+  margin-bottom:clamp(12px,3vw,16px);
+  letter-spacing:-0.04em;
+  line-height:1.1;
+}
+
+.error-text{
+  font-size:clamp(16px,3.8vw,20px);
+  color:var(--slate);
+  line-height:1.6;
+  margin-bottom:clamp(32px,7vw,48px);
+  max-width:42ch;
+  margin-left:auto;
+  margin-right:auto;
+  font-weight:500;
+}
+
+.error-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:clamp(12px,3vw,16px);
+  justify-content:center;
+  align-items:center;
+}
+
+.cta{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:clamp(14px,3vw,17px) clamp(28px,6vw,36px);
+  border-radius:14px;
+  font-size:clamp(15px,3.5vw,17px);
+  font-weight:700;
+  text-decoration:none;
+  transition:all 0.3s cubic-bezier(0.22,1,0.36,1);
+  letter-spacing:-0.01em;
+  border:2px solid transparent;
+}
+
+.cta-primary{
+  background:var(--red);
+  color:var(--white);
+  border-color:var(--red);
+  box-shadow:0 6px 20px rgba(255,42,42,0.25);
+}
+
+.cta-primary:hover{
+  background:var(--red-hover);
+  transform:translateY(-3px) scale(1.02);
+  box-shadow:0 10px 30px rgba(255,42,42,0.35);
+}
+
+.cta-secondary{
+  background:transparent;
+  color:var(--slate);
+  border-color:var(--border);
+}
+
+.cta-secondary:hover{
+  border-color:var(--red);
+  color:var(--red);
+  transform:translateY(-2px);
+}
+
+.fade-rise{
+  opacity:0;
+  transform:translateY(48px) scale(0.96);
+  animation:fadeRise 0.85s cubic-bezier(0.22,1,0.36,1) forwards;
+  animation-delay:0.1s;
+}
+
+@keyframes fadeRise{
+  0%{
+    opacity:0;
+    transform:translateY(48px) scale(0.96);
+    filter:brightness(0.94);
+  }
+  100%{
+    opacity:1;
+    transform:translateY(0) scale(1);
+    filter:brightness(1);
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    animation-duration:0.01ms!important;
+    animation-iteration-count:1!important;
+    transition-duration:0.01ms!important;
+  }
+}
+</style>
+</head>
+
+<body>
+  <div class="animated-bg"></div>
+  
+  <div class="lang-bar">
+    <div class="lang-toggle">
+      <button class="lang-btn active" onclick="switchLang('en')" aria-label="Switch to English" aria-current="true">EN</button>
+      <button class="lang-btn" onclick="switchLang('es')" aria-label="Cambiar a Español" aria-current="false">ES</button>
+    </div>
+  </div>
+
+  <section class="error-section fade-rise">
+    <a href="/" aria-label="Return to SNRG WEB Home">
+      <img src="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png" class="error-logo" alt="SNRG WEB Logo" width="1024" height="1024" loading="eager" fetchpriority="high">
+    </a>
+    
+    <div class="error-code">404</div>
+    
+    <h1 class="error-title" lang="en">Page Not Found</h1>
+    <h1 class="error-title" lang="es">Página No Encontrada</h1>
+    
+    <p class="error-text" lang="en">The page you're looking for doesn't exist or has been moved. Let's get you back on track.</p>
+    <p class="error-text" lang="es">La página que buscas no existe o ha sido movida. Volvamos al camino correcto.</p>
+    
+    <div class="error-actions">
+      <a href="/" class="cta cta-primary" lang="en">Go Home</a>
+      <a href="/" class="cta cta-primary" lang="es">Ir al Inicio</a>
+      <a href="/contact" class="cta cta-secondary" lang="en">Contact Us</a>
+      <a href="/contact" class="cta cta-secondary" lang="es">Contáctanos</a>
+    </div>
+  </section>
+
+  <script>
+  function switchLang(lang){
+    const btns=document.querySelectorAll('.lang-btn');
+    if(lang==='es'){
+      document.body.classList.add('spanish');
+      btns[0].classList.remove('active');
+      btns[0].setAttribute('aria-current','false');
+      btns[1].classList.add('active');
+      btns[1].setAttribute('aria-current','true');
+    }else{
+      document.body.classList.remove('spanish');
+      btns[0].classList.add('active');
+      btns[0].setAttribute('aria-current','true');
+      btns[1].classList.remove('active');
+      btns[1].setAttribute('aria-current','false');
+    }
+  }
+  </script>
+</body>
+</html>
