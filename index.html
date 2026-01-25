@@ -2442,6 +2442,16 @@ body.spanish [lang="en"]{display:none}
   }
 }
 
+
+
+/* === HERO CTA BALANCE: Make secondary (Upwork) button just a hair smaller === */
+/* No layout changes. No spacing changes. No breakpoint-specific behavior. */
+.hero-cta-group .cta-secondary{
+  /* Reduce horizontal padding slightly to remove "recommended" visual weight */
+  padding-left: calc(clamp(24px, 6vw, 40px) - 4px);
+  padding-right: calc(clamp(24px, 6vw, 40px) - 4px);
+}
+
 </style>
 </head>
 
