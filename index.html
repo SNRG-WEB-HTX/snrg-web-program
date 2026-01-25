@@ -672,6 +672,10 @@ body.spanish [lang="en"]{display:none}
   justify-content:center;
   text-transform:uppercase;
   letter-spacing:0.05em;
+  cursor:pointer !important;
+  pointer-events:auto !important;
+  position:relative;
+  z-index:10000;
 }
 
 .header-nav-btn:hover{
@@ -3202,21 +3206,41 @@ body.spanish [lang="en"]{display:none}
 })();
 </script>
 
-<!-- EMERGENCY NAV FIX -->
+<!-- NUCLEAR NAV FIX - FORCES CLICKS TO WORK -->
 <script>
-document.addEventListener('DOMContentLoaded',function(){
-  const navLinks=document.querySelectorAll('.header-nav-btn');
-  navLinks.forEach(link=>{
-    link.style.pointerEvents='auto';
-    link.style.cursor='pointer';
-    link.addEventListener('click',function(e){
-      const href=this.getAttribute('href');
-      if(href&&!e.defaultPrevented){
-        window.location.href=href;
-      }
-    },true);
-  });
-});
+(function(){
+  function forceNav(){
+    const links=document.querySelectorAll('.header-nav-btn');
+    links.forEach(function(link){
+      // Remove ALL existing event listeners by cloning
+      const newLink=link.cloneNode(true);
+      link.parentNode.replaceChild(newLink,link);
+      
+      // Force styles
+      newLink.style.pointerEvents='auto';
+      newLink.style.cursor='pointer';
+      newLink.style.position='relative';
+      newLink.style.zIndex='10001';
+      
+      // Add ONLY our navigation handler
+      newLink.addEventListener('click',function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        e.stopImmediatePropagation();
+        const href=this.getAttribute('href');
+        if(href){
+          window.location.href=href;
+        }
+      },true);
+    });
+  }
+  
+  if(document.readyState==='loading'){
+    document.addEventListener('DOMContentLoaded',forceNav);
+  }else{
+    forceNav();
+  }
+})();
 </script>
 
 </body>
