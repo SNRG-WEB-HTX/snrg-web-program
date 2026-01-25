@@ -2418,6 +2418,30 @@ body.spanish [lang="en"]{display:none}
   pointer-events:auto !important;
 }
 
+
+
+/* === MOBILE-ONLY HERO COMPRESSION (DESKTOP/LAPTOP UNTOUCHED) === */
+@media (max-width:768px){
+  .hero{
+    /* remove excessive top/bottom padding that creates empty space */
+    padding: 16px 0 8px !important;
+    max-height: none !important;
+  }
+
+  .hero-stack{
+    gap: 8px !important; /* was 16px */
+  }
+
+  .hero-logo{
+    margin-bottom: 8px !important; /* was 16px */
+  }
+
+  .hero-cta-group{
+    margin-top: -8px !important;  /* pull CTAs closer to hero */
+    gap: 16px !important;         /* slightly tighter buttons */
+  }
+}
+
 </style>
 </head>
 
