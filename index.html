@@ -2407,12 +2407,15 @@ body.spanish [lang="en"]{display:none}
 
 
 /* === CLICK-SAFETY: prevent animated layers from intercepting nav clicks === */
-.hero, .hero::before, .hero::after,
+.hero::before, .hero::after,
 .animated-bg, .animated-bg::before, .animated-bg::after{
   pointer-events:none !important;
 }
 .lang-bar, .lang-bar *{
   pointer-events:auto;
+}
+.hero .cta{
+  pointer-events:auto !important;
 }
 
 </style>
