@@ -2174,7 +2174,6 @@ body.spanish [lang="en"]{display:none}
   .reviews-carousel {
     display: flex;
     overflow-x: auto;
-    scroll-snap-type: x mandatory;
     gap: 18px;
     padding: 0 20px 24px 20px;
     margin: 0 -20px;
@@ -2186,7 +2185,6 @@ body.spanish [lang="en"]{display:none}
   }
   
   .review-card {
-    scroll-snap-align: center;
     min-width: 290px;
     max-width: 330px;
     flex-shrink: 0;
@@ -2238,7 +2236,6 @@ body.spanish [lang="en"]{display:none}
   display:flex;
   overflow-x:auto;
   overflow-y:hidden;
-  scroll-snap-type:x mandatory;
   scrollbar-width:none;
   gap:clamp(16px,2.5vw,20px);
   padding:12px 0 20px;
@@ -2251,8 +2248,6 @@ body.spanish [lang="en"]{display:none}
 /* Review Card */
 .review-card{
   flex:0 0 calc(100% - 32px);
-  scroll-snap-align:center;
-  scroll-snap-stop:always;
   margin:0 clamp(8px,1.5vw,12px);
 }
 
