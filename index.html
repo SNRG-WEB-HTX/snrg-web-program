@@ -2926,9 +2926,16 @@ body.spanish [lang="en"]{display:none}
       titleObserver.observe(title);
     });
 
-    // GOLD AUTO-SCROLL CAROUSEL - 3 seconds, seamless, perfect
+    // INFINITE SMOOTH CAROUSEL - No rough loops, pure butter
     const carousel = document.getElementById('reviewsCarousel');
     if(carousel){
+      // Clone all cards for infinite scroll effect
+      const originalCards = Array.from(carousel.querySelectorAll('.review-card'));
+      originalCards.forEach(card => {
+        const clone = card.cloneNode(true);
+        carousel.appendChild(clone);
+      });
+      
       let autoScrollInterval;
       let isUserInteracting = false;
       let interactionTimeout;
@@ -2940,13 +2947,10 @@ body.spanish [lang="en"]{display:none}
         const currentScroll = carousel.scrollLeft;
         const maxScroll = carousel.scrollWidth - carousel.clientWidth;
         
-        let targetScroll;
-        if(currentScroll + scrollAmount >= maxScroll){
-          // Loop back to start
-          targetScroll = 0;
-        } else {
-          targetScroll = currentScroll + scrollAmount;
-        }
+        // Calculate where the first set of cards ends
+        const firstSetEnd = scrollAmount * originalCards.length;
+        
+        const targetScroll = currentScroll + scrollAmount;
         
         // Use butter-smooth RAF animation on mobile, native smooth on desktop
         const isMobile = window.innerWidth <= 768;
@@ -2954,11 +2958,10 @@ body.spanish [lang="en"]{display:none}
         if(isMobile){
           // BUTTER SMOOTH: RAF-based eased scrolling for mobile
           const startScroll = currentScroll;
-          const distance = targetScroll - startScroll;
-          const duration = 600; // 600ms for smooth animation
+          const distance = scrollAmount;
+          const duration = 600;
           const startTime = performance.now();
           
-          // Easing function for smooth deceleration
           const easeOutCubic = t => 1 - Math.pow(1 - t, 3);
           
           const animateScroll = (currentTime) => {
@@ -2970,6 +2973,12 @@ body.spanish [lang="en"]{display:none}
             
             if(progress < 1){
               requestAnimationFrame(animateScroll);
+            } else {
+              // After animation, check if we need to reset
+              if(carousel.scrollLeft >= firstSetEnd){
+                // INSTANT reset to start (no animation)
+                carousel.scrollLeft = 0;
+              }
             }
           };
           
@@ -2977,6 +2986,13 @@ body.spanish [lang="en"]{display:none}
         } else {
           // Desktop: use native smooth scroll
           carousel.scrollTo({left: targetScroll, behavior: 'smooth'});
+          
+          // After smooth scroll completes, check if reset needed
+          setTimeout(() => {
+            if(carousel.scrollLeft >= firstSetEnd){
+              carousel.scrollLeft = 0;
+            }
+          }, 400);
         }
       };
       
@@ -2986,7 +3002,7 @@ body.spanish [lang="en"]{display:none}
           if(!isUserInteracting){
             scrollToNext();
           }
-        }, 3000); // Every 3 seconds
+        }, 3000);
       };
       
       const pauseAutoScroll = () => {
@@ -2997,7 +3013,7 @@ body.spanish [lang="en"]{display:none}
         interactionTimeout = setTimeout(() => {
           isUserInteracting = false;
           startAutoScroll();
-        }, 2500); // Resume after 2.5s of no interaction
+        }, 2500);
       };
       
       // Pause on touch/mouse
