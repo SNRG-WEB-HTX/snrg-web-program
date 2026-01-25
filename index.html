@@ -2175,11 +2175,9 @@ body.spanish [lang="en"]{display:none}
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
     gap: 18px;
     padding: 0 20px 24px 20px;
     margin: 0 -20px;
-    -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
   }
   
@@ -2241,8 +2239,6 @@ body.spanish [lang="en"]{display:none}
   overflow-x:auto;
   overflow-y:hidden;
   scroll-snap-type:x mandatory;
-  scroll-behavior:smooth;
-  -webkit-overflow-scrolling:touch;
   scrollbar-width:none;
   gap:clamp(16px,2.5vw,20px);
   padding:12px 0 20px;
@@ -2944,11 +2940,43 @@ body.spanish [lang="en"]{display:none}
         const currentScroll = carousel.scrollLeft;
         const maxScroll = carousel.scrollWidth - carousel.clientWidth;
         
+        let targetScroll;
         if(currentScroll + scrollAmount >= maxScroll){
           // Loop back to start
-          carousel.scrollTo({left: 0, behavior: 'smooth'});
+          targetScroll = 0;
         } else {
-          carousel.scrollTo({left: currentScroll + scrollAmount, behavior: 'smooth'});
+          targetScroll = currentScroll + scrollAmount;
+        }
+        
+        // Use butter-smooth RAF animation on mobile, native smooth on desktop
+        const isMobile = window.innerWidth <= 768;
+        
+        if(isMobile){
+          // BUTTER SMOOTH: RAF-based eased scrolling for mobile
+          const startScroll = currentScroll;
+          const distance = targetScroll - startScroll;
+          const duration = 600; // 600ms for smooth animation
+          const startTime = performance.now();
+          
+          // Easing function for smooth deceleration
+          const easeOutCubic = t => 1 - Math.pow(1 - t, 3);
+          
+          const animateScroll = (currentTime) => {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            const easedProgress = easeOutCubic(progress);
+            
+            carousel.scrollLeft = startScroll + (distance * easedProgress);
+            
+            if(progress < 1){
+              requestAnimationFrame(animateScroll);
+            }
+          };
+          
+          requestAnimationFrame(animateScroll);
+        } else {
+          // Desktop: use native smooth scroll
+          carousel.scrollTo({left: targetScroll, behavior: 'smooth'});
         }
       };
       
