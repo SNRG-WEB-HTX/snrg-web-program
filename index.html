@@ -672,10 +672,6 @@ body.spanish [lang="en"]{display:none}
   justify-content:center;
   text-transform:uppercase;
   letter-spacing:0.05em;
-  cursor:pointer !important;
-  pointer-events:auto !important;
-  position:relative;
-  z-index:10000;
 }
 
 .header-nav-btn:hover{
@@ -2433,10 +2429,10 @@ body.spanish [lang="en"]{display:none}
       <button class="lang-btn" onclick="switchLang('es')" aria-label="Cambiar a español">ES</button>
     </div>
     <div class="header-nav-pill">
-      <a href="contact.html" class="header-nav-btn" lang="en">Contact</a>
-      <a href="contact.html" class="header-nav-btn" lang="es">Contacto</a>
-      <a href="faq.html" class="header-nav-btn" lang="en">FAQ</a>
-      <a href="faq.html" class="header-nav-btn" lang="es">FAQ</a>
+      <a href="/contact" class="header-nav-btn" lang="en">Contact</a>
+      <a href="/contact" class="header-nav-btn" lang="es">Contacto</a>
+      <a href="/faq" class="header-nav-btn" lang="en">FAQ</a>
+      <a href="/faq" class="header-nav-btn" lang="es">FAQ</a>
     </div>
   </nav>
 
@@ -3203,43 +3199,6 @@ body.spanish [lang="en"]{display:none}
       }catch(e){}
     }
   });
-})();
-</script>
-
-<!-- NUCLEAR NAV FIX - FORCES CLICKS TO WORK -->
-<script>
-(function(){
-  function forceNav(){
-    const links=document.querySelectorAll('.header-nav-btn');
-    links.forEach(function(link){
-      // Remove ALL existing event listeners by cloning
-      const newLink=link.cloneNode(true);
-      link.parentNode.replaceChild(newLink,link);
-      
-      // Force styles
-      newLink.style.pointerEvents='auto';
-      newLink.style.cursor='pointer';
-      newLink.style.position='relative';
-      newLink.style.zIndex='10001';
-      
-      // Add ONLY our navigation handler
-      newLink.addEventListener('click',function(e){
-        e.preventDefault();
-        e.stopPropagation();
-        e.stopImmediatePropagation();
-        const href=this.getAttribute('href');
-        if(href){
-          window.location.href=href;
-        }
-      },true);
-    });
-  }
-  
-  if(document.readyState==='loading'){
-    document.addEventListener('DOMContentLoaded',forceNav);
-  }else{
-    forceNav();
-  }
 })();
 </script>
 
