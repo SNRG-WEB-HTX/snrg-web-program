@@ -369,34 +369,39 @@
 
 
 <script>
-/* === SNRG ULTRA-SAFE PERSISTENCE ENGINE (HEAD-ONLY, RELOAD-BASED) === */
-(function() {
+/* === SNRG LANGUAGE ENGINE (NO-RELOAD, NAV-SAFE) === */
+(function(){
   const KEY = "snrg_lang";
-  const saved = localStorage.getItem(KEY) || "en";
+  function apply(lang){
+    const isEs = (lang === "es");
+    document.body.classList.toggle("spanish", isEs);
 
-  function apply(l){
-    document.documentElement.lang = (l === "es") ? "es" : "en";
-    const tick = () => {
-      if (document.body) {
-        document.body.classList.toggle("spanish", l === "es");
-        document.querySelectorAll(".lang-btn").forEach(b => {
-          const oc = (b.getAttribute("onclick") || "").toLowerCase();
-          const isEs = oc.includes("'es'") || oc.includes('"es"') || oc.includes("es");
-          b.classList.toggle("active", (l === "es" && isEs) || (l === "en" && !isEs));
-        });
-      } else {
-        requestAnimationFrame(tick);
-      }
-    };
-    tick();
+    // Button states (safe if missing)
+    const buttons = document.querySelectorAll('.lang-btn');
+    buttons.forEach(btn => {
+      const isEN = btn.textContent.trim().toUpperCase() === "EN";
+      const active = isEs ? !isEN : isEN;
+      btn.classList.toggle("active", active);
+      btn.setAttribute("aria-current", active ? "true" : "false");
+    });
+
+    // Keep anchors clickable (defensive)
+    const nav = document.querySelector('.lang-bar');
+    if(nav){ nav.style.pointerEvents = 'auto'; }
   }
 
-  apply(saved);
-
-  window.switchLang = function(l) {
-    localStorage.setItem(KEY, (l === "es") ? "es" : "en");
-    location.reload(); // animation-safe
+  window.switchLang = function(lang){
+    try{ localStorage.setItem(KEY, lang); }catch(e){}
+    apply(lang);
   };
+
+  // Initial
+  const saved = (function(){ try{ return localStorage.getItem(KEY) || "en"; }catch(e){ return "en"; }})();
+  if(document.readyState === "loading"){
+    document.addEventListener("DOMContentLoaded", () => apply(saved), {once:true});
+  } else {
+    apply(saved);
+  }
 })();
 </script>
 <style>
@@ -2400,6 +2405,16 @@ body.spanish [lang="en"]{display:none}
   contain: layout paint;
 }
 
+
+/* === CLICK-SAFETY: prevent animated layers from intercepting nav clicks === */
+.hero, .hero::before, .hero::after,
+.animated-bg, .animated-bg::before, .animated-bg::after{
+  pointer-events:none !important;
+}
+.lang-bar, .lang-bar *{
+  pointer-events:auto;
+}
+
 </style>
 </head>
 
@@ -2414,10 +2429,10 @@ body.spanish [lang="en"]{display:none}
       <button class="lang-btn" onclick="switchLang('es')" aria-label="Cambiar a español">ES</button>
     </div>
     <div class="header-nav-pill">
-      <a href="contact.html" class="header-nav-btn" lang="en">Contact</a>
-      <a href="contact.html" class="header-nav-btn" lang="es">Contacto</a>
-      <a href="faq.html" class="header-nav-btn" lang="en">FAQ</a>
-      <a href="faq.html" class="header-nav-btn" lang="es">FAQ</a>
+      <a href="/contact.html" class="header-nav-btn" lang="en">Contact</a>
+      <a href="/contact.html" class="header-nav-btn" lang="es">Contacto</a>
+      <a href="/faq.html" class="header-nav-btn" lang="en">FAQ</a>
+      <a href="/faq.html" class="header-nav-btn" lang="es">FAQ</a>
     </div>
   </nav>
 
@@ -2428,7 +2443,7 @@ body.spanish [lang="en"]{display:none}
         <div class="hero-stack">
           <div class="hero-logo-container">
             <div class="logo-mask">
-              <a href="index.html" aria-label="SNRG WEB Home">
+              <a href="/index.html" aria-label="SNRG WEB Home">
                 <img src="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png" class="hero-logo" alt="SNRG WEB - High Performance Web Design Houston" title="SNRG WEB Professional Services" loading="eager" fetchpriority="high" decoding="async" width="1024" height="1024">
               </a>
             </div>
