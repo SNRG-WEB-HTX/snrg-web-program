@@ -2498,7 +2498,7 @@ body{padding-top:var(--lang-bar-h);}
       <button class="lang-btn" data-lang="en" onclick="switchLang('en')">EN</button>
       <button class="lang-btn" data-lang="es" onclick="switchLang('es')">ES</button>
     </div>
-    <div class="header-nav-pill" aria-label="Primary navigation"><a class="header-nav-btn" href="/index.html">HOME</a><a class="header-nav-btn" href="/contact.html">CONTACT</a></div>
+    <div class="header-nav-pill" aria-label="Primary navigation"><a class="header-nav-btn" href="index.html">HOME</a><a class="header-nav-btn" href="contact.html">CONTACT</a></div>
   </nav>
 
   <section class="faq-section">
@@ -2506,7 +2506,7 @@ body{padding-top:var(--lang-bar-h);}
     <div class="container">
       <div class="faq-wrapper">
         <div class="faq-header fade-rise">
-          <a href="/" aria-label="Back to SNRG WEB Home">
+          <a href="index.html" aria-label="Back to SNRG WEB Home">
             <img src="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png" class="faq-logo" alt="SNRG WEB Logo" width="1024" height="1024" loading="eager" fetchpriority="high">
           </a>
           <h1 class="faq-title"><span lang="en">Frequently Asked Questions</span><span lang="es">Preguntas Frecuentes</span></h1>
@@ -2602,7 +2602,7 @@ body{padding-top:var(--lang-bar-h);}
         </div>
         
         <div class="back-home">
-          <a href="/"><span>← Back to Home</span></a>
+          <a href="index.html"><span>← Back to Home</span></a>
         </div>
       </div>
     </div>
@@ -2717,5 +2717,20 @@ body{padding-top:var(--lang-bar-h);}
   });
 })();
 </script>
+
+<script id="snrg-pretty-url-guard">
+/* Prevent "pretty URL" rewrites from falling back to /index.html on static hosting. */
+(function(){
+  const map = {
+    "/contact": "/contact.html",
+    "/contact/": "/contact.html",
+    "/faq": "/faq.html",
+    "/faq/": "/faq.html"
+  };
+  const p = window.location.pathname;
+  if(map[p]) window.location.replace(map[p] + window.location.search + window.location.hash);
+})();
+</script>
+
 </body>
 </html>
