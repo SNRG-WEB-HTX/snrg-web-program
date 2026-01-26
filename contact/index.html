@@ -2508,56 +2508,23 @@ body.spanish [lang="en"]{display:none}
 }
 </style>
 
-<script>
-/* === SNRG LANGUAGE ENGINE (NO-RELOAD, NAV-SAFE) === */
-(function(){
-  const KEY = "snrg_lang";
-  function apply(lang){
-    const isEs = (lang === "es");
-    document.body.classList.toggle("spanish", isEs);
-
-    // Button states (safe if missing)
-    const buttons = document.querySelectorAll('.lang-btn');
-    buttons.forEach(btn => {
-      const isEN = btn.textContent.trim().toUpperCase() === "EN";
-      const active = isEs ? !isEN : isEN;
-      btn.classList.toggle("active", active);
-      btn.setAttribute("aria-current", active ? "true" : "false");
-    });
-
-    // Keep anchors clickable (defensive)
-    const nav = document.querySelector('.lang-bar');
-    if(nav){ nav.style.pointerEvents = 'auto'; }
-  }
-
-  window.switchLang = function(lang){
-    try{ localStorage.setItem(KEY, lang); }catch(e){}
-    apply(lang);
-  };
-
-  // Initial
-  const saved = (function(){ try{ return localStorage.getItem(KEY) || "en"; }catch(e){ return "en"; }})();
-  if(document.readyState === "loading"){
-    document.addEventListener("DOMContentLoaded", () => apply(saved), {once:true});
-  } else {
-    apply(saved);
-  }
-})();
-</script>
+<style id="snrg-langbar-flow-fix">
+:root{--lang-bar-h:76px;}
+body{padding-top:var(--lang-bar-h);}
+.contact-section{
+  min-height:calc(100svh - var(--lang-bar-h));
+  padding-top:clamp(24px,5vw,48px);
+}
+</style>
 </head>
 
 <body>
 <nav class="lang-bar" role="navigation" aria-label="Language selection">
-    <div class="lang-toggle">
-      <button class="lang-btn active" onclick="switchLang('en')" aria-label="Switch to English" aria-current="true">EN</button>
-      <button class="lang-btn" onclick="switchLang('es')" aria-label="Cambiar a español">ES</button>
+    <div class="lang-toggle" aria-label="Language toggle">
+      <button class="lang-btn" data-lang="en" onclick="switchLang('en')">EN</button>
+      <button class="lang-btn" data-lang="es" onclick="switchLang('es')">ES</button>
     </div>
-    <div class="header-nav-pill">
-      <a href="/contact" class="header-nav-btn" lang="en">Contact</a>
-      <a href="/contact" class="header-nav-btn" lang="es">Contacto</a>
-      <a href="/faq" class="header-nav-btn" lang="en">FAQ</a>
-      <a href="/faq" class="header-nav-btn" lang="es">FAQ</a>
-    </div>
+    <div class="header-nav-pill" aria-label="Primary navigation"><a class="header-nav-btn" href="/index.html">HOME</a><a class="header-nav-btn" href="/faq.html">FAQ</a></div>
   </nav>
 
   <section class="contact-section">
@@ -2565,11 +2532,11 @@ body.spanish [lang="en"]{display:none}
     <div class="container">
       <div class="contact-wrapper">
         <div class="contact-header fade-rise">
-          <a href="/" aria-label="Back to SNRG WEB Home">
+          <a href="/index.html" aria-label="Back to SNRG WEB Home">
             <img src="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png" class="contact-logo" alt="SNRG WEB Logo" width="1024" height="1024" loading="eager" fetchpriority="high">
           </a>
-          <h1 class="contact-title">Let's Talk About Your Website</h1>
-          <p class="contact-subtitle">Multiple ways to connect. Choose what works best for you.</p>
+          <h1 class="contact-title"><span lang="en">Let\'s Talk About Your Website</span><span lang="es">Hablemos de Tu Sitio Web</span></h1>
+          <p class="contact-subtitle"><span lang="en">Multiple ways to connect. Choose what works best for you.</span><span lang="es">Varias formas de conectarnos. Elige la que mejor te funcione.</span></p>
         </div>
         
         <div class="contact-grid">
@@ -2580,7 +2547,7 @@ body.spanish [lang="en"]{display:none}
                 <path d="m2 7 10 7 10-7"/>
               </svg>
             </div>
-            <h2 class="contact-card-title">Email</h2>
+            <h2 class="contact-card-title"><span lang="en">Email</span><span lang="es">Correo</span></h2>
             <a href="mailto:bobby@snrgweb.com" class="contact-card-link">bobby@snrgweb.com</a>
           </div>
           
@@ -2590,7 +2557,7 @@ body.spanish [lang="en"]{display:none}
                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
               </svg>
             </div>
-            <h2 class="contact-card-title">Phone</h2>
+            <h2 class="contact-card-title"><span lang="en">Phone</span><span lang="es">Teléfono</span></h2>
             <a href="tel:+13462916010" class="contact-card-link">346-291-6010</a>
           </div>
         </div>
@@ -2600,10 +2567,120 @@ body.spanish [lang="en"]{display:none}
         </div>
         
         <div class="back-home">
-          <a href="/"><span>← Back to Home</span></a>
+          <a href="/index.html"><span>← Back to Home</span></a>
         </div>
       </div>
     </div>
   </section>
+<script id="snrg-lang-toggle-fix">
+(function(){
+  function ready(fn){
+    if(document.readyState !== 'loading'){ fn(); }
+    else{ document.addEventListener('DOMContentLoaded', fn); }
+  }
+
+  ready(function(){
+    const btnEN = document.querySelector('.lang-btn[data-lang="en"]');
+    const btnES = document.querySelector('.lang-btn[data-lang="es"]');
+
+    if(!btnEN || !btnES) return;
+
+    function setLang(lang){
+      if(lang === 'es'){
+        document.body.classList.add('spanish');
+        btnES.classList.add('active');
+        btnEN.classList.remove('active');
+      }else{
+        document.body.classList.remove('spanish');
+        btnEN.classList.add('active');
+        btnES.classList.remove('active');
+      }
+      try{ localStorage.setItem('snrg_lang', lang); }catch(e){}
+    }
+
+    let saved = 'en';
+    try{ saved = localStorage.getItem('snrg_lang') || 'en'; }catch(e){}
+    setLang(saved);
+
+    btnEN.addEventListener('click', function(){ setLang('en'); });
+    btnES.addEventListener('click', function(){ setLang('es'); });
+  });
+})();
+</script>
+<script>
+(() => {
+  const STORAGE_KEY = 'snrg_lang';
+
+  function applyLang(lang) {
+    const isES = (lang === 'es');
+    document.body.classList.toggle('spanish', isES);
+
+    const btnEN = document.querySelector('.lang-btn[data-lang="en"]');
+    const btnES = document.querySelector('.lang-btn[data-lang="es"]');
+    if (btnEN && btnES) {
+      btnEN.classList.toggle('active', !isES);
+      btnEN.setAttribute('aria-current', (!isES).toString());
+      btnES.classList.toggle('active', isES);
+      btnES.setAttribute('aria-current', (isES).toString());
+    }
+    try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
+  }
+
+  function init() {
+    const btnEN = document.querySelector('.lang-btn[data-lang="en"]');
+    const btnES = document.querySelector('.lang-btn[data-lang="es"]');
+    if (!btnEN || !btnES) return;
+
+    // Load saved language (default EN)
+    let saved = 'en';
+    try { saved = localStorage.getItem(STORAGE_KEY) || 'en'; } catch (e) {}
+    applyLang(saved === 'es' ? 'es' : 'en');
+
+    btnEN.addEventListener('click', () => applyLang('en'));
+    btnES.addEventListener('click', () => applyLang('es'));
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init, { once: true });
+  } else {
+    init();
+  }
+})();
+</script>
+<script>
+/* === SNRG LANGUAGE ENGINE (NO-RELOAD, NAV-SAFE) === */
+(function(){
+  const KEY = "snrg_lang";
+  function apply(lang){
+    const isEs = (lang === "es");
+    document.body.classList.toggle("spanish", isEs);
+
+    // Button states
+    const buttons = document.querySelectorAll('.lang-btn');
+    buttons.forEach(btn => {
+      const isEN = (btn.getAttribute('data-lang') || btn.textContent).toString().trim().toLowerCase() === "en";
+      const active = isEs ? !isEN : isEN;
+      btn.classList.toggle("active", active);
+      btn.setAttribute("aria-current", active ? "true" : "false");
+    });
+
+    // Keep nav clickable
+    const nav = document.querySelector('.lang-bar');
+    if(nav){ nav.style.pointerEvents = 'auto'; }
+  }
+
+  window.switchLang = function(lang){
+    try{ localStorage.setItem(KEY, lang); }catch(e){}
+    apply(lang);
+  };
+
+  const saved = (function(){ try{ return localStorage.getItem(KEY) || "en"; }catch(e){ return "en"; }})();
+  if(document.readyState === "loading"){
+    document.addEventListener("DOMContentLoaded", () => apply(saved), {once:true});
+  } else {
+    apply(saved);
+  }
+})();
+</script>
 </body>
 </html>
