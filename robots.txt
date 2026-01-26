@@ -1,22 +1,12 @@
 # SNRG WEB - Robots.txt
-# Last updated: 2026-01-25
+# Last updated: 2026-01-26
 
-# Allow all bots full access
 User-agent: *
 Allow: /
 
-# Block common spam/scraper bots
-User-agent: AhrefsBot
-User-agent: SemrushBot
-User-agent: DotBot
-User-agent: MJ12bot
-Crawl-delay: 10
+# Block any internal or utility paths if ever added
+Disallow: /cgi-bin/
+Disallow: /wp-admin/
 
-# Prevent indexing of thank-you page (conversion tracking)
-User-agent: *
-Disallow: /thank-you
-
-# Sitemaps
-Sitemap: https://snrgweb.com/sitemap.xml
+# Canonical sitemap
 Sitemap: https://snrgweb.com/sitemap-pages.xml
-Sitemap: https://snrgweb.com/sitemap-cities.xml
