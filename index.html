@@ -369,34 +369,39 @@
 
 
 <script>
-/* === SNRG ULTRA-SAFE PERSISTENCE ENGINE (HEAD-ONLY, RELOAD-BASED) === */
-(function() {
+/* === SNRG LANGUAGE ENGINE (NO-RELOAD, NAV-SAFE) === */
+(function(){
   const KEY = "snrg_lang";
-  const saved = localStorage.getItem(KEY) || "en";
+  function apply(lang){
+    const isEs = (lang === "es");
+    document.body.classList.toggle("spanish", isEs);
 
-  function apply(l){
-    document.documentElement.lang = (l === "es") ? "es" : "en";
-    const tick = () => {
-      if (document.body) {
-        document.body.classList.toggle("spanish", l === "es");
-        document.querySelectorAll(".lang-btn").forEach(b => {
-          const oc = (b.getAttribute("onclick") || "").toLowerCase();
-          const isEs = oc.includes("'es'") || oc.includes('"es"') || oc.includes("es");
-          b.classList.toggle("active", (l === "es" && isEs) || (l === "en" && !isEs));
-        });
-      } else {
-        requestAnimationFrame(tick);
-      }
-    };
-    tick();
+    // Button states (safe if missing)
+    const buttons = document.querySelectorAll('.lang-btn');
+    buttons.forEach(btn => {
+      const isEN = btn.textContent.trim().toUpperCase() === "EN";
+      const active = isEs ? !isEN : isEN;
+      btn.classList.toggle("active", active);
+      btn.setAttribute("aria-current", active ? "true" : "false");
+    });
+
+    // Keep anchors clickable (defensive)
+    const nav = document.querySelector('.lang-bar');
+    if(nav){ nav.style.pointerEvents = 'auto'; }
   }
 
-  apply(saved);
-
-  window.switchLang = function(l) {
-    localStorage.setItem(KEY, (l === "es") ? "es" : "en");
-    location.reload(); // animation-safe
+  window.switchLang = function(lang){
+    try{ localStorage.setItem(KEY, lang); }catch(e){}
+    apply(lang);
   };
+
+  // Initial
+  const saved = (function(){ try{ return localStorage.getItem(KEY) || "en"; }catch(e){ return "en"; }})();
+  if(document.readyState === "loading"){
+    document.addEventListener("DOMContentLoaded", () => apply(saved), {once:true});
+  } else {
+    apply(saved);
+  }
 })();
 </script>
 <style>
@@ -788,7 +793,7 @@ body.spanish [lang="en"]{display:none}
   filter:drop-shadow(0 16px 48px rgba(0,0,0,0.2));
   opacity:0;
   transform:scale(0.3) translateY(-100px) translateZ(-500px);
-  animation:logoTunnelEntrance 1.6s cubic-bezier(0.16,1,0.3,1) forwards;
+  
   background:transparent !important;
   isolation:isolate;
 }
@@ -1844,7 +1849,7 @@ body.spanish [lang="en"]{display:none}
 /* Respect reduced motion */
 @media (prefers-reduced-motion: reduce){
  .hero-logo {
-    animation: none !important;
+    
     opacity: 1 !important;
     transform: none !important;
     filter: none !important;
@@ -2174,12 +2179,9 @@ body.spanish [lang="en"]{display:none}
   .reviews-carousel {
     display: flex;
     overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
     gap: 18px;
     padding: 0 20px 24px 20px;
     margin: 0 -20px;
-    -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
   }
   
@@ -2188,7 +2190,6 @@ body.spanish [lang="en"]{display:none}
   }
   
   .review-card {
-    scroll-snap-align: center;
     min-width: 290px;
     max-width: 330px;
     flex-shrink: 0;
@@ -2240,9 +2241,6 @@ body.spanish [lang="en"]{display:none}
   display:flex;
   overflow-x:auto;
   overflow-y:hidden;
-  scroll-snap-type:x mandatory;
-  scroll-behavior:smooth;
-  -webkit-overflow-scrolling:touch;
   scrollbar-width:none;
   gap:clamp(16px,2.5vw,20px);
   padding:12px 0 20px;
@@ -2255,8 +2253,6 @@ body.spanish [lang="en"]{display:none}
 /* Review Card */
 .review-card{
   flex:0 0 calc(100% - 32px);
-  scroll-snap-align:center;
-  scroll-snap-stop:always;
   margin:0 clamp(8px,1.5vw,12px);
 }
 
@@ -2409,7 +2405,201 @@ body.spanish [lang="en"]{display:none}
   contain: layout paint;
 }
 
+
+/* === CLICK-SAFETY: prevent animated layers from intercepting nav clicks === */
+.hero::before, .hero::after,
+.animated-bg, .animated-bg::before, .animated-bg::after{
+  pointer-events:none !important;
+}
+.lang-bar, .lang-bar *{
+  pointer-events:auto;
+}
+.hero .cta{
+  pointer-events:auto !important;
+}
+
+
+
+/* === MOBILE-ONLY HERO COMPRESSION (DESKTOP/LAPTOP UNTOUCHED) === */
+@media (max-width:768px){
+  .hero{
+    /* remove excessive top/bottom padding that creates empty space */
+    padding: 16px 0 8px !important;
+    max-height: none !important;
+  }
+
+  .hero-stack{
+    gap: 8px !important; /* was 16px */
+  }
+
+  .hero-logo{
+    margin-bottom: 8px !important; /* was 16px */
+  }
+
+  .hero-cta-group{
+    margin-top: -8px !important;  /* pull CTAs closer to hero */
+    gap: 16px !important;         /* slightly tighter buttons */
+  }
+}
+
+
+
+/* === HERO CTA BALANCE: Make secondary (Upwork) button just a hair smaller === */
+/* No layout changes. No spacing changes. No breakpoint-specific behavior. */
+.hero-cta-group .cta-secondary{
+  /* Reduce horizontal padding slightly to remove "recommended" visual weight */
+  padding-left: calc(clamp(24px, 6vw, 40px) - 4px);
+  padding-right: calc(clamp(24px, 6vw, 40px) - 4px);
+}
+
+
+/* === SNRG TILE ASSEMBLY (SAFE, LOCKED POSITION, VIBRANT FINISH) === */
+/* Real logo NEVER moves or scales. Only slices animate. */
+
+.hero-logo{
+  opacity: 0 !important;          /* hidden until slices finish */
+  transform: none !important;     /* guarantee no movement */
+  animation: none !important;
+  filter: drop-shadow(0 16px 48px rgba(0,0,0,0.2)) !important;
+}
+
+/* Container already exists; ensure relative positioning for slices */
+.hero-logo-container{
+  position: relative;
+  isolation: isolate;
+}
+
+/* 4 slices */
+.hero-logo-container::before,
+.hero-logo-container::after,
+.hero-logo-container .slice-a,
+.hero-logo-container .slice-b{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  will-change: transform, opacity;
+  pointer-events: none;
+  filter: drop-shadow(0 16px 48px rgba(0,0,0,0.2));
+}
+
+/* Slice masks (quarters) */
+.hero-logo-container::before{ clip-path: inset(0 75% 0 0); }   /* left */
+.hero-logo-container::after { clip-path: inset(0 50% 0 25%); } /* mid-left */
+.hero-logo-container .slice-a{ clip-path: inset(0 25% 0 50%); }/* mid-right */
+.hero-logo-container .slice-b{ clip-path: inset(0 0 0 75%); }  /* right */
+
+/* Start positions */
+.hero-logo-container::before{ transform: translateX(-120%); opacity:0; }
+.hero-logo-container::after { transform: translateY(-120%); opacity:0; }
+.hero-logo-container .slice-a{ transform: translateY(120%);  opacity:0; }
+.hero-logo-container .slice-b{ transform: translateX(120%);  opacity:0; }
+
+/* Animate in */
+.hero-logo-container.play::before{ animation: snrgSliceIn 1s cubic-bezier(0.16,1,0.3,1) 0.0s forwards; }
+.hero-logo-container.play::after { animation: snrgSliceIn 1s cubic-bezier(0.16,1,0.3,1) 0.15s forwards; }
+.hero-logo-container.play .slice-a{ animation: snrgSliceIn 1s cubic-bezier(0.16,1,0.3,1) 0.3s forwards; }
+.hero-logo-container.play .slice-b{ animation: snrgSliceIn 1s cubic-bezier(0.16,1,0.3,1) 0.45s forwards; }
+
+@keyframes snrgSliceIn{
+  0%{ opacity:0; }
+  100%{ opacity:1; transform: translate(0,0); }
+}
+
+/* Fade slices out */
+.hero-logo-container.done::before,
+.hero-logo-container.done::after,
+.hero-logo-container.done .slice-a,
+.hero-logo-container.done .slice-b{
+  animation: snrgSliceOut 0.35s ease forwards;
+}
+
+@keyframes snrgSliceOut{ to{ opacity:0; } }
+
+/* Reveal the real logo — NO movement, just a vibrant pop */
+.hero-logo-container.done .hero-logo{
+  opacity: 1 !important;
+  animation: snrgLogoPop 0.45s ease-out both;
+}
+
+@keyframes snrgLogoPop{
+  from{ filter: drop-shadow(0 16px 48px rgba(0,0,0,0.2)) brightness(0.98) saturate(0.98); }
+  to{   filter: drop-shadow(0 18px 56px rgba(0,0,0,0.28)) brightness(1.06) saturate(1.12); }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .hero-logo{ opacity:1 !important; animation:none !important; filter:none !important; }
+  .hero-logo-container::before,
+  .hero-logo-container::after,
+  .hero-logo-container .slice-a,
+  .hero-logo-container .slice-b{ display:none !important; }
+}
+
+
+
+/* === DESKTOP-ONLY HERO COMPACTION (SAFE) === */
+/* Cuts hero height ~10% and pulls CTAs closer to the logo. No impact to tablet/mobile. */
+@media (min-width: 1025px){
+  .hero{
+    min-height: 90vh !important;
+    height: 90vh !important;
+  }
+  /* Bring CTAs closer to the logo */
+  .hero-cta-group{
+    margin-top: -28px !important; /* was visually a bit far; pull up carefully */
+  }
+}
+
+
+
+/* === LAPTOP-ONLY HERO TUNING (SAFE, NO OTHER BREAKPOINTS) === */
+/* Target typical laptop widths only */
+@media (min-width: 769px) and (max-width: 1440px){
+  /* Reduce logo size ~8% without moving it */
+  .hero-logo{
+    max-width: calc(100% * 0.92); /* relative to its existing clamp; effective ~8% reduction */
+  }
+
+  /* Keep CTAs tight to the logo (match desktop compactness) */
+  .hero-cta-group{
+    margin-top: -24px !important;
+  }
+}
+
+
+
+/* === LAPTOP-ONLY HERO HEIGHT EXPANSION (SAFE) === */
+/* Give the hero ~8% more vertical space so CTAs fit comfortably. */
+@media (min-width: 769px) and (max-width: 1440px){
+  .hero{
+    min-height: 108vh !important;
+    height: 108vh !important;
+  }
+}
+
+
+
+/* === LAPTOP-ONLY MICRO LIFT (OPTICAL CENTERING) === */
+/* Gently raise the logo + CTA group together toward the header. No other breakpoints affected. */
+@media (min-width: 769px) and (max-width: 1440px){
+  .hero-stack{
+    margin-top: -18px !important; /* small, safe lift */
+  }
+}
+
 </style>
+
+<style id="snrg-nav-click-fix">
+/* NAV CLICK FIX: guarantee Contact/FAQ always receive the click (even if an overlay exists) */
+.lang-bar{position:fixed; z-index:9999;}
+.header-nav-pill{position:relative; z-index:10001;}
+.header-nav-btn{position:relative; z-index:10002; pointer-events:auto;}
+</style>
+
 </head>
 
 <body>
@@ -2423,10 +2613,10 @@ body.spanish [lang="en"]{display:none}
       <button class="lang-btn" onclick="switchLang('es')" aria-label="Cambiar a español">ES</button>
     </div>
     <div class="header-nav-pill">
-      <a href="contact/" class="header-nav-btn" lang="en">Contact</a>
-      <a href="contact/" class="header-nav-btn" lang="es">Contacto</a>
-      <a href="faq/" class="header-nav-btn" lang="en">FAQ</a>
-      <a href="faq/" class="header-nav-btn" lang="es">FAQ</a>
+      <a href="contact.html" class="header-nav-btn" onclick="navGo(event,this)" lang="en">Contact</a>
+      <a href="contact.html" class="header-nav-btn" onclick="navGo(event,this)" lang="es">Contacto</a>
+      <a href="faq.html" class="header-nav-btn" onclick="navGo(event,this)" lang="en">FAQ</a>
+      <a href="faq.html" class="header-nav-btn" onclick="navGo(event,this)" lang="es">FAQ</a>
     </div>
   </nav>
 
@@ -2435,9 +2625,9 @@ body.spanish [lang="en"]{display:none}
     <div class="container">
       <div class="hero-wrap">
         <div class="hero-stack">
-          <div class="hero-logo-container">
+          <div class="hero-logo-container"><div class="slice-a"></div><div class="slice-b"></div>
             <div class="logo-mask">
-              <a href="index.html" aria-label="SNRG WEB Home">
+              <a href="/index.html" aria-label="SNRG WEB Home">
                 <img src="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png" class="hero-logo" alt="SNRG WEB - High Performance Web Design Houston" title="SNRG WEB Professional Services" loading="eager" fetchpriority="high" decoding="async" width="1024" height="1024">
               </a>
             </div>
@@ -2930,9 +3120,16 @@ body.spanish [lang="en"]{display:none}
       titleObserver.observe(title);
     });
 
-    // GOLD AUTO-SCROLL CAROUSEL - 3 seconds, seamless, perfect
+    // INFINITE SMOOTH CAROUSEL - No rough loops, pure butter
     const carousel = document.getElementById('reviewsCarousel');
     if(carousel){
+      // Clone all cards for infinite scroll effect
+      const originalCards = Array.from(carousel.querySelectorAll('.review-card'));
+      originalCards.forEach(card => {
+        const clone = card.cloneNode(true);
+        carousel.appendChild(clone);
+      });
+      
       let autoScrollInterval;
       let isUserInteracting = false;
       let interactionTimeout;
@@ -2944,11 +3141,52 @@ body.spanish [lang="en"]{display:none}
         const currentScroll = carousel.scrollLeft;
         const maxScroll = carousel.scrollWidth - carousel.clientWidth;
         
-        if(currentScroll + scrollAmount >= maxScroll){
-          // Loop back to start
-          carousel.scrollTo({left: 0, behavior: 'smooth'});
+        // Calculate where the first set of cards ends
+        const firstSetEnd = scrollAmount * originalCards.length;
+        
+        const targetScroll = currentScroll + scrollAmount;
+        
+        // Use butter-smooth RAF animation on mobile, native smooth on desktop
+        const isMobile = window.innerWidth <= 768;
+        
+        if(isMobile){
+          // BUTTER SMOOTH: RAF-based eased scrolling for mobile
+          const startScroll = currentScroll;
+          const distance = scrollAmount;
+          const duration = 600;
+          const startTime = performance.now();
+          
+          const easeOutCubic = t => 1 - Math.pow(1 - t, 3);
+          
+          const animateScroll = (currentTime) => {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            const easedProgress = easeOutCubic(progress);
+            
+            carousel.scrollLeft = startScroll + (distance * easedProgress);
+            
+            if(progress < 1){
+              requestAnimationFrame(animateScroll);
+            } else {
+              // After animation, check if we need to reset
+              if(carousel.scrollLeft >= firstSetEnd){
+                // INSTANT reset to start (no animation)
+                carousel.scrollLeft = 0;
+              }
+            }
+          };
+          
+          requestAnimationFrame(animateScroll);
         } else {
-          carousel.scrollTo({left: currentScroll + scrollAmount, behavior: 'smooth'});
+          // Desktop: use native smooth scroll
+          carousel.scrollTo({left: targetScroll, behavior: 'smooth'});
+          
+          // After smooth scroll completes, check if reset needed
+          setTimeout(() => {
+            if(carousel.scrollLeft >= firstSetEnd){
+              carousel.scrollLeft = 0;
+            }
+          }, 400);
         }
       };
       
@@ -2958,7 +3196,7 @@ body.spanish [lang="en"]{display:none}
           if(!isUserInteracting){
             scrollToNext();
           }
-        }, 3000); // Every 3 seconds
+        }, 3000);
       };
       
       const pauseAutoScroll = () => {
@@ -2969,7 +3207,7 @@ body.spanish [lang="en"]{display:none}
         interactionTimeout = setTimeout(() => {
           isUserInteracting = false;
           startAutoScroll();
-        }, 2500); // Resume after 2.5s of no interaction
+        }, 2500);
       };
       
       // Pause on touch/mouse
@@ -3146,6 +3384,31 @@ body.spanish [lang="en"]{display:none}
     }
   });
 })();
+</script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+  const c = document.querySelector(".hero-logo-container");
+  if(!c) return;
+  c.classList.add("play");
+  setTimeout(()=>{ c.classList.add("done"); }, 1400);
+});
+</script>
+
+
+<script id="snrg-navgo-fix">
+function navGo(e, el){
+  // Force navigation even if something weird is intercepting clicks.
+  try{
+    if(e){ e.preventDefault(); e.stopPropagation(); }
+    var href = el && el.getAttribute ? el.getAttribute('href') : null;
+    if(href){ window.location.assign(href); }
+  }catch(err){
+    // fallback: let browser do default
+    if(el && el.href){ window.location.href = el.href; }
+  }
+}
 </script>
 
 </body>
