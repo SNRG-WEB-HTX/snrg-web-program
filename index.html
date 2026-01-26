@@ -2554,6 +2554,43 @@ body.spanish [lang="en"]{display:none}
   }
 }
 
+
+
+/* === LAPTOP-ONLY HERO TUNING (SAFE, NO OTHER BREAKPOINTS) === */
+/* Target typical laptop widths only */
+@media (min-width: 769px) and (max-width: 1440px){
+  /* Reduce logo size ~8% without moving it */
+  .hero-logo{
+    max-width: calc(100% * 0.92); /* relative to its existing clamp; effective ~8% reduction */
+  }
+
+  /* Keep CTAs tight to the logo (match desktop compactness) */
+  .hero-cta-group{
+    margin-top: -24px !important;
+  }
+}
+
+
+
+/* === LAPTOP-ONLY HERO HEIGHT EXPANSION (SAFE) === */
+/* Give the hero ~8% more vertical space so CTAs fit comfortably. */
+@media (min-width: 769px) and (max-width: 1440px){
+  .hero{
+    min-height: 108vh !important;
+    height: 108vh !important;
+  }
+}
+
+
+
+/* === LAPTOP-ONLY MICRO LIFT (OPTICAL CENTERING) === */
+/* Gently raise the logo + CTA group together toward the header. No other breakpoints affected. */
+@media (min-width: 769px) and (max-width: 1440px){
+  .hero-stack{
+    margin-top: -18px !important; /* small, safe lift */
+  }
+}
+
 </style>
 </head>
 
