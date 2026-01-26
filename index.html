@@ -2592,14 +2592,6 @@ body.spanish [lang="en"]{display:none}
 }
 
 </style>
-
-<style id="snrg-nav-click-fix">
-/* NAV CLICK FIX: guarantee Contact/FAQ always receive the click (even if an overlay exists) */
-.lang-bar{position:fixed; z-index:9999;}
-.header-nav-pill{position:relative; z-index:10001;}
-.header-nav-btn{position:relative; z-index:10002; pointer-events:auto;}
-</style>
-
 </head>
 
 <body>
@@ -2613,10 +2605,10 @@ body.spanish [lang="en"]{display:none}
       <button class="lang-btn" onclick="switchLang('es')" aria-label="Cambiar a español">ES</button>
     </div>
     <div class="header-nav-pill">
-      <a href="contact.html" class="header-nav-btn" onclick="navGo(event,this)" lang="en">Contact</a>
-      <a href="contact.html" class="header-nav-btn" onclick="navGo(event,this)" lang="es">Contacto</a>
-      <a href="faq.html" class="header-nav-btn" onclick="navGo(event,this)" lang="en">FAQ</a>
-      <a href="faq.html" class="header-nav-btn" onclick="navGo(event,this)" lang="es">FAQ</a>
+      <a href="contact/" class="header-nav-btn" lang="en">Contact</a>
+      <a href="contact/" class="header-nav-btn" lang="es">Contacto</a>
+      <a href="faq/" class="header-nav-btn" lang="en">FAQ</a>
+      <a href="faq/" class="header-nav-btn" lang="es">FAQ</a>
     </div>
   </nav>
 
@@ -3394,21 +3386,6 @@ document.addEventListener("DOMContentLoaded", function(){
   c.classList.add("play");
   setTimeout(()=>{ c.classList.add("done"); }, 1400);
 });
-</script>
-
-
-<script id="snrg-navgo-fix">
-function navGo(e, el){
-  // Force navigation even if something weird is intercepting clicks.
-  try{
-    if(e){ e.preventDefault(); e.stopPropagation(); }
-    var href = el && el.getAttribute ? el.getAttribute('href') : null;
-    if(href){ window.location.assign(href); }
-  }catch(err){
-    // fallback: let browser do default
-    if(el && el.href){ window.location.href = el.href; }
-  }
-}
 </script>
 
 </body>
