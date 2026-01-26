@@ -2498,11 +2498,11 @@ body.spanish [lang="en"]{display:none}
 .hero-logo-container .slice-a{ transform: translateY(120%);  opacity:0; }
 .hero-logo-container .slice-b{ transform: translateX(120%);  opacity:0; }
 
-/* Animate in */
-.hero-logo-container.play::before{ animation: snrgSliceIn 1s cubic-bezier(0.16,1,0.3,1) 0.0s forwards; }
-.hero-logo-container.play::after { animation: snrgSliceIn 1s cubic-bezier(0.16,1,0.3,1) 0.15s forwards; }
-.hero-logo-container.play .slice-a{ animation: snrgSliceIn 1s cubic-bezier(0.16,1,0.3,1) 0.3s forwards; }
-.hero-logo-container.play .slice-b{ animation: snrgSliceIn 1s cubic-bezier(0.16,1,0.3,1) 0.45s forwards; }
+/* Animate in - SLOWER for elegant entrance */
+.hero-logo-container.play::before{ animation: snrgSliceIn 1.6s cubic-bezier(0.16,1,0.3,1) 0.0s forwards; }
+.hero-logo-container.play::after { animation: snrgSliceIn 1.6s cubic-bezier(0.16,1,0.3,1) 0.2s forwards; }
+.hero-logo-container.play .slice-a{ animation: snrgSliceIn 1.6s cubic-bezier(0.16,1,0.3,1) 0.4s forwards; }
+.hero-logo-container.play .slice-b{ animation: snrgSliceIn 1.6s cubic-bezier(0.16,1,0.3,1) 0.6s forwards; }
 
 @keyframes snrgSliceIn{
   0%{ opacity:0; }
@@ -2519,16 +2519,12 @@ body.spanish [lang="en"]{display:none}
 
 @keyframes snrgSliceOut{ to{ opacity:0; } }
 
-/* Reveal the real logo — NO movement, just a vibrant pop */
+/* Reveal the real logo — LOCKED POSITION, simple fade */
 .hero-logo-container.done .hero-logo{
   opacity: 1 !important;
-  animation: snrgLogoPop 0.45s ease-out both;
 }
 
-@keyframes snrgLogoPop{
-  from{ filter: drop-shadow(0 16px 48px rgba(0,0,0,0.2)) brightness(0.98) saturate(0.98); }
-  to{   filter: drop-shadow(0 18px 56px rgba(0,0,0,0.28)) brightness(1.06) saturate(1.12); }
-}
+/* Removed snrgLogoPop animation to prevent any perceived movement */
 
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce){
@@ -3384,7 +3380,7 @@ document.addEventListener("DOMContentLoaded", function(){
   const c = document.querySelector(".hero-logo-container");
   if(!c) return;
   c.classList.add("play");
-  setTimeout(()=>{ c.classList.add("done"); }, 1400);
+  setTimeout(()=>{ c.classList.add("done"); }, 2300);
 });
 </script>
 
