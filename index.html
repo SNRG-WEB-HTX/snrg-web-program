@@ -414,7 +414,7 @@
 <meta content="Get a professional website built, hosted, and managed for $75/month. No upfront cost. Loyalty pricing drops to $50/month after 12 months. Available nationwide from SNRG WEB." name="description"/>
 <meta content="affordable website design, small business web design, professional website, custom website design, website design services, web development, responsive web design, SEO website design, Houston web design, New Orleans web design, Atlanta web design, Austin web design, Dallas web design, Phoenix web design, Miami web design, Denver web design, Chicago web design, Nashville web design, San Antonio web design, New York web design, national web design" name="keywords"/>
 <meta content="SNRG WEB" name="author"/>
-<meta content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" name="robots">
+<meta content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" name="robots"/>
 <meta content="#FF2A2A" name="theme-color"/>
 <!-- Open Graph / Facebook -->
 <meta content="website" property="og:type"/>
@@ -427,10 +427,10 @@
 <meta content="1024" property="og:image:height"/>
 <meta content="en_US" property="og:locale"/>
 <!-- Twitter -->
-<meta content="summary_large_image" name="twitter:card">
-<meta content="https://snrgweb.com/" name="twitter:url">
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://snrgweb.com/" name="twitter:url"/>
 <meta content="Web Design for Small Businesses | Free Website + $75/mo – SNRG WEB" property="twitter:title"/>
-<meta content="High-performance web design for small businesses. Free website + $75/mo Launch in days, hosting &amp; maintenance included, 24/7 support, and conversion-focused design by SNRG WEB." property="twitter:description"/>
+<meta content="High-performance web design for small businesses. Free website + $75/mo Launch in days, hosting &amp; maintenance included, 24/7 support, and conversion-focused design by SNRG WEB." property="twitter:description">
 <meta content="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png" name="twitter:image"/>
 <link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,900,500,400,800,600&amp;display=swap" rel="stylesheet"/>
 <script>
@@ -2247,11 +2247,780 @@ body.spanish [lang="en"]{display:none}
 }
 
 </style>
-</meta></meta></meta><link crossorigin="" href="https://cdn.prod.website-files.com" rel="preconnect"/><link href="https://cdn.prod.website-files.com" rel="dns-prefetch"/><meta content="2026-01-27T01:32:16Z" property="article:modified_time"/><meta content="2026-01-27T01:32:16Z" property="og:updated_time"/></head>
+</meta><link crossorigin="" href="https://cdn.prod.website-files.com" rel="preconnect"/><link href="https://cdn.prod.website-files.com" rel="dns-prefetch"/><meta content="2026-01-27T01:32:16Z" property="article:modified_time"/><meta content="2026-01-27T01:32:16Z" property="og:updated_time"/><style>
+/* === REMOVE UGLY BOTTOM BARS / NOTICES === */
+.bottom-bar, .cookie, .cookie-bar, .cookie-notice, .legal-bar, .notice-bar, .gdpr, .consent, .privacy-bar {
+  display: none !important;
+}
+
+/* Kill any unknown fixed element glued to bottom except the real sticky CTA */
+*[style*="position: fixed"][style*="bottom: 0"]:not(.sticky-cta) {
+  display: none !important;
+}
+
+/* === STICKY CTA ALIGNMENT === */
+.sticky-cta{
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.sticky-cta .sticky-cta-buttons{
+  max-width: 1320px;               /* same as .container */
+  margin: 0 auto;                  /* center it */
+  padding: 0 clamp(20px,5vw,48px); /* match container side padding */
+  justify-content: center;         /* center buttons */
+}
+
+/* Add a little breathing room from bottom edge */
+.sticky-cta.visible{
+  bottom: 8px;
+}
+
+/* Footer already has bottom padding; ensure no overlap if sticky is present */
+.footer{
+  padding-bottom: 96px !important;
+}
+</style><style>
+/* === KILL LEGACY CITY FOOTER / CLUTTER (ROOT CAUSE) === */
+.footer-locations,
+.footer-locations *,
+.footer-cities,
+.footer-cities *,
+.city-links,
+.city-links *,
+.footer-columns,
+.footer-columns *,
+.footer-nav,
+.footer-nav * {
+  display: none !important;
+}
+
+/* === MINIMAL APPLE-STYLE FOOTER BAR === */
+footer{
+  padding: 18px 0 22px !important;
+  border-top: 1px solid var(--border) !important;
+  background: var(--white) !important;
+}
+
+/* If footer had huge padding before, neutralize */
+footer *{
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* Centered copyright line */
+.snrg-min-footer{
+  width: 100%;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  font-size: 14px;
+  color: #0F1115; /* solid ink, not faded */
+}
+
+/* Ensure sticky CTA never overlaps */
+footer{
+  position: relative;
+  z-index: 2;
+}
+</style><style>
+/* Ensure single, centered minimal footer */
+footer{display:block !important;}
+.snrg-min-footer{
+  width:100%;
+  text-align:center;
+  display:block;
+  margin:0 auto;
+  font-weight:700;
+  letter-spacing:0.08em;
+  font-size:14px;
+  color:#0F1115;
+}
+</style>
+<style>
+/* === APPLE-2030 PRICING LABELS === */
+/* Target common badge/label hooks without changing HTML */
+.pricing-badge, .plan-badge, .badge, .tag, .pill, .label,
+.pricing-card .badge, .pricing-card .tag, .pricing-card .pill, .pricing-card .label,
+.recommended, .one-time, .onetime, .one_time, .ownership, .managed-label,
+.pricing-card [class*="badge"], .pricing-card [class*="label"], .pricing-card [class*="tag"]{
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: #0F1115 !important;
+  padding: 0 !important;
+  margin: 0 0 8px 0 !important;
+  border-radius: 0 !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.18em !important;
+  text-transform: uppercase !important;
+  font-size: 11px !important;
+  opacity: 0.85 !important;
+}
+
+/* Add subtle red accent line ABOVE the title for the recommended card only (if such class exists) */
+.pricing-card.is-recommended::before,
+.pricing-card.recommended::before{
+  content:"";
+  display:block;
+  width:36px;
+  height:3px;
+  background: var(--red);
+  border-radius:3px;
+  margin: 0 auto 10px;
+}
+
+/* Tighten hierarchy: title closer, price more dominant */
+.pricing-card h3, .pricing-card h2{
+  margin-top: 6px !important;
+}
+
+.pricing-card .price, .pricing-card [class*="price"]{
+  font-weight: 900 !important;
+  letter-spacing: -0.02em !important;
+}
+
+/* Kill any colored chips or ribbons */
+.pricing-card [style*="background"],
+.pricing-card .ribbon,
+.pricing-card .chip{
+  background: transparent !important;
+  box-shadow: none !important;
+}
+</style>
+<style>
+/* === MINIMAL PREMIUM FOOTER === */
+footer{
+  padding: 36px 0 44px !important;
+  border-top: 1px solid var(--border) !important;
+  background: var(--white) !important;
+}
+.snrg-footer-wrap{
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 clamp(20px,5vw,48px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.snrg-footer-copy{
+  text-align: center;
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  font-size: clamp(16px, 2.2vw, 22px);
+  color: #0F1115;
+}
+</style>
+<style>
+/* === APPLE-2030 PRICING LABELS (REAL REDESIGN) === */
+.pricing-badge{
+  display: inline-block !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: #0F1115 !important;
+  padding: 0 !important;
+  margin: 0 0 12px 0 !important;
+  border-radius: 0 !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.22em !important;
+  text-transform: uppercase !important;
+  font-size: 11px !important;
+  opacity: 0.9 !important;
+}
+
+/* Create visual hierarchy: label -> title -> price */
+.pricing-card h3, .pricing-card h2{
+  margin-top: 4px !important;
+}
+
+/* Make price the hero */
+.pricing-card .price, .pricing-card [class*="price"]{
+  font-weight: 900 !important;
+  letter-spacing: -0.02em !important;
+}
+
+/* Subtle red accent only for the Recommended card */
+.pricing-card:has(.pricing-badge:contains("Recommended"))::before{
+  content:"";
+  display:block;
+  width:40px;
+  height:3px;
+  background: var(--red);
+  border-radius:3px;
+  margin: 0 auto 14px;
+}
+
+/* Fallback if :has is not supported: target first card */
+.pricing-card:first-child::before{
+  content:"";
+  display:block;
+  width:40px;
+  height:3px;
+  background: var(--red);
+  border-radius:3px;
+  margin: 0 auto 14px;
+}
+
+/* Kill any pill / chip / ribbon look */
+.pricing-badge{
+  background: none !important;
+}
+
+/* Tighten card top padding so it feels intentional */
+.pricing-card{
+  padding-top: 28px !important;
+}
+</style>
+<style>
+/* =========================================================
+   APPLE-2030 PRICING CARDS — PEARL GLASS REDESIGN
+   Scope: pricing cards only. Content/layout unchanged.
+   ========================================================= */
+
+/* Find the pricing section container heuristically */
+.pricing-section, .pricing, #pricing, [class*="pricing"]{
+  position: relative;
+}
+
+/* Base card */
+.pricing-card{
+  position: relative !important;
+  background:
+    linear-gradient(135deg,
+      rgba(255,255,255,0.95) 0%,
+      rgba(246,247,248,0.95) 35%,
+      rgba(255,255,255,0.98) 60%,
+      rgba(242,244,247,0.95) 100%);
+  border: 1px solid rgba(0,0,0,0.06) !important;
+  border-radius: 24px !important;
+  box-shadow:
+    0 8px 24px rgba(15,17,21,0.06),
+    0 1px 0 rgba(255,255,255,0.9) inset;
+  overflow: hidden;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: transform .6s cubic-bezier(.22,1,.36,1), box-shadow .6s cubic-bezier(.22,1,.36,1);
+}
+
+/* Subtle hover lift */
+.pricing-card:hover{
+  transform: translateY(-6px) scale(1.01);
+  box-shadow:
+    0 18px 48px rgba(15,17,21,0.10),
+    0 1px 0 rgba(255,255,255,0.9) inset;
+}
+
+/* Pearl shimmer layer */
+.pricing-card::before{
+  content:"";
+  position:absolute;
+  inset:-40%;
+  background:
+    linear-gradient(120deg,
+      transparent 30%,
+      rgba(255,255,255,0.35) 45%,
+      rgba(255,255,255,0.55) 50%,
+      rgba(255,255,255,0.35) 55%,
+      transparent 70%);
+  opacity: .35;
+  transform: translateX(-60%) rotate(8deg);
+  animation: pearlSheen 14s ease-in-out infinite;
+  pointer-events:none;
+}
+
+@keyframes pearlSheen{
+  0%{ transform: translateX(-60%) rotate(8deg); opacity:.25; }
+  50%{ transform: translateX(60%) rotate(8deg); opacity:.45; }
+  100%{ transform: translateX(-60%) rotate(8deg); opacity:.25; }
+}
+
+/* Inner content stays crisp */
+.pricing-card > *{
+  position: relative;
+  z-index: 1;
+}
+
+/* Typography cleanup */
+.pricing-card,
+.pricing-card *{
+  color: #0F1115 !important;
+}
+
+/* Label (Recommended / One-Time) — quiet editorial */
+.pricing-badge{
+  font-weight: 800 !important;
+  letter-spacing: .22em !important;
+  font-size: 11px !important;
+  text-transform: uppercase !important;
+  opacity: .85 !important;
+  margin-bottom: 10px !important;
+}
+
+/* Plan title */
+.pricing-card h3,
+.pricing-card h2{
+  font-weight: 900 !important;
+  letter-spacing: -0.03em !important;
+}
+
+/* Price = hero */
+.pricing-card .price,
+.pricing-card [class*="price"]{
+  font-weight: 900 !important;
+  letter-spacing: -0.04em !important;
+}
+
+/* CTA button inside card — vibrant red glass */
+.pricing-card .cta-button,
+.pricing-card a.cta,
+.pricing-card a[class*="cta"]{
+  background: linear-gradient(180deg, #FF3A3A 0%, #E02424 100%) !important;
+  color: #FFFFFF !important;
+  border-radius: 14px !important;
+  box-shadow:
+    0 10px 28px rgba(255,42,42,.35),
+    0 1px 0 rgba(255,255,255,.35) inset;
+  transition: transform .4s cubic-bezier(.22,1,.36,1), box-shadow .4s cubic-bezier(.22,1,.36,1);
+}
+
+.pricing-card .cta-button:hover,
+.pricing-card a.cta:hover,
+.pricing-card a[class*="cta"]:hover{
+  transform: translateY(-3px) scale(1.03);
+  box-shadow:
+    0 16px 40px rgba(255,42,42,.45),
+    0 1px 0 rgba(255,255,255,.45) inset;
+}
+
+/* Recommended card accent — subtle red glow ring */
+.pricing-card:first-child{
+  box-shadow:
+    0 0 0 1px rgba(255,42,42,.25),
+    0 12px 40px rgba(255,42,42,.18),
+    0 1px 0 rgba(255,255,255,0.9) inset;
+}
+
+.pricing-card:first-child:hover{
+  box-shadow:
+    0 0 0 1px rgba(255,42,42,.35),
+    0 22px 60px rgba(255,42,42,.28),
+    0 1px 0 rgba(255,255,255,0.9) inset;
+}
+
+/* Feature list polish */
+.pricing-card li,
+.pricing-card [class*="feature"]{
+  font-weight: 500;
+  color: #0F1115 !important;
+  opacity: .9;
+}
+
+/* Kill any old chip/ribbon visuals */
+.pricing-card .ribbon,
+.pricing-card .chip,
+.pricing-card [class*="pill"]{
+  display:none !important;
+}
+</style><style>
+/* =========================================================
+   PRICING CARDS — REMOVE RED GRADIENT ACCENTS
+   Keep: pearl surface, black text, subtle depth
+   ========================================================= */
+
+/* CTA buttons inside pricing cards: revert to clean ink style */
+.pricing-card .cta-button,
+.pricing-card a.cta,
+.pricing-card a[class*="cta"]{
+  background: #0F1115 !important;        /* solid ink */
+  color: #FFFFFF !important;
+  box-shadow:
+    0 10px 28px rgba(15,17,21,.25),
+    0 1px 0 rgba(255,255,255,.25) inset !important;
+}
+
+/* Hover state: subtle, not red */
+.pricing-card .cta-button:hover,
+.pricing-card a.cta:hover,
+.pricing-card a[class*="cta"]:hover{
+  transform: translateY(-2px) scale(1.02) !important;
+  box-shadow:
+    0 16px 40px rgba(15,17,21,.35),
+    0 1px 0 rgba(255,255,255,.35) inset !important;
+}
+
+/* Remove red glow ring from the "Recommended" card */
+.pricing-card:first-child{
+  box-shadow:
+    0 8px 24px rgba(15,17,21,0.08),
+    0 1px 0 rgba(255,255,255,0.9) inset !important;
+}
+
+.pricing-card:first-child:hover{
+  box-shadow:
+    0 18px 48px rgba(15,17,21,0.12),
+    0 1px 0 rgba(255,255,255,0.9) inset !important;
+}
+
+/* Remove any red rules/accents that may exist */
+.pricing-card::after,
+.pricing-card::marker{
+  content: none !important;
+}
+</style><style>
+/* =========================================================
+   BUTTON COLOR SYSTEM
+   - Upwork: green
+   - Primary 75/mo: brand red
+   ========================================================= */
+:root{
+  --snrg-red: #FF2A2A;
+  --upwork-green: #14A800;
+}
+
+/* Upwork buttons */
+a[href*="upwork"], .btn-upwork, .upwork-btn, .cta-upwork{
+  background: var(--upwork-green) !important;
+  color: #FFFFFF !important;
+  border: none !important;
+  box-shadow:
+    0 10px 28px rgba(20,168,0,.35),
+    0 1px 0 rgba(255,255,255,.35) inset !important;
+}
+
+/* Primary (75/mo) card button = red */
+.pricing-card:first-child .cta-button,
+.pricing-card:first-child a.cta,
+.pricing-card:first-child a[class*="cta"]{
+  background: linear-gradient(180deg, #FF3A3A 0%, #E02424 100%) !important;
+  color: #FFFFFF !important;
+  box-shadow:
+    0 10px 28px rgba(255,42,42,.35),
+    0 1px 0 rgba(255,255,255,.35) inset !important;
+}
+
+/* =========================================================
+   PRICING — VIBRANT RED FRAME FOR PRIMARY CARD
+   ========================================================= */
+.pricing-card:first-child{
+  position: relative;
+  box-shadow:
+    0 0 0 1.5px rgba(255,42,42,.9),
+    0 12px 36px rgba(255,42,42,.25),
+    0 1px 0 rgba(255,255,255,0.9) inset !important;
+}
+
+.pricing-card:first-child::after{
+  content:"";
+  position:absolute;
+  inset:-1.5px;
+  border-radius: inherit;
+  box-shadow: 0 0 0 1.5px var(--snrg-red), 0 0 28px rgba(255,42,42,.35);
+  opacity: .55;
+  pointer-events:none;
+  animation: snrgPulse 6s ease-in-out infinite;
+}
+
+@keyframes snrgPulse{
+  0%{ opacity:.35; }
+  50%{ opacity:.7; }
+  100%{ opacity:.35; }
+}
+
+.pricing-card:first-child:hover{
+  box-shadow:
+    0 0 0 1.75px rgba(255,42,42,1),
+    0 18px 52px rgba(255,42,42,.35),
+    0 1px 0 rgba(255,255,255,0.9) inset !important;
+}
+
+/* =========================================================
+   FOOTER — SLIDE IN ON SCROLL
+   ========================================================= */
+.snrg-footer-wrap{
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .8s cubic-bezier(.22,1,.36,1), transform .8s cubic-bezier(.22,1,.36,1);
+}
+
+.snrg-footer-wrap.is-visible{
+  opacity: 1;
+  transform: translateY(0);
+}
+</style><style>
+/* =========================================================
+   UPWORK BUTTONS — SOLID BLACK (OVERRIDE)
+   ========================================================= */
+a[href*="upwork"], .btn-upwork, .upwork-btn, .cta-upwork{
+  background: #0F1115 !important;   /* solid ink */
+  color: #FFFFFF !important;
+  border: none !important;
+  box-shadow:
+    0 10px 28px rgba(15,17,21,.35),
+    0 1px 0 rgba(255,255,255,.35) inset !important;
+}
+
+a[href*="upwork"]:hover, .btn-upwork:hover, .upwork-btn:hover, .cta-upwork:hover{
+  transform: translateY(-2px) scale(1.02) !important;
+  box-shadow:
+    0 16px 40px rgba(15,17,21,.45),
+    0 1px 0 rgba(255,255,255,.45) inset !important;
+}
+</style><style>
+/* =========================================================
+   UPWORK BUTTONS — ADD THIN WHITE TRIM
+   ========================================================= */
+a[href*="upwork"], .btn-upwork, .upwork-btn, .cta-upwork{
+  border: 1px solid rgba(255,255,255,0.85) !important; /* thin white trim */
+}
+
+/* =========================================================
+   PRICING — RED FRAME ALSO FOR 285 CARD (SECOND CARD)
+   Uses same treatment as primary card
+   ========================================================= */
+:root{
+  --snrg-red: #FF2A2A;
+}
+
+/* Second pricing card (285) gets same red frame */
+.pricing-card:nth-of-type(2){
+  position: relative;
+  box-shadow:
+    0 0 0 1.5px rgba(255,42,42,.9),
+    0 12px 36px rgba(255,42,42,.25),
+    0 1px 0 rgba(255,255,255,0.9) inset !important;
+}
+
+.pricing-card:nth-of-type(2)::after{
+  content:"";
+  position:absolute;
+  inset:-1.5px;
+  border-radius: inherit;
+  box-shadow: 0 0 0 1.5px var(--snrg-red), 0 0 28px rgba(255,42,42,.35);
+  opacity: .45; /* slightly calmer than the 75/mo card */
+  pointer-events:none;
+  animation: snrgPulse285 6s ease-in-out infinite;
+}
+
+@keyframes snrgPulse285{
+  0%{ opacity:.25; }
+  50%{ opacity:.55; }
+  100%{ opacity:.25; }
+}
+
+.pricing-card:nth-of-type(2):hover{
+  box-shadow:
+    0 0 0 1.75px rgba(255,42,42,1),
+    0 18px 52px rgba(255,42,42,.35),
+    0 1px 0 rgba(255,255,255,0.9) inset !important;
+}
+</style><style>
+/* =========================================================
+   UPWORK BUTTONS — SLIGHTLY THICKER WHITE TRIM
+   ========================================================= */
+a[href*="upwork"], .btn-upwork, .upwork-btn, .cta-upwork{
+  border: 2px solid rgba(255,255,255,0.9) !important; /* slightly thicker, still refined */
+}
+</style><style>
+/* =========================================================
+   BUTTON SYSTEM — CRYSTAL CLEAR
+   - Black Upwork buttons: thicker white trim (3px)
+   - Red primary buttons: same white trim
+   - Remove ALL red gradients -> solid red only
+   ========================================================= */
+
+/* Tokens */
+:root{
+  --snrg-red-solid: #FF2A2A;
+  --ink: #0F1115;
+}
+
+/* Upwork buttons: solid black + thicker white trim */
+a[href*="upwork"], .btn-upwork, .upwork-btn, .cta-upwork{
+  background: var(--ink) !important;
+  color: #FFFFFF !important;
+  border: 3px solid rgba(255,255,255,0.95) !important; /* thicker, crisp */
+  box-shadow:
+    0 10px 28px rgba(15,17,21,.35),
+    0 1px 0 rgba(255,255,255,.35) inset !important;
+}
+
+/* Primary red buttons (e.g., 75/mo card) — SOLID red + same white trim */
+.pricing-card:first-child .cta-button,
+.pricing-card:first-child a.cta,
+.pricing-card:first-child a[class*="cta"],
+/* any other red CTA variants in pricing cards */
+.pricing-card .cta-red,
+.pricing-card a.red,
+.pricing-card a[class*="primary"]{
+  background: var(--snrg-red-solid) !important; /* solid, no gradient */
+  background-image: none !important;
+  color: #FFFFFF !important;
+  border: 3px solid rgba(255,255,255,0.95) !important; /* same trim */
+  box-shadow:
+    0 10px 28px rgba(255,42,42,.35),
+    0 1px 0 rgba(255,255,255,.35) inset !important;
+}
+
+/* Hover states: keep motion, no gradients */
+a[href*="upwork"]:hover, .btn-upwork:hover, .upwork-btn:hover, .cta-upwork:hover,
+.pricing-card:first-child .cta-button:hover,
+.pricing-card:first-child a.cta:hover,
+.pricing-card:first-child a[class*="cta"]:hover{
+  transform: translateY(-2px) scale(1.02) !important;
+  filter: none !important;
+}
+
+/* Kill any leftover gradient backgrounds inside pricing cards */
+.pricing-card [style*="gradient"],
+.pricing-card [class*="gradient"]{
+  background-image: none !important;
+}
+</style><style>
+/* =========================================================
+   BUTTON COLOR — MODERN TECH BLACK (SOFT CARBON)
+   ========================================================= */
+:root{
+  --tech-black: #0B0E14; /* premium carbon black, not pure black */
+}
+
+/* Upwork buttons and any black CTAs inside pricing cards */
+a[href*="upwork"], .btn-upwork, .upwork-btn, .cta-upwork,
+.pricing-card .cta-black, .pricing-card a.black{
+  background: var(--tech-black) !important;
+  color: #FFFFFF !important;
+  /* keep the existing white trim and shadows from previous passes */
+}
+
+/* Ensure hover doesn't shift to pure black */
+a[href*="upwork"]:hover, .btn-upwork:hover, .upwork-btn:hover, .cta-upwork:hover{
+  background: var(--tech-black) !important;
+}
+</style><style>
+/* =========================================================
+   FINAL OVERRIDES (GUARANTEED)
+   1) Upwork buttons = TECH BLACK (#0B0E14)
+   2) ALL RED CTAs = SOLID RED + WHITE TRIM
+   ========================================================= */
+:root{
+  --tech-black: #0B0E14;
+  --snrg-red-solid: #FF2A2A;
+}
+
+/* 1) Upwork buttons — force tech black */
+a[href*="upwork"], 
+a[href*="upwork"] .cta-button,
+.btn-upwork, .upwork-btn, .cta-upwork{
+  background: var(--tech-black) !important;
+  background-image: none !important;
+  color: #FFFFFF !important;
+}
+
+/* 2) Red buttons — apply white trim everywhere */
+/* Primary CTA class used across your site */
+.cta-button,
+a.cta-button,
+button.cta-button,
+.cta-red,
+.btn-red,
+.btn-primary,
+.primary-btn,
+a.primary-btn,
+button.primary-btn{
+  /* keep them SOLID red */
+  background: var(--snrg-red-solid) !important;
+  background-image: none !important;
+  color: #FFFFFF !important;
+  border: 3px solid rgba(255,255,255,0.95) !important; /* white trim */
+}
+
+/* If any red CTAs are anchors with tel: (call now) and using your CTA styling */
+a[href^="tel:"].cta-button,
+a[href^="tel:"].btn-primary,
+a[href^="tel:"].primary-btn{
+  border: 3px solid rgba(255,255,255,0.95) !important;
+}
+
+/* Keep hover crisp, no gradient shifts */
+.cta-button:hover,
+a.cta-button:hover,
+button.cta-button:hover,
+.cta-red:hover,
+.btn-red:hover,
+.btn-primary:hover,
+.primary-btn:hover{
+  filter: none !important;
+}
+</style><style>
+/* =========================================================
+   CLEANUP PASS — NO TRIM ON RED, NO RED GRADIENTS IN CARDS
+   ========================================================= */
+
+/* 1) Red buttons: SOLID RED, NO WHITE TRIM */
+:root{ --snrg-red-solid:#FF2A2A; --tech-black:#0B0E14; }
+
+.cta-button,
+a.cta-button,
+button.cta-button,
+.cta-red,
+.btn-red,
+.btn-primary,
+.primary-btn,
+a.primary-btn,
+button.primary-btn,
+a[href^="tel:"].cta-button,
+a[href^="tel:"].btn-primary,
+a[href^="tel:"].primary-btn{
+  background: var(--snrg-red-solid) !important;
+  background-image: none !important;
+  color:#FFFFFF !important;
+  border: none !important;           /* remove white trim */
+  box-shadow:
+    0 10px 28px rgba(255,42,42,.28),
+    0 1px 0 rgba(255,255,255,.25) inset !important;
+}
+
+/* 2) Upwork buttons stay tech black (no change here) */
+a[href*="upwork"], .btn-upwork, .upwork-btn, .cta-upwork{
+  background: var(--tech-black) !important;
+  color:#FFFFFF !important;
+}
+
+/* 3) Pricing cards: FORCE PURE PEARL / WHITE, NO RED GRADIENTS OR TINTS */
+.pricing-card{
+  background:
+    linear-gradient(135deg,
+      rgba(255,255,255,0.98) 0%,
+      rgba(246,247,248,0.98) 40%,
+      rgba(255,255,255,0.98) 70%,
+      rgba(242,244,247,0.98) 100%) !important;
+  background-image: none !important; /* kill any gradient overlays */
+}
+
+/* Kill any red glow/frames/after layers previously added */
+.pricing-card::after,
+.pricing-card::before{
+  box-shadow: none !important;
+  background: none !important;
+  content: none !important;
+}
+
+/* Also remove any red box-shadows on specific cards */
+.pricing-card,
+.pricing-card:first-child,
+.pricing-card:nth-of-type(2){
+  box-shadow:
+    0 8px 24px rgba(15,17,21,0.08),
+    0 1px 0 rgba(255,255,255,0.9) inset !important;
+}
+
+/* Kill any element inside cards using gradients */
+.pricing-card [style*="gradient"],
+.pricing-card [class*="gradient"]{
+  background-image: none !important;
+}
+</style></head>
 <body>
 <!-- SEO/A11Y H1 - Hidden from visual layout -->
-
-
 <nav aria-label="Language selection" class="lang-bar" role="navigation">
 <div class="lang-toggle">
 <button aria-current="true" aria-label="Switch to English" class="lang-btn active" onclick="switchLang('en')">EN</button>
@@ -2550,13 +3319,8 @@ body.spanish [lang="en"]{display:none}
 </div>
 </div>
 <footer class="footer fade-in">
-<div class="container">
-<p class="footer-copyright">© 2026 SNRG WEB</p>
-</div>
 <!-- Footer Locations -->
-<div class="footer-locations">
-</div>
-</footer>
+<div class="snrg-footer-wrap"><div class="snrg-footer-copy">© 2026 SNRG WEB</div></div></footer>
 <script>
   if('scrollRestoration' in history){
     history.scrollRestoration='manual';
@@ -2758,5 +3522,37 @@ document.addEventListener("DOMContentLoaded", function(){
   }
 })();
 </script>
-</body>
+<script>
+(function(){
+  const sticky = document.querySelector('.sticky-cta');
+  const footer = document.querySelector('footer, .footer');
+  if(!sticky || !footer) return;
+
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        sticky.classList.remove('visible');
+      }
+    });
+  }, {root:null, threshold:0.1});
+
+  observer.observe(footer);
+})();
+</script>
+<script>
+(function(){
+  const footerWrap = document.querySelector('.snrg-footer-wrap');
+  if(!footerWrap) return;
+
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        footerWrap.classList.add('is-visible');
+      }
+    });
+  }, { threshold: 0.25 });
+
+  io.observe(footerWrap);
+})();
+</script></body>
 </html>
