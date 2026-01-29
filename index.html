@@ -264,7 +264,7 @@
     {
       "@type": "Offer",
       "@id": "https://snrgweb.com/#offer-managed",
-      "url": "https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share",
+      "url": "https://snrgweb.com/pricing.html",
       "priceCurrency": "USD",
       "price": "75.00",
       "availability": "https://schema.org/InStock",
@@ -277,9 +277,9 @@
     {
       "@type": "Offer",
       "@id": "https://snrgweb.com/#offer-ownership",
-      "url": "https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share",
+      "url": "https://snrgweb.com/pricing.html",
       "priceCurrency": "USD",
-      "price": "285.00",
+      "price": "585.00",
       "availability": "https://schema.org/InStock",
       "itemCondition": "https://schema.org/NewCondition",
       "priceValidUntil": "2026-12-31",
@@ -304,7 +304,7 @@
           "name": "Is the website really free with the $75/mo plan?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. The website build is free with the $75/month managed plan. You can also choose a $285 one-time purchase option."
+            "text": "Yes. The website build is free with the $75/month managed plan. You can also choose a $585 one-time purchase option."
           }
         },
         {
@@ -946,20 +946,6 @@ body.spanish [lang="en"]{display:none}
   border-color:var(--red);
   color:var(--red);
   transform:translateY(-2px);
-}
-
-.pricing-card:nth-child(2).cta-secondary,
-.pricing-card:nth-child(4).cta-secondary{
-  background:var(--ink);
-  color:var(--white);
-  border-color:var(--ink);
-}
-
-.pricing-card:nth-child(2).cta-secondary:active,
-.pricing-card:nth-child(4).cta-secondary:active{
-  background:var(--slate);
-  border-color:var(--slate);
-  color:var(--white);
 }
 
 .section-title{
@@ -1912,27 +1898,6 @@ body.spanish [lang="en"]{display:none}
 .hero-logo { transform-origin: center center; }
 
 
-55% {
-    opacity: 1;
-    transform: perspective(1200px) translateZ(40px) translateY(-8px) scale(1.04) rotateX(0deg);
-    filter: blur(2px) brightness(1.05);
-  }
-  75% {
-    transform: perspective(1200px) translateZ(0) translateY(4px) scale(0.985);
-    filter: blur(0.5px) brightness(1);
-  }
-  100% {
-    opacity: 1;
-    transform: perspective(1200px) translateZ(0) translateY(0) scale(1);
-    filter: blur(0) brightness(1);
-  }
-}
-
-20%{ opacity:.25; }
-  60%{ opacity:.18; }
-  100%{ transform: translateX(120%); opacity: 0; }
-}
-
 /* Respect reduced motion */
 @media (prefers-reduced-motion: reduce){
  .hero-logo,
@@ -2702,7 +2667,7 @@ html body .pricing-card:first-child .cta-call{
   box-shadow: 0 10px 28px rgba(255,42,42,.28) !important;
 }
 
-/* --- 285 (second card): Upwork button = WHITE with BLACK text + BLACK trim --- */
+/* --- 585 (second card): Upwork button = WHITE with BLACK text + BLACK trim --- */
 html body .pricing-card:nth-of-type(2) a[href*="upwork"],
 html body .pricing-card:nth-of-type(2) .btn-upwork,
 html body .pricing-card:nth-of-type(2) .upwork-btn,
@@ -2741,21 +2706,22 @@ html body .pricing-card:nth-of-type(2) .cta-upwork{
 </div>
 </div>
 <div class="hero-cta-group">
-<a class="cta cta-primary" href="tel:+13462916010" lang="en">Call Now</a>
-<a class="cta cta-secondary" href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" lang="en" rel="noopener" target="_blank">Order on Upwork</a>
-<a class="cta cta-primary" href="tel:+13462916010" lang="es">Llamar Ahora</a>
-<a class="cta cta-secondary" href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" lang="es" rel="noopener" target="_blank">Ordenar en Upwork</a>
+<a class="cta cta-primary" href="https://pay.snrgweb.com/b/28E6oHeF1eoVcfw69l1RC00" lang="en">Sign Up</a>
+<a class="cta cta-secondary" href="#how-it-works" lang="en">How It Works</a>
+<a class="cta cta-primary" href="pricing.html" lang="es">Suscribirse</a>
+<a class="cta cta-secondary" href="#how-it-works" lang="es">Cómo funciona</a>
 </div>
 </div>
 </div>
 </div>
 </header>
+<div id="how-it-works" class="visually-hidden" aria-hidden="true"></div>
 <section class="pricing fade-in" id="pricing">
 <div class="container">
 <h1 class="section-title pricing-hero" lang="en">Built Different.<br/><span class="snrg-underline" data-underline="1">Priced Different.</span></h1>
 <h2 class="section-title pricing-hero" lang="es">Construido Diferente.<br/>Precio Diferente.</h2>
 <div class="pricing-grid">
-<div class="pricing-card" lang="en" onclick="selectCard(this)">
+<div class="pricing-card" lang="en">
 <span class="pricing-badge">Recommended</span>
 <h3 class="pricing-name">Fully Managed Service</h3>
 <div class="pricing-price">$75<span style="font-size:clamp(16px,4vw,20px);font-weight:600;color:var(--slate)">/mo</span></div>
@@ -2771,14 +2737,14 @@ html body .pricing-card:nth-of-type(2) .cta-upwork{
 <li class="pricing-feature">Ongoing support</li>
 </ul>
 <div class="pricing-cta">
-<a class="cta cta-primary" href="tel:+13462916010">Call Now</a>
+<a class="cta cta-primary" href="https://pay.snrgweb.com/b/28E6oHeF1eoVcfw69l1RC00">Choose Managed</a>
 </div>
 </div>
-<div class="pricing-card" lang="en" onclick="selectCard(this)">
+<div class="pricing-card" lang="en">
 <span class="pricing-badge">One-Time</span>
 <h3 class="pricing-name">Website Ownership</h3>
-<div class="pricing-price">$285<span style="font-size:clamp(18px,4.5vw,24px);font-weight:700;color:var(--ink);margin-left:8px;"> flat</span></div>
-<p class="pricing-term">Option: <span class="highlight">$50/mo</span> fully managed after purchase</p>
+<div class="pricing-price">$585<span style="font-size:clamp(18px,4.5vw,24px);font-weight:700;color:var(--ink);margin-left:8px;"> flat</span></div>
+<p class="pricing-term">Option: <span class="highlight">$25/mo</span> fully managed after purchase</p>
 <ul class="pricing-features">
 <li class="pricing-feature">Custom design</li>
 <li class="pricing-feature">SEO optimized</li>
@@ -2788,10 +2754,10 @@ html body .pricing-card:nth-of-type(2) .cta-upwork{
 <li class="pricing-feature">Documentation</li>
 </ul>
 <div class="pricing-cta">
-<a class="cta cta-secondary" href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" rel="noopener" target="_blank">Order on Upwork</a>
+<a class="cta cta-secondary" href="https://pay.snrgweb.com/b/4gM8wP54r0y5frI69l1RC01">Choose Ownership</a>
 </div>
 </div>
-<div class="pricing-card" lang="es" onclick="selectCard(this)">
+<div class="pricing-card" lang="es">
 <span class="pricing-badge">Recomendado</span>
 <h3 class="pricing-name">Servicio Administrado</h3>
 <div class="pricing-price">$75<span style="font-size:clamp(16px,4vw,20px);font-weight:600;color:var(--slate)">/mes</span></div>
@@ -2807,14 +2773,14 @@ html body .pricing-card:nth-of-type(2) .cta-upwork{
 <li class="pricing-feature">Soporte continuo</li>
 </ul>
 <div class="pricing-cta">
-<a class="cta cta-primary" href="tel:+13462916010">Llamar Ahora</a>
+<a class="cta cta-primary" href="pricing.html">Elegir Administrado</a>
 </div>
 </div>
-<div class="pricing-card" lang="es" onclick="selectCard(this)">
+<div class="pricing-card" lang="es">
 <span class="pricing-badge">Pago Único</span>
 <h3 class="pricing-name">Propiedad del Sitio</h3>
-<div class="pricing-price">$285<span style="font-size:clamp(18px,4.5vw,24px);font-weight:700;color:var(--ink);margin-left:8px;"> plano</span></div>
-<p class="pricing-term">Opción: <span class="highlight">$50/mes</span> administrado después de compra</p>
+<div class="pricing-price">$585<span style="font-size:clamp(18px,4.5vw,24px);font-weight:700;color:var(--ink);margin-left:8px;"> plano</span></div>
+<p class="pricing-term">Opción: <span class="highlight">$25/mes</span> administrado después de compra</p>
 <ul class="pricing-features">
 <li class="pricing-feature">Diseño personalizado</li>
 <li class="pricing-feature">Optimizado para SEO</li>
@@ -2824,7 +2790,7 @@ html body .pricing-card:nth-of-type(2) .cta-upwork{
 <li class="pricing-feature">Documentación</li>
 </ul>
 <div class="pricing-cta">
-<a class="cta cta-secondary" href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" rel="noopener" target="_blank">Ordenar en Upwork</a>
+<a class="cta cta-secondary" href="pricing.html">Elegir Propiedad</a>
 </div>
 </div>
 </div>
@@ -3007,10 +2973,10 @@ html body .pricing-card:nth-of-type(2) .cta-upwork{
 </section>
 <div class="sticky-cta" id="stickyCTA">
 <div class="sticky-cta-buttons">
-<a class="cta cta-primary" href="tel:+13462916010" lang="en">Call Now</a>
-<a class="cta cta-secondary" href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" lang="en" rel="noopener" target="_blank">Order on Upwork</a>
-<a class="cta cta-primary" href="tel:+13462916010" lang="es">Llamar Ahora</a>
-<a class="cta cta-secondary" href="https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share" lang="es" rel="noopener" target="_blank">Ordenar en Upwork</a>
+<a class="cta cta-primary" href="https://pay.snrgweb.com/b/28E6oHeF1eoVcfw69l1RC00" lang="en">Sign Up</a>
+<a class="cta cta-secondary" href="#how-it-works" lang="en">How It Works</a>
+<a class="cta cta-primary" href="pricing.html" lang="es">Suscribirse</a>
+<a class="cta cta-secondary" href="#how-it-works" lang="es">Cómo funciona</a>
 </div>
 </div>
 <footer class="footer fade-in">
@@ -3198,8 +3164,13 @@ document.addEventListener("DOMContentLoaded", function(){
 
     cards.forEach(card=>{
       card.addEventListener('click', function(e){
-        // Do not break links: allow default navigation if it's an anchor
-        // But still show selection immediately
+        // CRITICAL FIX: If clicking on a link or inside a link, let the link work naturally
+        if(e.target.tagName === 'A' || e.target.closest('a')){
+          // Allow the link to work - don't interfere
+          return;
+        }
+        
+        // Otherwise, show selection
         cards.forEach(c=>c.classList.remove('selected'));
         this.classList.add('selected');
       });
