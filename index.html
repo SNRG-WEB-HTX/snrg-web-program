@@ -17,6 +17,7 @@
 <meta content="nosniff" http-equiv="X-Content-Type-Options"/>
 <!-- GOLD STANDARD SEO: Fully Interconnected @graph Schema (100/100) -->
 <script type="application/ld+json">
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
@@ -116,16 +117,26 @@
       "priceRange": "$$",
       "paymentAccepted": "Cash, Credit Card, Stripe",
       "currenciesAccepted": "USD",
-      "location": {
-        "@id": "https://snrgweb.com/#localbusiness-houston"
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "14803 Sparks Valley Drive",
-        "addressLocality": "Houston",
-        "addressRegion": "TX",
-        "postalCode": "77084",
-        "addressCountry": "US"
+      "workExample": [
+        "https://snrgweb.com/#project-parking",
+        "https://snrgweb.com/#project-kiblers",
+        "https://snrgweb.com/#project-connet",
+        "https://snrgweb.com/#project-tortas",
+        "https://snrgweb.com/#project-donuts"
+      ],
+      "makesOffer": [
+        "https://snrgweb.com/#service-webdesign",
+        "https://snrgweb.com/#service-hosting",
+        "https://snrgweb.com/#service-ecommerce",
+        "https://snrgweb.com/#service-restaurant",
+        "https://snrgweb.com/#service-platform"
+      ],
+      "aggregateOffer": {
+        "@type": "AggregateOffer",
+        "lowPrice": "75.00",
+        "highPrice": "585.00",
+        "priceCurrency": "USD",
+        "offerCount": 2
       }
     },
     {
@@ -233,8 +244,31 @@
         "User Experience Design",
         "Responsive Design",
         "Search Engine Optimization",
-        "Website Performance Optimization"
-      ]
+        "Website Performance Optimization",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React",
+        "Mobile-First Design",
+        "Page Speed Optimization",
+        "Accessibility (WCAG)",
+        "E-Commerce Platforms",
+        "Content Management Systems"
+      ],
+      "hasOccupation": {
+        "@type": "Occupation",
+        "name": "Web Designer & Developer",
+        "occupationLocation": [
+          {
+            "@id": "https://snrgweb.com/#houston"
+          },
+          {
+            "@id": "https://snrgweb.com/#neworleans"
+          }
+        ],
+        "experienceRequirements": "5+ years web design experience",
+        "responsibilities": "Custom website design, development, and client consultation"
+      }
     },
     {
       "@type": "Service",
@@ -245,73 +279,832 @@
       },
       "areaServed": [
         {
-          "@type": "Country",
-          "name": "United States"
-        },
-        {
           "@type": "City",
           "name": "Houston",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Texas"
+          },
           "sameAs": "https://en.wikipedia.org/wiki/Houston"
         },
         {
           "@type": "City",
+          "name": "Dallas",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Texas"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Dallas"
+        },
+        {
+          "@type": "City",
+          "name": "Austin",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Texas"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Austin,_Texas"
+        },
+        {
+          "@type": "City",
+          "name": "San Antonio",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Texas"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/San_Antonio"
+        },
+        {
+          "@type": "City",
           "name": "New Orleans",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Louisiana"
+          },
           "sameAs": "https://en.wikipedia.org/wiki/New_Orleans"
         },
         {
           "@type": "City",
           "name": "Baton Rouge",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Louisiana"
+          },
           "sameAs": "https://en.wikipedia.org/wiki/Baton_Rouge,_Louisiana"
         },
         {
           "@type": "City",
           "name": "Atlanta",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Georgia"
+          },
           "sameAs": "https://en.wikipedia.org/wiki/Atlanta"
         },
         {
           "@type": "City",
-          "name": "Austin",
-          "sameAs": "https://en.wikipedia.org/wiki/Austin,_Texas"
-        },
-        {
-          "@type": "City",
-          "name": "Dallas",
-          "sameAs": "https://en.wikipedia.org/wiki/Dallas"
-        },
-        {
-          "@type": "City",
           "name": "Phoenix",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Arizona"
+          },
           "sameAs": "https://en.wikipedia.org/wiki/Phoenix,_Arizona"
         },
         {
           "@type": "City",
           "name": "Miami",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Florida"
+          },
           "sameAs": "https://en.wikipedia.org/wiki/Miami"
         },
         {
           "@type": "City",
           "name": "Denver",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Colorado"
+          },
           "sameAs": "https://en.wikipedia.org/wiki/Denver"
         },
         {
           "@type": "City",
           "name": "Chicago",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Illinois"
+          },
           "sameAs": "https://en.wikipedia.org/wiki/Chicago"
         },
         {
           "@type": "City",
           "name": "Nashville",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          },
           "sameAs": "https://en.wikipedia.org/wiki/Nashville,_Tennessee"
         },
         {
           "@type": "City",
-          "name": "San Antonio",
-          "sameAs": "https://en.wikipedia.org/wiki/San_Antonio"
+          "name": "New York",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "New York"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/New_York_City"
         },
         {
           "@type": "City",
-          "name": "New York",
-          "sameAs": "https://en.wikipedia.org/wiki/New_York_City"
+          "name": "Los Angeles",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "California"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Los_Angeles"
+        },
+        {
+          "@type": "City",
+          "name": "San Diego",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "California"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/San_Diego"
+        },
+        {
+          "@type": "City",
+          "name": "San Jose",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "California"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/San_Jose,_California"
+        },
+        {
+          "@type": "City",
+          "name": "San Francisco",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "California"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/San_Francisco"
+        },
+        {
+          "@type": "City",
+          "name": "Sacramento",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "California"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Sacramento,_California"
+        },
+        {
+          "@type": "City",
+          "name": "Fresno",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "California"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Fresno,_California"
+        },
+        {
+          "@type": "City",
+          "name": "Oakland",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "California"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Oakland,_California"
+        },
+        {
+          "@type": "City",
+          "name": "Long Beach",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "California"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Long_Beach,_California"
+        },
+        {
+          "@type": "City",
+          "name": "Philadelphia",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Pennsylvania"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Philadelphia"
+        },
+        {
+          "@type": "City",
+          "name": "Pittsburgh",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Pennsylvania"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Pittsburgh"
+        },
+        {
+          "@type": "City",
+          "name": "Seattle",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Washington"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Seattle"
+        },
+        {
+          "@type": "City",
+          "name": "Spokane",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Washington"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Spokane,_Washington"
+        },
+        {
+          "@type": "City",
+          "name": "Tacoma",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Washington"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Tacoma,_Washington"
+        },
+        {
+          "@type": "City",
+          "name": "Portland",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Oregon"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Portland,_Oregon"
+        },
+        {
+          "@type": "City",
+          "name": "Eugene",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Oregon"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Eugene,_Oregon"
+        },
+        {
+          "@type": "City",
+          "name": "Las Vegas",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Nevada"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Las_Vegas"
+        },
+        {
+          "@type": "City",
+          "name": "Reno",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Nevada"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Reno,_Nevada"
+        },
+        {
+          "@type": "City",
+          "name": "Tampa",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Florida"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Tampa,_Florida"
+        },
+        {
+          "@type": "City",
+          "name": "Orlando",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Florida"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Orlando,_Florida"
+        },
+        {
+          "@type": "City",
+          "name": "Jacksonville",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Florida"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Jacksonville,_Florida"
+        },
+        {
+          "@type": "City",
+          "name": "Fort Lauderdale",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Florida"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Fort_Lauderdale,_Florida"
+        },
+        {
+          "@type": "City",
+          "name": "St. Petersburg",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Florida"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/St._Petersburg,_Florida"
+        },
+        {
+          "@type": "City",
+          "name": "Charlotte",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "North Carolina"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Charlotte,_North_Carolina"
+        },
+        {
+          "@type": "City",
+          "name": "Raleigh",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "North Carolina"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Raleigh,_North_Carolina"
+        },
+        {
+          "@type": "City",
+          "name": "Durham",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "North Carolina"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Durham,_North_Carolina"
+        },
+        {
+          "@type": "City",
+          "name": "Indianapolis",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Indiana"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Indianapolis"
+        },
+        {
+          "@type": "City",
+          "name": "Fort Wayne",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Indiana"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Fort_Wayne,_Indiana"
+        },
+        {
+          "@type": "City",
+          "name": "Columbus",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Ohio"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Columbus,_Ohio"
+        },
+        {
+          "@type": "City",
+          "name": "Cleveland",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Ohio"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Cleveland"
+        },
+        {
+          "@type": "City",
+          "name": "Cincinnati",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Ohio"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Cincinnati"
+        },
+        {
+          "@type": "City",
+          "name": "Toledo",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Ohio"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Toledo,_Ohio"
+        },
+        {
+          "@type": "City",
+          "name": "Detroit",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Michigan"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Detroit"
+        },
+        {
+          "@type": "City",
+          "name": "Grand Rapids",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Michigan"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Grand_Rapids,_Michigan"
+        },
+        {
+          "@type": "City",
+          "name": "Milwaukee",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Wisconsin"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Milwaukee"
+        },
+        {
+          "@type": "City",
+          "name": "Madison",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Wisconsin"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Madison,_Wisconsin"
+        },
+        {
+          "@type": "City",
+          "name": "Minneapolis",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Minnesota"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Minneapolis"
+        },
+        {
+          "@type": "City",
+          "name": "St. Paul",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Minnesota"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Saint_Paul,_Minnesota"
+        },
+        {
+          "@type": "City",
+          "name": "Boston",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Massachusetts"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Boston"
+        },
+        {
+          "@type": "City",
+          "name": "Worcester",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Massachusetts"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Worcester,_Massachusetts"
+        },
+        {
+          "@type": "City",
+          "name": "Memphis",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Memphis,_Tennessee"
+        },
+        {
+          "@type": "City",
+          "name": "Knoxville",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Tennessee"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Knoxville,_Tennessee"
+        },
+        {
+          "@type": "City",
+          "name": "Baltimore",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Maryland"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Baltimore"
+        },
+        {
+          "@type": "City",
+          "name": "Louisville",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Kentucky"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Louisville,_Kentucky"
+        },
+        {
+          "@type": "City",
+          "name": "Lexington",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Kentucky"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Lexington,_Kentucky"
+        },
+        {
+          "@type": "City",
+          "name": "Oklahoma City",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Oklahoma"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Oklahoma_City"
+        },
+        {
+          "@type": "City",
+          "name": "Tulsa",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Oklahoma"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Tulsa,_Oklahoma"
+        },
+        {
+          "@type": "City",
+          "name": "Albuquerque",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "New Mexico"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Albuquerque,_New_Mexico"
+        },
+        {
+          "@type": "City",
+          "name": "Santa Fe",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "New Mexico"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Santa_Fe,_New_Mexico"
+        },
+        {
+          "@type": "City",
+          "name": "Tucson",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Arizona"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Tucson,_Arizona"
+        },
+        {
+          "@type": "City",
+          "name": "Mesa",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Arizona"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Mesa,_Arizona"
+        },
+        {
+          "@type": "City",
+          "name": "Salt Lake City",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Utah"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Salt_Lake_City"
+        },
+        {
+          "@type": "City",
+          "name": "Provo",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Utah"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Provo,_Utah"
+        },
+        {
+          "@type": "City",
+          "name": "Kansas City",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Missouri"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Kansas_City,_Missouri"
+        },
+        {
+          "@type": "City",
+          "name": "St. Louis",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Missouri"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/St._Louis"
+        },
+        {
+          "@type": "City",
+          "name": "Omaha",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Nebraska"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Omaha,_Nebraska"
+        },
+        {
+          "@type": "City",
+          "name": "Lincoln",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Nebraska"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Lincoln,_Nebraska"
+        },
+        {
+          "@type": "City",
+          "name": "Des Moines",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Iowa"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Des_Moines,_Iowa"
+        },
+        {
+          "@type": "City",
+          "name": "Cedar Rapids",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Iowa"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Cedar_Rapids,_Iowa"
+        },
+        {
+          "@type": "City",
+          "name": "Wichita",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Kansas"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Wichita,_Kansas"
+        },
+        {
+          "@type": "City",
+          "name": "Little Rock",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Arkansas"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Little_Rock,_Arkansas"
+        },
+        {
+          "@type": "City",
+          "name": "Birmingham",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Alabama"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Birmingham,_Alabama"
+        },
+        {
+          "@type": "City",
+          "name": "Montgomery",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Alabama"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Montgomery,_Alabama"
+        },
+        {
+          "@type": "City",
+          "name": "Jackson",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Mississippi"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Jackson,_Mississippi"
+        },
+        {
+          "@type": "City",
+          "name": "Richmond",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Virginia"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Richmond,_Virginia"
+        },
+        {
+          "@type": "City",
+          "name": "Virginia Beach",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Virginia"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Virginia_Beach,_Virginia"
+        },
+        {
+          "@type": "City",
+          "name": "Norfolk",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Virginia"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Norfolk,_Virginia"
+        },
+        {
+          "@type": "City",
+          "name": "Charleston",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "South Carolina"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Charleston,_South_Carolina"
+        },
+        {
+          "@type": "City",
+          "name": "Columbia",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "South Carolina"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Columbia,_South_Carolina"
+        },
+        {
+          "@type": "City",
+          "name": "Savannah",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Georgia"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Savannah,_Georgia"
+        },
+        {
+          "@type": "City",
+          "name": "Augusta",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Georgia"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Augusta,_Georgia"
+        },
+        {
+          "@type": "City",
+          "name": "Providence",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Rhode Island"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Providence,_Rhode_Island"
+        },
+        {
+          "@type": "City",
+          "name": "Hartford",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Connecticut"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Hartford,_Connecticut"
+        },
+        {
+          "@type": "City",
+          "name": "New Haven",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Connecticut"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/New_Haven,_Connecticut"
+        },
+        {
+          "@type": "City",
+          "name": "Buffalo",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "New York"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Buffalo,_New_York"
+        },
+        {
+          "@type": "City",
+          "name": "Rochester",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "New York"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Rochester,_New_York"
+        },
+        {
+          "@type": "City",
+          "name": "Albany",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "New York"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Albany,_New_York"
+        },
+        {
+          "@type": "City",
+          "name": "Boise",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Idaho"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Boise,_Idaho"
+        },
+        {
+          "@type": "City",
+          "name": "Anchorage",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Alaska"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Anchorage,_Alaska"
+        },
+        {
+          "@type": "City",
+          "name": "Honolulu",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Hawaii"
+          },
+          "sameAs": "https://en.wikipedia.org/wiki/Honolulu"
         }
       ],
       "offers": [
@@ -421,7 +1214,7 @@
           "name": "How long does it take to launch my website?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Most projects launch in 2–3 days after design approval."
+            "text": "Most projects launch in 2-3 days after design approval."
           }
         },
         {
@@ -446,6 +1239,174 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Yes. There are no long-term contracts and you can cancel the managed plan at any time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens after 12 months on the managed plan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "After 12 months of loyalty, your monthly rate automatically drops from $75 to $50 for as long as you maintain the subscription."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer e-commerce websites?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we build custom e-commerce platforms with inventory management, secure checkout, and payment processing integration."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you design restaurant websites with menus?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. We specialize in restaurant websites with menu displays, online ordering integration, and mobile-friendly designs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you serve clients outside of Houston?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we serve clients nationwide across all 50 states. We work remotely with businesses in over 90 major US cities."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's included in the one-time purchase option?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For $585, you get full ownership of your website, all source files, and the website delivered in 2-3 days. Hosting and future updates are separate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are your websites mobile-friendly?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, all websites are fully responsive and optimized for mobile, tablet, and desktop devices."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you provide SEO optimization?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, all websites include basic SEO optimization with proper meta tags, schema markup, and search engine friendly structure."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I see examples of your work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, view our portfolio including PARKING HTX (platform), Kibler's Kollectibles (e-commerce), ConNet Graphics (portfolio site), Tortas Gigantes (restaurant), and Mr. Donuts (online ordering)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if I need changes after launch?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Managed plan includes unlimited updates. One-time purchase clients can request updates for an additional fee."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer bilingual websites?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we create English and Spanish bilingual websites to reach broader audiences."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What payment methods do you accept?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We accept credit cards through Stripe, cash, and online payments for both subscription and one-time purchase options."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there a setup fee?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No setup fee with the $75/month managed plan. The one-time purchase is a single $585 payment with no hidden fees."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you provide website content writing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we can help craft professional website copy. You can also provide your own content."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What platform do you build on?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We build custom websites using modern web technologies optimized for speed, security, and search engines."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you integrate online booking or scheduling?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we can integrate appointment scheduling, booking systems, and calendar tools into your website."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer logo design?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We focus on web design, but can work with your existing logo or recommend design partners."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I get started?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Contact us at +1-346-291-6010 (TX) or +1-504-818-9501 (LA), or sign up online. We'll discuss your vision and start building immediately."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if I'm not satisfied with the design?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We offer unlimited revisions during the design phase until you're 100% happy with your website."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you migrate my existing website?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we can migrate content from your existing website to a new, modern platform."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you provide website analytics?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we can integrate Google Analytics or other tracking tools to monitor your website performance."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are your websites GDPR compliant?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we can implement cookie notices, privacy policies, and GDPR-compliant features as needed."
           }
         }
       ]
@@ -565,126 +1526,290 @@
       ]
     },
     {
-      "@type": [
-        "LocalBusiness",
-        "ProfessionalService"
+      "@type": "CreativeWork",
+      "@id": "https://snrgweb.com/#project-parking",
+      "name": "PARKING HTX",
+      "description": "QR-code parking platform for Houston properties with license plate recognition",
+      "url": "https://snrg-web-htx.github.io/parking-htx/",
+      "creator": {
+        "@id": "https://snrgweb.com/#org"
+      },
+      "author": {
+        "@id": "https://snrgweb.com/#owner"
+      },
+      "genre": [
+        "Platform",
+        "SaaS"
       ],
-      "@id": "https://snrgweb.com/#localbusiness-houston",
-      "name": "SNRG WEB - Houston",
-      "image": {
-        "@id": "https://snrgweb.com/#logo"
+      "keywords": "parking platform, QR code, Houston",
+      "inLanguage": [
+        "en",
+        "es"
+      ]
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://snrgweb.com/#project-kiblers",
+      "name": "Kibler's Kollectibles",
+      "description": "E-commerce platform for collectibles dealer with inventory management",
+      "url": "https://snrg-web-htx.github.io/Kiblers-Kollectibles/",
+      "creator": {
+        "@id": "https://snrgweb.com/#org"
       },
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "14803 Sparks Valley Drive",
-        "addressLocality": "Houston",
-        "addressRegion": "TX",
-        "postalCode": "77084",
-        "addressCountry": "US"
+      "author": {
+        "@id": "https://snrgweb.com/#owner"
       },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 29.8505,
-        "longitude": -95.685
+      "genre": [
+        "E-Commerce"
+      ],
+      "keywords": "e-commerce, online store, Houston",
+      "inLanguage": [
+        "en",
+        "es"
+      ]
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://snrgweb.com/#project-connet",
+      "name": "ConNet Graphics",
+      "description": "Portfolio site for commercial printing company",
+      "url": "https://snrg-web-htx.github.io/connet-graphics/",
+      "creator": {
+        "@id": "https://snrgweb.com/#org"
       },
-      "url": "https://snrgweb.com/",
-      "telephone": "+1-346-291-6010",
-      "priceRange": "$$",
-      "openingHoursSpecification": [
+      "author": {
+        "@id": "https://snrgweb.com/#owner"
+      },
+      "genre": [
+        "Portfolio"
+      ],
+      "keywords": "portfolio website, printing, Houston",
+      "inLanguage": [
+        "en",
+        "es"
+      ]
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://snrgweb.com/#project-tortas",
+      "name": "Tortas Gigantes",
+      "description": "Restaurant website for Mexican food restaurant",
+      "url": "https://snrg-web-htx.github.io/tortas-gigantes/",
+      "creator": {
+        "@id": "https://snrgweb.com/#org"
+      },
+      "author": {
+        "@id": "https://snrgweb.com/#owner"
+      },
+      "genre": [
+        "Restaurant"
+      ],
+      "keywords": "restaurant website, Mexican food, Houston",
+      "inLanguage": [
+        "en",
+        "es"
+      ]
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://snrgweb.com/#project-donuts",
+      "name": "Mr. Donuts & Kolaches",
+      "description": "Online ordering platform for donut shop",
+      "url": "https://snrg-web-htx.github.io/mr-donuts/",
+      "creator": {
+        "@id": "https://snrgweb.com/#org"
+      },
+      "author": {
+        "@id": "https://snrgweb.com/#owner"
+      },
+      "genre": [
+        "Online Ordering"
+      ],
+      "keywords": "online ordering, donuts, Houston",
+      "inLanguage": [
+        "en",
+        "es"
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://snrgweb.com/#portfolio",
+      "name": "SNRG WEB Portfolio",
+      "numberOfItems": 5,
+      "itemListElement": [
         {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday"
-          ],
-          "opens": "09:00",
-          "closes": "18:00"
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@id": "https://snrgweb.com/#project-parking"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@id": "https://snrgweb.com/#project-kiblers"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@id": "https://snrgweb.com/#project-connet"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@id": "https://snrgweb.com/#project-tortas"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@id": "https://snrgweb.com/#project-donuts"
+          }
         }
-      ],
-      "paymentAccepted": "Cash, Credit Card, Stripe",
-      "currenciesAccepted": "USD",
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://snrgweb.com/#service-webdesign",
+      "serviceType": "Custom Website Design",
+      "name": "Professional Website Design Services",
+      "description": "Custom website design for small businesses with modern, responsive layouts",
+      "provider": {
+        "@id": "https://snrgweb.com/#org"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Website Design Plans",
+        "itemListElement": [
+          {
+            "@id": "https://snrgweb.com/#product-managed"
+          },
+          {
+            "@id": "https://snrgweb.com/#product-ownership"
+          }
+        ]
+      },
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "5.0",
-        "reviewCount": "3",
-        "bestRating": "5"
+        "reviewCount": "3"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://snrgweb.com/#service-hosting",
+      "serviceType": "Managed Website Hosting",
+      "name": "Managed Website Hosting & Maintenance",
+      "description": "24/7 hosting with automatic updates, backups, and unlimited support",
+      "provider": {
+        "@id": "https://snrgweb.com/#org"
       },
-      "sameAs": [
-        "https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share",
-        "https://github.com/SNRG-WEB-HTX"
-      ],
-      "hasMap": "https://www.google.com/maps/search/?api=1&query=14803+Sparks+Valley+Drive+Houston+TX+77084"
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "75.00",
+        "priceCurrency": "USD",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "75.00",
+          "priceCurrency": "USD",
+          "unitText": "monthly"
+        }
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://snrgweb.com/#service-ecommerce",
+      "serviceType": "E-Commerce Website Development",
+      "name": "E-Commerce & Online Store Development",
+      "description": "Custom e-commerce platforms with inventory management and secure checkout",
+      "provider": {
+        "@id": "https://snrgweb.com/#org"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+      },
+      "workExample": [
+        {
+          "@id": "https://snrgweb.com/#project-kiblers"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://snrgweb.com/#service-restaurant",
+      "serviceType": "Restaurant Website Design",
+      "name": "Restaurant & Food Service Websites",
+      "description": "Menu displays, online ordering integration, and mobile-friendly designs for restaurants",
+      "provider": {
+        "@id": "https://snrgweb.com/#org"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+      },
+      "workExample": [
+        {
+          "@id": "https://snrgweb.com/#project-tortas"
+        },
+        {
+          "@id": "https://snrgweb.com/#project-donuts"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://snrgweb.com/#service-platform",
+      "serviceType": "Custom Platform Development",
+      "name": "Custom Web Platform & SaaS Development",
+      "description": "Tailored web applications and platforms for unique business needs",
+      "provider": {
+        "@id": "https://snrgweb.com/#org"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+      },
+      "workExample": [
+        {
+          "@id": "https://snrgweb.com/#project-parking"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://snrgweb.com/#breadcrumb-services",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://snrgweb.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://snrgweb.com/#services"
+        }
+      ]
     }
   ]
 }
-
-<!-- Performance Optimization: Preload Critical Font -->
-<link as="style" href="https://api.fontshare.com/v2/css?f[]=satoshi@700,900,400&amp;display=swap" rel="preload"/>
-<link crossorigin="" href="https://api.fontshare.com" rel="preconnect"/>
-<link href="https://api.fontshare.com" rel="dns-prefetch"/>
-<!-- Primary Meta Tags -->
-<title>The $75 Website Subscription | SNRG WEB</title>
-<meta content="High-Performance Web Design | $75/mo Managed Sites | SNRG WEB" name="title"/>
-<meta content="Get a professional website built, hosted, and managed for $75/month. No upfront cost. Loyalty pricing drops to $50/month after 12 months. Available nationwide from SNRG WEB." name="description"/>
-<meta content="affordable website design, small business web design, professional website, custom website design, website design services, web development, responsive web design, SEO website design, Houston web design, New Orleans web design, Atlanta web design, Austin web design, Dallas web design, Phoenix web design, Miami web design, Denver web design, Chicago web design, Nashville web design, San Antonio web design, New York web design, national web design" name="keywords"/>
-<meta content="SNRG WEB" name="author"/>
-<meta content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" name="robots"/>
-<meta content="#FF2A2A" name="theme-color"/>
-<!-- Open Graph / Facebook -->
-<meta content="website" property="og:type"/>
-<meta content="https://snrgweb.com/" property="og:url"/>
-<meta content="SNRG WEB" property="og:site_name"/>
-<meta content="Web Design for Small Businesses | Free Website + $75/mo – SNRG WEB" property="og:title"/>
-<meta content="High-performance web design for small businesses. Free website + $75/mo Launch in days, hosting &amp; maintenance included, 24/7 support, and conversion-focused design by SNRG WEB." property="og:description"/>
-<meta content="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png" property="og:image"/>
-<meta content="1024" property="og:image:width"/>
-<meta content="1024" property="og:image:height"/>
-<meta content="en_US" property="og:locale"/>
-<!-- Twitter -->
-<meta content="summary_large_image" name="twitter:card"/>
-<meta content="https://snrgweb.com/" name="twitter:url"/>
-<meta content="Web Design for Small Businesses | Free Website + $75/mo – SNRG WEB" property="twitter:title"/>
-<meta content="High-performance web design for small businesses. Free website + $75/mo Launch in days, hosting &amp; maintenance included, 24/7 support, and conversion-focused design by SNRG WEB." property="twitter:description"/>
-<meta content="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png" name="twitter:image"/>
-<link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,900,500,400,800,600&amp;display=swap" rel="stylesheet"/>
-<script>
-/* === SNRG LANGUAGE ENGINE (NO-RELOAD, NAV-SAFE) === */
-(function(){
-  const KEY = "snrg_lang";
-  function apply(lang){
-    const isEs = (lang === "es");
-    document.body.classList.toggle("spanish", isEs);
-
-    // Button states (safe if missing)
-    const buttons = document.querySelectorAll('.lang-btn');
-    buttons.forEach(btn => {
-      const isEN = btn.textContent.trim().toUpperCase() === "EN";
-      const active = isEs ? !isEN : isEN;
-      btn.classList.toggle("active", active);
-      btn.setAttribute("aria-current", active ? "true" : "false");
-    });
-
-    // Keep anchors clickable (defensive)
-    const nav = document.querySelector('.lang-bar');
-    if(nav){ nav.style.pointerEvents = 'auto'; }
-  }
-
-  window.switchLang = function(lang){
-    try{ localStorage.setItem(KEY, lang); }catch(e){}
-    apply(lang);
-  };
-
-  // Initial
-  const saved = (function(){ try{ return localStorage.getItem(KEY) || "en"; }catch(e){ return "en"; }})();
-  if(document.readyState === "loading"){
-    document.addEventListener("DOMContentLoaded", () => apply(saved), {once:true});
-  } else {
-    apply(saved);
-  }
-})();
 </script>
 <style>
 
