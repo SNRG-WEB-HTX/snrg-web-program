@@ -41,6 +41,19 @@
             "en",
             "es"
           ]
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-504-818-9501",
+          "contactType": "customer service",
+          "areaServed": [
+            "LA",
+            "US"
+          ],
+          "availableLanguage": [
+            "en",
+            "es"
+          ]
         }
       ],
       "sameAs": [
@@ -99,7 +112,21 @@
           "datePublished": "2025-01-19"
         }
       ],
-      "additionalType": "https://snrgweb.com/#webdesignservice"
+      "additionalType": "https://snrgweb.com/#webdesignservice",
+      "priceRange": "$$",
+      "paymentAccepted": "Cash, Credit Card, Stripe",
+      "currenciesAccepted": "USD",
+      "location": {
+        "@id": "https://snrgweb.com/#localbusiness-houston"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "14803 Sparks Valley Drive",
+        "addressLocality": "Houston",
+        "addressRegion": "TX",
+        "postalCode": "77084",
+        "addressCountry": "US"
+      }
     },
     {
       "@type": "ImageObject",
@@ -116,14 +143,16 @@
       "publisher": {
         "@id": "https://snrgweb.com/#org"
       },
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": {
-          "@type": "EntryPoint",
-          "urlTemplate": "https://snrgweb.com/?s={search_term_string}"
-        },
-        "query-input": "required name=search_term_string"
-      },
+      "potentialAction": [
+        {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://snrgweb.com/?s={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      ],
       "inLanguage": [
         "en",
         "es"
@@ -197,6 +226,14 @@
       "knowsLanguage": [
         "en-US",
         "es-US"
+      ],
+      "knowsAbout": [
+        "Web Design",
+        "Web Development",
+        "User Experience Design",
+        "Responsive Design",
+        "Search Engine Optimization",
+        "Website Performance Optimization"
       ]
     },
     {
@@ -206,10 +243,77 @@
       "provider": {
         "@id": "https://snrgweb.com/#org"
       },
-      "areaServed": {
-        "@type": "Country",
-        "name": "United States"
-      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "United States"
+        },
+        {
+          "@type": "City",
+          "name": "Houston",
+          "sameAs": "https://en.wikipedia.org/wiki/Houston"
+        },
+        {
+          "@type": "City",
+          "name": "New Orleans",
+          "sameAs": "https://en.wikipedia.org/wiki/New_Orleans"
+        },
+        {
+          "@type": "City",
+          "name": "Baton Rouge",
+          "sameAs": "https://en.wikipedia.org/wiki/Baton_Rouge,_Louisiana"
+        },
+        {
+          "@type": "City",
+          "name": "Atlanta",
+          "sameAs": "https://en.wikipedia.org/wiki/Atlanta"
+        },
+        {
+          "@type": "City",
+          "name": "Austin",
+          "sameAs": "https://en.wikipedia.org/wiki/Austin,_Texas"
+        },
+        {
+          "@type": "City",
+          "name": "Dallas",
+          "sameAs": "https://en.wikipedia.org/wiki/Dallas"
+        },
+        {
+          "@type": "City",
+          "name": "Phoenix",
+          "sameAs": "https://en.wikipedia.org/wiki/Phoenix,_Arizona"
+        },
+        {
+          "@type": "City",
+          "name": "Miami",
+          "sameAs": "https://en.wikipedia.org/wiki/Miami"
+        },
+        {
+          "@type": "City",
+          "name": "Denver",
+          "sameAs": "https://en.wikipedia.org/wiki/Denver"
+        },
+        {
+          "@type": "City",
+          "name": "Chicago",
+          "sameAs": "https://en.wikipedia.org/wiki/Chicago"
+        },
+        {
+          "@type": "City",
+          "name": "Nashville",
+          "sameAs": "https://en.wikipedia.org/wiki/Nashville,_Tennessee"
+        },
+        {
+          "@type": "City",
+          "name": "San Antonio",
+          "sameAs": "https://en.wikipedia.org/wiki/San_Antonio"
+        },
+        {
+          "@type": "City",
+          "name": "New York",
+          "sameAs": "https://en.wikipedia.org/wiki/New_York_City"
+        }
+      ],
       "offers": [
         {
           "@id": "https://snrgweb.com/#offer-managed"
@@ -221,7 +325,12 @@
       "inLanguage": [
         "en",
         "es"
-      ]
+      ],
+      "serviceOutput": {
+        "@type": "WebSite",
+        "description": "Professional custom-designed website with ongoing hosting and support"
+      },
+      "termsOfService": "https://snrgweb.com/terms"
     },
     {
       "@type": "Product",
@@ -240,7 +349,15 @@
       },
       "offers": {
         "@id": "https://snrgweb.com/#offer-managed"
-      }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "3",
+        "bestRating": "5"
+      },
+      "category": "Web Design Services",
+      "additionalType": "https://www.productontology.org/id/Web_design"
     },
     {
       "@type": "Product",
@@ -259,7 +376,15 @@
       },
       "offers": {
         "@id": "https://snrgweb.com/#offer-ownership"
-      }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "3",
+        "bestRating": "5"
+      },
+      "category": "Web Design Services",
+      "additionalType": "https://www.productontology.org/id/Web_design"
     },
     {
       "@type": "Offer",
@@ -296,7 +421,7 @@
           "name": "How long does it take to launch my website?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Most projects launch in 2\u20133 days after design approval."
+            "text": "Most projects launch in 2–3 days after design approval."
           }
         },
         {
@@ -367,7 +492,7 @@
         "WebDesignService"
       ],
       "@id": "https://snrgweb.com/#webdesignservice",
-      "name": "SNRG WEB \u2013 Professional Web Design Service",
+      "name": "SNRG WEB – Professional Web Design Service",
       "provider": {
         "@id": "https://snrgweb.com/#org"
       },
@@ -399,11 +524,103 @@
       },
       "sameAs": [
         "https://snrgweb.com/"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "3"
+      }
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://snrgweb.com/#howto",
+      "name": "How to Get Your Professional Website with SNRG WEB",
+      "description": "Launch your professional website in 2-3 days with our simple 4-step process",
+      "totalTime": "P3D",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Choose Your Plan",
+          "text": "Select between the $75/month managed subscription or $585 one-time ownership purchase. Both include professional design and launch in 2-3 days."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Share Your Vision",
+          "text": "Tell us about your business, brand, and website goals. Provide any content, images, or design preferences you have."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Review & Approve",
+          "text": "We'll create your custom website design and share it with you for review. Request any changes needed until it's perfect."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Launch & Grow",
+          "text": "Your website goes live in 2-3 days. With the managed plan, get unlimited updates, hosting, and 24/7 support included."
+        }
       ]
+    },
+    {
+      "@type": [
+        "LocalBusiness",
+        "ProfessionalService"
+      ],
+      "@id": "https://snrgweb.com/#localbusiness-houston",
+      "name": "SNRG WEB - Houston",
+      "image": {
+        "@id": "https://snrgweb.com/#logo"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "14803 Sparks Valley Drive",
+        "addressLocality": "Houston",
+        "addressRegion": "TX",
+        "postalCode": "77084",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 29.8505,
+        "longitude": -95.685
+      },
+      "url": "https://snrgweb.com/",
+      "telephone": "+1-346-291-6010",
+      "priceRange": "$$",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "09:00",
+          "closes": "18:00"
+        }
+      ],
+      "paymentAccepted": "Cash, Credit Card, Stripe",
+      "currenciesAccepted": "USD",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "3",
+        "bestRating": "5"
+      },
+      "sameAs": [
+        "https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share",
+        "https://github.com/SNRG-WEB-HTX"
+      ],
+      "hasMap": "https://www.google.com/maps/search/?api=1&query=14803+Sparks+Valley+Drive+Houston+TX+77084"
     }
   ]
 }
-</script>
+
 <!-- Performance Optimization: Preload Critical Font -->
 <link as="style" href="https://api.fontshare.com/v2/css?f[]=satoshi@700,900,400&amp;display=swap" rel="preload"/>
 <link crossorigin="" href="https://api.fontshare.com" rel="preconnect"/>
