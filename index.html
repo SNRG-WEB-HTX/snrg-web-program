@@ -33,7 +33,6 @@
 <meta name="ICBM" content="29.9189, -95.6684">
 
 <!-- Enhanced Local SEO -->
-<meta name="keywords" content="web design Houston, Houston web design, website design Houston, web designer Houston, Houston website design, Katy web design, Sugar Land web design, Cypress web design, Spring web design, The Woodlands web design, Pearland web design, affordable web design Houston, custom websites Houston, Houston web development, professional web design Houston, small business web design Houston, restaurant website design Houston, e-commerce Houston">
 <meta name="locality" content="Houston">
 <meta name="region" content="TX">
 <meta name="coverage" content="Houston, TX and 50 mile radius">
@@ -85,7 +84,7 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["LocalBusiness", "ProfessionalService"],
+      "@type": "ProfessionalService",
       "@id": "https://snrgweb.com/#localbusiness",
       "name": "SNRG WEB",
       "alternateName": "SNRG WEB Houston",
@@ -93,7 +92,7 @@
       "url": "https://snrgweb.com/",
       "telephone": "+1-346-291-6010",
       "email": "bobby@snrgweb.com",
-      "priceRange": "$75 - $500",
+      "priceRange": "$$",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "14803 Sparks Valley Dr.",
@@ -107,26 +106,28 @@
         "latitude": 29.9189,
         "longitude": -95.6684
       },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday",
-          "Sunday"
-        ],
-        "opens": "00:00",
-        "closes": "23:59"
-      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "00:00",
+          "closes": "23:59"
+        }
+      ],
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": 5.0,
         "reviewCount": 3,
         "bestRating": 5,
-        "worstRating": 5
+        "worstRating": 1
       },
       "review": [
         {
@@ -193,15 +194,27 @@
           "@type": "ContactPoint",
           "telephone": "+1-346-291-6010",
           "contactType": "sales",
-          "areaServed": ["TX", "Houston"],
-          "availableLanguage": ["en", "es"]
+          "areaServed": [
+            "TX",
+            "Houston"
+          ],
+          "availableLanguage": [
+            "en",
+            "es"
+          ]
         },
         {
           "@type": "ContactPoint",
           "telephone": "+1-346-291-6010",
           "contactType": "customer service",
-          "areaServed": ["TX", "Houston"],
-          "availableLanguage": ["en", "es"]
+          "areaServed": [
+            "TX",
+            "Houston"
+          ],
+          "availableLanguage": [
+            "en",
+            "es"
+          ]
         }
       ],
       "areaServed": [
@@ -279,7 +292,6 @@
       "description": "Professional web design and development services based in Houston, Texas. Specializing in affordable websites for restaurants, small businesses, and e-commerce. Available 24/7 with transparent $75/month pricing.",
       "paymentAccepted": "Cash, Credit Card, Debit Card, Visa, Mastercard, American Express, Discover, Apple Pay, Google Pay, PayPal, Venmo, Zelle, Klarna, Amazon Pay, ACH, Bank Transfer",
       "currenciesAccepted": "USD",
-      "priceRange": "$$",
       "sameAs": [
         "https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share",
         "https://github.com/SNRG-WEB-HTX"
@@ -328,8 +340,8 @@
       },
       "aggregateOffer": {
         "@type": "AggregateOffer",
-        "lowPrice": 75.00,
-        "highPrice": 585.00,
+        "lowPrice": 75.0,
+        "highPrice": 585.0,
         "priceCurrency": "USD",
         "offerCount": 2,
         "availability": "https://schema.org/InStock"
@@ -400,9 +412,10 @@
       },
       "speakable": {
         "@type": "SpeakableSpecification",
-        "cssSelector": [
-          ".hero-headline",
-          ".section-title"
+        "xpath": [
+          "/html/head/title",
+          "/html/body//h1",
+          "/html/body//h2"
         ]
       },
       "primaryImageOfPage": {
@@ -426,7 +439,10 @@
           "@type": "ContactPoint",
           "telephone": "+1-346-291-6010",
           "contactType": "sales",
-          "areaServed": "US",
+          "areaServed": [
+            "TX",
+            "Houston"
+          ],
           "availableLanguage": [
             "en",
             "es"
@@ -508,7 +524,7 @@
       "image": {
         "@id": "https://snrgweb.com/#logo"
       },
-      "description": "Professional custom website design with ongoing support, hosting, and unlimited updates. Launch in 2-3 days.",
+      "description": "Professional custom website design with ongoing support, hosting, and unlimited updates. Launch in 5-7 days.",
       "brand": {
         "@type": "Brand",
         "name": "SNRG WEB"
@@ -529,7 +545,7 @@
       "image": {
         "@id": "https://snrgweb.com/#logo"
       },
-      "description": "One-time purchase with full ownership of custom designed website. All source files included. Launch in 2-3 days.",
+      "description": "One-time purchase with full ownership of custom designed website. All source files included. Launch in 5-7 days.",
       "brand": {
         "@type": "Brand",
         "name": "SNRG WEB"
@@ -548,7 +564,7 @@
       "@id": "https://snrgweb.com/#offer-managed",
       "url": "https://snrgweb.com/pricing.html",
       "priceCurrency": "USD",
-      "price": 75.00,
+      "price": 75.0,
       "availability": "https://schema.org/InStock",
       "itemCondition": "https://schema.org/NewCondition",
       "priceValidUntil": "2026-12-31",
@@ -595,7 +611,7 @@
       "@id": "https://snrgweb.com/#offer-ownership",
       "url": "https://snrgweb.com/pricing.html",
       "priceCurrency": "USD",
-      "price": 585.00,
+      "price": 585.0,
       "availability": "https://schema.org/InStock",
       "itemCondition": "https://schema.org/NewCondition",
       "priceValidUntil": "2026-12-31",
@@ -639,14 +655,14 @@
     },
     {
       "@type": "FAQPage",
-      "@id": "#faq",
+      "@id": "https://snrgweb.com/#faq",
       "mainEntity": [
         {
           "@type": "Question",
           "name": "How long does it take to launch my website?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Most projects launch in 2-3 days after design approval."
+            "text": "Most projects launch in 5-7 days after design approval."
           }
         },
         {
@@ -710,7 +726,7 @@
           "name": "What's included in the one-time purchase option?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "For $585, you get full ownership of your website, all source files, and the website delivered in 2-3 days. Hosting and future updates are separate."
+            "text": "For $585, you get full ownership of your website, all source files, and the website delivered in 5-7 days. Hosting and future updates are separate."
           }
         },
         {
@@ -852,8 +868,7 @@
         "@type": "GeoCoordinates",
         "latitude": 29.7604,
         "longitude": -95.3698
-      },
-      "telephone": "+1-346-291-6010"
+      }
     },
     {
       "@type": [
@@ -881,13 +896,11 @@
       },
       "availableChannel": {
         "@type": "ServiceChannel",
-        "servicePhone": [
-          {
-            "@type": "ContactPoint",
-            "telephone": "+1-346-291-6010",
-            "areaServed": "TX"
-          }
-        ]
+        "servicePhone": {
+          "@type": "ContactPoint",
+          "telephone": "+1-346-291-6010",
+          "areaServed": "TX"
+        }
       },
       "sameAs": [
         "https://snrgweb.com/"
@@ -897,14 +910,14 @@
       "@type": "HowTo",
       "@id": "https://snrgweb.com/#howto",
       "name": "How to Get Your Professional Website with SNRG WEB",
-      "description": "Launch your professional website in 2-3 days with our simple 4-step process",
-      "totalTime": "P3D",
+      "description": "Launch your professional website in 5-7 days with our simple 4-step process",
+      "totalTime": "P7D",
       "step": [
         {
           "@type": "HowToStep",
           "position": 1,
           "name": "Choose Your Plan",
-          "text": "Select between the $75/month managed subscription or $585 one-time ownership purchase. Both include professional design and launch in 2-3 days."
+          "text": "Select between the $75/month managed subscription or $585 one-time ownership purchase. Both include professional design and launch in 5-7 days."
         },
         {
           "@type": "HowToStep",
@@ -922,7 +935,7 @@
           "@type": "HowToStep",
           "position": 4,
           "name": "Launch & Grow",
-          "text": "Your website goes live in 2-3 days. With the managed plan, get unlimited updates, hosting, and 24/7 support included."
+          "text": "Your website goes live in 5-7 days. With the managed plan, get unlimited updates, hosting, and 24/7 support included."
         }
       ]
     },
@@ -1120,11 +1133,11 @@
       },
       "offers": {
         "@type": "Offer",
-        "price": 75.00,
+        "price": 75.0,
         "priceCurrency": "USD",
         "priceSpecification": {
           "@type": "UnitPriceSpecification",
-          "price": 75.00,
+          "price": 75.0,
           "priceCurrency": "USD",
           "unitText": "monthly"
         }
@@ -1215,42 +1228,6 @@
       ]
     },
     {
-      "@type": "Review",
-      "@id": "https://snrgweb.com/#review-hilary",
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": 5,
-        "bestRating": 5
-      },
-      "author": {
-        "@type": "Person",
-        "name": "Hilary"
-      },
-      "reviewBody": "WOW! Clean design with no clutter, very responsive so changes happen fast, super easy to understand and use! This is it!",
-      "datePublished": "2026-01-23",
-      "itemReviewed": {
-        "@id": "https://snrgweb.com/#localbusiness"
-      }
-    },
-    {
-      "@type": "Review",
-      "@id": "https://snrgweb.com/#review-melissa",
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": 5,
-        "bestRating": 5
-      },
-      "author": {
-        "@type": "Person",
-        "name": "Melissa Warren"
-      },
-      "reviewBody": "Other agencies quoted crazy prices. This was affordable and the quality is excellent!",
-      "datePublished": "2026-01-16",
-      "itemReviewed": {
-        "@id": "https://snrgweb.com/#localbusiness"
-      }
-    },
-    {
       "@type": "GeoCircle",
       "@id": "https://snrgweb.com/#service-area",
       "geoMidpoint": {
@@ -1258,25 +1235,9 @@
         "latitude": 29.9189,
         "longitude": -95.6684
       },
-      "geoRadius": "50 mi",
+      "geoRadius": 80467,
       "name": "Greater Houston Service Area",
       "description": "Professional web design services within 50 miles of Houston, TX"
-    },
-    {
-      "@type": "Place",
-      "@id": "https://snrgweb.com/#houston",
-      "name": "Houston",
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 29.7604,
-        "longitude": -95.3698
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Houston",
-        "addressRegion": "TX",
-        "addressCountry": "US"
-      }
     },
     {
       "@type": "ItemList",
@@ -1290,7 +1251,11 @@
           "item": {
             "@type": "Place",
             "name": "Katy, TX",
-            "geo": {"@type": "GeoCoordinates", "latitude": 29.7858, "longitude": -95.8244}
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 29.7858,
+              "longitude": -95.8244
+            }
           }
         },
         {
@@ -1299,7 +1264,11 @@
           "item": {
             "@type": "Place",
             "name": "Sugar Land, TX",
-            "geo": {"@type": "GeoCoordinates", "latitude": 29.6196, "longitude": -95.6349}
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 29.6196,
+              "longitude": -95.6349
+            }
           }
         },
         {
@@ -1308,7 +1277,11 @@
           "item": {
             "@type": "Place",
             "name": "Cypress, TX",
-            "geo": {"@type": "GeoCoordinates", "latitude": 29.9691, "longitude": -95.6972}
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 29.9691,
+              "longitude": -95.6972
+            }
           }
         },
         {
@@ -1317,7 +1290,11 @@
           "item": {
             "@type": "Place",
             "name": "Spring, TX",
-            "geo": {"@type": "GeoCoordinates", "latitude": 30.0799, "longitude": -95.4172}
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 30.0799,
+              "longitude": -95.4172
+            }
           }
         },
         {
@@ -1326,7 +1303,11 @@
           "item": {
             "@type": "Place",
             "name": "The Woodlands, TX",
-            "geo": {"@type": "GeoCoordinates", "latitude": 30.1658, "longitude": -95.4613}
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 30.1658,
+              "longitude": -95.4613
+            }
           }
         },
         {
@@ -1335,7 +1316,11 @@
           "item": {
             "@type": "Place",
             "name": "Pearland, TX",
-            "geo": {"@type": "GeoCoordinates", "latitude": 29.5635, "longitude": -95.2861}
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 29.5635,
+              "longitude": -95.2861
+            }
           }
         },
         {
@@ -1344,7 +1329,11 @@
           "item": {
             "@type": "Place",
             "name": "Missouri City, TX",
-            "geo": {"@type": "GeoCoordinates", "latitude": 29.6185, "longitude": -95.5377}
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 29.6185,
+              "longitude": -95.5377
+            }
           }
         },
         {
@@ -1353,7 +1342,11 @@
           "item": {
             "@type": "Place",
             "name": "Richmond, TX",
-            "geo": {"@type": "GeoCoordinates", "latitude": 29.5819, "longitude": -95.7608}
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 29.5819,
+              "longitude": -95.7608
+            }
           }
         },
         {
@@ -1362,7 +1355,11 @@
           "item": {
             "@type": "Place",
             "name": "Tomball, TX",
-            "geo": {"@type": "GeoCoordinates", "latitude": 30.0971, "longitude": -95.6160}
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 30.0971,
+              "longitude": -95.616
+            }
           }
         },
         {
@@ -1371,7 +1368,11 @@
           "item": {
             "@type": "Place",
             "name": "League City, TX",
-            "geo": {"@type": "GeoCoordinates", "latitude": 29.5074, "longitude": -95.0949}
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 29.5074,
+              "longitude": -95.0949
+            }
           }
         },
         {
@@ -1380,7 +1381,11 @@
           "item": {
             "@type": "Place",
             "name": "Pasadena, TX",
-            "geo": {"@type": "GeoCoordinates", "latitude": 29.6910, "longitude": -95.2091}
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 29.691,
+              "longitude": -95.2091
+            }
           }
         },
         {
@@ -1389,7 +1394,11 @@
           "item": {
             "@type": "Place",
             "name": "Humble, TX",
-            "geo": {"@type": "GeoCoordinates", "latitude": 29.9988, "longitude": -95.2621}
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 29.9988,
+              "longitude": -95.2621
+            }
           }
         },
         {
@@ -1398,7 +1407,11 @@
           "item": {
             "@type": "Place",
             "name": "Friendswood, TX",
-            "geo": {"@type": "GeoCoordinates", "latitude": 29.5293, "longitude": -95.2011}
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 29.5293,
+              "longitude": -95.2011
+            }
           }
         },
         {
@@ -1407,7 +1420,11 @@
           "item": {
             "@type": "Place",
             "name": "Rosenberg, TX",
-            "geo": {"@type": "GeoCoordinates", "latitude": 29.5572, "longitude": -95.8085}
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 29.5572,
+              "longitude": -95.8085
+            }
           }
         },
         {
@@ -1416,7 +1433,11 @@
           "item": {
             "@type": "Place",
             "name": "Conroe, TX",
-            "geo": {"@type": "GeoCoordinates", "latitude": 30.3119, "longitude": -95.4560}
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 30.3119,
+              "longitude": -95.456
+            }
           }
         }
       ]
@@ -3764,7 +3785,7 @@ html body .pricing-card:nth-of-type(2) .cta-upwork{
 <div class="table-row">
 <div class="table-cell" data-label="" lang="en">Launch Time</div>
 <div class="table-cell" data-label="Typical Agency" lang="en">4-8 weeks</div>
-<div class="table-cell highlight" data-label="SNRG WEB" lang="en">2-3 days</div>
+<div class="table-cell highlight" data-label="SNRG WEB" lang="en">5-7 days</div>
 </div>
 <div class="table-row">
 <div class="table-cell" data-label="" lang="en">Setup Cost</div>
@@ -3801,7 +3822,7 @@ html body .pricing-card:nth-of-type(2) .cta-upwork{
 <div class="table-row">
 <div class="table-cell" data-label="">Tiempo de Lanzamiento</div>
 <div class="table-cell" data-label="Agencia Típica">4-8 semanas</div>
-<div class="table-cell highlight" data-label="SNRG WEB">2-3 días</div>
+<div class="table-cell highlight" data-label="SNRG WEB">5-7 días</div>
 </div>
 <div class="table-row">
 <div class="table-cell" data-label="">Costo Inicial</div>
