@@ -96,7 +96,25 @@
       },
       "sameAs": [
         "https://github.com/SNRG-WEB-HTX"
-      ]
+      ],
+      "founder": {
+        "@id": "https://snrgweb.com/#person"
+      },
+      "hasOfferCatalog": {
+        "@id": "https://snrgweb.com/#offerCatalog"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://snrgweb.com/#person",
+      "name": "Bobby Frilot",
+      "jobTitle": "Founder",
+      "worksFor": {
+        "@id": "https://snrgweb.com/#business"
+      },
+      "email": "mailto:bobby@snrgweb.com",
+      "telephone": "+1-346-291-6010",
+      "url": "https://snrgweb.com/"
     },
     {
       "@type": "WebSite",
@@ -117,7 +135,43 @@
       },
       "about": {
         "@id": "https://snrgweb.com/#business"
+      },
+      "author": {
+        "@id": "https://snrgweb.com/#person"
       }
+    },
+    {
+      "@type": "OfferCatalog",
+      "@id": "https://snrgweb.com/#offerCatalog",
+      "name": "SNRG WEB Website Plans",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "@id": "https://snrgweb.com/#offer-managed",
+          "name": "Fully Managed Service",
+          "description": "Custom website design, hosting and support. Most sites launch within 5–7 days after approval.",
+          "priceCurrency": "USD",
+          "price": "75",
+          "url": "https://pay.snrgweb.com/b/28E6oHeF1eoVcfw69l1RC00",
+          "availability": "https://schema.org/InStock",
+          "seller": {
+            "@id": "https://snrgweb.com/#business"
+          }
+        },
+        {
+          "@type": "Offer",
+          "@id": "https://snrgweb.com/#offer-ownership",
+          "name": "Website Ownership",
+          "description": "One-time website build with ownership. Optional managed service available after purchase.",
+          "priceCurrency": "USD",
+          "price": "585",
+          "url": "https://pay.snrgweb.com/b/4gM8wP54r0y5frI69l1RC01",
+          "availability": "https://schema.org/InStock",
+          "seller": {
+            "@id": "https://snrgweb.com/#business"
+          }
+        }
+      ]
     },
     {
       "@type": "FAQPage",
