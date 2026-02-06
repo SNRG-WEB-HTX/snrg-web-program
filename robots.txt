@@ -1,39 +1,95 @@
 # SNRG WEB - robots.txt
-# Last updated: 2026-02-01
+# Last updated: 2026-02-06
 # Optimized for Houston local SEO
 
 User-agent: *
 Allow: /
-Crawl-delay: 0
+Crawl-delay: 1
 
-# High-priority pages for crawlers
+# High-Priority Pages
 Allow: /$
-Allow: /contact
-Allow: /booking
-Allow: /faq
-Allow: /pricing
+Allow: /pricing$
+Allow: /contact$
+Allow: /booking$
+Allow: /faq$
 
-# Block utility paths
-Disallow: /cgi-bin/
-Disallow: /wp-admin/
-Disallow: /wp-includes/
+# Allow Resources
+Allow: /images/
+Allow: /css/
+Allow: /js/
+
+# Block Admin
 Disallow: /admin/
-Disallow: /*.json$
-Disallow: /*?*utm_*
+Disallow: /private/
+Disallow: /api/
 
-# Sitemaps (primary discovery method)
-Sitemap: https://snrgweb.com/sitemap.xml
-Sitemap: https://snrgweb.com/sitemap-pages.xml
+# Block Query Parameters
+Disallow: /*?*utm_source=
+Disallow: /*?*utm_medium=
+Disallow: /*?*utm_campaign=
+Disallow: /*?*fbclid=
+Disallow: /*?*gclid=
 
-# Specific bot directives
+# ====================
+# GOOGLEBOT
+# ====================
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 0
 
 User-agent: Googlebot-Image
 Allow: /images/
 
+# ====================
+# BINGBOT
+# ====================
 User-agent: Bingbot
 Allow: /
+Crawl-delay: 1
 
+# ====================
+# OTHER SEARCH ENGINES
+# ====================
 User-agent: Slurp
 Allow: /
+Crawl-delay: 1
+
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1
+
+# ====================
+# SOCIAL MEDIA BOTS
+# ====================
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+# ====================
+# BLOCK BAD BOTS
+# ====================
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: AdsBot-Google
+Disallow: /
+
+# ====================
+# SITEMAPS
+# ====================
+Sitemap: https://snrgweb.com/sitemap.xml
+Sitemap: https://snrgweb.com/sitemap-pages.xml
