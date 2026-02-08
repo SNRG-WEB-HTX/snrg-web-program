@@ -37,9 +37,11 @@
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
 <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
 
-<!-- Icons -->
-<link rel="icon" href="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png" type="image/png"/>
-<link rel="apple-touch-icon" href="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png"/>
+<!-- Favicons -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
 
 <!-- Canonical -->
 <link rel="canonical" href="https://snrgweb.com/"/>
@@ -55,46 +57,142 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "ProfessionalService",
+      "@type": [
+        "ProfessionalService",
+        "LocalBusiness"
+      ],
       "@id": "https://snrgweb.com/#business",
       "name": "SNRG WEB",
       "url": "https://snrgweb.com/",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png"
+        "url": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
+        "width": 1024,
+        "height": 1024
       },
       "image": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
       "telephone": "+1-346-291-6010",
       "email": "bobby@snrgweb.com",
       "priceRange": "$$",
       "areaServed": [
-        {"@type": "City", "name": "Houston", "containedInPlace": {"@type": "State", "name": "Texas"}},
-        {"@type": "City", "name": "Katy", "containedInPlace": {"@type": "State", "name": "Texas"}},
-        {"@type": "City", "name": "Sugar Land", "containedInPlace": {"@type": "State", "name": "Texas"}},
-        {"@type": "City", "name": "Cypress", "containedInPlace": {"@type": "State", "name": "Texas"}},
-        {"@type": "City", "name": "Spring", "containedInPlace": {"@type": "State", "name": "Texas"}},
-        {"@type": "City", "name": "The Woodlands", "containedInPlace": {"@type": "State", "name": "Texas"}},
-        {"@type": "City", "name": "Pearland", "containedInPlace": {"@type": "State", "name": "Texas"}}
+        {
+          "@type": "City",
+          "name": "Houston",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Texas"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Katy",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Texas"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Sugar Land",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Texas"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Cypress",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Texas"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Spring",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Texas"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "The Woodlands",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Texas"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Pearland",
+          "containedInPlace": {
+            "@type": "State",
+            "name": "Texas"
+          }
+        }
       ],
       "sameAs": [
         "https://github.com/SNRG-WEB-HTX",
         "https://www.upwork.com/freelancers/bobbyfrilot?mp_source=share",
-        "https://share.google/OpmWOYhoywfYJxxz7"
+        "https://share.google/OpmWOYhoywfYJxxz7",
+        "https://share.google/3pSeve9cB5AimInFB"
       ],
-      "founder": {"@id": "https://snrgweb.com/#person"},
+      "founder": {
+        "@id": "https://snrgweb.com/#person"
+      },
       "makesOffer": [
-        {"@id": "https://snrgweb.com/#offer-managed"},
-        {"@id": "https://snrgweb.com/#offer-ownership"}
+        {
+          "@id": "https://snrgweb.com/#offer-managed"
+        },
+        {
+          "@id": "https://snrgweb.com/#offer-ownership"
+        }
       ],
       "description": "Houston web design for small businesses. Custom websites launched in 5-7 days.",
-      "serviceType": ["Web Design", "Website Development", "SEO Setup", "Website Maintenance"],
+      "serviceType": [
+        "Web Design",
+        "Website Development",
+        "SEO Setup",
+        "Website Maintenance"
+      ],
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+1-346-291-6010",
         "contactType": "customer service",
         "email": "bobby@snrgweb.com",
         "availableLanguage": "English"
-      }
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "14803 Sparks Valley Dr",
+        "addressLocality": "Houston",
+        "addressRegion": "TX",
+        "postalCode": "77084",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 29.7989,
+        "longitude": -95.3815
+      },
+      "hasMap": "https://google.com/maps/place/SNRG+WEB/data=!4m2!3m1!1s0x0:0x9ba806f8e65223fa?sa=X&ved=1t:2428&ictx=111",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "https://schema.org/Monday",
+            "https://schema.org/Tuesday",
+            "https://schema.org/Wednesday",
+            "https://schema.org/Thursday",
+            "https://schema.org/Friday",
+            "https://schema.org/Saturday",
+            "https://schema.org/Sunday"
+          ],
+          "opens": "08:00",
+          "closes": "20:00"
+        }
+      ]
     },
     {
       "@type": "Person",
@@ -103,8 +201,15 @@
       "givenName": "Bobby",
       "familyName": "Frilot",
       "jobTitle": "Founder",
-      "worksFor": {"@id": "https://snrgweb.com/#business"},
-      "email": "mailto:bobby@snrgweb.com",
+      "worksFor": {
+        "@id": "https://snrgweb.com/#business"
+      },
+      "email": "bobby@snrgweb.com",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "bobby@snrgweb.com",
+        "contactType": "founder"
+      },
       "telephone": "+1-346-291-6010",
       "url": "https://snrgweb.com/",
       "sameAs": [
@@ -117,7 +222,9 @@
       "@id": "https://snrgweb.com/#website",
       "url": "https://snrgweb.com/",
       "name": "SNRG WEB",
-      "publisher": {"@id": "https://snrgweb.com/#business"},
+      "publisher": {
+        "@id": "https://snrgweb.com/#business"
+      },
       "inLanguage": "en-US"
     },
     {
@@ -125,10 +232,16 @@
       "@id": "https://snrgweb.com/#homepage",
       "url": "https://snrgweb.com/",
       "name": "Houston Web Design | Live in 5-7 Days | $75/mo | SNRG WEB",
-      "isPartOf": {"@id": "https://snrgweb.com/#website"},
-      "about": {"@id": "https://snrgweb.com/#business"},
-      "author": {"@id": "https://snrgweb.com/#person"},
-      "datePublished": "2024-01-01",
+      "isPartOf": {
+        "@id": "https://snrgweb.com/#website"
+      },
+      "about": {
+        "@id": "https://snrgweb.com/#business"
+      },
+      "author": {
+        "@id": "https://snrgweb.com/#person"
+      },
+      "datePublished": "2026-02-06",
       "dateModified": "2026-02-06",
       "inLanguage": "en-US"
     },
@@ -141,7 +254,9 @@
       "priceCurrency": "USD",
       "url": "https://pay.snrgweb.com/b/28E6oHeF1eoVcfw69l1RC00",
       "availability": "https://schema.org/InStock",
-      "seller": {"@id": "https://snrgweb.com/#business"}
+      "seller": {
+        "@id": "https://snrgweb.com/#business"
+      }
     },
     {
       "@type": "Offer",
@@ -152,7 +267,9 @@
       "priceCurrency": "USD",
       "url": "https://pay.snrgweb.com/b/4gM8wP54r0y5frI69l1RC01",
       "availability": "https://schema.org/InStock",
-      "seller": {"@id": "https://snrgweb.com/#business"}
+      "seller": {
+        "@id": "https://snrgweb.com/#business"
+      }
     },
     {
       "@type": "FAQPage",
@@ -195,6 +312,37 @@
   ]
 }
 </script>
+<!-- MICRO-GAINS: Breadcrumbs + Hero ImageObject -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://snrgweb.com/#breadcrumbs",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://snrgweb.com/"
+        }
+      ]
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://snrgweb.com/#hero-image",
+      "url": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
+      "contentUrl": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
+      "caption": "SNRG WEB - High Performance Web Design Houston",
+      "inLanguage": "en-US",
+      "width": 1024,
+      "height": 1024
+    }
+  ]
+}
+</script>
+
 
 <style>
 
