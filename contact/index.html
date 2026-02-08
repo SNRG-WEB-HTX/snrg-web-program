@@ -448,6 +448,27 @@ body{
     max-width:16ch;
   }
 }
+
+/* === LOCKED CONTACT TITLE (PERFECT TWO-LINE ALIGNMENT) === */
+.contact-title{
+  display: grid;
+  grid-template-rows: auto auto;
+  justify-items: center;
+  align-items: center;
+  line-height: 1.05;
+}
+
+.contact-line{
+  display: block;
+  width: 100%;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.contact-line-1{
+  margin-bottom: 0.08em;
+}
+
 </style>
 <style id="lang-bar-style">
 /* Footer locations link style - force match Houston (no blue links) */
@@ -2564,7 +2585,10 @@ footer{
 <a aria-label="Back to SNRG WEB Home" href="../">
 <img alt="SNRG WEB Logo" class="contact-logo" fetchpriority="high" height="1024" loading="eager" src="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png" width="1024"/>
 </a>
-<h1 class="contact-title"><span lang="en">Let's Talk About Your Website</span><span lang="es">Hablemos de Tu Sitio Web</span></h1>
+<h1 class="contact-title">
+  <span class="contact-line contact-line-1">Let’s Talk About</span>
+  <span class="contact-line contact-line-2">Your Website</span>
+</h1>
 <p class="contact-subtitle"><span lang="en">Multiple ways to connect. Choose what works best for you.</span><span lang="es">Varias formas de conectarnos. Elige la que mejor te funcione.</span></p>
 </div>
 <div class="contact-grid">
