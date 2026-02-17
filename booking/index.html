@@ -19,15 +19,16 @@
 <link rel="alternate" hreflang="en" href="https://snrgweb.com/booking"/>
 <link rel="alternate" hreflang="x-default" href="https://snrgweb.com/booking"/>
 
-<!-- PERFECT SCHEMA: 5 entities with valid @id linking -->
+<!-- PERFECTED SCHEMA: Full @graph — LocalBusiness, consistent @ids, SearchAction, complete authority signals -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
-      "@id": "https://snrgweb.com/#org",
+      "@type": ["LocalBusiness", "ProfessionalService"],
+      "@id": "https://snrgweb.com/#business",
       "name": "SNRG WEB",
+      "alternateName": "SNRG Web",
       "url": "https://snrgweb.com/",
       "logo": {
         "@type": "ImageObject",
@@ -35,49 +36,134 @@
         "width": 1024,
         "height": 1024
       },
-      "founder": {"@id": "https://snrgweb.com/#owner"},
+      "image": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
+      "telephone": "+1-346-291-6010",
+      "email": "bobby@snrgweb.com",
+      "priceRange": "$$",
+      "description": "Houston web design for small businesses. Custom websites launched in 5-7 days. $89/mo or $770 flat.",
+      "serviceType": ["Web Design", "Website Development", "SEO Setup", "Website Maintenance"],
+      "areaServed": [
+        {"@type": "City", "name": "Houston", "containedInPlace": {"@type": "State", "name": "Texas"}},
+        {"@type": "City", "name": "Katy", "containedInPlace": {"@type": "State", "name": "Texas"}},
+        {"@type": "City", "name": "Sugar Land", "containedInPlace": {"@type": "State", "name": "Texas"}},
+        {"@type": "City", "name": "Cypress", "containedInPlace": {"@type": "State", "name": "Texas"}},
+        {"@type": "City", "name": "Spring", "containedInPlace": {"@type": "State", "name": "Texas"}},
+        {"@type": "City", "name": "The Woodlands", "containedInPlace": {"@type": "State", "name": "Texas"}},
+        {"@type": "City", "name": "Pearland", "containedInPlace": {"@type": "State", "name": "Texas"}}
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "14803 Sparks Valley Dr",
+        "addressLocality": "Houston",
+        "addressRegion": "TX",
+        "postalCode": "77084",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 29.7989,
+        "longitude": -95.3815
+      },
+      "hasMap": "https://share.google/OqVq67BGVbHTgVGyi",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-346-291-6010",
+        "email": "bobby@snrgweb.com",
+        "contactType": "customer service",
+        "availableLanguage": ["English", "Spanish"]
+      },
+      "openingHoursSpecification": [{
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "https://schema.org/Monday",
+          "https://schema.org/Tuesday",
+          "https://schema.org/Wednesday",
+          "https://schema.org/Thursday",
+          "https://schema.org/Friday",
+          "https://schema.org/Saturday",
+          "https://schema.org/Sunday"
+        ],
+        "opens": "08:00",
+        "closes": "20:00"
+      }],
+      "currenciesAccepted": "USD",
+      "paymentAccepted": ["Credit Card", "Debit Card", "Klarna", "Apple Pay", "Cash App"],
+      "founder": {"@id": "https://snrgweb.com/#person"},
       "sameAs": [
-        "https://www.upwork.com/services/product/development-it-high-quality-clean-modern-3-page-website-design-build-2008328117357795172?ref=project_share",
-        "https://github.com/SNRG-WEB-HTX"
+        "https://www.instagram.com/snrgweb/",
+        "https://www.facebook.com/profile.php?id=61587811778243",
+        "https://github.com/SNRG-WEB-HTX",
+        "https://www.upwork.com/freelancers/bobbyfrilot?mp_source=share",
+        "https://share.google/OpmWOYhoywfYJxxz7",
+        "https://share.google/3pSeve9cB5AimInFB"
       ]
     },
     {
       "@type": "Person",
-      "@id": "https://snrgweb.com/#owner",
+      "@id": "https://snrgweb.com/#person",
       "name": "Bobby Frilot",
+      "givenName": "Bobby",
+      "familyName": "Frilot",
       "jobTitle": "Founder & Lead Web Strategist",
-      "worksFor": {"@id": "https://snrgweb.com/#org"}
+      "worksFor": {"@id": "https://snrgweb.com/#business"},
+      "email": "bobby@snrgweb.com",
+      "telephone": "+1-346-291-6010",
+      "url": "https://snrgweb.com/",
+      "sameAs": [
+        "https://www.upwork.com/freelancers/bobbyfrilot?mp_source=share",
+        "https://github.com/SNRG-WEB-HTX"
+      ]
     },
     {
       "@type": "WebSite",
       "@id": "https://snrgweb.com/#website",
       "url": "https://snrgweb.com/",
-      "name": "SNRG WEB"
+      "name": "SNRG WEB",
+      "publisher": {"@id": "https://snrgweb.com/#business"},
+      "inLanguage": ["en-US", "es"],
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://snrgweb.com/?s={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
     },
     {
-      "@type": "ProfessionalService",
-      "@id": "https://snrgweb.com/#service",
-      "name": "Website Design Consultation",
-      "description": "Free 15-minute consultation for professional website design services",
-      "provider": {"@id": "https://snrgweb.com/#org"},
+      "@type": "Service",
+      "@id": "https://snrgweb.com/#consultation-service",
+      "name": "Free Website Design Consultation",
+      "description": "Free 15-minute consultation for professional website design in Houston, TX. Discuss your project with no pressure.",
+      "provider": {"@id": "https://snrgweb.com/#business"},
       "serviceType": "Website Design Consultation",
+      "areaServed": {"@type": "City", "name": "Houston", "containedInPlace": {"@type": "State", "name": "Texas"}},
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://snrgweb.com/booking",
+        "availableLanguage": ["English", "Spanish"]
+      },
       "offers": {
         "@type": "Offer",
         "price": "0",
         "priceCurrency": "USD",
-        "description": "Free 15-minute consultation"
+        "availability": "https://schema.org/InStock",
+        "validFrom": "2026-01-01",
+        "description": "Free 15-minute website design consultation — no pressure, no commitment"
       }
     },
     {
       "@type": "WebPage",
       "@id": "https://snrgweb.com/booking#webpage",
       "url": "https://snrgweb.com/booking",
-      "name": "Book a Call | SNRG WEB",
-      "description": "Schedule a free 15-minute consultation with SNRG WEB. Professional website design for small businesses.",
+      "name": "Book a Free Website Consultation | SNRG WEB",
+      "description": "Schedule a free 15-minute consultation with SNRG WEB. Professional website design for Houston small businesses. Fast launch, transparent pricing.",
       "isPartOf": {"@id": "https://snrgweb.com/#website"},
-      "about": {"@id": "https://snrgweb.com/#org"},
-      "mainEntity": {"@id": "https://snrgweb.com/#service"},
+      "about": {"@id": "https://snrgweb.com/#business"},
+      "mainEntity": {"@id": "https://snrgweb.com/#consultation-service"},
       "breadcrumb": {"@id": "https://snrgweb.com/booking#breadcrumb"},
+      "author": {"@id": "https://snrgweb.com/#person"},
+      "inLanguage": "en-US",
       "potentialAction": {
         "@type": "ScheduleAction",
         "target": {
@@ -98,18 +184,8 @@
       "@type": "BreadcrumbList",
       "@id": "https://snrgweb.com/booking#breadcrumb",
       "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://snrgweb.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Book a Call",
-          "item": "https://snrgweb.com/booking"
-        }
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://snrgweb.com/"},
+        {"@type": "ListItem", "position": 2, "name": "Book a Free Consultation", "item": "https://snrgweb.com/booking"}
       ]
     }
   ]
@@ -123,7 +199,7 @@
 
 <!-- Primary Meta Tags -->
 <title>Book a Call | Free Website Consultation | SNRG WEB</title>
-<meta name="title" content="Book a Call | Free Consultation | SNRG WEB"/>
+
 <meta name="description" content="Schedule your free 15-minute consultation. Professional website design for small businesses nationwide. Fast response, no pressure."/>
 <meta name="keywords" content="book consultation, schedule call, website consultation, free consultation, web design meeting"/>
 <meta name="robots" content="index,follow,max-image-preview:large"/>
