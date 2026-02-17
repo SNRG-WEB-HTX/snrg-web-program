@@ -13,9 +13,12 @@
 <meta content="2026-02-11" name="date"/>
 <meta content="2026-02-11T12:00:00-06:00" property="og:updated_time"/>
 <!-- Open Graph -->
+<meta content="SNRG WEB" property="og:site_name"/>
 <meta content="Houston Web Design | $89/Month Websites | SNRG WEB" property="og:title"/>
 <meta content="Top-rated Houston web design. Custom websites live in 5-7 days. $89/month includes hosting &amp; support. Serving Greater Houston." property="og:description"/>
 <meta content="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png" property="og:image"/>
+<meta content="1024" property="og:image:width"/>
+<meta content="1024" property="og:image:height"/>
 <meta content="https://snrgweb.com/" property="og:url"/>
 <meta content="website" property="og:type"/>
 <meta content="en_US" property="og:locale"/>
@@ -38,22 +41,23 @@
 <link href="/favicon-180.png" rel="apple-touch-icon" sizes="180x180"/>
 <!-- Canonical -->
 <link href="https://snrgweb.com/" rel="canonical">
+<!-- Hreflang -->
+<link href="https://snrgweb.com/" hreflang="en" rel="alternate"/>
+<link href="https://snrgweb.com/" hreflang="x-default" rel="alternate"/>
 <link href="https://snrgweb.com/sitemap.xml" rel="sitemap" type="application/xml">
 <!-- Performance -->
 <link crossorigin="" href="https://cdn.prod.website-files.com" rel="preconnect"/>
 <link href="https://pay.snrgweb.com" rel="dns-prefetch"/>
-<!-- SERVICE AREA BUSINESS SCHEMA -->
+<!-- PERFECTED SCHEMA: Unified @graph — LocalBusiness + SearchAction + Offers + BreadcrumbList -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": [
-        "ProfessionalService",
-        "LocalBusiness"
-      ],
+      "@type": ["LocalBusiness", "ProfessionalService"],
       "@id": "https://snrgweb.com/#business",
       "name": "SNRG WEB",
+      "alternateName": "SNRG Web",
       "url": "https://snrgweb.com/",
       "logo": {
         "@type": "ImageObject",
@@ -65,97 +69,17 @@
       "telephone": "+1-346-291-6010",
       "email": "bobby@snrgweb.com",
       "priceRange": "$$",
+      "description": "Houston web design for small businesses. Custom websites launched in 5-7 days. $89/mo managed service or $770 one-time.",
+      "serviceType": ["Web Design", "Website Development", "SEO Setup", "Website Maintenance"],
       "areaServed": [
-        {
-          "@type": "City",
-          "name": "Houston",
-          "containedInPlace": {
-            "@type": "State",
-            "name": "Texas"
-          }
-        },
-        {
-          "@type": "City",
-          "name": "Katy",
-          "containedInPlace": {
-            "@type": "State",
-            "name": "Texas"
-          }
-        },
-        {
-          "@type": "City",
-          "name": "Sugar Land",
-          "containedInPlace": {
-            "@type": "State",
-            "name": "Texas"
-          }
-        },
-        {
-          "@type": "City",
-          "name": "Cypress",
-          "containedInPlace": {
-            "@type": "State",
-            "name": "Texas"
-          }
-        },
-        {
-          "@type": "City",
-          "name": "Spring",
-          "containedInPlace": {
-            "@type": "State",
-            "name": "Texas"
-          }
-        },
-        {
-          "@type": "City",
-          "name": "The Woodlands",
-          "containedInPlace": {
-            "@type": "State",
-            "name": "Texas"
-          }
-        },
-        {
-          "@type": "City",
-          "name": "Pearland",
-          "containedInPlace": {
-            "@type": "State",
-            "name": "Texas"
-          }
-        }
+        {"@type": "City", "name": "Houston", "containedInPlace": {"@type": "State", "name": "Texas"}},
+        {"@type": "City", "name": "Katy", "containedInPlace": {"@type": "State", "name": "Texas"}},
+        {"@type": "City", "name": "Sugar Land", "containedInPlace": {"@type": "State", "name": "Texas"}},
+        {"@type": "City", "name": "Cypress", "containedInPlace": {"@type": "State", "name": "Texas"}},
+        {"@type": "City", "name": "Spring", "containedInPlace": {"@type": "State", "name": "Texas"}},
+        {"@type": "City", "name": "The Woodlands", "containedInPlace": {"@type": "State", "name": "Texas"}},
+        {"@type": "City", "name": "Pearland", "containedInPlace": {"@type": "State", "name": "Texas"}}
       ],
-      "sameAs": [
-        "https://www.instagram.com/snrgweb/",
-        "https://www.facebook.com/snrgweb/",
-        "https://github.com/SNRG-WEB-HTX",
-        "https://www.upwork.com/freelancers/bobbyfrilot?mp_source=share",
-        "https://share.google/OpmWOYhoywfYJxxz7",
-        "https://share.google/3pSeve9cB5AimInFB"
-      ],
-      "founder": {
-        "@id": "https://snrgweb.com/#person"
-      },
-      "makesOffer": [
-        {
-          "@id": "https://snrgweb.com/#offer-managed"
-        },
-        {
-          "@id": "https://snrgweb.com/#offer-ownership"
-        }
-      ],
-      "description": "Houston web design for small businesses. Custom websites launched in 5-7 days.",
-      "serviceType": [
-        "Web Design",
-        "Website Development",
-        "SEO Setup",
-        "Website Maintenance"
-      ],
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+1-346-291-6010",
-        "contactType": "customer service",
-        "email": "bobby@snrgweb.com",
-        "availableLanguage": "English"
-      },
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "14803 Sparks Valley Dr",
@@ -169,31 +93,42 @@
         "latitude": 29.7989,
         "longitude": -95.3815
       },
-      "hasMap": "https://google.com/maps/place/SNRG+WEB/data=!4m2!3m1!1s0x0:0x9ba806f8e65223fa?sa=X&ved=1t:2428&ictx=111",
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "https://schema.org/Monday",
-            "https://schema.org/Tuesday",
-            "https://schema.org/Wednesday",
-            "https://schema.org/Thursday",
-            "https://schema.org/Friday",
-            "https://schema.org/Saturday",
-            "https://schema.org/Sunday"
-          ],
-          "opens": "08:00",
-          "closes": "20:00"
-        }
-      ],
-      "alternateName": "SNRG Web",
+      "hasMap": "https://share.google/OqVq67BGVbHTgVGyi",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-346-291-6010",
+        "contactType": "customer service",
+        "email": "bobby@snrgweb.com",
+        "availableLanguage": ["English", "Spanish"]
+      },
+      "openingHoursSpecification": [{
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "https://schema.org/Monday",
+          "https://schema.org/Tuesday",
+          "https://schema.org/Wednesday",
+          "https://schema.org/Thursday",
+          "https://schema.org/Friday",
+          "https://schema.org/Saturday",
+          "https://schema.org/Sunday"
+        ],
+        "opens": "08:00",
+        "closes": "20:00"
+      }],
       "currenciesAccepted": "USD",
-      "paymentAccepted": [
-        "Credit Card",
-        "Debit Card",
-        "Klarna",
-        "Apple Pay",
-        "Cash App"
+      "paymentAccepted": ["Credit Card", "Debit Card", "Klarna", "Apple Pay", "Cash App"],
+      "founder": {"@id": "https://snrgweb.com/#person"},
+      "makesOffer": [
+        {"@id": "https://snrgweb.com/#service-managed"},
+        {"@id": "https://snrgweb.com/#service-ownership"}
+      ],
+      "sameAs": [
+        "https://www.instagram.com/snrgweb/",
+        "https://www.facebook.com/profile.php?id=61587811778243",
+        "https://github.com/SNRG-WEB-HTX",
+        "https://www.upwork.com/freelancers/bobbyfrilot?mp_source=share",
+        "https://share.google/OpmWOYhoywfYJxxz7",
+        "https://share.google/3pSeve9cB5AimInFB"
       ]
     },
     {
@@ -202,18 +137,16 @@
       "name": "Bobby Frilot",
       "givenName": "Bobby",
       "familyName": "Frilot",
-      "jobTitle": "Founder",
-      "worksFor": {
-        "@id": "https://snrgweb.com/#business"
-      },
+      "jobTitle": "Founder & Lead Web Strategist",
+      "worksFor": {"@id": "https://snrgweb.com/#business"},
       "email": "bobby@snrgweb.com",
+      "telephone": "+1-346-291-6010",
+      "url": "https://snrgweb.com/",
       "contactPoint": {
         "@type": "ContactPoint",
         "email": "bobby@snrgweb.com",
         "contactType": "founder"
       },
-      "telephone": "+1-346-291-6010",
-      "url": "https://snrgweb.com/",
       "sameAs": [
         "https://www.upwork.com/freelancers/bobbyfrilot?mp_source=share",
         "https://github.com/SNRG-WEB-HTX"
@@ -224,80 +157,93 @@
       "@id": "https://snrgweb.com/#website",
       "url": "https://snrgweb.com/",
       "name": "SNRG WEB",
-      "publisher": {
-        "@id": "https://snrgweb.com/#business"
-      },
-      "inLanguage": "en-US"
+      "publisher": {"@id": "https://snrgweb.com/#business"},
+      "inLanguage": ["en-US", "es"],
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://snrgweb.com/?s={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
     },
     {
       "@type": "WebPage",
       "@id": "https://snrgweb.com/#homepage",
       "url": "https://snrgweb.com/",
       "name": "Houston Web Design | Live in 5-7 Days | $89/mo | SNRG WEB",
-      "isPartOf": {
-        "@id": "https://snrgweb.com/#website"
-      },
-      "about": {
-        "@id": "https://snrgweb.com/#business"
-      },
-      "author": {
-        "@id": "https://snrgweb.com/#person"
-      },
+      "description": "Houston web design for small businesses. $89/mo or $770 flat. Custom websites live in 5-7 days with hosting, SEO, and support included.",
+      "isPartOf": {"@id": "https://snrgweb.com/#website"},
+      "about": {"@id": "https://snrgweb.com/#business"},
+      "author": {"@id": "https://snrgweb.com/#person"},
+      "breadcrumb": {"@id": "https://snrgweb.com/#breadcrumbs"},
       "datePublished": "2026-02-11",
-      "dateModified": "2026-02-11",
+      "dateModified": "2026-02-17",
       "inLanguage": "en-US"
     },
-    {
-      "@type": "Offer",
-      "@id": "https://snrgweb.com/#offer-managed",
-      "name": "Fully Managed Service",
-      "description": "Custom website design, hosting and support. Launch in 5-7 days.",
-      "price": "89",
-      "priceCurrency": "USD",
-      "url": "https://pay.snrgweb.com/b/8x27sL7cz5Sp0wO8ht1RC05",
-      "availability": "https://schema.org/InStock",
-      "seller": {
-        "@id": "https://snrgweb.com/#business"
-      }
-    },
-    {
-      "@type": "Offer",
-      "@id": "https://snrgweb.com/#offer-ownership",
-      "name": "Website Ownership",
-      "description": "One-time build with full ownership.",
-      "price": "770",
-      "priceCurrency": "USD",
-      "url": "https://pay.snrgweb.com/b/4gMdR9dAX6Wt3J0gNZ1RC06",
-      "availability": "https://schema.org/InStock",
-      "seller": {
-        "@id": "https://snrgweb.com/#business"
-      }
-    }]
-}
-</script>
-<!-- MICRO-GAINS: Breadcrumbs + Hero ImageObject -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
     {
       "@type": "BreadcrumbList",
       "@id": "https://snrgweb.com/#breadcrumbs",
       "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://snrgweb.com/"
-        }
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://snrgweb.com/"}
       ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://snrgweb.com/#service-managed",
+      "name": "Fully Managed Website Service",
+      "description": "Custom website design, hosting, and support for Houston small businesses. $89/month for 12 months, then you own it outright. Launch in 5-7 days.",
+      "provider": {"@id": "https://snrgweb.com/#business"},
+      "serviceType": "Web Design & Managed Hosting",
+      "areaServed": {"@type": "City", "name": "Houston", "containedInPlace": {"@type": "State", "name": "Texas"}},
+      "url": "https://snrgweb.com/",
+      "offers": {
+        "@type": "Offer",
+        "@id": "https://snrgweb.com/#offer-managed",
+        "name": "Fully Managed Website Service — $89/mo",
+        "description": "Custom website design, hosting, and support. $89/month for 12 months, then the site is yours.",
+        "price": "89",
+        "priceCurrency": "USD",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "89",
+          "priceCurrency": "USD",
+          "unitCode": "MON",
+          "billingDuration": 12
+        },
+        "url": "https://pay.snrgweb.com/b/28E6oHeF1eoVcfw69l1RC00",
+        "availability": "https://schema.org/InStock",
+        "seller": {"@id": "https://snrgweb.com/#business"}
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://snrgweb.com/#service-ownership",
+      "name": "Website One-Time Purchase",
+      "description": "One-time website build with full immediate ownership. All files, source code, and full rights included. Launch in 5-7 days.",
+      "provider": {"@id": "https://snrgweb.com/#business"},
+      "serviceType": "Web Design & Development",
+      "areaServed": {"@type": "City", "name": "Houston", "containedInPlace": {"@type": "State", "name": "Texas"}},
+      "url": "https://snrgweb.com/",
+      "offers": {
+        "@type": "Offer",
+        "@id": "https://snrgweb.com/#offer-ownership",
+        "name": "Website One-Time Purchase — $770 Flat",
+        "description": "One-time build. Full ownership immediately — all files, source code, full rights.",
+        "price": "770",
+        "priceCurrency": "USD",
+        "url": "https://pay.snrgweb.com/b/4gM8wP54r0y5frI69l1RC01",
+        "availability": "https://schema.org/InStock",
+        "seller": {"@id": "https://snrgweb.com/#business"}
+      }
     },
     {
       "@type": "ImageObject",
       "@id": "https://snrgweb.com/#hero-image",
       "url": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
       "contentUrl": "https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png",
-      "caption": "SNRG WEB - High Performance Web Design Houston",
+      "caption": "SNRG WEB — High Performance Web Design Houston",
       "inLanguage": "en-US",
       "width": 1024,
       "height": 1024
@@ -2525,20 +2471,6 @@ html body .pricing-card:nth-of-type(2) .cta-upwork{
 }
 </style>
 
-
-<style>
-/* === MOBILE ONLY: lift hero CTAs slightly toward logo (logo position unchanged) === */
-@media (max-width:768px){
-  html body .hero{
-    padding-bottom: 0 !important; /* keep logo fixed; remove a touch of bottom slack */
-  }
-  html body .hero-cta-group{
-    margin-top: -14px !important;  /* was -8px; lift CTAs a bit */
-    margin-bottom: 10px !important; /* ensure no overlap with next content */
-  }
-}
-</style>
-
 </head>
 <!-- ========== SEO H1 TAG - DO NOT REMOVE ========== -->
 <!-- Place your H1 tag here in the hero section. Example:
@@ -2556,10 +2488,10 @@ html body .pricing-card:nth-of-type(2) .cta-upwork{
 <button aria-label="Cambiar a español" class="lang-btn" onclick="switchLang('es')">ES</button>
 </div>
 <div class="header-nav-pill">
-<a class="header-nav-btn" href="contact/" lang="en">Contact</a>
-<a class="header-nav-btn" href="contact/" lang="es">Contacto</a>
-<a class="header-nav-btn" href="faq/" lang="en">FAQ</a>
-<a class="header-nav-btn" href="faq/" lang="es">FAQ</a>
+<a class="header-nav-btn" href="contact" lang="en">Contact</a>
+<a class="header-nav-btn" href="contact" lang="es">Contacto</a>
+<a class="header-nav-btn" href="faq" lang="en">FAQ</a>
+<a class="header-nav-btn" href="faq" lang="es">FAQ</a>
 </div>
 </nav>
 <header class="hero" role="banner">
@@ -2575,7 +2507,7 @@ html body .pricing-card:nth-of-type(2) .cta-upwork{
 </div>
 </div>
 <div class="hero-cta-group">
-<a class="cta cta-primary" href="https://pay.snrgweb.com/b/8x27sL7cz5Sp0wO8ht1RC05" lang="en">Sign Up</a>
+<a class="cta cta-primary" href="https://pay.snrgweb.com/b/28E6oHeF1eoVcfw69l1RC00" lang="en">Sign Up</a>
 <a class="cta cta-secondary" href="#pricing" lang="en">How It Works</a>
 <a class="cta cta-primary" href="/pricing" lang="es">Suscribirse</a>
 <a class="cta cta-secondary" href="#pricing" lang="es">Cómo funciona</a>
@@ -2605,7 +2537,7 @@ html body .pricing-card:nth-of-type(2) .cta-upwork{
 <li class="pricing-feature">Ongoing support</li>
 </ul>
 <div class="pricing-cta">
-<a class="cta cta-primary" href="https://pay.snrgweb.com/b/8x27sL7cz5Sp0wO8ht1RC05">Choose Managed</a>
+<a class="cta cta-primary" href="https://pay.snrgweb.com/b/28E6oHeF1eoVcfw69l1RC00">Choose Managed</a>
 </div>
 </div>
 <div class="pricing-card" lang="en">
@@ -2622,7 +2554,7 @@ html body .pricing-card:nth-of-type(2) .cta-upwork{
 <li class="pricing-feature">Documentation</li>
 </ul>
 <div class="pricing-cta">
-<a class="cta cta-secondary" href="https://pay.snrgweb.com/b/4gMdR9dAX6Wt3J0gNZ1RC06">Choose Ownership</a>
+<a class="cta cta-secondary" href="https://pay.snrgweb.com/b/4gM8wP54r0y5frI69l1RC01">Choose Ownership</a>
 </div>
 </div>
 <div class="pricing-card" lang="es">
@@ -2857,7 +2789,7 @@ html body .pricing-card:nth-of-type(2) .cta-upwork{
 </section>
 <div class="sticky-cta" id="stickyCTA">
 <div class="sticky-cta-buttons">
-<a class="cta cta-primary" href="https://pay.snrgweb.com/b/8x27sL7cz5Sp0wO8ht1RC05" lang="en">Sign Up</a>
+<a class="cta cta-primary" href="https://pay.snrgweb.com/b/28E6oHeF1eoVcfw69l1RC00" lang="en">Sign Up</a>
 <a class="cta cta-secondary" href="#pricing" lang="en">How It Works</a>
 <a class="cta cta-primary" href="/pricing" lang="es">Suscribirse</a>
 <a class="cta cta-secondary" href="#pricing" lang="es">Cómo funciona</a>
