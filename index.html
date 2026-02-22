@@ -6,7 +6,7 @@
 <link rel="preload" as="image" href="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png" fetchpriority="high"/>
 <meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
 <title>Houston Web Design | $89/mo | Live in 5–7 Days | SNRG WEB</title>
-<meta content="Houston web design for small businesses. Custom website live in 5-7 days. $89/mo managed or $770 one-time. Hosting, SEO &amp; support included." name="description"/>
+<meta content="Custom Website Live in 5-7 days. $89/mo managed or $770 one-time. Focus on your business. We'll handle you're website." name="description"/>
 <meta content="Bobby Frilot" name="author"/>
 <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
 <meta content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" name="googlebot"/>
@@ -16,7 +16,7 @@
 <!-- Open Graph -->
 <meta content="SNRG WEB" property="og:site_name"/>
 <meta content="Houston Web Design | $89/Month Websites | SNRG WEB" property="og:title"/>
-<meta content="Top-Rated Houston Web Design. Custom Websites Live in 5-7 days. Focus on your business. We'll handle your website." property="og:description"/>
+<meta content="Top-rated Houston web design. Custom websites live in 5-7 days. $89/month includes hosting &amp; support. Serving Greater Houston." property="og:description"/>
 <meta content="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png" property="og:image"/>
 <meta content="1024" property="og:image:width"/>
 <meta content="1024" property="og:image:height"/>
@@ -675,134 +675,131 @@ body.spanish [lang="en"]{display:none}
   50%{opacity:0.6}
 }
 
-/* ══════════════════════════════════════════════
-   SNRG HEADER — Floating pill, world-class
-   ══════════════════════════════════════════════ */
-.lang-bar {
-  position: fixed;
-  top: 12px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: calc(100% - 32px);
-  max-width: 900px;
-  background: rgba(255,255,255,0.88);
-  backdrop-filter: blur(24px) saturate(1.8);
-  -webkit-backdrop-filter: blur(24px) saturate(1.8);
-  border: 1px solid rgba(0,0,0,0.08);
-  border-radius: 999px;
-  padding: 6px 6px 6px 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 8px;
-  z-index: 9999;
-  box-shadow: 0 2px 20px rgba(0,0,0,.07), 0 1px 4px rgba(0,0,0,.04);
-  transition: box-shadow 0.3s ease, background 0.3s ease;
-}
-.lang-bar:hover {
-  box-shadow: 0 4px 28px rgba(0,0,0,.10), 0 1px 6px rgba(0,0,0,.05);
+.lang-bar{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  background:rgba(255,255,255,0.92);
+  backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);
+  border-bottom:1px solid rgba(0,0,0,0.06);
+  padding:14px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  z-index:9999;
 }
 
-
-/* ── Lang toggle ── */
-.lang-toggle {
-  display: flex;
-  gap: 2px;
-  border-radius: 999px;
-  background: rgba(0,0,0,.045);
-  padding: 3px;
-  border: none;
-  flex-shrink: 0;
-}
-.lang-btn {
-  background: transparent;
-  border: none;
-  color: var(--slate);
-  padding: 6px 14px;
-  border-radius: 999px;
-  font-size: 11px;
-  font-weight: 800;
-  cursor: pointer;
-  transition: all 0.18s cubic-bezier(0.34,1.56,0.64,1);
-  min-width: 40px;
-  min-height: 36px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  -webkit-tap-highlight-color: transparent;
-}
-.lang-btn:hover { color: var(--ink); }
-.lang-btn:focus { outline: none; }
-.lang-btn.active {
-  background: var(--red);
-  color: #ffffff;
-  box-shadow: 0 2px 10px rgba(255,42,42,.30);
-  transform: scale(1.04);
+.lang-toggle{
+  display:flex;
+  gap:8px;
+  border-radius:999px;
+  background:var(--pearl);
+  padding:4px;
+  border:1px solid var(--border);
 }
 
-/* ── Nav links (right side) ── */
-.header-nav-pill {
-  display: flex;
-  gap: 2px;
-  border-radius: 999px;
-  background: rgba(0,0,0,.045);
-  padding: 3px;
-  border: none;
-  flex-shrink: 0;
-}
-.header-nav-btn {
-  background: transparent;
-  border: none;
-  color: var(--slate);
-  padding: 6px 16px;
-  border-radius: 999px;
-  font-size: 11px;
-  font-weight: 800;
-  text-decoration: none;
-  transition: all 0.18s cubic-bezier(0.34,1.56,0.64,1);
-  min-height: 36px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  -webkit-tap-highlight-color: transparent;
-  white-space: nowrap;
-}
-.header-nav-btn:hover {
-  background: rgba(0,0,0,.06);
-  color: var(--ink);
-}
-.header-nav-btn:active,
-.header-nav-btn.active-page {
-  background: var(--ink);
-  color: #ffffff;
+.header-nav{
+  display:flex;
+  gap:8px;
 }
 
-/* ── body offset — floating bar needs more top space ── */
-body { padding-top: 80px; }
-:root { --lang-bar-h: 80px; }
-
-
-
-/* ── Mobile ── */
-@media (max-width: 640px) {
-  .lang-bar {
-    top: 8px;
-    width: calc(100% - 24px);
-    padding: 4px 4px 4px 8px;
-  }
-  .lang-btn { padding: 5px 11px; font-size: 10px; min-height: 34px; }
-  .header-nav-btn { padding: 5px 12px; font-size: 10px; min-height: 34px; }
-}
-@media (max-width: 360px) {
-  .lang-btn { padding: 5px 9px; }
-  .header-nav-btn { padding: 5px 10px; }
+.header-nav-pill{
+  display:flex;
+  gap:8px;
+  border-radius:999px;
+  background:var(--pearl);
+  padding:4px;
+  border:1px solid var(--border);
 }
 
+.lang-btn{
+  background:transparent;
+  border:none;
+  color:var(--slate);
+  padding:8px 18px;
+  border-radius:999px;
+  font-size:13px;
+  font-weight:600;
+  cursor:pointer;
+  transition:all 0.2s;
+  min-width:44px;
+  min-height:44px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  text-transform:uppercase;
+  letter-spacing:0.05em;
+}
 
+.lang-btn:hover{color:var(--ink)}
+.lang-btn:focus{
+  outline:2px solid var(--red);
+  outline-offset:2px;
+}
+.lang-btn.active{
+  background:var(--red);
+  color:var(--white);
+  box-shadow:0 2px 8px rgba(255,42,42,0.2);
+}
+
+.header-contact-btn{
+  background:var(--pearl);
+  border:1.5px solid var(--border);
+  color:var(--slate);
+  padding:8px 18px;
+  border-radius:12px;
+  font-size:13px;
+  font-weight:600;
+  text-decoration:none;
+  transition:all 0.2s;
+  min-width:44px;
+  min-height:44px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.header-contact-btn:hover{
+  border-color:var(--red);
+  color:var(--ink);
+}
+
+.header-contact-btn:active{
+  background:var(--red);
+  border-color:var(--red);
+  color:var(--white);
+}
+
+.header-nav-btn{
+  background:transparent;
+  border:none;
+  color:var(--slate);
+  padding:8px 18px;
+  border-radius:999px;
+  font-size:13px;
+  font-weight:600;
+  text-decoration:none;
+  transition:all 0.2s;
+  min-width:44px;
+  min-height:44px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  text-transform:uppercase;
+  letter-spacing:0.05em;
+}
+
+.header-nav-btn:hover{
+  color:var(--ink);
+}
+
+.header-nav-btn:active{
+  background:var(--red);
+  color:var(--white);
+}
 
 .container{
   max-width:1320px;
@@ -3110,26 +3107,6 @@ html body .snrg-social:hover circle {
   fill: #ffffff !important;
   color: #ffffff !important;
 }
-
-/* ── Mobile footer: badge flush above sticky CTA, zero extra padding ── */
-@media (max-width: 767px) {
-  html body .snrg-footer {
-    padding-top: 16px !important;
-    padding-bottom: calc(64px + env(safe-area-inset-bottom)) !important;
-  }
-  html body .snrg-footer-inner {
-    gap: 10px !important;
-    padding-bottom: 0 !important;
-  }
-  html body .snrg-footer-copy-wrap {
-    padding: 0 !important;
-    margin: 0 !important;
-  }
-  html body .snrg-built-badge {
-    margin: 0 !important;
-    padding: 8px 14px !important;
-  }
-}
 </style>
 </head>
 <!-- ========== SEO H1 TAG - DO NOT REMOVE ========== -->
@@ -3142,18 +3119,17 @@ html body .snrg-social:hover circle {
 <body>
 <h1 class="visually-hidden" lang="en">Houston Web Design for Small Businesses</h1>
 <!-- SEO/A11Y H1 - Hidden from visual layout -->
-<nav aria-label="Site navigation" class="lang-bar" role="navigation">
-  <div class="lang-toggle" role="group" aria-label="Language selection">
-    <button aria-current="true" aria-label="Switch to English" class="lang-btn active" onclick="switchLang('en')">EN</button>
-    <button aria-label="Cambiar a español" class="lang-btn" onclick="switchLang('es')">ES</button>
-  </div>
-
-  <div class="header-nav-pill" role="navigation" aria-label="Page links">
-    <a class="header-nav-btn" href="/contact" lang="en">Contact</a>
-    <a class="header-nav-btn" href="/contact" lang="es">Contacto</a>
-    <a class="header-nav-btn" href="/faq" lang="en">FAQ</a>
-    <a class="header-nav-btn" href="/faq" lang="es">FAQ</a>
-  </div>
+<nav aria-label="Language selection" class="lang-bar" role="navigation">
+<div class="lang-toggle">
+<button aria-current="true" aria-label="Switch to English" class="lang-btn active" onclick="switchLang('en')">EN</button>
+<button aria-label="Cambiar a español" class="lang-btn" onclick="switchLang('es')">ES</button>
+</div>
+<div class="header-nav-pill">
+<a class="header-nav-btn" href="/contact" lang="en">Contact</a>
+<a class="header-nav-btn" href="/contact" lang="es">Contacto</a>
+<a class="header-nav-btn" href="/faq" lang="en">FAQ</a>
+<a class="header-nav-btn" href="/faq" lang="es">FAQ</a>
+</div>
 </nav>
 <header class="hero" role="banner">
 <div aria-hidden="true" class="animated-bg"></div>
