@@ -3081,7 +3081,7 @@ html body.cta-visible{
 @media (max-width: 640px) {
   html body footer.snrg-footer,
   .snrg-footer {
-    padding: 12px 0 calc(74px + env(safe-area-inset-bottom)) !important;
+    padding: 12px 0 env(safe-area-inset-bottom) !important;
     margin-top: 32px !important;
   }
   .snrg-footer-inner { gap: 10px !important; }
@@ -3122,7 +3122,7 @@ html body .snrg-social:hover circle {
 /* ══ BADGE PIN: absolute bottom of footer, zero gap above sticky CTA ══ */
 html body footer.snrg-footer {
   position: relative !important;
-  padding-bottom: calc(56px + env(safe-area-inset-bottom)) !important;
+  padding-bottom: env(safe-area-inset-bottom) !important;
 }
 html body .snrg-footer-inner {
   padding-bottom: 0 !important;
@@ -3179,18 +3179,35 @@ html body .snrg-footer-nav a {
 }
 </style>
 <style>
-/* ══ HERO BACKGROUND IMAGE — pearl-hero-bg.png ══ */
-html body .hero {
-  background-image: url('./pearl-hero-bg.png') !important;
-  background-size: cover !important;
-  background-position: center center !important;
-  background-repeat: no-repeat !important;
-  background-attachment: scroll !important;
+/* ══ HERO BACKGROUND — SOLID WHITE (ALL DEVICES) ══ */
+html body .hero{
+  background: #FFFFFF !important;
+  background-image: none !important;
 }
-/* Keep existing pseudo-element overlays from interfering */
+/* Ensure no overlay tint on hero */
+html body .hero::before,
+html body .hero::after,
 html body .hero.animated-bg::before,
-html body .hero.animated-bg::after {
-  opacity: 0.3 !important;
+html body .hero.animated-bg::after{
+  background: none !important;
+  opacity: 0 !important;
+}
+</style>
+
+<style>
+/* === FOOTER FINAL OVERRIDE: no overlay, no gap, perfect alignment === */
+html body footer.snrg-footer{
+  padding-bottom: calc(16px + env(safe-area-inset-bottom)) !important;
+}
+html body .snrg-footer-copy-wrap{
+  position: static !important;
+  left: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex !important;
+  justify-content: center !important;
 }
 </style>
 </head>
@@ -3660,11 +3677,29 @@ html body .hero.animated-bg::after {
   }
   window.addEventListener('resize', snrgUpdateStickyCtaHeight, {passive:true});
   window.addEventListener('load', snrgUpdateStickyCtaHeight, {passive:true});
+
+  /* === FOOTER / STICKY CTA COORDINATION (NO GAP, NO OVERLAP) === */
+  let snrgFooterInView = false;
+  const snrgSticky = document.getElementById('stickyCTA');
+  const snrgFooter = document.querySelector('footer.snrg-footer');
+  if(snrgFooter && snrgSticky && 'IntersectionObserver' in window){
+    const snrgFooterObserver = new IntersectionObserver((entries)=>{
+      const entry = entries[0];
+      snrgFooterInView = !!(entry && entry.isIntersecting);
+      if(snrgFooterInView){
+        snrgSticky.classList.remove('visible');
+        document.body.classList.remove('cta-visible');
+      }
+    },{threshold:0.01});
+    snrgFooterObserver.observe(snrgFooter);
+  }
+
   window.addEventListener('scroll',()=>{
     clearTimeout(scrollTimeout);
     scrollTimeout=setTimeout(()=>{
       const sticky=document.getElementById('stickyCTA');
-      const show = window.scrollY>600;
+      if(!sticky) return;
+      const show = (window.scrollY>600) && !snrgFooterInView;
       sticky.classList.toggle('visible', show);
       document.body.classList.toggle('cta-visible', show);
       if(show){ snrgUpdateStickyCtaHeight(); }
