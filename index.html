@@ -6,7 +6,7 @@
 <link rel="preload" as="image" href="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png" fetchpriority="high"/>
 <meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
 <title>Houston Web Design | $89/mo | Live in 5–7 Days | SNRG WEB</title>
-<meta content="Custom Website Live in 5-7 days. $89/mo managed or $770 one-time. Focus on your business. We'll handle you're website." name="description"/>
+<meta content="Custom Web Design for Small Businesses, live in 5-7 days. $89/mo managed or $770 one-time. Focus on your business. We'll handle your website." name="description"/>
 <meta content="Bobby Frilot" name="author"/>
 <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
 <meta content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" name="googlebot"/>
@@ -16,7 +16,7 @@
 <!-- Open Graph -->
 <meta content="SNRG WEB" property="og:site_name"/>
 <meta content="Houston Web Design | $89/Month Websites | SNRG WEB" property="og:title"/>
-<meta content="Top-rated Houston web design. Custom websites live in 5-7 days. $89/month includes hosting &amp; support. Serving Greater Houston." property="og:description"/>
+<meta content="Custom Web Design for Small Businesses, live in 5-7 days. $89/mo managed or $770 one-time. Focus on your business. We'll handle your website." property="og:description"/>
 <meta content="https://cdn.prod.website-files.com/6954808dd8f8b5ed61d75655/6963038128b5e0d58e03d519_ChatGPT%20Image%20Jan%2010%2C%202026%2C%2007_57_08%20PM.png" property="og:image"/>
 <meta content="1024" property="og:image:width"/>
 <meta content="1024" property="og:image:height"/>
@@ -3108,6 +3108,81 @@ html body .snrg-social:hover circle {
   color: #ffffff !important;
 }
 </style>
+<style>
+/* ══ BADGE PIN: absolute bottom of footer, zero gap above sticky CTA ══ */
+html body footer.snrg-footer {
+  position: relative !important;
+  padding-bottom: calc(56px + env(safe-area-inset-bottom)) !important;
+}
+html body .snrg-footer-inner {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+html body .snrg-footer-copy-wrap {
+  position: absolute !important;
+  bottom: calc(10px + env(safe-area-inset-bottom)) !important;
+  left: 0 !important;
+  right: 0 !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  gap: 0 !important;
+}
+html body .snrg-built-badge {
+  margin: 0 !important;
+  padding: 8px 18px !important;
+}
+</style>
+<style>
+/* ══ Footer: social + nav always 1 line, no wrap ══ */
+html body .snrg-footer-social {
+  flex-wrap: nowrap !important;
+  gap: 8px !important;
+  width: 100% !important;
+  justify-content: center !important;
+  overflow: visible !important;
+}
+html body .snrg-social {
+  flex-shrink: 0 !important;
+}
+html body .snrg-footer-nav {
+  flex-wrap: nowrap !important;
+  gap: clamp(8px, 2.5vw, 26px) !important;
+  width: 100% !important;
+  justify-content: center !important;
+}
+html body .snrg-footer-nav a {
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+}
+/* Tighten icon size on very small screens to guarantee 1 line */
+@media (max-width: 360px) {
+  html body .snrg-social {
+    width: 32px !important;
+    height: 32px !important;
+  }
+  html body .snrg-footer-social { gap: 6px !important; }
+  html body .snrg-footer-nav { gap: 8px !important; }
+  html body .snrg-footer-nav a { font-size: 10px !important; letter-spacing: .04em !important; }
+}
+</style>
+<style>
+/* ══ HERO BACKGROUND IMAGE — pearl-hero-bg.png ══ */
+html body .hero {
+  background-image: url('./pearl-hero-bg.png') !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: scroll !important;
+}
+/* Keep existing pseudo-element overlays from interfering */
+html body .hero.animated-bg::before,
+html body .hero.animated-bg::after {
+  opacity: 0.3 !important;
+}
+</style>
 </head>
 <!-- ========== SEO H1 TAG - DO NOT REMOVE ========== -->
 <!-- Place your H1 tag here in the hero section. Example:
@@ -3318,12 +3393,28 @@ html body .snrg-social:hover circle {
 <h2 class="section-title" lang="en">Selected Projects</h2>
 <h2 class="section-title" lang="es">Proyectos Seleccionados</h2>
 <div class="projects-grid">
+<a class="project-card" href="https://offroadbrothers4wd.com/" lang="en" rel="noopener" target="_blank">
+<h3 class="project-title">Offroad Brothers 4WD</h3>
+<p class="project-desc">Off-road parts and accessories dealer for Houston 4WD enthusiasts with full product catalog and service booking.</p>
+<div class="project-tags">
+<span class="project-tag">E-Commerce</span>
+<span class="project-tag">Automotive</span>
+</div>
+</a>
 <a class="project-card" href="https://angelsfurniture.org/" lang="en" rel="noopener" target="_blank">
 <h3 class="project-title">Angel's Furniture</h3>
 <p class="project-desc">Houston boutique furniture showroom site with curated collections, easy financing, and local pickup &amp; delivery.</p>
 <div class="project-tags">
 <span class="project-tag">E-Commerce</span>
 <span class="project-tag">Showroom</span>
+</div>
+</a>
+<a class="project-card" href="https://offroadbrothers4wd.com/" lang="es" rel="noopener" target="_blank">
+<h3 class="project-title">Offroad Brothers 4WD</h3>
+<p class="project-desc">Tienda de piezas y accesorios 4x4 para entusiastas de Houston con catálogo completo y reserva de servicios.</p>
+<div class="project-tags">
+<span class="project-tag">E-Commerce</span>
+<span class="project-tag">Automotriz</span>
 </div>
 </a>
 <a class="project-card" href="https://angelsfurniture.org/" lang="es" rel="noopener" target="_blank">
