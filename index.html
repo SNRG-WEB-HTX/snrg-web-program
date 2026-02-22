@@ -590,6 +590,16 @@ body.spanish [lang="en"]{display:none}
   }
 }
 
+
+/* === HARD DISABLE: Animated hero background layers (pearl-only hero) === */
+html body .animated-bg{ display:none !important; }
+html body .hero.animated-bg::before,
+html body .hero.animated-bg::after{
+  opacity:0 !important;
+  animation:none !important;
+  background:none !important;
+}
+
 .animated-bg{
   position:absolute;
   inset:0;
@@ -3019,7 +3029,7 @@ html body footer.snrg-footer,
 /* When sticky CTA is visible, add page-space so footer content (Built by badge) is never covered.
    This is OUTSIDE the footer (no padding under the badge itself). */
 html body.cta-visible{
-  padding-bottom: calc(96px + env(safe-area-inset-bottom)) !important;
+  padding-bottom: calc(var(--snrg-sticky-cta-h, 0px) + env(safe-area-inset-bottom)) !important;
 }
 /* Built by badge */
 .snrg-built-badge {
@@ -3120,7 +3130,7 @@ html body .snrg-footer-inner {
 }
 html body .snrg-footer-copy-wrap {
   position: absolute !important;
-  bottom: calc(10px + env(safe-area-inset-bottom)) !important;
+  bottom: env(safe-area-inset-bottom) !important;
   left: 0 !important;
   right: 0 !important;
   display: flex !important;
@@ -3207,7 +3217,6 @@ html body .hero.animated-bg::after {
 </div>
 </nav>
 <header class="hero" role="banner">
-<div aria-hidden="true" class="animated-bg"></div>
 <div class="container">
 <div class="hero-wrap">
 <div class="hero-stack">
@@ -3643,6 +3652,14 @@ html body .hero.animated-bg::after {
   }
 
   let scrollTimeout;
+  function snrgUpdateStickyCtaHeight(){
+    const sticky=document.getElementById('stickyCTA');
+    if(!sticky) return;
+    const h = sticky.offsetHeight || 0;
+    document.documentElement.style.setProperty('--snrg-sticky-cta-h', h + 'px');
+  }
+  window.addEventListener('resize', snrgUpdateStickyCtaHeight, {passive:true});
+  window.addEventListener('load', snrgUpdateStickyCtaHeight, {passive:true});
   window.addEventListener('scroll',()=>{
     clearTimeout(scrollTimeout);
     scrollTimeout=setTimeout(()=>{
@@ -3650,6 +3667,7 @@ html body .hero.animated-bg::after {
       const show = window.scrollY>600;
       sticky.classList.toggle('visible', show);
       document.body.classList.toggle('cta-visible', show);
+      if(show){ snrgUpdateStickyCtaHeight(); }
     },50);
   },{passive:true});
 document.addEventListener('DOMContentLoaded',()=>{
