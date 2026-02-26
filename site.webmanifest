@@ -1,5 +1,5 @@
 {
-  "name": "SNRG WEB",
+  "name": "SNRG Web",
   "short_name": "SNRG",
   "icons": [
     {
@@ -13,7 +13,7 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#0F1115",
-  "background_color": "#FFFFFF",
+  "theme_color": "#000000",
+  "background_color": "#000000",
   "display": "standalone"
 }
